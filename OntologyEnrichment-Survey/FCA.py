@@ -2,7 +2,7 @@
 
 import nltk
 from nltk.tree import *
-from nltk.parse import stanford
+from nltk.parse import corenlp
 from nltk.stem import WordNetLemmatizer
 import nltk.data
 import nltk.draw
@@ -13,8 +13,10 @@ import csv
 import pandas as pd
 import numpy as np
 
-os.environ['STANFORD_PARSER'] = ''
-os.environ['STANFORD_MODELS'] = ''
+os.environ['STANFORD_PARSER'] = '/Users/vivek/stanford-parser-full-2018-10-17/*'
+os.environ['STANFORD_MODELS'] = '/Users/vivek/stanford-corenlp-full-2018-10-05/*'
+# os.environ['CLASSPATH'] = '/Users/vivek/parsers/*'
+os.environ['CLASSPATH'] =  '/Users/vivek/stanford-corenlp-full-2018-10-05/*'
 
 wordnet_lemmatizer = WordNetLemmatizer()
 
@@ -30,7 +32,7 @@ class SVO(object):
         self.verb_types = ["VB","VBD","VBG","VBN", "VBP", "VBZ"]
         self.adjective_types = ["JJ","JJR","JJS"]
         self.pred_verb_phrase_siblings = None
-        self.parser = stanford.StanfordParser()
+        self.parser = corenlp.CoreNLPParser()
         self.sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
 
     def get_subject(self,sub_tree):
@@ -287,7 +289,7 @@ class SVO(object):
 svo = SVO()
 
 #Change directory for the file here
-file = open("test.txt", "r")
+file = open("security.txt", "r")
 sentence = file.read()
     
 sentences =  svo.sentence_split(sentence)
@@ -343,7 +345,7 @@ print(result)
 
 result = result.replace(np.nan, '', regex = True)
 result['final'] = result["object"].map(str) + result["subject"]
-print(result)
+print("result", result)
 
 result.pop('object')
 result.pop('subject')
