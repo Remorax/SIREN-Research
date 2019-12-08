@@ -2,6 +2,8 @@
 
 An LSTM-based model to extract concepts and relationships from a text corpus to enrich a seed ontology.
 
+![OntoEnricher](OntoEnricher.png)
+
 ## Methodology:
 
 1.  First, I extracted the concepts from the seed (security) ontology and prepare a list of terms
