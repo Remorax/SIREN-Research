@@ -16,7 +16,8 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'onto.db')
 
 db = SQLAlchemy(app)
-
+db.app = app
+# db.init_app(app) 
 from onto_app import routes, models
 from onto_app.onto import *
 

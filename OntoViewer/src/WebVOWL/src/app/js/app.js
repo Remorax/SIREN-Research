@@ -177,7 +177,7 @@ module.exports = function () {
 
 
   app.initialize = function () {
-    addFileDropEvents(GRAPH_SELECTOR);
+    //addFileDropEvents(GRAPH_SELECTOR);
 
     window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function (f) {
       return setTimeout(f, 1000 / 60);
@@ -353,10 +353,12 @@ module.exports = function () {
         graph.options().ontologyMenu().reloadCachedOntology();
 
       });
-      returnNameLink(); // Returns the decision, domain, range, type, and name of the relationship accepted, or rejected. 
-      // setColor(); // Sets color for new relationships
-      // setNodeColor();
+      // Returns the decision, domain, range, type, and name of the relationship accepted, or rejected. 
+      setColor(); // Sets color for new relationships
+      setNodeColor();
       // add the initialized objects
+      console.log("charlie1");
+      returnNameLink(); 
       webvowl.opts = options;
       webvowl.gr = graph;
 
@@ -607,180 +609,229 @@ module.exports = function () {
     return rv;
   }
 
+  function returnNameLink() {
+    document.getElementById('rejectClicked').onclick = function () {
+      var ra = "yes";
+      if (document.getElementById("propertySelectionInformation").className == "") {
+        try {
+          ra = document.getElementById("propname").getElementsByTagName("a")[0].href;
+        }
+        catch (err) {
+          ra = document.getElementById('propertySelectionInformation').getElementsByTagName('span')[1].innerHTML;
+        }
+        var rb = document.getElementById("typeProp").innerHTML;
+        var rc = document.getElementById("domain").getElementsByTagName("a")[0].href;
+        var rd = document.getElementById("range").getElementsByTagName("a")[0].href;
+        var curentUser = document.getElementById("userId").innerHTML;
+        curentUser = JSON.parse(curentUser);
+        console.log(curentUser);
+        // var decidedRelationList = graph.getAlreadyDecidedRelations();
+        // decidedRelationList.push([ra, rc, rd, rb, curentUser]);
+        // console.log(decidedRelationList);
+        clearDecisionOptions();
+        var flag = 1;
+        var rdecision = "Reject";
+        var xhr = new XMLHttpRequest();
+        var rparams = JSON.stringify({ flag: flag, name: ra, "decision": rdecision, domain: rc, range: rd, type: rb, buffer: "hello" });
+      }
+      else if (document.getElementById("classSelectionInformation").className == "") {
+        var name = document.getElementById("name").getElementsByTagName("a")[0].href;
+        var curentUser = document.getElementById("userId").innerHTML;
+        curentUser = JSON.parse(curentUser);
+        console.log(curentUser);
+        // var decidedNodeList = graph.getAlreadyDecidedNodesIri();
+        // decidedNodeList.push([name, curentUser]);
+        // console.log(decidedNodeList);
+        clearDecisionOptions();
+        var flag = 0;
+        var rdecision = "Reject";
+        var xhr = new XMLHttpRequest();
+        var rparams = JSON.stringify({ flag: flag, name: name, "decision": rdecision, buffer: "hello" })
+      }
+      xhr.open("POST", '/decision', true);
+      xhr.responseType = "text";
+      xhr.send(rparams);
+    };
+    document.getElementById('acceptClicked').onclick = function () {
+      var aa = "yes"
+      if (document.getElementById("propertySelectionInformation").className == "") {
+        console.log("Property Selected");
+        try {
+          aa = document.getElementById("propname").getElementsByTagName("a")[0].href;
+        }
+        catch (err) {
+          aa = document.getElementById('propertySelectionInformation').getElementsByTagName('span')[1].innerHTML;
+        }
+        var ab = document.getElementById("typeProp").innerHTML;
+        var ac = document.getElementById("domain").getElementsByTagName("a")[0].href;
+        var ad = document.getElementById("range").getElementsByTagName("a")[0].href;
+        var curentUser = document.getElementById("userId").innerHTML;
+        curentUser = JSON.parse(curentUser);
+        console.log(curentUser);
+        // var decidedRelationList = graph.getAlreadyDecidedRelations();
+        // decidedRelationList.push([aa, ac, ad, ab, curentUser]);
+        // console.log(decidedRelationList);
+        clearDecisionOptions();
+        var flag = 1;
+        var adecision = "Accept";
+        // console.log("accept") ; 
+        // console.log(a) ; 
+        // console.log(b) ;
+        var xhr = new XMLHttpRequest();
+        var aparams = JSON.stringify({ flag: flag, name: aa, "decision": adecision, domain: ac, range: ad, type: ab, buffer: "hello" });
+        console.log("abajaba")
+        console.log(aparams);
+      }
+      else if (document.getElementById("classSelectionInformation").className == "") {
+        var name = document.getElementById("name").getElementsByTagName("a")[0].href;
+        var curentUser = document.getElementById("userId").innerHTML;
+        curentUser = JSON.parse(curentUser);
+        console.log(curentUser);
+        // var decidedNodeList = graph.getAlreadyDecidedNodesIri();
+        // decidedNodeList.push([name, curentUser]);
+        // console.log(decidedNodeList);
+        clearDecisionOptions();
+        var flag = 0;
+        var adecision = "Accept";
+        var xhr = new XMLHttpRequest();
+        var aparams = JSON.stringify({ flag: flag, name: name, "decision": adecision, buffer: "hello" })
+        console.log("abajaba")
+        console.log(aparams);
+      }
+      
+      xhr.open("POST", '/decision', true);
+      xhr.responseType = "text";
+      xhr.send(aparams);
+    };
+  }
+  
+  function clearDecisionOptions() {
+    var accept = d3.select("#acceptClicked").node();
+    var reject = d3.select("#rejectClicked").node();
+    accept.style.display = "none";
+    reject.style.display = "none";
+  }
+  
+  
+  
+  // checks if the relationship selected is new
+  function isNew(linkstateprop) {
+    var a = document.getElementById("hiddenJSONRel").innerHTML;
+    a = JSON.parse(a);
+    console.log("Derababa");
+    // console.log(a);
+    for (var i = 0; i < a.length; i++) {
+      if(linkstateprop.domain().iri() == "https://serc.iiit.ac.in/downloads/ontology/test.owl#PeriPeri"){
+      console.log("Epstein Did Kill Himself");
+      console.log(linkstateprop.domain().iri());
+      console.log(linkstateprop.iri());
+      console.log(linkstateprop.range().iri());
+      console.log(linkstateprop.type());
+      console.log(a[i][0]);
+      console.log(a[i][1]);
+      console.log(a[i][2]);
+    }
+      if (linkstateprop.domain().iri() == a[i][0] && linkstateprop.iri() == a[i][1] && linkstateprop.range().iri() == a[i][2] ) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  // checks if the subclass selected is new
+  function isNewSubClass(linkstateprop) {
+    var a = document.getElementById("hiddenJSONSubclass").innerHTML;
+    a = JSON.parse(a);
+    for (var i = 0; i < a.length; i++) {
+      if (linkstateprop.domain().iri() == a[i][0] && linkstateprop.range().iri() == a[i][1]) {
+        return true;
+      }
+    }
+  
+    return false;
+  }
+  
+  // sets different color to new nodes
+  function setNodeColor() {
+    
+    linkstatenode = graph.LinkState()["nodes"];
+    var a = document.getElementById("hiddenJSONNode").innerHTML;
+    a = JSON.parse(a);
+    console.log(a);
+    for (var i = 0, l = graph.LinkState()["nodes"].length; i < l; ++i) {
+
+      if (isNewNode(linkstatenode[i])) {
+        var r = document.getElementById(linkstatenode[i].id())
+        if (r) {
+          r.getElementsByTagName("circle")[0].setAttribute("style", "fill: rgb(0,255,0) ; ")
+        }
+      }
+    }
+  }
+  
+  // checks if node selected is new 
+  function isNewNode(linkstatenode) {
+    var a = document.getElementById("hiddenJSONNode").innerHTML;
+    a = JSON.parse(a);
+    //console.log(a);
+    for (var i = 0; i < a.length; i++) {
+      if (linkstatenode.iri() == a[i]) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  
+  // sets different color to new relationships
+  function setColor() {
+    // var a = ["http://rdfs.org/sioc/ns#Space","http://rdfs.org/sioc/ns#has_usergroup","http://rdfs.org/sioc/ns#Usergroup"] ; 
+    
+    if(graph.LinkState()["properties"] == undefined){
+      console.log("Gandhi Didnt KIll HImself");
+    }
+    linkstateprop = graph.LinkState()["properties"] ; 
+    if(linkstateprop !== undefined){
+      console.log("Indira Gandhi Didnt KIll HImself");
+    }
+
+    console.log(linkstateprop[40].domain().iri());
+    console.log(linkstateprop[40].iri());
+    console.log(linkstateprop[40].range().iri());
+    console.log(linkstateprop[40].type());
+    var a = document.getElementById("hiddenJSONRel").innerHTML;
+    a = JSON.parse(a);
+    console.log(a);
+    for (var i = 0, l = linkstateprop.length; i < l; i++) {
+      // console.log(i);
+      if(linkstateprop[i].domain().iri() == "https://serc.iiit.ac.in/downloads/ontology/test.owl#PeriPeri"){
+        console.log("Epstein Did Kill Himself");
+        console.log(linkstateprop[i].domain().iri());
+        console.log(linkstateprop[i].iri());
+        console.log(linkstateprop[i].range().iri());
+        console.log(linkstateprop[i].type());
+      }
+      if (isNew(linkstateprop[i])) {
+        console.log("Bach Gaya ")
+        var r = document.getElementById(linkstateprop[i].id())
+        if (r) {
+          r.getElementsByTagName("rect")[0].setAttribute("style", "fill: rgb(120, 200, 120) ; ")
+        }
+      }
+      else if (isNewSubClass(linkstateprop[i])) {
+        var r = document.getElementById(linkstateprop[i].id())
+        if (r) {
+          r.getElementsByTagName("rect")[0].setAttribute("style", "fill: rgb(100,200,0) ; ")
+        }
+      }
+    }
+  
+  }
+  
+
   return app;
 }
   ;
-
-
-function returnNameLink() {
-  document.getElementById('rejectClicked').onclick = function () {
-    var ra = "yes";
-    if (document.getElementById("propertySelectionInformation").className == "") {
-      try {
-        ra = document.getElementById("propname").getElementsByTagName("a")[0].href;
-      }
-      catch (err) {
-        ra = document.getElementById('propertySelectionInformation').getElementsByTagName('span')[1].innerHTML;
-      }
-      var rb = document.getElementById("typeProp").innerHTML;
-      var rc = document.getElementById("domain").getElementsByTagName("a")[0].href;
-      var rd = document.getElementById("range").getElementsByTagName("a")[0].href;
-      var curentUser = document.getElementById("userId").innerHTML;
-      curentUser = JSON.parse(curentUser);
-      console.log(curentUser);
-      // var decidedRelationList = graph.getAlreadyDecidedRelations();
-      // decidedRelationList.push([ra, rc, rd, rb, curentUser]);
-      // console.log(decidedRelationList);
-      clearDecisionOptions();
-      var flag = 1;
-      var rdecision = "Reject";
-      var xhr = new XMLHttpRequest();
-      var rparams = JSON.stringify({ flag: flag, name: ra, "decision": rdecision, domain: rc, range: rd, type: rb, buffer: "hello" });
-    }
-    else if (document.getElementById("classSelectionInformation").className == "") {
-      var name = document.getElementById("name").getElementsByTagName("a")[0].href;
-      var curentUser = document.getElementById("userId").innerHTML;
-      curentUser = JSON.parse(curentUser);
-      console.log(curentUser);
-      // var decidedNodeList = graph.getAlreadyDecidedNodesIri();
-      // decidedNodeList.push([name, curentUser]);
-      // console.log(decidedNodeList);
-      clearDecisionOptions();
-      var flag = 0;
-      var rdecision = "Reject";
-      var xhr = new XMLHttpRequest();
-      var rparams = JSON.stringify({ flag: flag, name: name, "decision": rdecision, buffer: "hello" })
-    }
-    xhr.open("POST", '/decision', true);
-    xhr.responseType = "text";
-    xhr.send(rparams);
-  };
-  document.getElementById('acceptClicked').onclick = function () {
-    var aa = "yes"
-    if (document.getElementById("propertySelectionInformation").className == "") {
-      console.log("Property Selected");
-      try {
-        aa = document.getElementById("propname").getElementsByTagName("a")[0].href;
-      }
-      catch (err) {
-        aa = document.getElementById('propertySelectionInformation').getElementsByTagName('span')[1].innerHTML;
-      }
-      var ab = document.getElementById("typeProp").innerHTML;
-      var ac = document.getElementById("domain").getElementsByTagName("a")[0].href;
-      var ad = document.getElementById("range").getElementsByTagName("a")[0].href;
-      var curentUser = document.getElementById("userId").innerHTML;
-      curentUser = JSON.parse(curentUser);
-      console.log(curentUser);
-      // var decidedRelationList = graph.getAlreadyDecidedRelations();
-      // decidedRelationList.push([aa, ac, ad, ab, curentUser]);
-      // console.log(decidedRelationList);
-      clearDecisionOptions();
-      var flag = 1;
-      var adecision = "Accept";
-      // console.log("accept") ; 
-      // console.log(a) ; 
-      // console.log(b) ;
-      var xhr = new XMLHttpRequest();
-      var aparams = JSON.stringify({ flag: flag, name: aa, "decision": adecision, domain: ac, range: ad, type: ab, buffer: "hello" });
-    }
-    else if (document.getElementById("classSelectionInformation").className == "") {
-      var name = document.getElementById("name").getElementsByTagName("a")[0].href;
-      var curentUser = document.getElementById("userId").innerHTML;
-      curentUser = JSON.parse(curentUser);
-      console.log(curentUser);
-      // var decidedNodeList = graph.getAlreadyDecidedNodesIri();
-      // decidedNodeList.push([name, curentUser]);
-      // console.log(decidedNodeList);
-      clearDecisionOptions();
-      var flag = 0;
-      var adecision = "Accept";
-      var xhr = new XMLHttpRequest();
-      var aparams = JSON.stringify({ flag: flag, name: name, "decision": adecision, buffer: "hello" })
-    }
-    xhr.open("POST", '/decision', true);
-    xhr.responseType = "text";
-    xhr.send(aparams);
-  };
-}
-
-function clearDecisionOptions() {
-  var accept = d3.select("#acceptClicked").node();
-  var reject = d3.select("#rejectClicked").node();
-  accept.style.display = "none";
-  reject.style.display = "none";
-}
-
-// sets different color to new relationships
-function setColor() {
-  // var a = ["http://rdfs.org/sioc/ns#Space","http://rdfs.org/sioc/ns#has_usergroup","http://rdfs.org/sioc/ns#Usergroup"] ; 
-  linkstateprop = graph.LinkState()["properties"];
-  for (var i = 0, l = graph.LinkState()["properties"].length; i < l; i++) {
-    if (isNew(linkstateprop[i])) {
-      var r = document.getElementById(linkstateprop[i].id())
-      if (r) {
-        r.getElementsByTagName("rect")[0].setAttribute("style", "fill: rgb(120, 200, 120) ; ")
-      }
-    }
-    else if (isNewSubClass(linkstateprop[i])) {
-      var r = document.getElementById(linkstateprop[i].id())
-      if (r) {
-        r.getElementsByTagName("rect")[0].setAttribute("style", "fill: rgb(100,200,0) ; ")
-      }
-    }
-  }
-
-}
-
-// checks if the relationship selected is new
-function isNew(linkstateprop) {
-  var a = document.getElementById("hiddenJSONRel").innerHTML;
-  a = JSON.parse(a);
-  for (var i = 0; i < a.length; i++) {
-    if (linkstateprop.domain().iri() == a[i][0] && linkstateprop.iri() == a[i][1] && linkstateprop.range().iri() == a[i][3] && linkstateprop.type().split(':')[1] == a[i][2].split('/')[a[i][2].split('/').length - 1].split('#')[1]) {
-      return true;
-    }
-  }
-  return false;
-}
-
-// checks if the subclass selected is new
-function isNewSubClass(linkstateprop) {
-  var a = document.getElementById("hiddenJSONSubclass").innerHTML;
-  a = JSON.parse(a);
-  for (var i = 0; i < a.length; i++) {
-    if (linkstateprop.domain().iri() == a[i][0] && linkstateprop.range().iri() == a[i][1]) {
-      return true;
-    }
-  }
-
-  return false;
-}
-
-// sets different color to new nodes
-function setNodeColor() {
-  linkstatenode = graph.LinkState()["nodes"];
-  for (var i = 0, l = graph.LinkState()["nodes"].length; i < l; ++i) {
-    if (isNewNode(linkstatenode[i])) {
-      var r = document.getElementById(linkstatenode[i].id())
-      if (r) {
-        r.getElementsByTagName("circle")[0].setAttribute("style", "fill: rgb(0,255,0) ; ")
-      }
-    }
-  }
-}
-
-// checks if node selected is new 
-function isNewNode(linkstatenode) {
-  var a = document.getElementById("hiddenJSONNode").innerHTML;
-  a = JSON.parse(a);
-  for (var i = 0; i < a.length; i++) {
-    if (linkstatenode.iri() == a[i]) {
-      return true;
-    }
-  }
-  return false;
-}
-
 
 
 

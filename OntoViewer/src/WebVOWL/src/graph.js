@@ -57,7 +57,10 @@ module.exports = function (graphContainerSelector) {
         global_dof = -1,
         keepDetailsCollapsedOnLoading=true,
         adjustingGraphSize=false,
-        zoom;
+        zoom,
+        linkstate = [],
+        alreadyDecidedNodesIri =[],
+        alreadyDecidedRelations = [] ;
 
     /** --------------------------------------------------------- **/
     /** -- getter and setter definitions                       -- **/
@@ -68,7 +71,9 @@ module.exports = function (graphContainerSelector) {
     graph.setGlobalDOF = function (val) {
         global_dof = val;
     };
-
+    graph.LinkState = function (){
+        return linkstate ; 
+    };
     graph.updateZoomSliderValueFromOutside = function () {
         graph.options().zoomSlider().updateZoomSliderValue(zoomFactor);
     };

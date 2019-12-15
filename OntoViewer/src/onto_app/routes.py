@@ -1,29 +1,47 @@
-from flask import Flask, render_template, request, session
+from flask import Flask, request, redirect, url_for, session, g, flash, \
+    render_template
 from onto_app import app, db
 import os
-
+from requests_oauthlib import OAuth1Session
+from requests_oauthlib import OAuth1
 from flask import send_file, send_from_directory, redirect, url_for, flash, current_app, session
 from werkzeug.utils import secure_filename
 import json
 from onto_app.onto import *
+import tweepy
+request_token_url = 'https://api.twitter.com/oauth/request_token'
+# app = Flask(__name__)
+# Load our config from an object, or module (config.py)
 
-import google.oauth2.credentials
-import google_auth_oauthlib.flow
-import googleapiclient.discovery
-from google.oauth2 import id_token
-from google.auth.transport import requests
-
+# These config variables come from 'config.py'
+client_key = "9NDG7eIVsrouj4CS2M7LoNjM1"
+client_secret = 'y1z075l563BwcL8XtI7GzQzEnvo1jEEzmcmR1NFBxhYPFokYzu'
+# auth = tweepy.OAuthHandler("9NDG7eIVsrouj4CS2M7LoNjM1",
+#                            'y1z075l563BwcL8XtI7GzQzEnvo1jEEzmcmR1NFBxhYPFokYzu')
+# auth.set_access_token('1192925360851013632-9tVq9NfbXX1BM1q8pUxMqA3K6ZGIqD',
+#                       'CL9MFVQDYUNM3cVuNeg0HAcSFKA4YRER6YKaKKKxNlYeG')
+# oauth = OAuth1Session(client_key, client_secret=client_secret)
+# fetch_response = oauth.fetch_request_token(request_token_url)
+# resource_owner_key = fetch_response.get('oauth_token')
+# resource_owner_secret = fetch_response.get('oauth_token_secret')
+# base_authorization_url = 'https://api.twitter.com/oauth/authorize'
+# tweepy_api = tweepy.API(oauth)
+DEBUG = True
+SECRET_KEY = 'AbYzXSaNdErS123@'
+app.debug = DEBUG
+app.secret_key = SECRET_KEY
+VERIFIER = "epsteindidntkillhimself"
 # This variable specifies the name of a file that contains the OAuth 2.0
 # information for this application, including its client_id and client_secret.
 CLIENT_SECRETS_FILE = "client_secret_395200844618-bnei4qvc8203ieoic6hpkbrkdnvmdq49.apps.googleusercontent.com.json"
 CLIENT_ID = "395200844618-bnei4qvc8203ieoic6hpkbrkdnvmdq49.apps.googleusercontent.com"
-
+tweepy_api = None
 # This OAuth 2.0 access scope allows for full read/write access to the
 # authenticated user's account and requires requests to use an SSL connection.
 SCOPES = ["https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile", "openid"]
 API_SERVICE_NAME = 'drive'
 API_VERSION = 'v2'
-
+db.init_app(app) 
 # prevent cached responses
 @app.after_request
 def add_header(r):
@@ -35,7 +53,21 @@ def add_header(r):
 
 @app.route('/')
 def home():
-    return render_template('login.html')
+   return render_template('login.html')
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    oauth = tweepy.OAuthHandler(client_key,client_secret)
+    url = oauth.get_authorization_url()
+    session['request_token'] = oauth.request_token
+    # verifier = requests.get('oauth_verifier')
+    
+    # key = auth.access_token
+    # secret = auth.access_token_secret
+    # oauth_response = oauth.parse_authorization_response("http://127.0.0.1:5000/authenticated")
+    # verifier = oauth_response.get('oauth_verifier')
+    
+    return redirect(url)   
 
 """ Loads ontology to database """
 @app.route('/hello', methods=["GET", "POST"])
@@ -72,66 +104,48 @@ def hello():
 
     return render_template("index.html")
 
-@app.route('/login', methods=["GET"])
-def login():
-    # Create flow instance to manage the OAuth 2.0 Authorization Grant Flow steps.
-    flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
-      CLIENT_SECRETS_FILE, scopes=SCOPES)
-
-    flow.redirect_uri = url_for('authenticated', _external=True)
-
-    authorization_url, state = flow.authorization_url(
-      # Enable offline access so that you can refresh an access token without
-      # re-prompting the user for permission. Recommended for web server apps.
-      access_type='offline',
-      prompt='consent',
-      # Enable incremental authorization. Recommended as a best practice.
-      include_granted_scopes='true')
-
-    # Store the state so the callback can verify the auth server response.
-    session['state'] = state
-
-    return redirect(authorization_url)
-
-def credentials_to_dict(credentials):
-  return {'token': credentials.token,
-          'refresh_token': credentials.refresh_token,
-          'token_uri': credentials.token_uri,
-          'client_id': credentials.client_id,
-          'client_secret': credentials.client_secret,
-          'scopes': credentials.scopes}
-
 @app.route('/authenticated')
 def authenticated():
     # Specify the state when creating the flow in the callback so that it can
     # verified in the authorization server response.
-    state = session['state']
+    # state = session['state']
+    verification = request.args["oauth_verifier"]
+    auth = tweepy.OAuthHandler(client_key, client_secret)
+    try:
+        auth.request_token = session["request_token"]
+    except KeyError:
+        flash("Please login again", "danger")
+        return redirect('login')
 
-    flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
-      CLIENT_SECRETS_FILE, scopes=SCOPES, state=state)
-    flow.redirect_uri = url_for('authenticated', _external=True)
-    # Use the authorization server's response to fetch the OAuth 2.0 tokens.
-    authorization_response = request.url
-    flow.fetch_token(authorization_response=
-        authorization_response)
-    # Store credentials in the session.
-    # ACTION ITEM: In a production app, you likely want to save these
-    #              credentials in a persistent database instead.
-    s = flow.authorized_session()
-    idinfo = s.get('https://www.googleapis.com/oauth2/v3/userinfo').json()
-    credentials = flow.credentials
-    session['credentials'] = credentials_to_dict(credentials)
-    userid = idinfo['sub']
-    email = idinfo['email']
+    try:
+        auth.get_access_token(verification)
+    except tweepy.TweepError:
+        flash("Failed to get access token", "danger")
+        return redirect('login')
+
+    session["access_token"] = auth.access_token
+    session["access_token_secret"] = auth.access_token_secret
+    tweepy_api = tweepy.API(auth)
+    user_object = tweepy_api.me()
+    userid = user_object.id
+    session['credentials'] = credentials_to_dict(user_object)
+    user_name = user_object.screen_name
     # print("Hello", userid, email)
     result = db.engine.execute("SELECT * FROM users WHERE id = :id", {'id': userid})
     if not result.fetchone():
         db.engine.execute("""INSERT INTO users (id, username, privilege) VALUES
-                            (:id, :username, :privilege)""", {'id': userid, 'username': email, 'privilege': 0})
+                            (:id, :username, :privilege)""", {'id': userid, 'username': user_name, 'privilege': 0})
     session['userid'] = userid
-    session['username'] = email
+    session['username'] = user_name
 
     return redirect(url_for('user'))
+
+def credentials_to_dict(credentials):
+  return {'id': credentials.id,
+          'name': credentials.screen_name,
+          }
+
+
 
 @app.route('/user')
 def user():
@@ -212,9 +226,10 @@ def loadOntology(file) :
     filename = file + '.json'
     uploads = os.path.join(current_app.root_path,"data/json")
     uploads = uploads + "/" + str(filename)
-
+    print(uploads)
     fname = str(filename)
     fname = fname.split(".")[0]
+    fname2 = fname + ".owl"
     fname = fname + ".txt"
 
     result = db.engine.execute("SELECT id FROM ontologies WHERE name = :name", {'name': file})
@@ -222,21 +237,25 @@ def loadOntology(file) :
     session['ontology'] = onto_id
     """ Corresponding new relations for given ontology are stored in data/new. """
 
-    new_relations, new_classes,new_nodes = get_new_relations(os.path.join(current_app.root_path,"data/new")+ "/" + fname)
-    print(new_relations)
+    new_relations, new_classes,new_nodes = get_new_relations(os.path.join(current_app.root_path,"data/input")+ "/" + fname2,os.path.join(current_app.root_path,"data/input")+ "/" + fname)
+   
     print("new_nodes",new_nodes)
     result = db.engine.execute("""SELECT * FROM class_relations WHERE quantifier != :subclass""",
         {'subclass': str(RDFS.subClassOf)})
-    new_relations = [(r['domain'], r['property'], r['quantifier'], r['range']) for r in result.fetchall()]
-
+    # new_relations = [(r['domain'], r['property'], r['quantifier'], r['range']) for r in result.fetchall()]
+    print("new_relations",new_relations)
     result = db.engine.execute("""SELECT * FROM nodes""")
     # /new_nodes = [n['name'] for n in result.fetchall()]
-    print("new_nodes",new_nodes)
+   
     result = db.engine.execute("""SELECT * FROM class_relations WHERE quantifier = :subclass""",
         {'subclass': str(RDFS.subClassOf)})
     new_subclasses = [(r['domain'], r['range']) for r in result.fetchall()]
-    # print ("new subclass", new_subclasses)
-    # print(uploads)
+    print ("new subclass", new_subclasses)
+    # nodes = []
+    # for i in range(len(new_nodes)):
+    #     for j in range(len(new_nodes[i])):
+    #         nodes.append(new_nodes[i][j])
+    # print("new_nodes",nodes)
     try :
         with open(uploads,"r") as json_data:
             contents = json.load(json_data)
@@ -244,8 +263,8 @@ def loadOntology(file) :
     except :
         flash('Oops record not found')
         return redirect(url_for('hello'))
-
-    return render_template("index.html", ontologyJsonString=contents,userId=session['userid'])
+    # new_relations = list(set(new_relations))
+    return render_template("index.html", ontologyJsonString=contents,userId=session['userid'], hiddenJSONRel =new_relations, hiddenJSONNode = new_nodes, emptyList = [])
 
 
 # @app.route('/return-files/<path:filename>/', methods = ['GET', 'POST'])

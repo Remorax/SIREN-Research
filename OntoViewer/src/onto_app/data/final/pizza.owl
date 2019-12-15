@@ -149,6 +149,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <owl:ObjectProperty rdf:about="https://serc.iiit.ac.in/downloads/ontology/test.owl#hasTopping">
         <rdfs:subPropertyOf rdf:resource="https://serc.iiit.ac.in/downloads/ontology/test.owl#hasIngredient"/>
         <owl:inverseOf rdf:resource="https://serc.iiit.ac.in/downloads/ontology/test.owl#isToppingOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="https://serc.iiit.ac.in/downloads/ontology/test.owl#Pizza"/>
         <rdfs:range rdf:resource="https://serc.iiit.ac.in/downloads/ontology/test.owl#PizzaTopping"/>
@@ -167,11 +168,27 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     
 
 
+    <!-- https://serc.iiit.ac.in/downloads/ontology/test.owl#isHypernym -->
+
+    <owl:ObjectProperty rdf:about="https://serc.iiit.ac.in/downloads/ontology/test.owl#isHypernym">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://serc.iiit.ac.in/downloads/ontology/test.owl#isIngredientOf -->
 
     <owl:ObjectProperty rdf:about="https://serc.iiit.ac.in/downloads/ontology/test.owl#isIngredientOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:comment xml:lang="en">The inverse property tree to hasIngredient - all subproperties and attributes of the properties should reflect those under hasIngredient.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://serc.iiit.ac.in/downloads/ontology/test.owl#isSameAs -->
+
+    <owl:ObjectProperty rdf:about="https://serc.iiit.ac.in/downloads/ontology/test.owl#isSameAs">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
@@ -1813,7 +1830,6 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- https://serc.iiit.ac.in/downloads/ontology/test.owl#PeriPeri -->
 
     <owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/test.owl#PeriPeri">
-        <rdfs:subClassOf rdf:resource="https://serc.iiit.ac.in/downloads/ontology/test.owl#Pizza"/>
         <rdfs:label xml:lang="en">PeriPeri</rdfs:label>
     </owl:Class>
     
@@ -2536,6 +2552,12 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- https://serc.iiit.ac.in/downloads/ontology/test.owl#TandooriPizza -->
 
     <owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/test.owl#TandooriPizza">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://serc.iiit.ac.in/downloads/ontology/test.owl#isSameAs"/>
+                <owl:someValuesFrom rdf:resource="https://serc.iiit.ac.in/downloads/ontology/test.owl#IndianPizza"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">TandooriPizza</rdfs:label>
     </owl:Class>
     
@@ -2842,6 +2864,20 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     
 
 
+    <!-- https://serc.iiit.ac.in/downloads/ontology/test.owl#spices -->
+
+    <owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/test.owl#spices">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://serc.iiit.ac.in/downloads/ontology/test.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="https://serc.iiit.ac.in/downloads/ontology/test.owl#IndianPizza"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">spices</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2937,6 +2973,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
             <rdf:Description rdf:about="https://serc.iiit.ac.in/downloads/ontology/test.owl#TandooriPizza"/>
             <rdf:Description rdf:about="https://serc.iiit.ac.in/downloads/ontology/test.owl#UnclosedPizza"/>
             <rdf:Description rdf:about="https://serc.iiit.ac.in/downloads/ontology/test.owl#Veneziana"/>
+            <rdf:Description rdf:about="https://serc.iiit.ac.in/downloads/ontology/test.owl#spices"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>

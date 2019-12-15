@@ -1,2 +1,3 @@
-Pizza PeriPeri
-IndianPizza TandooriPizza
+Pizza isHypernym PeriPeri
+IndianPizza isSameAs TandooriPizza
+IndianPizza hasTopping spices

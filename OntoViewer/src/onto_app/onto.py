@@ -2,11 +2,12 @@ import subprocess
 from os import listdir
 from os.path import isfile, join
 import xml.dom.minidom
-
+from owlready2 import *
 from onto_app import db
 from onto_app.aggregate import accepted
 from rdflib import Graph
 from rdflib.namespace import OWL, RDF, RDFS
+from collections import defaultdict
 
 OWL2VOWL = 'OWL2VOWL-0.3.5-shaded.jar'
 baseurl = "https://serc.iiit.ac.in/downloads/ontology/test.owl"
@@ -21,21 +22,65 @@ def run(inputfile, outputfile, url, results):
     print (outputfile)
     thefile=open(outputfile,"w+")
     doc = xml.dom.minidom.parse(inputfile)
-    print (results)
-    for (instance, concept) in results:
+    print ("Results",results)
+    for (instance,relation,concept) in results:
+        # needed = doc.getElementsByTagName("owl:Class")
+        
         # (instance, concept) = line.split()
+        # needed = doc.getElementsByTagName("owl:Class")
+        # newelementclass = doc.createElement("owl:Class")
+        # newelementclass.setAttribute("rdf:about", url + "#" + concept)
+        # newelementsubclass = doc.createElement("rdfs:subClassOf")
+        # newelementsubclass.setAttribute("rdf:resource",url + "#" + instance)
+        # newelementclasslabel = doc.createElement("rdfs:label")
+        # newelementclasslabel.setAttribute("xml:lang","en")
+        # text = doc.createTextNode(concept)
+        # newelementclasslabel.appendChild(text)
+        # newelementclass.appendChild(newelementsubclass)
+        # newelementclass.appendChild(newelementclasslabel)
+        # needed[0].parentNode.insertBefore(newelementclass, needed[0])
+        # 
+        
+        # if search.getAttribute("rdf:parseType"):
+        #     newelementclass = doc.createElement("rdf:Description")
+        #     newelementclass.setAttribute("rdf:about", url + "#" + concept)
+        #     search.appendChild(newelementclass)
+
+            
+        #     newelementclass = doc.createElement("rdf:Description")
+        #     newelementclass.setAttribute("rdf:about", url + "#" + instance)
+        #     search.appendChild(newelementclass)
+        x = doc.getElementsByTagName(baseurl + "#" + relation)
+        if not x:
+            # newRelationshipClass = doc.createElement(url + "#" + relation)
+            newElementObject = doc.createElement("owl:ObjectProperty")
+            newElementObject.setAttribute("rdf:about", url + "#" + relation)
+            newTypeObject = doc.createElement("rdf:type")
+            newTypeObject.setAttribute("rdf:resource","http://www.w3.org/2002/07/owl#FunctionalProperty")
+            newElementObject.appendChild(newTypeObject)
+            # newRelationshipClass.appendChild(newElementObject)
+            doc.childNodes[0].appendChild(newElementObject)
+        else:
+            pass
         needed = doc.getElementsByTagName("owl:Class")
-        newelementclass = doc.createElement("owl:Class")
-        newelementclass.setAttribute("rdf:about", url + "#" + concept)
-        newelementsubclass = doc.createElement("rdfs:subClassOf")
-        newelementsubclass.setAttribute("rdf:resource",url + "#" + instance)
+        newElementClass = doc.createElement("owl:Class")
+        newElementClass.setAttribute("rdf:about", url + "#" + concept)
+        newElementSubClass = doc.createElement("rdfs:subClassOf")
+        newElementRestriction = doc.createElement("owl:Restriction")
+        newElementProperty = doc.createElement("owl:onProperty")
+        newElementProperty.setAttribute("rdf:resource", url + "#" + relation)
+        newElementsomeValuesFrom = doc.createElement("owl:someValuesFrom")
+        newElementsomeValuesFrom.setAttribute("rdf:resource", url + "#" + instance)
         newelementclasslabel = doc.createElement("rdfs:label")
         newelementclasslabel.setAttribute("xml:lang","en")
         text = doc.createTextNode(concept)
         newelementclasslabel.appendChild(text)
-        newelementclass.appendChild(newelementsubclass)
-        newelementclass.appendChild(newelementclasslabel)
-        needed[0].parentNode.insertBefore(newelementclass, needed[0])
+        newElementRestriction.appendChild(newElementProperty)
+        newElementRestriction.appendChild(newElementsomeValuesFrom)
+        newElementSubClass.appendChild(newElementRestriction)
+        newElementClass.appendChild(newElementSubClass)
+        newElementClass.appendChild(newelementclasslabel)
+        needed[0].parentNode.insertBefore(newElementClass, needed[0])
         search = doc.getElementsByTagName("owl:members")[0]
         if search.getAttribute("rdf:parseType"):
             newelementclass = doc.createElement("rdf:Description")
@@ -46,18 +91,37 @@ def run(inputfile, outputfile, url, results):
             newelementclass = doc.createElement("rdf:Description")
             newelementclass.setAttribute("rdf:about", url + "#" + instance)
             search.appendChild(newelementclass)
+        # x = doc.getElementsByTagName()
+        # needed = doc.getElementsByTagName("owl:Class")
+        # newelementclass = doc.createElement("owl:Class")
+        # newelementclass.setAttribute("rdf:about", url + "#" + concept)
+        # # newelementsubclass = doc.createElement("rdfs:subClassof")
+        # # newelementsubclass = doc.createElement("rdfs:" + relation)
+        # newelementsubclass.setAttribute("rdf:resource",url + "#" + instance)
+        # newelementclasslabel = doc.createElement("rdfs:label")
+        # newelementclasslabel.setAttribute("xml:lang","en")
+        # text = doc.createTextNode(concept)
+        # newelementclasslabel.appendChild(text)
+        # newelementclass.appendChild(newelementsubclass)
+        # newelementclass.appendChild(newelementclasslabel)
+        # needed[0].parentNode.insertBefore(newelementclass, needed[0])
+        # search = doc.getElementsByTagName("owl:members")[0]
+    
+
         
     doc.writexml(thefile)
     thefile.close()
+    print("Done")
 
 def createParsedRelations(file, fname):
     allParsedRelations = []
     for line in open(file, "r").readlines():
-        (instance, concept) = line.split()
-        newinstance = baseurl + "#" + concept 
-        newconcept = baseurl + "#" + instance
-        relation = "http://www.w3.org/2000/01/rdf-schema#subClassOf"
-        allParsedRelations.append(" ".join([newinstance, relation, newconcept]))
+        if line.split():
+            (instance, relation, concept) = line.split()
+            newinstance = baseurl + "#" + concept 
+            newconcept = baseurl + "#" + instance
+            relation = baseurl+relation
+            allParsedRelations.append(" ".join([newinstance, relation, newconcept]))
     string = "\n".join(allParsedRelations)
     open("./data/new/" + str(fname) + '.txt', "w+").write(string)
     return
@@ -69,8 +133,8 @@ def add_onto_file(admin_id, name):
     unparsed_relations_file = './data/input/' + str(name) + '.txt'
     filepath = './data/input/' + str(name) + '.owl'
     f = open(json_path, 'w')
-    allTriples = [el.split(" ") for el in open(unparsed_relations_file).read().split("\n")]
-
+    allTriples = [el.strip(" ").split(" ") for el in open(unparsed_relations_file).read().split("\n") if el]
+    print(allTriples)
     createParsedRelations(unparsed_relations_file, name)
     new_relations_file = './data/new/' + str(name) + '.txt'
     outputfile = "./data/owl/" +str(name) + '.owl'
@@ -89,69 +153,103 @@ def add_onto_file(admin_id, name):
     db.session.commit()
 
     # add new relations to database
-    new_relations, new_nodes, new_subclasses = get_new_relations(new_relations_file)
+    new_relations,new_subclasses, new_nodes = get_new_relations(new_relations_file,unparsed_relations_file)
     add_relations_to_db(new_relations, new_ontology_id)
     add_nodes_to_db(new_nodes, new_ontology_id)
-    add_subclasses_to_db(new_subclasses, new_ontology_id)
+    # add_subclasses_to_db(new_subclasses, new_ontology_id)
 
 def add_new_ontologies():
     ontologies = ['.'.join(f.split('.')[:-1]) for f in listdir("./data/owl/") if isfile(join("./data/owl/", f))]
     ontologies = [ont for ont in ontologies if ont]
-    # print("Onto=", ontologies)
+    print("Onto=", ontologies)
     result = db.engine.execute("""SELECT name FROM ontologies""")
     db_ontologies = [o['name'] for o in result.fetchall()]
     for onto in ontologies:
         if not (onto in db_ontologies):
             add_onto_file(0, onto)
 
-def get_new_relations(filepath):
+def get_new_relations(filepath,txtfile_path):
     d = dict()
     print (filepath)
-    f = open(filepath, 'r')
+    f = open(txtfile_path, 'r')
     relations = list()
     classes = list()
     subclasses = list()
+    print(filepath)
+    onto = get_ontology(filepath).load()
+    existing_nodes = []
+    nodes = []
+    print(list(onto.classes()))
+    for c in list(onto.classes()):
+        existing_nodes.append(str(c._name))
+    for line in f.readlines():
+         if line.split():
+            (instance, relation, concept) = line.split()
+            nodes.append(instance)
+            nodes.append(concept)
+            newinstance = baseurl + "#" + concept 
+            newconcept = baseurl + "#" + instance
+            relation = baseurl+"#"+relation
+            relations.append([newinstance, relation, newconcept])
+    nodes = set(nodes)
+    existing_nodes = set(existing_nodes)
+    new_nodes = nodes.difference(existing_nodes)
+    print(new_nodes)
+    print(nodes.difference(existing_nodes))
+    # relations = set(relations)
+    new_nodes = list(new_nodes)
+    print(nodes)
+    print(existing_nodes)
+    print(new_nodes)
+    print(relations)
+    n_nodes = []
+    for concept in new_nodes:
+        new_concept = baseurl + "#" + concept
+        n_nodes.append(new_concept) 
+    return relations, [],n_nodes
 
+    
     # Each line of the new relations file is an RDF triple, so it is a
     # triple of the subject, predicate, and object
     # Create an adjacency list graph from the triples
-    for l in f.readlines():
-        print("new_file",l)
-        print("\n")
-        s, p, o = l.split()
+    # for l in f.readlines():
+    #     print("new_file",l)
+    #     print("\n")
+    #     s, p, o = l.split()
        
 
-        if o == str(OWL.Class):
-            classes.append(s)
-        elif (p == str(RDFS.subClassOf) and not is_blank(s) and not is_blank(o)):
-            subclasses.append((s, o))
-        else:
-            if s in d:
-                d[s].append((p, o))
-            else:
-                d[s] = [(p, o)]
+    #     if o == str(OWL.Class):
+    #         classes.append(s)
+    #     elif (p == str(RDFS.subClassOf) and not is_blank(s) and not is_blank(o)):
+    #         subclasses.append((s, o))
+    #     else:
+    #         if s in d:
+    #             d[s].append((p, o))
+    #         else:
+    #             d[s] = [(p, o)]
 
-    # From the graph, find all restricitons (blank nodes) and get the relevant
-    # relation data from them
-    for s in d:
-        if not is_blank(s):
-            for p, o in d[s]:
-                if is_blank(o):
-                    domain = s
-                    rang = None
-                    quant = None
-                    prop = None
-                    for p1, o1 in d[o]:
-                        if p1 == str(OWL.onProperty):
-                            prop = o1
-                        elif p1 == str(OWL.someValuesFrom):
-                            quant = p1
-                            rang = o1
-                    if quant == str(OWL.someValuesFrom):
-                        relations.append((domain, prop, quant, rang))
-    print(subclasses, relations, classes)
-    return relations, classes, subclasses
+    # # From the graph, find all restricitons (blank nodes) and get the relevant
+    # # relation data from them
+    # for s in d:
+    #     if not is_blank(s):
+    #         for p, o in d[s]:
+    #             if not is_blank(o):
+    #                 domain = s
+    #                 rang = None
+    #                 quant = None
+    #                 prop = None
+    #                 for p1, o1 in d[o]:
+    #                     if p1 == str(OWL.onProperty):
+    #                         prop = o1
+    #                     elif p1 == str(OWL.someValuesFrom):
+    #                         quant = p1
+    #                         rang = o1
+    #                 if quant == str(OWL.someValuesFrom):
+    #                     relations.append((domain, prop, quant, rang))
+    # print(subclasses, relations, classes)
+    # return relations, classes, subclasses
 
+ 
 def add_nodes_to_db(nodes, onto_id):
     insert_query = """INSERT INTO
                     nodes (name, onto_id)
@@ -168,14 +266,14 @@ def add_relations_to_db(relations, onto_id):
                     class_relations (domain, property, quantifier, range, onto_id)
                     VALUES (:domain, :property, :quantifier, :range, :onto_id)"""
     args = {'domain': None, 'property': None, 'quantifier': None, 'range': None, 'onto_id': onto_id}
-    # print("#relations = ", len(relations))
+    print("#relations = ", relations)
     for r in relations:
         args['domain'] = r[0]
         args['property'] = r[1]
-        args['quantifier'] = r[2]
-        args['range'] = r[3]
+        args['quantifier'] = None
+        args['range'] = r[2]
         result = db.engine.execute(insert_query, args)
-        # print(result)
+        print(result)
     # db.session.commit()
 
 def add_subclasses_to_db(subclasses, onto_id):
@@ -193,6 +291,62 @@ def add_subclasses_to_db(subclasses, onto_id):
         result = db.engine.execute(insert_query, args)
         print(result)
     # db.session.commit()
+
+
+def add_relation_with_credibility_only(twitter_users):
+    # query = """SELECT * FROM class_decisions"""
+    # result = db.engine.execute(query)
+    query = """SELECT * FROM class_decisions INNER JOIN class_relations ON class_decisions.relation_id =class_relations.id where class_decisions.id= ?"""
+    result = db.engine.execute(query)
+    relation_list = [(o['relation_id'],o['property'],o['domain'],o['range']) for o in result.fetchall()]
+    relation_set = set(relation_list)
+    relation_dict = defaultdict(int)
+    relation_count = defaultdict(int)
+    query = """SELECT * FROM class_decisions INNER JOIN class_relations ON class_decisions.relation_id =class_relations.id where class_decisions.id= ?"""
+    result = db.engine.execute(query)
+    for tup in relation_set :
+        for o in result.fetchall():
+            if(tup[0] == o['property'] and tup[1] == o['domain'] and tup[2] == o['range']):
+                relation_dict[tup]+=(o['approved']*twitter_users[o['user_id']])
+                relation_count[tup]+=twitter_users[o['user_id']]
+            else:
+                pass
+
+
+    query = """DELETE * FROM class_decisions WHERE class_decisions.id = ?"""
+    result = db.engine.execute(query)
+    for tup,score in relation_dict.items():
+        score = score/relation_count[tup]
+        relation_dict[tup] = score
+    for tup,score in relation_dict.items():
+        if score > 0.5:
+            args = {
+                    'relation_id': tup[0],
+                        # 'property': property,
+                    'approved': 1,
+                    'user_id': None
+                    }
+            insert_query = """INSERT INTO class_decisions
+                        (relation_id, user_id, approved)
+                        VALUES (:relation_id, :user_id, :approved)"""
+            db.engine.execute(insert_query,args)
+        else:
+            args = {
+                    'relation_id': tup[0],
+                        # 'property': property,
+                    'approved': 0,
+                    'user_id': None
+                    }
+            insert_query = """INSERT INTO class_decisions
+                        (relation_id, user_id, approved)
+                        VALUES (:relation_id, :user_id, :approved)"""
+            db.engine.execute(insert_query,args)
+
+
+
+
+
+
 
 
 def add_relation_decision(user_id, property, domain, range, quantifier, onto_id, decision):
@@ -249,7 +403,10 @@ def add_node_decision(user_id, name, onto_id, decision):
         'onto_id': onto_id,
         'name': name,
     })
-
+    print(user_id)
+    print(onto_id)
+    print(decision)
+    print(name)
     node_id = result.fetchone()['id']
 
     result = db.engine.execute("""SELECT * FROM node_decisions 
@@ -258,7 +415,7 @@ def add_node_decision(user_id, name, onto_id, decision):
     if result.fetchone():
         db.engine.execute("""UPDATE node_decisions SET approved = :decision
         WHERE user_id = :user_id AND node_id = :node_id""", 
-        {'user_id': user_id, 'node_id': node_id, 'decision': approved})
+        {'user_id': user_id, 'node_id': node_id, 'approved': decision})
     else:
         insert_query = """INSERT INTO node_decisions
                             (node_id, user_id, approved)

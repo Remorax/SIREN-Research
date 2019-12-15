@@ -1,43 +1,36 @@
 # Ontology Determiner
+# ONTOLOGY VIEWER
 
-# Setup
-- Ensure `python3` and `pip` are installed
-- Open the `src` folder in the terminal, and run `pip install -r requirements.txt` to install the required Python modules
+# Requirements:
+- python3 and pip are prerequisites
 
-# Starting the server
-- `cd` to the `onto_app` directory and set `FLASK_APP=routes.py`
-- Start the server with `flask run`
-    - You can set the host using the `--host=X.X.X.X` flag, and the port with `--port=X`
-    - You may choose to deploy the flask application in a different way
+# SetUp:
+- go to src folder and run `pip install -r requirements.txt`, incase of any missing modules , please report
 
-# Preparing an ontology to be served
-- Two files are required. The first is the OWL file that has to be verified, and the other file is a
-text file that identifies the new relationships in the ontology.
-- The OWL file has to be placed in the `data/owl/` directory, and the text file in `data/new/` directory.
-- To generate the text file, the new RDF triples in the file need to be identified. These RDF triples
-can be accessed by opening the OWL file using an RDF processing library like RDFLib in Python. 
-- Once the new triples have been identified, the triples should be written into a file, one triple per line,
-and a single space separating each element of the triple.
-    - NOTE: The file in /data/owl should be named `<file>.owl`, and the file in `/data/new/` `<file>.txt`. The names
-        of the file **have to be the same, except for extension.**
-- Once the files have been placed in the respective folders, they will be loaded into the database when
-    the `/` route is visited. They are then accessible to an expert.
+# Data Requirements:
+Place your seed file in src/onto_app/data/input as .owl file
+Place your new relations and concepts file in src/onto_app/data/input as .txt file
+The name of both .owl file and .txt file should be the same 
+Say for example pizza.owl and pizza.txt
 
-# Getting a verified ontology once users have decided
-- To apply changes based on decisions made by experts, the following command has to be executed:
-    `python get_verified_ontology.py <ontology_name>`
-- `ontology_name` is the name of the ontology file in `/data/owl/` without the `.owl` extension. Once the script
-    is run, the new `.owl` file will be stored in `/data/final/`. 
-    - NOTE: **The new relations file `/data/new` will not be changed on running the script.** The database will be 
-    updated to remove those relations which have been decided upon by at least one 
-    expert. **The file in `/data/owl/` will not change.**
 
-# Changing the WebVOWL interface code
-- To update/make changes to the visualization software, WebVOWL, the source code of the WebVOWL software being used needs to be updated,
-and all necessary files need to be rebuilt into the deploy directory of the WebVOWL folder, which itself is located inside the src folder.
-- Run `npm run-script release` to (re-)build all necessary files into the deploy directory.
-- The new files created in the deploy directory of WebVOWL must then be transferred into src/onto_app/static/js for javascript updated, and src/onto_app/static/css for updating CSS.
-- To see these changes reflected now, refresh window on which app is being viewed.
+# Ontology Viewer
+- go to 'onto_app' directory int terminal and set `FLASK_APP=routes.py` and `FLASK_ENV=development`
+- start the server by flask run
+- login to the application by your twitter account 
+- accept or reject relationships and concepts
+- go back to the login  page and logout
+- stop the server
+
+# Final Ontology file
+-remove the files in /src/data/final if nay
+- run python3 get_verified_ontology.py <file_name>
+- final ontology is stored in src/data/final as <file_name>final.owl
+
+# Changing the Source code of WEBVOWL
+To see how to change the source code of WEBVOWL go to src/WEBVOWL and read the readme and follow the instructions.
+License for using the source code of WEBVOWL is given by MIT and the license file is in src/WEBVOWL
+
 
 
 

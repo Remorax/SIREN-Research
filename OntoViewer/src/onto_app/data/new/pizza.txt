@@ -1,2 +1,3 @@
-https://serc.iiit.ac.in/downloads/ontology/test.owl#PeriPeri http://www.w3.org/2000/01/rdf-schema#subClassOf https://serc.iiit.ac.in/downloads/ontology/test.owl#Pizza
-https://serc.iiit.ac.in/downloads/ontology/test.owl#TandooriPizza http://www.w3.org/2000/01/rdf-schema#subClassOf https://serc.iiit.ac.in/downloads/ontology/test.owl#IndianPizza
+https://serc.iiit.ac.in/downloads/ontology/test.owl#PeriPeri https://serc.iiit.ac.in/downloads/ontology/test.owlisHypernym https://serc.iiit.ac.in/downloads/ontology/test.owl#Pizza
+https://serc.iiit.ac.in/downloads/ontology/test.owl#TandooriPizza https://serc.iiit.ac.in/downloads/ontology/test.owlisSameAs https://serc.iiit.ac.in/downloads/ontology/test.owl#IndianPizza
+https://serc.iiit.ac.in/downloads/ontology/test.owl#spices https://serc.iiit.ac.in/downloads/ontology/test.owlhasTopping https://serc.iiit.ac.in/downloads/ontology/test.owl#IndianPizza
