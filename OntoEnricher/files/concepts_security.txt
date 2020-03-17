@@ -1,0 +1,367 @@
+Access Control Regulation Control Compliant Organization
+Access Control Regulation Policy
+Access Log Book
+Access Regulation Control Compliant Building
+Access System
+Access System A
+Access System B
+Access System C
+Activities Monitoring Software
+Air Condition System
+Air Condition System A
+Air Condition System B
+Air Conditioning Control Compliant Server Room
+Alarm System
+Alarm System A
+Alarm System B
+Alarm System C
+Anti Virus Control Compliant Mobile Device
+Antivirus Software Control Compliant Computer
+Application Evaluation Control Compliant Organization
+Application Evaluation Policy
+Appropriate Contacts Control Compliant Organization
+Appropriate Contacts Policy
+Asset
+Asset Importance
+Asset Threat Probability
+Assets Control Compliant Organization
+Assets Control Policy
+Attacker Profile
+Attribute
+Audit Logging And Monitoring Control Compliant Organization
+Audit Logging And Monitoring Policy
+Automatic Locking Control Compliant Computer
+Automatic Locking Control Compliant Mobile Device
+Automatic Locking Software
+Backup Media
+Backup Software
+Backup Storage In House Control Compliant Backup Media
+Backup Storage Outside Control Compliant Backup Media
+Bared Window
+Bared Window Control Compliant Section
+Boolean Scale
+Building
+Business Continuity Management Process Control Compliant Organization
+Business Continuity Policy
+CD And DVD
+CO2Fire Extinguisher
+Cabling Security Control Compliant Building
+Cabling Security Policy
+Change Control Procedures Control Compliant Organization
+Change Control Procedures Policy
+Checklist
+Clear Desk Control Compliant Organization
+Clear Desk Policy
+Clear Desk Policy A
+Clear Desk Policy B
+Clock Synchronization Control Compliant Computer
+Clock Synchronization Software
+Cloud Computing Control Compliant Organization
+Cloud Computing Policy
+Cloud Service Contract
+Complex Firewall
+Compliance Control Compliance Organization
+Compliance Policy
+Compliant Control
+Computer
+Configuration Data Control Compliant Organization
+Configuration Data Digital
+Configuration Data Hard Copy
+Contract
+Control
+Control Implementation Effectiveness
+Control Type
+Data
+Data Archiving Control Compliant Organization
+Data Archiving Policy
+Data Backup Control Compliant Organization
+Data Backup Policy
+Data Backup Policy A
+Data Backup Policy B
+Data Backup Policy C
+Data Backup Storage Control Compliant Organization
+Data Backup Storage Policy
+Data Backup Storage Policy A
+Data Backup Storage Policy B
+Data Backup Storage Policy C
+Data Backup Strategyand Backup Media Control Compliant Organization
+Data Breach Notification Control Compliant Organization
+Data Breach Notification Policy
+Data Check Software
+Data Deletion Software
+Data Disposal Control Compliant Organization
+Data Disposal Policy
+Data Encryption Policy
+Data Encryption Software Control Compliant Computer
+Data Secrecy Control Compliant Organization
+Data Secrecy Policy
+Data Security Handbook Control Compliant Organization
+Delivery And Loading Areas Control Compliant Building
+Delivery Area
+Disciplinary Process Control Compliant Organization
+Disciplinary Process Policy
+Document
+Documented Operational Procedures Control Compliant Organization
+Door
+Electric Installation Control Compliant Organization
+Electric Installation Policy
+Electronic Commerce Services Control Compliant Organization
+Electronic Messaging Protection Control Compliant Organization
+Emergency Planning Control Compliant Organization
+Emergency Planning Policy
+Emergency Recovery Control Compliant Organization
+Emergency Recovery Policy
+Emergency Substitute Device
+Employment Contract
+Encryption Of Confidental Data Policy
+Encryption Of Confidential Data Control Compliant Organization
+Encryption Software
+Entry Checkpoint
+Entry Checkpoint A
+Entry Checkpoint B
+Environmental Conditions Monitoring Control Compliant Organization
+Environmental Conditions Monitoring Control Compliant Server Room
+Environmental Conditions Monitoring Software
+Equipment Identification Control Compliant Computer
+Equipment Location Control Compliant Building
+Equipment Sitting And Protection Policy
+Exchange Agreements Control Compliant Organization
+Exploitation_Degree_Relation
+External Connections Authentication Control Compliant Organization
+External Connections Policy
+External Employment Contract
+External Role
+External Staff Control Compliant Organization
+External Staff Policy
+Fire Extinguisher
+Fire Extinguisher A
+Fire Extinguisher B
+Fire Extinguisher Control Compliant Section
+Fire Extinguisher Control Compliant Server Room
+Fire Safety And Training Policy
+Fire Safety Control Compliant Organization
+Fire Suppression Control Compliant Section
+Fire Suppression System
+Fire Suppression System A
+Fire Suppression System B
+Firewall
+Firewall A
+Firewall B
+Firewall Control Compliant Computer
+Firewall Policy
+Firewall Regulation Control Compliant Organization
+Human Behavior Guidelines Control Compliant Control Organization
+Human Resource Development Control Compliant Organization
+Human Resource Development Policy
+Humidity Surveillance System
+ISO27001
+IT Component
+Identification Software
+Immovable Asset
+Information Passing Control Compliant Organization
+Information Passing Policy
+Information Security Independent Review Control Compliant Organization
+Information Security Independent Review Policy
+Information Security Policy
+Information Security Policy Control Compliant Organization
+Information Security Risk Awareness Control Compliant Organization
+Installation Media
+Intangibe Asset
+Internal Data
+Internal Role
+Internet Filter
+Internet Filter Control Compliant Computer
+Internet Gateway
+Internet Regulation Control Compliant Organization
+Internet Regulation Policy
+Internet Regulation Policy A
+Internet Regulation Policy B
+Intrusion Alarm System Control Compliant Section
+Kensington Lock
+Kensington Lock Control Compliant Computer
+Language
+Level
+Lightning Arrester
+Lightning Arrester A
+Lightning Arrester B
+Lightning Arrester Control Compliant Building
+Likert Scale
+Loading Area
+Location
+Lockable Depositiory
+Lockable Depository Outside Building
+Lockable Depository Within Building
+Locked Doors After Working Hours Policy
+Locked Doors Control Compliant Organization
+Low Level Threat
+Magnetic Tape
+Maintenance Contract
+Maintenance Contract Control Compliant IT Component
+Material Storing Control Compliant Building
+Material Storing Policy
+Media And Communication Scanning Control Compliant Organization
+Media Disposal Control Compliant Organization
+Mobile Code Blocking Control Compliant Organization
+Mobile Device
+Mobile Device Control Compliant Organization
+Mobile Device Regulation Policy
+Movable Asset
+Multifunctional Firewall
+Network Component
+Network Logging And Monitoring Control Compliant Organization
+Network Monitoring Software
+Network Routing Control Compliant Organization
+Network Segregation Control Compliant Organization
+Network Services Agreement Control Compliant Organization
+Networking Policy
+New Facilities Authorization Control Compliant Organization
+Notebook
+OS
+Offline Encryption Software
+Online Encryption Software
+Operational Procedures Policy
+Organization
+Organizational Records Protection Control Compliant Organization
+Outsourcing Control Compliant Organization
+PC And Internet Control Compliant Organization
+PC Internet And Email Regulation Policy
+PDA
+Packet Filter Firewall
+Password Compliant Check
+Password Manager
+Password Regulation Control Compliant Computer
+Person
+Personal Firewall
+Personal Firewall Control Compliant Computer
+Physical Access Key Control Compliant Organization
+Physical Key Distribution Policy
+Physical Media Transit Control Compliant Organization
+Physical Media Transit Policy
+Physical Perimeter Protection Control Compliant Organization
+Physical Perimeter Protection Policy
+Placement Control Compliant IT Component
+Policy
+Port Security And Configuration Policy
+Port Security Diagnostic And Configuration Control Compliant Organization
+Position Responsibilites And Deputizing Control Compliant Organization
+Position Resposibility Policy
+Power Source
+Printer
+Private Software And Hardware Control Compliant Organization
+Private Software And Hardware Use Policy
+Processing Validation Control Compliant Computer
+Processing Validation Policy
+Public Data
+Raised Floor Control Compliant Level
+Reception Regulation Policy
+Recording Of Configuration Data Policy
+Removable Hard Disk
+Removable Media Control Compliant Organization
+Removable Media Policy
+Reputation
+Restrictive Granting Of Access Rights Control Compliant Organization
+Restrictive Granting Of Access Rights Policy
+Restrictive Granting Of Access Rights Policy A
+Restrictive Granting Of Access Rights Policy B
+Risk Assessment Control Compliance Organization
+Risks Policy
+Role
+Safety Door
+Safety Door A
+Safety Door B
+Safety Door Control Compliant Section
+Scale
+Section
+Section Connector
+Sectionwith1Section Connector
+Sectionwith2Section Connector
+Sectionwith3Section Connector
+Secure Areas Control Compliant Building
+Secure Areas Policy
+Secure Log On Control Compliant Organization
+Security Attribute
+Security Incidents Procedures Control Compliant Organization
+Security Management Framework Control Compliant Organization
+Security Management Framework Policy
+Security Relevant Patches And Updates Control Compliant Organization
+Security Relevant Patches And Updates Policy
+Security Relevant Patches And Updates Policy A
+Security Relevant Patches And Updates Policy B
+Security Relevant Patches And Updates Policy C
+Security Relevant Updates And Testing Control Compliant Organization
+Security Training Control Compliant Organization
+Security Training Policy
+Sensitive Data
+Sensitive Information Control Compliant Organization
+Server
+Server Rack
+Server Room
+Service Contract
+Service Contract Policy
+Session Time Control Compliant Organization
+Session Time Policy
+Settings
+Shredder
+Site
+Smartphone
+Smoke Detector
+Smoke Detector Control Compliant Section
+Social Network Control Compliant Organization
+Social Network Policy
+Software
+Software Application Evaluation Policy
+Staff Employment Policy
+Standard Control
+Standard Door
+Switch
+System
+System Capacity Monitoring Control Compliant Organization
+System Capacity Monitoring Software
+System Image
+Systems Testing And Acquisition Control Compliant Organization
+Systems Testing And Acquisition Policy
+Tablet
+Tangible Asset
+Technical Vulnerabilities Control Compliant Organization
+Technical Vulnerabilities Policy
+Teleworking Control Compliant Organization
+Teleworking Policy
+Teleworkstation
+Temperature Surveillance Control Compliant Server Room
+Temperature Surveillance System
+Test System
+Theft Protection Control Compliant Mobile Device
+Theft Protection Software
+Third Party Service Management Control Compliant Organization
+Threat
+Threat Apriori Probability
+Threat Origin
+Threat Source
+Top Level Threat
+Transaction Security And Virus Protection Software
+Transaction Security And Virus Protection Software A
+Transaction Security And Virus Protection Software B
+Transparent Encryption Software
+USB Stick
+Unauthorized Use Prevention Control Compliant Organization
+Uninterruptible Power Supply Control Compliant Server Room
+Uninterruptible Power Supply Unit
+Uninterruptible Power Supply Unit A
+Uninterruptible Power Supply Unit B
+User Identification Authentication Control Compliant Organization
+User Profiles
+User Registration And De Registration Control Compliant Organization
+Virus Infection Control Compliant Organization
+Virus Infection Emergency Regulation Policy
+Visible Identification Control Compliant Building
+Visitors Control Compliant Organization
+Vulnerability
+WKOIT Sicherheitshandbuch
+WLAN Control Compliant Organization
+WLAN Policy
+Water Alarm System
+Water Alarm System Control Compliant Section
+Window
+Wireless Access Point
+Workstation
+Workstation Access Rights Policy

@@ -1,0 +1,4 @@
+https://serc.iiit.ac.in/downloads/ontology/test.owl#AuditAssurance https://serc.iiit.ac.in/downloads/ontology/test.owlisHyernym https://serc.iiit.ac.in/downloads/ontology/test.owl#Policy
+https://serc.iiit.ac.in/downloads/ontology/test.owl#Policy https://serc.iiit.ac.in/downloads/ontology/test.owlisSameAs https://serc.iiit.ac.in/downloads/ontology/test.owl#Organization
+https://serc.iiit.ac.in/downloads/ontology/test.owl#XXAttack https://serc.iiit.ac.in/downloads/ontology/test.owlisHypernym https://serc.iiit.ac.in/downloads/ontology/test.owl#BufferOverflow
+https://serc.iiit.ac.in/downloads/ontology/test.owl#Policy https://serc.iiit.ac.in/downloads/ontology/test.owlisHypernym https://serc.iiit.ac.in/downloads/ontology/test.owl#BufferOverflow

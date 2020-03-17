@@ -1,0 +1,204 @@
+Chelsea vs Liverpool Preview: Team news, Prediction, lineups and kick-off
+What is a little tip that you learned about a computer that you use daily?
+Any new subredddits that do what this one says it does
+Best “Security for the Less Tech/Security Savvy” resources
+r/security is supporting National Domestic Violence Awareness Month
+Attackers exploit an iTunes zeroday to install ransomware
+California AG tells businesses like Facebook and Google how they must comply with the state’s new landmark privacy law
+unrecognized email became my recovery email of google account
+Authentication bypass vulnerability found in Zabbix
+EBay, Stripe, Mastercard Exit Libra in Blow to Facebook Project
+Google’s $2.6 Billion Looker Deal Said to Get Closer DOJ Review
+Planting Tiny Spy Chips in Hardware Can Cost as Little as $200
+UNIX Co-Founder Ken Thompson's BSD Password Has Finally Been Cracked | Stephen R. Bourne's password is exceptionally nice 😜
+Help, my phone is spying me for facebook
+Any harm having plain-text passwords in the root crontab?
+A tail of escaping internet censorship
+Google could buff its browser-privacy blemishes
+Twitter using 2FA authentication contact details to target ads
+How can I store sensitive information like my credit card numbers in the cloud?
+‘How do you know we’re not investigating?’ California attorney general says after sitting out multistate Google probe
+security in different countries
+Spies hacked Moroccan activists amid crackdown on protests: researchers
+MOTOsafety Tracking Device
+Help me find this github
+Hacker Selling User Info Stolen From Prostitution Forums - escortforumit.xxx + hookers.nl
+Kount fraud detection chosen by grocery rewards application
+Safe way to manage clients passwords?
+Planting Tiny Spy Chips in Hardware Can Cost as Little as $200 | WIRED
+Flaw in iTunes for Windows Abused for Ransomware Attacks
+Iraq introduces nightly internet curfew, no internet from 5PM to 7AM
+My Pi-Hole Is Telling Me Something
+Same-Site Cookies By Default
+Google Might Soon Let Huawei Use its Services Again
+Keep getting "suspicious activity" warnings
+Security In 5: Episode 600 - Tools, Tips and Tricks - YourThings.info
+SACK PANIC (CVE-2019-11477) remote exploit demo
+Help! My Android phone has been hacked. Or has it?
+Schneier slams Australia's encryption laws and CyberCon speaker bans
+Scots technology pioneer to take on Google with ad-free internet search engine
+Xeon and Other Intel CPUs Hit by NetCAT Security Vulnerability, AMD Not Impacted
+Most Americans Fail Cybersecurity Quiz
+V is for Vendor: The Emergence of Vendor Email Compromise
+Trending CyberSecurity Issues that You Need to Tackle in Future
+Google secures two Android phone makers' backing in fight against EU antitrust order
+I’m not sure if they’re trying to help or to steal keys...
+Hardening Dovecot/IMAP HELP
+Ways to protect my pc in case of theft?
+Opinions on Quad9 DNS?
+Security In 5: Episode 599 - No Matter Your Size, Cybersecurity Matters To Your Business
+COMpfun successor Reductor infects files on the fly to compromise TLS traffic
+How to port/backup apple keychain to something like keepassxc or bitwarden
+Microsoft Employees Call to End GitHub ICE Contract
+Hacked Programmer Retaliates By Hacking Hackers Who Hacked Him
+How a double-free bug in WhatsApp turns to RCE
+Google can view all the content you store in Google Docs and other G Suite apps
+Nextcloud passwords
+RightScale®: See the Latest Cloud Trends - Tech Cloud Link
+The Largest List (201+) of Cyber Attacks
+Pushing Security From The Datacenter Out To The Edge
+New Zealand health NGO’s data breach could affect up to 1 million people
+For those who are security analysts, how do u like it?
+what is more secure cloudflare or google dns?
+Twitter used phone numbers provided for security to target ads
+What are the steps to become a security consultant? Or skills?
+How Technology Can Simplify IT Security | Akku
+I have been infected by banks ransomware
+Android hidden folder found
+FBI ransomware
+These Researchers Want to Save You From Ransomware (for Free)
+FBI warns about attacks that bypass multi-factor authentication (MFA)
+Reversing CrackMe with Ghidra (Part 2)
+Account Security
+how would I set up a secure wireless computer network
+Suspicious Android folder found
+What is the best approach to scanning external endpoints for security vulnerabilities?
+Security In 5: Episode 598 - Cybersecurity Awareness Should Not Be Cost Prohibitive
+PRC - People's Republic of China iPhone app
+Researchers Find New Hack to Read Content of Password Protected PDF Files, WhatsApp Flaw Opens Android Devices to Remote Code Execution, and more...
+U.S. And U.K. Governments Issue Update Now Warning For Windows, macOS And Linux Users
+How to tell if desktop or mobile has been compromised?
+With Crypto Malware on the Rise, Offline Asset Storage is Becoming a Priority
+For those with a Microsoft account, any form of 2FA you use is practically useless, and can be bypassed while logging in easily. See below.
+Smart Contract Security Verification Standard
+How to Beat Google Play’s Algorithm and Get 280 Million Installs | VPNpro
+Want A FOSS Academic Search Engine That Does Not Track You
+How do mobile networks not get rate limited?
+Security internships and careers
+I have just received a couple of verification codes to which I haven't tried to sign into those accounts. What do I do?
+X-ray technique can reverse-engineer an entire chip without damaging it
+Annual security training for individuals?
+New Google Android Update Warning Issued To Over 100 Million Users
+Hospitals that are turning away patients reportedly pay ransomware attackers
+Security In 5: Episode 597 - The Internet Gets A Little More Secure At HTTP v3 Rolls Out
+could someone look into androids trusted credentials within security whether i should allow them or disable some of them cause there are even government authoritys as trusted credentials in there (settings &gt;security&gt;trusted credentials) (Android 7.0)
+Principles for Developing More Secure Systems
+Google Cloud Blog platform vulnerability
+Can a website access javascript that I'm running in browser's console?
+Real Issue: What do you do when you don't trust your IT director?
+Yahoo could owe you $358 or more as a part of its data breach settlement
+Authentication mecanisms
+Intel proposes new SAPM memory type to protect against Spectre-like attacks
+Improper Input Validation on dbell Smart Doorbell Can Lead To Attackers Remotely Unlocking Door
+We've made a fully-featured self-hosted Data Vault app and we need your opinion!
+Someone in Iran has an old universal password, what do I do to find all the old account that still might use it?
+D-Link router remote code execution vulnerability will not be patched
+US Dept of Defense Will Require Vendor Cybersecurity Certifications By This Time Next Year - Nextgov
+NATO and Japan intensify dialogue on cyber defence
+New NSA cyber directorate to focus on securing defense industrial base and defense weapons systems
+US Homeland Security, Dept. of Homeland Security, Transportation Officials Focus on Aviation Cyber Security
+Court Ruling Shows How FBI Abused NSA Mass Surveillance
+US Dept of Homeland Security cyber unit wants to subpoena ISPs to identify vulnerable systems
+Cyber threats a top risk for most banks and corporations, Moody's SVP says
+Ransomware attacks on US local governments and healthcare providers are on the rise - In the last 10 months, 140 local governments, police stations and hospitals have been held hostage by ransomware attacks
+Iran says it can hack American drones operating in the Middle East and take control of them — and it has released a video purporting to back up its claims
+US Federal Court says FCC’s ‘unhinged’ net neutrality repeal can’t stop state laws
+Shareholders allege FedEx covered up damages caused by NotPetya attack, misleading investors, and dumping stock
+U.S. And U.K. Governments Issue Warning For Windows, macOS And Linux Users
+Facebook urged by governments of USA, UK, and Australia to halt end-to-end encryption plans unless "lawful access" is added
+APTs are exploiting vulnerabilities in several VPN products used worldwide, warns UK's National Cyber Security Centre
+Ex-Yahoo Engineer Pleads Guilty To Abusing His Privileged Access to Invade Thousands Of Accounts For Sexual Images, Videos
+UK's Prince Harry sues owners of tabloid newspapers "Sun" and "Mirror" for phone-hacking
+The lack of cybersecurity talent is ‘a national security threat,’ says US Department of Homeland Security official
+Microsoft Says Iran-Linked Hackers Targeted U.S. Presidential Campaign : NPR
+FBI Issues ‘High-Impact’ Cyber Attack Warning "health care organizations, industrial companies, and the transportation sector" are being targeted
+State-sponsored Chinese hackers have been targeting Southeast Asia since 2013
+Russian has a secret platform to attack U.S. 2020 Election, according to speculation from research firm
+Inside a massive cyber hack that risks compromising leaders across the globe
+"Rogue Admin": Vengeful IT admin convicted for destroying US Army systems on exit
+European aerospace giant Airbus hacked in "sophisticated" attacks against VPNs used by suppliers
+Leak of the Personal Information of 20 Million in Ecuador Data Breach Leads to Fast-Tracking of an Improved Data Privacy Law
+Report: US Federal Agencies need better data on the skilled technical workforce
+US Senate Passes Bill in Response to Rampant Ransomware, CyberAttacks
+Facebook, WhatsApp Will Have to Share Messages With U.K. Police
+Hackers tried to steal Airbus secrets via contractors
+How The U.S. Hacked ISIS
+27 countries sign cybersecurity pledge with digs at activity from governments like China and Russia
+‘Massive’ Spear-Phishing Campaign Targets High-Profile YouTube Content Creators
+North Korean hackers are targeting ATMs in India with new data-stealing malware
+Kaspersky says malicious cyber attacks affecting nearly four in ten smart buildings
+The Urgent Search for a Cyber Silver Bullet Against Iran - The New York Times
+Cyber Command’s first major weapons system needs the cloud
+Honesty needed to break 'impasse' over cops versus encrypted data in Australia | Opinion
+Huawei Suspended From Global Forum Aimed at Combating Cybersecurity Breaches
+The President's Own as a Model for the Marine Corps Cyber Auxiliary
+How Cyber Command can limit the reach of ISIS
+Report reveals play-by-play of first U.S. grid cyberattack
+Alleged Capital One hacker may have stolen data from more than 30 companies, new court docs reveal
+Alarm in Texas as 23 towns hit by 'coordinated' ransomware attack
+Google warns: Tens of millions of Android smartphones come with preloaded malware installed out of the box
+City of Riviera Beach, FL USA, agreed to pay a $600,000 ransom payment to regain access to critical data and systems
+City of Los Angeles computers breached, data from 20,000 LAPD applicants potentially exposed
+DOJ Says Capital One Mega Breach Suspect Could Face More Charges—Did She Hack Multiple Companies?
+Weakest spots in Honda's network revealed by unsecured cloud-based security inventory tool
+Unintended Consequences: Will Capital One's 106M Name Data Breach Cut Into AWS's Growth? | Opinion
+Amazon told police that Ring has partnered with 200+ Law Enforcement Agencies
+US military hosted its biggest cyber training exercise to date - here's what happened
+Capital One says data breach affected 100 million credit card applications, Social Security numbers of ~ 140,000 customers. Suspect arrested after admitting to stealing and releasing documents
+Interview With Eric O'Neill: FBI Counter Intelligence Operative Who Caught America's First Cyber Spy
+Cyber a bigger threat than illegal immigrants ‘crossing the Rio Grande’, says Trump's pick for Director of National Intelligence
+A Chinese court has sentenced a civil rights activist known as the country's "first cyber-dissident" to 12 years in jail
+Russian Hack of Elections System Was Far-Reaching, Report Finds
+Louisiana Declares Cybersecurity State of Emergency
+Private messages stolen from Brazil's president, ministers in Telegram messenger hack; 4 arrested
+Russian Hackers Build Fake Skype, Signal, Pornhub Apps to Lure Victims - Defense One
+British malware researcher Marcus Hutchins AKA @MalwareTech sentenced to time served. Will not see more prison for this conviction
+US Attorney General William Barr says wide-use of encryption creates security risk, limiting law enforcement's ability to investigate and enable "criminals to operate freely"
+Marcus Hutchins, malware researcher and ‘WannaCry hero,’ sentenced to supervised release following conviction for developing and distributing Kronos banking malware
+Senate Intelligence report finds Russia committing 'extensive' cyber interference in US election systems
+Johannesburg's electric power supplier recovering from ransomware attack. Residents currently without power, but utility expects to be back online by end of week
+Australian Capital Territory police admit they unlawfully accessed metadata more than 3,000 times | Australia news
+Louisiana State Governor declares state emergency following cyber attack on school systems
+The War for Cyber Talent Will Be Won by Retention, Not by Recruitment | Opinion
+UK's Lancashire University breached; students' data stolen by cyber-thieves
+US Dept. of Defense to debut new cyber assessment program for contractors in less than a year
+The Death of 1,000 Cuts in Ones and Zeroes: America’s Slow-Boiling Cyber War | Commentary
+NSA Forms Cybersecurity Directorate Under More Assertive U.S. Effort - WSJ
+Israeli spyware used in WhatsApp hack 'can secretly snoop on [users'] Apple, Facebook and Google data'
+Russia's Secret Intelligence Agency Hacked: 'Largest Data Breach In Its History'
+FBI Issues Warning on ‘Secure’ Websites Used For Phishing
+Equifax to pay at least $575 million up to $700 million in data breach settlement
+Cyber Warfare: U.S. Military Admits Immediate Danger Is 'Keeping Us Up At Night'
+Iranian cyber activity "spiked" after U.S. withdrawal from nuclear deal, says Microsoft official
+US elections experts say cyber security threats demand federal funding
+UK shut out of key EU cyber security meeting
+What's Keeping Generals up at Night? Cyber Threats.
+Cyber threat is real; FBI is here to help | Editorial
+Oakland City Council voted unanimously to ban the use of facial recognition by city departments, including police, making it the third city in USA to do so
+Kazakhstan decrypting citizens' Internet traffic for "security" (and censorship) - makes users less secure, not just against their own government, but against other criminals as well
+National government of Kazakhstan is intercepting all HTTPS traffic to inspect encrypted transmissions
+20 year-old cybersecurity worker charged after hacking financial records of nearly every Bulgarian
+The US Government Has Done “Almost Nothing” to Stop Cyber Attacks, says Richard Clarke, former senior government counterterrorism official
+U.S. Offensive Cyber Operations against Economic Cyber Intrusions: An International Law Analysis [Part II]
+US Army researchers develop metrics for cyber defenders' agility
+FBI Releases Master Decryption Keys for GandCrab Ransomware -GandCrab campaigns hit at least 8 US critical infrastructure sectors ... and was estimated to hold 50% of the ransomware market share
+The Untold History of the First Cyber Moonshot
+Officials: Ransomware used against Strafford County, NH, USA cyber attack was likely sent from overseas
+Airport email scam thwarted by UK's cyber-defender, GCHQ's National Cyber Security Centre
+US Presidential Executive Order 13873 Could Expand The Reach Of War Exclusions In Cyber Policies
+Lyon County, NV, USA School District hacked in latest local agency cyber attack
+‘The Chinese have already broken into my stuff’: Cyber espionage concerns US Army Lieutenant General
+US County of La Porte, Indiana pays $130,000 in Bitcoin as ransom to hackers. The county's backups were infected by ransomware
+Alan Turing, code-cracker whose work saved the Allies in WWII, is the new face of the UK £50 note
+New US election systems use Windows 7, an operating system approaching "End-of-Life" meaning it will no longer get support or security updates from Microsoft, leaving a large security gap | AP Report
+US Congress mobilizes on cyber threats to electric grid
