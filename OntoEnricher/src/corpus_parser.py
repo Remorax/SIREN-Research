@@ -1,4 +1,4 @@
-import spacy, subprocess, itertools, multiprocessing
+import spacy, subprocess, itertools, multiprocessing, sys
 from spacy.tokens.token import Token
 
 MAX_PATH_LEN = 6
@@ -179,33 +179,16 @@ def getDependencyPaths(sentence, nlp, sentenceNounChunks):
 
     return paths
 
-def splitFile (file, n):
-    inputfile = open(file, 'r')
-    output = None
-    suffix = 0
-    for (i, line) in enumerate(inputfile):
-        if i % n == 0:
-            if output:
-                output.close()
-            output = open(file + "_split_" + str(suffix) + '.txt', 'w+')
-            suffix += 1
-        output.write(line)
-    output.close()
-    return suffix
-
-def parseText(idx):
-    global file
+def parseText(file, op):
 
     nlp = spacy.load('en_core_web_sm')
     nlp.add_pipe(nlp.create_pipe('sentencizer'), before="parser")
-    fileName = file + "_split_" + str(idx) + ".txt"
-    op = file + "_parsed_" + str(idx)
-
-    with open(fileName, "r") as inp:
+    op = op + "_parsed"
+    with open(file, "r") as inp:
         with open(op, "w+") as out:
             for i,para in enumerate(inp):
                 if not para.strip(): continue
-                nounChunks = list(nlp(para).nounChunks).copy()
+                nounChunks = list(nlp(para).noun_chunks).copy()
                 sentences = nlp(para.strip()).sents
                 for sentence in sentences:
                     if "<doc id=" in sentence.text or "</doc>" in sentence.text:
@@ -217,19 +200,8 @@ def parseText(idx):
                         out.write("\n".join(allpaths))
 
 
-if __name__ == "__main__":    
-    file = "../junk/temp"
-    countlines = "wc -l " + file 
-    output, _ = subprocess.Popen(countlines.split(), stdout=subprocess.PIPE).communicate()
-    n = int(output.decode("utf-8").strip().split(" ")[0]) + 1
-    m = int(n/20)
-    suffix = splitFile(file, m)
-    processes = []
-    for i in range(20):
-        p = multiprocessing.Process(target=parseText, args=(i,))
-        processes.append(p)
-        p.start()
+splitFileName = sys.argv[1].split("_")
+file = "_".join(splitFileName[:-1]) + "_" + ("0" + splitFileName[-1] if len(splitFileName[-1]) == 1 else  splitFileName[-1])
 
-    for p in processes:
-        p.join()
-    
+parseText(file, sys.argv[1])
+
