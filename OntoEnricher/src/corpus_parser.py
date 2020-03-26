@@ -175,7 +175,8 @@ def getDependencyPaths(sentence, nlp, sentenceNounChunks):
     for pair in pairedConcepts:
         appendingElem = getShortestPath(pair)
         if appendingElem:
-            paths.extend([stringifyFilterPath(path) for path in appendingElem])
+            filtered = [stringifyFilterPath(path) for path in appendingElem]
+            paths.extend(filtered)
 
     return paths
 
@@ -186,7 +187,7 @@ def parseText(file, op):
     op = op + "_parsed"
     with open(file, "r") as inp:
         with open(op, "w+") as out:
-            for i,para in enumerate(inp):
+            for para in inp:
                 if not para.strip(): continue
                 nounChunks = list(nlp(para).noun_chunks).copy()
                 sentences = nlp(para.strip()).sents
@@ -197,7 +198,7 @@ def parseText(file, op):
                     dependencies = getDependencyPaths(sentence, nlp, sentenceNounChunks)
                     if dependencies:
                         allpaths = ["\t".join(path) for path in dependencies if path]
-                        out.write("\n".join(allpaths))
+                        out.write("\n".join(allpaths) + "\n")
 
 
 splitFileName = sys.argv[1].split("_")
