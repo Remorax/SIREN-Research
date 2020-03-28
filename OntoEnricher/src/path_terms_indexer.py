@@ -44,7 +44,7 @@ def getTripletIDFromDB(parsed_file):
     word_to_id = btopen(paths_folder + "/" + prefix + '_word_to_id.db')
     path_to_id = btopen(paths_folder + "/" + prefix + '_path_to_id.db')
 
-    x = file.split("_")[-2]
+    x = file.split("_")[-3]
     output_parsed = open(paths_folder + '/triplet_id_' + x, 'w+')
 
     with open(parsed_file) as parsed_inp:
@@ -67,9 +67,9 @@ def indexWordPairs(parsed_file):
 
     word_occurence_map = btopen(paths_folder + "/" + prefix + '_word_occurence_map.db', 'c')
 
-    with open(file) as inp:
+    with open(parsed_file) as inp:
         for line in inp:
-            x, y, path, count = line.strip().split('\t')
+            x, y, path, count = line.strip().split(' ')
 
             key = str(x) + '_' + str(y)
             key = key.encode("utf-8")

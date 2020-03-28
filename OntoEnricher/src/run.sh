@@ -4,14 +4,27 @@ corpus=$1
 folder=$2
 prefix=$3
 
+echo "Corpus: "$corpus", Folder: "$folder", DB File prefix: "$prefix
+
 n=`grep "" -c $corpus | awk '{ print $1 }'`
-m=5
+
+m=50
 n=$((($n + 1)/$m))
 
-declare -a path_thresholds=(3 7 10 15 20 25 50)
+echo "Splitting corpus into "$m" parts" 
+
+declare -a path_thresholds=(3 7 10 12 15 20 25 50)
+declare -a maxlens=(4 6 8 10 15 30)
+
 parts=( $(seq 1 $m ) )
 
+echo -e "\n\nTunable Parameters:\n\nPath Frequencies: "${path_thresholds[*]}"\nMax Lengths of paths: " ${maxlens[*]}"\n\n"
+
+echo "Stage 1/3 : Splitting corpus..."
+
 gsplit -l $n $corpus $corpus"_split_" --numeric-suffixes=1;
+
+echo "Stage 2/3 : Parsing corpus..."
 
 for x in "${parts[@]}"
 do
@@ -20,86 +33,95 @@ do
 done
 wait
 
-
-parsed_final=$corpus"_parsed"
-cat $corpus"_split_"*"_parsed" > $parsed_final
-
-
-for x in "${parts[@]}"
+echo "Stage 3/3: The main stage: tuning of parameters..."
+index=0
+for maxlen in "${maxlens[@]}"
 do
-	parsed_final_part=$corpus"_split_"$x"_parsed"
-	( awk -F "\t" '{relations[$3]++} END{for(relation in relations){print relation"\t"relations[relation]}}' $parsed_final_part > $corpus"_paths_"$x ) &
-done
-wait
-echo "Done till here.. part 3"
-
-paths=$folder"all_paths"
-cat $corpus"_paths_"* > $paths
-# rm $corpus"_paths_"*
-
-# declare -a path_thresholds=(3 7 10 15 20 25 50)
-declare -a path_thresholds=(3 5)
-for n in "${path_thresholds[@]}"
-do
-	mkdir $folder$prefix"_threshold_"$n
-	( awk -F "\t" '{i[$1]+=$2} END{for(x in i){ if (i[x] >= '$n') print x } }' $paths > $folder$prefix"_threshold_"$n'/filtered_paths'  ) &
-done
-wait
-# rm $paths
-
-awk -F$'\t' '{if (a[$1] == 0) {a[$1] = -1; print $1}}' $parsed_final > $output"xterms" & PIDLEFT=$!
-awk -F$'\t' '{if (a[$2] == 0) {a[$2] = -1; print $2}}' $parsed_final > $output"yterms" & PIDRIGHT=$!
-
-wait $PIDLEFT
-wait $PIDRIGHT
-cat $output"xterms" $output"yterms" | sort -u > $output"terms";
-# rm $output"xterms" $output"yterms" $parsed_final
-
-echo 'Creating the resource from the triplets file...'
-for n in "${path_thresholds[@]}"
-do
-	paths_folder=$folder$prefix"_threshold_"$n
-	( python3 path_terms_indexer.py $paths_folder $output"terms" $prefix 1; ) &
-done
-wait
-for n in "${path_thresholds[@]}"
-do
-	paths_folder=$folder$prefix"_threshold_"$n
-	for x in "${parts[@]}"
-	do
-		parsed_final_part=$corpus"_split_"$x"_parsed"
-		( python3 path_terms_indexer.py $paths_folder $parsed_final_part $prefix 2; ) &
-	done
-	wait
-
-	for x in "${parts[@]}"
-	do
-		triplet_part_file=$paths_folder"/triplet_id_"$x
-		triplet_count_file=$paths_folder"/triplet_count_"$x
-		( awk -F "\t" '{relations[$0]++} END{for(relation in relations){print relation"\t"relations[relation]}}' $triplet_part_file > $triplet_count_file ) &
-	done
-	wait
-
-	cat $paths_folder"/triplet_count_"* > $paths_folder"/triplet_count";
-
-	gawk -F $'\t' '{ matrix[$1][$2][$3]+=$4; } END{for (x in matrix) {for (y in matrix[x]) {for (path in matrix[x][y]) {print x, y, path, matrix[x][y][path]}}}}' $paths_folder"/triplet_count" > $paths_folder"/final_count"
-
-	# python3 path_terms_indexer.py $paths_folder $paths_folder"_final_count" $prefix 3;
-done
-
-
-
-
-# gawk -F $'\t' '{ matrix[$1][$2][$3]+=$4; } END{for (x in matrix) {for (y in matrix[x]) {for (path in matrix[x][y]) {print x, y, path, matrix[x][y][path]}}}}' $paths_folder"/triplet_count" > $paths_folder"/final_count"
-
-# # ls
-# rm id_triplet_file_temp id_triplet_file_* $triplet_file"_"*;
-# for n in "${path_thresholds[@]}"
-# do
-# 	paths_folder=$folder$prefix"_threshold_"$n
+	((index++))
 	
-# done
+	echo -e "\t"$((index*100/${#maxlens[@]}))"% done: Maximum Path Length: "$maxlen
+	parsed_final=$corpus"_"$maxlen"_parsed"
+	cat $corpus"_split_"*"_"$maxlen"_parsed" > $parsed_final
 
-# # You can delete triplet_file now and keep only id_triplet_file which is more efficient, or delete both.
+	echo -e "\tStep: Counting relations..."
+	for x in "${parts[@]}"
+	do
+		parsed_final_part=$corpus"_split_"$x"_"$maxlen"_parsed"
+		( awk -F "\t" '{relations[$3]++} END{for(relation in relations){print relation"\t"relations[relation]}}' $parsed_final_part > $corpus"_paths_"$x"_"$maxlen ) &
+	done
+	wait
+	
 
-# rm $corpus"_split_"*
+	paths=$folder"all_paths_"$maxlen
+	cat $corpus"_paths_"*"_"$maxlen > $paths
+	rm $corpus"_paths_"*"_"$maxlen
+
+	echo -e "\tStep: Filtering common paths..."
+	for n in "${path_thresholds[@]}"
+	do
+		echo -e "\t\tPath threshold: "$n
+		mkdir $folder$prefix"_threshold_"$n"_"$maxlen
+		( awk -F "\t" '{i[$1]+=$2} END{for(x in i){ if (i[x] >= '$n') print x } }' $paths > $folder$prefix"_threshold_"$n"_"$maxlen'/filtered_paths'  ) &
+	done
+	wait
+	rm $paths
+
+	echo -e "\tStep: Creating word files..."
+	awk -F$'\t' '{if (a[$1] == 0) {a[$1] = -1; print $1}}' $parsed_final > $folder"xterms_"$maxlen & PIDLEFT=$!
+	awk -F$'\t' '{if (a[$2] == 0) {a[$2] = -1; print $2}}' $parsed_final > $folder"yterms_"$maxlen & PIDRIGHT=$!
+
+	wait $PIDLEFT
+	wait $PIDRIGHT
+	cat $folder"xterms_"$maxlen $folder"yterms_"$maxlen | sort -u > $folder"terms_"$maxlen;
+	rm $folder"xterms_"$maxlen $folder"yterms_"$maxlen $parsed_final
+
+	echo -e "\tStep: Creating term and path db files..."
+	for n in "${path_thresholds[@]}"
+	do
+		paths_folder=$folder$prefix"_threshold_"$n"_"$maxlen
+		( python3 path_terms_indexer.py $paths_folder $folder"terms_"$maxlen $prefix 1; ) &
+	done
+	wait
+
+	rm $folder"terms_"$maxlen 
+	rm $folder$prefix"_threshold_"*"_"$maxlen"/"filtered_paths
+
+	echo -e "\tStep: Processing triplets..."
+	for n in "${path_thresholds[@]}"
+	do
+		echo -e "\t\tPath threshold: "$n
+
+		paths_folder=$folder$prefix"_threshold_"$n"_"$maxlen
+		for x in "${parts[@]}"
+		do
+			parsed_final_part=$corpus"_split_"$x"_"$maxlen"_parsed"
+			( python3 path_terms_indexer.py $paths_folder $parsed_final_part $prefix 2; ) &
+		done
+		wait
+
+		for x in "${parts[@]}"
+		do
+			triplet_part_file=$paths_folder"/triplet_id_"$x
+			triplet_count_file=$paths_folder"/triplet_count_"$x
+			( awk -F "\t" '{relations[$0]++} END{for(relation in relations){print relation"\t"relations[relation]}}' $triplet_part_file > $triplet_count_file ) &
+		done
+		wait
+
+		rm $paths_folder"/triplet_id_"*
+
+		cat $paths_folder"/triplet_count_"* > $paths_folder"/triplet_count";
+
+		rm $paths_folder"/triplet_count_"*
+
+		gawk -F $'\t' '{ matrix[$1][$2][$3]+=$4; } END{for (x in matrix) {for (y in matrix[x]) {for (path in matrix[x][y]) {print x, y, path, matrix[x][y][path]}}}}' $paths_folder"/triplet_count" > $paths_folder"/final_count"
+
+		rm $paths_folder"/triplet_count"
+
+		python3 path_terms_indexer.py $paths_folder $paths_folder"/final_count" $prefix 3;
+
+		rm $paths_folder"/final_count"
+	done
+
+done
+
+rm $corpus"_split_"*

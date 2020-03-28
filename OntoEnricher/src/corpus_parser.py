@@ -1,8 +1,7 @@
 import spacy, subprocess, itertools, multiprocessing, sys
 from spacy.tokens.token import Token
 
-MAX_PATH_LEN = 6
-
+MAX_PATH_LENS = [4, 6, 8, 10, 15, 30]
 
 def stringifyEdge(word, root=True):
     try:
@@ -122,7 +121,7 @@ def getShortestPath(tup):
         print (e)
         return None
 
-def stringifyFilterPath(path):
+def stringifyFilterPath(path, maxlen):
 
     lowestCommonHeads = []
     (leftX, x, pathX, lowestCommonHead, pathY, y, rightY) = path
@@ -142,7 +141,7 @@ def stringifyFilterPath(path):
 
     lowestCommonHeads = [[stringifyEdge(lowestCommonHead, False)] if lowestCommonHead and not (isYHead or isXHead) else []][0]
     
-    if MAX_PATH_LEN >= len(pathX + leftXPath + pathY + rightYPath + lowestCommonHeads):
+    if maxlen >= len(pathX + leftXPath + pathY + rightYPath + lowestCommonHeads):
         
         if isinstance(x, Token):
             stringifiedX = x.string.strip().lower()
@@ -163,7 +162,7 @@ def stringifyFilterPath(path):
 
     return None
 
-def getDependencyPaths(sentence, nlp, sentenceNounChunks):
+def getDependencyPaths(sentence, nlp, sentenceNounChunks, maxlen):
 
     nps = [(n, n.start, n.end) for n in sentenceNounChunks]
     nps.extend([(word, pos, pos) for (pos, word) in enumerate(sentence) if word.tag_[:2] == 'NN' and len(word.string.strip()) > 2])
@@ -175,16 +174,16 @@ def getDependencyPaths(sentence, nlp, sentenceNounChunks):
     for pair in pairedConcepts:
         appendingElem = getShortestPath(pair)
         if appendingElem:
-            filtered = [stringifyFilterPath(path) for path in appendingElem]
+            filtered = [stringifyFilterPath(path, maxlen) for path in appendingElem]
             paths.extend(filtered)
 
     return paths
 
-def parseText(file, op):
+def parseText(file, op, maxlen):
 
     nlp = spacy.load('en_core_web_sm')
     nlp.add_pipe(nlp.create_pipe('sentencizer'), before="parser")
-    op = op + "_parsed"
+    op = op + "_" + str(maxlen) + "_parsed" 
     with open(file, "r") as inp:
         with open(op, "w+") as out:
             for para in inp:
@@ -195,7 +194,7 @@ def parseText(file, op):
                     if "<doc id=" in sentence.text or "</doc>" in sentence.text:
                         continue
                     sentenceNounChunks = [n for n in nounChunks if sentence.start <= n.start < n.end - 1 < sentence.end]
-                    dependencies = getDependencyPaths(sentence, nlp, sentenceNounChunks)
+                    dependencies = getDependencyPaths(sentence, nlp, sentenceNounChunks, maxlen)
                     if dependencies:
                         allpaths = ["\t".join(path) for path in dependencies if path]
                         out.write("\n".join(allpaths) + "\n")
@@ -204,5 +203,6 @@ def parseText(file, op):
 splitFileName = sys.argv[1].split("_")
 file = "_".join(splitFileName[:-1]) + "_" + ("0" + splitFileName[-1] if len(splitFileName[-1]) == 1 else  splitFileName[-1])
 
-parseText(file, sys.argv[1])
+for maxlen in MAX_PATH_LENS:
+    parseText(file, sys.argv[1], maxlen)
 
