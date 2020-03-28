@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-corpus=$1 
-folder=$2
-prefix=$3
+corpus=$1 # The text corpus to process
+folder=$2 # Folder which contains all files created during script (will be auto-deleted)
+prefix=$3 # DB File prefix
 
 echo "Corpus: "$corpus", Folder: "$folder", DB File prefix: "$prefix
 
@@ -13,8 +13,8 @@ n=$((($n + 1)/$m))
 
 echo "Splitting corpus into "$m" parts" 
 
-declare -a path_thresholds=(3 7 10 12 15 20 25 50)
-declare -a maxlens=(4 6 8 10 15 30)
+declare -a path_thresholds=(3 7 10 12 15 20 25 50) # Different frequencies considered while creating frequent paths
+declare -a maxlens=(4 6 8 10 15 30) # Maximum path lengths considered while extracting paths
 
 parts=( $(seq 1 $m ) )
 
@@ -92,6 +92,8 @@ do
 		echo -e "\t\tPath threshold: "$n
 
 		paths_folder=$folder$prefix"_threshold_"$n"_"$maxlen
+
+		# Creating an ID file for the parsed triplets
 		for x in "${parts[@]}"
 		do
 			parsed_final_part=$corpus"_split_"$x"_"$maxlen"_parsed"
@@ -99,6 +101,7 @@ do
 		done
 		wait
 
+		# Counting triplet IDs to calculate number of occurences
 		for x in "${parts[@]}"
 		do
 			triplet_part_file=$paths_folder"/triplet_id_"$x
@@ -113,6 +116,7 @@ do
 
 		rm $paths_folder"/triplet_count_"*
 
+		# Creating a triplet occurence matrix
 		gawk -F $'\t' '{ matrix[$1][$2][$3]+=$4; } END{for (x in matrix) {for (y in matrix[x]) {for (path in matrix[x][y]) {print x, y, path, matrix[x][y][path]}}}}' $paths_folder"/triplet_count" > $paths_folder"/final_count"
 
 		rm $paths_folder"/triplet_count"
