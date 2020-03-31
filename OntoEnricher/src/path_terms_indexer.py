@@ -77,7 +77,7 @@ def indexWordPairs(parsed_file):
 
             if key in word_occurence_map:
                 pastkeys = word_occurence_map[key].decode('utf-8')
-                current =  pastkeys + current
+                current =  pastkeys + ',' + current
             
             current = current.encode("utf-8")
             
