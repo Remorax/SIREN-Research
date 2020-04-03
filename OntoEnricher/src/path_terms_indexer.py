@@ -51,6 +51,8 @@ def getTripletIDFromDB(parsed_file):
         for line in parsed_inp:
             if line.strip():
                 x, y, path = line.strip().split('\t')
+            else:
+                continue
 
             x, y = x.strip().encode("utf-8"), y.strip().encode("utf-8")
             x_id, y_id = str(word_to_id[x].decode("utf-8")), str(word_to_id[y].decode("utf-8"))
