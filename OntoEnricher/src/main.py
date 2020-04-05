@@ -5,12 +5,19 @@ from math import ceil
 from itertools import count
 from collections import defaultdict
 
-prefix = "../junk/Files/temp_threshold_3_4/temp"
-train_file = "../junk/train.tsv"
-test_file = "../junk/test.tsv"
+# prefix = "../junk/Files/temp_threshold_3_4/temp"
+# train_file = "../junk/train.tsv"
+# test_file = "../junk/test.tsv"
+# output_folder = "../junk/Output/"
+# embeddings_folder = "../junk/Glove.dat"
+# embeddings_file = "/Users/vivek/SIREN-Research/Archive-LSTM/glove.6B/glove.6B.300d.txt"
+
+prefix = "/home/hduser_/security"
+train_file = "../files/dataset/train.tsv"
+test_file = "../files/dataset/test.tsv"
 output_folder = "../junk/Output/"
 embeddings_folder = "../junk/Glove.dat"
-embeddings_file = "/Users/vivek/SIREN-Research/Archive-LSTM/glove.6B/glove.6B.300d.txt"
+embeddings_file = "/home/hduser_/glove.6B.300d.txt"
 
 POS_DIM = 4
 DEP_DIM = 5
