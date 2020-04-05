@@ -85,11 +85,11 @@ def create_embeddings():
     embeddings = {w: vectors[word2idx[w]] for w in words}
     return embeddings, word2idx
 
-word2id_db = btopen(prefix + "_word_to_id.db", "r")
-id2word_db = btopen(prefix + "_id_to_word.db", "r")
+word2id_db = btopen(prefix + "_term_to_id.db", "r")
+id2word_db = btopen(prefix + "_id_to_term.db", "r")
 path2id_db = btopen(prefix + "_path_to_id.db", "r")
 id2path_db = btopen(prefix + "_id_to_path.db", "r")
-relations_db = btopen(prefix + "_word_occurence_map.db", "r")
+relations_db = btopen(prefix + "_l2r.db", "r")
 
 embeddings, emb_indexer = load_embeddings_from_disk()
 
