@@ -4,6 +4,7 @@ import numpy as np
 from math import ceil
 from itertools import count
 from collections import defaultdict
+import torch.nn as nn
 
 # prefix = "../junk/Files/temp_threshold_3_4/temp"
 # train_file = "../junk/train.tsv"
