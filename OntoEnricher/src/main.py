@@ -54,7 +54,7 @@ def load_embeddings_from_disk():
         words = pickle.load(open(embeddings_folder + 'words.pkl', 'rb'))
         word2idx = pickle.load(open(embeddings_folder + 'words_index.pkl', 'rb'))
 
-        embeddings = {w: vectors[word2idx[w]] for w in words}
+        embeddings = vectors
     except:
         embeddings = create_embeddings()
     return embeddings, word2idx
@@ -82,8 +82,8 @@ def create_embeddings():
     pickle.dump(words, open(embeddings_folder + 'words.pkl', 'wb'))
     pickle.dump(word2idx, open(embeddings_folder + 'words_index.pkl', 'wb'))
     
-    embeddings = {w: vectors[word2idx[w]] for w in words}
-    return embeddings, word2idx
+    return vectors, word2idx
+
 
 word2id_db = btopen(prefix + "_term_to_id.db", "r")
 id2word_db = btopen(prefix + "_id_to_term.db", "r")
@@ -168,7 +168,7 @@ class LSTM(nn.Module):
         self.softmax = nn.LogSoftmax()
         
         self.word_embeddings = nn.Embedding(len(embeddings), EMBEDDING_DIM)
-        self.word_embeddings.load_state_dict({'weight': embeddings})
+        self.word_embeddings.load_state_dict({'weight': torch.from_numpy(np.array(embeddings))})
         self.word_embeddings.require_grad = False
         
         self.pos_embeddings = nn.Embedding(len(pos_indexer), POS_DIM)
@@ -181,14 +181,16 @@ class LSTM(nn.Module):
         path, count = elem
         if path in self.cache:
             return cache[path] * count
-        
-        word_embed = self.dropout_layer(self.word_embeddings(elem[0]))
-        pos_embed = self.dropout_layer(self.pos_embeddings(elem[1]))
-        dep_embed = self.dropout_layer(self.dep_embeddings(elem[2]))
-        dir_embed = self.dropout_layer(self.dir_embeddings(elem[2]))
-        
-        embeds = np.concatenate((word_embed, pos_embed, dep_embed, dir_embed))
-        output, _ = self.lstm(embeds)
+        lstm_inp = []
+        for edge in path:
+            word_embed = self.dropout_layer(self.word_embeddings([[edge[0]]]))
+            pos_embed = self.dropout_layer(self.pos_embeddings([[edge[1]]]))
+            dep_embed = self.dropout_layer(self.dep_embeddings([[edge[2]]]))
+            dir_embed = self.dropout_layer(self.dir_embeddings([[edge[3]]]))
+
+            embeds = np.concatenate((word_embed, pos_embed, dep_embed, dir_embed))
+            lstm_inp.append(embeds)
+        output, _ = self.lstm(lstm_inp)
         cache[path] = output
 
         return output * count
@@ -196,9 +198,11 @@ class LSTM(nn.Module):
     def forward(self, data, emb_indexer):
         if not data:
             data[NULL_PATH] = 1
-        
+        print ("Data: ", data)
         num_paths = [sum(list(paths.values())) for paths in data]
+        print ("Number of paths: ", num_paths)
         path_embeddings = [np.sum([self.embed_path(path) for path in paths.items()]) for paths in data]
+        print ("Path Embeddings: ", path_embeddings)
         
         h = np.divide(path_embeddings, num_paths)
         h = [np.concatenate((self.word_embeddings(elem[0]), h[i], self.word_embeddings(elem[1]))) for i,emb in enumerate(emb_indexer)]
