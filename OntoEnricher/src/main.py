@@ -184,10 +184,11 @@ class LSTM(nn.Module):
             return cache[path] * count
         lstm_inp = []
         for edge in path:
-            word_embed = self.dropout_layer(self.word_embeddings([[edge[0]]]))
-            pos_embed = self.dropout_layer(self.pos_embeddings([[edge[1]]]))
-            dep_embed = self.dropout_layer(self.dep_embeddings([[edge[2]]]))
-            dir_embed = self.dropout_layer(self.dir_embeddings([[edge[3]]]))
+            inputs = [torch.Tensor([[el]]) for el in edge]
+            word_embed = self.dropout_layer(self.word_embeddings(inputs[0]))
+            pos_embed = self.dropout_layer(self.pos_embeddings(inputs[1]))
+            dep_embed = self.dropout_layer(self.dep_embeddings(inputs[2]))
+            dir_embed = self.dropout_layer(self.dir_embeddings(inputs[3]))
 
             embeds = np.concatenate((word_embed, pos_embed, dep_embed, dir_embed))
             lstm_inp.append(embeds)
