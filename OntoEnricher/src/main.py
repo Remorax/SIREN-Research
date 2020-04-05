@@ -197,8 +197,9 @@ class LSTM(nn.Module):
         return output * count
     
     def forward(self, data, emb_indexer):
-        if not data:
-            data[NULL_PATH] = 1
+        for el in data:
+            if not el:
+                el[NULL_PATH] = 1
         print ("Data: ", data)
         num_paths = [sum(list(paths.values())) for paths in data]
         print ("Number of paths: ", num_paths)
