@@ -151,9 +151,9 @@ dataset_vals = list(train_dataset.values()) + list(test_dataset.values())
 embed_indices, x = parse_dataset(dataset_keys)
 y = [i for (i,relation) in enumerate(dataset_vals)]
 
-embed_indices_train, embed_indices_test = embed_indices[:len(train_dataset)], embed_indices[len(train_dataset):len(train_dataset)+len(test_dataset)]
-x_train, x_test = x[:len(train_dataset)], x[len(train_dataset):len(train_dataset)+len(test_dataset)]
-y_train, y_test = y[:len(train_dataset)], y[len(train_dataset):len(train_dataset)+len(test_dataset)]
+embed_indices_train, embed_indices_test = np.array(embed_indices[:len(train_dataset)]), np.array(embed_indices[len(train_dataset):len(train_dataset)+len(test_dataset)])
+x_train, x_test = np.array(x[:len(train_dataset)]), np.array(x[len(train_dataset):len(train_dataset)+len(test_dataset)])
+y_train, y_test = np.array(y[:len(train_dataset)]), np.array(y[len(train_dataset):len(train_dataset)+len(test_dataset)])
 
 class LSTM(nn.Module):
 
