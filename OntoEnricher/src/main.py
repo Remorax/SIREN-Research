@@ -114,17 +114,19 @@ def parse_path(path):
             return None
     return tuple(parsedPath)
 
+
 def extract_all_paths(x,y):
     
     paths = list(extract_paths(relations_db,x,y).items()) + list(extract_paths(relations_db,y,x).items())
-    x_word, y_word = id_to_entity(id2word_db, x), id_to_entity(id2word_db, y)
+    x_word = id_to_entity(id2word_db, x) if x!=-1 else "X"
+    y_word = id_to_entity(id2word_db, y) if y!=-1 else "Y"
     path_count_dict = { id_to_entity(id2path_db, path).replace("X/", x_word+"/").replace("Y/", y_word+"/") : freq for (path, freq) in paths }
     path_count_dict = { parse_path(path) : path_count_dict[path] for path in path_count_dict }
 
     return { path : path_count_dict[path] for path in path_count_dict if path}
     
 def parse_dataset(dataset):
-    keys = [(entity2id(word2id_db, x), entity2id(word2id_db, y)) for (x, y) in dataset]
+    keys = [(entity_to_id(word2id_db, x), entity_to_id(word2id_db, y)) for (x, y) in dataset]
     paths = [extract_all_paths(x,y) for (x,y) in keys]
     empty = [list(dataset)[i] for i, path_list in enumerate(paths) if len(list(path_list.keys())) == 0]
     print('Pairs without paths:', len(empty), ', all dataset:', len(dataset))
@@ -134,8 +136,8 @@ def parse_dataset(dataset):
 pos_indexer, dep_indexer, dir_indexer = defaultdict(count(0).__next__), defaultdict(count(0).__next__), defaultdict(count(0).__next__)
 unk_pos, unk_dep, unk_dir = pos_indexer["#UNKNOWN#"], dep_indexer["#UNKNOWN#"], dir_indexer["#UNKNOWN#"]
 
-dataset_keys = train_dataset.keys() + test_dataset.keys()
-dataset_vals = train_dataset.values() + test_dataset.values()
+dataset_keys = list(train_dataset.keys()) + list(test_dataset.keys())
+dataset_vals = list(train_dataset.values()) + list(test_dataset.values())
 
 embed_indices, x = parse_dataset(dataset_keys)
 y = [i for (i,relation) in enumerate(dataset_vals)]
