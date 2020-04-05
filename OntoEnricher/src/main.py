@@ -138,7 +138,7 @@ def parse_dataset(dataset):
     paths = [extract_all_paths(x,y) for (x,y) in keys]
     empty = [list(dataset)[i] for i, path_list in enumerate(paths) if len(list(path_list.keys())) == 0]
     print('Pairs without paths:', len(empty), ', all dataset:', len(dataset))
-    embed_indices = [(embeddings.get(x,0), embeddings.get(y,0)) for (x,y) in keys]
+    embed_indices = [(emb_indexer.get(x,0), emb_indexer.get(y,0)) for (x,y) in keys]
     return embed_indices, paths
     
 pos_indexer, dep_indexer, dir_indexer = defaultdict(count(0).__next__), defaultdict(count(0).__next__), defaultdict(count(0).__next__)
