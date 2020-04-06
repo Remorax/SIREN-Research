@@ -141,7 +141,9 @@ def parse_dataset(dataset):
     print('Pairs without paths:', len(empty), ', all dataset:', len(dataset))
     embed_indices = [(emb_indexer.get(x,0), emb_indexer.get(y,0)) for (x,y) in keys]
     return embed_indices, paths
-    
+  
+torch.set_default_dtype(torch.float64)
+
 pos_indexer, dep_indexer, dir_indexer = defaultdict(count(0).__next__), defaultdict(count(0).__next__), defaultdict(count(0).__next__)
 unk_pos, unk_dep, unk_dir = pos_indexer["#UNKNOWN#"], dep_indexer["#UNKNOWN#"], dir_indexer["#UNKNOWN#"]
 
@@ -178,37 +180,49 @@ class LSTM(nn.Module):
         
         self.lstm = nn.LSTM(self.input_dim, self.hidden_dim, NUM_LAYERS)
     
+    def normalize_embeddings(self, embeds):
+        row_norm = torch.sum(torch.abs(embeds)**2, axis=-1)**(1./2)
+        embeds /= row_norm.view(-1,1)
+        embed = torch.flatten(self.dropout_layer(embeds))
+        return embed
+
     def embed_path(self, elem):
         path, count = elem
         if path in self.cache:
-            return cache[path] * count
-        lstm_inp = []
+            return self.cache[path] * count
+        lstm_inp = torch.Tensor([])
         for edge in path:
-            inputs = [torch.Tensor([[el]]) for el in edge]
-            word_embed = self.dropout_layer(self.word_embeddings(inputs[0]))
-            pos_embed = self.dropout_layer(self.pos_embeddings(inputs[1]))
-            dep_embed = self.dropout_layer(self.dep_embeddings(inputs[2]))
-            dir_embed = self.dropout_layer(self.dir_embeddings(inputs[3]))
+            inputs = [torch.Tensor([[el]]).long() for el in edge]
+            word_embed = self.normalize_embeddings(self.word_embeddings(inputs[0]))
+            pos_embed = self.normalize_embeddings(self.pos_embeddings(inputs[1]))
+            dep_embed = self.normalize_embeddings(self.dep_embeddings(inputs[2]))
+            dir_embed = self.normalize_embeddings(self.dir_embeddings(inputs[3]))
+            embeds = torch.cat((word_embed, pos_embed, dep_embed, dir_embed)).view(1, -1)
+            lstm_inp = torch.cat((lstm_inp, embeds), 0)
 
-            embeds = np.concatenate((word_embed, pos_embed, dep_embed, dir_embed))
-            lstm_inp.append(embeds)
+        lstm_inp = lstm_inp.view(-1, 1, self.input_dim)
+        print (lstm_inp.shape)
         output, _ = self.lstm(lstm_inp)
-        cache[path] = output
-
+        self.cache[path] = output
+        print (output.shape)
         return output * count
     
     def forward(self, data, emb_indexer):
         for el in data:
             if not el:
                 el[NULL_PATH] = 1
-        print ("Data: ", data)
+        print ("Data: ", data.shape, emb_indexer.shape)
         num_paths = [sum(list(paths.values())) for paths in data]
         print ("Number of paths: ", num_paths)
-        path_embeddings = [np.sum([self.embed_path(path) for path in paths.items()]) for paths in data]
-        print ("Path Embeddings: ", path_embeddings)
+        for paths in data:
+            for path in paths.items():
+                toself.embed_path(path)
+        path_embeddings = np.array([np.sum([self.embed_path(path) for path in paths.items()]) for paths in data])
+        #print ("Path Embeddings: ", path_embeddings)
         
         h = np.divide(path_embeddings, num_paths)
-        h = [np.concatenate((self.word_embeddings(elem[0]), h[i], self.word_embeddings(elem[1]))) for i,emb in enumerate(emb_indexer)]
+        print (h.shape)
+        h = [np.concatenate((self.word_embeddings(emb[0]), h[i], self.word_embeddings(emb[1]))) for i,emb in enumerate(emb_indexer)]
         return self.softmax(self.W(h))
 
 HIDDEN_DIM = 60
