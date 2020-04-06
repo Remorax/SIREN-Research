@@ -9,12 +9,10 @@ echo "Corpus: "$corpus", Folder: "$folder", DB File prefix: "$prefix
 n=`grep "" -c $corpus | awk '{ print $1 }'`
 
 m=15
-n=$((($n + 1)/$m))
-
 echo "Splitting corpus into "$m" parts" 
 
-declare -a path_thresholds=(3 7 10 12 15 20 25 50) # Different frequencies considered while creating frequent paths
-declare -a maxlens=(4 6 8 10 15 30) # Maximum path lengths considered while extracting paths
+declare -a path_thresholds=(3 7) # Different frequencies considered while creating frequent paths
+declare -a maxlens=(4 6) # Maximum path lengths considered while extracting paths
 
 parts=( $(seq 1 $m ) )
 

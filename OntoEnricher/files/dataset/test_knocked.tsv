@@ -1,0 +1,2418 @@
+ISO27001	control	concept
+WKOITSicherheitshandbuch	control	concept
+scale	boolean scale	instance
+boolean scale	scale	concept
+scale	likert scale	instance
+likert scale	scale	concept
+access control	control	concept
+access control	control	hypernym
+access regulation	control	concept
+access regulation	control	hypernym
+antivirus	control	concept
+antivirus	control	hypernym
+antivirus control	control	concept
+antivirus control	control	hypernym
+antivirus	software	concept
+antivirus	software	hypernym
+antivirus software	control	concept
+antivirus software	control	hypernym
+anti virus	control	concept
+anti virus	control	hypernym
+anti virus control	control	concept
+anti virus control	control	hypernym
+anti virus	software	concept
+anti virus	software	hypernym
+anti virus software	control	concept
+anti virus software	control	hypernym
+audit logging	control	concept
+audit logging	control	hypernym
+audit logging control	control	concept
+audit logging control	control	hypernym
+application evaluation	control	concept
+application evaluation	control	hypernym
+application evaluation control	control	concept
+application evaluation control	control	hypernym
+assets control	control	concept
+assets control	control	hypernym
+assets	control	concept
+assets	control	hypernym
+automatic locking control	control	concept
+automatic locking control	control	hypernym
+automatic locking	control	concept
+automatic locking	control	hypernym
+mobile device	control	concept
+computer	control	hypernym
+mobile device control	control	concept
+computer control	control	hypernym
+backup media	control	concept
+backup media	control	hypernym
+business continuity management process	control	hypernym
+business continuity management process	control	concept
+business continuity management	control	hypernym
+business continuity management	control	concept
+cabling security	control	concept
+cabling security	control	hypernym
+change control	control	hypernym
+change control	control	concept
+alarm system	asset	concept
+alarm system	asset	hypernym
+water alarm system	asset	concept
+water alarm system	asset	hypernym
+alarm system	movable asset	concept
+alarm system	movable asset	hypernym
+water alarm system	movable asset	concept
+water alarm system	movable asset	hypernym
+person	asset	concept
+person	asset	hypernym
+person	movable asset	concept
+person	movable asset	hypernym
+power source	asset	concept
+power source	asset	hypernym
+power source	movable asset	concept
+power source	movable asset	hypernym
+server rack	asset	concept
+server rack	asset	hypernym
+server	movable asset	concept
+server	movable asset	hypernym
+shredder	asset	concept
+shredder	asset	hypernym
+shredder	movable asset	concept
+shredder	movable asset	hypernym
+smoke detector	asset	concept
+smoke detector	asset	hypernym
+smoke detector	movable asset	concept
+smoke detector	movable asset	hypernym
+kensington lock	asset	concept
+kensington lock	asset	hypernym
+kensington lock	movable asset	concept
+kensington lock	movable asset	hypernym
+lockable depository	asset	concept
+lockable depository	asset	hypernym
+lockable depository	movable asset	concept
+lockable depository	movable asset	hypernym
+it component	asset	concept
+it component	asset	hypernym
+it component	movable asset	concept
+it component	movable asset	hypernym
+fire extinguisher	asset	concept
+fire extinguisher	asset	hypernym
+fire extinguisher	movable asset	concept
+fire extinguisher	movable asset	hypernym
+document	asset	concept
+document	asset	hypernym
+document	movable asset	concept
+document	movable asset	hypernym
+air condition system	asset	concept
+air condition system	asset	hypernym
+air condition system	movable asset	concept
+air condition system	movable asset	hypernym
+air condition	asset	concept
+air condition	asset	hypernym
+air condition	movable asset	concept
+air condition	movable asset	hypernym
+access system	asset	concept
+access system	asset	hypernym
+access system	movable asset	concept
+access system	movable asset	hypernym
+alarm system	asset	concept
+alarm system	asset	hypernym
+alarm system	movable asset	concept
+alarm system	movable asset	hypernym
+smoke detector	asset	concept
+smoke detector	asset	hypernym
+smoke detector	movable asset	concept
+smoke detector	movable asset	hypernym
+shredder	asset	concept
+shredder	asset	hypernym
+shredder	movable asset	concept
+shredder	movable asset	hypernym
+attacker	asset	concept
+attacker	asset	hypernym
+attacker	immovable asset	concept
+attacker	immovable asset	hypernym
+attacker profile	asset	concept
+attacker profile	asset	hypernym
+attacker profile	immovable asset	concept
+attacker profile	immovable asset	hypernym
+building	asset	concept
+building	asset	hypernym
+building	immovable asset	concept
+building	immovable asset	hypernym
+location	asset	concept
+location	asset	hypernym
+location	immovable asset	concept
+location	immovable asset	hypernym
+section	asset	concept
+section	asset	hypernym
+section	immovable asset	concept
+section	immovable asset	hypernym
+lightning arrester	asset	concept
+lightning arrester	asset	hypernym
+lightning arrester	immovable asset	concept
+lightning arrester	immovable asset	hypernym
+fire suppression system	asset	concept
+fire suppression system	asset	hypernym
+fire suppression system	immovable asset	concept
+fire suppression system	immovable asset	hypernym
+contract	asset	concept
+contract	asset	hypernym
+contract	intangible asset	concept
+contract	intangible asset	hypernym
+employment contract	asset	concept
+employment contract	asset	hypernym
+employment contract	intangible asset	concept
+employment contract	intangible asset	hypernym
+service contract	asset	concept
+service contract	asset	hypernym
+service contract	intangible asset	concept
+service contract	intangible asset	hypernym
+maintenance contract	asset	concept
+maintenance contract	asset	hypernym
+maintenance contract	intangible asset	concept
+maintenance contract	intangible asset	hypernym
+cloud service contract	asset	concept
+cloud service contract	asset	hypernym
+cloud service contract	intangible asset	concept
+cloud service contract	intangible asset	hypernym
+data	asset	concept
+data	asset	hypernym
+data	intangible asset	concept
+data	intangible asset	hypernym
+public data	asset	concept
+public data	asset	hypernym
+public data	intangible asset	concept
+public data	intangible asset	hypernym
+sensitive data	asset	concept
+sensitive data	asset	hypernym
+sensitive data	intangible asset	concept
+sensitive data	intangible asset	hypernym
+internal data	asset	concept
+internal data	asset	hypernym
+internal data	intangible asset	concept
+internal data	intangible asset	hypernym
+organization	asset	concept
+organization	asset	hypernym
+organization	intangible asset	concept
+organization	intangible asset	hypernym
+access control regulation	policy	hypernym
+access control regulation	policy	concept
+access control	policy	hypernym
+access control	policy	concept
+access control regulation policy	policy	hypernym
+access control regulation policy	policy	concept
+application evaluation	policy	hypernym
+application evaluation	policy	concept
+application evaluation policy	policy	hypernym
+application evaluation policy	policy	concept
+appropriate contacts	policy	hypernym
+appropriate contacts	policy	concept
+appropriate contacts policy	policy	hypernym
+appropriate contacts policy	policy	concept
+assets control	policy	hypernym
+assets control	policy	concept
+assets control policy	policy	hypernym
+assets control policy	policy	concept
+business continuity	policy	hypernym
+business continuity	policy	concept
+business continuity policy	policy	hypernym
+business continuity policy	policy	concept
+audit logging	policy	hypernym
+audit logging	policy	concept
+audit logging policy	policy	hypernym
+audit logging policy	policy	concept
+audit logging and monitoring	policy	hypernym
+audit logging and monitoring	policy	concept
+audit logging and monitoring policy	policy	hypernym
+audit logging and monitoring policy	policy	concept
+cabling security	policy	hypernym
+cabling security	policy	concept
+cabling security policy	policy	hypernym
+cabling security policy	policy	concept
+clear desk	policy	hypernym
+clear desk	policy	concept
+clear desk policy	policy	hypernym
+clear desk policy	policy	concept
+compliance	policy	hypernym
+compliance	policy	concept
+compliance policy	policy	hypernym
+compliance policy	policy	concept
+data archiving	policy	hypernym
+data archiving	policy	concept
+data archiving policy	policy	hypernym
+data archiving policy	policy	concept
+data backup	policy	hypernym
+data backup	policy	concept
+data backup policy	policy	hypernym
+data backup policy	policy	concept
+data backup storage	policy	hypernym
+data backup storage	policy	concept
+data backup storage policy	policy	hypernym
+data backup storage policy	policy	concept
+data breach	policy	hypernym
+data breach	policy	concept
+data breach policy	policy	hypernym
+data breach policy	policy	concept
+data breach notification	policy	hypernym
+data breach notification	policy	concept
+data breach notification policy	policy	hypernym
+data breach notification policy	policy	concept
+data disposal	policy	hypernym
+data disposal	policy	concept
+data disposal policy	policy	hypernym
+data disposal policy	policy	concept
+data secrecy	policy	hypernym
+data secrecy	policy	concept
+data secrecy policy	policy	hypernym
+data secrecy policy	policy	concept
+data encryption	policy	hypernym
+data encryption	policy	concept
+data encryption policy	policy	hypernym
+data encryption policy	policy	concept
+disciplinary process	policy	hypernym
+disciplinary process	policy	concept
+disciplinary process policy	policy	hypernym
+disciplinary process policy	policy	concept
+electric installation	policy	hypernym
+electric installation	policy	concept
+electric installation policy	policy	hypernym
+electric installation policy	policy	concept
+emergency planning	policy	hypernym
+emergency planning	policy	concept
+emergency planning policy	policy	hypernym
+emergency planning policy	policy	concept
+emergency recovery	policy	hypernym
+emergency recovery	policy	concept
+emergency recovery policy	policy	hypernym
+emergency recovery policy	policy	concept
+encryption	policy	hypernym
+encryption	policy	concept
+encryption policy	policy	hypernym
+encryption policy	policy	concept
+data encryption	policy	hypernym
+data encryption	policy	concept
+data encryption policy	policy	hypernym
+data encryption policy	policy	concept
+external staff	policy	hypernym
+external staff	policy	concept
+external staff policy	policy	hypernym
+external staff policy	policy	concept
+external connections	policy	hypernym
+external connections	policy	concept
+external connections policy	policy	hypernym
+external connections policy	policy	concept
+fire safety and training	policy	hypernym
+fire safety and training	policy	concept
+fire safety and training policy	policy	hypernym
+fire safety and training policy	policy	concept
+fire safety	policy	hypernym
+fire safety	policy	concept
+fire safety policy	policy	hypernym
+fire safety policy	policy	concept
+firewall	policy	hypernym
+firewall	policy	concept
+firewall policy	policy	hypernym
+firewall policy	policy	concept
+human resource development	policy	hypernym
+human resource development	policy	concept
+human resource development policy	policy	hypernym
+human resource development policy	policy	concept
+information passing	policy	hypernym
+information passing	policy	concept
+information passing policy	policy	hypernym
+information passing policy	policy	concept
+information security	policy	hypernym
+information security	policy	concept
+information security policy	policy	hypernym
+information security policy	policy	concept
+internet regulation	policy	hypernym
+internet regulation	policy	concept
+internet regulation policy	policy	hypernym
+internet regulation policy	policy	concept
+material storing	policy	hypernym
+material storing	policy	concept
+material storing policy	policy	hypernym
+material storing policy	policy	concept
+mobile device regulation	policy	hypernym
+mobile device regulation	policy	concept
+mobile device regulation policy	policy	hypernym
+mobile device regulation policy	policy	concept
+mobile regulation	policy	hypernym
+mobile regulation	policy	concept
+mobile regulation policy	policy	hypernym
+mobile regulation policy	policy	concept
+networking	policy	hypernym
+networking	policy	concept
+networking policy	policy	hypernym
+networking policy	policy	concept
+operational procedures	policy	hypernym
+operational procedures	policy	concept
+operational procedures policy	policy	hypernym
+operational procedures policy	policy	concept
+physical key distribution	policy	hypernym
+physical key distribution	policy	concept
+physical key distribution policy	policy	hypernym
+physical key distribution policy	policy	concept
+physical media transit	policy	hypernym
+physical media transit	policy	concept
+physical media transit policy	policy	hypernym
+physical media transit policy	policy	concept
+physical perimeter protection	policy	hypernym
+physical perimeter protection	policy	concept
+physical perimeter protection policy	policy	hypernym
+physical perimeter protection policy	policy	concept
+port security	policy	hypernym
+port security	policy	concept
+port security policy	policy	hypernym
+port security policy	policy	concept
+position responsibility	policy	hypernym
+position responsibility	policy	concept
+position responsibility policy	policy	hypernym
+position responsibility policy	policy	concept
+private software use	policy	hypernym
+private software use	policy	concept
+private software use policy	policy	hypernym
+private software use policy	policy	concept
+processing validation	policy	hypernym
+processing validation	policy	concept
+processing validation policy	policy	hypernym
+processing validation policy	policy	concept
+reception regulation	policy	hypernym
+reception regulation	policy	concept
+reception regulation policy	policy	hypernym
+reception regulation policy	policy	concept
+data recording	policy	hypernym
+data recording	policy	concept
+data recording policy	policy	hypernym
+data recording policy	policy	concept
+removable media	policy	hypernym
+removable media	policy	concept
+removable media policy	policy	hypernym
+removable media policy	policy	concept
+risks	policy	hypernym
+risks	policy	concept
+risks policy	policy	hypernym
+risks policy	policy	concept
+secure areas	policy	hypernym
+secure areas	policy	concept
+secure areas policy	policy	hypernym
+secure areas policy	policy	concept
+security training	policy	hypernym
+security training	policy	concept
+security training policy	policy	hypernym
+security training policy	policy	concept
+security management framework	policy	hypernym
+security management framework	policy	concept
+security management framework policy	policy	hypernym
+security management framework policy	policy	concept
+security management	policy	hypernym
+security management	policy	concept
+security management policy	policy	hypernym
+security management policy	policy	concept
+service contract	policy	hypernym
+service contract	policy	concept
+service contract policy	policy	hypernym
+service contract policy	policy	concept
+session time	policy	hypernym
+session time	policy	concept
+session time policy	policy	hypernym
+session time policy	policy	concept
+social network	policy	hypernym
+social network	policy	concept
+social network policy	policy	hypernym
+social network policy	policy	concept
+software application	policy	hypernym
+software application	policy	concept
+software application policy	policy	hypernym
+software application policy	policy	concept
+staff employment	policy	hypernym
+staff employment	policy	concept
+staff employment policy	policy	hypernym
+staff employment policy	policy	concept
+systems testing	policy	hypernym
+systems testing	policy	concept
+systems testing policy	policy	hypernym
+systems testing policy	policy	concept
+technical vulnerabilities	policy	hypernym
+technical vulnerabilities	policy	concept
+technical vulnerabilities policy	policy	hypernym
+technical vulnerabilities policy	policy	concept
+teleworking	policy	hypernym
+teleworking	policy	concept
+teleworking policy	policy	hypernym
+teleworking policy	policy	concept
+virus regulation	policy	hypernym
+virus regulation	policy	concept
+virus regulation policy	policy	hypernym
+virus regulation policy	policy	concept
+wlan	policy	hypernym
+wlan	policy	concept
+wlan policy	policy	hypernym
+wlan policy	policy	concept
+access control regulation	asset	hypernym
+access control regulation	asset	concept
+access control	asset	hypernym
+access control	asset	concept
+access control regulation policy	asset	hypernym
+access control regulation policy	asset	concept
+application evaluation	asset	hypernym
+application evaluation	asset	concept
+application evaluation policy	asset	hypernym
+application evaluation policy	asset	concept
+appropriate contacts	asset	hypernym
+appropriate contacts	asset	concept
+appropriate contacts policy	asset	hypernym
+appropriate contacts policy	asset	concept
+assets control	asset	hypernym
+assets control	asset	concept
+assets control policy	asset	hypernym
+assets control policy	asset	concept
+business continuity	asset	hypernym
+business continuity	asset	concept
+business continuity policy	asset	hypernym
+business continuity policy	asset	concept
+audit logging	asset	hypernym
+audit logging	asset	concept
+audit logging policy	asset	hypernym
+audit logging policy	asset	concept
+audit logging and monitoring	asset	hypernym
+audit logging and monitoring	asset	concept
+audit logging and monitoring policy	asset	hypernym
+audit logging and monitoring policy	asset	concept
+cabling security	asset	hypernym
+cabling security	asset	concept
+cabling security policy	asset	hypernym
+cabling security policy	asset	concept
+clear desk	asset	hypernym
+clear desk	asset	concept
+clear desk policy	asset	hypernym
+clear desk policy	asset	concept
+compliance	asset	hypernym
+compliance	asset	concept
+compliance policy	asset	hypernym
+compliance policy	asset	concept
+data archiving	asset	hypernym
+data archiving	asset	concept
+data archiving policy	asset	hypernym
+data archiving policy	asset	concept
+data backup	asset	hypernym
+data backup	asset	concept
+data backup policy	asset	hypernym
+data backup policy	asset	concept
+data backup storage	asset	hypernym
+data backup storage	asset	concept
+data backup storage policy	asset	hypernym
+data backup storage policy	asset	concept
+data breach	asset	hypernym
+data breach	asset	concept
+data breach policy	asset	hypernym
+data breach policy	asset	concept
+data breach notification	asset	hypernym
+data breach notification	asset	concept
+data breach notification policy	asset	hypernym
+data breach notification policy	asset	concept
+data disposal	asset	hypernym
+data disposal	asset	concept
+data disposal policy	asset	hypernym
+data disposal policy	asset	concept
+data secrecy	asset	hypernym
+data secrecy	asset	concept
+data secrecy policy	asset	hypernym
+data secrecy policy	asset	concept
+data encryption	asset	hypernym
+data encryption	asset	concept
+data encryption policy	asset	hypernym
+data encryption policy	asset	concept
+disciplinary process	asset	hypernym
+disciplinary process	asset	concept
+disciplinary process policy	asset	hypernym
+disciplinary process policy	asset	concept
+electric installation	asset	hypernym
+electric installation	asset	concept
+electric installation policy	asset	hypernym
+electric installation policy	asset	concept
+emergency planning	asset	hypernym
+emergency planning	asset	concept
+emergency planning policy	asset	hypernym
+emergency planning policy	asset	concept
+emergency recovery	asset	hypernym
+emergency recovery	asset	concept
+emergency recovery policy	asset	hypernym
+emergency recovery policy	asset	concept
+encryption	asset	hypernym
+encryption	asset	concept
+encryption policy	asset	hypernym
+encryption policy	asset	concept
+data encryption	asset	hypernym
+data encryption	asset	concept
+data encryption policy	asset	hypernym
+data encryption policy	asset	concept
+external staff	asset	hypernym
+external staff	asset	concept
+external staff policy	asset	hypernym
+external staff policy	asset	concept
+external connections	asset	hypernym
+external connections	asset	concept
+external connections policy	asset	hypernym
+external connections policy	asset	concept
+fire safety and training	asset	hypernym
+fire safety and training	asset	concept
+fire safety and training policy	asset	hypernym
+fire safety and training policy	asset	concept
+fire safety	asset	hypernym
+fire safety	asset	concept
+fire safety policy	asset	hypernym
+fire safety policy	asset	concept
+firewall	asset	hypernym
+firewall	asset	concept
+firewall policy	asset	hypernym
+firewall policy	asset	concept
+human resource development	asset	hypernym
+human resource development	asset	concept
+human resource development policy	asset	hypernym
+human resource development policy	asset	concept
+information passing	asset	hypernym
+information passing	asset	concept
+information passing policy	asset	hypernym
+information passing policy	asset	concept
+information security	asset	hypernym
+information security	asset	concept
+information security policy	asset	hypernym
+information security policy	asset	concept
+internet regulation	asset	hypernym
+internet regulation	asset	concept
+internet regulation policy	asset	hypernym
+internet regulation policy	asset	concept
+material storing	asset	hypernym
+material storing	asset	concept
+material storing policy	asset	hypernym
+material storing policy	asset	concept
+mobile device regulation	asset	hypernym
+mobile device regulation	asset	concept
+mobile device regulation policy	asset	hypernym
+mobile device regulation policy	asset	concept
+mobile regulation	asset	hypernym
+mobile regulation	asset	concept
+mobile regulation policy	asset	hypernym
+mobile regulation policy	asset	concept
+networking	asset	hypernym
+networking	asset	concept
+networking policy	asset	hypernym
+networking policy	asset	concept
+operational procedures	asset	hypernym
+operational procedures	asset	concept
+operational procedures policy	asset	hypernym
+operational procedures policy	asset	concept
+physical key distribution	asset	hypernym
+physical key distribution	asset	concept
+physical key distribution policy	asset	hypernym
+physical key distribution policy	asset	concept
+physical media transit	asset	hypernym
+physical media transit	asset	concept
+physical media transit policy	asset	hypernym
+physical media transit policy	asset	concept
+physical perimeter protection	asset	hypernym
+physical perimeter protection	asset	concept
+physical perimeter protection policy	asset	hypernym
+physical perimeter protection policy	asset	concept
+port security	asset	hypernym
+port security	asset	concept
+port security policy	asset	hypernym
+port security policy	asset	concept
+position responsibility	asset	hypernym
+position responsibility	asset	concept
+position responsibility policy	asset	hypernym
+position responsibility policy	asset	concept
+private software use	asset	hypernym
+private software use	asset	concept
+private software use policy	asset	hypernym
+private software use policy	asset	concept
+processing validation	asset	hypernym
+processing validation	asset	concept
+processing validation policy	asset	hypernym
+processing validation policy	asset	concept
+reception regulation	asset	hypernym
+reception regulation	asset	concept
+reception regulation policy	asset	hypernym
+reception regulation policy	asset	concept
+data recording	asset	hypernym
+data recording	asset	concept
+data recording policy	asset	hypernym
+data recording policy	asset	concept
+removable media	asset	hypernym
+removable media	asset	concept
+removable media policy	asset	hypernym
+removable media policy	asset	concept
+risks	asset	hypernym
+risks	asset	concept
+risks policy	asset	hypernym
+risks policy	asset	concept
+secure areas	asset	hypernym
+secure areas	asset	concept
+secure areas policy	asset	hypernym
+secure areas policy	asset	concept
+security training	asset	hypernym
+security training	asset	concept
+security training policy	asset	hypernym
+security training policy	asset	concept
+security management framework	asset	hypernym
+security management framework	asset	concept
+security management framework policy	asset	hypernym
+security management framework policy	asset	concept
+security management	asset	hypernym
+security management	asset	concept
+security management policy	asset	hypernym
+security management policy	asset	concept
+service contract	asset	hypernym
+service contract	asset	concept
+service contract policy	asset	hypernym
+service contract policy	asset	concept
+session time	asset	hypernym
+session time	asset	concept
+session time policy	asset	hypernym
+session time policy	asset	concept
+social network	asset	hypernym
+social network	asset	concept
+social network policy	asset	hypernym
+social network policy	asset	concept
+software application	asset	hypernym
+software application	asset	concept
+software application policy	asset	hypernym
+software application policy	asset	concept
+staff employment	asset	hypernym
+staff employment	asset	concept
+staff employment policy	asset	hypernym
+staff employment policy	asset	concept
+systems testing	asset	hypernym
+systems testing	asset	concept
+systems testing policy	asset	hypernym
+systems testing policy	asset	concept
+technical vulnerabilities	asset	hypernym
+technical vulnerabilities	asset	concept
+technical vulnerabilities policy	asset	hypernym
+technical vulnerabilities policy	asset	concept
+teleworking	asset	hypernym
+teleworking	asset	concept
+teleworking policy	asset	hypernym
+teleworking policy	asset	concept
+virus regulation	asset	hypernym
+virus regulation	asset	concept
+virus regulation policy	asset	hypernym
+virus regulation policy	asset	concept
+wlan	asset	hypernym
+wlan	asset	concept
+wlan policy	asset	hypernym
+wlan policy	asset	concept
+access control regulation	intangible asset	hypernym
+access control regulation	intangible asset	concept
+access control	intangible asset	hypernym
+access control	intangible asset	concept
+access control regulation policy	intangible asset	hypernym
+access control regulation policy	intangible asset	concept
+application evaluation	intangible asset	hypernym
+application evaluation	intangible asset	concept
+application evaluation policy	intangible asset	hypernym
+application evaluation policy	intangible asset	concept
+appropriate contacts	intangible asset	hypernym
+appropriate contacts	intangible asset	concept
+appropriate contacts policy	intangible asset	hypernym
+appropriate contacts policy	intangible asset	concept
+assets control	intangible asset	hypernym
+assets control	intangible asset	concept
+assets control policy	intangible asset	hypernym
+assets control policy	intangible asset	concept
+business continuity	intangible asset	hypernym
+business continuity	intangible asset	concept
+business continuity policy	intangible asset	hypernym
+business continuity policy	intangible asset	concept
+audit logging	intangible asset	hypernym
+audit logging	intangible asset	concept
+audit logging policy	intangible asset	hypernym
+audit logging policy	intangible asset	concept
+audit logging and monitoring	intangible asset	hypernym
+audit logging and monitoring	intangible asset	concept
+audit logging and monitoring policy	intangible asset	hypernym
+audit logging and monitoring policy	intangible asset	concept
+cabling security	intangible asset	hypernym
+cabling security	intangible asset	concept
+cabling security policy	intangible asset	hypernym
+cabling security policy	intangible asset	concept
+clear desk	intangible asset	hypernym
+clear desk	intangible asset	concept
+clear desk policy	intangible asset	hypernym
+clear desk policy	intangible asset	concept
+compliance	intangible asset	hypernym
+compliance	intangible asset	concept
+compliance policy	intangible asset	hypernym
+compliance policy	intangible asset	concept
+data archiving	intangible asset	hypernym
+data archiving	intangible asset	concept
+data archiving policy	intangible asset	hypernym
+data archiving policy	intangible asset	concept
+data backup	intangible asset	hypernym
+data backup	intangible asset	concept
+data backup policy	intangible asset	hypernym
+data backup policy	intangible asset	concept
+data backup storage	intangible asset	hypernym
+data backup storage	intangible asset	concept
+data backup storage policy	intangible asset	hypernym
+data backup storage policy	intangible asset	concept
+data breach	intangible asset	hypernym
+data breach	intangible asset	concept
+data breach policy	intangible asset	hypernym
+data breach policy	intangible asset	concept
+data breach notification	intangible asset	hypernym
+data breach notification	intangible asset	concept
+data breach notification policy	intangible asset	hypernym
+data breach notification policy	intangible asset	concept
+data disposal	intangible asset	hypernym
+data disposal	intangible asset	concept
+data disposal policy	intangible asset	hypernym
+data disposal policy	intangible asset	concept
+data secrecy	intangible asset	hypernym
+data secrecy	intangible asset	concept
+data secrecy policy	intangible asset	hypernym
+data secrecy policy	intangible asset	concept
+data encryption	intangible asset	hypernym
+data encryption	intangible asset	concept
+data encryption policy	intangible asset	hypernym
+data encryption policy	intangible asset	concept
+disciplinary process	intangible asset	hypernym
+disciplinary process	intangible asset	concept
+disciplinary process policy	intangible asset	hypernym
+disciplinary process policy	intangible asset	concept
+electric installation	intangible asset	hypernym
+electric installation	intangible asset	concept
+electric installation policy	intangible asset	hypernym
+electric installation policy	intangible asset	concept
+emergency planning	intangible asset	hypernym
+emergency planning	intangible asset	concept
+emergency planning policy	intangible asset	hypernym
+emergency planning policy	intangible asset	concept
+emergency recovery	intangible asset	hypernym
+emergency recovery	intangible asset	concept
+emergency recovery policy	intangible asset	hypernym
+emergency recovery policy	intangible asset	concept
+encryption	intangible asset	hypernym
+encryption	intangible asset	concept
+encryption policy	intangible asset	hypernym
+encryption policy	intangible asset	concept
+data encryption	intangible asset	hypernym
+data encryption	intangible asset	concept
+data encryption policy	intangible asset	hypernym
+data encryption policy	intangible asset	concept
+external staff	intangible asset	hypernym
+external staff	intangible asset	concept
+external staff policy	intangible asset	hypernym
+external staff policy	intangible asset	concept
+external connections	intangible asset	hypernym
+external connections	intangible asset	concept
+external connections policy	intangible asset	hypernym
+external connections policy	intangible asset	concept
+fire safety and training	intangible asset	hypernym
+fire safety and training	intangible asset	concept
+fire safety and training policy	intangible asset	hypernym
+fire safety and training policy	intangible asset	concept
+fire safety	intangible asset	hypernym
+fire safety	intangible asset	concept
+fire safety policy	intangible asset	hypernym
+fire safety policy	intangible asset	concept
+firewall	intangible asset	hypernym
+firewall	intangible asset	concept
+firewall policy	intangible asset	hypernym
+firewall policy	intangible asset	concept
+human resource development	intangible asset	hypernym
+human resource development	intangible asset	concept
+human resource development policy	intangible asset	hypernym
+human resource development policy	intangible asset	concept
+information passing	intangible asset	hypernym
+information passing	intangible asset	concept
+information passing policy	intangible asset	hypernym
+information passing policy	intangible asset	concept
+information security	intangible asset	hypernym
+information security	intangible asset	concept
+information security policy	intangible asset	hypernym
+information security policy	intangible asset	concept
+internet regulation	intangible asset	hypernym
+internet regulation	intangible asset	concept
+internet regulation policy	intangible asset	hypernym
+internet regulation policy	intangible asset	concept
+material storing	intangible asset	hypernym
+material storing	intangible asset	concept
+material storing policy	intangible asset	hypernym
+material storing policy	intangible asset	concept
+mobile device regulation	intangible asset	hypernym
+mobile device regulation	intangible asset	concept
+mobile device regulation policy	intangible asset	hypernym
+mobile device regulation policy	intangible asset	concept
+mobile regulation	intangible asset	hypernym
+mobile regulation	intangible asset	concept
+mobile regulation policy	intangible asset	hypernym
+mobile regulation policy	intangible asset	concept
+networking	intangible asset	hypernym
+networking	intangible asset	concept
+networking policy	intangible asset	hypernym
+networking policy	intangible asset	concept
+operational procedures	intangible asset	hypernym
+operational procedures	intangible asset	concept
+operational procedures policy	intangible asset	hypernym
+operational procedures policy	intangible asset	concept
+physical key distribution	intangible asset	hypernym
+physical key distribution	intangible asset	concept
+physical key distribution policy	intangible asset	hypernym
+physical key distribution policy	intangible asset	concept
+physical media transit	intangible asset	hypernym
+physical media transit	intangible asset	concept
+physical media transit policy	intangible asset	hypernym
+physical media transit policy	intangible asset	concept
+physical perimeter protection	intangible asset	hypernym
+physical perimeter protection	intangible asset	concept
+physical perimeter protection policy	intangible asset	hypernym
+physical perimeter protection policy	intangible asset	concept
+port security	intangible asset	hypernym
+port security	intangible asset	concept
+port security policy	intangible asset	hypernym
+port security policy	intangible asset	concept
+position responsibility	intangible asset	hypernym
+position responsibility	intangible asset	concept
+position responsibility policy	intangible asset	hypernym
+position responsibility policy	intangible asset	concept
+private software use	intangible asset	hypernym
+private software use	intangible asset	concept
+private software use policy	intangible asset	hypernym
+private software use policy	intangible asset	concept
+processing validation	intangible asset	hypernym
+processing validation	intangible asset	concept
+processing validation policy	intangible asset	hypernym
+processing validation policy	intangible asset	concept
+reception regulation	intangible asset	hypernym
+reception regulation	intangible asset	concept
+reception regulation policy	intangible asset	hypernym
+reception regulation policy	intangible asset	concept
+data recording	intangible asset	hypernym
+data recording	intangible asset	concept
+data recording policy	intangible asset	hypernym
+data recording policy	intangible asset	concept
+removable media	intangible asset	hypernym
+removable media	intangible asset	concept
+removable media policy	intangible asset	hypernym
+removable media policy	intangible asset	concept
+risks	intangible asset	hypernym
+risks	intangible asset	concept
+risks policy	intangible asset	hypernym
+risks policy	intangible asset	concept
+secure areas	intangible asset	hypernym
+secure areas	intangible asset	concept
+secure areas policy	intangible asset	hypernym
+secure areas policy	intangible asset	concept
+security training	intangible asset	hypernym
+security training	intangible asset	concept
+security training policy	intangible asset	hypernym
+security training policy	intangible asset	concept
+security management framework	intangible asset	hypernym
+security management framework	intangible asset	concept
+security management framework policy	intangible asset	hypernym
+security management framework policy	intangible asset	concept
+security management	intangible asset	hypernym
+security management	intangible asset	concept
+security management policy	intangible asset	hypernym
+security management policy	intangible asset	concept
+service contract	intangible asset	hypernym
+service contract	intangible asset	concept
+service contract policy	intangible asset	hypernym
+service contract policy	intangible asset	concept
+session time	intangible asset	hypernym
+session time	intangible asset	concept
+session time policy	intangible asset	hypernym
+session time policy	intangible asset	concept
+social network	intangible asset	hypernym
+social network	intangible asset	concept
+social network policy	intangible asset	hypernym
+social network policy	intangible asset	concept
+software application	intangible asset	hypernym
+software application	intangible asset	concept
+software application policy	intangible asset	hypernym
+software application policy	intangible asset	concept
+staff employment	intangible asset	hypernym
+staff employment	intangible asset	concept
+staff employment policy	intangible asset	hypernym
+staff employment policy	intangible asset	concept
+systems testing	intangible asset	hypernym
+systems testing	intangible asset	concept
+systems testing policy	intangible asset	hypernym
+systems testing policy	intangible asset	concept
+technical vulnerabilities	intangible asset	hypernym
+technical vulnerabilities	intangible asset	concept
+technical vulnerabilities policy	intangible asset	hypernym
+technical vulnerabilities policy	intangible asset	concept
+teleworking	intangible asset	hypernym
+teleworking	intangible asset	concept
+teleworking policy	intangible asset	hypernym
+teleworking policy	intangible asset	concept
+virus regulation	intangible asset	hypernym
+virus regulation	intangible asset	concept
+virus regulation policy	intangible asset	hypernym
+virus regulation policy	intangible asset	concept
+wlan	intangible asset	hypernym
+wlan	intangible asset	concept
+wlan policy	intangible asset	hypernym
+wlan policy	intangible asset	concept
+reputation	intangible asset	hypernym
+reputation	intangible asset	concept
+reputation	asset	hypernym
+reputation	asset	concept
+role	intangible asset	hypernym
+role	intangible asset	concept
+role	asset	hypernym
+role	asset	concept
+external role	intangible asset	hypernym
+external role	intangible asset	concept
+external role	asset	hypernym
+external role	asset	concept
+internal role	intangible asset	hypernym
+internal role	intangible asset	concept
+internal role	asset	hypernym
+internal role	asset	concept
+system	intangible asset	hypernym
+system	intangible asset	concept
+system	asset	hypernym
+system	asset	concept
+software	intangible asset	hypernym
+software	intangible asset	concept
+software	asset	hypernym
+software	asset	concept
+activities monitoring	software	hypernym
+activities monitoring	software	concept
+activities monitoring software	software	hypernym
+activities monitoring software	software	concept
+automatic locking	software	hypernym
+automatic locking	software	concept
+automatic locking software	software	hypernym
+automatic locking software	software	concept
+backup	software	hypernym
+backup	software	concept
+backup software	software	hypernym
+backup software	software	concept
+clock synchronization	software	hypernym
+clock synchronization	software	concept
+clock synchronization software	software	hypernym
+clock synchronization software	software	concept
+data deletion	software	hypernym
+data deletion	software	concept
+data deletion software	software	hypernym
+data deletion software	software	concept
+data check	software	hypernym
+data check	software	concept
+data check software	software	hypernym
+data check software	software	concept
+encryption	software	hypernym
+encryption	software	concept
+encryption software	software	hypernym
+encryption software	software	concept
+identification	software	hypernym
+identification	software	concept
+identification software	software	hypernym
+identification software	software	concept
+installation media	software	hypernym
+installation media	software	concept
+installation media software	software	hypernym
+installation media software	software	concept
+internet filter	software	hypernym
+internet filter	software	concept
+internet filter software	software	hypernym
+internet filter software	software	concept
+network monitoring	software	hypernym
+network monitoring	software	concept
+network monitoring software	software	hypernym
+network monitoring software	software	concept
+os	software	hypernym
+os	software	concept
+password check	software	hypernym
+password check	software	concept
+password complaint check	software	hypernym
+password complaint check	software	concept
+password manager	software	hypernym
+password manager	software	concept
+personal firewall	software	hypernym
+personal firewall	software	concept
+system image	software	hypernym
+system image	software	concept
+system capacity	software	hypernym
+system capacity	software	concept
+system capacity software	software	hypernym
+system capacity software	software	concept
+system capacity monitoring	software	hypernym
+system capacity monitoring	software	concept
+system capacity monitoring software	software	hypernym
+system capacity monitoring software	software	concept
+theft protection	software	hypernym
+theft protection	software	concept
+theft protection software	software	hypernym
+theft protection software	software	concept
+transaction security	software	hypernym
+transaction security	software	concept
+transaction security software	software	hypernym
+transaction security software	software	concept
+virus protection	software	hypernym
+virus protection	software	concept
+virus protection software	software	hypernym
+virus protection software	software	concept
+activities monitoring	asset	hypernym
+activities monitoring	asset	concept
+activities monitoring software	asset	hypernym
+activities monitoring software	asset	concept
+automatic locking	asset	hypernym
+automatic locking	asset	concept
+automatic locking software	asset	hypernym
+automatic locking software	asset	concept
+backup	asset	hypernym
+backup	asset	concept
+backup software	asset	hypernym
+backup software	asset	concept
+clock synchronization	asset	hypernym
+clock synchronization	asset	concept
+clock synchronization software	asset	hypernym
+clock synchronization software	asset	concept
+data deletion	asset	hypernym
+data deletion	asset	concept
+data deletion software	asset	hypernym
+data deletion software	asset	concept
+data check	asset	hypernym
+data check	asset	concept
+data check software	asset	hypernym
+data check software	asset	concept
+encryption	asset	hypernym
+encryption	asset	concept
+encryption software	asset	hypernym
+encryption software	asset	concept
+identification	asset	hypernym
+identification	asset	concept
+identification software	asset	hypernym
+identification software	asset	concept
+installation media	asset	hypernym
+installation media	asset	concept
+installation media software	asset	hypernym
+installation media software	asset	concept
+internet filter	asset	hypernym
+internet filter	asset	concept
+internet filter software	asset	hypernym
+internet filter software	asset	concept
+network monitoring	asset	hypernym
+network monitoring	asset	concept
+network monitoring software	asset	hypernym
+network monitoring software	asset	concept
+os	asset	hypernym
+os	asset	concept
+password check	asset	hypernym
+password check	asset	concept
+password complaint check	asset	hypernym
+password complaint check	asset	concept
+password manager	asset	hypernym
+password manager	asset	concept
+personal firewall	asset	hypernym
+personal firewall	asset	concept
+system image	asset	hypernym
+system image	asset	concept
+system capacity	asset	hypernym
+system capacity	asset	concept
+system capacity software	asset	hypernym
+system capacity software	asset	concept
+system capacity monitoring	asset	hypernym
+system capacity monitoring	asset	concept
+system capacity monitoring software	asset	hypernym
+system capacity monitoring software	asset	concept
+theft protection	asset	hypernym
+theft protection	asset	concept
+theft protection software	asset	hypernym
+theft protection software	asset	concept
+transaction security	asset	hypernym
+transaction security	asset	concept
+transaction security software	asset	hypernym
+transaction security software	asset	concept
+virus protection	asset	hypernym
+virus protection	asset	concept
+virus protection software	asset	hypernym
+virus protection software	asset	concept
+activities monitoring	intangible asset	hypernym
+activities monitoring	intangible asset	concept
+activities monitoring software	intangible asset	hypernym
+activities monitoring software	intangible asset	concept
+automatic locking	intangible asset	hypernym
+automatic locking	intangible asset	concept
+automatic locking software	intangible asset	hypernym
+automatic locking software	intangible asset	concept
+backup	intangible asset	hypernym
+backup	intangible asset	concept
+backup software	intangible asset	hypernym
+backup software	intangible asset	concept
+clock synchronization	intangible asset	hypernym
+clock synchronization	intangible asset	concept
+clock synchronization software	intangible asset	hypernym
+clock synchronization software	intangible asset	concept
+data deletion	intangible asset	hypernym
+data deletion	intangible asset	concept
+data deletion software	intangible asset	hypernym
+data deletion software	intangible asset	concept
+data check	intangible asset	hypernym
+data check	intangible asset	concept
+data check software	intangible asset	hypernym
+data check software	intangible asset	concept
+encryption	intangible asset	hypernym
+encryption	intangible asset	concept
+encryption software	intangible asset	hypernym
+encryption software	intangible asset	concept
+identification	intangible asset	hypernym
+identification	intangible asset	concept
+identification software	intangible asset	hypernym
+identification software	intangible asset	concept
+installation media	intangible asset	hypernym
+installation media	intangible asset	concept
+installation media software	intangible asset	hypernym
+installation media software	intangible asset	concept
+internet filter	intangible asset	hypernym
+internet filter	intangible asset	concept
+internet filter software	intangible asset	hypernym
+internet filter software	intangible asset	concept
+network monitoring	intangible asset	hypernym
+network monitoring	intangible asset	concept
+network monitoring software	intangible asset	hypernym
+network monitoring software	intangible asset	concept
+os	intangible asset	hypernym
+os	intangible asset	concept
+password check	intangible asset	hypernym
+password check	intangible asset	concept
+password complaint check	intangible asset	hypernym
+password complaint check	intangible asset	concept
+password manager	intangible asset	hypernym
+password manager	intangible asset	concept
+personal firewall	intangible asset	hypernym
+personal firewall	intangible asset	concept
+system image	intangible asset	hypernym
+system image	intangible asset	concept
+system capacity	intangible asset	hypernym
+system capacity	intangible asset	concept
+system capacity software	intangible asset	hypernym
+system capacity software	intangible asset	concept
+system capacity monitoring	intangible asset	hypernym
+system capacity monitoring	intangible asset	concept
+system capacity monitoring software	intangible asset	hypernym
+system capacity monitoring software	intangible asset	concept
+theft protection	intangible asset	hypernym
+theft protection	intangible asset	concept
+theft protection software	intangible asset	hypernym
+theft protection software	intangible asset	concept
+transaction security	intangible asset	hypernym
+transaction security	intangible asset	concept
+transaction security software	intangible asset	hypernym
+transaction security software	intangible asset	concept
+virus protection	intangible asset	hypernym
+virus protection	intangible asset	concept
+virus protection software	intangible asset	hypernym
+virus protection software	intangible asset	concept
+control	ISO27001	instance
+control	WKOITSicherheitshandbuch	instance
+scale	boolean scale	instance
+scale	likert scale	instance
+control	access control	instance
+control	access control	hyponym
+control	access regulation	instance
+control	access regulation	hyponym
+control	antivirus	instance
+control	antivirus	hyponym
+control	antivirus control	instance
+control	antivirus control	hyponym
+software	antivirus	instance
+software	antivirus	hyponym
+control	antivirus software	instance
+control	antivirus software	hyponym
+control	anti virus	instance
+control	anti virus	hyponym
+control	anti virus control	instance
+control	anti virus control	hyponym
+software	anti virus	instance
+software	anti virus	hyponym
+control	anti virus software	instance
+control	anti virus software	hyponym
+control	audit logging	instance
+control	audit logging	hyponym
+control	audit logging control	instance
+control	audit logging control	hyponym
+control	application evaluation	instance
+control	application evaluation	hyponym
+control	application evaluation control	instance
+control	application evaluation control	hyponym
+control	assets control	instance
+control	assets control	hyponym
+control	assets	instance
+control	assets	hyponym
+control	automatic locking control	instance
+control	automatic locking control	hyponym
+control	automatic locking	instance
+control	automatic locking	hyponym
+control	mobile device	instance
+control	computer	hyponym
+control	mobile device control	instance
+control	computer control	hyponym
+control	backup media	instance
+control	backup media	hyponym
+control	business continuity management process	hyponym
+control	business continuity management process	instance
+control	business continuity management	hyponym
+control	business continuity management	instance
+control	cabling security	instance
+control	cabling security	hyponym
+control	change control	hyponym
+control	change control	instance
+asset	alarm system	instance
+asset	alarm system	hyponym
+asset	water alarm system	instance
+asset	water alarm system	hyponym
+movable asset	alarm system	instance
+movable asset	alarm system	hyponym
+movable asset	water alarm system	instance
+movable asset	water alarm system	hyponym
+asset	person	instance
+asset	person	hyponym
+movable asset	person	instance
+movable asset	person	hyponym
+asset	power source	instance
+asset	power source	hyponym
+movable asset	power source	instance
+movable asset	power source	hyponym
+asset	server rack	instance
+asset	server rack	hyponym
+movable asset	server	instance
+movable asset	server	hyponym
+asset	shredder	instance
+asset	shredder	hyponym
+movable asset	shredder	instance
+movable asset	shredder	hyponym
+asset	smoke detector	instance
+asset	smoke detector	hyponym
+movable asset	smoke detector	instance
+movable asset	smoke detector	hyponym
+asset	kensington lock	instance
+asset	kensington lock	hyponym
+movable asset	kensington lock	instance
+movable asset	kensington lock	hyponym
+asset	lockable depository	instance
+asset	lockable depository	hyponym
+movable asset	lockable depository	instance
+movable asset	lockable depository	hyponym
+asset	it component	instance
+asset	it component	hyponym
+movable asset	it component	instance
+movable asset	it component	hyponym
+asset	fire extinguisher	instance
+asset	fire extinguisher	hyponym
+movable asset	fire extinguisher	instance
+movable asset	fire extinguisher	hyponym
+asset	document	instance
+asset	document	hyponym
+movable asset	document	instance
+movable asset	document	hyponym
+asset	air condition system	instance
+asset	air condition system	hyponym
+movable asset	air condition system	instance
+movable asset	air condition system	hyponym
+asset	air condition	instance
+asset	air condition	hyponym
+movable asset	air condition	instance
+movable asset	air condition	hyponym
+asset	access system	instance
+asset	access system	hyponym
+movable asset	access system	instance
+movable asset	access system	hyponym
+asset	alarm system	instance
+asset	alarm system	hyponym
+movable asset	alarm system	instance
+movable asset	alarm system	hyponym
+asset	smoke detector	instance
+asset	smoke detector	hyponym
+movable asset	smoke detector	instance
+movable asset	smoke detector	hyponym
+asset	shredder	instance
+asset	shredder	hyponym
+movable asset	shredder	instance
+movable asset	shredder	hyponym
+asset	attacker	instance
+asset	attacker	hyponym
+immovable asset	attacker	instance
+immovable asset	attacker	hyponym
+asset	attacker profile	instance
+asset	attacker profile	hyponym
+immovable asset	attacker profile	instance
+immovable asset	attacker profile	hyponym
+asset	building	instance
+asset	building	hyponym
+immovable asset	building	instance
+immovable asset	building	hyponym
+asset	location	instance
+asset	location	hyponym
+immovable asset	location	instance
+immovable asset	location	hyponym
+asset	section	instance
+asset	section	hyponym
+immovable asset	section	instance
+immovable asset	section	hyponym
+asset	lightning arrester	instance
+asset	lightning arrester	hyponym
+immovable asset	lightning arrester	instance
+immovable asset	lightning arrester	hyponym
+asset	fire suppression system	instance
+asset	fire suppression system	hyponym
+immovable asset	fire suppression system	instance
+immovable asset	fire suppression system	hyponym
+asset	contract	instance
+asset	contract	hyponym
+intangible asset	contract	instance
+intangible asset	contract	hyponym
+asset	employment contract	instance
+asset	employment contract	hyponym
+intangible asset	employment contract	instance
+intangible asset	employment contract	hyponym
+asset	service contract	instance
+asset	service contract	hyponym
+intangible asset	service contract	instance
+intangible asset	service contract	hyponym
+asset	maintenance contract	instance
+asset	maintenance contract	hyponym
+intangible asset	maintenance contract	instance
+intangible asset	maintenance contract	hyponym
+asset	cloud service contract	instance
+asset	cloud service contract	hyponym
+intangible asset	cloud service contract	instance
+intangible asset	cloud service contract	hyponym
+asset	data	instance
+asset	data	hyponym
+intangible asset	data	instance
+intangible asset	data	hyponym
+asset	public data	instance
+asset	public data	hyponym
+intangible asset	public data	instance
+intangible asset	public data	hyponym
+asset	sensitive data	instance
+asset	sensitive data	hyponym
+intangible asset	sensitive data	instance
+intangible asset	sensitive data	hyponym
+asset	internal data	instance
+asset	internal data	hyponym
+intangible asset	internal data	instance
+intangible asset	internal data	hyponym
+asset	organization	instance
+asset	organization	hyponym
+intangible asset	organization	instance
+intangible asset	organization	hyponym
+policy	access control regulation	hyponym
+policy	access control regulation	instance
+policy	access control	hyponym
+policy	access control	instance
+policy	access control regulation policy	hyponym
+policy	access control regulation policy	instance
+policy	application evaluation	hyponym
+policy	application evaluation	instance
+policy	application evaluation policy	hyponym
+policy	application evaluation policy	instance
+policy	appropriate contacts	hyponym
+policy	appropriate contacts	instance
+policy	appropriate contacts policy	hyponym
+policy	appropriate contacts policy	instance
+policy	assets control	hyponym
+policy	assets control	instance
+policy	assets control policy	hyponym
+policy	assets control policy	instance
+policy	business continuity	hyponym
+policy	business continuity	instance
+policy	business continuity policy	hyponym
+policy	business continuity policy	instance
+policy	audit logging	hyponym
+policy	audit logging	instance
+policy	audit logging policy	hyponym
+policy	audit logging policy	instance
+policy	audit logging and monitoring	hyponym
+policy	audit logging and monitoring	instance
+policy	audit logging and monitoring policy	hyponym
+policy	audit logging and monitoring policy	instance
+policy	cabling security	hyponym
+policy	cabling security	instance
+policy	cabling security policy	hyponym
+policy	cabling security policy	instance
+policy	clear desk	hyponym
+policy	clear desk	instance
+policy	clear desk policy	hyponym
+policy	clear desk policy	instance
+policy	compliance	hyponym
+policy	compliance	instance
+policy	compliance policy	hyponym
+policy	compliance policy	instance
+policy	data archiving	hyponym
+policy	data archiving	instance
+policy	data archiving policy	hyponym
+policy	data archiving policy	instance
+policy	data backup	hyponym
+policy	data backup	instance
+policy	data backup policy	hyponym
+policy	data backup policy	instance
+policy	data backup storage	hyponym
+policy	data backup storage	instance
+policy	data backup storage policy	hyponym
+policy	data backup storage policy	instance
+policy	data breach	hyponym
+policy	data breach	instance
+policy	data breach policy	hyponym
+policy	data breach policy	instance
+policy	data breach notification	hyponym
+policy	data breach notification	instance
+policy	data breach notification policy	hyponym
+policy	data breach notification policy	instance
+policy	data disposal	hyponym
+policy	data disposal	instance
+policy	data disposal policy	hyponym
+policy	data disposal policy	instance
+policy	data secrecy	hyponym
+policy	data secrecy	instance
+policy	data secrecy policy	hyponym
+policy	data secrecy policy	instance
+policy	data encryption	hyponym
+policy	data encryption	instance
+policy	data encryption policy	hyponym
+policy	data encryption policy	instance
+policy	disciplinary process	hyponym
+policy	disciplinary process	instance
+policy	disciplinary process policy	hyponym
+policy	disciplinary process policy	instance
+policy	electric installation	hyponym
+policy	electric installation	instance
+policy	electric installation policy	hyponym
+policy	electric installation policy	instance
+policy	emergency planning	hyponym
+policy	emergency planning	instance
+policy	emergency planning policy	hyponym
+policy	emergency planning policy	instance
+policy	emergency recovery	hyponym
+policy	emergency recovery	instance
+policy	emergency recovery policy	hyponym
+policy	emergency recovery policy	instance
+policy	encryption	hyponym
+policy	encryption	instance
+policy	encryption policy	hyponym
+policy	encryption policy	instance
+policy	data encryption	hyponym
+policy	data encryption	instance
+policy	data encryption policy	hyponym
+policy	data encryption policy	instance
+policy	external staff	hyponym
+policy	external staff	instance
+policy	external staff policy	hyponym
+policy	external staff policy	instance
+policy	external connections	hyponym
+policy	external connections	instance
+policy	external connections policy	hyponym
+policy	external connections policy	instance
+policy	fire safety and training	hyponym
+policy	fire safety and training	instance
+policy	fire safety and training policy	hyponym
+policy	fire safety and training policy	instance
+policy	fire safety	hyponym
+policy	fire safety	instance
+policy	fire safety policy	hyponym
+policy	fire safety policy	instance
+policy	firewall	hyponym
+policy	firewall	instance
+policy	firewall policy	hyponym
+policy	firewall policy	instance
+policy	human resource development	hyponym
+policy	human resource development	instance
+policy	human resource development policy	hyponym
+policy	human resource development policy	instance
+policy	information passing	hyponym
+policy	information passing	instance
+policy	information passing policy	hyponym
+policy	information passing policy	instance
+policy	information security	hyponym
+policy	information security	instance
+policy	information security policy	hyponym
+policy	information security policy	instance
+policy	internet regulation	hyponym
+policy	internet regulation	instance
+policy	internet regulation policy	hyponym
+policy	internet regulation policy	instance
+policy	material storing	hyponym
+policy	material storing	instance
+policy	material storing policy	hyponym
+policy	material storing policy	instance
+policy	mobile device regulation	hyponym
+policy	mobile device regulation	instance
+policy	mobile device regulation policy	hyponym
+policy	mobile device regulation policy	instance
+policy	mobile regulation	hyponym
+policy	mobile regulation	instance
+policy	mobile regulation policy	hyponym
+policy	mobile regulation policy	instance
+policy	networking	hyponym
+policy	networking	instance
+policy	networking policy	hyponym
+policy	networking policy	instance
+policy	operational procedures	hyponym
+policy	operational procedures	instance
+policy	operational procedures policy	hyponym
+policy	operational procedures policy	instance
+policy	physical key distribution	hyponym
+policy	physical key distribution	instance
+policy	physical key distribution policy	hyponym
+policy	physical key distribution policy	instance
+policy	physical media transit	hyponym
+policy	physical media transit	instance
+policy	physical media transit policy	hyponym
+policy	physical media transit policy	instance
+policy	physical perimeter protection	hyponym
+policy	physical perimeter protection	instance
+policy	physical perimeter protection policy	hyponym
+policy	physical perimeter protection policy	instance
+policy	port security	hyponym
+policy	port security	instance
+policy	port security policy	hyponym
+policy	port security policy	instance
+policy	position responsibility	hyponym
+policy	position responsibility	instance
+policy	position responsibility policy	hyponym
+policy	position responsibility policy	instance
+policy	private software use	hyponym
+policy	private software use	instance
+policy	private software use policy	hyponym
+policy	private software use policy	instance
+policy	processing validation	hyponym
+policy	processing validation	instance
+policy	processing validation policy	hyponym
+policy	processing validation policy	instance
+policy	reception regulation	hyponym
+policy	reception regulation	instance
+policy	reception regulation policy	hyponym
+policy	reception regulation policy	instance
+policy	data recording	hyponym
+policy	data recording	instance
+policy	data recording policy	hyponym
+policy	data recording policy	instance
+policy	removable media	hyponym
+policy	removable media	instance
+policy	removable media policy	hyponym
+policy	removable media policy	instance
+policy	risks	hyponym
+policy	risks	instance
+policy	risks policy	hyponym
+policy	risks policy	instance
+policy	secure areas	hyponym
+policy	secure areas	instance
+policy	secure areas policy	hyponym
+policy	secure areas policy	instance
+policy	security training	hyponym
+policy	security training	instance
+policy	security training policy	hyponym
+policy	security training policy	instance
+policy	security management framework	hyponym
+policy	security management framework	instance
+policy	security management framework policy	hyponym
+policy	security management framework policy	instance
+policy	security management	hyponym
+policy	security management	instance
+policy	security management policy	hyponym
+policy	security management policy	instance
+policy	service contract	hyponym
+policy	service contract	instance
+policy	service contract policy	hyponym
+policy	service contract policy	instance
+policy	session time	hyponym
+policy	session time	instance
+policy	session time policy	hyponym
+policy	session time policy	instance
+policy	social network	hyponym
+policy	social network	instance
+policy	social network policy	hyponym
+policy	social network policy	instance
+policy	software application	hyponym
+policy	software application	instance
+policy	software application policy	hyponym
+policy	software application policy	instance
+policy	staff employment	hyponym
+policy	staff employment	instance
+policy	staff employment policy	hyponym
+policy	staff employment policy	instance
+policy	systems testing	hyponym
+policy	systems testing	instance
+policy	systems testing policy	hyponym
+policy	systems testing policy	instance
+policy	technical vulnerabilities	hyponym
+policy	technical vulnerabilities	instance
+policy	technical vulnerabilities policy	hyponym
+policy	technical vulnerabilities policy	instance
+policy	teleworking	hyponym
+policy	teleworking	instance
+policy	teleworking policy	hyponym
+policy	teleworking policy	instance
+policy	virus regulation	hyponym
+policy	virus regulation	instance
+policy	virus regulation policy	hyponym
+policy	virus regulation policy	instance
+policy	wlan	hyponym
+policy	wlan	instance
+policy	wlan policy	hyponym
+policy	wlan policy	instance
+asset	access control regulation	hyponym
+asset	access control regulation	instance
+asset	access control	hyponym
+asset	access control	instance
+asset	access control regulation policy	hyponym
+asset	access control regulation policy	instance
+asset	application evaluation	hyponym
+asset	application evaluation	instance
+asset	application evaluation policy	hyponym
+asset	application evaluation policy	instance
+asset	appropriate contacts	hyponym
+asset	appropriate contacts	instance
+asset	appropriate contacts policy	hyponym
+asset	appropriate contacts policy	instance
+asset	assets control	hyponym
+asset	assets control	instance
+asset	assets control policy	hyponym
+asset	assets control policy	instance
+asset	business continuity	hyponym
+asset	business continuity	instance
+asset	business continuity policy	hyponym
+asset	business continuity policy	instance
+asset	audit logging	hyponym
+asset	audit logging	instance
+asset	audit logging policy	hyponym
+asset	audit logging policy	instance
+asset	audit logging and monitoring	hyponym
+asset	audit logging and monitoring	instance
+asset	audit logging and monitoring policy	hyponym
+asset	audit logging and monitoring policy	instance
+asset	cabling security	hyponym
+asset	cabling security	instance
+asset	cabling security policy	hyponym
+asset	cabling security policy	instance
+asset	clear desk	hyponym
+asset	clear desk	instance
+asset	clear desk policy	hyponym
+asset	clear desk policy	instance
+asset	compliance	hyponym
+asset	compliance	instance
+asset	compliance policy	hyponym
+asset	compliance policy	instance
+asset	data archiving	hyponym
+asset	data archiving	instance
+asset	data archiving policy	hyponym
+asset	data archiving policy	instance
+asset	data backup	hyponym
+asset	data backup	instance
+asset	data backup policy	hyponym
+asset	data backup policy	instance
+asset	data backup storage	hyponym
+asset	data backup storage	instance
+asset	data backup storage policy	hyponym
+asset	data backup storage policy	instance
+asset	data breach	hyponym
+asset	data breach	instance
+asset	data breach policy	hyponym
+asset	data breach policy	instance
+asset	data breach notification	hyponym
+asset	data breach notification	instance
+asset	data breach notification policy	hyponym
+asset	data breach notification policy	instance
+asset	data disposal	hyponym
+asset	data disposal	instance
+asset	data disposal policy	hyponym
+asset	data disposal policy	instance
+asset	data secrecy	hyponym
+asset	data secrecy	instance
+asset	data secrecy policy	hyponym
+asset	data secrecy policy	instance
+asset	data encryption	hyponym
+asset	data encryption	instance
+asset	data encryption policy	hyponym
+asset	data encryption policy	instance
+asset	disciplinary process	hyponym
+asset	disciplinary process	instance
+asset	disciplinary process policy	hyponym
+asset	disciplinary process policy	instance
+asset	electric installation	hyponym
+asset	electric installation	instance
+asset	electric installation policy	hyponym
+asset	electric installation policy	instance
+asset	emergency planning	hyponym
+asset	emergency planning	instance
+asset	emergency planning policy	hyponym
+asset	emergency planning policy	instance
+asset	emergency recovery	hyponym
+asset	emergency recovery	instance
+asset	emergency recovery policy	hyponym
+asset	emergency recovery policy	instance
+asset	encryption	hyponym
+asset	encryption	instance
+asset	encryption policy	hyponym
+asset	encryption policy	instance
+asset	data encryption	hyponym
+asset	data encryption	instance
+asset	data encryption policy	hyponym
+asset	data encryption policy	instance
+asset	external staff	hyponym
+asset	external staff	instance
+asset	external staff policy	hyponym
+asset	external staff policy	instance
+asset	external connections	hyponym
+asset	external connections	instance
+asset	external connections policy	hyponym
+asset	external connections policy	instance
+asset	fire safety and training	hyponym
+asset	fire safety and training	instance
+asset	fire safety and training policy	hyponym
+asset	fire safety and training policy	instance
+asset	fire safety	hyponym
+asset	fire safety	instance
+asset	fire safety policy	hyponym
+asset	fire safety policy	instance
+asset	firewall	hyponym
+asset	firewall	instance
+asset	firewall policy	hyponym
+asset	firewall policy	instance
+asset	human resource development	hyponym
+asset	human resource development	instance
+asset	human resource development policy	hyponym
+asset	human resource development policy	instance
+asset	information passing	hyponym
+asset	information passing	instance
+asset	information passing policy	hyponym
+asset	information passing policy	instance
+asset	information security	hyponym
+asset	information security	instance
+asset	information security policy	hyponym
+asset	information security policy	instance
+asset	internet regulation	hyponym
+asset	internet regulation	instance
+asset	internet regulation policy	hyponym
+asset	internet regulation policy	instance
+asset	material storing	hyponym
+asset	material storing	instance
+asset	material storing policy	hyponym
+asset	material storing policy	instance
+asset	mobile device regulation	hyponym
+asset	mobile device regulation	instance
+asset	mobile device regulation policy	hyponym
+asset	mobile device regulation policy	instance
+asset	mobile regulation	hyponym
+asset	mobile regulation	instance
+asset	mobile regulation policy	hyponym
+asset	mobile regulation policy	instance
+asset	networking	hyponym
+asset	networking	instance
+asset	networking policy	hyponym
+asset	networking policy	instance
+asset	operational procedures	hyponym
+asset	operational procedures	instance
+asset	operational procedures policy	hyponym
+asset	operational procedures policy	instance
+asset	physical key distribution	hyponym
+asset	physical key distribution	instance
+asset	physical key distribution policy	hyponym
+asset	physical key distribution policy	instance
+asset	physical media transit	hyponym
+asset	physical media transit	instance
+asset	physical media transit policy	hyponym
+asset	physical media transit policy	instance
+asset	physical perimeter protection	hyponym
+asset	physical perimeter protection	instance
+asset	physical perimeter protection policy	hyponym
+asset	physical perimeter protection policy	instance
+asset	port security	hyponym
+asset	port security	instance
+asset	port security policy	hyponym
+asset	port security policy	instance
+asset	position responsibility	hyponym
+asset	position responsibility	instance
+asset	position responsibility policy	hyponym
+asset	position responsibility policy	instance
+asset	private software use	hyponym
+asset	private software use	instance
+asset	private software use policy	hyponym
+asset	private software use policy	instance
+asset	processing validation	hyponym
+asset	processing validation	instance
+asset	processing validation policy	hyponym
+asset	processing validation policy	instance
+asset	reception regulation	hyponym
+asset	reception regulation	instance
+asset	reception regulation policy	hyponym
+asset	reception regulation policy	instance
+asset	data recording	hyponym
+asset	data recording	instance
+asset	data recording policy	hyponym
+asset	data recording policy	instance
+asset	removable media	hyponym
+asset	removable media	instance
+asset	removable media policy	hyponym
+asset	removable media policy	instance
+asset	risks	hyponym
+asset	risks	instance
+asset	risks policy	hyponym
+asset	risks policy	instance
+asset	secure areas	hyponym
+asset	secure areas	instance
+asset	secure areas policy	hyponym
+asset	secure areas policy	instance
+asset	security training	hyponym
+asset	security training	instance
+asset	security training policy	hyponym
+asset	security training policy	instance
+asset	security management framework	hyponym
+asset	security management framework	instance
+asset	security management framework policy	hyponym
+asset	security management framework policy	instance
+asset	security management	hyponym
+asset	security management	instance
+asset	security management policy	hyponym
+asset	security management policy	instance
+asset	service contract	hyponym
+asset	service contract	instance
+asset	service contract policy	hyponym
+asset	service contract policy	instance
+asset	session time	hyponym
+asset	session time	instance
+asset	session time policy	hyponym
+asset	session time policy	instance
+asset	social network	hyponym
+asset	social network	instance
+asset	social network policy	hyponym
+asset	social network policy	instance
+asset	software application	hyponym
+asset	software application	instance
+asset	software application policy	hyponym
+asset	software application policy	instance
+asset	staff employment	hyponym
+asset	staff employment	instance
+asset	staff employment policy	hyponym
+asset	staff employment policy	instance
+asset	systems testing	hyponym
+asset	systems testing	instance
+asset	systems testing policy	hyponym
+asset	systems testing policy	instance
+asset	technical vulnerabilities	hyponym
+asset	technical vulnerabilities	instance
+asset	technical vulnerabilities policy	hyponym
+asset	technical vulnerabilities policy	instance
+asset	teleworking	hyponym
+asset	teleworking	instance
+asset	teleworking policy	hyponym
+asset	teleworking policy	instance
+asset	virus regulation	hyponym
+asset	virus regulation	instance
+asset	virus regulation policy	hyponym
+asset	virus regulation policy	instance
+asset	wlan	hyponym
+asset	wlan	instance
+asset	wlan policy	hyponym
+asset	wlan policy	instance
+intangible asset	access control regulation	hyponym
+intangible asset	access control regulation	instance
+intangible asset	access control	hyponym
+intangible asset	access control	instance
+intangible asset	access control regulation policy	hyponym
+intangible asset	access control regulation policy	instance
+intangible asset	application evaluation	hyponym
+intangible asset	application evaluation	instance
+intangible asset	application evaluation policy	hyponym
+intangible asset	application evaluation policy	instance
+intangible asset	appropriate contacts	hyponym
+intangible asset	appropriate contacts	instance
+intangible asset	appropriate contacts policy	hyponym
+intangible asset	appropriate contacts policy	instance
+intangible asset	assets control	hyponym
+intangible asset	assets control	instance
+intangible asset	assets control policy	hyponym
+intangible asset	assets control policy	instance
+intangible asset	business continuity	hyponym
+intangible asset	business continuity	instance
+intangible asset	business continuity policy	hyponym
+intangible asset	business continuity policy	instance
+intangible asset	audit logging	hyponym
+intangible asset	audit logging	instance
+intangible asset	audit logging policy	hyponym
+intangible asset	audit logging policy	instance
+intangible asset	audit logging and monitoring	hyponym
+intangible asset	audit logging and monitoring	instance
+intangible asset	audit logging and monitoring policy	hyponym
+intangible asset	audit logging and monitoring policy	instance
+intangible asset	cabling security	hyponym
+intangible asset	cabling security	instance
+intangible asset	cabling security policy	hyponym
+intangible asset	cabling security policy	instance
+intangible asset	clear desk	hyponym
+intangible asset	clear desk	instance
+intangible asset	clear desk policy	hyponym
+intangible asset	clear desk policy	instance
+intangible asset	compliance	hyponym
+intangible asset	compliance	instance
+intangible asset	compliance policy	hyponym
+intangible asset	compliance policy	instance
+intangible asset	data archiving	hyponym
+intangible asset	data archiving	instance
+intangible asset	data archiving policy	hyponym
+intangible asset	data archiving policy	instance
+intangible asset	data backup	hyponym
+intangible asset	data backup	instance
+intangible asset	data backup policy	hyponym
+intangible asset	data backup policy	instance
+intangible asset	data backup storage	hyponym
+intangible asset	data backup storage	instance
+intangible asset	data backup storage policy	hyponym
+intangible asset	data backup storage policy	instance
+intangible asset	data breach	hyponym
+intangible asset	data breach	instance
+intangible asset	data breach policy	hyponym
+intangible asset	data breach policy	instance
+intangible asset	data breach notification	hyponym
+intangible asset	data breach notification	instance
+intangible asset	data breach notification policy	hyponym
+intangible asset	data breach notification policy	instance
+intangible asset	data disposal	hyponym
+intangible asset	data disposal	instance
+intangible asset	data disposal policy	hyponym
+intangible asset	data disposal policy	instance
+intangible asset	data secrecy	hyponym
+intangible asset	data secrecy	instance
+intangible asset	data secrecy policy	hyponym
+intangible asset	data secrecy policy	instance
+intangible asset	data encryption	hyponym
+intangible asset	data encryption	instance
+intangible asset	data encryption policy	hyponym
+intangible asset	data encryption policy	instance
+intangible asset	disciplinary process	hyponym
+intangible asset	disciplinary process	instance
+intangible asset	disciplinary process policy	hyponym
+intangible asset	disciplinary process policy	instance
+intangible asset	electric installation	hyponym
+intangible asset	electric installation	instance
+intangible asset	electric installation policy	hyponym
+intangible asset	electric installation policy	instance
+intangible asset	emergency planning	hyponym
+intangible asset	emergency planning	instance
+intangible asset	emergency planning policy	hyponym
+intangible asset	emergency planning policy	instance
+intangible asset	emergency recovery	hyponym
+intangible asset	emergency recovery	instance
+intangible asset	emergency recovery policy	hyponym
+intangible asset	emergency recovery policy	instance
+intangible asset	encryption	hyponym
+intangible asset	encryption	instance
+intangible asset	encryption policy	hyponym
+intangible asset	encryption policy	instance
+intangible asset	data encryption	hyponym
+intangible asset	data encryption	instance
+intangible asset	data encryption policy	hyponym
+intangible asset	data encryption policy	instance
+intangible asset	external staff	hyponym
+intangible asset	external staff	instance
+intangible asset	external staff policy	hyponym
+intangible asset	external staff policy	instance
+intangible asset	external connections	hyponym
+intangible asset	external connections	instance
+intangible asset	external connections policy	hyponym
+intangible asset	external connections policy	instance
+intangible asset	fire safety and training	hyponym
+intangible asset	fire safety and training	instance
+intangible asset	fire safety and training policy	hyponym
+intangible asset	fire safety and training policy	instance
+intangible asset	fire safety	hyponym
+intangible asset	fire safety	instance
+intangible asset	fire safety policy	hyponym
+intangible asset	fire safety policy	instance
+intangible asset	firewall	hyponym
+intangible asset	firewall	instance
+intangible asset	firewall policy	hyponym
+intangible asset	firewall policy	instance
+intangible asset	human resource development	hyponym
+intangible asset	human resource development	instance
+intangible asset	human resource development policy	hyponym
+intangible asset	human resource development policy	instance
+intangible asset	information passing	hyponym
+intangible asset	information passing	instance
+intangible asset	information passing policy	hyponym
+intangible asset	information passing policy	instance
+intangible asset	information security	hyponym
+intangible asset	information security	instance
+intangible asset	information security policy	hyponym
+intangible asset	information security policy	instance
+intangible asset	internet regulation	hyponym
+intangible asset	internet regulation	instance
+intangible asset	internet regulation policy	hyponym
+intangible asset	internet regulation policy	instance
+intangible asset	material storing	hyponym
+intangible asset	material storing	instance
+intangible asset	material storing policy	hyponym
+intangible asset	material storing policy	instance
+intangible asset	mobile device regulation	hyponym
+intangible asset	mobile device regulation	instance
+intangible asset	mobile device regulation policy	hyponym
+intangible asset	mobile device regulation policy	instance
+intangible asset	mobile regulation	hyponym
+intangible asset	mobile regulation	instance
+intangible asset	mobile regulation policy	hyponym
+intangible asset	mobile regulation policy	instance
+intangible asset	networking	hyponym
+intangible asset	networking	instance
+intangible asset	networking policy	hyponym
+intangible asset	networking policy	instance
+intangible asset	operational procedures	hyponym
+intangible asset	operational procedures	instance
+intangible asset	operational procedures policy	hyponym
+intangible asset	operational procedures policy	instance
+intangible asset	physical key distribution	hyponym
+intangible asset	physical key distribution	instance
+intangible asset	physical key distribution policy	hyponym
+intangible asset	physical key distribution policy	instance
+intangible asset	physical media transit	hyponym
+intangible asset	physical media transit	instance
+intangible asset	physical media transit policy	hyponym
+intangible asset	physical media transit policy	instance
+intangible asset	physical perimeter protection	hyponym
+intangible asset	physical perimeter protection	instance
+intangible asset	physical perimeter protection policy	hyponym
+intangible asset	physical perimeter protection policy	instance
+intangible asset	port security	hyponym
+intangible asset	port security	instance
+intangible asset	port security policy	hyponym
+intangible asset	port security policy	instance
+intangible asset	position responsibility	hyponym
+intangible asset	position responsibility	instance
+intangible asset	position responsibility policy	hyponym
+intangible asset	position responsibility policy	instance
+intangible asset	private software use	hyponym
+intangible asset	private software use	instance
+intangible asset	private software use policy	hyponym
+intangible asset	private software use policy	instance
+intangible asset	processing validation	hyponym
+intangible asset	processing validation	instance
+intangible asset	processing validation policy	hyponym
+intangible asset	processing validation policy	instance
+intangible asset	reception regulation	hyponym
+intangible asset	reception regulation	instance
+intangible asset	reception regulation policy	hyponym
+intangible asset	reception regulation policy	instance
+intangible asset	data recording	hyponym
+intangible asset	data recording	instance
+intangible asset	data recording policy	hyponym
+intangible asset	data recording policy	instance
+intangible asset	removable media	hyponym
+intangible asset	removable media	instance
+intangible asset	removable media policy	hyponym
+intangible asset	removable media policy	instance
+intangible asset	risks	hyponym
+intangible asset	risks	instance
+intangible asset	risks policy	hyponym
+intangible asset	risks policy	instance
+intangible asset	secure areas	hyponym
+intangible asset	secure areas	instance
+intangible asset	secure areas policy	hyponym
+intangible asset	secure areas policy	instance
+intangible asset	security training	hyponym
+intangible asset	security training	instance
+intangible asset	security training policy	hyponym
+intangible asset	security training policy	instance
+intangible asset	security management framework	hyponym
+intangible asset	security management framework	instance
+intangible asset	security management framework policy	hyponym
+intangible asset	security management framework policy	instance
+intangible asset	security management	hyponym
+intangible asset	security management	instance
+intangible asset	security management policy	hyponym
+intangible asset	security management policy	instance
+intangible asset	service contract	hyponym
+intangible asset	service contract	instance
+intangible asset	service contract policy	hyponym
+intangible asset	service contract policy	instance
+intangible asset	session time	hyponym
+intangible asset	session time	instance
+intangible asset	session time policy	hyponym
+intangible asset	session time policy	instance
+intangible asset	social network	hyponym
+intangible asset	social network	instance
+intangible asset	social network policy	hyponym
+intangible asset	social network policy	instance
+intangible asset	software application	hyponym
+intangible asset	software application	instance
+intangible asset	software application policy	hyponym
+intangible asset	software application policy	instance
+intangible asset	staff employment	hyponym
+intangible asset	staff employment	instance
+intangible asset	staff employment policy	hyponym
+intangible asset	staff employment policy	instance
+intangible asset	systems testing	hyponym
+intangible asset	systems testing	instance
+intangible asset	systems testing policy	hyponym
+intangible asset	systems testing policy	instance
+intangible asset	technical vulnerabilities	hyponym
+intangible asset	technical vulnerabilities	instance
+intangible asset	technical vulnerabilities policy	hyponym
+intangible asset	technical vulnerabilities policy	instance
+intangible asset	teleworking	hyponym
+intangible asset	teleworking	instance
+intangible asset	teleworking policy	hyponym
+intangible asset	teleworking policy	instance
+intangible asset	virus regulation	hyponym
+intangible asset	virus regulation	instance
+intangible asset	virus regulation policy	hyponym
+intangible asset	virus regulation policy	instance
+intangible asset	wlan	hyponym
+intangible asset	wlan	instance
+intangible asset	wlan policy	hyponym
+intangible asset	wlan policy	instance
+intangible asset	reputation	hyponym
+intangible asset	reputation	instance
+asset	reputation	hyponym
+asset	reputation	instance
+intangible asset	role	hyponym
+intangible asset	role	instance
+asset	role	hyponym
+asset	role	instance
+intangible asset	external role	hyponym
+intangible asset	external role	instance
+asset	external role	hyponym
+asset	external role	instance
+intangible asset	internal role	hyponym
+intangible asset	internal role	instance
+asset	internal role	hyponym
+asset	internal role	instance
+intangible asset	system	hyponym
+intangible asset	system	instance
+asset	system	hyponym
+asset	system	instance
+intangible asset	software	hyponym
+intangible asset	software	instance
+asset	software	hyponym
+asset	software	instance
+software	activities monitoring	hyponym
+software	activities monitoring	instance
+software	activities monitoring software	hyponym
+software	activities monitoring software	instance
+software	automatic locking	hyponym
+software	automatic locking	instance
+software	automatic locking software	hyponym
+software	automatic locking software	instance
+software	backup	hyponym
+software	backup	instance
+software	backup software	hyponym
+software	backup software	instance
+software	clock synchronization	hyponym
+software	clock synchronization	instance
+software	clock synchronization software	hyponym
+software	clock synchronization software	instance
+software	data deletion	hyponym
+software	data deletion	instance
+software	data deletion software	hyponym
+software	data deletion software	instance
+software	data check	hyponym
+software	data check	instance
+software	data check software	hyponym
+software	data check software	instance
+software	encryption	hyponym
+software	encryption	instance
+software	encryption software	hyponym
+software	encryption software	instance
+software	identification	hyponym
+software	identification	instance
+software	identification software	hyponym
+software	identification software	instance
+software	installation media	hyponym
+software	installation media	instance
+software	installation media software	hyponym
+software	installation media software	instance
+software	internet filter	hyponym
+software	internet filter	instance
+software	internet filter software	hyponym
+software	internet filter software	instance
+software	network monitoring	hyponym
+software	network monitoring	instance
+software	network monitoring software	hyponym
+software	network monitoring software	instance
+software	os	hyponym
+software	os	instance
+software	password check	hyponym
+software	password check	instance
+software	password complaint check	hyponym
+software	password complaint check	instance
+software	password manager	hyponym
+software	password manager	instance
+software	personal firewall	hyponym
+software	personal firewall	instance
+software	system image	hyponym
+software	system image	instance
+software	system capacity	hyponym
+software	system capacity	instance
+software	system capacity software	hyponym
+software	system capacity software	instance
+software	system capacity monitoring	hyponym
+software	system capacity monitoring	instance
+software	system capacity monitoring software	hyponym
+software	system capacity monitoring software	instance
+software	theft protection	hyponym
+software	theft protection	instance
+software	theft protection software	hyponym
+software	theft protection software	instance
+software	transaction security	hyponym
+software	transaction security	instance
+software	transaction security software	hyponym
+software	transaction security software	instance
+software	virus protection	hyponym
+software	virus protection	instance
+software	virus protection software	hyponym
+software	virus protection software	instance
+asset	activities monitoring	hyponym
+asset	activities monitoring	instance
+asset	activities monitoring software	hyponym
+asset	activities monitoring software	instance
+asset	automatic locking	hyponym
+asset	automatic locking	instance
+asset	automatic locking software	hyponym
+asset	automatic locking software	instance
+asset	backup	hyponym
+asset	backup	instance
+asset	backup software	hyponym
+asset	backup software	instance
+asset	clock synchronization	hyponym
+asset	clock synchronization	instance
+asset	clock synchronization software	hyponym
+asset	clock synchronization software	instance
+asset	data deletion	hyponym
+asset	data deletion	instance
+asset	data deletion software	hyponym
+asset	data deletion software	instance
+asset	data check	hyponym
+asset	data check	instance
+asset	data check software	hyponym
+asset	data check software	instance
+asset	encryption	hyponym
+asset	encryption	instance
+asset	encryption software	hyponym
+asset	encryption software	instance
+asset	identification	hyponym
+asset	identification	instance
+asset	identification software	hyponym
+asset	identification software	instance
+asset	installation media	hyponym
+asset	installation media	instance
+asset	installation media software	hyponym
+asset	installation media software	instance
+asset	internet filter	hyponym
+asset	internet filter	instance
+asset	internet filter software	hyponym
+asset	internet filter software	instance
+asset	network monitoring	hyponym
+asset	network monitoring	instance
+asset	network monitoring software	hyponym
+asset	network monitoring software	instance
+asset	os	hyponym
+asset	os	instance
+asset	password check	hyponym
+asset	password check	instance
+asset	password complaint check	hyponym
+asset	password complaint check	instance
+asset	password manager	hyponym
+asset	password manager	instance
+asset	personal firewall	hyponym
+asset	personal firewall	instance
+asset	system image	hyponym
+asset	system image	instance
+asset	system capacity	hyponym
+asset	system capacity	instance
+asset	system capacity software	hyponym
+asset	system capacity software	instance
+asset	system capacity monitoring	hyponym
+asset	system capacity monitoring	instance
+asset	system capacity monitoring software	hyponym
+asset	system capacity monitoring software	instance
+asset	theft protection	hyponym
+asset	theft protection	instance
+asset	theft protection software	hyponym
+asset	theft protection software	instance
+asset	transaction security	hyponym
+asset	transaction security	instance
+asset	transaction security software	hyponym
+asset	transaction security software	instance
+asset	virus protection	hyponym
+asset	virus protection	instance
+asset	virus protection software	hyponym
+asset	virus protection software	instance
+intangible asset	activities monitoring	hyponym
+intangible asset	activities monitoring	instance
+intangible asset	activities monitoring software	hyponym
+intangible asset	activities monitoring software	instance
+intangible asset	automatic locking	hyponym
+intangible asset	automatic locking	instance
+intangible asset	automatic locking software	hyponym
+intangible asset	automatic locking software	instance
+intangible asset	backup	hyponym
+intangible asset	backup	instance
+intangible asset	backup software	hyponym
+intangible asset	backup software	instance
+intangible asset	clock synchronization	hyponym
+intangible asset	clock synchronization	instance
+intangible asset	clock synchronization software	hyponym
+intangible asset	clock synchronization software	instance
+intangible asset	data deletion	hyponym
+intangible asset	data deletion	instance
+intangible asset	data deletion software	hyponym
+intangible asset	data deletion software	instance
+intangible asset	data check	hyponym
+intangible asset	data check	instance
+intangible asset	data check software	hyponym
+intangible asset	data check software	instance
+intangible asset	encryption	hyponym
+intangible asset	encryption	instance
+intangible asset	encryption software	hyponym
+intangible asset	encryption software	instance
+intangible asset	identification	hyponym
+intangible asset	identification	instance
+intangible asset	identification software	hyponym
+intangible asset	identification software	instance
+intangible asset	installation media	hyponym
+intangible asset	installation media	instance
+intangible asset	installation media software	hyponym
+intangible asset	installation media software	instance
+intangible asset	internet filter	hyponym
+intangible asset	internet filter	instance
+intangible asset	internet filter software	hyponym
+intangible asset	internet filter software	instance
+intangible asset	network monitoring	hyponym
+intangible asset	network monitoring	instance
+intangible asset	network monitoring software	hyponym
+intangible asset	network monitoring software	instance
+intangible asset	os	hyponym
+intangible asset	os	instance
+intangible asset	password check	hyponym
+intangible asset	password check	instance
+intangible asset	password complaint check	hyponym
+intangible asset	password complaint check	instance
+intangible asset	password manager	hyponym
+intangible asset	password manager	instance
+intangible asset	personal firewall	hyponym
+intangible asset	personal firewall	instance
+intangible asset	system image	hyponym
+intangible asset	system image	instance
+intangible asset	system capacity	hyponym
+intangible asset	system capacity	instance
+intangible asset	system capacity software	hyponym
+intangible asset	system capacity software	instance
+intangible asset	system capacity monitoring	hyponym
+intangible asset	system capacity monitoring	instance
+intangible asset	system capacity monitoring software	hyponym
+intangible asset	system capacity monitoring software	instance
+intangible asset	theft protection	hyponym
+intangible asset	theft protection	instance
+intangible asset	theft protection software	hyponym
+intangible asset	theft protection software	instance
+intangible asset	transaction security	hyponym
+intangible asset	transaction security	instance
+intangible asset	transaction security software	hyponym
+intangible asset	transaction security software	instance
+intangible asset	virus protection	hyponym
+intangible asset	virus protection	instance
+intangible asset	virus protection software	hyponym
+intangible asset	virus protection software	instance
