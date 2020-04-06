@@ -1,4 +1,4 @@
-import sys
+import sys, re
 from bsddb3 import btopen
 
 def indexPathTerm(words_file):
@@ -28,6 +28,8 @@ def indexPathTerm(words_file):
     with open(words_file, "r", encoding="utf-8") as terms:
         words = []
         for term in terms:
+            term = " ".join(re.sub("[^A-Za-z0-9 ]+", " ", term).strip().split())
+            term = term.encode("ascii", "ignore")
             words.append(term.strip())
 
         word_to_id_dict = {words[i]:i for i in range(len(words))}
@@ -50,11 +52,20 @@ def getTripletIDFromDB(parsed_file):
     with open(parsed_file) as parsed_inp:
         for line in parsed_inp:
             if line.strip():
-                x, y, path = line.strip().split('\t')
+                try:
+                    x, y, path = line.strip().split('\t')
+                except:
+                    print ("Bytes?", line)
+                    raise
+            else:
+                continue
 
             x, y = x.strip().encode("utf-8"), y.strip().encode("utf-8")
-            x_id, y_id = str(word_to_id[x].decode("utf-8")), str(word_to_id[y].decode("utf-8"))
-            
+            try:
+                x_id, y_id = str(word_to_id[x].decode("utf-8")), str(word_to_id[y].decode("utf-8"))
+            except Exception as e:
+                print (e, x, y)
+                continue
             path_id = path_to_id.get(path.strip().encode("utf-8"), -1)
             if path_id != -1:
                 path_id = str(path_id.decode("utf-8"))
