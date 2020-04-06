@@ -1,11 +1,11 @@
-import sys, re
-from bsddb3 import btopen
+import sys, re, pickle
+
+def processTerm(term):
+    term = " ".join(re.sub("[^A-Za-z0-9 ]+", " ", term).strip().split())
+    term = term.encode("ascii", "ignore")
+    return term.strip()
 
 def indexPathTerm(words_file):
-    path_to_id = btopen(paths_folder + "/" + prefix + '_path_to_id.db', 'c')
-    id_to_path = btopen(paths_folder + "/" + prefix + '_id_to_path.db', 'c')
-    word_to_id = btopen(paths_folder + "/" + prefix + '_word_to_id.db', 'c')
-    id_to_word = btopen(paths_folder + "/" + prefix + '_id_to_word.db', 'c')    
 
     with open(paths_folder + "/filtered_paths", encoding="utf-8") as paths:
         
@@ -16,38 +16,36 @@ def indexPathTerm(words_file):
 
 
         path_to_id_dict = {filtered_paths[i]:i for i in range(len(filtered_paths))}
+        id_to_path_dict = {i:filtered_paths[i] for i in range(len(filtered_paths))}
 
+        with open(paths_folder + "/" + prefix + '_path_to_id_dict.pkl', 'wb') as handle:
+            pickle.dump(path_to_id_dict, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-        for path, path_id in path_to_id_dict.items():
-            path_id, path = str(path_id).encode("utf-8"), str(path).encode("utf-8")
-            path_to_id[path], id_to_path[path_id] = path_id, path
-
-        path_to_id.sync()
-        id_to_path.sync()
+        with open(paths_folder + "/" + prefix + '_id_to_path_dict.pkl', 'wb') as handle:
+            pickle.dump(id_to_path_dict, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
     with open(words_file, "r", encoding="utf-8") as terms:
-        words = []
-        for term in terms:
-            term = " ".join(re.sub("[^A-Za-z0-9 ]+", " ", term).strip().split())
-            term = term.encode("ascii", "ignore")
-            words.append(term.strip())
-
+        words = [processTerm(term) for term in terms]
+        
         word_to_id_dict = {words[i]:i for i in range(len(words))}
+        id_to_word_dict = {i:words[i] for i in range(len(words))}
 
-        for word, word_id in word_to_id_dict.items():
-            word_id, word = str(word_id).encode("utf-8"), str(word).encode("utf-8")
-            word_to_id[word], id_to_word[word_id] = word_id, word
+        with open(paths_folder + "/" + prefix + '_word_to_id_dict.pkl', 'wb') as handle:
+            pickle.dump(word_to_id_dict, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-        word_to_id.sync()
-        id_to_word.sync()
+        with open(paths_folder + "/" + prefix + '_id_to_word_dict.pkl', 'wb') as handle:
+            pickle.dump(id_to_word_dict, handle, protocol=pickle.HIGHEST_PROTOCOL)        
 
 
 def getTripletIDFromDB(parsed_file):
-    word_to_id = btopen(paths_folder + "/" + prefix + '_word_to_id.db')
-    path_to_id = btopen(paths_folder + "/" + prefix + '_path_to_id.db')
 
     x = file.split("_")[-3]
     output_parsed = open(paths_folder + '/triplet_id_' + x, 'w+')
+
+    with open(paths_folder + "/" + prefix + '_word_to_id_dict.pkl', 'rb') as handle:
+        word_to_id_dict = pickle.load(handle)
+    with open(paths_folder + "/" + prefix + '_path_to_id_dict.pkl', 'rb') as handle:
+        path_to_id_dict = pickle.load(handle)
 
     with open(parsed_file) as parsed_inp:
         for line in parsed_inp:
@@ -60,42 +58,39 @@ def getTripletIDFromDB(parsed_file):
             else:
                 continue
 
-            x, y = x.strip().encode("utf-8"), y.strip().encode("utf-8")
+            x, y = processTerm(x.strip()), processTerm(y.strip())
+            
             try:
-                x_id, y_id = str(word_to_id[x].decode("utf-8")), str(word_to_id[y].decode("utf-8"))
+                x_id, y_id = word_to_id_dict[x], word_to_id_dict[y]
             except Exception as e:
                 print (e, x, y)
                 continue
-            path_id = path_to_id.get(path.strip().encode("utf-8"), -1)
+            path_id = path_to_id_dict.get(path.strip(), -1)
             if path_id != -1:
-                path_id = str(path_id.decode("utf-8"))
-                triplet = "\t".join((x_id, y_id, path_id))
+                triplet = "\t".join((str(x_id), str(y_id), str(path_id)))
                 output_parsed.write(triplet + "\n")
 
     output_parsed.close()
 
 def indexWordPairs(parsed_file):
 
-    word_occurence_map = btopen(paths_folder + "/" + prefix + '_word_occurence_map.db', 'c')
+    word_occurence_map = {}
 
     with open(parsed_file) as inp:
         for line in inp:
             x, y, path, count = line.strip().split(' ')
 
             key = str(x) + '_' + str(y)
-            key = key.encode("utf-8")
             current = path + ":" + count
 
             if key in word_occurence_map:
-                pastkeys = word_occurence_map[key].decode('utf-8')
+                pastkeys = word_occurence_map[key]
                 current =  pastkeys + ',' + current
-            
-            current = current.encode("utf-8")
-            
             word_occurence_map[key] = current
 
-    word_occurence_map.sync()
-
+    
+    with open(paths_folder + "/" + prefix + '_word_occurence_map.pkl', 'wb') as handle:
+        pickle.dump(word_occurence_map, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 paths_folder = sys.argv[1]
