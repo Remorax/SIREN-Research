@@ -8,9 +8,7 @@ echo "Corpus: "$corpus", Folder: "$folder", DB File prefix: "$prefix
 
 n=`grep "" -c $corpus | awk '{ print $1 }'`
 
-m=5
-n=$((($n + 1)/$m))
-
+m=15
 echo "Splitting corpus into "$m" parts" 
 
 declare -a path_thresholds=(3 7) # Different frequencies considered while creating frequent paths
@@ -22,7 +20,7 @@ echo -e "\n\nTunable Parameters:\n\nPath Frequencies: "${path_thresholds[*]}"\nM
 
 echo "Stage 1/3 : Splitting corpus..."
 
-gsplit -l $n $corpus $corpus"_split_" --numeric-suffixes=1;
+split -l $n $corpus $corpus"_split_" --numeric-suffixes=1;
 
 echo "Stage 2/3 : Parsing corpus..."
 
