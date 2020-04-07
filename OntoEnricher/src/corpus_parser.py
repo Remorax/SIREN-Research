@@ -1,7 +1,7 @@
 import spacy, subprocess, itertools, multiprocessing, sys
 from spacy.tokens.token import Token
 
-MAX_PATH_LENS = [4, 6]
+MAX_PATH_LENS = [4, 6, 8, 10, 15, 30]
 
 def stringifyEdge(word, root=True):
     try:
