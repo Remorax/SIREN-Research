@@ -14,12 +14,12 @@ import torch.nn as nn
 # embeddings_folder = "../junk/Glove.dat"
 # embeddings_file = "/Users/vivek/SIREN-Research/Archive-LSTM/glove.6B/glove.6B.300d.txt"
 
-prefix = "/home/hduser_/security"
+prefix = "/home/corpus/security"
 train_file = "../files/dataset/train.tsv"
 test_file = "../files/dataset/test.tsv"
 output_folder = "../junk/Output/"
 embeddings_folder = "../junk/Glove.dat"
-embeddings_file = "/home/hduser_/glove.6B.300d.txt"
+embeddings_file = "/home/glove.6B.300d.txt"
 
 POS_DIM = 4
 DEP_DIM = 5
@@ -57,7 +57,7 @@ def load_embeddings_from_disk():
 
         embeddings = vectors
     except:
-        embeddings = create_embeddings()
+        embeddings, word2idx  = create_embeddings()
     return embeddings, word2idx
         
 
