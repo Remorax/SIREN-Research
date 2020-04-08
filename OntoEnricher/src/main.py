@@ -166,7 +166,7 @@ class LSTM(nn.Module):
         
         self.hidden_dim = HIDDEN_DIM + 2 * EMBEDDING_DIM
         self.input_dim = POS_DIM + DEP_DIM + EMBEDDING_DIM + DIR_DIM
-        self.W = nn.Linear(NUM_RELATIONS, self.input_dim)
+        self.W = nn.Linear(NUM_RELATIONS, self.hidden_dim)
         self.dropout_layer = nn.Dropout(p=dropout)
         self.softmax = nn.LogSoftmax()
         
@@ -182,7 +182,7 @@ class LSTM(nn.Module):
         nn.init.xavier_uniform_(self.dep_embeddings)
         nn.init.xavier_uniform_(self.dir_embeddings)
 
-        self.lstm = nn.LSTM(self.input_dim, self.hidden_dim, NUM_LAYERS)
+        self.lstm = nn.LSTM(self.input_dim, HIDDEN_DIM, NUM_LAYERS)
     
     def normalize_embeddings(self, embeds):
         
