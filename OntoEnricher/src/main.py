@@ -178,9 +178,9 @@ class LSTM(nn.Module):
         self.dep_embeddings = nn.Embedding(len(dep_indexer), DEP_DIM)
         self.dir_embeddings = nn.Embedding(len(dir_indexer), DIR_DIM)
         
-        nn.init.xavier_uniform_(self.pos_embeddings)
-        nn.init.xavier_uniform_(self.dep_embeddings)
-        nn.init.xavier_uniform_(self.dir_embeddings)
+        nn.init.xavier_uniform_(self.pos_embeddings.weight)
+        nn.init.xavier_uniform_(self.dep_embeddings.weight)
+        nn.init.xavier_uniform_(self.dir_embeddings.weight)
 
         self.lstm = nn.LSTM(self.input_dim, HIDDEN_DIM, NUM_LAYERS)
     
@@ -216,8 +216,6 @@ class LSTM(nn.Module):
             if not el:
                 el[NULL_PATH] = 1
         print ("Data: ", data.shape, emb_indexer.shape)
-        num_paths = [ for paths in data]
-        print ("Number of paths: ", num_paths)
         h = torch.Tensor([])
         idx = 0
         for paths in data:
