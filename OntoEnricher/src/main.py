@@ -216,15 +216,19 @@ class LSTM(nn.Module):
             if not el:
                 el[NULL_PATH] = 1
         print ("Data: ", data.shape, emb_indexer.shape)
-        num_paths = [sum(list(paths.values())) for paths in data]
+        num_paths = [ for paths in data]
         print ("Number of paths: ", num_paths)
+        h = torch.Tensor([])
         for paths in data:
+            paths_embeds = torch.Tensor([])
             for path in paths.items():
-                toself.embed_path(path)
-        path_embeddings = np.array([np.sum([self.embed_path(path) for path in paths.items()]) for paths in data])
-        #print ("Path Embeddings: ", path_embeddings)
-        
-        h = np.divide(path_embeddings, num_paths)
+                paths_embeds = torch.cat((paths_embeds, self.embed_path(path).view(1,-1)), 0)
+                print ("paths_embeds:", paths_embeds.shape)
+            path_embedding = torch.div(torch.sum(paths_embeds, 0), sum(list(paths.values())))
+            print ("Path embedding: ", path_embedding.shape)
+            h = torch.cat((h, path_embedding.view(1,-1)), 0)
+         
+        print ("h shape: ", h.shape)
         print (h.shape)
         h = [np.concatenate((self.word_embeddings(emb[0]), h[i], self.word_embeddings(emb[1]))) for i,emb in enumerate(emb_indexer)]
         return self.softmax(self.W(h))
