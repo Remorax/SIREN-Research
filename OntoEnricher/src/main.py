@@ -151,7 +151,9 @@ dataset_keys = list(train_dataset.keys()) + list(test_dataset.keys())
 dataset_vals = list(train_dataset.values()) + list(test_dataset.values())
 
 embed_indices, x = parse_dataset(dataset_keys)
-y = [i for (i,relation) in enumerate(dataset_vals)]
+mappingDict = {key: idx for (idx,key) in enumerate(list(set(dataset_vals)))}
+print (mappingDict)
+y = [mappingDict[relation] for relation in dataset_vals]
 
 embed_indices_train, embed_indices_test = np.array(embed_indices[:len(train_dataset)]), np.array(embed_indices[len(train_dataset):len(train_dataset)+len(test_dataset)])
 x_train, x_test = np.array(x[:len(train_dataset)]), np.array(x[len(train_dataset):len(train_dataset)+len(test_dataset)])
@@ -166,7 +168,7 @@ class LSTM(nn.Module):
         
         self.hidden_dim = HIDDEN_DIM + 2 * EMBEDDING_DIM
         self.input_dim = POS_DIM + DEP_DIM + EMBEDDING_DIM + DIR_DIM
-        self.W = nn.Linear(NUM_RELATIONS, self.hidden_dim)
+        self.W = nn.Linear(self.hidden_dim, NUM_RELATIONS)
         self.dropout_layer = nn.Dropout(p=dropout)
         self.softmax = nn.LogSoftmax()
         
@@ -224,7 +226,11 @@ class LSTM(nn.Module):
                 paths_embeds = torch.cat((paths_embeds, self.embed_path(path).view(1,-1)), 0)
                 print ("paths_embeds:", paths_embeds.shape)
             path_embedding = torch.div(torch.sum(paths_embeds, 0), sum(list(paths.values())))
-            path_embedding_cat = torch.cat((self.word_embeddings(emb_indexer[idx][0]), path_embedding, self.word_embeddings(emb_indexer[idx][1])))
+            print (emb_indexer[idx][0].shape, emb_indexer[idx][1].shape, emb_indexer[idx])
+            x = self.word_embeddings(torch.LongTensor([[emb_indexer[idx][0]]])).view(EMBEDDING_DIM)
+            y = self.word_embeddings(torch.LongTensor([[emb_indexer[idx][1]]])).view(EMBEDDING_DIM)
+            print (x.shape, path_embedding.shape, y.shape)
+            path_embedding_cat = torch.cat((x, path_embedding, y))
             print ("Path embedding after cat with embeddings: ", path_embedding.shape)
             probabilities = self.softmax(self.W(path_embedding_cat))
             print ("Probabilities: ", probabilities.shape)
@@ -262,6 +268,7 @@ for epoch in range(num_epochs):
         
         # Run the forward pass
         outputs = lstm(data, embeddings_idx)
+        print (outputs, labels)
         loss = criterion(outputs, labels)
 
         # Backprop and perform Adam optimisation
