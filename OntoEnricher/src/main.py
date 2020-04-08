@@ -219,19 +219,22 @@ class LSTM(nn.Module):
         num_paths = [ for paths in data]
         print ("Number of paths: ", num_paths)
         h = torch.Tensor([])
+        idx = 0
         for paths in data:
             paths_embeds = torch.Tensor([])
             for path in paths.items():
                 paths_embeds = torch.cat((paths_embeds, self.embed_path(path).view(1,-1)), 0)
                 print ("paths_embeds:", paths_embeds.shape)
             path_embedding = torch.div(torch.sum(paths_embeds, 0), sum(list(paths.values())))
-            print ("Path embedding: ", path_embedding.shape)
-            h = torch.cat((h, path_embedding.view(1,-1)), 0)
+            path_embedding_cat = torch.cat((self.word_embeddings(emb_indexer[idx][0]), path_embedding, self.word_embeddings(emb_indexer[idx][1])))
+            print ("Path embedding after cat with embeddings: ", path_embedding.shape)
+            probabilities = self.softmax(self.W(path_embedding_cat))
+            print ("Probabilities: ", probabilities.shape)
+            h = torch.cat((h, probabilities.view(1,-1)), 0)
+            idx += 1
          
         print ("h shape: ", h.shape)
-        print (h.shape)
-        h = [np.concatenate((self.word_embeddings(emb[0]), h[i], self.word_embeddings(emb[1]))) for i,emb in enumerate(emb_indexer)]
-        return self.softmax(self.W(h))
+        return h
 
 HIDDEN_DIM = 60
 NUM_LAYERS = 2
