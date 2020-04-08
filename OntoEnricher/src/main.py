@@ -240,6 +240,13 @@ class LSTM(nn.Module):
         print ("h shape: ", h.shape)
         return h
 
+def log_loss(output, target):
+    prob_losses = torch.Tensor([])
+    for i,batch in enumerate(output):
+        torch.cat((prob_losses, -1 * torch.log(batch[target[i]]).view(1,-1)), 0)
+    print (prob_losses, prob_losses.shape)
+    return torch.sum(prob_losses)
+
 HIDDEN_DIM = 60
 NUM_LAYERS = 2
 num_epochs = 3
@@ -252,7 +259,7 @@ num_batches = int(ceil(dataset_size/batch_size))
 lr = 0.001
 dropout = 0.3
 lstm = LSTM()
-criterion = nn.NLLLoss()
+# criterion = nn.NLLLoss()
 optimizer = optim.Adam(lstm.parameters(), lr=lr)
 
 for epoch in range(num_epochs):
@@ -269,7 +276,7 @@ for epoch in range(num_epochs):
         # Run the forward pass
         outputs = lstm(data, embeddings_idx)
         print (outputs, labels)
-        loss = criterion(outputs, labels)
+        loss = log_loss(outputs, labels)
 
         # Backprop and perform Adam optimisation
         optimizer.zero_grad()
