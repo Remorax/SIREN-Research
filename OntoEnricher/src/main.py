@@ -178,11 +178,14 @@ class LSTM(nn.Module):
         self.dep_embeddings = nn.Embedding(len(dep_indexer), DEP_DIM)
         self.dir_embeddings = nn.Embedding(len(dir_indexer), DIR_DIM)
         
+        nn.init.xavier_uniform_(self.pos_embeddings)
+        nn.init.xavier_uniform_(self.dep_embeddings)
+        nn.init.xavier_uniform_(self.dir_embeddings)
+
         self.lstm = nn.LSTM(self.input_dim, self.hidden_dim, NUM_LAYERS)
     
     def normalize_embeddings(self, embeds):
-        row_norm = torch.sum(torch.abs(embeds)**2, axis=-1)**(1./2)
-        embeds /= row_norm.view(-1,1)
+        
         embed = torch.flatten(self.dropout_layer(embeds))
         return embed
 
@@ -197,14 +200,15 @@ class LSTM(nn.Module):
             pos_embed = self.normalize_embeddings(self.pos_embeddings(inputs[1]))
             dep_embed = self.normalize_embeddings(self.dep_embeddings(inputs[2]))
             dir_embed = self.normalize_embeddings(self.dir_embeddings(inputs[3]))
+            print (word_embed.shape, pos_embed.shape, dep_embed.shape, dir_embed.shape)
             embeds = torch.cat((word_embed, pos_embed, dep_embed, dir_embed)).view(1, -1)
             lstm_inp = torch.cat((lstm_inp, embeds), 0)
 
         lstm_inp = lstm_inp.view(-1, 1, self.input_dim)
-        print (lstm_inp.shape)
+        print ("LSTM inp:", lstm_inp.shape)
         output, _ = self.lstm(lstm_inp)
         self.cache[path] = output
-        print (output.shape)
+        print ("LSTM op:", output.shape)
         return output * count
     
     def forward(self, data, emb_indexer):
