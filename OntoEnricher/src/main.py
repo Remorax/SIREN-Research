@@ -200,11 +200,10 @@ class LSTM(nn.Module):
             return self.cache[path] * count
         lstm_inp = torch.Tensor([]).to(device)
         for edge in path:
-            inputs = [torch.Tensor([[el]]).long().to(device) for el in edge]
-            word_embed = self.normalize_embeddings(self.word_embeddings(inputs[0]))
-            pos_embed = self.normalize_embeddings(self.pos_embeddings(inputs[1]))
-            dep_embed = self.normalize_embeddings(self.dep_embeddings(inputs[2]))
-            dir_embed = self.normalize_embeddings(self.dir_embeddings(inputs[3]))
+            word_embed = self.normalize_embeddings(self.word_embeddings(edge[0]))
+            pos_embed = self.normalize_embeddings(self.pos_embeddings(edge[1]))
+            dep_embed = self.normalize_embeddings(self.dep_embeddings(edge[2]))
+            dir_embed = self.normalize_embeddings(self.dir_embeddings(edge[3]))
             # print (word_embed.shape, pos_embed.shape, dep_embed.shape, dir_embed.shape)
             embeds = torch.cat((word_embed, pos_embed, dep_embed, dir_embed)).view(1, -1)
             lstm_inp = torch.cat((lstm_inp, embeds), 0)
@@ -217,9 +216,7 @@ class LSTM(nn.Module):
         return output * count
     
     def forward(self, data, emb_indexer):
-        for el in data:
-            if not el:
-                el[NULL_PATH] = 1
+        
         # print ("Data: ", data.shape, emb_indexer.shape)
         h = torch.Tensor([]).to(device)
         idx = 0
@@ -253,6 +250,9 @@ def log_loss(output, target):
     # print (prob_losses, prob_losses.shape)
     return torch.sum(prob_losses)
 
+def tensorifyTuple(tup):
+    return tuple([tuple([torch.LongTensor([[e]]).to(device) for e in edge]) for edge in tup])
+
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 NUM_RELATIONS = len(mappingDict)
@@ -283,6 +283,10 @@ for epoch in range(num_epochs):
         batch = epoch_idx[batch_start:batch_end]
         
         print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
+        
+        data = [{NULL_PATH: 1} if not el else el for el in data]
+        data = [{e: tensorifyTuple(dictElem[e]) for e in dictElem} for dictElem in data]
+
         data, labels, embeddings_idx = x_train[batch], y_train[batch], embed_indices_train[batch]
         
         # Run the forward pass
