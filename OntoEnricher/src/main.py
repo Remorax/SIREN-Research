@@ -152,7 +152,7 @@ dataset_vals = list(train_dataset.values()) + list(test_dataset.values())
 
 embed_indices, x = parse_dataset(dataset_keys)
 mappingDict = {key: idx for (idx,key) in enumerate(list(set(dataset_vals)))}
-print (mappingDict)
+# print (mappingDict)
 y = [mappingDict[relation] for relation in dataset_vals]
 
 embed_indices_train, embed_indices_test = np.array(embed_indices[:len(train_dataset)]), np.array(embed_indices[len(train_dataset):len(train_dataset)+len(test_dataset)])
@@ -202,55 +202,60 @@ class LSTM(nn.Module):
             pos_embed = self.normalize_embeddings(self.pos_embeddings(inputs[1]))
             dep_embed = self.normalize_embeddings(self.dep_embeddings(inputs[2]))
             dir_embed = self.normalize_embeddings(self.dir_embeddings(inputs[3]))
-            print (word_embed.shape, pos_embed.shape, dep_embed.shape, dir_embed.shape)
+            # print (word_embed.shape, pos_embed.shape, dep_embed.shape, dir_embed.shape)
             embeds = torch.cat((word_embed, pos_embed, dep_embed, dir_embed)).view(1, -1)
             lstm_inp = torch.cat((lstm_inp, embeds), 0)
 
         lstm_inp = lstm_inp.view(-1, 1, self.input_dim)
-        print ("LSTM inp:", lstm_inp.shape)
+        # print ("LSTM inp:", lstm_inp.shape)
         output, _ = self.lstm(lstm_inp)
         self.cache[path] = output
-        print ("LSTM op:", output.shape)
+        # print ("LSTM op:", output.shape)
         return output * count
     
     def forward(self, data, emb_indexer):
         for el in data:
             if not el:
                 el[NULL_PATH] = 1
-        print ("Data: ", data.shape, emb_indexer.shape)
+        # print ("Data: ", data.shape, emb_indexer.shape)
         h = torch.Tensor([])
         idx = 0
         for paths in data:
             paths_embeds = torch.Tensor([])
             for path in paths.items():
                 paths_embeds = torch.cat((paths_embeds, self.embed_path(path).view(1,-1)), 0)
-                print ("paths_embeds:", paths_embeds.shape)
+                # print ("paths_embeds:", paths_embeds.shape)
             path_embedding = torch.div(torch.sum(paths_embeds, 0), sum(list(paths.values())))
-            print (emb_indexer[idx][0].shape, emb_indexer[idx][1].shape, emb_indexer[idx])
+            # print (emb_indexer[idx][0].shape, emb_indexer[idx][1].shape, emb_indexer[idx])
             x = self.word_embeddings(torch.LongTensor([[emb_indexer[idx][0]]])).view(EMBEDDING_DIM)
             y = self.word_embeddings(torch.LongTensor([[emb_indexer[idx][1]]])).view(EMBEDDING_DIM)
-            print (x.shape, path_embedding.shape, y.shape)
+            # print (x.shape, path_embedding.shape, y.shape)
             path_embedding_cat = torch.cat((x, path_embedding, y))
-            print ("Path embedding after cat with embeddings: ", path_embedding.shape)
+            # print ("Path embedding after cat with embeddings: ", path_embedding.shape)
             probabilities = self.softmax(self.W(path_embedding_cat))
-            print ("Probabilities: ", probabilities.shape)
+            # print ("Probabilities: ", probabilities)
             h = torch.cat((h, probabilities.view(1,-1)), 0)
             idx += 1
          
-        print ("h shape: ", h.shape)
+        # print ("h shape: ", h.shape)
         return h
 
 def log_loss(output, target):
     prob_losses = torch.Tensor([])
     for i,batch in enumerate(output):
-        torch.cat((prob_losses, -1 * torch.log(batch[target[i]]).view(1,-1)), 0)
-    print (prob_losses, prob_losses.shape)
+        # print (i, batch)
+        log_prob = -1 * torch.log(batch[target[i]])
+        # print (log_prob, log_prob.shape)
+        prob_losses = torch.cat((prob_losses, torch.unsqueeze(log_prob, 0)), 0)
+    # print (prob_losses, prob_losses.shape)
     return torch.sum(prob_losses)
 
+NUM_RELATIONS = len(mappingDict)
+# print ("num_relations:", NUM_RELATIONS)
 HIDDEN_DIM = 60
 NUM_LAYERS = 2
 num_epochs = 3
-batch_size = 10
+batch_size = 10000
 
 dataset_size = len(y_train)
 batch_size = min(batch_size, dataset_size)
@@ -259,7 +264,7 @@ num_batches = int(ceil(dataset_size/batch_size))
 lr = 0.001
 dropout = 0.3
 lstm = LSTM()
-# criterion = nn.NLLLoss()
+criterion = nn.NLLLoss()
 optimizer = optim.Adam(lstm.parameters(), lr=lr)
 
 for epoch in range(num_epochs):
@@ -267,6 +272,7 @@ for epoch in range(num_epochs):
     total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
     
     for batch_idx in range(num_batches):
+        print ("Batch_idx", batch_idx)
         batch_end = (batch_idx+1) * batch_size
         batch_start = batch_idx * batch_size
         batch = epoch_idx[batch_start:batch_end]
@@ -275,14 +281,15 @@ for epoch in range(num_epochs):
         
         # Run the forward pass
         outputs = lstm(data, embeddings_idx)
-        print (outputs, labels)
-        loss = log_loss(outputs, labels)
-
+        # print (outputs, labels)
+        # loss = log_loss(outputs, labels)
+        loss = criterion(outputs, torch.LongTensor(labels))
+        print ("Loss:", loss.item())
         # Backprop and perform Adam optimisation
         optimizer.zero_grad()
-        loss.backward()
+        loss.backward(retain_graph=True)
         optimizer.step()
-
+        print ("done")
         total_loss += loss.item()
 
     total_loss /= dataset_size
