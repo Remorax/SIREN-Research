@@ -173,7 +173,7 @@ class LSTM(nn.Module):
         self.input_dim = POS_DIM + DEP_DIM + EMBEDDING_DIM + DIR_DIM
         self.W = nn.Linear(self.hidden_dim, NUM_RELATIONS)
         self.dropout_layer = nn.Dropout(p=dropout)
-        self.softmax = nn.LogSoftmax()
+        self.softmax = nn.Softmax()
         
         self.word_embeddings = nn.Embedding(len(emb_indexer), EMBEDDING_DIM)
         self.word_embeddings.load_state_dict({'weight': torch.from_numpy(np.array(embeddings))})
@@ -222,6 +222,7 @@ class LSTM(nn.Module):
         idx = 0
         for paths in data:
             paths_embeds = torch.Tensor([]).to(device)
+            # print (paths)
             for path in paths.items():
                 paths_embeds = torch.cat((paths_embeds, self.embed_path(path).view(1,-1)), 0)
                 # print ("paths_embeds:", paths_embeds.shape)
@@ -241,7 +242,7 @@ class LSTM(nn.Module):
         return h
 
 def log_loss(output, target):
-    prob_losses = torch.Tensor([])
+    prob_losses = torch.Tensor([]).double().to(device)
     for i,batch in enumerate(output):
         # print (i, batch)
         log_prob = -1 * torch.log(batch[target[i]])
@@ -252,14 +253,14 @@ def log_loss(output, target):
 
 def tensorifyTuple(tup):
     return tuple([tuple([torch.LongTensor([[e]]).to(device) for e in edge]) for edge in tup])
-
+    
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 NUM_RELATIONS = len(mappingDict)
 # print ("num_relations:", NUM_RELATIONS)
 HIDDEN_DIM = 60
 NUM_LAYERS = 2
-num_epochs = 3
+num_epochs = 60
 batch_size = 10000
 
 dataset_size = len(y_train)
@@ -272,6 +273,8 @@ lstm = nn.DataParallel(LSTM()).to(device)
 criterion = nn.NLLLoss()
 optimizer = optim.Adam(lstm.parameters(), lr=lr)
 
+loss_list = []
+
 for epoch in range(num_epochs):
     
     total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
@@ -282,18 +285,17 @@ for epoch in range(num_epochs):
         batch_start = batch_idx * batch_size
         batch = epoch_idx[batch_start:batch_end]
         
-        print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
+        # print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
         
-        data = [{NULL_PATH: 1} if not el else el for el in data]
-        data = [{e: tensorifyTuple(dictElem[e]) for e in dictElem} for dictElem in data]
-
-        data, labels, embeddings_idx = x_train[batch], y_train[batch], embed_indices_train[batch]
+        data = [{NULL_PATH: 1} if not el else el for el in x_train[batch]]
+        data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
+        labels, embeddings_idx = y_train[batch], embed_indices_train[batch]
         
         # Run the forward pass
         outputs = lstm(data, embeddings_idx)
         # print (outputs, labels)
-        # loss = log_loss(outputs, labels)
-        loss = criterion(outputs, torch.LongTensor(labels))
+        loss = log_loss(outputs, torch.LongTensor(labels).to(device))
+        # loss = criterion(outputs, torch.LongTensor(labels).to(device))
         print ("Loss:", loss.item())
         # Backprop and perform Adam optimisation
         optimizer.zero_grad()
@@ -306,6 +308,7 @@ for epoch in range(num_epochs):
     print('Epoch [{}/{}] Loss: {:.4f}'.format(epoch + 1, num_epochs, total_loss))
     loss_list.append(loss.item())
 
+torch.save(lstm.state_dict(), "/home/vivek.iyer/SIREN-Research/OntoEnricher/src")
 lstm.eval()
 with torch.no_grad():
     predictedLabels = []
