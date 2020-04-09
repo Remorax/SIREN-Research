@@ -250,6 +250,8 @@ def log_loss(output, target):
     # print (prob_losses, prob_losses.shape)
     return torch.sum(prob_losses)
 
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
 NUM_RELATIONS = len(mappingDict)
 # print ("num_relations:", NUM_RELATIONS)
 HIDDEN_DIM = 60
@@ -263,7 +265,7 @@ num_batches = int(ceil(dataset_size/batch_size))
 
 lr = 0.001
 dropout = 0.3
-lstm = LSTM()
+lstm = LSTM().to(device)
 criterion = nn.NLLLoss()
 optimizer = optim.Adam(lstm.parameters(), lr=lr)
 
@@ -277,7 +279,7 @@ for epoch in range(num_epochs):
         batch_start = batch_idx * batch_size
         batch = epoch_idx[batch_start:batch_end]
         
-        data, labels, embeddings_idx = x_train[batch], y_train[batch], embed_indices_train[batch]
+        data, labels, embeddings_idx = x_train[batch].to(device), y_train[batch].to(device), embed_indices_train[batch].to(device)
         
         # Run the forward pass
         outputs = lstm(data, embeddings_idx)
