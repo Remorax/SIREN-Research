@@ -1,6 +1,8 @@
 import torch.nn as nn
+import torch
+import torch.optim as optim
 
-data = [{}, {}, {}, {}]
+data = [(), (), (), (4,5)]
 labels = [0, 0, 0, 0]
 
 class LSTM(nn.Module):
@@ -11,22 +13,18 @@ class LSTM(nn.Module):
         self.W = nn.Linear(60, 5)
         self.dropout_layer = nn.Dropout(p=0.3)
         self.softmax = nn.LogSoftmax()
-        self.embeddings = nn.Embedding(50, 10)
+        self.embeddings = nn.Embedding(10, 50)
         nn.init.xavier_uniform_(self.embeddings.weight)
-        self.lstm = nn.LSTM(310, 60, 2)
+        self.lstm = nn.LSTM(50, 60, 2)
 
     def embed_path(self, path):
         edge, count = path
-        inputs = torch.Tensor([[edge]]).long().to(device)
-        embed = torch.flatten(self.dropout_layer(self.embeddings(inputs)))
-        output, _ = self.lstm(lstm_inp.view(-1, 1, 310))
+        embed = torch.flatten(self.dropout_layer(self.embeddings(edge)))
+        output, _ = self.lstm(embed.view(-1, 1, 50))
         return output * count
     
-    def forward(self, data):
-        for el in data:
-            if not el:
-                el[0] = 1
-        h = torch.Tensor([]).to(device)
+    def forward(self, data, h):
+        print (data)
         for path in data:
             lstm_output = self.embed_path(path).view(1,-1)
             probabilities = self.softmax(self.W(lstm_output))
@@ -39,10 +37,14 @@ lstm = nn.DataParallel(LSTM()).to(device)
 criterion = nn.NLLLoss()
 optimizer = optim.Adam(lstm.parameters(), lr=0.001)
 
+data = [(0,1) if not el else el for el in data]
+data = [(torch.Tensor([[edge]]).long().to(device), count) for edge, count in data]
+
 for epoch in range(3):
 
-    outputs = lstm(data)
-    loss = criterion(outputs, torch.LongTensor(labels))
+    h = torch.Tensor([]).to(device)
+    outputs = lstm(data, h)
+    loss = criterion(outputs, torch.LongTensor(labels).to(device))
     
     optimizer.zero_grad()
     loss.backward(retain_graph=True)
