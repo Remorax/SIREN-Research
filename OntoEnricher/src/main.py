@@ -260,7 +260,7 @@ NUM_RELATIONS = len(mappingDict)
 # print ("num_relations:", NUM_RELATIONS)
 HIDDEN_DIM = 60
 NUM_LAYERS = 2
-num_epochs = 60
+num_epochs = 10
 batch_size = 10000
 
 dataset_size = len(y_train)
@@ -270,12 +270,17 @@ num_batches = int(ceil(dataset_size/batch_size))
 lr = 0.001
 dropout = 0.3
 lstm = nn.DataParallel(LSTM()).to(device)
+try:
+    lstm.load_state_dict(torch.load("/home/vivek.iyer/SIREN-Research/OntoEnricher/src/model.pt"))
+except Exception as e:
+    print ("Error loading model", e)
+    pass
 criterion = nn.NLLLoss()
 optimizer = optim.Adam(lstm.parameters(), lr=lr)
 
 loss_list = []
 
-for epoch in range(num_epochs):
+for epoch in range(7, num_epochs):
     
     total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
     
@@ -299,16 +304,17 @@ for epoch in range(num_epochs):
         print ("Loss:", loss.item())
         # Backprop and perform Adam optimisation
         optimizer.zero_grad()
-        loss.backward(retain_graph=True)
+        loss.backward()
         optimizer.step()
         print ("done")
         total_loss += loss.item()
 
+    torch.save(lstm.state_dict(), "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/model.pt")
+    
     total_loss /= dataset_size
     print('Epoch [{}/{}] Loss: {:.4f}'.format(epoch + 1, num_epochs, total_loss))
     loss_list.append(loss.item())
 
-torch.save(lstm.state_dict(), "/home/vivek.iyer/SIREN-Research/OntoEnricher/src")
 lstm.eval()
 with torch.no_grad():
     predictedLabels = []
