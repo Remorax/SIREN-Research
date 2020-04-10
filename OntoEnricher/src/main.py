@@ -20,6 +20,7 @@ test_file = "../files/dataset/test.tsv"
 output_folder = "../junk/Output/"
 embeddings_folder = "../junk/Glove.dat"
 embeddings_file = "/home/vivek.iyer/glove.6B.300d.txt"
+model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/model.pt"
 
 POS_DIM = 4
 DEP_DIM = 5
@@ -86,6 +87,21 @@ def create_embeddings():
     pickle.dump(word2idx, open(embeddings_folder + 'words_index.pkl', 'wb'))
     
     return vectors, word2idx
+
+def load_checkpoint(model, optimizer, filename='model.pt'):
+    # Note: Input model & optimizer should be pre-defined.  This routine only updates their states.
+    start_epoch = 0
+    if os.path.isfile(filename):
+        print("=> loading checkpoint '{}'".format(filename))
+        checkpoint = torch.load(filename)
+        start_epoch = checkpoint['epoch']
+        model.load_state_dict(checkpoint['state_dict'])
+        optimizer.load_state_dict(checkpoint['optimizer'])
+        print("=> loaded checkpoint '{}' (epoch {})".format(filename, checkpoint['epoch']))
+    else:
+        print("=> no checkpoint found at '{}'".format(filename))
+
+    return model, optimizer, start_epoch
 
 
 word2id_db = btopen(prefix + "_term_to_id.db", "r")
@@ -261,7 +277,7 @@ NUM_RELATIONS = len(mappingDict)
 HIDDEN_DIM = 60
 NUM_LAYERS = 2
 num_epochs = 10
-batch_size = 10000
+batch_size = 50000
 
 dataset_size = len(y_train)
 batch_size = min(batch_size, dataset_size)
@@ -270,20 +286,23 @@ num_batches = int(ceil(dataset_size/batch_size))
 lr = 0.001
 dropout = 0.3
 lstm = nn.DataParallel(LSTM()).to(device)
-try:
-    lstm.load_state_dict(torch.load("/home/vivek.iyer/SIREN-Research/OntoEnricher/src/model.pt"))
-except Exception as e:
-    print ("Error loading model", e)
-    pass
 criterion = nn.NLLLoss()
 optimizer = optim.Adam(lstm.parameters(), lr=lr)
 
 loss_list = []
 
-for epoch in range(7, num_epochs):
+for epoch in range(num_epochs):
     
     total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
     
+    if epoch > 0:
+        lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
+        lstm = lstm.to(device)
+        for state in optimizer.state.values():
+            for k, v in state.items():
+                if isinstance(v, torch.Tensor):
+                    state[k] = v.to(device)
+                    
     for batch_idx in range(num_batches):
         print ("Batch_idx", batch_idx)
         batch_end = (batch_idx+1) * batch_size
@@ -308,8 +327,9 @@ for epoch in range(7, num_epochs):
         optimizer.step()
         print ("done")
         total_loss += loss.item()
-
-    torch.save(lstm.state_dict(), "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/model.pt")
+    state = {'epoch': epoch + 1, 'state_dict': model.state_dict(),
+             'optimizer': optimizer.state_dict()}
+    torch.save(state, model_filename)
     
     total_loss /= dataset_size
     print('Epoch [{}/{}] Loss: {:.4f}'.format(epoch + 1, num_epochs, total_loss))
