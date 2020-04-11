@@ -70,7 +70,7 @@ do
 
 	wait $PIDLEFT
 	wait $PIDRIGHT
-	cat $folder"xterms_"$maxlen $folder"yterms_"$maxlen | sort -u > $folder"terms_"$maxlen;
+	cat $folder"xterms_"$maxlen $folder"yterms_"$maxlen | sort -u --parallel=128 > $folder"terms_"$maxlen;
 	rm $folder"xterms_"$maxlen $folder"yterms_"$maxlen $parsed_final
 
 	echo -e "\tStep: Creating term and path db files..."
@@ -116,10 +116,10 @@ do
 		exit 1
 		# Creating a triplet occurence matrix
 		gawk -F $'\t' '{ matrix[$1][$2][$3]+=$4; } END{for (x in matrix) {for (y in matrix[x]) {for (path in matrix[x][y]) {print x, y, path, matrix[x][y][path]}}}}' $paths_folder"/triplet_count" > $paths_folder"/final_count"
-
+		sort -t$'\t' -k1 -n --parallel=128 $paths_folder"/triplet_count" > $paths_folder"/triplet_sorted"
 		rm $paths_folder"/triplet_count"
 
-		python3 path_terms_indexer.py $paths_folder $paths_folder"/final_count" $prefix 3;
+		python3 path_terms_indexer.py $paths_folder $paths_folder"/triplet_sorted" $prefix 3;
 
 		rm $paths_folder"/final_count"
 	done
