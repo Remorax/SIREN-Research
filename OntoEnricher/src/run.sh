@@ -12,7 +12,7 @@ m=15
 n=$((($n + 1)/$m))
 echo "Splitting corpus into "$m" parts" 
 
-declare -a path_thresholds=(3 7 10 12 15 20 25 50) # Different frequencies considered while creating frequent paths
+declare -a path_thresholds=(4 5 7 10 12 15 20 25 50) # Different frequencies considered while creating frequent paths
 declare -a maxlens=(4 6 8 10 15 30) # Maximum path lengths considered while extracting paths
 
 parts=( $(seq 1 $m ) )
@@ -21,16 +21,16 @@ echo -e "\n\nTunable Parameters:\n\nPath Frequencies: "${path_thresholds[*]}"\nM
 
 echo "Stage 1/3 : Splitting corpus..."
 
-split -l $n $corpus $corpus"_split_" --numeric-suffixes=1;
+# split -l $n $corpus $corpus"_split_" --numeric-suffixes=1;
 
 echo "Stage 2/3 : Parsing corpus..."
 
-for x in "${parts[@]}"
-do
-	corpus_part=$corpus"_split_"$x
-	( python3 corpus_parser.py $corpus_part ) &
-done
-wait
+#for x in "${parts[@]}"
+#do
+#	corpus_part=$corpus"_split_"$x
+#	( python3 corpus_parser.py $corpus_part ) &
+#done
+#wait
 
 echo "Stage 3/3: The main stage: tuning of parameters..."
 index=0
@@ -60,9 +60,8 @@ do
 	do
 		echo -e "\t\tPath threshold: "$n
 		mkdir $folder$prefix"_threshold_"$n"_"$maxlen
-		( awk -F "\t" '{i[$1]+=$2} END{for(x in i){ if (i[x] >= '$n') print x } }' $paths > $folder$prefix"_threshold_"$n"_"$maxlen'/filtered_paths'  ) &
+		awk -F "\t" '{i[$1]+=$2} END{for(x in i){ if (i[x] >= '$n') print x } }' $paths > $folder$prefix"_threshold_"$n"_"$maxlen'/filtered_paths' 
 	done
-	wait
 	rm $paths
 
 	echo -e "\tStep: Creating word files..."
@@ -114,7 +113,7 @@ do
 		cat $paths_folder"/triplet_count_"* > $paths_folder"/triplet_count";
 
 		rm $paths_folder"/triplet_count_"*
-
+		exit 1
 		# Creating a triplet occurence matrix
 		gawk -F $'\t' '{ matrix[$1][$2][$3]+=$4; } END{for (x in matrix) {for (y in matrix[x]) {for (path in matrix[x][y]) {print x, y, path, matrix[x][y][path]}}}}' $paths_folder"/triplet_count" > $paths_folder"/final_count"
 

@@ -1,7 +1,7 @@
 import spacy, subprocess, itertools, multiprocessing, sys
 from spacy.tokens.token import Token
 
-MAX_PATH_LENS = [4, 6, 8, 10, 15, 30]
+MAX_PATH_LENS = [4, 5]
 
 def stringifyEdge(word, root=True):
     try:
@@ -204,5 +204,8 @@ splitFileName = sys.argv[1].split("_")
 file = "_".join(splitFileName[:-1]) + "_" + ("0" + splitFileName[-1] if len(splitFileName[-1]) == 1 else  splitFileName[-1])
 
 for maxlen in MAX_PATH_LENS:
+    if maxlen == 30 and splitFileName[-1] in ["10", "11", "7", "8", "9", "5", "6", "12"]:
+        continue
     parseText(file, sys.argv[1], maxlen)
+    print ("Done for", splitFileName, "for max len:", maxlen)
 
