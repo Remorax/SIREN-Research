@@ -1,0 +1,6 @@
+==========================================
+SLURM_JOB_ID = 125015
+SLURM_NODELIST = gnode24
+SLURM_JOB_GPUS = 0,1,2,3
+==========================================
+slurmstepd: error: *** JOB 125015 ON gnode24 CANCELLED AT 2020-04-11T21:21:23 ***

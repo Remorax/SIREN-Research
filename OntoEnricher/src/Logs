@@ -1,0 +1,570 @@
+
+Pairs without paths: 95644 , all dataset: 95644
+
+Batch_idx 0
+
+Loss: 16109.550108318623
+
+Batch_idx 1
+
+Loss: 15584.33576120784
+
+Batch_idx 2
+
+Loss: 15068.688549542108
+
+Batch_idx 3
+
+Loss: 14553.335989773117
+
+Batch_idx 4
+
+Loss: 14044.656094857888
+
+Batch_idx 5
+
+Loss: 13560.070825402454
+
+Batch_idx 6
+
+Loss: 13064.492189660645
+
+Batch_idx 7
+
+Loss: 12565.55295161283
+
+Batch_idx 8
+
+Loss: 1313.1390913081716
+
+Epoch [1/10] Loss: 1.4289
+
+Batch_idx 0
+
+Loss: 11666.812169127792
+
+Batch_idx 1
+
+Loss: 11244.346462563157
+
+Batch_idx 2
+
+Loss: 10787.051962776339
+
+Batch_idx 3
+
+Loss: 10348.303707383084
+
+Batch_idx 4
+
+Loss: 9960.929562139405
+
+Batch_idx 5
+
+Loss: 9492.36453302648
+
+Batch_idx 6
+
+Loss: 9092.966551883554
+
+Batch_idx 7
+
+Loss: 8708.501070001348
+
+Batch_idx 8
+
+Loss: 917.8492978939282
+
+Epoch [2/10] Loss: 1.0139
+
+Batch_idx 0
+
+Loss: 7926.032033633202
+
+Batch_idx 1
+
+Loss: 7551.7976104400905
+
+Batch_idx 2
+
+Loss: 7266.492844536885
+
+Batch_idx 3
+
+Loss: 6954.997196346906
+
+Batch_idx 4
+
+Loss: 6630.2035993911595
+
+Batch_idx 5
+
+Loss: 6287.879041987657
+
+Batch_idx 6
+
+Loss: 6047.597439487259
+
+Batch_idx 7
+
+Loss: 5712.8873759903
+
+Batch_idx 8
+
+Loss: 580.9473456028309
+
+Epoch [3/10] Loss: 0.6778
+
+Batch_idx 0
+
+Loss: 5199.447077955445
+
+Batch_idx 1
+
+Loss: 5161.82180218917
+
+Batch_idx 2
+
+Loss: 4930.352978009423
+
+Batch_idx 3
+
+Loss: 4673.89869760963
+
+Batch_idx 4
+
+Loss: 4500.686692718773
+
+Batch_idx 5
+
+Loss: 4514.257766888591
+
+Batch_idx 6
+
+Loss: 4375.863620174932
+
+Batch_idx 7
+
+Loss: 4250.013142626056
+
+Batch_idx 8
+
+Loss: 439.1063324839462
+
+Epoch [4/10] Loss: 0.4692
+
+Batch_idx 0
+
+Loss: 4005.7408650902116
+
+Batch_idx 1
+
+Loss: 4007.897451208109
+
+Batch_idx 2
+
+Loss: 3884.9527355758273
+
+Batch_idx 3
+
+Loss: 4019.045481278657
+
+Batch_idx 4
+
+Loss: 3788.552360817698
+
+Batch_idx 5
+
+Loss: 3753.737738008437
+
+Batch_idx 6
+
+Loss: 3799.7108847733957
+
+Batch_idx 7
+
+Loss: 3670.960049564149
+
+Batch_idx 8
+
+Loss: 429.39906362315173
+
+Epoch [5/10] Loss: 0.3867
+
+Batch_idx 0
+
+Loss: 3628.186387690377
+
+Batch_idx 1
+
+Loss: 3707.185670103348
+
+Batch_idx 2
+
+Loss: 3649.7936060617994
+
+Batch_idx 3
+
+Loss: 3748.7675827751336
+
+Batch_idx 4
+
+Loss: 3594.475050313854
+
+Batch_idx 5
+
+Loss: 3645.6800386704863
+
+Batch_idx 6
+
+Loss: 3667.3749963550167
+
+Batch_idx 7
+
+Loss: 3839.775766622628
+
+Batch_idx 8
+
+Loss: 403.02882081528685
+
+Epoch [6/10] Loss: 0.3685
+
+Batch_idx 0
+
+Loss: 3580.292968543904
+
+Batch_idx 1
+
+Loss: 3693.229164708535
+
+Batch_idx 2
+
+Loss: 3683.2099305659394
+
+Batch_idx 3
+
+Loss: 3770.1112059432944
+
+Batch_idx 4
+
+Loss: 3560.2686432762603
+
+Batch_idx 5
+
+Loss: 3572.0257693681633
+
+Batch_idx 6
+
+Loss: 3708.2537215889133
+
+Batch_idx 7
+
+Loss: 3761.8424880232874
+
+Batch_idx 8
+
+Loss: 405.3189037812691
+
+Epoch [7/10] Loss: 0.3667
+
+Batch_idx 0
+
+Loss: 3550.1980971982252
+
+Batch_idx 1
+
+Loss: 3685.197136185232
+
+Batch_idx 2
+
+Loss: 3501.418198845399
+
+Batch_idx 3
+
+Loss: 3778.798006969895
+
+Batch_idx 4
+
+Loss: 3848.0835159989347
+
+Batch_idx 5
+
+Loss: 3523.654954329174
+
+Batch_idx 6
+
+Loss: 3563.0096073402838
+
+Batch_idx 7
+
+Loss: 3790.1941580977423
+
+Batch_idx 8
+
+Loss: 419.4668153329343
+
+Epoch [8/10] Loss: 0.3658
+
+Batch_idx 0
+
+Loss: 3517.36018491646
+
+Batch_idx 1
+
+Loss: 3511.511186392132
+
+Batch_idx 2
+
+Loss: 3787.0303520855928
+
+Batch_idx 3
+
+Loss: 3652.2170045026105
+
+Batch_idx 4
+
+Loss: 3637.014059598766
+
+Batch_idx 5
+
+Loss: 3601.4769786188654
+
+Batch_idx 6
+
+Loss: 3795.8197744106483
+
+Batch_idx 7
+
+Loss: 3635.4461412559704
+
+Batch_idx 8
+
+Loss: 378.63940550920444
+
+Epoch [9/10] Loss: 0.3640
+
+Batch_idx 0
+
+Loss: 3708.5198641413895
+
+Batch_idx 1
+
+Loss: 3431.3192017897863
+
+Batch_idx 2
+
+Loss: 3756.4904108685478
+
+Batch_idx 3
+
+Loss: 3589.1023304701152
+
+Batch_idx 4
+
+Loss: 3494.731830734733
+
+Batch_idx 5
+
+Loss: 3718.0924320404833
+
+Batch_idx 6
+
+Loss: 3546.18539797031
+
+Batch_idx 7
+
+Loss: 3762.6858665266564
+
+Batch_idx 8
+
+Loss: 381.61946475978414
+
+Epoch [10/10] Loss: 0.3624
+
+Emb: <class 'numpy.ndarray'>
+
+Embeddings shape: (400001, 300)
+
+Emb: <class 'numpy.ndarray'>
+
+Embeddings shape: (400001, 300)
+
+Pairs without paths: 95644 , all dataset: 95644
+
+Batch_idx 0
+
+Loss: 51.908825252831456
+
+Batch_idx 100
+
+Loss: 2.264779510425122
+
+Batch_idx 200
+
+Loss: 18.65618643052442
+
+Batch_idx 300
+
+Loss: 9.445266577626239
+
+Batch_idx 400
+
+Loss: 10.933753448257196
+
+Batch_idx 500
+
+Loss: 10.319179062105121
+
+Batch_idx 600
+
+Loss: 15.819295762662268
+
+Batch_idx 700
+
+Loss: 6.8408297740951225
+
+Batch_idx 800
+
+Loss: 5.450016836028669
+
+Batch_idx 900
+
+Loss: 5.49047498129257
+
+Batch_idx 1000
+
+Loss: 14.59645721536421
+
+Batch_idx 1100
+
+Loss: 14.147298344835392
+
+Batch_idx 1200
+
+Loss: 6.258616239869223
+
+Batch_idx 1300
+
+Loss: 29.22817280936016
+
+Batch_idx 1400
+
+Loss: 9.54373238104596
+
+Batch_idx 1500
+
+Loss: 13.723609193605817
+
+Batch_idx 1600
+
+Loss: 18.216123443190778
+
+Batch_idx 1700
+
+Loss: 10.394845794967262
+
+Batch_idx 1800
+
+Loss: 5.94766264123448
+
+Batch_idx 1900
+
+Loss: 7.3022838226802955
+
+Batch_idx 2000
+
+Loss: 15.140315667522568
+
+Batch_idx 2100
+
+Loss: 9.466384769922009
+
+Batch_idx 2200
+
+Loss: 9.858077248349673
+
+Batch_idx 2300
+
+Loss: 9.37513050096061
+
+Batch_idx 2400
+
+Loss: 9.760050252576645
+
+Batch_idx 2500
+
+Loss: 14.25086990200997
+
+Epoch [1/10] Loss: 0.3687
+
+Batch_idx 0
+
+Loss: 13.50832528851761
+
+Batch_idx 100
+
+Loss: 14.494883539492715
+
+Batch_idx 200
+
+Loss: 11.224176993831515
+
+Batch_idx 300
+
+Loss: 16.204247193719766
+
+Batch_idx 400
+
+Loss: 6.180069664549966
+
+Batch_idx 500
+
+Loss: 13.288837347417463
+
+Batch_idx 600
+
+Loss: 13.165508161482704
+
+Batch_idx 700
+
+Loss: 13.152965280741295
+
+Batch_idx 800
+
+Loss: 2.48409416930163
+
+Batch_idx 900
+
+Loss: 13.408552874921668
+
+Batch_idx 1000
+
+Loss: 10.44138987549102
+
+Batch_idx 1100
+
+Loss: 10.340007047742638
+
+Batch_idx 1200
+
+Loss: 10.741851453004468
+
+Batch_idx 1300
+
+Loss: 6.205904750197266
+
+Batch_idx 1400
+
+Loss: 6.018922903018922
+
+Batch_idx 1500
+
+Loss: 25.16261136858825
+
+Batch_idx 1600
+
+Loss: 9.744862248615982
+
+Batch_idx 1700
+
+Loss: 9.908022839111219

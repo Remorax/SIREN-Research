@@ -1,5 +1,5 @@
 from bsddb3 import btopen
-import bcolz, pickle, torch
+import bcolz, pickle, torch, os
 import numpy as np
 from math import ceil
 from itertools import count
@@ -57,11 +57,15 @@ def load_embeddings_from_disk():
         word2idx = pickle.load(open(embeddings_folder + 'words_index.pkl', 'rb'))
 
         embeddings = vectors
-        print ("Emb:", type(embeddings))
+        write("Emb: " + str(type(embeddings)))
     except:
         embeddings, word2idx  = create_embeddings()
     return embeddings, word2idx
         
+def write(statement):
+    op_file = open("Logs", "a+")
+    op_file.write("\n" + statement + "\n")
+    op_file.close()
 
 def create_embeddings():
     words = ['_unk_']
@@ -77,7 +81,7 @@ def create_embeddings():
             word2idx[word] = idx
             idx += 1
     vectors = vectors.reshape((-1, EMBEDDING_DIM))
-    print ("vecsize",vectors.size)
+    write("vecsize " + str(vectors.size))
     row_norm = np.sum(np.abs(vectors)**2, axis=-1)**(1./2)
     vectors /= row_norm[:, np.newaxis]
     vectors = bcolz.carray(vectors, rootdir=embeddings_folder, mode='w')
@@ -92,14 +96,14 @@ def load_checkpoint(model, optimizer, filename='model.pt'):
     # Note: Input model & optimizer should be pre-defined.  This routine only updates their states.
     start_epoch = 0
     if os.path.isfile(filename):
-        print("=> loading checkpoint '{}'".format(filename))
+        write("=> loading checkpoint '{}'".format(filename))
         checkpoint = torch.load(filename)
         start_epoch = checkpoint['epoch']
         model.load_state_dict(checkpoint['state_dict'])
         optimizer.load_state_dict(checkpoint['optimizer'])
-        print("=> loaded checkpoint '{}' (epoch {})".format(filename, checkpoint['epoch']))
+        write("=> loaded checkpoint '{}' (epoch {})".format(filename, checkpoint['epoch']))
     else:
-        print("=> no checkpoint found at '{}'".format(filename))
+        write("=> no checkpoint found at '{}'".format(filename))
 
     return model, optimizer, start_epoch
 
@@ -112,7 +116,7 @@ relations_db = btopen(prefix + "_l2r.db", "r")
 
 embeddings, emb_indexer = load_embeddings_from_disk()
 
-print ("Embeddings shape:", embeddings.shape)
+write("Embeddings shape: " + str(embeddings.shape))
 train_dataset = {tuple(l.split("\t")[:2]): l.split("\t")[2] for l in open(train_file).read().split("\n")}
 test_dataset = {tuple(l.split("\t")[:2]): l.split("\t")[2] for l in open(test_file).read().split("\n")}
 
@@ -157,7 +161,7 @@ def parse_dataset(dataset):
     keys = [(entity_to_id(word2id_db, x), entity_to_id(word2id_db, y)) for (x, y) in dataset]
     paths = [extract_all_paths(x,y) for (x,y) in keys]
     empty = [list(dataset)[i] for i, path_list in enumerate(paths) if len(list(path_list.keys())) == 0]
-    print('Pairs without paths:', len(empty), ', all dataset:', len(dataset))
+    write('Pairs without paths: ' + str(len(empty)) + str(' , all dataset: ') + str(len(dataset)))
     embed_indices = [(emb_indexer.get(x,0), emb_indexer.get(y,0)) for (x,y) in keys]
     return embed_indices, paths
   
@@ -277,7 +281,7 @@ NUM_RELATIONS = len(mappingDict)
 HIDDEN_DIM = 60
 NUM_LAYERS = 2
 num_epochs = 10
-batch_size = 50000
+batch_size = 32
 
 dataset_size = len(y_train)
 batch_size = min(batch_size, dataset_size)
@@ -290,12 +294,11 @@ criterion = nn.NLLLoss()
 optimizer = optim.Adam(lstm.parameters(), lr=lr)
 
 loss_list = []
-
 for epoch in range(num_epochs):
     
     total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
     
-    if epoch > 0:
+    if False:
         lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
         lstm = lstm.to(device)
         for state in optimizer.state.values():
@@ -304,7 +307,8 @@ for epoch in range(num_epochs):
                     state[k] = v.to(device)
                     
     for batch_idx in range(num_batches):
-        print ("Batch_idx", batch_idx)
+        if batch_idx % 100 == 0:
+            write("Batch_idx " + str(batch_idx))
         batch_end = (batch_idx+1) * batch_size
         batch_start = batch_idx * batch_size
         batch = epoch_idx[batch_start:batch_end]
@@ -320,21 +324,20 @@ for epoch in range(num_epochs):
         # print (outputs, labels)
         loss = log_loss(outputs, torch.LongTensor(labels).to(device))
         # loss = criterion(outputs, torch.LongTensor(labels).to(device))
-        print ("Loss:", loss.item())
+        if batch_idx % 100 == 0:
+            write("Loss: " + str(loss.item()))
         # Backprop and perform Adam optimisation
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-        print ("done")
         total_loss += loss.item()
-    state = {'epoch': epoch + 1, 'state_dict': model.state_dict(),
+    state = {'epoch': epoch + 1, 'state_dict': lstm.state_dict(),
              'optimizer': optimizer.state_dict()}
     torch.save(state, model_filename)
     
     total_loss /= dataset_size
-    print('Epoch [{}/{}] Loss: {:.4f}'.format(epoch + 1, num_epochs, total_loss))
+    write('Epoch [{}/{}] Loss: {:.4f}'.format(epoch + 1, num_epochs, total_loss))
     loss_list.append(loss.item())
-
 lstm.eval()
 with torch.no_grad():
     predictedLabels = []

@@ -1,0 +1,15 @@
+==========================================
+SLURM_JOB_ID = 125018
+SLURM_NODELIST = gnode24
+SLURM_JOB_GPUS = 0,1,2,3
+==========================================
+main.py:256: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  probabilities = self.softmax(self.W(path_embedding_cat))
+Traceback (most recent call last):
+  File "main.py", line 331, in <module>
+    loss.backward()
+  File "/home/vivek.iyer/.local/lib/python3.5/site-packages/torch/tensor.py", line 195, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/vivek.iyer/.local/lib/python3.5/site-packages/torch/autograd/__init__.py", line 99, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+RuntimeError: CUDA out of memory. Tried to allocate 916.00 MiB (GPU 0; 10.92 GiB total capacity; 9.45 GiB already allocated; 917.00 MiB free; 9.45 GiB reserved in total by PyTorch)

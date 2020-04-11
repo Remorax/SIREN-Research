@@ -1,0 +1,8 @@
+==========================================
+SLURM_JOB_ID = 124773
+SLURM_NODELIST = gnode24
+SLURM_JOB_GPUS = 0,1,2,3
+==========================================
+ModuleCmd_Load.c(208):ERROR:105: Unable to locate a modulefile for 'cuda/8.0'
+ModuleCmd_Load.c(208):ERROR:105: Unable to locate a modulefile for 'cudnn/7-cuda-8.0'
+slurmstepd: error: *** JOB 124773 ON gnode24 CANCELLED AT 2020-04-11T13:46:18 ***
