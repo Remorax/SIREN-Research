@@ -77,17 +77,29 @@ def indexWordPairs(parsed_file):
     word_occurence_map = {}
 
     with open(parsed_file) as inp:
+        prev_line, prev_count = '', 0
         for line in inp:
-            x, y, path, count = line.strip().split(' ')
-
-            key = str(x) + '_' + str(y)
-            current = path + ":" + count
-
-            if key in word_occurence_map:
-                pastkeys = word_occurence_map[key]
-                current =  pastkeys + ',' + current
-            word_occurence_map[key] = current
-
+            curr_line = "\t".join(line.strip().split("\t")[:-1])
+            if curr_line == prev_line or (not prev_line):
+                prev_count += int(line.strip().split("\t")[-1])
+            else:
+                print (curr_line)
+                x, y, path = prev_line.split('\t')
+                key = str(x) + '_' + str(y)
+                current = path + ":" + str(prev_count)
+                if key in word_occurence_map:
+                    pastkeys = word_occurence_map[key]
+                    current =  pastkeys + ',' + current
+                word_occurence_map[key] = current
+                prev_count = 1
+            prev_line = curr_line
+        x, y, path = prev_line.split('\t')
+        key = str(x) + '_' + str(y)
+        current = path + ":" + str(prev_count)
+        if key in word_occurence_map:
+            pastkeys = word_occurence_map[key]
+            current =  pastkeys + ',' + current
+        word_occurence_map[key] = current
     
     with open(paths_folder + "/" + prefix + '_word_occurence_map.pkl', 'wb') as handle:
         pickle.dump(word_occurence_map, handle, protocol=pickle.HIGHEST_PROTOCOL)
