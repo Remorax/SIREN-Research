@@ -2,3 +2,4 @@ junk/
 src/1
 src/core
 *.pt
+src/slurm*
