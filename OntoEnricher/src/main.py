@@ -14,12 +14,13 @@ import torch.nn as nn
 # embeddings_folder = "../junk/Glove.dat"
 # embeddings_file = "/Users/vivek/SIREN-Research/Archive-LSTM/glove.6B/glove.6B.300d.txt"
 
-prefix = "/home/hduser_/security"
+prefix = "/home/vivek.iyer/security"
 train_file = "../files/dataset/train.tsv"
 test_file = "../files/dataset/test.tsv"
 output_folder = "../junk/Output/"
 embeddings_folder = "../junk/Glove.dat"
-embeddings_file = "/home/hduser_/glove.6B.300d.txt"
+embeddings_file = "/home/vivek.iyer/glove.6B.300d.txt"
+model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/model.pt"
 
 POS_DIM = 4
 DEP_DIM = 5
@@ -56,8 +57,9 @@ def load_embeddings_from_disk():
         word2idx = pickle.load(open(embeddings_folder + 'words_index.pkl', 'rb'))
 
         embeddings = vectors
+        print ("Emb:", type(embeddings))
     except:
-        embeddings = create_embeddings()
+        embeddings, word2idx  = create_embeddings()
     return embeddings, word2idx
         
 
@@ -75,6 +77,7 @@ def create_embeddings():
             word2idx[word] = idx
             idx += 1
     vectors = vectors.reshape((-1, EMBEDDING_DIM))
+    print ("vecsize",vectors.size)
     row_norm = np.sum(np.abs(vectors)**2, axis=-1)**(1./2)
     vectors /= row_norm[:, np.newaxis]
     vectors = bcolz.carray(vectors, rootdir=embeddings_folder, mode='w')
@@ -85,6 +88,21 @@ def create_embeddings():
     
     return vectors, word2idx
 
+def load_checkpoint(model, optimizer, filename='model.pt'):
+    # Note: Input model & optimizer should be pre-defined.  This routine only updates their states.
+    start_epoch = 0
+    if os.path.isfile(filename):
+        print("=> loading checkpoint '{}'".format(filename))
+        checkpoint = torch.load(filename)
+        start_epoch = checkpoint['epoch']
+        model.load_state_dict(checkpoint['state_dict'])
+        optimizer.load_state_dict(checkpoint['optimizer'])
+        print("=> loaded checkpoint '{}' (epoch {})".format(filename, checkpoint['epoch']))
+    else:
+        print("=> no checkpoint found at '{}'".format(filename))
+
+    return model, optimizer, start_epoch
+
 
 word2id_db = btopen(prefix + "_term_to_id.db", "r")
 id2word_db = btopen(prefix + "_id_to_term.db", "r")
@@ -94,6 +112,7 @@ relations_db = btopen(prefix + "_l2r.db", "r")
 
 embeddings, emb_indexer = load_embeddings_from_disk()
 
+print ("Embeddings shape:", embeddings.shape)
 train_dataset = {tuple(l.split("\t")[:2]): l.split("\t")[2] for l in open(train_file).read().split("\n")}
 test_dataset = {tuple(l.split("\t")[:2]): l.split("\t")[2] for l in open(test_file).read().split("\n")}
 
@@ -151,7 +170,9 @@ dataset_keys = list(train_dataset.keys()) + list(test_dataset.keys())
 dataset_vals = list(train_dataset.values()) + list(test_dataset.values())
 
 embed_indices, x = parse_dataset(dataset_keys)
-y = [i for (i,relation) in enumerate(dataset_vals)]
+mappingDict = {key: idx for (idx,key) in enumerate(list(set(dataset_vals)))}
+# print (mappingDict)
+y = [mappingDict[relation] for relation in dataset_vals]
 
 embed_indices_train, embed_indices_test = np.array(embed_indices[:len(train_dataset)]), np.array(embed_indices[len(train_dataset):len(train_dataset)+len(test_dataset)])
 x_train, x_test = np.array(x[:len(train_dataset)]), np.array(x[len(train_dataset):len(train_dataset)+len(test_dataset)])
@@ -166,11 +187,11 @@ class LSTM(nn.Module):
         
         self.hidden_dim = HIDDEN_DIM + 2 * EMBEDDING_DIM
         self.input_dim = POS_DIM + DEP_DIM + EMBEDDING_DIM + DIR_DIM
-        self.W = nn.Linear(NUM_RELATIONS, self.input_dim)
+        self.W = nn.Linear(self.hidden_dim, NUM_RELATIONS)
         self.dropout_layer = nn.Dropout(p=dropout)
-        self.softmax = nn.LogSoftmax()
+        self.softmax = nn.Softmax()
         
-        self.word_embeddings = nn.Embedding(len(embeddings), EMBEDDING_DIM)
+        self.word_embeddings = nn.Embedding(len(emb_indexer), EMBEDDING_DIM)
         self.word_embeddings.load_state_dict({'weight': torch.from_numpy(np.array(embeddings))})
         self.word_embeddings.require_grad = False
         
@@ -178,11 +199,14 @@ class LSTM(nn.Module):
         self.dep_embeddings = nn.Embedding(len(dep_indexer), DEP_DIM)
         self.dir_embeddings = nn.Embedding(len(dir_indexer), DIR_DIM)
         
-        self.lstm = nn.LSTM(self.input_dim, self.hidden_dim, NUM_LAYERS)
+        nn.init.xavier_uniform_(self.pos_embeddings.weight)
+        nn.init.xavier_uniform_(self.dep_embeddings.weight)
+        nn.init.xavier_uniform_(self.dir_embeddings.weight)
+
+        self.lstm = nn.LSTM(self.input_dim, HIDDEN_DIM, NUM_LAYERS)
     
     def normalize_embeddings(self, embeds):
-        row_norm = torch.sum(torch.abs(embeds)**2, axis=-1)**(1./2)
-        embeds /= row_norm.view(-1,1)
+        
         embed = torch.flatten(self.dropout_layer(embeds))
         return embed
 
@@ -190,45 +214,70 @@ class LSTM(nn.Module):
         path, count = elem
         if path in self.cache:
             return self.cache[path] * count
-        lstm_inp = torch.Tensor([])
+        lstm_inp = torch.Tensor([]).to(device)
         for edge in path:
-            inputs = [torch.Tensor([[el]]).long() for el in edge]
-            word_embed = self.normalize_embeddings(self.word_embeddings(inputs[0]))
-            pos_embed = self.normalize_embeddings(self.pos_embeddings(inputs[1]))
-            dep_embed = self.normalize_embeddings(self.dep_embeddings(inputs[2]))
-            dir_embed = self.normalize_embeddings(self.dir_embeddings(inputs[3]))
+            word_embed = self.normalize_embeddings(self.word_embeddings(edge[0]))
+            pos_embed = self.normalize_embeddings(self.pos_embeddings(edge[1]))
+            dep_embed = self.normalize_embeddings(self.dep_embeddings(edge[2]))
+            dir_embed = self.normalize_embeddings(self.dir_embeddings(edge[3]))
+            # print (word_embed.shape, pos_embed.shape, dep_embed.shape, dir_embed.shape)
             embeds = torch.cat((word_embed, pos_embed, dep_embed, dir_embed)).view(1, -1)
             lstm_inp = torch.cat((lstm_inp, embeds), 0)
 
         lstm_inp = lstm_inp.view(-1, 1, self.input_dim)
-        print (lstm_inp.shape)
+        # print ("LSTM inp:", lstm_inp.shape)
         output, _ = self.lstm(lstm_inp)
         self.cache[path] = output
-        print (output.shape)
+        # print ("LSTM op:", output.shape)
         return output * count
     
     def forward(self, data, emb_indexer):
-        for el in data:
-            if not el:
-                el[NULL_PATH] = 1
-        print ("Data: ", data.shape, emb_indexer.shape)
-        num_paths = [sum(list(paths.values())) for paths in data]
-        print ("Number of paths: ", num_paths)
-        for paths in data:
-            for path in paths.items():
-                toself.embed_path(path)
-        path_embeddings = np.array([np.sum([self.embed_path(path) for path in paths.items()]) for paths in data])
-        #print ("Path Embeddings: ", path_embeddings)
         
-        h = np.divide(path_embeddings, num_paths)
-        print (h.shape)
-        h = [np.concatenate((self.word_embeddings(emb[0]), h[i], self.word_embeddings(emb[1]))) for i,emb in enumerate(emb_indexer)]
-        return self.softmax(self.W(h))
+        # print ("Data: ", data.shape, emb_indexer.shape)
+        h = torch.Tensor([]).to(device)
+        idx = 0
+        for paths in data:
+            paths_embeds = torch.Tensor([]).to(device)
+            # print (paths)
+            for path in paths.items():
+                paths_embeds = torch.cat((paths_embeds, self.embed_path(path).view(1,-1)), 0)
+                # print ("paths_embeds:", paths_embeds.shape)
+            path_embedding = torch.div(torch.sum(paths_embeds, 0), sum(list(paths.values())))
+            # print (emb_indexer[idx][0].shape, emb_indexer[idx][1].shape, emb_indexer[idx])
+            x = self.word_embeddings(torch.LongTensor([[emb_indexer[idx][0]]]).to(device)).view(EMBEDDING_DIM)
+            y = self.word_embeddings(torch.LongTensor([[emb_indexer[idx][1]]]).to(device)).view(EMBEDDING_DIM)
+            # print (x.shape, path_embedding.shape, y.shape)
+            path_embedding_cat = torch.cat((x, path_embedding, y))
+            # print ("Path embedding after cat with embeddings: ", path_embedding.shape)
+            probabilities = self.softmax(self.W(path_embedding_cat))
+            # print ("Probabilities: ", probabilities)
+            h = torch.cat((h, probabilities.view(1,-1)), 0)
+            idx += 1
+         
+        # print ("h shape: ", h.shape)
+        return h
 
+def log_loss(output, target):
+    prob_losses = torch.Tensor([]).double().to(device)
+    for i,batch in enumerate(output):
+        # print (i, batch)
+        log_prob = -1 * torch.log(batch[target[i]])
+        # print (log_prob, log_prob.shape)
+        prob_losses = torch.cat((prob_losses, torch.unsqueeze(log_prob, 0)), 0)
+    # print (prob_losses, prob_losses.shape)
+    return torch.sum(prob_losses)
+
+def tensorifyTuple(tup):
+    return tuple([tuple([torch.LongTensor([[e]]).to(device) for e in edge]) for edge in tup])
+    
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
+NUM_RELATIONS = len(mappingDict)
+# print ("num_relations:", NUM_RELATIONS)
 HIDDEN_DIM = 60
 NUM_LAYERS = 2
-num_epochs = 3
-batch_size = 10
+num_epochs = 10
+batch_size = 50000
 
 dataset_size = len(y_train)
 batch_size = min(batch_size, dataset_size)
@@ -236,32 +285,52 @@ num_batches = int(ceil(dataset_size/batch_size))
 
 lr = 0.001
 dropout = 0.3
-lstm = LSTM()
+lstm = nn.DataParallel(LSTM()).to(device)
 criterion = nn.NLLLoss()
 optimizer = optim.Adam(lstm.parameters(), lr=lr)
+
+loss_list = []
 
 for epoch in range(num_epochs):
     
     total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
     
+    if epoch > 0:
+        lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
+        lstm = lstm.to(device)
+        for state in optimizer.state.values():
+            for k, v in state.items():
+                if isinstance(v, torch.Tensor):
+                    state[k] = v.to(device)
+                    
     for batch_idx in range(num_batches):
+        print ("Batch_idx", batch_idx)
         batch_end = (batch_idx+1) * batch_size
         batch_start = batch_idx * batch_size
         batch = epoch_idx[batch_start:batch_end]
         
-        data, labels, embeddings_idx = x_train[batch], y_train[batch], embed_indices_train[batch]
+        # print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
+        
+        data = [{NULL_PATH: 1} if not el else el for el in x_train[batch]]
+        data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
+        labels, embeddings_idx = y_train[batch], embed_indices_train[batch]
         
         # Run the forward pass
         outputs = lstm(data, embeddings_idx)
-        loss = criterion(outputs, labels)
-
+        # print (outputs, labels)
+        loss = log_loss(outputs, torch.LongTensor(labels).to(device))
+        # loss = criterion(outputs, torch.LongTensor(labels).to(device))
+        print ("Loss:", loss.item())
         # Backprop and perform Adam optimisation
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-
+        print ("done")
         total_loss += loss.item()
-
+    state = {'epoch': epoch + 1, 'state_dict': model.state_dict(),
+             'optimizer': optimizer.state_dict()}
+    torch.save(state, model_filename)
+    
     total_loss /= dataset_size
     print('Epoch [{}/{}] Loss: {:.4f}'.format(epoch + 1, num_epochs, total_loss))
     loss_list.append(loss.item())
