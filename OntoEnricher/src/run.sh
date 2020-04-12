@@ -38,7 +38,14 @@ for maxlen in "${maxlens[@]}"
 do
 	if [[ $maxlen -eq 4 ]]
 	then
-		true
+		((index++))
+		for n in "${path_thresholds[@]}"
+		do
+			echo -e "\t\tPath threshold: "$n
+			paths_folder=$folder$prefix"_threshold_"$n"_"$maxlen
+			python3 path_terms_indexer.py $paths_folder $paths_folder"/triplet_sorted" $prefix 3;
+			rm $paths_folder"/triplet_sorted"
+		done
 	else
 
 		((index++))
@@ -61,73 +68,74 @@ do
 		rm $corpus"_paths_"*"_"$maxlen
 
 		echo -e "\tStep: Filtering common paths..."
+		
+		for n in "${path_thresholds[@]}"
+		do
+			echo -e "\t\tPath threshold: "$n
+			mkdir $folder$prefix"_threshold_"$n"_"$maxlen
+			awk -F "\t" '{i[$1]+=$2} END{for(x in i){ if (i[x] >= '$n') print x } }' $paths > $folder$prefix"_threshold_"$n"_"$maxlen'/filtered_paths' 
+		done
+		rm $paths
+
+		echo -e "\tStep: Creating word files..."
+		awk -F$'\t' '{if (a[$1] == 0) {a[$1] = -1; print $1}}' $parsed_final > $folder"xterms_"$maxlen & PIDLEFT=$!
+		awk -F$'\t' '{if (a[$2] == 0) {a[$2] = -1; print $2}}' $parsed_final > $folder"yterms_"$maxlen & PIDRIGHT=$!
+
+		wait $PIDLEFT
+		wait $PIDRIGHT
+		cat $folder"xterms_"$maxlen $folder"yterms_"$maxlen | sort -u --parallel=128 > $folder"terms_"$maxlen;
+		rm $folder"xterms_"$maxlen $folder"yterms_"$maxlen $parsed_final
+
+		echo -e "\tStep: Creating term and path db files..."
+		for n in "${path_thresholds[@]}"
+		do
+			paths_folder=$folder$prefix"_threshold_"$n"_"$maxlen
+			( python3 path_terms_indexer.py $paths_folder $folder"terms_"$maxlen $prefix 1; ) &
+		done
+		wait
+
+		rm $folder"terms_"$maxlen 
+		rm $folder$prefix"_threshold_"*"_"$maxlen"/"filtered_paths
+
+		echo -e "\tStep: Processing triplets..."
+	
+		for n in "${path_thresholds[@]}"
+		do
+			echo -e "\t\tPath threshold: "$n
+
+			paths_folder=$folder$prefix"_threshold_"$n"_"$maxlen
+
+			# Creating an ID file for the parsed triplets
+			for x in "${parts[@]}"
+			do
+				parsed_final_part=$corpus"_split_"$x"_"$maxlen"_parsed"
+				( python3 path_terms_indexer.py $paths_folder $parsed_final_part $prefix 2; ) &
+			done
+			wait
+
+			# Counting triplet IDs to calculate number of occurences
+			for x in "${parts[@]}"
+			do
+				triplet_part_file=$paths_folder"/triplet_id_"$x
+				triplet_count_file=$paths_folder"/triplet_count_"$x
+				( awk -F "\t" '{relations[$0]++} END{for(relation in relations){print relation"\t"relations[relation]}}' $triplet_part_file > $triplet_count_file ) &
+			done
+			wait
+
+			rm $paths_folder"/triplet_id_"*
+
+			cat $paths_folder"/triplet_count_"* > $paths_folder"/triplet_count";
+
+			rm $paths_folder"/triplet_count_"*
+			# Creating a triplet occurence matrix
+			sort -t$'\t' -k1 -n --parallel=128 $paths_folder"/triplet_count" > $paths_folder"/triplet_sorted"
+			rm $paths_folder"/triplet_count"
+
+			python3 path_terms_indexer.py $paths_folder $paths_folder"/triplet_sorted" $prefix 3;
+
+			rm $paths_folder"/triplet_sorted"
+		done
 	fi
-	for n in "${path_thresholds[@]}"
-	do
-		echo -e "\t\tPath threshold: "$n
-		mkdir $folder$prefix"_threshold_"$n"_"$maxlen
-		awk -F "\t" '{i[$1]+=$2} END{for(x in i){ if (i[x] >= '$n') print x } }' $paths > $folder$prefix"_threshold_"$n"_"$maxlen'/filtered_paths' 
-	done
-	rm $paths
-
-	echo -e "\tStep: Creating word files..."
-	awk -F$'\t' '{if (a[$1] == 0) {a[$1] = -1; print $1}}' $parsed_final > $folder"xterms_"$maxlen & PIDLEFT=$!
-	awk -F$'\t' '{if (a[$2] == 0) {a[$2] = -1; print $2}}' $parsed_final > $folder"yterms_"$maxlen & PIDRIGHT=$!
-
-	wait $PIDLEFT
-	wait $PIDRIGHT
-	cat $folder"xterms_"$maxlen $folder"yterms_"$maxlen | sort -u --parallel=128 > $folder"terms_"$maxlen;
-	rm $folder"xterms_"$maxlen $folder"yterms_"$maxlen $parsed_final
-
-	echo -e "\tStep: Creating term and path db files..."
-	for n in "${path_thresholds[@]}"
-	do
-		paths_folder=$folder$prefix"_threshold_"$n"_"$maxlen
-		( python3 path_terms_indexer.py $paths_folder $folder"terms_"$maxlen $prefix 1; ) &
-	done
-	wait
-
-	rm $folder"terms_"$maxlen 
-	rm $folder$prefix"_threshold_"*"_"$maxlen"/"filtered_paths
-
-	echo -e "\tStep: Processing triplets..."
-	for n in "${path_thresholds[@]}"
-	do
-		echo -e "\t\tPath threshold: "$n
-
-		paths_folder=$folder$prefix"_threshold_"$n"_"$maxlen
-
-		# Creating an ID file for the parsed triplets
-		for x in "${parts[@]}"
-		do
-			parsed_final_part=$corpus"_split_"$x"_"$maxlen"_parsed"
-			( python3 path_terms_indexer.py $paths_folder $parsed_final_part $prefix 2; ) &
-		done
-		wait
-
-		# Counting triplet IDs to calculate number of occurences
-		for x in "${parts[@]}"
-		do
-			triplet_part_file=$paths_folder"/triplet_id_"$x
-			triplet_count_file=$paths_folder"/triplet_count_"$x
-			( awk -F "\t" '{relations[$0]++} END{for(relation in relations){print relation"\t"relations[relation]}}' $triplet_part_file > $triplet_count_file ) &
-		done
-		wait
-
-		rm $paths_folder"/triplet_id_"*
-
-		cat $paths_folder"/triplet_count_"* > $paths_folder"/triplet_count";
-
-		rm $paths_folder"/triplet_count_"*
-		# Creating a triplet occurence matrix
-		sort -t$'\t' -k1 -n --parallel=128 $paths_folder"/triplet_count" > $paths_folder"/triplet_sorted"
-		rm $paths_folder"/triplet_count"
-
-		python3 path_terms_indexer.py $paths_folder $paths_folder"/triplet_sorted" $prefix 3;
-
-		rm $paths_folder"/triplet_sorted"
-	done
-
 done
 
 rm $corpus"_split_"*
