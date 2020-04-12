@@ -83,7 +83,6 @@ def indexWordPairs(parsed_file):
             if curr_line == prev_line or (not prev_line):
                 prev_count += int(line.strip().split("\t")[-1])
             else:
-                print (curr_line)
                 x, y, path = prev_line.split('\t')
                 key = str(x) + '_' + str(y)
                 current = path + ":" + str(prev_count)

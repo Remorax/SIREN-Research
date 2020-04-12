@@ -36,26 +36,32 @@ echo "Stage 3/3: The main stage: tuning of parameters..."
 index=0
 for maxlen in "${maxlens[@]}"
 do
-	((index++))
+	if [[ $maxlen -eq 4 ]]
+	then
+		true
+	else
+
+		((index++))
 	
-	echo -e "\t"$((index*100/${#maxlens[@]}))"% done: Maximum Path Length: "$maxlen
-	parsed_final=$corpus"_"$maxlen"_parsed"
-	cat $corpus"_split_"*"_"$maxlen"_parsed" > $parsed_final
+		echo -e "\t"$((index*100/${#maxlens[@]}))"% done: Maximum Path Length: "$maxlen
+		parsed_final=$corpus"_"$maxlen"_parsed"
+		cat $corpus"_split_"*"_"$maxlen"_parsed" > $parsed_final
 
-	echo -e "\tStep: Counting relations..."
-	for x in "${parts[@]}"
-	do
-		parsed_final_part=$corpus"_split_"$x"_"$maxlen"_parsed"
-		( awk -F "\t" '{relations[$3]++} END{for(relation in relations){print relation"\t"relations[relation]}}' $parsed_final_part > $corpus"_paths_"$x"_"$maxlen ) &
-	done
-	wait
+		echo -e "\tStep: Counting relations..."
+		for x in "${parts[@]}"
+		do
+			parsed_final_part=$corpus"_split_"$x"_"$maxlen"_parsed"
+			( awk -F "\t" '{relations[$3]++} END{for(relation in relations){print relation"\t"relations[relation]}}' $parsed_final_part > $corpus"_paths_"$x"_"$maxlen ) &
+		done
+		wait
 	
 
-	paths=$folder"all_paths_"$maxlen
-	cat $corpus"_paths_"*"_"$maxlen > $paths
-	rm $corpus"_paths_"*"_"$maxlen
+		paths=$folder"all_paths_"$maxlen
+		cat $corpus"_paths_"*"_"$maxlen > $paths
+		rm $corpus"_paths_"*"_"$maxlen
 
-	echo -e "\tStep: Filtering common paths..."
+		echo -e "\tStep: Filtering common paths..."
+	fi
 	for n in "${path_thresholds[@]}"
 	do
 		echo -e "\t\tPath threshold: "$n
@@ -113,15 +119,13 @@ do
 		cat $paths_folder"/triplet_count_"* > $paths_folder"/triplet_count";
 
 		rm $paths_folder"/triplet_count_"*
-		exit 1
 		# Creating a triplet occurence matrix
-		gawk -F $'\t' '{ matrix[$1][$2][$3]+=$4; } END{for (x in matrix) {for (y in matrix[x]) {for (path in matrix[x][y]) {print x, y, path, matrix[x][y][path]}}}}' $paths_folder"/triplet_count" > $paths_folder"/final_count"
 		sort -t$'\t' -k1 -n --parallel=128 $paths_folder"/triplet_count" > $paths_folder"/triplet_sorted"
 		rm $paths_folder"/triplet_count"
 
 		python3 path_terms_indexer.py $paths_folder $paths_folder"/triplet_sorted" $prefix 3;
 
-		rm $paths_folder"/final_count"
+		rm $paths_folder"/triplet_sorted"
 	done
 
 done
