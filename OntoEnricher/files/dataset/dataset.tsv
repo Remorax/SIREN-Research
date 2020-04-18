@@ -82809,7 +82809,8 @@ frog	pristimantis obmutescens	none
 database	diseases database	hyponym
 data transmission	transfer	hypernym
 airport	kuopio airport	none
-organization	society of the friends of truth	nonediplomat	john e. herbst	none
+organization	society of the friends of truth	none
+diplomat	john e. herbst	none
 critical path, inc.	provider	none
 diplomat	john mark hawkins	none
 airport	crescent lake state airport	none
