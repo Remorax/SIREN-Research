@@ -145,15 +145,17 @@ def parse_tuple(tup):
     x_word = id_to_entity(id2word_db, x) if x!=-1 else "X"
     y_word = id_to_entity(id2word_db, y) if y!=-1 else "Y"
     path_count_dict = { id_to_entity(id2path_db, path).replace("X/", x_word+"/").replace("Y/", y_word+"/") : freq for (path, freq) in paths }
-    return (idx, tup, path_count_dict)
+    return (idx, tup[1], path_count_dict)
 
 def parse_dataset(dataset):
     print ("Entering parse dataset")
     parsed_dicts = []
     print ("starting multiprocess")
     with concurrent.futures.ProcessPoolExecutor() as executor:
-        for dic in executor.map(parse_tuple, enumerate(dataset)):
-            parsed_dicts.append(dic)
+        for batch_idx in range(0, len(dataset), 1000):
+            batch = dataset[batch_idx: (batch_idx + 1000)]
+            for dic in executor.map(parse_tuple, zip(list(range(batch_idx, batch_idx+1000)), batch)):
+                parsed_dicts.append(dic)
     print ("Done. Sorting...")
     parsed_dicts = sorted(parsed_dicts, key=lambda x:int(x[0]))
     print ("Check order: ", parsed_dicts[:5], dataset[:5])
