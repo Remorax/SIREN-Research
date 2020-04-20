@@ -1,5 +1,6 @@
 from bsddb3 import btopen
 import bcolz, pickle, os, sys, shelve
+import concurrent.futures
 import numpy as np
 from math import ceil
 from itertools import count
@@ -137,24 +138,28 @@ def parse_path(path):
             return None
     return tuple(parsed_path)
 
-def extract_all_paths(x,y):
-
+def parse_tuple(idx, tup):
+    x, y = entity_to_id(word2id_db, tup[0]), entity_to_id(word2id_db, tup[1])
     paths = list(extract_paths(relations_db,x,y).items()) + list(extract_paths(relations_db,y,x).items())
-    print ("extracted paths xy and yx...")
     x_word = id_to_entity(id2word_db, x) if x!=-1 else "X"
     y_word = id_to_entity(id2word_db, y) if y!=-1 else "Y"
     path_count_dict = { id_to_entity(id2path_db, path).replace("X/", x_word+"/").replace("Y/", y_word+"/") : freq for (path, freq) in paths }
-    print ("bug fixing for xy and yx")
-    path_count_dict = { parse_path(path) : path_count_dict[path] for path in path_count_dict }
-    print ("counted paths")
-
-    return { path : path_count_dict[path] for path in path_count_dict if path}
+    return (idx, tup, path_count_dict)
 
 def parse_dataset(dataset):
     print ("Entering parse dataset")
-    keys = [(entity_to_id(word2id_db, x), entity_to_id(word2id_db, y)) for (x, y) in dataset]
-    print ("Extracting all paths...")
-    paths = [extract_all_paths(x,y) for (x,y) in keys]
+    parsed_dicts = []
+    print ("starting multiprocess")
+    with concurrent.futures.ProcessPoolExecutor() as executor:
+        for dic in executor.map(parse_tuple, enumerate(dataset)):
+            parsed_dicts.append(dic)
+    print ("Done. Sorting...")
+    parsed_dicts = sorted(parsed_dicts, key=lambda x:int(x[0]))
+    print ("Check order: ", parsed_dicts[:5], dataset[:5])
+    parsed_dicts = [el[-1] for el in parsed_dicts]
+    print ("Parsing path...")
+    parsed_dicts = [{ parse_path(path) : path_count_dict[path] for path in path_count_dict } for path_count_dict in parsed_dicts]
+    paths = [{ path : path_count_dict[path] for path in path_count_dict if path} for path_count_dict in parsed_dicts]
     empty = [list(dataset)[i] for i, path_list in enumerate(paths) if len(list(path_list.keys())) == 0]
     print('Pairs without paths:', len(empty), ', all dataset:', len(dataset))
     embed_indices = [(emb_indexer.get(x,0), emb_indexer.get(y,0)) for (x,y) in keys]
