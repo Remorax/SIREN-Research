@@ -140,19 +140,25 @@ def parse_path(path):
 def extract_all_paths(x,y):
 
     paths = list(extract_paths(relations_db,x,y).items()) + list(extract_paths(relations_db,y,x).items())
+    print ("extracted paths xy and yx...")
     x_word = id_to_entity(id2word_db, x) if x!=-1 else "X"
     y_word = id_to_entity(id2word_db, y) if y!=-1 else "Y"
     path_count_dict = { id_to_entity(id2path_db, path).replace("X/", x_word+"/").replace("Y/", y_word+"/") : freq for (path, freq) in paths }
+    print ("bug fixing for xy and yx")
     path_count_dict = { parse_path(path) : path_count_dict[path] for path in path_count_dict }
+    print ("counted paths")
 
     return { path : path_count_dict[path] for path in path_count_dict if path}
 
 def parse_dataset(dataset):
+    print ("Entering parse dataset")
     keys = [(entity_to_id(word2id_db, x), entity_to_id(word2id_db, y)) for (x, y) in dataset]
+    print ("Extracting all paths...")
     paths = [extract_all_paths(x,y) for (x,y) in keys]
     empty = [list(dataset)[i] for i, path_list in enumerate(paths) if len(list(path_list.keys())) == 0]
     print('Pairs without paths:', len(empty), ', all dataset:', len(dataset))
     embed_indices = [(emb_indexer.get(x,0), emb_indexer.get(y,0)) for (x,y) in keys]
+    print ("emb indices done")
     return embed_indices, paths
 
 pos_indexer, dep_indexer, dir_indexer = defaultdict(count(0).__next__), defaultdict(count(0).__next__), defaultdict(count(0).__next__)
@@ -168,7 +174,7 @@ it = inp_file.split("_")[-1]
 op_file = "../junk/Files/parsed_dataset_parts/parsed_dataset_" + str(it)
 
 f = open(op_file, "wb+")
-pickle.dump([embed_indices, x, y], f)
+pickle.dump([success, failed, embed_indices, x, y], f)
 f.close()
 
 print ("Parsed",inp_file) 
