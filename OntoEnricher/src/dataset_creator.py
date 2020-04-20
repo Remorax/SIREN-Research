@@ -1,5 +1,5 @@
 from bsddb3 import btopen
-import bcolz, pickle, os, shelve
+import bcolz, pickle, os, sys, shelve
 import numpy as np
 from math import ceil
 from itertools import count
@@ -98,7 +98,14 @@ relations_db = shelve.open(prefix + "_relations_map.db", "r")
 
 embeddings, emb_indexer = load_embeddings_from_disk()
 
-train_dataset = {tuple(l.split("\t")[:2]): l.split("\t")[2] for l in open(inp_file).read().split("\n")}
+train_dataset = {}
+for l in open(inp_file).read().split("\n"):
+    try:
+        if l:
+            train_dataset[tuple(l.split("\t")[:2])] = l.split("\t")[2] 
+    except:
+        print (l)
+        raise
 
 arrow_heads = {">": "up", "<":"down"}
 
@@ -158,8 +165,10 @@ embed_indices, x = parse_dataset(dataset_keys)
 y = [i for (i,relation) in enumerate(dataset_vals)]
 
 it = inp_file.split("_")[-1]
-op_file = "parsed_dataset_" + str(it)
+op_file = "../junk/Files/parsed_dataset_parts/parsed_dataset_" + str(it)
 
-f = open(op_file, "w+"))
+f = open(op_file, "wb+")
 pickle.dump([embed_indices, x, y], f)
 f.close()
+
+print ("Parsed",inp_file) 
