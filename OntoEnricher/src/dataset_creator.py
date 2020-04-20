@@ -140,7 +140,7 @@ def parse_path(path):
 
 def parse_tuple(tup):
     idx = tup[0]
-    x, y = entity_to_id(word2id_db, tup[1]), entity_to_id(word2id_db, tup[2])
+    x, y = entity_to_id(word2id_db, tup[1][0]), entity_to_id(word2id_db, tup[1][1])
     paths = list(extract_paths(relations_db,x,y).items()) + list(extract_paths(relations_db,y,x).items())
     x_word = id_to_entity(id2word_db, x) if x!=-1 else "X"
     y_word = id_to_entity(id2word_db, y) if y!=-1 else "Y"
