@@ -1,6 +1,6 @@
-dataset="../files/dataset/dataset.tsv"
-split -l 50 $dataset $dataset"_split_" --numeric-suffixes=1;
-array=(../files/dataset/dataset.tsv_split_*)
+dataset="../files/dataset/dataset_mini.tsv"
+split -l 50 -d  $dataset $dataset"_split_" ;
+array=(../files/dataset/dataset_mini.tsv_split_*)
 i=0
 for current in "${array[@]}";
 do
