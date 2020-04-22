@@ -154,6 +154,9 @@ def parse_dataset(dataset):
     with concurrent.futures.ProcessPoolExecutor() as executor:
         for batch_idx in range(0, len(dataset), 100):
             print ("batch_idx", batch_idx)
+            temp_file = open("temp", "wb+")
+            pickle.dump([batch_idx, parsed_dicts], temp_file)
+            temp_file.close()
             batch = dataset[batch_idx: (batch_idx + 100)]
             for dic in executor.map(parse_tuple, zip(list(range(batch_idx, batch_idx+100)), batch)):
                 parsed_dicts.append(dic)
@@ -167,7 +170,7 @@ def parse_dataset(dataset):
     empty = [list(dataset)[i] for i, path_list in enumerate(paths) if len(list(path_list.keys())) == 0]
     print('Pairs without paths:', len(empty), ', all dataset:', len(dataset))
     temp_file = open("temp", "wb+")
-    pickle.dump(paths, f)
+    pickle.dump(paths, temp_file)
     temp_file.close()
     embed_indices = [(emb_indexer.get(x,0), emb_indexer.get(y,0)) for (x,y) in dataset]
     print ("emb indices done")
