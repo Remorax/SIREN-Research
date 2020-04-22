@@ -29,8 +29,6 @@ relations = ["hypernym", "hyponym", "synonym", "none"]
 # relations = ["True", "False"]
 NUM_RELATIONS = len(relations)
 
-inp_file = sys.argv[1]
-
 def run(prefix, op_file):
     failed = []
     success = []
@@ -145,19 +143,12 @@ def run(prefix, op_file):
         x_word = id_to_entity(id2word_db, x) if x!=-1 else "X"
         y_word = id_to_entity(id2word_db, y) if y!=-1 else "Y"
         path_count_dict = { id_to_path(id2path_db, path).replace("X/", x_word+"/").replace("Y/", y_word+"/") : freq for (path, freq) in paths }
-        return (idx, tup[1], path_count_dict)
+        return path_count_dict
 
     def parse_dataset(dataset):
-        parsed_dicts = []
         print ("Parsing dataset for ", prefix)
-        with concurrent.futures.ProcessPoolExecutor() as executor:
-            for batch_idx in range(0, len(dataset), 100):
-                batch = dataset[batch_idx: (batch_idx + 100)]
-                for dic in executor.map(parse_tuple, zip(list(range(batch_idx, batch_idx+100)), batch)):
-                    parsed_dicts.append(dic)
-        print ("Parsed.")
-        parsed_dicts = sorted(parsed_dicts, key=lambda x:int(x[0]))
-        parsed_dicts = [el[-1] for el in parsed_dicts]
+        
+        parsed_dicts = [parse_tuple(tup) for tup in dataset]
         parsed_dicts = [{ parse_path(path) : path_count_dict[path] for path in path_count_dict } for path_count_dict in parsed_dicts]
         paths = [{ path : path_count_dict[path] for path in path_count_dict if path} for path_count_dict in parsed_dicts]
         empty = [list(dataset)[i] for i, path_list in enumerate(paths) if len(list(path_list.keys())) == 0]
@@ -170,7 +161,7 @@ def run(prefix, op_file):
 
     dataset_keys = list(train_dataset.keys()) + list(test_dataset.keys()) + list(test_instances.keys()) + list(test_knocked.keys())
     dataset_vals = list(train_dataset.values()) + list(test_dataset.values()) + list(test_instances.values()) + list(test_knocked.values())
-    print ("Successful hits: ", len(success), "Failed hits: ", len(failed))
+    
     embed_indices, x = parse_dataset(dataset_keys)
     y = [i for (i,relation) in enumerate(dataset_vals)]
 
@@ -180,13 +171,15 @@ def run(prefix, op_file):
     parsed_instances = (embed_indices[len(train_dataset)+len(test_dataset):len(train_dataset)+len(test_dataset)+len(test_instances)], x[len(train_dataset)+len(test_dataset):len(train_dataset)+len(test_dataset)+len(test_instances)], y[len(train_dataset)+len(test_dataset):len(train_dataset)+len(test_dataset)+len(test_instances)])
     parsed_knocked = (embed_indices[len(train_dataset)+len(test_dataset)+len(test_instances):], x[len(train_dataset)+len(test_dataset)+len(test_instances):], y[len(train_dataset)+len(test_dataset)+len(test_instances):])
     pickle.dump([parsed_train, parsed_test, parsed_instances, parsed_knocked], f)
+    print ("Successful hits: ", len(success), "Failed hits: ", len(failed))
     f.close()
 
-    print ("Parsed",inp_file) 
+    print ("Parsed",prefix) 
 
 thresholds_path = "/data/Vivek/Final/SIREN-Research/OntoEnricher/junk/Files/"
+folders = [l for l in os.listdir(thresholds_path) if l.startswith("security_threshold")]
+args = [(thresholds_path + l + "/security", "../junk/Files/parsed_dataset_parts/parsed_dataset_" + "_".join(l.split("_")[-2:])) for l in folders]
+with concurrent.futures.ProcessPoolExecutor() as executor:
+    for res in executor.map(run, args):
+        pass
 
-for l in [l for l in os.listdir(thresholds_path) if l.startswith("security_threshold")]:
-    prefix = thresholds_path + l + "/security"
-    op_file = "../junk/Files/parsed_dataset_parts/parsed_dataset_" + "_".join(l.split("_")[-2:])
-    run(prefix, op_file)
