@@ -4857,7 +4857,7 @@ computer	sds 930	none
 website	elfster	none
 title	ivăˇn hindy	none
 organization	xx (organization)	none
-software	tor (anonymity network)	instance
+software	tor (anonymity network)	hyponym
 organization	japan policy research institute	none
 consultant	john aravosis	none
 pseudonym	geki (racing driver)	none
@@ -4883,7 +4883,7 @@ guard	george feigenbaum	none
 genkernel	tool	none
 background and causes of the iranian revolution	shi	none
 airport	gurayat domestic airport	none
-software	tor (anonymity network)	instance
+software	tor (anonymity network)	hyponym
 system	inventory management software	none
 consultant	richard granger	none
 organization	heart rhythm society	none
@@ -11628,7 +11628,7 @@ title	americana master series (doc watson album)	none
 diplomat	jan arvesen	none
 diplomat	edward finch (diplomat)	none
 organization	imagination foundation	none
-netlimiter	traffic	none
+netlimiter	traffic	hypernym
 defender	vitaliy romanyuk	none
 airport	lago agrio airport	none
 duo	blue sky black death	none
