@@ -25,7 +25,7 @@ DEP_DIM = 5
 DIR_DIM = 1
 EMBEDDING_DIM = 300
 NULL_PATH = ((0, 0, 0, 0),)
-relations = ["hypernym", "hyponym", "synonym", "none"]
+relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 # relations = ["True", "False"]
 NUM_RELATIONS = len(relations)
 

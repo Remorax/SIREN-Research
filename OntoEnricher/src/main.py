@@ -1,5 +1,4 @@
-from bsddb3 import btopen
-import bcolz, pickle, torch, os
+import bcolz, pickle, torch, os, shelve
 import concurrent.futures
 import numpy as np
 from math import ceil
@@ -11,6 +10,7 @@ import tensorflow_hub as hub
 from scipy import spatial
 import torch.optim as optim
 import torch.nn as nn
+from sklearn.metrics import accuracy_score
 
 # prefix = "../junk/Files/temp_threshold_3_4/temp"
 # train_file = "../junk/train.tsv"
@@ -22,38 +22,48 @@ import torch.nn as nn
 prefix = "/home/vivek.iyer/security"
 train_file = "../files/dataset/train.tsv"
 test_file = "../files/dataset/test.tsv"
+instances_file = '../files/dataset/test_instances.tsv'
+knocked_file = '../files/dataset/test_knocked.tsv'
+use_embeddings = "../files/embeddings.pt"
 output_folder = "../junk/Output/"
 embeddings_folder = "../junk/Glove.dat"
 embeddings_file = "/home/vivek.iyer/glove.6B.300d.txt"
-model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/model.pt"
+model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt"
 
 POS_DIM = 4
 DEP_DIM = 5
 DIR_DIM = 1
 EMBEDDING_DIM = 300
 NULL_PATH = ((0, 0, 0, 0),)
-relations = ["hypernym", "hyponym", "synonym", "none"]
+relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 # relations = ["True", "False"]
 NUM_RELATIONS = len(relations)
 
 
 def id_to_entity(db, entity_id):
-    entity_id = str(entity_id).encode("utf-8")
-    return db[entity_id].decode("utf-8")
+    entity = db[str(entity_id)]    
+    return entity
+
+def id_to_path(db, entity_id):
+    entity = db[str(entity_id)]
+    entity = "/".join(["*##*".join(e.split("_", 1)) for e in entity.split("/")])
+    return entity
 
 def entity_to_id(db, entity):
-    entity = entity.encode("utf-8")
     if entity in db:
+        success.append(entity)
         return int(db[entity])
+    failed.append(entity)
     return -1
 
 def extract_paths(db, x, y):
-    key = (str(x) + '_' + str(y)).encode("utf-8")
+    key = (str(x) + '###' + str(y))
     try:
-        relation = db[key].decode("utf-8")
+        relation = db[key]
         return {int(path_count.split(":")[0]): int(path_count.split(":")[1]) for path_count in relation.split(",")}
     except Exception as e:
         return {}
+
 
 def load_embeddings_from_disk():
     try:
@@ -113,22 +123,25 @@ def load_checkpoint(model, optimizer, filename='model.pt'):
     return model, optimizer, start_epoch
 
 
-word2id_db = btopen(prefix + "_term_to_id.db", "r")
-id2word_db = btopen(prefix + "_id_to_term.db", "r")
-path2id_db = btopen(prefix + "_path_to_id.db", "r")
-id2path_db = btopen(prefix + "_id_to_path.db", "r")
-relations_db = btopen(prefix + "_l2r.db", "r")
+word2id_db = shelve.open(prefix + "_word_to_id_dict.db", 'r')
+id2word_db = shelve.open(prefix + "_id_to_word_dict.db", "r")
+path2id_db = shelve.open(prefix + "_path_to_id_dict.db", "r")
+id2path_db = shelve.open(prefix + "_id_to_path_dict.db", "r")
+relations_db = shelve.open(prefix + "_relations_map.db", "r")
 
 embeddings, emb_indexer = load_embeddings_from_disk()
 
 write("Embeddings shape: " + str(embeddings.shape))
 train_dataset = {tuple(l.split("\t")[:2]): l.split("\t")[2] for l in open(train_file).read().split("\n")}
 test_dataset = {tuple(l.split("\t")[:2]): l.split("\t")[2] for l in open(test_file).read().split("\n")}
+test_instances = {tuple(l.split("\t")[:2]): l.split("\t")[2] for l in open(instances_file).read().split("\n")}
+test_knocked = {tuple(l.split("\t")[:2]): l.split("\t")[2] for l in open(knocked_file).read().split("\n")}
+
 
 arrow_heads = {">": "up", "<":"down"}
 
 def extract_direction(edge):
-    
+
     if edge[0] == ">" or edge[0] == "<":
         direction = "start_" + arrow_heads[edge[0]]
         edge = edge[1:]
@@ -138,54 +151,63 @@ def extract_direction(edge):
     else:
         direction = ' '
     return direction, edge
-    
+
 def parse_path(path):
     parsed_path = []
-    for edge in path.split("_"):
+    for edge in path.split("*##*"):
         direction, edge = extract_direction(edge)
         if edge.split("/"):
-            embedding, pos, dependency = edge.split("/")
+            try:
+                embedding, pos, dependency = edge.split("/")
+            except:
+                print (edge, path)
+                raise
             emb_idx, pos_idx, dep_idx, dir_idx = emb_indexer.get(embedding, 0), pos_indexer[pos], dep_indexer[dependency], dir_indexer[direction]
             parsed_path.append(tuple([emb_idx, pos_idx, dep_idx, dir_idx]))
         else:
             return None
-    return tuple(parsedPath)
+    return tuple(parsed_path)
 
-
-def extract_all_paths(x,y):
-    
+def parse_tuple(tup):
+    idx = tup[0]
+    x, y = entity_to_id(word2id_db, tup[1][0]), entity_to_id(word2id_db, tup[1][1])
     paths = list(extract_paths(relations_db,x,y).items()) + list(extract_paths(relations_db,y,x).items())
     x_word = id_to_entity(id2word_db, x) if x!=-1 else "X"
     y_word = id_to_entity(id2word_db, y) if y!=-1 else "Y"
-    path_count_dict = { id_to_entity(id2path_db, path).replace("X/", x_word+"/").replace("Y/", y_word+"/") : freq for (path, freq) in paths }
-    path_count_dict = { parse_path(path) : path_count_dict[path] for path in path_count_dict }
+    path_count_dict = { id_to_path(id2path_db, path).replace("X/", x_word+"/").replace("Y/", y_word+"/") : freq for (path, freq) in paths }
+    return path_count_dict
 
-    return { path : path_count_dict[path] for path in path_count_dict if path}
-    
 def parse_dataset(dataset):
-    keys = [(entity_to_id(word2id_db, x), entity_to_id(word2id_db, y)) for (x, y) in dataset]
-    paths = [extract_all_paths(x,y) for (x,y) in keys]
+    print ("Parsing dataset for ", prefix)
+    
+    parsed_dicts = [parse_tuple(tup) for tup in dataset]
+    parsed_dicts = [{ parse_path(path) : path_count_dict[path] for path in path_count_dict } for path_count_dict in parsed_dicts]
+    paths = [{ path : path_count_dict[path] for path in path_count_dict if path} for path_count_dict in parsed_dicts]
     empty = [list(dataset)[i] for i, path_list in enumerate(paths) if len(list(path_list.keys())) == 0]
-    write('Pairs without paths: ' + str(len(empty)) + str(' , all dataset: ') + str(len(dataset)))
-    embed_indices = [(emb_indexer.get(x,0), emb_indexer.get(y,0)) for (x,y) in keys]
-    return embed_indices, paths
-  
+    embed_indices = [(emb_indexer.get(x,0), emb_indexer.get(y,0)) for (x,y) in dataset]
+    
+    return embed_indices, paths  
 torch.set_default_dtype(torch.float64)
 
 pos_indexer, dep_indexer, dir_indexer = defaultdict(count(0).__next__), defaultdict(count(0).__next__), defaultdict(count(0).__next__)
 unk_pos, unk_dep, unk_dir = pos_indexer["#UNKNOWN#"], dep_indexer["#UNKNOWN#"], dir_indexer["#UNKNOWN#"]
 
-dataset_keys = list(train_dataset.keys()) + list(test_dataset.keys())
-dataset_vals = list(train_dataset.values()) + list(test_dataset.values())
+dataset_keys = list(train_dataset.keys()) + list(test_dataset.keys()) + list(test_instances.keys()) + list(test_knocked.keys())
+dataset_vals = list(train_dataset.values()) + list(test_dataset.values()) + list(test_instances.values()) + list(test_knocked.values())
 
 embed_indices, x = parse_dataset(dataset_keys)
 mappingDict = {key: idx for (idx,key) in enumerate(list(set(dataset_vals)))}
 # print (mappingDict)
 y = [mappingDict[relation] for relation in dataset_vals]
 
-embed_indices_train, embed_indices_test = np.array(embed_indices[:len(train_dataset)]), np.array(embed_indices[len(train_dataset):len(train_dataset)+len(test_dataset)])
-x_train, x_test = np.array(x[:len(train_dataset)]), np.array(x[len(train_dataset):len(train_dataset)+len(test_dataset)])
-y_train, y_test = np.array(y[:len(train_dataset)]), np.array(y[len(train_dataset):len(train_dataset)+len(test_dataset)])
+embed_indices, x, y = np.array(embed_indices), np.array(x), np.array(y)
+f = open("parsed_op", "wb+")
+parsed_train = (embed_indices[:len(train_dataset)], x[:len(train_dataset)], y[:len(train_dataset)])
+parsed_test = (embed_indices[len(train_dataset):len(train_dataset)+len(test_dataset)], x[len(train_dataset):len(train_dataset)+len(test_dataset)], y[len(train_dataset):len(train_dataset)+len(test_dataset)])
+parsed_instances = (embed_indices[len(train_dataset)+len(test_dataset):len(train_dataset)+len(test_dataset)+len(test_instances)], x[len(train_dataset)+len(test_dataset):len(train_dataset)+len(test_dataset)+len(test_instances)], y[len(train_dataset)+len(test_dataset):len(train_dataset)+len(test_dataset)+len(test_instances)])
+parsed_knocked = (embed_indices[len(train_dataset)+len(test_dataset)+len(test_instances):], x[len(train_dataset)+len(test_dataset)+len(test_instances):], y[len(train_dataset)+len(test_dataset)+len(test_instances):])
+pickle.dump([parsed_train, parsed_test, parsed_instances, parsed_knocked], f)
+f.close()
 
 class LSTM(nn.Module):
 
@@ -288,7 +310,7 @@ NUM_LAYERS = 2
 num_epochs = 10
 batch_size = 32
 
-dataset_size = len(y_train)
+dataset_size = len(parsed_train[-1])
 batch_size = min(batch_size, dataset_size)
 num_batches = int(ceil(dataset_size/batch_size))
 
@@ -320,9 +342,9 @@ for epoch in range(num_epochs):
         
         # print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
         
-        data = [{NULL_PATH: 1} if not el else el for el in x_train[batch]]
+        data = [{NULL_PATH: 1} if not el else el for el in parsed_train[1][batch]]
         data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
-        labels, embeddings_idx = y_train[batch], embed_indices_train[batch]
+        labels, embeddings_idx = parsed_train[-1][batch], parsed_train[0][batch]
         
         # Run the forward pass
         outputs = lstm(data, embeddings_idx)
@@ -343,11 +365,41 @@ for epoch in range(num_epochs):
     total_loss /= dataset_size
     write('Epoch [{}/{}] Loss: {:.4f}'.format(epoch + 1, num_epochs, total_loss))
     loss_list.append(loss.item())
+
+def calculate_precision(true, pred):
+    true_f, pred_f = [], []
+    for l in true:
+        if l!=4:
+            true_f.append(l)
+            pred_f.append(l)
+    return accuracy_score(true_f, pred_f)
+
+def test(test_dataset, message):
+    predictedLabels, trueLabels = [], []
+    test_perm = np.random.permutation(len(test_dataset[1]))
+    for batch_idx in range(num_batches):
+        
+        batch_end = (batch_idx+1) * batch_size
+        batch_start = batch_idx * batch_size
+        batch = test_perm[batch_start:batch_end]
+
+        data = [{NULL_PATH: 1} if not el else el for el in test_dataset[1][batch]]
+        data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
+        labels, embeddings_idx = test_dataset[-1][batch], test_dataset[0][batch]
+
+        outputs = lstm(data, embeddings_idx)
+        _, predicted = torch.max(outputs.data, 1)
+
+        predictedLabels.extend(predicted)
+        trueLabels.extend(labels)
+    accuracy = accuracy_score(trueLabels, predictedLabels)
+    precision = calculate_precision(trueLabels, predictedLabels)
+    print ("\n\n{}\n\n".format(message))
+    print ("Accuracy:", accuracy, "Precision:", precision)
+
 lstm.eval()
 with torch.no_grad():
-    predictedLabels = []
-    for batch_idx in range(num_batches):
-        outputs = lstm(data)
-        print (outputs)
-        _, predicted = torch.max(outputs.data, 1)
-        predictedLabels.extend(predicted)
+    test(parsed_test, "Test Set:")
+    test(parsed_instances, "Instance Set:")
+    test(parsed_knocked, "Knocked out Set:")
+    
