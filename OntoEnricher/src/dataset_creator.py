@@ -159,9 +159,10 @@ def parse_dataset(dataset):
     parsed_dicts = []
     print ("starting multiprocess")
     with concurrent.futures.ProcessPoolExecutor() as executor:
-        for batch_idx in range(0, len(dataset), 1000):
-            batch = dataset[batch_idx: (batch_idx + 1000)]
-            for dic in executor.map(parse_tuple, zip(list(range(batch_idx, batch_idx+1000)), batch)):
+        for batch_idx in range(0, len(dataset), 100):
+            print ("batch_idx", batch_idx)
+            batch = dataset[batch_idx: (batch_idx + 100)]
+            for dic in executor.map(parse_tuple, zip(list(range(batch_idx, batch_idx+100)), batch)):
                 parsed_dicts.append(dic)
     print ("Done. Sorting...")
     parsed_dicts = sorted(parsed_dicts, key=lambda x:int(x[0]))
@@ -172,7 +173,10 @@ def parse_dataset(dataset):
     paths = [{ path : path_count_dict[path] for path in path_count_dict if path} for path_count_dict in parsed_dicts]
     empty = [list(dataset)[i] for i, path_list in enumerate(paths) if len(list(path_list.keys())) == 0]
     print('Pairs without paths:', len(empty), ', all dataset:', len(dataset))
-    embed_indices = [(emb_indexer.get(x,0), emb_indexer.get(y,0)) for (x,y) in keys]
+    temp_file = open("temp", "wb+")
+    pickle.dump(paths, f)
+    temp_file.close()
+    embed_indices = [(emb_indexer.get(x,0), emb_indexer.get(y,0)) for (x,y) in dataset]
     print ("emb indices done")
     return embed_indices, paths
 
