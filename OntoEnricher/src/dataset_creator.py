@@ -10,7 +10,10 @@ import tensorflow as tf
 import tensorflow_hub as hub
 from scipy import spatial
 
-prefix = "/data/Vivek/Final/SIREN-Research/OntoEnricher/junk/Files/security_threshold_10_10/security"
+train_file = "../files/dataset/train.tsv"
+test_file = "../files/dataset/test.tsv"
+instances_file = '../files/dataset/test_instances.tsv'
+knocked_file = '../files/dataset/test_knocked.tsv'
 output_folder = "../junk/Output/"
 embeddings_folder = "../junk/Glove.dat"
 USE_folder = "/home/vlead/USE"
@@ -28,175 +31,162 @@ NUM_RELATIONS = len(relations)
 
 inp_file = sys.argv[1]
 
-failed = []
-success = []
+def run(prefix, op_file):
+    failed = []
+    success = []
 
+    def id_to_entity(db, entity_id):
+        entity = db[str(entity_id)]    
+        return entity
 
+    def id_to_path(db, entity_id):
+        entity = db[str(entity_id)]
+        entity = "/".join(["*##*".join(e.split("_", 1)) for e in entity.split("/")])
+        return entity
 
-def id_to_entity(db, entity_id):
-    entity = db[str(entity_id)]
-    
-    return entity
+    def entity_to_id(db, entity):
+        if entity in db:
+            success.append(entity)
+            return int(db[entity])
+        failed.append(entity)
+        return -1
 
-def id_to_path(db, entity_id):
-    entity = db[str(entity_id)]
-    entity = "/".join(["*##*".join(e.split("_", 1)) for e in entity.split("/")])
-    return entity
+    def extract_paths(db, x, y):
+        key = (str(x) + '###' + str(y))
+        try:
+            relation = db[key]
+            return {int(path_count.split(":")[0]): int(path_count.split(":")[1]) for path_count in relation.split(",")}
+        except Exception as e:
+            return {}
 
-def entity_to_id(db, entity):
-    if entity in db:
-        success.append(entity)
-        return int(db[entity])
-    failed.append(entity)
-    return -1
+    def load_embeddings_from_disk():
+        try:
+            vectors = bcolz.open(embeddings_folder)[:]
+            words = pickle.load(open(embeddings_folder + 'words.pkl', 'rb'))
+            word2idx = pickle.load(open(embeddings_folder + 'words_index.pkl', 'rb'))
 
-def extract_paths(db, x, y):
-    key = (str(x) + '###' + str(y))
-    try:
-        relation = db[key]
-        return {int(path_count.split(":")[0]): int(path_count.split(":")[1]) for path_count in relation.split(",")}
-    except Exception as e:
-        return {}
+            embeddings = vectors
+        except:
+            embeddings, word2idx = create_embeddings()
+        return embeddings, word2idx
+            
 
-def load_embeddings_from_disk():
-    try:
-        vectors = bcolz.open(embeddings_folder)[:]
-        words = pickle.load(open(embeddings_folder + 'words.pkl', 'rb'))
-        word2idx = pickle.load(open(embeddings_folder + 'words_index.pkl', 'rb'))
+    def create_embeddings():
+        words = ['_unk_']
+        idx = 1
+        word2idx = {"_unk_": 0}
+        vectors = bcolz.carray(np.random.random(300), rootdir=embeddings_folder, mode='w')
+        with open(embeddings_file, 'r') as f:
+            for l in f:
+                line = l.split()
+                word, vector = line[0], line[1:]
+                words.append(word)
+                vectors.append(np.array(vector).astype(np.float))
+                word2idx[word] = idx
+                idx += 1
+        vectors = vectors.reshape((-1, EMBEDDING_DIM))
+        row_norm = np.sum(np.abs(vectors)**2, axis=-1)**(1./2)
+        vectors /= row_norm[:, np.newaxis]
+        vectors = bcolz.carray(vectors, rootdir=embeddings_folder, mode='w')
+        vectors.flush()
 
-        embeddings = vectors
-    except:
-        embeddings, word2idx = create_embeddings()
-    return embeddings, word2idx
+        pickle.dump(words, open(embeddings_folder + 'words.pkl', 'wb'))
+        pickle.dump(word2idx, open(embeddings_folder + 'words_index.pkl', 'wb'))
         
+        return vectors, word2idx
 
-def create_embeddings():
-    words = ['_unk_']
-    idx = 1
-    word2idx = {"_unk_": 0}
-    vectors = bcolz.carray(np.random.random(300), rootdir=embeddings_folder, mode='w')
-    with open(embeddings_file, 'r') as f:
-        for l in f:
-            line = l.split()
-            word, vector = line[0], line[1:]
-            words.append(word)
-            vectors.append(np.array(vector).astype(np.float))
-            word2idx[word] = idx
-            idx += 1
-    vectors = vectors.reshape((-1, EMBEDDING_DIM))
-    row_norm = np.sum(np.abs(vectors)**2, axis=-1)**(1./2)
-    vectors /= row_norm[:, np.newaxis]
-    vectors = bcolz.carray(vectors, rootdir=embeddings_folder, mode='w')
-    vectors.flush()
+    word2id_db = shelve.open(prefix + "_word_to_id_dict.db", 'r')
+    id2word_db = shelve.open(prefix + "_id_to_word_dict.db", "r")
+    path2id_db = shelve.open(prefix + "_path_to_id_dict.db", "r")
+    id2path_db = shelve.open(prefix + "_id_to_path_dict.db", "r")
+    relations_db = shelve.open(prefix + "_relations_map.db", "r")
 
-    pickle.dump(words, open(embeddings_folder + 'words.pkl', 'wb'))
-    pickle.dump(word2idx, open(embeddings_folder + 'words_index.pkl', 'wb'))
-    
-    return vectors, word2idx
+    embeddings, emb_indexer = load_embeddings_from_disk()
 
-word2id_db = shelve.open(prefix + "_word_to_id_dict.db", 'r')
-id2word_db = shelve.open(prefix + "_id_to_word_dict.db", "r")
-path2id_db = shelve.open(prefix + "_path_to_id_dict.db", "r")
-id2path_db = shelve.open(prefix + "_id_to_path_dict.db", "r")
-relations_db = shelve.open(prefix + "_relations_map.db", "r")
+    train_dataset = {tuple(l.split("\t")[:2]): l.split("\t")[2] for l in open(train_file).read().split("\n")}
+    test_dataset = {tuple(l.split("\t")[:2]): l.split("\t")[2] for l in open(test_file).read().split("\n")}
+    test_instances = {tuple(l.split("\t")[:2]): l.split("\t")[2] for l in open(instances_file).read().split("\n")}
+    test_knocked = {tuple(l.split("\t")[:2]): l.split("\t")[2] for l in open(knocked_file).read().split("\n")}
 
-embeddings, emb_indexer = load_embeddings_from_disk()
+    arrow_heads = {">": "up", "<":"down"}
 
-train_dataset = {}
-for l in open(inp_file).read().split("\n"):
-    try:
-        if l:
-            train_dataset[tuple(l.split("\t")[:2])] = l.split("\t")[2] 
-    except:
-        print (l)
-        raise
+    def extract_direction(edge):
 
-arrow_heads = {">": "up", "<":"down"}
-
-def extract_direction(edge):
-
-    if edge[0] == ">" or edge[0] == "<":
-        direction = "start_" + arrow_heads[edge[0]]
-        edge = edge[1:]
-    elif edge[-1] == ">" or edge[-1] == "<":
-        direction = "end_" + arrow_heads[edge[-1]]
-        edge = edge[:-1]
-    else:
-        direction = ' '
-    return direction, edge
-
-def parse_path(path):
-    parsed_path = []
-    for edge in path.split("*##*"):
-        direction, edge = extract_direction(edge)
-        if edge.split("/"):
-            try:
-                embedding, pos, dependency = edge.split("/")
-            except:
-                print (edge, path)
-                raise
-            emb_idx, pos_idx, dep_idx, dir_idx = emb_indexer.get(embedding, 0), pos_indexer[pos], dep_indexer[dependency], dir_indexer[direction]
-            parsed_path.append(tuple([emb_idx, pos_idx, dep_idx, dir_idx]))
+        if edge[0] == ">" or edge[0] == "<":
+            direction = "start_" + arrow_heads[edge[0]]
+            edge = edge[1:]
+        elif edge[-1] == ">" or edge[-1] == "<":
+            direction = "end_" + arrow_heads[edge[-1]]
+            edge = edge[:-1]
         else:
-            return None
-    return tuple(parsed_path)
+            direction = ' '
+        return direction, edge
 
-def parse_tuple(tup):
-    idx = tup[0]
-    print ("entity to id...")
-    x, y = entity_to_id(word2id_db, tup[1][0]), entity_to_id(word2id_db, tup[1][1])
-    print ("extracting paths...")
-    paths = list(extract_paths(relations_db,x,y).items()) + list(extract_paths(relations_db,y,x).items())
-    print ("id to entity...")
-    x_word = id_to_entity(id2word_db, x) if x!=-1 else "X"
-    y_word = id_to_entity(id2word_db, y) if y!=-1 else "Y"
-    print ("replacing xy and yx...")
-    path_count_dict = { id_to_path(id2path_db, path).replace("X/", x_word+"/").replace("Y/", y_word+"/") : freq for (path, freq) in paths }
-    return (idx, tup[1], path_count_dict)
+    def parse_path(path):
+        parsed_path = []
+        for edge in path.split("*##*"):
+            direction, edge = extract_direction(edge)
+            if edge.split("/"):
+                try:
+                    embedding, pos, dependency = edge.split("/")
+                except:
+                    print (edge, path)
+                    raise
+                emb_idx, pos_idx, dep_idx, dir_idx = emb_indexer.get(embedding, 0), pos_indexer[pos], dep_indexer[dependency], dir_indexer[direction]
+                parsed_path.append(tuple([emb_idx, pos_idx, dep_idx, dir_idx]))
+            else:
+                return None
+        return tuple(parsed_path)
 
-def parse_dataset(dataset):
-    print ("Entering parse dataset")
-    parsed_dicts = []
-    print ("starting multiprocess")
-    with concurrent.futures.ProcessPoolExecutor() as executor:
-        for batch_idx in range(0, len(dataset), 100):
-            print ("batch_idx", batch_idx)
-            temp_file = open("temp", "wb+")
-            pickle.dump([batch_idx, parsed_dicts], temp_file)
-            temp_file.close()
-            batch = dataset[batch_idx: (batch_idx + 100)]
-            for dic in executor.map(parse_tuple, zip(list(range(batch_idx, batch_idx+100)), batch)):
-                parsed_dicts.append(dic)
-    print ("Done. Sorting...")
-    parsed_dicts = sorted(parsed_dicts, key=lambda x:int(x[0]))
-    print ("Check order: ", parsed_dicts[:5], dataset[:5])
-    parsed_dicts = [el[-1] for el in parsed_dicts]
-    print ("Parsing path...")
-    parsed_dicts = [{ parse_path(path) : path_count_dict[path] for path in path_count_dict } for path_count_dict in parsed_dicts]
-    paths = [{ path : path_count_dict[path] for path in path_count_dict if path} for path_count_dict in parsed_dicts]
-    empty = [list(dataset)[i] for i, path_list in enumerate(paths) if len(list(path_list.keys())) == 0]
-    print('Pairs without paths:', len(empty), ', all dataset:', len(dataset))
-    temp_file = open("temp", "wb+")
-    pickle.dump(paths, temp_file)
-    temp_file.close()
-    embed_indices = [(emb_indexer.get(x,0), emb_indexer.get(y,0)) for (x,y) in dataset]
-    print ("emb indices done")
-    return embed_indices, paths
+    def parse_tuple(tup):
+        idx = tup[0]
+        x, y = entity_to_id(word2id_db, tup[1][0]), entity_to_id(word2id_db, tup[1][1])
+        paths = list(extract_paths(relations_db,x,y).items()) + list(extract_paths(relations_db,y,x).items())
+        x_word = id_to_entity(id2word_db, x) if x!=-1 else "X"
+        y_word = id_to_entity(id2word_db, y) if y!=-1 else "Y"
+        path_count_dict = { id_to_path(id2path_db, path).replace("X/", x_word+"/").replace("Y/", y_word+"/") : freq for (path, freq) in paths }
+        return (idx, tup[1], path_count_dict)
 
-pos_indexer, dep_indexer, dir_indexer = defaultdict(count(0).__next__), defaultdict(count(0).__next__), defaultdict(count(0).__next__)
-unk_pos, unk_dep, unk_dir = pos_indexer["#UNKNOWN#"], dep_indexer["#UNKNOWN#"], dir_indexer["#UNKNOWN#"]
+    def parse_dataset(dataset):
+        parsed_dicts = []
+        print ("Parsing dataset for ", prefix)
+        with concurrent.futures.ProcessPoolExecutor() as executor:
+            for batch_idx in range(0, len(dataset), 100):
+                batch = dataset[batch_idx: (batch_idx + 100)]
+                for dic in executor.map(parse_tuple, zip(list(range(batch_idx, batch_idx+100)), batch)):
+                    parsed_dicts.append(dic)
+        print ("Parsed.")
+        parsed_dicts = sorted(parsed_dicts, key=lambda x:int(x[0]))
+        parsed_dicts = [el[-1] for el in parsed_dicts]
+        parsed_dicts = [{ parse_path(path) : path_count_dict[path] for path in path_count_dict } for path_count_dict in parsed_dicts]
+        paths = [{ path : path_count_dict[path] for path in path_count_dict if path} for path_count_dict in parsed_dicts]
+        empty = [list(dataset)[i] for i, path_list in enumerate(paths) if len(list(path_list.keys())) == 0]
+        embed_indices = [(emb_indexer.get(x,0), emb_indexer.get(y,0)) for (x,y) in dataset]
+        
+        return embed_indices, paths
 
-dataset_keys = list(train_dataset.keys())
-dataset_vals = list(train_dataset.values())
+    pos_indexer, dep_indexer, dir_indexer = defaultdict(count(0).__next__), defaultdict(count(0).__next__), defaultdict(count(0).__next__)
+    unk_pos, unk_dep, unk_dir = pos_indexer["#UNKNOWN#"], dep_indexer["#UNKNOWN#"], dir_indexer["#UNKNOWN#"]
 
-embed_indices, x = parse_dataset(dataset_keys)
-y = [i for (i,relation) in enumerate(dataset_vals)]
+    dataset_keys = list(train_dataset.keys()) + list(test_dataset.keys()) + list(test_instances.keys()) + list(test_knocked.keys())
+    dataset_vals = list(train_dataset.values()) + list(test_dataset.values()) + list(test_instances.values()) + list(test_knocked.values())
+    print ("Successful hits: ", len(success), "Failed hits: ", len(failed))
+    embed_indices, x = parse_dataset(dataset_keys)
+    y = [i for (i,relation) in enumerate(dataset_vals)]
 
-it = inp_file.split("_")[-1]
-op_file = "../junk/Files/parsed_dataset_parts/parsed_dataset_" + str(it)
+    f = open(op_file, "wb+")
+    parsed_train = (embed_indices[:len(train_dataset)], x[:len(train_dataset)], y[:len(train_dataset)])
+    parsed_test = (embed_indices[len(train_dataset):len(train_dataset)+len(test_dataset)], x[len(train_dataset):len(train_dataset)+len(test_dataset)], y[len(train_dataset):len(train_dataset)+len(test_dataset)])
+    parsed_instances = (embed_indices[len(train_dataset)+len(test_dataset):len(train_dataset)+len(test_dataset)+len(test_instances)], x[len(train_dataset)+len(test_dataset):len(train_dataset)+len(test_dataset)+len(test_instances)], y[len(train_dataset)+len(test_dataset):len(train_dataset)+len(test_dataset)+len(test_instances)])
+    parsed_knocked = (embed_indices[len(train_dataset)+len(test_dataset)+len(test_instances):], x[len(train_dataset)+len(test_dataset)+len(test_instances):], y[len(train_dataset)+len(test_dataset)+len(test_instances):])
+    pickle.dump([parsed_train, parsed_test, parsed_instances, parsed_knocked], f)
+    f.close()
 
-f = open(op_file, "wb+")
-pickle.dump([success, failed, embed_indices, x, y], f)
-f.close()
+    print ("Parsed",inp_file) 
 
-print ("Parsed",inp_file) 
+thresholds_path = "/data/Vivek/Final/SIREN-Research/OntoEnricher/junk/Files/"
+
+for l in [l for l in os.listdir(thresholds_path) if l.startswith("security_threshold")]:
+    prefix = thresholds_path + l + "/security"
+    op_file = "../junk/Files/parsed_dataset_parts/parsed_dataset_" + "_".join(l.split("_")[-2:])
+    run(prefix, op_file)
