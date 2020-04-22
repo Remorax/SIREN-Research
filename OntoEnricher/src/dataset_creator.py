@@ -35,10 +35,13 @@ success = []
 
 def id_to_entity(db, entity_id):
     entity = db[str(entity_id)]
-    if db == id2path_db:
-        entity = "/".join(["*##*".join(e.split("_", 1)) for e in entity.split("/")])
+    
     return entity
 
+def id_to_path(db, entity_id):
+    entity = db[str(entity_id)]
+    entity = "/".join(["*##*".join(e.split("_", 1)) for e in entity.split("/")])
+    return entity
 
 def entity_to_id(db, entity):
     if entity in db:
@@ -140,11 +143,15 @@ def parse_path(path):
 
 def parse_tuple(tup):
     idx = tup[0]
+    print ("entity to id...")
     x, y = entity_to_id(word2id_db, tup[1][0]), entity_to_id(word2id_db, tup[1][1])
+    print ("extracting paths...")
     paths = list(extract_paths(relations_db,x,y).items()) + list(extract_paths(relations_db,y,x).items())
+    print ("id to entity...")
     x_word = id_to_entity(id2word_db, x) if x!=-1 else "X"
     y_word = id_to_entity(id2word_db, y) if y!=-1 else "Y"
-    path_count_dict = { id_to_entity(id2path_db, path).replace("X/", x_word+"/").replace("Y/", y_word+"/") : freq for (path, freq) in paths }
+    print ("replacing xy and yx...")
+    path_count_dict = { id_to_path(id2path_db, path).replace("X/", x_word+"/").replace("Y/", y_word+"/") : freq for (path, freq) in paths }
     return (idx, tup[1], path_count_dict)
 
 def parse_dataset(dataset):
