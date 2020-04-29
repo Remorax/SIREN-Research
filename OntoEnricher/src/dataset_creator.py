@@ -29,7 +29,8 @@ relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 # relations = ["True", "False"]
 NUM_RELATIONS = len(relations)
 
-def run(prefix, op_file):
+def run(args):
+    prefix, op_file = args
     failed = []
     success = []
 
@@ -93,7 +94,11 @@ def run(prefix, op_file):
         
         return vectors, word2idx
 
-    word2id_db = shelve.open(prefix + "_word_to_id_dict.db", 'r')
+    try:
+        word2id_db = shelve.open(prefix + "_word_to_id_dict.db", 'r')
+    except:
+        print (prefix)
+        raise
     id2word_db = shelve.open(prefix + "_id_to_word_dict.db", "r")
     path2id_db = shelve.open(prefix + "_path_to_id_dict.db", "r")
     id2path_db = shelve.open(prefix + "_id_to_path_dict.db", "r")
@@ -126,7 +131,7 @@ def run(prefix, op_file):
             direction, edge = extract_direction(edge)
             if edge.split("/"):
                 try:
-                    embedding, pos, dependency = edge.split("/")
+                    embedding, pos, dependency = tuple([a[::-1] for a in edge[::-1].split("/",2)][::-1])
                 except:
                     print (edge, path)
                     raise
@@ -137,8 +142,7 @@ def run(prefix, op_file):
         return tuple(parsed_path)
 
     def parse_tuple(tup):
-        idx = tup[0]
-        x, y = entity_to_id(word2id_db, tup[1][0]), entity_to_id(word2id_db, tup[1][1])
+        x, y = entity_to_id(word2id_db, tup[0]), entity_to_id(word2id_db, tup[1])
         paths = list(extract_paths(relations_db,x,y).items()) + list(extract_paths(relations_db,y,x).items())
         x_word = id_to_entity(id2word_db, x) if x!=-1 else "X"
         y_word = id_to_entity(id2word_db, y) if y!=-1 else "Y"
