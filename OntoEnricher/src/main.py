@@ -97,7 +97,7 @@ NULL_PATH = ((0, 0, 0, 0),)
 
 file = open("dataset_parsed.pkl", 'rb')
 parsed_train, parsed_test, parsed_instances, parsed_knocked, pos_indexer, dep_indexer, dir_indexer  = pickle.load(file)
-parsed_train = parsed_train[:1000]
+parsed_train = (el[:1000] for el in parsed_train)
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 NUM_RELATIONS = len(relations)
 
@@ -238,6 +238,8 @@ for epoch in range(num_epochs):
         
         # print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
        	write (batch) 
+        write (parsed_train[1])
+        write (parsed_train[1][batch]) 
         data = [{NULL_PATH: 1} if not el else el for el in parsed_train[1][batch]]
         data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
         labels, embeddings_idx = parsed_train[2][batch], parsed_train[0][batch]
