@@ -60,3 +60,15 @@ Batch_idx 0
 Loss: 4.988428359027504
 
 Epoch [10/10] Loss: 0.0941
+
+Emb: <class 'numpy.ndarray'>
+
+=> no checkpoint found at 'model.pt'
+
+Emb: <class 'numpy.ndarray'>
+
+=> no checkpoint found at 'model.pt'
+
+Emb: <class 'numpy.ndarray'>
+
+=> no checkpoint found at 'model.pt'
