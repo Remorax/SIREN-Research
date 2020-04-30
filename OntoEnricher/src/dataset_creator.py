@@ -175,7 +175,7 @@ def run(args):
     dataset_keys = list(train_dataset.keys()) + list(test_dataset.keys()) + list(test_instances.keys()) + list(test_knocked.keys())
     dataset_vals = list(train_dataset.values()) + list(test_dataset.values()) + list(test_instances.values()) + list(test_knocked.values())
 
-    mappingDict = {key: idx for (idx,key) in enumerate(list(set(dataset_vals)))}
+    mappingDict = {key: idx for (idx,key) in enumerate(relations)}
 
     embed_indices, x = parse_dataset(dataset_keys)
     y = [mappingDict[relation] for relation in dataset_vals]

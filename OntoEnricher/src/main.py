@@ -12,6 +12,8 @@ import torch.optim as optim
 import torch.nn as nn
 from sklearn.metrics import accuracy_score
 
+NUM_RELATIONS = 5
+
 # prefix = "../junk/Files/temp_threshold_3_4/temp"
 # train_file = "../junk/train.tsv"
 # test_file = "../junk/test.tsv"
@@ -194,7 +196,7 @@ def tensorifyTuple(tup):
     
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-NUM_RELATIONS = len(mappingDict)
+
 # print ("num_relations:", NUM_RELATIONS)
 HIDDEN_DIM = 60
 NUM_LAYERS = 2
@@ -235,7 +237,7 @@ for epoch in range(num_epochs):
         
         data = [{NULL_PATH: 1} if not el else el for el in parsed_train[1][batch]]
         data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
-        labels, embeddings_idx = parsed_train[-1][batch], parsed_train[0][batch]
+        labels, embeddings_idx = parsed_train[2][batch], parsed_train[0][batch]
         
         # Run the forward pass
         outputs = lstm(data, embeddings_idx)
@@ -276,7 +278,7 @@ def test(test_dataset, message):
 
         data = [{NULL_PATH: 1} if not el else el for el in test_dataset[1][batch]]
         data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
-        labels, embeddings_idx = test_dataset[-1][batch], test_dataset[0][batch]
+        labels, embeddings_idx = test_dataset[2][batch], test_dataset[0][batch]
 
         outputs = lstm(data, embeddings_idx)
         _, predicted = torch.max(outputs.data, 1)
