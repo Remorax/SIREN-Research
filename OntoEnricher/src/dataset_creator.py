@@ -199,7 +199,7 @@ def run(args):
 thresholds_path = "/data/Vivek/Final/SIREN-Research/OntoEnricher/junk/Files/"
 folders = [l for l in os.listdir(thresholds_path) if l.startswith("security_threshold")]
 args = [(thresholds_path + l + "/security", "../junk/Files/parsed_dataset_parts/parsed_dataset_" + "_".join(l.split("_")[-2:])) for l in folders]
-with concurrent.futures.ProcessPoolExecutor() as executor:
-    for res in executor.map(run, args):
-        pass
-#run(("/data/Vivek/Final/SIREN-Research/OntoEnricher/junk/Files/security_threshold_15_4/security", "tmp"))
+#with concurrent.futures.ProcessPoolExecutor() as executor:
+#    for res in executor.map(run, args):
+#        pass
+run(("/data/Vivek/Final/SIREN-Research/OntoEnricher/junk/Files/security_threshold_7_10/security", "dataset_parsed.pkl"))

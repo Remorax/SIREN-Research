@@ -27,12 +27,12 @@ def run(f):
     global idx
     idx += 1
     print (idx, "out of", len(folders),  "Exiting for ", f) 
+    print ((f, passed1, passed2, passed3, passed4, passed5))
     return (f, passed1, passed2, passed3, passed4, passed5)
 
 results = []
 with concurrent.futures.ProcessPoolExecutor() as executor:
     for res in executor.map(run, folders):
-        print (res)
         results.append(res)
 
 files, r1, r2, r3, r4, r5 = list(zip(*results))
