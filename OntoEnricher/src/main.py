@@ -45,7 +45,7 @@ def load_embeddings_from_disk():
         
 def write(statement):
     op_file = open("Logs", "a+")
-    op_file.write("\n" + statement + "\n")
+    op_file.write("\n" + str(statement) + "\n")
     op_file.close()
 
 def create_embeddings():
@@ -95,9 +95,9 @@ DIR_DIM = 1
 EMBEDDING_DIM = 300
 NULL_PATH = ((0, 0, 0, 0),)
 
-file = open(prefix + "dataset_parsed.pkl", 'rb')
-parsed_train, parsed_test, parsed_instances, parsed_knocked = pickle.load(file)
-
+file = open("dataset_parsed.pkl", 'rb')
+parsed_train, parsed_test, parsed_instances, parsed_knocked, pos_indexer, dep_indexer, dir_indexer  = pickle.load(file)
+parsed_train = parsed_train[:1000]
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 NUM_RELATIONS = len(relations)
 
@@ -206,7 +206,7 @@ NUM_LAYERS = 2
 num_epochs = 10
 batch_size = 32
 
-dataset_size = len(parsed_train[-1])
+dataset_size = len(parsed_train[2])
 batch_size = min(batch_size, dataset_size)
 num_batches = int(ceil(dataset_size/batch_size))
 
@@ -237,7 +237,7 @@ for epoch in range(num_epochs):
         batch = epoch_idx[batch_start:batch_end]
         
         # print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
-        
+       	write (batch) 
         data = [{NULL_PATH: 1} if not el else el for el in parsed_train[1][batch]]
         data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
         labels, embeddings_idx = parsed_train[2][batch], parsed_train[0][batch]

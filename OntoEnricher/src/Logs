@@ -568,3 +568,21 @@ Loss: 9.744862248615982
 Batch_idx 1700
 
 Loss: 9.908022839111219
+
+Emb: <class 'numpy.ndarray'>
+
+Emb: <class 'numpy.ndarray'>
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+Batch_idx 0
+
+[42492 22866  6273 55162  2961  8409 18761 61579 40532 38998 26081 67530
+  1305 58261 47481 55161   952 63054 61002 39315 29073 67766 40029 47885
+ 70463  5755 15388 10456 58862 43017 61254 14936]
