@@ -97,7 +97,6 @@ NULL_PATH = ((0, 0, 0, 0),)
 
 file = open("dataset_parsed.pkl", 'rb')
 parsed_train, parsed_test, parsed_instances, parsed_knocked, pos_indexer, dep_indexer, dir_indexer  = pickle.load(file)
-parsed_train = tuple(el[:1000] for el in parsed_train)
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 NUM_RELATIONS = len(relations)
 
@@ -222,6 +221,7 @@ for state in optimizer.state.values():
             state[k] = v.to(device)
                     
 loss_list = []
+
 for epoch in range(num_epochs):
     
     total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
@@ -279,7 +279,7 @@ def test(test_dataset, message, output_file):
     results = []
 
     dataset_size = len(test_dataset[2])
-    batch_size = min(batch_size, dataset_size)
+    batch_size = min(32, dataset_size)
     num_batches = int(ceil(dataset_size/batch_size))
 
     test_perm = np.random.permutation(dataset_size)
