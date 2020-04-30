@@ -237,12 +237,9 @@ for epoch in range(num_epochs):
         batch = epoch_idx[batch_start:batch_end]
         
         # print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
-       	write (batch) 
-        write (parsed_train[1])
-        write (parsed_train[1][batch]) 
-        data = [{NULL_PATH: 1} if not el else el for el in parsed_train[1][batch]]
+        data = [{NULL_PATH: 1} if not el else el for el in np.array(parsed_train[1])[batch]]
         data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
-        labels, embeddings_idx = parsed_train[2][batch], parsed_train[0][batch]
+        labels, embeddings_idx = np.array(parsed_train[2][batch]), np.array(parsed_train[0])[batch]
         
         # Run the forward pass
         outputs = lstm(data, embeddings_idx)
@@ -282,16 +279,16 @@ def test(test_dataset, message, output_file):
         batch_start = batch_idx * batch_size
         batch = test_perm[batch_start:batch_end]
 
-        data = [{NULL_PATH: 1} if not el else el for el in test_dataset[1][batch]]
+        data = [{NULL_PATH: 1} if not el else el for el in np.array(test_dataset[1])[batch]]
         data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
-        labels, embeddings_idx = test_dataset[2][batch], test_dataset[0][batch]
+        labels, embeddings_idx = np.array(test_dataset[2])[batch], np.array(test_dataset[0])[batch]
 
         outputs = lstm(data, embeddings_idx)
         _, predicted = torch.max(outputs.data, 1)
 
         predictedLabels.extend(predicted)
         trueLabels.extend(labels)
-        results.extend(["\t".join(tup) for tup in zip(["\t".join(l) for l in test_dataset[3][batch]], [mappingDict_inv[l] for l in predicted], [mappingDict_inv[l] for l in labels])])
+        results.extend(["\t".join(tup) for tup in zip(["\t".join(l) for l in np.array(test_dataset[3])[batch]], [mappingDict_inv[l] for l in predicted], [mappingDict_inv[l] for l in labels])])
     accuracy = accuracy_score(trueLabels, predictedLabels)
     precision = calculate_precision(trueLabels, predictedLabels)
     open(output_file, "w+").write("\n".join(results))
