@@ -214,50 +214,57 @@ lstm = nn.DataParallel(LSTM()).to(device)
 criterion = nn.NLLLoss()
 optimizer = optim.Adam(lstm.parameters(), lr=lr)
 
-loss_list = []
-for epoch in range(num_epochs):
-    
-    total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
-    
-    if False:
-        lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
-        lstm = lstm.to(device)
-        for state in optimizer.state.values():
-            for k, v in state.items():
-                if isinstance(v, torch.Tensor):
-                    state[k] = v.to(device)
+lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
+lstm = lstm.to(device)
+for state in optimizer.state.values():
+    for k, v in state.items():
+        if isinstance(v, torch.Tensor):
+            state[k] = v.to(device)
                     
-    for batch_idx in range(num_batches):
-        if batch_idx % 100 == 0:
-            write("Batch_idx " + str(batch_idx))
-        batch_end = (batch_idx+1) * batch_size
-        batch_start = batch_idx * batch_size
-        batch = epoch_idx[batch_start:batch_end]
-        
-        # print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
-        data = [{NULL_PATH: 1} if not el else el for el in np.array(parsed_train[1])[batch]]
-        data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
-        labels, embeddings_idx = np.array(parsed_train[2])[batch], np.array(parsed_train[0])[batch]
-        
-        # Run the forward pass
-        outputs = lstm(data, embeddings_idx)
-        # print (outputs, labels)
-        loss = log_loss(outputs, torch.LongTensor(labels).to(device))
-        # loss = criterion(outputs, torch.LongTensor(labels).to(device))
-        if batch_idx % 100 == 0:
-            write("Loss: " + str(loss.item()))
-        # Backprop and perform Adam optimisation
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
-        total_loss += loss.item()
-    state = {'epoch': epoch + 1, 'state_dict': lstm.state_dict(),
-             'optimizer': optimizer.state_dict()}
-    torch.save(state, model_filename)
+# loss_list = []
+# for epoch in range(num_epochs):
     
-    total_loss /= dataset_size
-    write('Epoch [{}/{}] Loss: {:.4f}'.format(epoch + 1, num_epochs, total_loss))
-    loss_list.append(loss.item())
+#     total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
+    
+#     if False:
+#         lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
+#         lstm = lstm.to(device)
+#         for state in optimizer.state.values():
+#             for k, v in state.items():
+#                 if isinstance(v, torch.Tensor):
+#                     state[k] = v.to(device)
+                    
+#     for batch_idx in range(num_batches):
+#         if batch_idx % 100 == 0:
+#             write("Batch_idx " + str(batch_idx))
+#         batch_end = (batch_idx+1) * batch_size
+#         batch_start = batch_idx * batch_size
+#         batch = epoch_idx[batch_start:batch_end]
+        
+#         # print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
+#         data = [{NULL_PATH: 1} if not el else el for el in np.array(parsed_train[1])[batch]]
+#         data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
+#         labels, embeddings_idx = np.array(parsed_train[2])[batch], np.array(parsed_train[0])[batch]
+        
+#         # Run the forward pass
+#         outputs = lstm(data, embeddings_idx)
+#         # print (outputs, labels)
+#         loss = log_loss(outputs, torch.LongTensor(labels).to(device))
+#         # loss = criterion(outputs, torch.LongTensor(labels).to(device))
+#         if batch_idx % 100 == 0:
+#             write("Loss: " + str(loss.item()))
+#         # Backprop and perform Adam optimisation
+#         optimizer.zero_grad()
+#         loss.backward()
+#         optimizer.step()
+#         total_loss += loss.item()
+#     state = {'epoch': epoch + 1, 'state_dict': lstm.state_dict(),
+#              'optimizer': optimizer.state_dict()}
+#     torch.save(state, model_filename)
+    
+#     total_loss /= dataset_size
+#     write('Epoch [{}/{}] Loss: {:.4f}'.format(epoch + 1, num_epochs, total_loss))
+#     loss_list.append(loss.item())
 
 def calculate_precision(true, pred):
     true_f, pred_f = [], []
@@ -269,8 +276,13 @@ def calculate_precision(true, pred):
 
 def test(test_dataset, message, output_file):
     predictedLabels, trueLabels = [], []
-    test_perm = np.random.permutation(len(test_dataset[1]))
     results = []
+
+    dataset_size = len(test_dataset[2])
+    batch_size = min(batch_size, dataset_size)
+    num_batches = int(ceil(dataset_size/batch_size))
+
+    test_perm = np.random.permutation(dataset_size)
     for batch_idx in range(num_batches):
         
         batch_end = (batch_idx+1) * batch_size
