@@ -97,7 +97,7 @@ NULL_PATH = ((0, 0, 0, 0),)
 
 file = open("dataset_parsed.pkl", 'rb')
 parsed_train, parsed_test, parsed_instances, parsed_knocked, pos_indexer, dep_indexer, dir_indexer  = pickle.load(file)
-parsed_train = (el[:1000] for el in parsed_train)
+parsed_train = tuple(el[:1000] for el in parsed_train)
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 NUM_RELATIONS = len(relations)
 
@@ -152,10 +152,9 @@ class LSTM(nn.Module):
             lstm_inp = torch.cat((lstm_inp, embeds), 0)
 
         lstm_inp = lstm_inp.view(-1, 1, self.input_dim)
-        # print ("LSTM inp:", lstm_inp.shape)
         output, _ = self.lstm(lstm_inp)
+        output = output[-1]
         self.cache[path] = output
-        # print ("LSTM op:", output.shape)
         return output * count
     
     def forward(self, data, emb_indexer):
@@ -165,10 +164,9 @@ class LSTM(nn.Module):
         idx = 0
         for paths in data:
             paths_embeds = torch.Tensor([]).to(device)
-            # print (paths)
             for path in paths.items():
-                paths_embeds = torch.cat((paths_embeds, self.embed_path(path).view(1,-1)), 0)
-                # print ("paths_embeds:", paths_embeds.shape)
+                emb = self.embed_path(path).view(1,-1)
+                paths_embeds = torch.cat((paths_embeds, emb), 0)
             path_embedding = torch.div(torch.sum(paths_embeds, 0), sum(list(paths.values())))
             # print (emb_indexer[idx][0].shape, emb_indexer[idx][1].shape, emb_indexer[idx])
             x = self.word_embeddings(torch.LongTensor([[emb_indexer[idx][0]]]).to(device)).view(EMBEDDING_DIM)
@@ -181,7 +179,7 @@ class LSTM(nn.Module):
             h = torch.cat((h, probabilities.view(1,-1)), 0)
             idx += 1
          
-        # print ("h shape: ", h.shape)
+        print ("h shape: ", h.shape)
         return h
 
 def log_loss(output, target):
@@ -239,7 +237,7 @@ for epoch in range(num_epochs):
         # print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
         data = [{NULL_PATH: 1} if not el else el for el in np.array(parsed_train[1])[batch]]
         data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
-        labels, embeddings_idx = np.array(parsed_train[2][batch]), np.array(parsed_train[0])[batch]
+        labels, embeddings_idx = np.array(parsed_train[2])[batch], np.array(parsed_train[0])[batch]
         
         # Run the forward pass
         outputs = lstm(data, embeddings_idx)
@@ -284,8 +282,9 @@ def test(test_dataset, message, output_file):
         labels, embeddings_idx = np.array(test_dataset[2])[batch], np.array(test_dataset[0])[batch]
 
         outputs = lstm(data, embeddings_idx)
-        _, predicted = torch.max(outputs.data, 1)
-
+        _, predicted = torch.max(outputs, 1)
+        predicted = [el.item() for el in predicted]
+        labels = [el.item() for el in labels]
         predictedLabels.extend(predicted)
         trueLabels.extend(labels)
         results.extend(["\t".join(tup) for tup in zip(["\t".join(l) for l in np.array(test_dataset[3])[batch]], [mappingDict_inv[l] for l in predicted], [mappingDict_inv[l] for l in labels])])
