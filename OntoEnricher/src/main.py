@@ -12,8 +12,11 @@ import torch.optim as optim
 import torch.nn as nn
 from sklearn.metrics import accuracy_score
 
-NUM_RELATIONS = 5
+relations = ["hypernym", "hyponym", "concept", "instance", "none"]
+NUM_RELATIONS = len(relations)
 
+mappingDict = {key: idx for (idx,key) in enumerate(relations)}
+mappingDict_inv = {idx: key for (idx,key) in enumerate(relations)}
 # prefix = "../junk/Files/temp_threshold_3_4/temp"
 # train_file = "../junk/train.tsv"
 # test_file = "../junk/test.tsv"
@@ -267,9 +270,10 @@ def calculate_precision(true, pred):
             pred_f.append(l)
     return accuracy_score(true_f, pred_f)
 
-def test(test_dataset, message):
+def test(test_dataset, message, output_file):
     predictedLabels, trueLabels = [], []
     test_perm = np.random.permutation(len(test_dataset[1]))
+    results = []
     for batch_idx in range(num_batches):
         
         batch_end = (batch_idx+1) * batch_size
@@ -285,14 +289,16 @@ def test(test_dataset, message):
 
         predictedLabels.extend(predicted)
         trueLabels.extend(labels)
+        results.extend(["\t".join(tup) for tup in zip(["\t".join(l) for l in test_dataset[3][batch]], [mappingDict_inv[l] for l in predicted], [mappingDict_inv[l] for l in labels])])
     accuracy = accuracy_score(trueLabels, predictedLabels)
     precision = calculate_precision(trueLabels, predictedLabels)
+    open(output_file, "w+").write("\n".join(results))
     print ("\n\n{}\n\n".format(message))
     print ("Accuracy:", accuracy, "Precision:", precision)
 
 lstm.eval()
 with torch.no_grad():
-    test(parsed_test, "Test Set:")
-    test(parsed_instances, "Instance Set:")
-    test(parsed_knocked, "Knocked out Set:")
+    test(parsed_test, "Test Set:", output_folder + "test.tsv")
+    test(parsed_instances, "Instance Set:", output_folder + "test_instance.tsv")
+    test(parsed_knocked, "Knocked out Set:", output_folder + "test_knocked.tsv")
     
