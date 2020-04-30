@@ -19,50 +19,11 @@ from sklearn.metrics import accuracy_score
 # embeddings_folder = "../junk/Glove.dat"
 # embeddings_file = "/Users/vivek/SIREN-Research/Archive-LSTM/glove.6B/glove.6B.300d.txt"
 
-prefix = "/home/vivek.iyer/security"
-train_file = "../files/dataset/train.tsv"
-test_file = "../files/dataset/test.tsv"
-instances_file = '../files/dataset/test_instances.tsv'
-knocked_file = '../files/dataset/test_knocked.tsv'
-use_embeddings = "../files/embeddings.pt"
+prefix = "/home/vivek.iyer/"
 output_folder = "../junk/Output/"
 embeddings_folder = "../junk/Glove.dat"
 embeddings_file = "/home/vivek.iyer/glove.6B.300d.txt"
 model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt"
-
-POS_DIM = 4
-DEP_DIM = 5
-DIR_DIM = 1
-EMBEDDING_DIM = 300
-NULL_PATH = ((0, 0, 0, 0),)
-relations = ["hypernym", "hyponym", "concept", "instance", "none"]
-# relations = ["True", "False"]
-NUM_RELATIONS = len(relations)
-
-
-def id_to_entity(db, entity_id):
-    entity = db[str(entity_id)]    
-    return entity
-
-def id_to_path(db, entity_id):
-    entity = db[str(entity_id)]
-    entity = "/".join(["*##*".join(e.split("_", 1)) for e in entity.split("/")])
-    return entity
-
-def entity_to_id(db, entity):
-    if entity in db:
-        success.append(entity)
-        return int(db[entity])
-    failed.append(entity)
-    return -1
-
-def extract_paths(db, x, y):
-    key = (str(x) + '###' + str(y))
-    try:
-        relation = db[key]
-        return {int(path_count.split(":")[0]): int(path_count.split(":")[1]) for path_count in relation.split(",")}
-    except Exception as e:
-        return {}
 
 
 def load_embeddings_from_disk():
@@ -123,91 +84,21 @@ def load_checkpoint(model, optimizer, filename='model.pt'):
     return model, optimizer, start_epoch
 
 
-word2id_db = shelve.open(prefix + "_word_to_id_dict.db", 'r')
-id2word_db = shelve.open(prefix + "_id_to_word_dict.db", "r")
-path2id_db = shelve.open(prefix + "_path_to_id_dict.db", "r")
-id2path_db = shelve.open(prefix + "_id_to_path_dict.db", "r")
-relations_db = shelve.open(prefix + "_relations_map.db", "r")
+POS_DIM = 4
+DEP_DIM = 5
+DIR_DIM = 1
+EMBEDDING_DIM = 300
+NULL_PATH = ((0, 0, 0, 0),)
+
+file = open(prefix + "dataset_parsed.pkl", 'rb')
+parsed_train, parsed_test, parsed_instances, parsed_knocked = pickle.load(file)
+
+relations = ["hypernym", "hyponym", "concept", "instance", "none"]
+NUM_RELATIONS = len(relations)
 
 embeddings, emb_indexer = load_embeddings_from_disk()
 
-write("Embeddings shape: " + str(embeddings.shape))
-train_dataset = {tuple(l.split("\t")[:2]): l.split("\t")[2] for l in open(train_file).read().split("\n")}
-test_dataset = {tuple(l.split("\t")[:2]): l.split("\t")[2] for l in open(test_file).read().split("\n")}
-test_instances = {tuple(l.split("\t")[:2]): l.split("\t")[2] for l in open(instances_file).read().split("\n")}
-test_knocked = {tuple(l.split("\t")[:2]): l.split("\t")[2] for l in open(knocked_file).read().split("\n")}
-
-
-arrow_heads = {">": "up", "<":"down"}
-
-def extract_direction(edge):
-
-    if edge[0] == ">" or edge[0] == "<":
-        direction = "start_" + arrow_heads[edge[0]]
-        edge = edge[1:]
-    elif edge[-1] == ">" or edge[-1] == "<":
-        direction = "end_" + arrow_heads[edge[-1]]
-        edge = edge[:-1]
-    else:
-        direction = ' '
-    return direction, edge
-
-def parse_path(path):
-    parsed_path = []
-    for edge in path.split("*##*"):
-        direction, edge = extract_direction(edge)
-        if edge.split("/"):
-            try:
-                embedding, pos, dependency = edge.split("/")
-            except:
-                print (edge, path)
-                raise
-            emb_idx, pos_idx, dep_idx, dir_idx = emb_indexer.get(embedding, 0), pos_indexer[pos], dep_indexer[dependency], dir_indexer[direction]
-            parsed_path.append(tuple([emb_idx, pos_idx, dep_idx, dir_idx]))
-        else:
-            return None
-    return tuple(parsed_path)
-
-def parse_tuple(tup):
-    idx = tup[0]
-    x, y = entity_to_id(word2id_db, tup[1][0]), entity_to_id(word2id_db, tup[1][1])
-    paths = list(extract_paths(relations_db,x,y).items()) + list(extract_paths(relations_db,y,x).items())
-    x_word = id_to_entity(id2word_db, x) if x!=-1 else "X"
-    y_word = id_to_entity(id2word_db, y) if y!=-1 else "Y"
-    path_count_dict = { id_to_path(id2path_db, path).replace("X/", x_word+"/").replace("Y/", y_word+"/") : freq for (path, freq) in paths }
-    return path_count_dict
-
-def parse_dataset(dataset):
-    print ("Parsing dataset for ", prefix)
-    
-    parsed_dicts = [parse_tuple(tup) for tup in dataset]
-    parsed_dicts = [{ parse_path(path) : path_count_dict[path] for path in path_count_dict } for path_count_dict in parsed_dicts]
-    paths = [{ path : path_count_dict[path] for path in path_count_dict if path} for path_count_dict in parsed_dicts]
-    empty = [list(dataset)[i] for i, path_list in enumerate(paths) if len(list(path_list.keys())) == 0]
-    embed_indices = [(emb_indexer.get(x,0), emb_indexer.get(y,0)) for (x,y) in dataset]
-    
-    return embed_indices, paths  
 torch.set_default_dtype(torch.float64)
-
-pos_indexer, dep_indexer, dir_indexer = defaultdict(count(0).__next__), defaultdict(count(0).__next__), defaultdict(count(0).__next__)
-unk_pos, unk_dep, unk_dir = pos_indexer["#UNKNOWN#"], dep_indexer["#UNKNOWN#"], dir_indexer["#UNKNOWN#"]
-
-dataset_keys = list(train_dataset.keys()) + list(test_dataset.keys()) + list(test_instances.keys()) + list(test_knocked.keys())
-dataset_vals = list(train_dataset.values()) + list(test_dataset.values()) + list(test_instances.values()) + list(test_knocked.values())
-
-embed_indices, x = parse_dataset(dataset_keys)
-mappingDict = {key: idx for (idx,key) in enumerate(list(set(dataset_vals)))}
-# print (mappingDict)
-y = [mappingDict[relation] for relation in dataset_vals]
-
-embed_indices, x, y = np.array(embed_indices), np.array(x), np.array(y)
-f = open("parsed_op", "wb+")
-parsed_train = (embed_indices[:len(train_dataset)], x[:len(train_dataset)], y[:len(train_dataset)])
-parsed_test = (embed_indices[len(train_dataset):len(train_dataset)+len(test_dataset)], x[len(train_dataset):len(train_dataset)+len(test_dataset)], y[len(train_dataset):len(train_dataset)+len(test_dataset)])
-parsed_instances = (embed_indices[len(train_dataset)+len(test_dataset):len(train_dataset)+len(test_dataset)+len(test_instances)], x[len(train_dataset)+len(test_dataset):len(train_dataset)+len(test_dataset)+len(test_instances)], y[len(train_dataset)+len(test_dataset):len(train_dataset)+len(test_dataset)+len(test_instances)])
-parsed_knocked = (embed_indices[len(train_dataset)+len(test_dataset)+len(test_instances):], x[len(train_dataset)+len(test_dataset)+len(test_instances):], y[len(train_dataset)+len(test_dataset)+len(test_instances):])
-pickle.dump([parsed_train, parsed_test, parsed_instances, parsed_knocked], f)
-f.close()
 
 class LSTM(nn.Module):
 

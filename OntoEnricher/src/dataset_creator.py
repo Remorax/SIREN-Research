@@ -174,15 +174,22 @@ def run(args):
 
     dataset_keys = list(train_dataset.keys()) + list(test_dataset.keys()) + list(test_instances.keys()) + list(test_knocked.keys())
     dataset_vals = list(train_dataset.values()) + list(test_dataset.values()) + list(test_instances.values()) + list(test_knocked.values())
-    
+
+    mappingDict = {key: idx for (idx,key) in enumerate(list(set(dataset_vals)))}
+
     embed_indices, x = parse_dataset(dataset_keys)
-    y = [i for (i,relation) in enumerate(dataset_vals)]
+    y = [mappingDict[relation] for relation in dataset_vals]
 
     f = open(op_file, "wb+")
-    parsed_train = (embed_indices[:len(train_dataset)], x[:len(train_dataset)], y[:len(train_dataset)])
-    parsed_test = (embed_indices[len(train_dataset):len(train_dataset)+len(test_dataset)], x[len(train_dataset):len(train_dataset)+len(test_dataset)], y[len(train_dataset):len(train_dataset)+len(test_dataset)])
-    parsed_instances = (embed_indices[len(train_dataset)+len(test_dataset):len(train_dataset)+len(test_dataset)+len(test_instances)], x[len(train_dataset)+len(test_dataset):len(train_dataset)+len(test_dataset)+len(test_instances)], y[len(train_dataset)+len(test_dataset):len(train_dataset)+len(test_dataset)+len(test_instances)])
-    parsed_knocked = (embed_indices[len(train_dataset)+len(test_dataset)+len(test_instances):], x[len(train_dataset)+len(test_dataset)+len(test_instances):], y[len(train_dataset)+len(test_dataset)+len(test_instances):])
+
+    s1 = len(train_dataset)
+    s2 = len(train_dataset) + len(test_dataset)
+    s3 = len(train_dataset)+len(test_dataset)+len(test_instances)
+
+    parsed_train = (embed_indices[:s1], x[:s1], y[:s1], dataset_keys[:s1], dataset_vals[:s1])
+    parsed_test = (embed_indices[s1:s2], x[s1:s2], y[s1:s2], dataset_keys[s1:s2], dataset_vals[s1:s2])
+    parsed_instances = (embed_indices[s2:s3], x[s2:s3], y[s2:s3], dataset_keys[s2:s3], dataset_vals[s2:s3])
+    parsed_knocked = (embed_indices[s3:], x[s3:], y[s3:], dataset_keys[s3:], dataset_vals[s3:])
     pickle.dump([parsed_train, parsed_test, parsed_instances, parsed_knocked], f)
     print ("Successful hits: ", len(success), "Failed hits: ", len(failed))
     f.close()
