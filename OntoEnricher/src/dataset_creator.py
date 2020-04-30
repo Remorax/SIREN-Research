@@ -190,7 +190,7 @@ def run(args):
     parsed_test = (embed_indices[s1:s2], x[s1:s2], y[s1:s2], dataset_keys[s1:s2], dataset_vals[s1:s2])
     parsed_instances = (embed_indices[s2:s3], x[s2:s3], y[s2:s3], dataset_keys[s2:s3], dataset_vals[s2:s3])
     parsed_knocked = (embed_indices[s3:], x[s3:], y[s3:], dataset_keys[s3:], dataset_vals[s3:])
-    pickle.dump([parsed_train, parsed_test, parsed_instances, parsed_knocked], f)
+    pickle.dump([parsed_train, parsed_test, parsed_instances, parsed_knocked, pos_indexer, dep_indexer, dir_indexer], f)
     print ("Successful hits: ", len(success), "Failed hits: ", len(failed))
     f.close()
 
