@@ -35,18 +35,27 @@ def run(args):
     success = []
 
     def id_to_entity(db, entity_id):
-        entity = db[str(entity_id)]    
+        try:
+            entity = db[str(entity_id)]    
+        except:
+            entity = db[str(entity_id).decode("utf-8")]
         return entity
 
     def id_to_path(db, entity_id):
-        entity = db[str(entity_id)]
+        try:
+            entity = db[str(entity_id)]
+        except:
+            entity = db[str(entity_id).decode("utf-8")]
         entity = "/".join(["*##*".join(e.split("_", 1)) for e in entity.split("/")])
         return entity
 
     def entity_to_id(db, entity):
         if entity in db:
             success.append(entity)
-            return int(db[entity])
+            try:
+                return int(db[entity])
+            except:
+                return int(db[entity.decode("utf-8")])
         failed.append(entity)
         return -1
 
@@ -186,4 +195,4 @@ args = [(thresholds_path + l + "/security", "../junk/Files/parsed_dataset_parts/
 with concurrent.futures.ProcessPoolExecutor() as executor:
     for res in executor.map(run, args):
         pass
-
+#run(("/data/Vivek/Final/SIREN-Research/OntoEnricher/junk/Files/security_threshold_15_4/security", "tmp"))
