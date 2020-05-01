@@ -1,0 +1,7 @@
+cloud	Barracuda Cloud Generation network	instance	none
+protection	secure Barracuda cloud	instance	none
+cloud	secure Barracuda cloud	instance	none
+protection	Cisco	instance	none
+protection	proven Cisco ASA firewall protection	instance	none
+email	secure Barracuda cloud	instance	none
+cloud	Barracuda	instance	none

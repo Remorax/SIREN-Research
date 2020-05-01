@@ -1,0 +1,471 @@
+systems acquisition control	control	hypernym	hypernym
+equipment location control compliant building	control	hypernym	hypernym
+encryption software	software	hypernym	hypernym
+visible identification control	control	hypernym	hypernym
+human behavior guidelines control	control	hypernym	hypernym
+air conditioning control compliant server room	control	hypernym	hypernym
+third party service management control compliant organization	control	hypernym	hypernym
+fire safety control control	control	hypernym	hypernym
+documented operational procedures control	control	hypernym	hypernym
+exchange agreements	control	hypernym	hypernym
+kensington lock control	control	hypernym	hypernym
+user identification authentication control compliant organization	control	hypernym	hypernym
+security relevant patches control compliant organization	control	hypernym	hypernym
+unauthorized use prevention control	control	hypernym	hypernym
+external employment contract	contract	hypernym	hypernym
+external connections authentication control compliant organization	control	hypernym	hypernym
+port security diagnostic control compliant organization	control	hypernym	hypernym
+audit logging control	control	hypernym	hypernym
+exchange agreements control compliant organizations	control	hypernym	hypernym
+systems testing	control	hypernym	hypernym
+audit logging and monitoring	control	hypernym	hypernym
+kensington lock control compliant computer	control	hypernym	hypernym
+fire suppression control compliant section	control	hypernym	hypernym
+internet regulation control	control	hypernym	hypernym
+communication scanning control compliant organization	control	hypernym	hypernym
+visible identification	control	hypernym	hypernym
+anti virus control	control	hypernym	hypernym
+transparent encryption	software	hypernym	hypernym
+systems acquisition	control	hypernym	hypernym
+technical vulnerabilities control compliant organization	control	hypernym	hypernym
+security management framework control	control	hypernym	hypernym
+application evaluation	control	hypernym	hypernym
+control	outsourcing	hyponym	hyponym
+physical perimeter protection	control	hypernym	hypernym
+mobile device control	control	hypernym	hypernym
+change control procedures	control	hypernym	hypernym
+system capacity	software	hypernym	hypernym
+removable media	control	hypernym	hypernym
+IT component	control	hypernym	hypernym
+secure areas control compliant building	control	hypernym	hypernym
+physical access key control	control	hypernym	hypernym
+packet filter firewall	firewall	hypernym	hypernym
+new facilities authorization	control	hypernym	hypernym
+restrictive granting of access rights control compliant organization	control	hypernym	hypernym
+visitors	control	hypernym	hypernym
+backup storage media	control	hypernym	hypernym
+data backup storage control	control	hypernym	hypernym
+access control regulation control compliant organization	control	hypernym	hypernym
+environmental conditions monitoring	control	hypernym	hypernym
+external connections authentication	control	hypernym	hypernym
+water alarm system control compliant section	control	hypernym	hypernym
+business continuity management process control compliant organization	control	hypernym	hypernym
+transaction security and virus protection	software	hypernym	hypernym
+physical media transit control compliant organization	control	hypernym	hypernym
+firewall regulation	control	hypernym	hypernym
+data deletion software	software	hypernym	hypernym
+personal firewall	control	hypernym	hypernym
+cloud computing	control	hypernym	hypernym
+environmental conditions monitoring software	software	hypernym	hypernym
+data encryption software control compliant computer	control	hypernym	hypernym
+unauthorized use control compliant organization	control	hypernym	hypernym
+anti virus software control compliant computer	control	hypernym	hypernym
+user registration	control	hypernym	hypernym
+equipment identification computer	control	hypernym	hypernym
+safety door control	control	hypernym	hypernym
+emergency recovery control	control	hypernym	hypernym
+security training	control	hypernym	hypernym
+virus protection	software	hypernym	hypernym
+port security diagnostic and configuration control compliant organization	control	hypernym	hypernym
+computer anti virus	control	hypernym	hypernym
+network segregation control	control	hypernym	hypernym
+risk assessment control	control	hypernym	hypernym
+unauthorized use prevention	control	hypernym	hypernym
+processing validation	control	hypernym	hypernym
+network monitoring control compliant organization	control	hypernym	hypernym
+antivirus software control compliant computer	control	hypernym	hypernym
+application evaluation control compliant organization	control	hypernym	hypernym
+port security diagnostic and configuration control	control	hypernym	hypernym
+data security handbook	control	hypernym	hypernym
+information passing control	control	hypernym	hypernym
+anti virus	software	hypernym	hypernym
+config	document	hypernym	hypernym
+mobile antivirus	control	hypernym	hypernym
+lightning arrester control compliant building	control	hypernym	hypernym
+delivery and loading areas	control	hypernym	hypernym
+network logging control	control	hypernym	hypernym
+clock synchronization software	software	hypernym	hypernym
+placement control compliant IT component	control	hypernym	hypernym
+social network control	control	hypernym	hypernym
+human resource development control compliant organization	control	hypernym	hypernym
+information passing policy	control	hypernym	hypernym
+compliance control	control	hypernym	hypernym
+data deletion	software	hypernym	hypernym
+data check	software	hypernym	hypernym
+network routing	control	hypernym	hypernym
+external connections control compliant organization	control	hypernym	hypernym
+automatic locking control compliant computer	control	hypernym	hypernym
+user registration and deregistration control compliant organization	control	hypernym	hypernym
+data breach notification control compliant organization	control	hypernym	hypernym
+emergency planning control	control	hypernym	hypernym
+electric installation control compliant organization	control	hypernym	hypernym
+antivirus control compliant mobile device	control	hypernym	hypernym
+system capacity control compliant organization	control	hypernym	hypernym
+regulation control compliant organization	control	hypernym	hypernym
+data secrecy control	control	hypernym	hypernym
+transaction security protection software	software	hypernym	hypernym
+virus infection control	control	hypernym	hypernym
+outsourcing control compliant organization	control	hypernym	hypernym
+theft protection control compliant mobile device	control	hypernym	hypernym
+control	wlan	hyponym	hyponym
+cabling security control compliant building	control	hypernym	hypernym
+theft protection control compliant mobile	control	hypernym	hypernym
+audit organization	control	hypernym	hypernym
+removable media control	control	hypernym	hypernym
+mobile code blocking control	control	hypernym	hypernym
+maintenance contract control	control	hypernym	hypernym
+assets	control	hypernym	hypernym
+private software and hardware control	control	hypernym	hypernym
+cabling security building	control	hypernym	hypernym
+media and communication scanning	control	hypernym	hypernym
+electronic messaging protection control compliant organization	control	hypernym	hypernym
+configuration data control	control	hypernym	hypernym
+physical perimeter protection control compliant organization	control	hypernym	hypernym
+internet regulation control compliant organization	control	hypernym	hypernym
+water alarm system	control	hypernym	hypernym
+position responsibilites and deputizing control	control	hypernym	hypernym
+physical perimeter protection policy	control	hypernym	hypernym
+physical access key control compliant organization	control	hypernym	hypernym
+data check software	software	hypernym	hypernym
+online encryption software	software	hypernym	hypernym
+mobile code blocking control compliant organization	control	hypernym	hypernym
+network segregation	control	hypernym	hypernym
+transaction security protection	software	hypernym	hypernym
+control	teleworking	hyponym	hyponym
+wlan control	control	hypernym	hypernym
+position responsibilites and deputizing	control	hypernym	hypernym
+private software and hardware control compliant organization	control	hypernym	hypernym
+cloud computing control compliant organization	control	hypernym	hypernym
+locked doors control compliant organization	control	hypernym	hypernym
+secure log on	control	hypernym	hypernym
+teleworking	organization	hypernym	hypernym
+delivery and loading areas control	control	hypernym	hypernym
+smoke detector control compliant section	control	hypernym	hypernym
+access regulation	control	hypernym	hypernym
+business continuity management	control	hypernym	hypernym
+environmental conditions monitoring sever room	control	hypernym	hypernym
+network monitoring	control	hypernym	hypernym
+environmental conditions monitoring control compliant organization	control	hypernym	hypernym
+equipment location control	control	hypernym	hypernym
+information passing	control	hypernym	hypernym
+visitors control compliant organization	control	hypernym	hypernym
+human behavior guidelines	control	hypernym	hypernym
+security relevant patches control	control	hypernym	hypernym
+security relevant patches and updates	control	hypernym	hypernym
+theft protection	software	hypernym	hypernym
+intrusion alarm system	control	hypernym	hypernym
+fire extinguisher control compliant server room	control	hypernym	hypernym
+application evaluation control	control	hypernym	hypernym
+service contract	contract	hypernym	hypernym
+information security policy control compliant organization	control	hypernym	hypernym
+automatic locking control	control	hypernym	hypernym
+cabling security	control	hypernym	hypernym
+firewall regulation control	control	hypernym	hypernym
+equipment identification control	control	hypernym	hypernym
+encryption of confidential data control	control	hypernym	hypernym
+air conditioning control	control	hypernym	hypernym
+password regulation control compliant computer	control	hypernym	hypernym
+system capacity	control	hypernym	hypernym
+appropriate contacts compliant organization	control	hypernym	hypernym
+complex firewall	firewall	hypernym	hypernym
+information security policy	control	hypernym	hypernym
+raised floor control compliant level	control	hypernym	hypernym
+security relevant patches and updates control compliant organization	control	hypernym	hypernym
+personal firewall control	control	hypernym	hypernym
+session time control compliant organization	control	hypernym	hypernym
+visible identification control compliant building	control	hypernym	hypernym
+temperature surveillance control	control	hypernym	hypernym
+human resource development	control	hypernym	hypernym
+backup media	control	hypernym	hypernym
+data backup control	control	hypernym	hypernym
+teleworking control compliant organization	control	hypernym	hypernym
+locked doors control	control	hypernym	hypernym
+human behavior guidelines control compliant organization	control	hypernym	hypernym
+access regulation control compliant building	control	hypernym	hypernym
+fire suppression control	control	hypernym	hypernym
+removable media control compliant organization	control	hypernym	hypernym
+user authentication control compliant organization	control	hypernym	hypernym
+automatic locking control compliant mobile device	control	hypernym	hypernym
+secure areas control	control	hypernym	hypernym
+intrusion alarm system control	control	hypernym	hypernym
+antivirus control compliant mobile	control	hypernym	hypernym
+third party service management control	control	hypernym	hypernym
+air conditioning server room	control	hypernym	hypernym
+temperature surveillance	control	hypernym	hypernym
+anti virus software	control	hypernym	hypernym
+cloud computing control	control	hypernym	hypernym
+fire extinguisher control compliant section	control	hypernym	hypernym
+internet filter	software	hypernym	hypernym
+information security policy control	control	hypernym	hypernym
+equipment location	control	hypernym	hypernym
+human behavior guidelines control compliant control organization	control	hypernym	hypernym
+maintenance contract	contract	hypernym	hypernym
+media scanning	control	hypernym	hypernym
+raised floor control	control	hypernym	hypernym
+network monitoring	software	hypernym	hypernym
+emergency planning	control	hypernym	hypernym
+fire safety control compliant organizations	control	hypernym	hypernym
+teleworking	control	hypernym	hypernym
+wlan control compliant organization	control	hypernym	hypernym
+business continuity management process	control	hypernym	hypernym
+network services agreement	control	hypernym	hypernym
+documented operational procedures control compliant organization	control	hypernym	hypernym
+user authentication control	control	hypernym	hypernym
+audit logging control compliant organization	control	hypernym	hypernym
+systems testing control compliant organization	control	hypernym	hypernym
+antivirus control	control	hypernym	hypernym
+virus infection control compliant organization	control	hypernym	hypernym
+activities monitoring	software	hypernym	hypernym
+data backup storage control compliant organization	control	hypernym	hypernym
+software	os	hyponym	hyponym
+technical vulnerabilities	control	hypernym	hypernym
+electronic commerce services control compliant organization	control	hypernym	hypernym
+emergency planning control compliant organization	control	hypernym	hypernym
+secure log on control compliant organization	control	hypernym	hypernym
+visitors control	control	hypernym	hypernym
+external staff control control	control	hypernym	hypernym
+environmental conditions monitoring control control	control	hypernym	hypernym
+data backup	control	hypernym	hypernym
+electric installation	control	hypernym	hypernym
+internet regulation	control	hypernym	hypernym
+automatic locking	software	hypernym	hypernym
+data encryption software control	control	hypernym	hypernym
+outsourcing control	control	hypernym	hypernym
+technical vulnerabilities control	control	hypernym	hypernym
+third party service management	control	hypernym	hypernym
+network routing control compliant organization	control	hypernym	hypernym
+information security risk awareness control compliant organization	control	hypernym	hypernym
+physical perimeter protection control	control	hypernym	hypernym
+audit monitoring control compliant organization	control	hypernym	hypernym
+information security independent review	control	hypernym	hypernym
+session time control	control	hypernym	hypernym
+delivery and loading areas control compliant building	control	hypernym	hypernym
+systems testing and acquisition control	control	hypernym	hypernym
+clock synchronization	control	hypernym	hypernym
+new facilities authorization control	control	hypernym	hypernym
+security management framework control compliant organization	control	hypernym	hypernym
+workstation	computer	hypernym	hypernym
+organizational records protection control compliant organization	control	hypernym	hypernym
+fire extinguisher control	control	hypernym	hypernym
+public data	data	hypernym	hypernym
+unauthorized use prevention compliant organization	control	hypernym	hypernym
+data backup control compliant organization	control	hypernym	hypernym
+system capacity monitoring control	control	hypernym	hypernym
+mobile device	control	hypernym	hypernym
+material storing control compliant building	control	hypernym	hypernym
+clear desk control	control	hypernym	hypernym
+employment contract	contract	hypernym	hypernym
+physical access key	control	hypernym	hypernym
+password manager	software	hypernym	hypernym
+physical media transit	control	hypernym	hypernym
+network logging and monitoring control compliant organization	control	hypernym	hypernym
+communication scanning control	control	hypernym	hypernym
+password regulation control	control	hypernym	hypernym
+clock synchronization control	control	hypernym	hypernym
+security relevant patches	control	hypernym	hypernym
+information security risk awareness control	control	hypernym	hypernym
+information security review control	control	hypernym	hypernym
+mobile anti virus	control	hypernym	hypernym
+sensitive information control	control	hypernym	hypernym
+unauthorized use prevention control compliant organization	control	hypernym	hypernym
+offline encryption	software	hypernym	hypernym
+port security diagnostic control	control	hypernym	hypernym
+network segregation control compliant organization	control	hypernym	hypernym
+clear desk	control	hypernym	hypernym
+fire extinguisher section	control	hypernym	hypernym
+temperature surveillance control compliant server room	control	hypernym	hypernym
+systems acquisition control compliant organization	control	hypernym	hypernym
+smoke detector	control	hypernym	hypernym
+system capacity monitoring	control	hypernym	hypernym
+processing validation control	control	hypernym	hypernym
+configuration data control compliant organization	control	hypernym	hypernym
+data backup storage	control	hypernym	hypernym
+social network control compliant organization	control	hypernym	hypernym
+environmental conditions monitoring control compliant sever room	control	hypernym	hypernym
+disciplinary process control compliant organization	control	hypernym	hypernym
+computer control	control	hypernym	hypernym
+data security handbook control compliant organization	control	hypernym	hypernym
+data breach notification control	control	hypernym	hypernym
+security relevant updates control	control	hypernym	hypernym
+data disposal control compliant organization	control	hypernym	hypernym
+organizational records protection control	control	hypernym	hypernym
+systems testing and acquisition control compliant organization	control	hypernym	hypernym
+sensitive information control compliant organization	control	hypernym	hypernym
+bared window control compliant section	control	hypernym	hypernym
+firewall control compliant computer	control	hypernym	hypernym
+systems testing and acquisition	control	hypernym	hypernym
+operational procedures	control	hypernym	hypernym
+network logging and monitoring control	control	hypernym	hypernym
+risk assessment control compliance organization	control	hypernym	hypernym
+electronic messaging protection control	control	hypernym	hypernym
+clear desk control compliant organization	control	hypernym	hypernym
+systems testing control	control	hypernym	hypernym
+audit logging	control	hypernym	hypernym
+identification software	software	hypernym	hypernym
+fire extinguisher server room	control	hypernym	hypernym
+bared window section	control	hypernym	hypernym
+offline encryption software	software	hypernym	hypernym
+security incidents procedures control	control	hypernym	hypernym
+clock synchronization	software	hypernym	hypernym
+locked doors	control	hypernym	hypernym
+media scanning control	control	hypernym	hypernym
+water alarm system control	control	hypernym	hypernym
+information security independent review control	control	hypernym	hypernym
+clock synchronization control compliant computer	control	hypernym	hypernym
+encryption of confidential data control compliant organization	control	hypernym	hypernym
+data breach notification	control	hypernym	hypernym
+configuration data	control	hypernym	hypernym
+security management framework	control	hypernym	hypernym
+data archiving	control	hypernym	hypernym
+media scanning control compliant organization	control	hypernym	hypernym
+material storing control	control	hypernym	hypernym
+cloud service contract	contract	hypernym	hypernym
+session time	control	hypernym	hypernym
+disciplinary process control	control	hypernym	hypernym
+sensitive data	data	hypernym	hypernym
+information security review	control	hypernym	hypernym
+port security diagnostic and configuration	control	hypernym	hypernym
+restrictive granting of access rights control	control	hypernym	hypernym
+user registration control	control	hypernym	hypernym
+security relevant updates control compliant organization	control	hypernym	hypernym
+internet filter software	software	hypernym	hypernym
+online encryption	software	hypernym	hypernym
+user identification authentication control	control	hypernym	hypernym
+system capacity monitoring control compliant organization	control	hypernym	hypernym
+antivirus software	control	hypernym	hypernym
+restrictive granting of access rights	control	hypernym	hypernym
+electric installation control	control	hypernym	hypernym
+appropriate contacts	control	hypernym	hypernym
+safety door control compliant section	control	hypernym	hypernym
+information security independent review control compliant organization	control	hypernym	hypernym
+exchange agreements control	control	hypernym	hypernym
+backup software	software	hypernym	hypernym
+port security diagnostic	control	hypernym	hypernym
+backup storage outside control compliant backup media	control	hypernym	hypernym
+organizational records protection	control	hypernym	hypernym
+access control compliant organization	control	hypernym	hypernym
+user authentication	control	hypernym	hypernym
+wlan	control	hypernym	hypernym
+security training control compliant organization	control	hypernym	hypernym
+network logging and monitoring	control	hypernym	hypernym
+data archiving control	control	hypernym	hypernym
+data archiving control compliant organization	control	hypernym	hypernym
+environmental conditions monitoring	software	hypernym	hypernym
+human behavior guidelines policy	control	hypernym	hypernym
+system capacity software	software	hypernym	hypernym
+material storing	control	hypernym	hypernym
+internet regulation policy	control	hypernym	hypernym
+uninterruptible power supply control compliant server room	control	hypernym	hypernym
+risk assessment	control	hypernym	hypernym
+network logging control compliant organization	control	hypernym	hypernym
+documented operational procedures	control	hypernym	hypernym
+transparent encryption software	software	hypernym	hypernym
+position responsibilites and deputizing control compliant organization	control	hypernym	hypernym
+network monitoring control	control	hypernym	hypernym
+virus protection software	software	hypernym	hypernym
+uninterruptible power supply control	control	hypernym	hypernym
+external staff control compliant organizations	control	hypernym	hypernym
+backup storage in-house control compliant backup media	control	hypernym	hypernym
+new facilities	control	hypernym	hypernym
+data secrecy	control	hypernym	hypernym
+external connections authentication control	control	hypernym	hypernym
+electronic commerce services control	control	hypernym	hypernym
+uninterruptible power supply	control	hypernym	hypernym
+personal firewall control compliant computer	control	hypernym	hypernym
+mobile code blocking	control	hypernym	hypernym
+security relevant updates	control	hypernym	hypernym
+compliance control compliance organization	control	hypernym	hypernym
+new facilities authorization control compliant organization	control	hypernym	hypernym
+fire safety	control	hypernym	hypernym
+internal data	data	hypernym	hypernym
+media and communication scanning control	control	hypernym	hypernym
+wlan	policy	hypernym	hypernym
+lightning arrester control	control	hypernym	hypernym
+system image	software	hypernym	hypernym
+private software and hardware	control	hypernym	hypernym
+encryption of confidential data	control	hypernym	hypernym
+network routing control	control	hypernym	hypernym
+network logging	control	hypernym	hypernym
+media and communication scanning control compliant organization	control	hypernym	hypernym
+human resource development control	control	hypernym	hypernym
+electronic commerce services	control	hypernym	hypernym
+change control procedures control compliant control	control	hypernym	hypernym
+maintenance contract	control	hypernym	hypernym
+teleworking	policy	hypernym	hypernym
+assets control	control	hypernym	hypernym
+fire suppression	control	hypernym	hypernym
+data encryption software	control	hypernym	hypernym
+physical media transit control	control	hypernym	hypernym
+password regulation	control	hypernym	hypernym
+information security risk awareness	control	hypernym	hypernym
+raised floor	control	hypernym	hypernym
+disciplinary process	control	hypernym	hypernym
+user registration control compliant organization	control	hypernym	hypernym
+firewall computer	control	hypernym	hypernym
+user registration and deregistration control	control	hypernym	hypernym
+data disposal	control	hypernym	hypernym
+social network	control	hypernym	hypernym
+network services agreement control compliant organization	control	hypernym	hypernym
+multifunctional firewall	firewall	hypernym	hypernym
+security incidents procedures	control	hypernym	hypernym
+firewall control	control	hypernym	hypernym
+regulation control	control	hypernym	hypernym
+communication scanning	control	hypernym	hypernym
+data encryption	control	hypernym	hypernym
+external connections	control	hypernym	hypernym
+theft protection control	control	hypernym	hypernym
+security relevant patches and updates control	control	hypernym	hypernym
+change control	control	hypernym	hypernym
+placement control	control	hypernym	hypernym
+intrusion alarm system control compliant section	control	hypernym	hypernym
+safety door	control	hypernym	hypernym
+virus infection	control	hypernym	hypernym
+secure log on control	control	hypernym	hypernym
+data secrecy control compliant organization	control	hypernym	hypernym
+human resource development policy	control	hypernym	hypernym
+server room	control	hypernym	hypernym
+sensitive information	control	hypernym	hypernym
+computer antivirus	control	hypernym	hypernym
+network services agreement control	control	hypernym	hypernym
+theft protection	control	hypernym	hypernym
+teleworking control	control	hypernym	hypernym
+emergency recovery	control	hypernym	hypernym
+activities monitoring software	software	hypernym	hypernym
+password compliant check	software	hypernym	hypernym
+assets control compliant organization	control	hypernym	hypernym
+network monitoring software	software	hypernym	hypernym
+processing validation control compliant computer	control	hypernym	hypernym
+user identification control	control	hypernym	hypernym
+data disposal control	control	hypernym	hypernym
+mobile device control compliant organization	control	hypernym	hypernym
+security training control	control	hypernym	hypernym
+maintenance contract control compliant IT component	control	hypernym	hypernym
+access control	control	hypernym	hypernym
+lightning arrester	control	hypernym	hypernym
+automatic locking software	software	hypernym	hypernym
+kensington lock	control	hypernym	hypernym
+personal firewall	software	hypernym	hypernym
+user registration and deregistration	control	hypernym	hypernym
+installation media	software	hypernym	hypernym
+emergency recovery control compliant organization	control	hypernym	hypernym
+external staff	control	hypernym	hypernym
+network services	control	hypernym	hypernym
+bared window	control	hypernym	hypernym
+electronic messaging protection	control	hypernym	hypernym
+information passing control compliant organization	control	hypernym	hypernym
+smoke detector control	control	hypernym	hypernym
+automatic locking	control	hypernym	hypernym
+audit logging and monitoring control compliant organization	control	hypernym	hypernym
+anti virus	control	hypernym	hypernym
+information security review control compliant organization	control	hypernym	hypernym
+data security handbook control	control	hypernym	hypernym
+theft protection software	software	hypernym	hypernym
+transaction security and virus protection software	software	hypernym	hypernym
+secure areas	control	hypernym	hypernym
+security incidents procedures control compliant organization	control	hypernym	hypernym
+system capacity control	control	hypernym	hypernym
+firewall regulation control compliant organization	control	hypernym	hypernym
+user identification	control	hypernym	hypernym
+equipment identification control compliant computer	control	hypernym	hypernym
+user identification control compliant organization	control	hypernym	hypernym
+equipment identification	control	hypernym	hypernym
