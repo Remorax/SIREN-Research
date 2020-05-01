@@ -5,24 +5,35 @@ from math import ceil
 from itertools import count
 from collections import defaultdict
 from difflib import SequenceMatcher
+import tensorflow as tf
+import tensorflow_hub as hub
 from scipy import spatial
 import torch.optim as optim
 import torch.nn as nn
 from sklearn.metrics import accuracy_score
-from skorch import NeuralNetClassifier
 
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 NUM_RELATIONS = len(relations)
 
 mappingDict = {key: idx for (idx,key) in enumerate(relations)}
 mappingDict_inv = {idx: key for (idx,key) in enumerate(relations)}
+# prefix = "../junk/Files/temp_threshold_3_4/temp"
+# train_file = "../junk/train.tsv"
+# test_file = "../junk/test.tsv"
+# output_folder = "../junk/Output/"
+# embeddings_folder = "../junk/Glove.dat"
+# embeddings_file = "/Users/vivek/SIREN-Research/Archive-LSTM/glove.6B/glove.6B.300d.txt"
 
 prefix = "/home/vivek.iyer/"
-output_folder = "../junk/Output/"
+output_folder = "../junk/Output"
 embeddings_folder = "../junk/Glove.dat"
 embeddings_file = "/home/vivek.iyer/glove.6B.300d.txt"
-model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt"
+model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/model.pt"
 
+output_folder += "_".join(sys.argv[1:])
+os.mkdir(output_folder)
+
+model_filename += "_".join(sys.argv[1:])
 
 def load_embeddings_from_disk():
     try:
@@ -90,6 +101,7 @@ NULL_PATH = ((0, 0, 0, 0),)
 
 file = open("dataset_parsed.pkl", 'rb')
 parsed_train, parsed_test, parsed_instances, parsed_knocked, pos_indexer, dep_indexer, dir_indexer  = pickle.load(file)
+parsed_train = tuple(el[:100] for el in parsed_train)
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 NUM_RELATIONS = len(relations)
 
@@ -108,7 +120,6 @@ class LSTM(nn.Module):
         self.input_dim = POS_DIM + DEP_DIM + EMBEDDING_DIM + DIR_DIM
         self.W = nn.Linear(self.hidden_dim, NUM_RELATIONS)
         self.dropout_layer = nn.Dropout(p=dropout)
-        self.softmax = nn.Softmax()
         
         self.word_embeddings = nn.Embedding(len(emb_indexer), EMBEDDING_DIM)
         self.word_embeddings.load_state_dict({'weight': torch.from_numpy(np.array(embeddings))})
@@ -166,7 +177,7 @@ class LSTM(nn.Module):
             # print (x.shape, path_embedding.shape, y.shape)
             path_embedding_cat = torch.cat((x, path_embedding, y))
             # print ("Path embedding after cat with embeddings: ", path_embedding.shape)
-            probabilities = self.softmax(self.W(path_embedding_cat))
+            probabilities = self.activation(self.W(path_embedding_cat))
             # print ("Probabilities: ", probabilities)
             h = torch.cat((h, probabilities.view(1,-1)), 0)
             idx += 1
@@ -187,32 +198,6 @@ def log_loss(output, target):
 def tensorifyTuple(tup):
     return tuple([tuple([torch.LongTensor([[e]]).to(device) for e in edge]) for edge in tup])
 
-parsed_train = tuple(el[:1000] for el in parsed_train)
-
-data = [{NULL_PATH: 1} if not el else el for el in np.array(parsed_train[1])]
-data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
-labels, embeddings_idx = np.array(parsed_train[2]), np.array(parsed_train[0])
-
-lstm = nn.DataParallel(LSTM()).to(device)
-net = NeuralNetClassifier(
-    lstm,
-    criterion=nn.NLLLoss,
-    optimizer=Adam,
-    max_epochs=5,
-    lr=0.001,
-    device='cuda',  # uncomment this to train with CUDA
-)
-
-# X_dict = {'X': data, 'length': X_len}
-net.fit((data, embeddings_idx), labels)
-
-data_test = [{NULL_PATH: 1} if not el else el for el in np.array(parsed_test[1])]
-data_test = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data_test]
-labels_test, embeddings_idx_test = np.array(parsed_test[2]), np.array(parsed_test[0])
-
-y_test = net.predict((data_test, embeddings_idx_test))
-
-
 def calculate_precision(true, pred):
     true_f, pred_f = [], []
     for l in true:
@@ -221,5 +206,138 @@ def calculate_precision(true, pred):
             pred_f.append(l)
     return accuracy_score(true_f, pred_f)
 
-print ("Accuracy score: ", accuracy_score(labels_test, y_test))
-print ("Precision score: ", calculate_precision(labels_test, y_test))
+def test(test_dataset, message, output_file):
+    predictedLabels, trueLabels = [], []
+    results = []
+
+    dataset_size = len(test_dataset[2])
+    batch_size = min(32, dataset_size)
+    num_batches = int(ceil(dataset_size/batch_size))
+
+    test_perm = np.random.permutation(dataset_size)
+    for batch_idx in range(num_batches):
+        
+        batch_end = (batch_idx+1) * batch_size
+        batch_start = batch_idx * batch_size
+        batch = test_perm[batch_start:batch_end]
+
+        data = [{NULL_PATH: 1} if not el else el for el in np.array(test_dataset[1])[batch]]
+        data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
+        labels, embeddings_idx = np.array(test_dataset[2])[batch], np.array(test_dataset[0])[batch]
+
+        outputs = lstm(data, embeddings_idx)
+        _, predicted = torch.max(outputs, 1)
+        predicted = [el.item() for el in predicted]
+        labels = [el.item() for el in labels]
+        predictedLabels.extend(predicted)
+        trueLabels.extend(labels)
+        results.extend(["\t".join(tup) for tup in zip(["\t".join(l) for l in np.array(test_dataset[3])[batch]], [mappingDict_inv[l] for l in predicted], [mappingDict_inv[l] for l in labels])])
+    accuracy = accuracy_score(trueLabels, predictedLabels)
+    precision = calculate_precision(trueLabels, predictedLabels)
+    open(output_file, "w+").write("\n".join(results))
+    write ("\n\n{}\n\n".format(message))
+    write ("Accuracy:" + str(accuracy) + str( " Precision:") + str(precision))
+
+    return accuracy, precision
+    
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
+
+# print ("num_relations:", NUM_RELATIONS)
+HIDDEN_DIM = int(sys.argv[1])
+NUM_LAYERS = int(sys.argv[2])
+num_epochs = 10
+batch_size = 5000
+
+dataset_size = len(parsed_train[2])
+batch_size = min(batch_size, dataset_size)
+num_batches = int(ceil(dataset_size/batch_size))
+
+lr = 0.001
+dropout = float(sys.argv[3])
+lstm = nn.DataParallel(LSTM()).to(device)
+criterion = nn.NLLLoss()
+
+optimizer = optim.Adam(lstm.parameters(), lr=lr)
+
+lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
+lstm = lstm.to(device)
+for state in optimizer.state.values():
+    for k, v in state.items():
+        if isinstance(v, torch.Tensor):
+            state[k] = v.to(device)
+                    
+loss_list = []
+
+parsed_train_1 = tuple(el[int(len(dataset_size)/3):] for el in parsed_train)
+parsed_val_1 = tuple(el[:int(len(dataset_size)/3)] for el in parsed_train)
+
+parsed_train_2 = tuple(el[int(len(dataset_size)/3):2*int(len(dataset_size)/3)] for el in parsed_train)
+parsed_val_2 = tuple(el[:int(len(dataset_size)/3)] + el[2*int(len(dataset_size)/3):] for el in parsed_train)
+
+parsed_train_3 = tuple(el[:2*int(len(dataset_size)/3)] for el in parsed_train)
+parsed_val_3 = tuple(el[2*int(len(dataset_size)/3):] for el in parsed_train)
+
+def train_fn():
+    write("\t".join(sys.argv))
+    for epoch in range(num_epochs):
+    
+        total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
+        
+        if False:
+            lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
+            lstm = lstm.to(device)
+            for state in optimizer.state.values():
+                for k, v in state.items():
+                    if isinstance(v, torch.Tensor):
+                        state[k] = v.to(device)
+                        
+        for batch_idx in range(num_batches):
+            print (batch_idx, num_batches)
+            if batch_idx % 100 == 0:
+                write("Batch_idx " + str(batch_idx))
+            batch_end = (batch_idx+1) * batch_size
+            batch_start = batch_idx * batch_size
+            batch = epoch_idx[batch_start:batch_end]
+            
+            # print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
+            data = [{NULL_PATH: 1} if not el else el for el in np.array(parsed_train[1])[batch]]
+            data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
+            labels, embeddings_idx = np.array(parsed_train[2])[batch], np.array(parsed_train[0])[batch]
+            
+            # Run the forward pass
+            outputs = lstm(data, embeddings_idx)
+            # print (outputs, labels)
+            loss = criterion(outputs, torch.LongTensor(labels).to(device))
+            if batch_idx % 100 == 0:
+                write("Loss: " + str(loss.item()))
+            # Backprop and perform Adam optimisation
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+            total_loss += loss.item()
+        state = {'epoch': epoch + 1, 'state_dict': lstm.state_dict(),
+                 'optimizer': optimizer.state_dict()}
+        torch.save(state, model_filename)
+        
+        total_loss /= dataset_size
+        write('Epoch [{}/{}] Loss: {:.4f}'.format(epoch + 1, num_epochs, total_loss))
+        loss_list.append(loss.item())
+
+    lstm.eval()
+    with torch.no_grad():
+        a1, p1 = test(parsed_test, "Test Set:", output_folder + "test.tsv")
+        a2, p2 = test(parsed_instances, "Instance Set:", output_folder + "test_instance.tsv")
+        a3, p3 = test(parsed_knocked, "Knocked out Set:", output_folder + "test_knocked.tsv")
+    return np.array([a1, a2, a3]), np.array([p1, p2, p3])
+        
+
+accs1, precisions1 = train_fn(parsed_train_1, parsed_val_1)
+accs2, precisions2 = train_fn(parsed_train_2, parsed_val_2)
+accs3, precisions3 = train_fn(parsed_train_3, parsed_val_3)
+
+acc_average = np.mean([accs1, accs2, accs3], axis=0)
+prec_average = np.mean([precisions1, precisions2, precisions3], axis=0)
+write("av Accuracy: " + str(acc_average) + "Ave precision: " + str(prec_average))
+
+os.remove(model_filename)
