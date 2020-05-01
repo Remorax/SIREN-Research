@@ -1,74 +1,244 @@
 
 Emb: <class 'numpy.ndarray'>
 
-Batch_idx 0
-
-Loss: 51.447734570388704
-
-Epoch [1/10] Loss: 1.1171
+=> no checkpoint found at 'model.pt'
 
 Batch_idx 0
 
-Loss: 21.586354875902252
+Loss: 53.41098026876293
 
-Epoch [2/10] Loss: 0.3994
+Batch_idx 100
+
+Loss: 10.476761906934605
+
+Batch_idx 200
+
+Loss: 9.980553499101097
+
+Batch_idx 300
+
+Loss: 9.501304536747474
+
+Batch_idx 400
+
+Loss: 13.324828547713524
+
+Batch_idx 500
+
+Loss: 4.715195702573628
+
+Batch_idx 600
+
+Loss: 11.98439223098035
+
+Batch_idx 700
+
+Loss: 3.2381356071304435
+
+Batch_idx 800
+
+Loss: 10.882387984482449
+
+Batch_idx 900
+
+Loss: 12.40802487578204
+
+Batch_idx 1000
+
+Loss: 8.388879718477563
+
+Batch_idx 1100
+
+Loss: 2.4646251582010867
+
+Batch_idx 1200
+
+Loss: 1.7258827523315172
+
+Batch_idx 1300
+
+Loss: 4.2076159724778375
+
+Batch_idx 1400
+
+Loss: 8.27514940916987
+
+Batch_idx 1500
+
+Loss: 3.219844033750343
+
+Batch_idx 1600
+
+Loss: 1.9474651121228266
+
+Batch_idx 1700
+
+Loss: 6.994442916087655
+
+Batch_idx 1800
+
+Loss: 3.7923410530101
+
+Batch_idx 1900
+
+Loss: 2.843822320055005
+
+Batch_idx 2000
+
+Loss: 0.47062916402766
+
+Batch_idx 2100
+
+Loss: 7.808304212267721
+
+Batch_idx 2200
+
+Loss: 5.910983490900547
+
+Batch_idx 2300
+
+Loss: 9.425826919086221
+
+Batch_idx 2400
+
+Loss: 1.2250048385473187
+
+Batch_idx 2500
+
+Loss: 1.9162729069050655
+
+Epoch [1/10] Loss: 0.1880
 
 Batch_idx 0
 
-Loss: 8.539487005698003
+Loss: 2.4870515927451566
 
-Epoch [3/10] Loss: 0.2399
+Batch_idx 100
 
-Batch_idx 0
+Loss: 3.3707678834799415
 
-Loss: 11.242067728441159
+Batch_idx 200
 
-Epoch [4/10] Loss: 0.1984
+Loss: 2.897494118278651
 
-Batch_idx 0
+Batch_idx 300
 
-Loss: 6.094230321732099
+Loss: 0.47922089173715954
 
-Epoch [5/10] Loss: 0.1703
+Batch_idx 400
 
-Batch_idx 0
+Loss: 1.9610229868060052
 
-Loss: 5.4479846659968825
+Batch_idx 500
 
-Epoch [6/10] Loss: 0.1470
+Loss: 6.791162569067636
 
-Batch_idx 0
+Batch_idx 600
 
-Loss: 2.9895127302245434
+Loss: 3.9432475369170685
 
-Epoch [7/10] Loss: 0.1277
+Batch_idx 700
 
-Batch_idx 0
-
-Loss: 3.398905326603457
-
-Epoch [8/10] Loss: 0.1135
-
-Batch_idx 0
-
-Loss: 6.713061051495617
-
-Epoch [9/10] Loss: 0.1029
-
-Batch_idx 0
-
-Loss: 4.988428359027504
-
-Epoch [10/10] Loss: 0.0941
+Loss: 4.565023601619531
 
 Emb: <class 'numpy.ndarray'>
 
 => no checkpoint found at 'model.pt'
 
+Batch_idx 0
+
+Loss: 1628.5555057773072
+
+Epoch [1/10] Loss: 0.6145
+
+Batch_idx 0
+
+Loss: 218.69075005611953
+
+Epoch [2/10] Loss: 0.1901
+
+Batch_idx 0
+
+Loss: 167.64907523783467
+
+Epoch [3/10] Loss: 0.1627
+
+Batch_idx 0
+
+Loss: 145.08283509891302
+
+Epoch [4/10] Loss: 0.1517
+
+Batch_idx 0
+
+Loss: 156.54393621253178
+
+Epoch [5/10] Loss: 0.1448
+
+Batch_idx 0
+
+Loss: 149.89251713219738
+
+Epoch [6/10] Loss: 0.1401
+
+Batch_idx 0
+
+Loss: 106.40761372631633
+
 Emb: <class 'numpy.ndarray'>
 
 => no checkpoint found at 'model.pt'
 
+=> no checkpoint found at 'model.pt'
+
+Batch_idx 0
+
+Loss: 1636.810538234141
+
 Emb: <class 'numpy.ndarray'>
 
-=> no checkpoint found at 'model.pt'
+=> loading checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt'
+
+=> loaded checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt' (epoch 6)
+
+=> loading checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt'
+
+=> loaded checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt' (epoch 6)
+
+Batch_idx 0
+
+Loss: 132.9966052465503
+
+Emb: <class 'numpy.ndarray'>
+
+=> loading checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt'
+
+=> loaded checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt' (epoch 6)
+
+=> loading checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt'
+
+=> loaded checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt' (epoch 6)
+
+Batch_idx 0
+
+Loss: 120.85109192048509
+
+Epoch [7/10] Loss: 0.1366
+
+Batch_idx 0
+
+Loss: 162.3528913448717
+
+Epoch [8/10] Loss: 0.1341
+
+Batch_idx 0
+
+Loss: 121.99542039800828
+
+Epoch [9/10] Loss: 0.1321
+
+Batch_idx 0
+
+Loss: 122.05476863203523
+
+Epoch [10/10] Loss: 0.1306

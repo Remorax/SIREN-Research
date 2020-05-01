@@ -73,7 +73,7 @@ def create_embeddings():
     
     return vectors, word2idx
 
-def load_checkpoint(model, optimizer, filename='model.pt'):
+def load_checkpoint(model, optimizer, filename=model_filename):
     # Note: Input model & optimizer should be pre-defined.  This routine only updates their states.
     start_epoch = 0
     if os.path.isfile(filename):
@@ -201,7 +201,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 HIDDEN_DIM = 60
 NUM_LAYERS = 2
 num_epochs = 10
-batch_size = 32
+batch_size = 1000
 
 dataset_size = len(parsed_train[2])
 batch_size = min(batch_size, dataset_size)
@@ -222,11 +222,11 @@ for state in optimizer.state.values():
                     
 loss_list = []
 
-for epoch in range(num_epochs):
+for epoch in range(6,num_epochs):
     
     total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
     
-    if False:
+    if epoch==6:
         lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
         lstm = lstm.to(device)
         for state in optimizer.state.values():
@@ -235,6 +235,7 @@ for epoch in range(num_epochs):
                     state[k] = v.to(device)
                     
     for batch_idx in range(num_batches):
+        print (batch_idx, num_batches)
         if batch_idx % 100 == 0:
             write("Batch_idx " + str(batch_idx))
         batch_end = (batch_idx+1) * batch_size
