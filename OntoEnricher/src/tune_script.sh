@@ -1,5 +1,3 @@
-
-
 #!/bin/bash
 
 #SBATCH -A research
@@ -21,10 +19,9 @@ for hidden in "${hidden_dim[@]}"
 do
 	for layer in "${layers[@]}"
 	do
-		for dropout in dropouts:
+		for dropout in "${dropouts[@]}"
 		do
-			(python3 tune_params.py hidden layer dropout) &
+			python3 tune_params.py $hidden $layer $dropout 
 		done
 	done
 done
-wait

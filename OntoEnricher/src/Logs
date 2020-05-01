@@ -1,244 +1,874 @@
 
 Emb: <class 'numpy.ndarray'>
 
-=> no checkpoint found at 'model.pt'
-
-Batch_idx 0
-
-Loss: 53.41098026876293
-
-Batch_idx 100
-
-Loss: 10.476761906934605
-
-Batch_idx 200
-
-Loss: 9.980553499101097
-
-Batch_idx 300
-
-Loss: 9.501304536747474
-
-Batch_idx 400
-
-Loss: 13.324828547713524
-
-Batch_idx 500
-
-Loss: 4.715195702573628
-
-Batch_idx 600
-
-Loss: 11.98439223098035
-
-Batch_idx 700
-
-Loss: 3.2381356071304435
-
-Batch_idx 800
-
-Loss: 10.882387984482449
-
-Batch_idx 900
-
-Loss: 12.40802487578204
-
-Batch_idx 1000
-
-Loss: 8.388879718477563
-
-Batch_idx 1100
-
-Loss: 2.4646251582010867
-
-Batch_idx 1200
-
-Loss: 1.7258827523315172
-
-Batch_idx 1300
-
-Loss: 4.2076159724778375
-
-Batch_idx 1400
-
-Loss: 8.27514940916987
-
-Batch_idx 1500
-
-Loss: 3.219844033750343
-
-Batch_idx 1600
-
-Loss: 1.9474651121228266
-
-Batch_idx 1700
-
-Loss: 6.994442916087655
-
-Batch_idx 1800
-
-Loss: 3.7923410530101
-
-Batch_idx 1900
-
-Loss: 2.843822320055005
-
-Batch_idx 2000
-
-Loss: 0.47062916402766
-
-Batch_idx 2100
-
-Loss: 7.808304212267721
-
-Batch_idx 2200
-
-Loss: 5.910983490900547
-
-Batch_idx 2300
-
-Loss: 9.425826919086221
-
-Batch_idx 2400
-
-Loss: 1.2250048385473187
-
-Batch_idx 2500
-
-Loss: 1.9162729069050655
-
-Epoch [1/10] Loss: 0.1880
-
-Batch_idx 0
-
-Loss: 2.4870515927451566
-
-Batch_idx 100
-
-Loss: 3.3707678834799415
-
-Batch_idx 200
-
-Loss: 2.897494118278651
-
-Batch_idx 300
-
-Loss: 0.47922089173715954
-
-Batch_idx 400
-
-Loss: 1.9610229868060052
-
-Batch_idx 500
-
-Loss: 6.791162569067636
-
-Batch_idx 600
-
-Loss: 3.9432475369170685
-
-Batch_idx 700
-
-Loss: 4.565023601619531
+Emb: <class 'numpy.ndarray'>
 
 Emb: <class 'numpy.ndarray'>
 
-=> no checkpoint found at 'model.pt'
-
-Batch_idx 0
-
-Loss: 1628.5555057773072
-
-Epoch [1/10] Loss: 0.6145
-
-Batch_idx 0
-
-Loss: 218.69075005611953
-
-Epoch [2/10] Loss: 0.1901
-
-Batch_idx 0
-
-Loss: 167.64907523783467
-
-Epoch [3/10] Loss: 0.1627
-
-Batch_idx 0
-
-Loss: 145.08283509891302
-
-Epoch [4/10] Loss: 0.1517
-
-Batch_idx 0
-
-Loss: 156.54393621253178
-
-Epoch [5/10] Loss: 0.1448
-
-Batch_idx 0
-
-Loss: 149.89251713219738
-
-Epoch [6/10] Loss: 0.1401
-
-Batch_idx 0
-
-Loss: 106.40761372631633
+Emb: <class 'numpy.ndarray'>
 
 Emb: <class 'numpy.ndarray'>
 
-=> no checkpoint found at 'model.pt'
-
-=> no checkpoint found at 'model.pt'
-
-Batch_idx 0
-
-Loss: 1636.810538234141
+Emb: <class 'numpy.ndarray'>
 
 Emb: <class 'numpy.ndarray'>
 
-=> loading checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt'
-
-=> loaded checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt' (epoch 6)
-
-=> loading checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt'
-
-=> loaded checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt' (epoch 6)
-
-Batch_idx 0
-
-Loss: 132.9966052465503
+Emb: <class 'numpy.ndarray'>
 
 Emb: <class 'numpy.ndarray'>
 
-=> loading checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt'
+Emb: <class 'numpy.ndarray'>
 
-=> loaded checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt' (epoch 6)
+Emb: <class 'numpy.ndarray'>
 
-=> loading checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt'
+Emb: <class 'numpy.ndarray'>
 
-=> loaded checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt' (epoch 6)
+Emb: <class 'numpy.ndarray'>
+
+Emb: <class 'numpy.ndarray'>
+
+Emb: <class 'numpy.ndarray'>
+
+Emb: <class 'numpy.ndarray'>
+
+Emb: <class 'numpy.ndarray'>
+
+Emb: <class 'numpy.ndarray'>
+
+Emb: <class 'numpy.ndarray'>
+
+Emb: <class 'numpy.ndarray'>
+
+Emb: <class 'numpy.ndarray'>
+
+Emb: <class 'numpy.ndarray'>
+
+Emb: <class 'numpy.ndarray'>
+
+Emb: <class 'numpy.ndarray'>
+
+Emb: <class 'numpy.ndarray'>
+
+Emb: <class 'numpy.ndarray'>
+
+Emb: <class 'numpy.ndarray'>
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	2	0.3
 
 Batch_idx 0
 
-Loss: 120.85109192048509
+Emb: <class 'numpy.ndarray'>
 
-Epoch [7/10] Loss: 0.1366
-
-Batch_idx 0
-
-Loss: 162.3528913448717
-
-Epoch [8/10] Loss: 0.1341
+tune_params.py	60	2	0.5
 
 Batch_idx 0
 
-Loss: 121.99542039800828
+Emb: <class 'numpy.ndarray'>
 
-Epoch [9/10] Loss: 0.1321
+tune_params.py	60	2	0.8
 
 Batch_idx 0
 
-Loss: 122.05476863203523
+Emb: <class 'numpy.ndarray'>
 
-Epoch [10/10] Loss: 0.1306
+tune_params.py	60	4	0.3
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	4	0.5
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	4	0.8
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	6	0.3
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	6	0.5
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	6	0.8
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	2	0.3
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	2	0.5
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	2	0.8
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	4	0.3
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	4	0.5
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	4	0.8
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	6	0.3
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	6	0.5
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	6	0.8
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	2	0.3
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	2	0.5
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	2	0.8
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	4	0.3
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	4	0.5
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	4	0.8
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	6	0.3
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	6	0.5
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	6	0.8
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	2	0.3
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	2	0.5
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	2	0.8
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	4	0.3
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	4	0.5
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	4	0.8
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	6	0.3
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	6	0.5
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	6	0.8
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	2	0.3
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	2	0.5
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	2	0.8
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	4	0.3
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	4	0.5
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	4	0.8
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	6	0.3
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	6	0.5
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	6	0.8
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	2	0.3
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	2	0.5
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	2	0.8
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	4	0.3
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	4	0.5
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	4	0.8
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	6	0.3
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	6	0.5
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	6	0.8
+
+Batch_idx 0
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	2	0.3
+
+Batch_idx 0
+
+Loss: -0.1986397341741009
+
+Epoch [1/10] Loss: -0.0030
+
+Batch_idx 0
+
+Loss: -0.20576228948642739
+
+Epoch [2/10] Loss: -0.0031
+
+Batch_idx 0
+
+Loss: -0.21313977344681398
+
+Epoch [3/10] Loss: -0.0032
+
+Batch_idx 0
+
+Loss: -0.22077142780585268
+
+Epoch [4/10] Loss: -0.0033
+
+Batch_idx 0
+
+Loss: -0.22868197887353098
+
+Epoch [5/10] Loss: -0.0034
+
+Batch_idx 0
+
+Loss: -0.23696939784111687
+
+Epoch [6/10] Loss: -0.0035
+
+Batch_idx 0
+
+Loss: -0.24562019015772388
+
+Epoch [7/10] Loss: -0.0037
+
+Batch_idx 0
+
+Loss: -0.25462232609617363
+
+Epoch [8/10] Loss: -0.0038
+
+Batch_idx 0
+
+Loss: -0.2641148915544983
+
+Epoch [9/10] Loss: -0.0039
+
+Batch_idx 0
+
+Loss: -0.27408728732105053
+
+Epoch [10/10] Loss: -0.0041
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	2	0.5
+
+Batch_idx 0
+
+Loss: -0.20210870622445862
+
+Epoch [1/10] Loss: -0.0030
+
+Batch_idx 0
+
+Loss: -0.20941790334195345
+
+Epoch [2/10] Loss: -0.0031
+
+Batch_idx 0
+
+Loss: -0.21693060266669714
+
+Epoch [3/10] Loss: -0.0032
+
+Batch_idx 0
+
+Loss: -0.22467220367615465
+
+Epoch [4/10] Loss: -0.0034
+
+Batch_idx 0
+
+Loss: -0.23266712618367524
+
+Epoch [5/10] Loss: -0.0035
+
+Batch_idx 0
+
+Loss: -0.24100510731502106
+
+Epoch [6/10] Loss: -0.0036
+
+Batch_idx 0
+
+Loss: -0.24963101114953148
+
+Epoch [7/10] Loss: -0.0037
+
+Batch_idx 0
+
+Loss: -0.25861995307310814
+
+Epoch [8/10] Loss: -0.0039
+
+Batch_idx 0
+
+Loss: -0.2680681950643622
+
+Epoch [9/10] Loss: -0.0040
+
+Batch_idx 0
+
+Loss: -0.2778949436663823
+
+Epoch [10/10] Loss: -0.0041
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	2	0.8
+
+Batch_idx 0
+
+Loss: -0.20693321224403982
+
+Epoch [1/10] Loss: -0.0031
+
+Batch_idx 0
+
+Loss: -0.2144295338672603
+
+Epoch [2/10] Loss: -0.0032
+
+Batch_idx 0
+
+Loss: -0.22219531925907687
+
+Epoch [3/10] Loss: -0.0033
+
+Batch_idx 0
+
+Loss: -0.23013276497636495
+
+Epoch [4/10] Loss: -0.0034
+
+Batch_idx 0
+
+Loss: -0.23848603157550796
+
+Epoch [5/10] Loss: -0.0036
+
+Batch_idx 0
+
+Loss: -0.24713459641210808
+
+Epoch [6/10] Loss: -0.0037
+
+Batch_idx 0
+
+Loss: -0.2561503998464217
+
+Epoch [7/10] Loss: -0.0038
+
+Batch_idx 0
+
+Loss: -0.2656037245109941
+
+Epoch [8/10] Loss: -0.0040
+
+Batch_idx 0
+
+Loss: -0.2754569180122067
+
+Epoch [9/10] Loss: -0.0041
+
+Batch_idx 0
+
+Loss: -0.2858536559082597
+
+Epoch [10/10] Loss: -0.0043
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	4	0.3
+
+Batch_idx 0
+
+Loss: -0.20050327572375412
+
+Epoch [1/10] Loss: -0.0030
+
+Batch_idx 0
+
+Loss: -0.20777318473760445
+
+Epoch [2/10] Loss: -0.0031
+
+Batch_idx 0
+
+Loss: -0.21530657057807526
+
+Epoch [3/10] Loss: -0.0032
+
+Batch_idx 0
+
+Loss: -0.22313159494395923
+
+Epoch [4/10] Loss: -0.0033
+
+Batch_idx 0
+
+Loss: -0.2312768414362514
+
+Epoch [5/10] Loss: -0.0035
+
+Batch_idx 0
+
+Loss: -0.2397752267330072
+
+Epoch [6/10] Loss: -0.0036
+
+Batch_idx 0
+
+Loss: -0.2486600776826894
+
+Epoch [7/10] Loss: -0.0037
+
+Batch_idx 0
+
+Loss: -0.257968169745539
+
+Epoch [8/10] Loss: -0.0039
+
+Batch_idx 0
+
+Loss: -0.2677380601801997
+
+Epoch [9/10] Loss: -0.0040
+
+Batch_idx 0
+
+Loss: -0.27800879672487105
+
+Epoch [10/10] Loss: -0.0041
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	4	0.5
+
+Batch_idx 0
+
+Loss: -0.19441819721260187
+
+Epoch [1/10] Loss: -0.0029
+
+Batch_idx 0
+
+Loss: -0.20155065209585407
+
+Epoch [2/10] Loss: -0.0030
+
+Batch_idx 0
+
+Loss: -0.20891343530223616
+
+Epoch [3/10] Loss: -0.0031
+
+Batch_idx 0
+
+Loss: -0.21653086450101444
+
+Epoch [4/10] Loss: -0.0032
+
+Batch_idx 0
+
+Loss: -0.22442845995758787
+
+Epoch [5/10] Loss: -0.0033
+
+Batch_idx 0
+
+Loss: -0.23263852072305824
+
+Epoch [6/10] Loss: -0.0035
+
+Batch_idx 0
+
+Loss: -0.2411933660963042
+
+Epoch [7/10] Loss: -0.0036
+
+Batch_idx 0
+
+Loss: -0.25012850590248986
+
+Epoch [8/10] Loss: -0.0037
+
+Batch_idx 0
+
+Loss: -0.2594854085801888
+
+Epoch [9/10] Loss: -0.0039
+
+Batch_idx 0
+
+Loss: -0.26930278956579284
+
+Epoch [10/10] Loss: -0.0040
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	4	0.8
+
+Batch_idx 0
+
+Loss: -0.20435578924119358
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	6	0.3
+
+Batch_idx 0
+
+Loss: -0.20526860272838743
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	6	0.5
+
+Batch_idx 0
+
+Loss: -0.1973160612353591
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	60	6	0.8
+
+Batch_idx 0
+
+Loss: -0.1974436969713504
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	2	0.3
+
+Batch_idx 0
+
+Loss: -0.19163104159920824
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	2	0.5
+
+Batch_idx 0
+
+Loss: -0.1995920345215104
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	2	0.8
+
+Batch_idx 0
+
+Loss: -0.1980414030967256
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	4	0.3
+
+Batch_idx 0
+
+Loss: -0.20083092052883603
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	4	0.5
+
+Batch_idx 0
+
+Loss: -0.20611926307381392
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	4	0.8
+
+Batch_idx 0
+
+Loss: -0.20402925374659192
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	6	0.3
+
+Batch_idx 0
+
+Loss: -0.19375240959270815
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	6	0.5
+
+Batch_idx 0
+
+Loss: -0.19697302499849945
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	90	6	0.8
+
+Batch_idx 0
+
+Loss: -0.20819679125972157
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	2	0.3
+
+Batch_idx 0
+
+Loss: -0.1907872672323946
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	2	0.5
+
+Batch_idx 0
+
+Loss: -0.20919828166940652
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	2	0.8
+
+Batch_idx 0
+
+Loss: -0.20335634785741977
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	4	0.3
+
+Batch_idx 0
+
+Loss: -0.20628466700078313
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	4	0.5
+
+Batch_idx 0
+
+Loss: -0.20111013178001344
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	4	0.8
+
+Batch_idx 0
+
+Loss: -0.20542600321317492
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	6	0.3
+
+Batch_idx 0
+
+Loss: -0.195794401404431
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	6	0.5
+
+Batch_idx 0
+
+Loss: -0.19737660123669945
+
+Emb: <class 'numpy.ndarray'>
+
+tune_params.py	120	6	0.8
+
+Batch_idx 0
+
+Loss: -0.210383810557101

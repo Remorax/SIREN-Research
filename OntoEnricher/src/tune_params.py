@@ -1,4 +1,4 @@
-import bcolz, pickle, torch, os, shelve
+import bcolz, pickle, torch, os, shelve, sys
 import concurrent.futures
 import numpy as np
 from math import ceil
@@ -31,7 +31,8 @@ embeddings_file = "/home/vivek.iyer/glove.6B.300d.txt"
 model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/model.pt"
 
 output_folder += "_".join(sys.argv[1:])
-os.mkdir(output_folder)
+if not os.path.isdir(output_folder):  
+    os.mkdir(output_folder)
 
 model_filename += "_".join(sys.argv[1:])
 
@@ -101,7 +102,7 @@ NULL_PATH = ((0, 0, 0, 0),)
 
 file = open("dataset_parsed.pkl", 'rb')
 parsed_train, parsed_test, parsed_instances, parsed_knocked, pos_indexer, dep_indexer, dir_indexer  = pickle.load(file)
-parsed_train = tuple(el[:100] for el in parsed_train)
+parsed_train = tuple(el[:10] for el in parsed_train)
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 NUM_RELATIONS = len(relations)
 
@@ -120,7 +121,8 @@ class LSTM(nn.Module):
         self.input_dim = POS_DIM + DEP_DIM + EMBEDDING_DIM + DIR_DIM
         self.W = nn.Linear(self.hidden_dim, NUM_RELATIONS)
         self.dropout_layer = nn.Dropout(p=dropout)
-        
+       	self.activation = nn.Softmax() 
+
         self.word_embeddings = nn.Embedding(len(emb_indexer), EMBEDDING_DIM)
         self.word_embeddings.load_state_dict({'weight': torch.from_numpy(np.array(embeddings))})
         self.word_embeddings.require_grad = False
@@ -206,10 +208,10 @@ def calculate_precision(true, pred):
             pred_f.append(l)
     return accuracy_score(true_f, pred_f)
 
-def test(test_dataset, message, output_file):
+def test(lstm, test_dataset, message, output_file):
     predictedLabels, trueLabels = [], []
     results = []
-
+    global mappingDict, mappingDict_inv
     dataset_size = len(test_dataset[2])
     batch_size = min(32, dataset_size)
     num_batches = int(ceil(dataset_size/batch_size))
@@ -240,7 +242,6 @@ def test(test_dataset, message, output_file):
 
     return accuracy, precision
     
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
 # print ("num_relations:", NUM_RELATIONS)
@@ -252,34 +253,32 @@ batch_size = 5000
 dataset_size = len(parsed_train[2])
 batch_size = min(batch_size, dataset_size)
 num_batches = int(ceil(dataset_size/batch_size))
-
-lr = 0.001
 dropout = float(sys.argv[3])
-lstm = nn.DataParallel(LSTM()).to(device)
-criterion = nn.NLLLoss()
-
-optimizer = optim.Adam(lstm.parameters(), lr=lr)
-
-lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
-lstm = lstm.to(device)
-for state in optimizer.state.values():
-    for k, v in state.items():
-        if isinstance(v, torch.Tensor):
-            state[k] = v.to(device)
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
                     
-loss_list = []
 
-parsed_train_1 = tuple(el[int(len(dataset_size)/3):] for el in parsed_train)
-parsed_val_1 = tuple(el[:int(len(dataset_size)/3)] for el in parsed_train)
+parsed_train_1 = tuple(el[int(dataset_size/3):] for el in parsed_train)
+parsed_val_1 = tuple(el[:int(dataset_size/3)] for el in parsed_train)
 
-parsed_train_2 = tuple(el[int(len(dataset_size)/3):2*int(len(dataset_size)/3)] for el in parsed_train)
-parsed_val_2 = tuple(el[:int(len(dataset_size)/3)] + el[2*int(len(dataset_size)/3):] for el in parsed_train)
+parsed_train_2 = tuple(el[int(dataset_size/3):2*int(dataset_size/3)] for el in parsed_train)
+parsed_val_2 = tuple(el[:int(dataset_size/3)] + el[2*int(dataset_size/3):] for el in parsed_train)
 
-parsed_train_3 = tuple(el[:2*int(len(dataset_size)/3)] for el in parsed_train)
-parsed_val_3 = tuple(el[2*int(len(dataset_size)/3):] for el in parsed_train)
+parsed_train_3 = tuple(el[:2*int(dataset_size/3)] for el in parsed_train)
+parsed_val_3 = tuple(el[2*int(dataset_size/3):] for el in parsed_train)
 
-def train_fn():
+def train_fn(parsed_train, parsed_test):
+    global emb_indexer
+    lr = 0.001
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    lstm = nn.DataParallel(LSTM()).to(device)
+    criterion = nn.NLLLoss()
+
+    optimizer = optim.Adam(lstm.parameters(), lr=lr)
     write("\t".join(sys.argv))
+    dataset_size = len(parsed_train[2])
+    batch_size = min(5000, dataset_size)
+    num_batches = int(ceil(dataset_size/batch_size))
+    loss_list = []
     for epoch in range(num_epochs):
     
         total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
@@ -326,9 +325,9 @@ def train_fn():
 
     lstm.eval()
     with torch.no_grad():
-        a1, p1 = test(parsed_test, "Test Set:", output_folder + "test.tsv")
-        a2, p2 = test(parsed_instances, "Instance Set:", output_folder + "test_instance.tsv")
-        a3, p3 = test(parsed_knocked, "Knocked out Set:", output_folder + "test_knocked.tsv")
+        a1, p1 = test(lstm, parsed_test, "Test Set:", output_folder + "test.tsv")
+        a2, p2 = test(lstm, parsed_instances, "Instance Set:", output_folder + "test_instance.tsv")
+        a3, p3 = test(lstm, parsed_knocked, "Knocked out Set:", output_folder + "test_knocked.tsv")
     return np.array([a1, a2, a3]), np.array([p1, p2, p3])
         
 
