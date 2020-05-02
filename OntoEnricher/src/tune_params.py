@@ -25,7 +25,7 @@ mappingDict_inv = {idx: key for (idx,key) in enumerate(relations)}
 # embeddings_file = "/Users/vivek/SIREN-Research/Archive-LSTM/glove.6B/glove.6B.300d.txt"
 
 prefix = "/home/vivek.iyer/"
-output_folder = "../junk/Output"
+output_folder = "../junk/Output/"
 embeddings_folder = "../junk/Glove.dat"
 embeddings_file = "/home/vivek.iyer/glove.6B.300d.txt"
 model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/model.pt"
@@ -121,7 +121,7 @@ class LSTM(nn.Module):
         self.input_dim = POS_DIM + DEP_DIM + EMBEDDING_DIM + DIR_DIM
         self.W = nn.Linear(self.hidden_dim, NUM_RELATIONS)
         self.dropout_layer = nn.Dropout(p=dropout)
-       	self.activation = nn.Softmax() 
+       	self.activation = nn.LogSoftmax() 
 
         self.word_embeddings = nn.Embedding(len(emb_indexer), EMBEDDING_DIM)
         self.word_embeddings.load_state_dict({'weight': torch.from_numpy(np.array(embeddings))})
@@ -202,6 +202,7 @@ def tensorifyTuple(tup):
 
 def calculate_precision(true, pred):
     true_f, pred_f = [], []
+    print (true, pred)
     for l in true:
         if l!=4:
             true_f.append(l)
