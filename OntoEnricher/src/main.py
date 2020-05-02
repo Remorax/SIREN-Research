@@ -25,12 +25,14 @@ mappingDict_inv = {idx: key for (idx,key) in enumerate(relations)}
 # embeddings_file = "/Users/vivek/SIREN-Research/Archive-LSTM/glove.6B/glove.6B.300d.txt"
 
 prefix = "/home/vivek.iyer/"
-output_folder = "../junk/Output/"
+output_folder = "../junk/Output/Baseline/"
 embeddings_folder = "../junk/Glove.dat"
 embeddings_file = "/home/vivek.iyer/glove.6B.300d.txt"
-model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline_debugged.pt"
+model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline.pt"
 
-
+if not os.path.isdir(output_folder):  
+    os.mkdir(output_folder)
+os.remove("Logs")
 def load_embeddings_from_disk():
     try:
         vectors = bcolz.open(embeddings_folder)[:]
@@ -201,7 +203,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 HIDDEN_DIM = 60
 NUM_LAYERS = 2
 num_epochs = 10
-batch_size = 1000
+batch_size = 5000
 
 dataset_size = len(parsed_train[2])
 batch_size = min(batch_size, dataset_size)
@@ -222,11 +224,11 @@ for state in optimizer.state.values():
                     
 loss_list = []
 
-for epoch in range(6,num_epochs):
+for epoch in range(num_epochs):
     
     total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
     
-    if epoch==6:
+    if False:
         lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
         lstm = lstm.to(device)
         for state in optimizer.state.values():
@@ -235,9 +237,8 @@ for epoch in range(6,num_epochs):
                     state[k] = v.to(device)
                     
     for batch_idx in range(num_batches):
-        print (batch_idx, num_batches)
-        if batch_idx % 100 == 0:
-            write("Batch_idx " + str(batch_idx))
+        
+        write("Batch_idx " + str(batch_idx))
         batch_end = (batch_idx+1) * batch_size
         batch_start = batch_idx * batch_size
         batch = epoch_idx[batch_start:batch_end]
@@ -252,8 +253,8 @@ for epoch in range(6,num_epochs):
         # print (outputs, labels)
         loss = log_loss(outputs, torch.LongTensor(labels).to(device))
         # loss = criterion(outputs, torch.LongTensor(labels).to(device))
-        if batch_idx % 100 == 0:
-            write("Loss: " + str(loss.item()))
+        
+        write("Loss: " + str(loss.item()))
         # Backprop and perform Adam optimisation
         optimizer.zero_grad()
         loss.backward()
@@ -269,16 +270,16 @@ for epoch in range(6,num_epochs):
 
 def calculate_precision(true, pred):
     true_f, pred_f = [], []
-    for l in true:
+    for i,l in enumerate(true):
         if l!=4:
             true_f.append(l)
-            pred_f.append(l)
+            pred_f.append(pred[i])
     return accuracy_score(true_f, pred_f)
 
 def test(test_dataset, message, output_file):
     predictedLabels, trueLabels = [], []
     results = []
-
+    global mappingDict, mappingDict_inv
     dataset_size = len(test_dataset[2])
     batch_size = min(32, dataset_size)
     num_batches = int(ceil(dataset_size/batch_size))
@@ -305,7 +306,7 @@ def test(test_dataset, message, output_file):
     precision = calculate_precision(trueLabels, predictedLabels)
     open(output_file, "w+").write("\n".join(results))
     print ("\n\n{}\n\n".format(message))
-    print ("Accuracy:", accuracy, "Precision:", precision)
+    write ("Accuracy:" + str(accuracy) + str( " Precision:") + str(precision))
 
 lstm.eval()
 with torch.no_grad():
