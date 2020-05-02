@@ -202,12 +202,12 @@ def tensorifyTuple(tup):
 
 def calculate_precision(true, pred):
     true_f, pred_f = [], []
-    print (true, pred)
-    for l in true:
+    for i,l in enumerate(true):
         if l!=4:
             true_f.append(l)
-            pred_f.append(l)
+            pred_f.append(pred[i])
     return accuracy_score(true_f, pred_f)
+
 
 def test(lstm, test_dataset, message, output_file):
     predictedLabels, trueLabels = [], []
