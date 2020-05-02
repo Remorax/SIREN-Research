@@ -102,7 +102,7 @@ NULL_PATH = ((0, 0, 0, 0),)
 
 file = open("dataset_parsed.pkl", 'rb')
 parsed_train, parsed_test, parsed_instances, parsed_knocked, pos_indexer, dep_indexer, dir_indexer  = pickle.load(file)
-parsed_train = tuple(el[:10] for el in parsed_train)
+parsed_train = tuple(el[:10000] for el in parsed_train)
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 NUM_RELATIONS = len(relations)
 
@@ -213,7 +213,7 @@ def test(lstm, test_dataset, message, output_file):
     results = []
     global mappingDict, mappingDict_inv
     dataset_size = len(test_dataset[2])
-    batch_size = min(32, dataset_size)
+    batch_size = min(5000, dataset_size)
     num_batches = int(ceil(dataset_size/batch_size))
 
     test_perm = np.random.permutation(dataset_size)
@@ -317,7 +317,6 @@ def train_fn(parsed_train, parsed_test):
             total_loss += loss.item()
         state = {'epoch': epoch + 1, 'state_dict': lstm.state_dict(),
                  'optimizer': optimizer.state_dict()}
-        torch.save(state, model_filename)
         
         total_loss /= dataset_size
         write('Epoch [{}/{}] Loss: {:.4f}'.format(epoch + 1, num_epochs, total_loss))
