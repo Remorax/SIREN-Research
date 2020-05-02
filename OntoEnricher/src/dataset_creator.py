@@ -152,10 +152,14 @@ def run(args):
 
     def parse_tuple(tup):
         x, y = entity_to_id(word2id_db, tup[0]), entity_to_id(word2id_db, tup[1])
-        paths = list(extract_paths(relations_db,x,y).items()) + list(extract_paths(relations_db,y,x).items())
-        x_word = id_to_entity(id2word_db, x) if x!=-1 else "X"
-        y_word = id_to_entity(id2word_db, y) if y!=-1 else "Y"
-        path_count_dict = { id_to_path(id2path_db, path).replace("X/", x_word+"/").replace("Y/", y_word+"/") : freq for (path, freq) in paths }
+        # paths = list(extract_paths(relations_db,x,y).items()) + list(extract_paths(relations_db,y,x).items())
+        # x_word = id_to_entity(id2word_db, x) if x!=-1 else "X"
+        # y_word = id_to_entity(id2word_db, y) if y!=-1 else "Y"
+        # path_count_dict = { id_to_path(id2path_db, path).replace("X/", x_word+"/").replace("Y/", y_word+"/") : freq for (path, freq) in paths }
+        paths_xy = list(extract_paths(relations_db,x,y).items())
+        paths_yx = list(extract_paths(relations_db,y,x).items())
+        path_count_dict = { id_to_path(id2path_db, path) : freq for (path, freq) in paths_xy }
+        path_count_dict.update({ id_to_path(id2path_db, path).replace("X/", '@@@').replace('Y/', 'X/').replace('@@@', 'Y/') : freq for (path, freq) in paths_yx })
         return path_count_dict
 
     def parse_dataset(dataset):
