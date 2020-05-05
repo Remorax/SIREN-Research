@@ -224,11 +224,11 @@ for state in optimizer.state.values():
                     
 loss_list = []
 
-for epoch in range(num_epochs):
+for epoch in range(7, num_epochs):
     
     total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
     
-    if False:
+    if epoch==7:
         lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
         lstm = lstm.to(device)
         for state in optimizer.state.values():
