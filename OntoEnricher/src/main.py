@@ -268,12 +268,20 @@ for epoch in range(7, num_epochs):
     write('Epoch [{}/{}] Loss: {:.4f}'.format(epoch + 1, num_epochs, total_loss))
     loss_list.append(loss.item())
 
-def calculate_precision(true, pred):
+def calculate_recall(true, pred):
     true_f, pred_f = [], []
     for i,l in enumerate(true):
         if l!=4:
             true_f.append(l)
             pred_f.append(pred[i])
+    return accuracy_score(true_f, pred_f)
+
+def calculate_precision(true, pred):
+    true_f, pred_f = [], []
+    for i,l in enumerate(pred):
+        if l!=4:
+            pred_f.append(l)
+            true_f.append(true[i])
     return accuracy_score(true_f, pred_f)
 
 def test(test_dataset, message, output_file):
@@ -302,11 +310,16 @@ def test(test_dataset, message, output_file):
         predictedLabels.extend(predicted)
         trueLabels.extend(labels)
         results.extend(["\t".join(tup) for tup in zip(["\t".join(l) for l in np.array(test_dataset[3])[batch]], [mappingDict_inv[l] for l in predicted], [mappingDict_inv[l] for l in labels])])
-    accuracy = accuracy_score(trueLabels, predictedLabels)
-    precision = calculate_precision(trueLabels, predictedLabels)
     open(output_file, "w+").write("\n".join(results))
     print ("\n\n{}\n\n".format(message))
-    write ("Accuracy:" + str(accuracy) + str( " Precision:") + str(precision))
+    
+    if output_file!="test_knocked.tsv":
+        accuracy = accuracy_score(trueLabels, predictedLabels)
+        recall = calculate_recall(trueLabels, predictedLabels)
+        precision = calculate_precision(trueLabels, predictedLabels)
+        write ("Accuracy:" + str(accuracy) + str( " Precision:") + str(precision) + str(" Recall: ") + str(recall) + str("F1-score: ") + str(2 * (precision * recall/(precision + recall))))
+    else:
+        write ("Knocked:" + len([l for l in predictedLabels if l!=4]))
 
 lstm.eval()
 with torch.no_grad():
