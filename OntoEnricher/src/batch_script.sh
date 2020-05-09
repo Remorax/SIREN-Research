@@ -10,4 +10,4 @@
 module load cuda/10.2
 module load cudnn/7.6.5-cuda-10.2 
 
-python3 tune.py
+python3 main.py
