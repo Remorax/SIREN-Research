@@ -10,8 +10,10 @@ import tensorflow as tf
 import tensorflow_hub as hub
 from scipy import spatial
 
-train_file = "../files/dataset/train.tsv"
-test_file = "../files/dataset/test.tsv"
+train_file = "../files/dataset/train_final.tsv"
+test_file = "../files/dataset/test_final.tsv"
+train_file = "/data/Vivek/original/HypeNET/dataset/custom_train_0.0_0.2.tsv"
+test_file =  "/data/Vivek/original/HypeNET/dataset/custom_test_0.0_0.2.tsv"
 instances_file = '../files/dataset/test_instances.tsv'
 knocked_file = '../files/dataset/test_knocked.tsv'
 output_folder = "../junk/Output/"
@@ -169,6 +171,7 @@ def run(args):
         parsed_dicts = [{ parse_path(path) : path_count_dict[path] for path in path_count_dict } for path_count_dict in parsed_dicts]
         paths = [{ path : path_count_dict[path] for path in path_count_dict if path} for path_count_dict in parsed_dicts]
         empty = [list(dataset)[i] for i, path_list in enumerate(paths) if len(list(path_list.keys())) == 0]
+        print('Pairs without paths:', len(empty), ', all dataset:', len(dataset))
         embed_indices = [(emb_indexer.get(x,0), emb_indexer.get(y,0)) for (x,y) in dataset]
         
         return embed_indices, paths
@@ -206,4 +209,4 @@ args = [(thresholds_path + l + "/security", "../junk/Files/parsed_dataset_parts/
 #with concurrent.futures.ProcessPoolExecutor() as executor:
 #    for res in executor.map(run, args):
 #        pass
-run(("/data/Vivek/Final/SIREN-Research/OntoEnricher/junk/Files/security_threshold_7_10/security", "dataset_parsed.pkl"))
+run(("/data/Vivek/Final/SIREN-Research/OntoEnricher/junk/Files/security_threshold_7_10/security", "dataset_optimized_alt0.2.pkl"))
