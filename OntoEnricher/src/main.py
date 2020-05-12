@@ -173,8 +173,8 @@ class LSTM(nn.Module):
             print (paths)
             path_embedding = torch.div(torch.sum(paths_embeds, 0), sum(list(paths.values())))
             # print (emb_indexer[idx][0].shape, emb_indexer[idx][1].shape, emb_indexer[idx])
-            x = torch.LongTensor([[emb_indexer[idx][0]]]).to(device).view(EMBEDDING_DIM)
-            y = torch.LongTensor([[emb_indexer[idx][1]]]).to(device).view(EMBEDDING_DIM)
+            x = torch.DoubleTensor([[emb_indexer[idx][0]]]).to(device).view(EMBEDDING_DIM)
+            y = torch.DoubleTensor([[emb_indexer[idx][1]]]).to(device).view(EMBEDDING_DIM)
             print (x.shape, path_embedding.shape, y.shape)
             path_embedding_cat = torch.cat((x, path_embedding, y))
             # print ("Path embedding after cat with embeddings: ", path_embedding.shape)
@@ -197,7 +197,7 @@ def log_loss(output, target):
     return torch.sum(prob_losses)
 
 def tensorifyTuple(tup):
-    return tuple([tuple([torch.LongTensor([[e]]).to(device) for e in edge]) for edge in tup])
+    return tuple([tuple([torch.DoubleTensor([[e]]).to(device) for e in edge]) for edge in tup])
     
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
@@ -246,7 +246,7 @@ for epoch in range(num_epochs):
         # Run the forward pass
         outputs = lstm(data, embeddings_idx)
         # print (outputs, labels)
-        loss = log_loss(outputs, torch.LongTensor(labels).to(device))
+        loss = log_loss(outputs, torch.DoubleTensor(labels).to(device))
         # loss = criterion(outputs, torch.LongTensor(labels).to(device))
         
         write("Loss: " + str(loss.item()))
