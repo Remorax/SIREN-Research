@@ -97,7 +97,7 @@ DIR_DIM = 1
 EMBEDDING_DIM = 300
 NULL_PATH = ((0, 0, 0, 0),)
 
-file = open("../junk/dataset_parsed_glove_new", 'rb')
+file = open("../junk/dataset_parsed_glove_new.pkl", 'rb')
 parsed_train, parsed_test, parsed_instances, parsed_knocked, pos_indexer, dep_indexer, dir_indexer  = pickle.load(file)
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 NUM_RELATIONS = len(relations)
@@ -143,14 +143,11 @@ class LSTM(nn.Module):
         if path in self.cache:
             return self.cache[path] * count
         lstm_inp = torch.Tensor([]).to(device)
-        print (path)
         for edge in path:
-            print (edge)
             word_embed = self.normalize_embeddings(edge[0])
-            pos_embed = self.normalize_embeddings(self.pos_embeddings(edge[1]))
-            dep_embed = self.normalize_embeddings(self.dep_embeddings(edge[2]))
-            dir_embed = self.normalize_embeddings(self.dir_embeddings(edge[3]))
-            print (word_embed.shape, pos_embed.shape, dep_embed.shape, dir_embed.shape)
+            pos_embed = self.normalize_embeddings(self.pos_embeddings(edge[1].long()))
+            dep_embed = self.normalize_embeddings(self.dep_embeddings(edge[2].long()))
+            dir_embed = self.normalize_embeddings(self.dir_embeddings(edge[3].long()))
             embeds = torch.cat((word_embed, pos_embed, dep_embed, dir_embed)).view(1, -1)
             lstm_inp = torch.cat((lstm_inp, embeds), 0)
 
@@ -170,12 +167,10 @@ class LSTM(nn.Module):
             for path in paths.items():
                 emb = self.embed_path(path).view(1,-1)
                 paths_embeds = torch.cat((paths_embeds, emb), 0)
-            print (paths)
             path_embedding = torch.div(torch.sum(paths_embeds, 0), sum(list(paths.values())))
             # print (emb_indexer[idx][0].shape, emb_indexer[idx][1].shape, emb_indexer[idx])
             x = torch.DoubleTensor([[emb_indexer[idx][0]]]).to(device).view(EMBEDDING_DIM)
             y = torch.DoubleTensor([[emb_indexer[idx][1]]]).to(device).view(EMBEDDING_DIM)
-            print (x.shape, path_embedding.shape, y.shape)
             path_embedding_cat = torch.cat((x, path_embedding, y))
             # print ("Path embedding after cat with embeddings: ", path_embedding.shape)
             probabilities = self.softmax(self.W(path_embedding_cat))
@@ -183,7 +178,6 @@ class LSTM(nn.Module):
             h = torch.cat((h, probabilities.view(1,-1)), 0)
             idx += 1
          
-        print ("h shape: ", h.shape)
         return h
 
 def log_loss(output, target):
@@ -246,7 +240,7 @@ for epoch in range(num_epochs):
         # Run the forward pass
         outputs = lstm(data, embeddings_idx)
         # print (outputs, labels)
-        loss = log_loss(outputs, torch.DoubleTensor(labels).to(device))
+        loss = log_loss(outputs, torch.LongTensor(labels).to(device))
         # loss = criterion(outputs, torch.LongTensor(labels).to(device))
         
         write("Loss: " + str(loss.item()))
