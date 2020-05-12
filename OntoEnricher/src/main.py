@@ -97,7 +97,7 @@ DIR_DIM = 1
 EMBEDDING_DIM = 300
 NULL_PATH = ((0, 0, 0, 0),)
 
-file = open("dataset_parsed_baseline.pkl", 'rb')
+file = open("../junk/dataset_parsed_glove_new", 'rb')
 parsed_train, parsed_test, parsed_instances, parsed_knocked, pos_indexer, dep_indexer, dir_indexer  = pickle.load(file)
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 NUM_RELATIONS = len(relations)
@@ -143,12 +143,14 @@ class LSTM(nn.Module):
         if path in self.cache:
             return self.cache[path] * count
         lstm_inp = torch.Tensor([]).to(device)
+        print (path)
         for edge in path:
+            print (edge)
             word_embed = self.normalize_embeddings(edge[0])
             pos_embed = self.normalize_embeddings(self.pos_embeddings(edge[1]))
             dep_embed = self.normalize_embeddings(self.dep_embeddings(edge[2]))
             dir_embed = self.normalize_embeddings(self.dir_embeddings(edge[3]))
-            # print (word_embed.shape, pos_embed.shape, dep_embed.shape, dir_embed.shape)
+            print (word_embed.shape, pos_embed.shape, dep_embed.shape, dir_embed.shape)
             embeds = torch.cat((word_embed, pos_embed, dep_embed, dir_embed)).view(1, -1)
             lstm_inp = torch.cat((lstm_inp, embeds), 0)
 
@@ -168,11 +170,12 @@ class LSTM(nn.Module):
             for path in paths.items():
                 emb = self.embed_path(path).view(1,-1)
                 paths_embeds = torch.cat((paths_embeds, emb), 0)
+            print (paths)
             path_embedding = torch.div(torch.sum(paths_embeds, 0), sum(list(paths.values())))
             # print (emb_indexer[idx][0].shape, emb_indexer[idx][1].shape, emb_indexer[idx])
             x = torch.LongTensor([[emb_indexer[idx][0]]]).to(device).view(EMBEDDING_DIM)
             y = torch.LongTensor([[emb_indexer[idx][1]]]).to(device).view(EMBEDDING_DIM)
-            # print (x.shape, path_embedding.shape, y.shape)
+            print (x.shape, path_embedding.shape, y.shape)
             path_embedding_cat = torch.cat((x, path_embedding, y))
             # print ("Path embedding after cat with embeddings: ", path_embedding.shape)
             probabilities = self.softmax(self.W(path_embedding_cat))
@@ -291,8 +294,7 @@ def test(test_dataset, message, output_file):
         batch_start = batch_idx * batch_size
         batch = test_perm[batch_start:batch_end]
 
-        data = [{NULL_PATH: 1} if not el else el for el in np.array(test_dataset[1])[batch]]
-        data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
+        data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in np.array(test_dataset[1])[batch]]
         labels, embeddings_idx = np.array(test_dataset[2])[batch], np.array(test_dataset[0])[batch]
 
         outputs = lstm(data, embeddings_idx)
