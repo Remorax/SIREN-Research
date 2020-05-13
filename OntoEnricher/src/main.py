@@ -98,6 +98,7 @@ DIR_DIM = 1
 EMBEDDING_DIM = 300
 NULL_PATH = ((0, 0, 0, 0),)
 
+
 file = open("dataset_parsed_wiki2vec_new.pkl", 'rb')
 parsed_train, parsed_test, parsed_instances, parsed_knocked, pos_indexer, dep_indexer, dir_indexer  = pickle.load(file)
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
@@ -173,7 +174,6 @@ class LSTM(nn.Module):
             # print (emb_indexer[idx][0].shape, emb_indexer[idx][1].shape, emb_indexer[idx])
             x = self.word_embeddings(torch.LongTensor([[emb_indexer[idx][0]]]).to(device)).view(EMBEDDING_DIM)
             y = self.word_embeddings(torch.LongTensor([[emb_indexer[idx][1]]]).to(device)).view(EMBEDDING_DIM)
-            # print (x.shape, path_embedding.shape, y.shape)
             path_embedding_cat = torch.cat((x, path_embedding, y))
             # print ("Path embedding after cat with embeddings: ", path_embedding.shape)
             probabilities = self.softmax(self.W(path_embedding_cat))
@@ -181,7 +181,6 @@ class LSTM(nn.Module):
             h = torch.cat((h, probabilities.view(1,-1)), 0)
             idx += 1
          
-        print ("h shape: ", h.shape)
         return h
 
 def log_loss(output, target):

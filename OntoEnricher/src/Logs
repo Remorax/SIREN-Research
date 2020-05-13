@@ -1,2 +1,146 @@
 
 Batch_idx 0
+
+Loss: 8726.025827320489
+
+Batch_idx 1
+
+Loss: 7928.522821903342
+
+Batch_idx 2
+
+Loss: 1069.2885107275808
+
+Epoch [1/10] Loss: 1.6504
+
+Batch_idx 0
+
+Loss: 6768.572809946472
+
+Batch_idx 1
+
+Loss: 6305.375369738923
+
+Batch_idx 2
+
+Loss: 860.0446231771184
+
+Epoch [2/10] Loss: 1.2975
+
+Batch_idx 0
+
+Loss: 5631.851235570651
+
+Batch_idx 1
+
+Loss: 5416.133362184921
+
+Batch_idx 2
+
+Loss: 773.473904256789
+
+Epoch [3/10] Loss: 1.1008
+
+Batch_idx 0
+
+Loss: 5022.834514508535
+
+Batch_idx 1
+
+Loss: 4910.785074017875
+
+Batch_idx 2
+
+Loss: 720.3254341088301
+
+Epoch [4/10] Loss: 0.9921
+
+Batch_idx 0
+
+Loss: 4703.669272288702
+
+Batch_idx 1
+
+Loss: 4631.632226660732
+
+Batch_idx 2
+
+Loss: 660.0383789790893
+
+Epoch [5/10] Loss: 0.9308
+
+Batch_idx 0
+
+Loss: 4506.916113088703
+
+Batch_idx 1
+
+Loss: 4403.235040560731
+
+Batch_idx 2
+
+Loss: 679.2734665117139
+
+Epoch [6/10] Loss: 0.8930
+
+Batch_idx 0
+
+Loss: 4348.895069591987
+
+Batch_idx 1
+
+Loss: 4294.206320272857
+
+Batch_idx 2
+
+Loss: 613.9869037345135
+
+Epoch [7/10] Loss: 0.8620
+
+Batch_idx 0
+
+Loss: 4208.517330534958
+
+Batch_idx 1
+
+Loss: 4152.34186976697
+
+Batch_idx 2
+
+Loss: 588.279113079305
+
+Epoch [8/10] Loss: 0.8333
+
+Batch_idx 0
+
+Loss: 4114.679335614226
+
+Batch_idx 1
+
+Loss: 3999.5351575691157
+
+Batch_idx 2
+
+Loss: 566.7834985461286
+
+Epoch [9/10] Loss: 0.8084
+
+Batch_idx 0
+
+Loss: 3962.2491921573783
+
+Batch_idx 1
+
+Loss: 3889.116776415971
+
+Batch_idx 2
+
+Loss: 608.9925248044331
+
+Epoch [10/10] Loss: 0.7878
+
+Accuracy:0.7644110275689223 Precision:0.7433380084151473 Recall: 0.7095046854082999F1-score: 0.726027397260274
+
+Accuracy:0.4581818181818182 Precision:0.0 Recall: 0.0F1-score: nan
+
+Accuracy:0.27374503430841457 Precision:0.8422222222222222 Recall: 0.27374503430841457F1-score: 0.41319160534205507
