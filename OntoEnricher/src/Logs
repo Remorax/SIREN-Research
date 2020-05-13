@@ -1,226 +1,146 @@
 
-Emb: <class 'numpy.ndarray'>
-
-=> loading checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline.pt'
-
-=> loaded checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline.pt' (epoch 7)
-
-=> loading checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline.pt'
-
-=> loaded checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline.pt' (epoch 7)
-
 Batch_idx 0
 
-Loss: 897.5458463354062
+Loss: 8726.025827320489
 
 Batch_idx 1
 
-Loss: 864.5561306446209
+Loss: 7928.522821903342
 
 Batch_idx 2
 
-Loss: 851.2749410518513
+Loss: 1069.2885107275808
 
-Batch_idx 3
-
-Loss: 828.3407156497037
-
-Batch_idx 4
-
-Loss: 813.6331204284936
-
-Batch_idx 5
-
-Loss: 806.9179375301005
-
-Batch_idx 6
-
-Loss: 800.7927126161189
-
-Batch_idx 7
-
-Loss: 821.011687824594
-
-Batch_idx 8
-
-Loss: 818.3171408137158
-
-Batch_idx 9
-
-Loss: 904.2986569954661
-
-Batch_idx 10
-
-Loss: 786.365455573166
-
-Batch_idx 11
-
-Loss: 850.7410971421256
-
-Batch_idx 12
-
-Loss: 830.2188172270146
-
-Batch_idx 13
-
-Loss: 775.8824490837335
-
-Batch_idx 14
-
-Loss: 830.4327206406464
-
-Batch_idx 15
-
-Loss: 842.2495522947729
-
-Batch_idx 16
-
-Loss: 191.18669899327583
-
-Epoch [8/10] Loss: 0.1667
+Epoch [1/10] Loss: 1.6504
 
 Batch_idx 0
 
-Loss: 779.7942302307433
+Loss: 6768.572809946472
 
 Batch_idx 1
 
-Loss: 823.9813715116253
+Loss: 6305.375369738923
 
 Batch_idx 2
 
-Loss: 824.3843531372406
+Loss: 860.0446231771184
 
-Batch_idx 3
-
-Loss: 827.360928166433
-
-Batch_idx 4
-
-Loss: 814.1938286516945
-
-Batch_idx 5
-
-Loss: 851.2978963856925
-
-Batch_idx 6
-
-Loss: 806.6290897688478
-
-Batch_idx 7
-
-Loss: 826.7535488753547
-
-Batch_idx 8
-
-Loss: 743.2134560462457
-
-Batch_idx 9
-
-Loss: 818.0633584241892
-
-Batch_idx 10
-
-Loss: 775.12362769324
-
-Batch_idx 11
-
-Loss: 738.278048722168
-
-Batch_idx 12
-
-Loss: 828.0093358395447
-
-Batch_idx 13
-
-Loss: 791.4869983443518
-
-Batch_idx 14
-
-Loss: 805.3968633541101
-
-Batch_idx 15
-
-Loss: 765.2652102609164
-
-Batch_idx 16
-
-Loss: 169.82953845112806
-
-Epoch [9/10] Loss: 0.1602
+Epoch [2/10] Loss: 1.2975
 
 Batch_idx 0
 
-Loss: 810.3735509095359
+Loss: 5631.851235570651
 
 Batch_idx 1
 
-Loss: 815.9046217001908
+Loss: 5416.133362184921
 
 Batch_idx 2
 
-Loss: 817.0857498553121
+Loss: 773.473904256789
 
-Batch_idx 3
+Epoch [3/10] Loss: 1.1008
 
-Loss: 780.4123187379972
+Batch_idx 0
 
-Batch_idx 4
+Loss: 5022.834514508535
 
-Loss: 753.2986781726518
+Batch_idx 1
 
-Batch_idx 5
+Loss: 4910.785074017875
 
-Loss: 787.7491670656832
+Batch_idx 2
 
-Batch_idx 6
+Loss: 720.3254341088301
 
-Loss: 746.5616909314085
+Epoch [4/10] Loss: 0.9921
 
-Batch_idx 7
+Batch_idx 0
 
-Loss: 771.3913767215399
+Loss: 4703.669272288702
 
-Batch_idx 8
+Batch_idx 1
 
-Loss: 692.0055256018289
+Loss: 4631.632226660732
 
-Batch_idx 9
+Batch_idx 2
 
-Loss: 772.4977052815973
+Loss: 660.0383789790893
 
-Batch_idx 10
+Epoch [5/10] Loss: 0.9308
 
-Loss: 822.3233000191108
+Batch_idx 0
 
-Batch_idx 11
+Loss: 4506.916113088703
 
-Loss: 813.5189237777765
+Batch_idx 1
 
-Batch_idx 12
+Loss: 4403.235040560731
 
-Loss: 821.3858933420865
+Batch_idx 2
 
-Batch_idx 13
+Loss: 679.2734665117139
 
-Loss: 719.2732883694823
+Epoch [6/10] Loss: 0.8930
 
-Batch_idx 14
+Batch_idx 0
 
-Loss: 745.762721819022
+Loss: 4348.895069591987
 
-Batch_idx 15
+Batch_idx 1
 
-Loss: 746.0764412973169
+Loss: 4294.206320272857
 
-Batch_idx 16
+Batch_idx 2
 
-Loss: 184.60162474472872
+Loss: 613.9869037345135
 
-Epoch [10/10] Loss: 0.1554
+Epoch [7/10] Loss: 0.8620
 
-Accuracy:0.9383759274525969 Precision:0.32
+Batch_idx 0
 
-Accuracy:0.9418181818181818 Precision:nan
+Loss: 4208.517330534958
 
-Accuracy:0.0841459010473095 Precision:0.0841459010473095
+Batch_idx 1
+
+Loss: 4152.34186976697
+
+Batch_idx 2
+
+Loss: 588.279113079305
+
+Epoch [8/10] Loss: 0.8333
+
+Batch_idx 0
+
+Loss: 4114.679335614226
+
+Batch_idx 1
+
+Loss: 3999.5351575691157
+
+Batch_idx 2
+
+Loss: 566.7834985461286
+
+Epoch [9/10] Loss: 0.8084
+
+Batch_idx 0
+
+Loss: 3962.2491921573783
+
+Batch_idx 1
+
+Loss: 3889.116776415971
+
+Batch_idx 2
+
+Loss: 608.9925248044331
+
+Epoch [10/10] Loss: 0.7878
+
+Accuracy:0.7644110275689223 Precision:0.7433380084151473 Recall: 0.7095046854082999F1-score: 0.726027397260274
+
+Accuracy:0.4581818181818182 Precision:0.0 Recall: 0.0F1-score: nan
+
+Accuracy:0.27374503430841457 Precision:0.8422222222222222 Recall: 0.27374503430841457F1-score: 0.41319160534205507

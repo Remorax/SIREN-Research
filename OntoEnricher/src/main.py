@@ -24,56 +24,56 @@ mappingDict_inv = {idx: key for (idx,key) in enumerate(relations)}
 # embeddings_folder = "../junk/Glove.dat"
 # embeddings_file = "/Users/vivek/SIREN-Research/Archive-LSTM/glove.6B/glove.6B.300d.txt"
 
-prefix = "/home/vivek.iyer/"
-output_folder = "../junk/Output/Baseline/"
-embeddings_folder = "../junk/Glove.dat"
-embeddings_file = "/home/vivek.iyer/glove.6B.300d.txt"
-model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline.pt"
+output_folder = "../junk/Output/Glove-embedded/"
+# embeddings_folder = "/share1/vivek.iyer/Wiki2Vec.dat"
+# embeddings_file = "/share1/vivek.iyer/wiki2vec_glove.txt"
+model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/glove_new.pt"
 
 if not os.path.isdir(output_folder):  
     os.mkdir(output_folder)
-os.remove("Logs")
-def load_embeddings_from_disk():
-    try:
-        vectors = bcolz.open(embeddings_folder)[:]
-        words = pickle.load(open(embeddings_folder + 'words.pkl', 'rb'))
-        word2idx = pickle.load(open(embeddings_folder + 'words_index.pkl', 'rb'))
+if os.path.exists("Logs"):
+    os.remove("Logs")
+# def load_embeddings_from_disk():
+#     try:
+#         vectors = bcolz.open(embeddings_folder)[:]
+#         words = pickle.load(open(embeddings_folder + 'words.pkl', 'rb'))
+#         word2idx = pickle.load(open(embeddings_folder + 'words_index.pkl', 'rb'))
 
-        embeddings = vectors
-        write("Emb: " + str(type(embeddings)))
-    except:
-        embeddings, word2idx  = create_embeddings()
-    return embeddings, word2idx
+#         embeddings = vectors
+#         write("Emb: " + str(type(embeddings)))
+#     except:
+#         embeddings, word2idx  = create_embeddings()
+#     return embeddings, word2idx
         
 def write(statement):
     op_file = open("Logs", "a+")
     op_file.write("\n" + str(statement) + "\n")
     op_file.close()
 
-def create_embeddings():
-    words = ['_unk_']
-    idx = 1
-    word2idx = {"_unk_": 0}
-    vectors = bcolz.carray(np.random.random(300), rootdir=embeddings_folder, mode='w')
-    with open(embeddings_file, 'r') as f:
-        for l in f:
-            line = l.split()
-            word, vector = line[0], line[1:]
-            words.append(word)
-            vectors.append(np.array(vector).astype(np.float))
-            word2idx[word] = idx
-            idx += 1
-    vectors = vectors.reshape((-1, EMBEDDING_DIM))
-    write("vecsize " + str(vectors.size))
-    row_norm = np.sum(np.abs(vectors)**2, axis=-1)**(1./2)
-    vectors /= row_norm[:, np.newaxis]
-    vectors = bcolz.carray(vectors, rootdir=embeddings_folder, mode='w')
-    vectors.flush()
+# def create_embeddings():
+#     words = ['_unk_']
+#     idx = 1
+#     word2idx = {"_unk_": 0}
+#     vectors = bcolz.carray(np.random.random(300), rootdir=embeddings_folder, mode='w')
+#     with open(embeddings_file, 'r') as f:
+#         for l in f:
+#             line = l.split()
+#             word, vector = line[0], line[1:]
+#             words.append(word)
+#             vectors.append(np.array(vector).astype(np.float))
+#             word2idx[word] = idx
+#             idx += 1
+#     vectors = vectors.reshape((-1, EMBEDDING_DIM))
+#     write("vecsize " + str(vectors.size))
+#     row_norm = np.sum(np.abs(vectors)**2, axis=-1)**(1./2)
+#     vectors /= row_norm[:, np.newaxis]
+#     vectors = bcolz.carray(vectors, rootdir=embeddings_folder, mode='w')
+#     vectors.flush()
 
-    pickle.dump(words, open(embeddings_folder + 'words.pkl', 'wb'))
-    pickle.dump(word2idx, open(embeddings_folder + 'words_index.pkl', 'wb'))
+#     pickle.dump(words, open(embeddings_folder + 'words.pkl', 'wb'))
+#     pickle.dump(word2idx, open(embeddings_folder + 'words_index.pkl', 'wb'))
     
-    return vectors, word2idx
+#     return vectors, word2idx
 
 def load_checkpoint(model, optimizer, filename=model_filename):
     # Note: Input model & optimizer should be pre-defined.  This routine only updates their states.
@@ -97,12 +97,12 @@ DIR_DIM = 1
 EMBEDDING_DIM = 300
 NULL_PATH = ((0, 0, 0, 0),)
 
-file = open("dataset_parsed_baseline.pkl", 'rb')
+file = open("../junk/dataset_parsed_glove_new.pkl", 'rb')
 parsed_train, parsed_test, parsed_instances, parsed_knocked, pos_indexer, dep_indexer, dir_indexer  = pickle.load(file)
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 NUM_RELATIONS = len(relations)
 
-embeddings, emb_indexer = load_embeddings_from_disk()
+# embeddings, emb_indexer = load_embeddings_from_disk()
 
 torch.set_default_dtype(torch.float64)
 
@@ -119,9 +119,9 @@ class LSTM(nn.Module):
         self.dropout_layer = nn.Dropout(p=dropout)
         self.softmax = nn.Softmax()
         
-        self.word_embeddings = nn.Embedding(len(emb_indexer), EMBEDDING_DIM)
-        self.word_embeddings.load_state_dict({'weight': torch.from_numpy(np.array(embeddings))})
-        self.word_embeddings.require_grad = False
+        # self.word_embeddings = nn.Embedding(len(emb_indexer), EMBEDDING_DIM)
+        # self.word_embeddings.load_state_dict({'weight': torch.from_numpy(np.array(embeddings))})
+        # self.word_embeddings.require_grad = False
         
         self.pos_embeddings = nn.Embedding(len(pos_indexer), POS_DIM)
         self.dep_embeddings = nn.Embedding(len(dep_indexer), DEP_DIM)
@@ -144,11 +144,10 @@ class LSTM(nn.Module):
             return self.cache[path] * count
         lstm_inp = torch.Tensor([]).to(device)
         for edge in path:
-            word_embed = self.normalize_embeddings(self.word_embeddings(edge[0]))
-            pos_embed = self.normalize_embeddings(self.pos_embeddings(edge[1]))
-            dep_embed = self.normalize_embeddings(self.dep_embeddings(edge[2]))
-            dir_embed = self.normalize_embeddings(self.dir_embeddings(edge[3]))
-            # print (word_embed.shape, pos_embed.shape, dep_embed.shape, dir_embed.shape)
+            word_embed = self.normalize_embeddings(edge[0])
+            pos_embed = self.normalize_embeddings(self.pos_embeddings(edge[1].long()))
+            dep_embed = self.normalize_embeddings(self.dep_embeddings(edge[2].long()))
+            dir_embed = self.normalize_embeddings(self.dir_embeddings(edge[3].long()))
             embeds = torch.cat((word_embed, pos_embed, dep_embed, dir_embed)).view(1, -1)
             lstm_inp = torch.cat((lstm_inp, embeds), 0)
 
@@ -170,9 +169,8 @@ class LSTM(nn.Module):
                 paths_embeds = torch.cat((paths_embeds, emb), 0)
             path_embedding = torch.div(torch.sum(paths_embeds, 0), sum(list(paths.values())))
             # print (emb_indexer[idx][0].shape, emb_indexer[idx][1].shape, emb_indexer[idx])
-            x = self.word_embeddings(torch.LongTensor([[emb_indexer[idx][0]]]).to(device)).view(EMBEDDING_DIM)
-            y = self.word_embeddings(torch.LongTensor([[emb_indexer[idx][1]]]).to(device)).view(EMBEDDING_DIM)
-            # print (x.shape, path_embedding.shape, y.shape)
+            x = torch.DoubleTensor([[emb_indexer[idx][0]]]).to(device).view(EMBEDDING_DIM)
+            y = torch.DoubleTensor([[emb_indexer[idx][1]]]).to(device).view(EMBEDDING_DIM)
             path_embedding_cat = torch.cat((x, path_embedding, y))
             # print ("Path embedding after cat with embeddings: ", path_embedding.shape)
             probabilities = self.softmax(self.W(path_embedding_cat))
@@ -180,7 +178,6 @@ class LSTM(nn.Module):
             h = torch.cat((h, probabilities.view(1,-1)), 0)
             idx += 1
          
-        print ("h shape: ", h.shape)
         return h
 
 def log_loss(output, target):
@@ -194,7 +191,7 @@ def log_loss(output, target):
     return torch.sum(prob_losses)
 
 def tensorifyTuple(tup):
-    return tuple([tuple([torch.LongTensor([[e]]).to(device) for e in edge]) for edge in tup])
+    return tuple([tuple([torch.DoubleTensor([[e]]).to(device) for e in edge]) for edge in tup])
     
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
@@ -214,21 +211,14 @@ dropout = 0.3
 lstm = nn.DataParallel(LSTM()).to(device)
 criterion = nn.NLLLoss()
 optimizer = optim.Adam(lstm.parameters(), lr=lr)
-
-lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
-lstm = lstm.to(device)
-for state in optimizer.state.values():
-    for k, v in state.items():
-        if isinstance(v, torch.Tensor):
-            state[k] = v.to(device)
-                    
+                
 loss_list = []
 
-for epoch in range(7, num_epochs):
+for epoch in range(num_epochs):
     
     total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
     
-    if epoch==7:
+    if False:
         lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
         lstm = lstm.to(device)
         for state in optimizer.state.values():
@@ -244,8 +234,7 @@ for epoch in range(7, num_epochs):
         batch = epoch_idx[batch_start:batch_end]
         
         # print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
-        data = [{NULL_PATH: 1} if not el else el for el in np.array(parsed_train[1])[batch]]
-        data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
+        data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in np.array(parsed_train[1])[batch]]
         labels, embeddings_idx = np.array(parsed_train[2])[batch], np.array(parsed_train[0])[batch]
         
         # Run the forward pass
@@ -299,8 +288,7 @@ def test(test_dataset, message, output_file):
         batch_start = batch_idx * batch_size
         batch = test_perm[batch_start:batch_end]
 
-        data = [{NULL_PATH: 1} if not el else el for el in np.array(test_dataset[1])[batch]]
-        data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
+        data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in np.array(test_dataset[1])[batch]]
         labels, embeddings_idx = np.array(test_dataset[2])[batch], np.array(test_dataset[0])[batch]
 
         outputs = lstm(data, embeddings_idx)
