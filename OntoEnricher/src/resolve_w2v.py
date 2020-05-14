@@ -1,3 +1,17 @@
+from gensim.models.keyedvectors import KeyedVectors
+import bcolz, pickle, os, sys, pickledb, time
+import concurrent.futures
+import numpy as np
+from math import ceil
+from itertools import count
+from collections import defaultdict
+from difflib import SequenceMatcher
+import tensorflow as tf
+import tensorflow_hub as hub
+from scipy import spatial
+from gensim.models.keyedvectors import KeyedVectors
+from copy import deepcopy
+prefix = "../junk/db_files/"
 wiki2vec = KeyedVectors.load_word2vec_format("/home/vlead/enwiki_20180420_win10_300d.txt")
 og_dict = deepcopy(wiki2vec.wv.vocab)
 for k in og_dict:
@@ -46,7 +60,7 @@ def calculate_sim(words, word1, max_sim, closest_word):
         return (closest_word, max_sim)
 
 def construct_resolved():
-    global failed, words_db
+    global failed, words_db, resolved
     words_filt = []
 
 
@@ -62,7 +76,9 @@ def construct_resolved():
     a = time.time()
     counter = Value('i', 0)
     print ("Working on it...")
-    resolved = dict()
+    print ("originlly number of items in failed:", len(failed))
+    failed = [f for f in failed if f not in resolved]
+    print ("finally number of items in failed:", len(failed))
     with concurrent.futures.ProcessPoolExecutor() as executor:
         for res in executor.map(closest_word_w2v, failed):
             print (res)
@@ -183,7 +199,7 @@ def parse_tuple(tup):
 def parse_dataset(dataset):
     print ("Parsing dataset for ", prefix)
     _ = [(entity_to_id_unresolved(word2id_db, tup[0]), entity_to_id_unresolved(word2id_db, tup[1])) for tup in dataset]
-    resolved = construct_resolved()
+    _ = construct_resolved()
     global embeddings, emb_indexer
     success, failed = [], []
     dataset = [(entity_to_id(word2id_db, tup[0], resolved), entity_to_id(word2id_db, tup[1], resolved)) for tup in dataset]
@@ -207,7 +223,12 @@ EMBEDDING_DIM = 300
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 NUM_RELATIONS = len(relations)
 NULL_PATH = ((0, 0, 0, 0),)
-
+resolved = dict()
+output_folder = "../junk/Output/"
+embeddings_folder = "../junk/Wiki2vec_lite.dat/"
+embeddings_file = "/home/vlead/wiki2vec_glove.txt"
+instances_file = '../files/dataset/test_instances.tsv'
+knocked_file = '../files/dataset/test_knocked.tsv'
 for dbpedia_neg in range(10, 101, 10):
 
     true_file = open("../files/dataset/dataset_t.tsv", "r").read().split("\n")
