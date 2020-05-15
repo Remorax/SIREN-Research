@@ -17,18 +17,13 @@ NUM_RELATIONS = len(relations)
 
 mappingDict = {key: idx for (idx,key) in enumerate(relations)}
 mappingDict_inv = {idx: key for (idx,key) in enumerate(relations)}
-# prefix = "../junk/Files/temp_threshold_3_4/temp"
-# train_file = "../junk/train.tsv"
-# test_file = "../junk/test.tsv"
-# output_folder = "../junk/Output/"
-# embeddings_folder = "../junk/Glove.dat"
-# embeddings_file = "/Users/vivek/SIREN-Research/Archive-LSTM/glove.6B/glove.6B.300d.txt"
 
+output_folder = "../junk/Output/"
+embeddings_folder = "../junk/Glove.dat"
+dataset_file = "../junk/glove_vanilla.pkl"
 prefix = "/home/vivek.iyer/"
 output_folder = "../junk/Output/Wiki2Vec_output/"
-embeddings_folder = "../junk/Wiki2vec_lite.dat/"
-embeddings_file = "/home/vivek.iyer/glove.6B.300d.txt"
-model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline.pt"
+model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/glove-vanilla.pt"
 
 if not os.path.isdir(output_folder):  
     os.mkdir(output_folder)
@@ -36,11 +31,8 @@ if os.path.exists("Logs"):
     os.remove("Logs")
 def load_embeddings_from_disk():
     try:
-        vectors = bcolz.open(embeddings_folder)[:]
-        words = pickle.load(open(embeddings_folder + 'words.pkl', 'rb'))
+        embeddings = bcolz.open(embeddings_folder)[:]
         word2idx = pickle.load(open(embeddings_folder + 'words_index.pkl', 'rb'))
-
-        embeddings = vectors
         write("Emb: " + str(type(embeddings)))
     except:
         embeddings, word2idx  = create_embeddings()
@@ -71,7 +63,6 @@ def create_embeddings():
     vectors = bcolz.carray(vectors, rootdir=embeddings_folder, mode='w')
     vectors.flush()
 
-    pickle.dump(words, open(embeddings_folder + 'words.pkl', 'wb'))
     pickle.dump(word2idx, open(embeddings_folder + 'words_index.pkl', 'wb'))
     
     return vectors, word2idx
@@ -99,8 +90,10 @@ EMBEDDING_DIM = 300
 NULL_PATH = ((0, 0, 0, 0),)
 
 
-file = open("dataset_parsed_wiki2vec_new.pkl", 'rb')
+file = open(dataset_file, 'rb')
 parsed_train, parsed_test, parsed_instances, parsed_knocked, pos_indexer, dep_indexer, dir_indexer  = pickle.load(file)
+parsed_train = tuple(el[:10] for el in parsed_train)
+
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 NUM_RELATIONS = len(relations)
 
@@ -202,7 +195,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 # print ("num_relations:", NUM_RELATIONS)
 HIDDEN_DIM = 60
 NUM_LAYERS = 2
-num_epochs = 100
+num_epochs = 1
 batch_size = 5000
 
 dataset_size = len(parsed_train[2])
@@ -326,5 +319,4 @@ with torch.no_grad():
     test(parsed_test, "Test Set:", output_folder + "test.tsv")
     test(parsed_instances, "Instance Set:", output_folder + "test_instance.tsv")
     test(parsed_knocked, "Knocked out Set:", output_folder + "test_knocked.tsv")
-    
-[vivek.iyer@ada src]$ 
+
