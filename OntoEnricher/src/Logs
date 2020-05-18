@@ -1,12 +1,7060 @@
 
 Batch_idx 0
 
-Loss: 1.6032941409420887
+Loss: 1.6119198222937394
 
-Epoch [1/1] Loss: 0.1603
+Batch_idx 1
 
-Accuracy:0.341687552213868 Precision:0.35365853658536583 Recall: 0.5435073627844712F1-score: 0.42849604221635884
+Loss: 1.6007880315702663
 
-Accuracy:0.09818181818181818 Precision:0.09818181818181818 Recall: 0.2727272727272727F1-score: 0.14438502673796794
+Batch_idx 2
 
-Accuracy:0.2589382448537378 Precision:0.2598296792897264 Recall: 0.2589382448537378F1-score: 0.25938319616532507
+Loss: 1.59017943941555
+
+Epoch [1/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5785231503244173
+
+Batch_idx 1
+
+Loss: 1.569223405958054
+
+Batch_idx 2
+
+Loss: 1.5557926409316916
+
+Epoch [2/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5491172121308117
+
+Batch_idx 1
+
+Loss: 1.536411417764743
+
+Batch_idx 2
+
+Loss: 1.525365622162856
+
+Epoch [3/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5175033012732082
+
+Batch_idx 1
+
+Loss: 1.5092336380663445
+
+Batch_idx 2
+
+Loss: 1.500025858147355
+
+Epoch [4/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4914352297427067
+
+Batch_idx 1
+
+Loss: 1.4797871224605825
+
+Batch_idx 2
+
+Loss: 1.473269635730559
+
+Epoch [5/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.463088984436795
+
+Batch_idx 1
+
+Loss: 1.4554961685245211
+
+Batch_idx 2
+
+Loss: 1.4524164992587452
+
+Epoch [6/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4411637351219269
+
+Batch_idx 1
+
+Loss: 1.4282250455693701
+
+Batch_idx 2
+
+Loss: 1.4266108797824526
+
+Epoch [7/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4163703076114775
+
+Batch_idx 1
+
+Loss: 1.4084764257153484
+
+Batch_idx 2
+
+Loss: 1.3934223633927791
+
+Epoch [8/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3984517385299315
+
+Batch_idx 1
+
+Loss: 1.3825690986497472
+
+Batch_idx 2
+
+Loss: 1.3716699529290401
+
+Epoch [9/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.372301477866614
+
+Batch_idx 1
+
+Loss: 1.366848603855956
+
+Batch_idx 2
+
+Loss: 1.3576704627682992
+
+Epoch [10/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3512373422698933
+
+Batch_idx 1
+
+Loss: 1.3495579047171178
+
+Batch_idx 2
+
+Loss: 1.3330732168874513
+
+Epoch [11/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3378859792373219
+
+Batch_idx 1
+
+Loss: 1.326395383521605
+
+Batch_idx 2
+
+Loss: 1.3118875901317222
+
+Epoch [12/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3199788070341671
+
+Batch_idx 1
+
+Loss: 1.3113211587413844
+
+Batch_idx 2
+
+Loss: 1.282777547034896
+
+Epoch [13/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3003023716323878
+
+Batch_idx 1
+
+Loss: 1.2945621361051145
+
+Batch_idx 2
+
+Loss: 1.2895259444343181
+
+Epoch [14/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2816777910291757
+
+Batch_idx 1
+
+Loss: 1.2829539335145412
+
+Batch_idx 2
+
+Loss: 1.266417258439208
+
+Epoch [15/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2732533754282886
+
+Batch_idx 1
+
+Loss: 1.2597765766186275
+
+Batch_idx 2
+
+Loss: 1.2632099099710021
+
+Epoch [16/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2539478827938346
+
+Batch_idx 1
+
+Loss: 1.249174389704261
+
+Batch_idx 2
+
+Loss: 1.2599162617097697
+
+Epoch [17/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.23535014008977
+
+Batch_idx 1
+
+Loss: 1.2434085044345884
+
+Batch_idx 2
+
+Loss: 1.2281930472806049
+
+Epoch [18/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2272434045314442
+
+Batch_idx 1
+
+Loss: 1.2266668236154474
+
+Batch_idx 2
+
+Loss: 1.2063659569207215
+
+Epoch [19/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2181141157879642
+
+Batch_idx 1
+
+Loss: 1.2068870507843323
+
+Batch_idx 2
+
+Loss: 1.2211678054485329
+
+Epoch [20/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.206597688682683
+
+Batch_idx 1
+
+Loss: 1.1961537415351755
+
+Batch_idx 2
+
+Loss: 1.198213738580716
+
+Epoch [21/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1942354182629284
+
+Batch_idx 1
+
+Loss: 1.1833818056145895
+
+Batch_idx 2
+
+Loss: 1.1995218173125017
+
+Epoch [22/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1796674726666194
+
+Batch_idx 1
+
+Loss: 1.1803571377311455
+
+Batch_idx 2
+
+Loss: 1.1569263625114083
+
+Epoch [23/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1692724993088306
+
+Batch_idx 1
+
+Loss: 1.167840291759535
+
+Batch_idx 2
+
+Loss: 1.1556143620102277
+
+Epoch [24/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.152095934586492
+
+Batch_idx 1
+
+Loss: 1.1650859214716927
+
+Batch_idx 2
+
+Loss: 1.1383989966882855
+
+Epoch [25/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1501899674975893
+
+Batch_idx 1
+
+Loss: 1.1469122272556393
+
+Batch_idx 2
+
+Loss: 1.1281346945597763
+
+Epoch [26/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.136364028191946
+
+Batch_idx 1
+
+Loss: 1.1394896972389403
+
+Batch_idx 2
+
+Loss: 1.1278802231024534
+
+Epoch [27/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1292040509280752
+
+Batch_idx 1
+
+Loss: 1.1284130142337074
+
+Batch_idx 2
+
+Loss: 1.112171761738356
+
+Epoch [28/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1237871549896177
+
+Batch_idx 1
+
+Loss: 1.1136581821610874
+
+Batch_idx 2
+
+Loss: 1.1134762455537381
+
+Epoch [29/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.10764310515046
+
+Batch_idx 1
+
+Loss: 1.11374479216708
+
+Batch_idx 2
+
+Loss: 1.0916166371924936
+
+Epoch [30/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1007426112096608
+
+Batch_idx 1
+
+Loss: 1.1034076049112098
+
+Batch_idx 2
+
+Loss: 1.0809960221153543
+
+Epoch [31/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0885595450614716
+
+Batch_idx 1
+
+Loss: 1.0911586200697778
+
+Batch_idx 2
+
+Loss: 1.1191562577771006
+
+Epoch [32/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0845203028134813
+
+Batch_idx 1
+
+Loss: 1.081753955488473
+
+Batch_idx 2
+
+Loss: 1.090646779450488
+
+Epoch [33/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0646243433363471
+
+Batch_idx 1
+
+Loss: 1.0824010334547343
+
+Batch_idx 2
+
+Loss: 1.1020773673892872
+
+Epoch [34/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0672066035225705
+
+Batch_idx 1
+
+Loss: 1.06812118077385
+
+Batch_idx 2
+
+Loss: 1.0661443187203652
+
+Epoch [35/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0540363368081427
+
+Batch_idx 1
+
+Loss: 1.0670752024814307
+
+Batch_idx 2
+
+Loss: 1.0479919925955432
+
+Epoch [36/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0568552672430283
+
+Batch_idx 1
+
+Loss: 1.0469071107903796
+
+Batch_idx 2
+
+Loss: 1.0572410483881558
+
+Epoch [37/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0398913569970698
+
+Batch_idx 1
+
+Loss: 1.0505072324705997
+
+Batch_idx 2
+
+Loss: 1.042444202680804
+
+Epoch [38/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.032244442866742
+
+Batch_idx 1
+
+Loss: 1.038904550751385
+
+Batch_idx 2
+
+Loss: 1.0686831767303708
+
+Epoch [39/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0367993781832097
+
+Batch_idx 1
+
+Loss: 1.0243408220905508
+
+Batch_idx 2
+
+Loss: 1.0335321976338985
+
+Epoch [40/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0382949916109727
+
+Batch_idx 1
+
+Loss: 1.0150340695915283
+
+Batch_idx 2
+
+Loss: 0.9872220757531218
+
+Epoch [41/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.005921952332991
+
+Batch_idx 1
+
+Loss: 1.028007333361396
+
+Batch_idx 2
+
+Loss: 1.0213504851034025
+
+Epoch [42/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0140370717459295
+
+Batch_idx 1
+
+Loss: 1.0140435681281774
+
+Batch_idx 2
+
+Loss: 0.9641563176309645
+
+Epoch [43/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0104605343351492
+
+Batch_idx 1
+
+Loss: 1.0014089822656709
+
+Batch_idx 2
+
+Loss: 0.9807018360983887
+
+Epoch [44/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.000705205047086
+
+Batch_idx 1
+
+Loss: 0.9994693840860976
+
+Batch_idx 2
+
+Loss: 0.9680911356207924
+
+Epoch [45/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.987527893806763
+
+Batch_idx 1
+
+Loss: 0.9971920103032029
+
+Batch_idx 2
+
+Loss: 0.9831552751339777
+
+Epoch [46/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9907029483872142
+
+Batch_idx 1
+
+Loss: 0.9774439322076316
+
+Batch_idx 2
+
+Loss: 1.009332528733941
+
+Epoch [47/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9787187029394149
+
+Batch_idx 1
+
+Loss: 0.980537804530515
+
+Batch_idx 2
+
+Loss: 0.9824018659786246
+
+Epoch [48/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9764339031572201
+
+Batch_idx 1
+
+Loss: 0.9746181270019151
+
+Batch_idx 2
+
+Loss: 0.9544463204435
+
+Epoch [49/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9728896285951397
+
+Batch_idx 1
+
+Loss: 0.9698282214507914
+
+Batch_idx 2
+
+Loss: 0.92804681411299
+
+Epoch [50/50] Loss: 0.0003
+
+Accuracy:0.7627401837928154 Precision:0.7701674277016742 Recall: 0.677376171352075F1-score: 0.7207977207977208
+
+Accuracy:0.4509090909090909 Precision:0.0 Recall: 0.0F1-score: nan
+
+Accuracy:0.3605994944023113 Precision:0.8971248876909255 Recall: 0.3605994944023113F1-score: 0.5144255538382279
+
+Batch_idx 0
+
+Loss: 1.6077689828666002
+
+Batch_idx 1
+
+Loss: 1.5970257164687411
+
+Batch_idx 2
+
+Loss: 1.5843230303575464
+
+Epoch [1/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5761629853493369
+
+Batch_idx 1
+
+Loss: 1.564417052651455
+
+Batch_idx 2
+
+Loss: 1.5484781105327776
+
+Epoch [2/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.545665361986092
+
+Batch_idx 1
+
+Loss: 1.5333889398335177
+
+Batch_idx 2
+
+Loss: 1.5203747398276422
+
+Epoch [3/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5120613172909978
+
+Batch_idx 1
+
+Loss: 1.508555130294228
+
+Batch_idx 2
+
+Loss: 1.4994478311608583
+
+Epoch [4/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.488635635705115
+
+Batch_idx 1
+
+Loss: 1.4777043329610962
+
+Batch_idx 2
+
+Loss: 1.4677900661422052
+
+Epoch [5/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4608499152116872
+
+Batch_idx 1
+
+Loss: 1.4550868339038483
+
+Batch_idx 2
+
+Loss: 1.4361868782308025
+
+Epoch [6/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4386292653869084
+
+Batch_idx 1
+
+Loss: 1.4268707775727822
+
+Batch_idx 2
+
+Loss: 1.4230625982906018
+
+Epoch [7/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4103668494724053
+
+Batch_idx 1
+
+Loss: 1.4060769613435495
+
+Batch_idx 2
+
+Loss: 1.4251022568531577
+
+Epoch [8/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3921210049762558
+
+Batch_idx 1
+
+Loss: 1.3838086101011242
+
+Batch_idx 2
+
+Loss: 1.3843843154381186
+
+Epoch [9/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3702531446261075
+
+Batch_idx 1
+
+Loss: 1.364371619260893
+
+Batch_idx 2
+
+Loss: 1.3694891840365837
+
+Epoch [10/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3509464320333757
+
+Batch_idx 1
+
+Loss: 1.3481672389353399
+
+Batch_idx 2
+
+Loss: 1.3299132724800795
+
+Epoch [11/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.335717577606656
+
+Batch_idx 1
+
+Loss: 1.3217045646298982
+
+Batch_idx 2
+
+Loss: 1.346620315289424
+
+Epoch [12/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3164247419555792
+
+Batch_idx 1
+
+Loss: 1.3112350785614397
+
+Batch_idx 2
+
+Loss: 1.2962654028184417
+
+Epoch [13/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3037580916278784
+
+Batch_idx 1
+
+Loss: 1.2900790355354463
+
+Batch_idx 2
+
+Loss: 1.2872521174596934
+
+Epoch [14/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2856042166766597
+
+Batch_idx 1
+
+Loss: 1.2756248478074943
+
+Batch_idx 2
+
+Loss: 1.2804260001437762
+
+Epoch [15/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.267741124246736
+
+Batch_idx 1
+
+Loss: 1.2631132102852323
+
+Batch_idx 2
+
+Loss: 1.2693681327960402
+
+Epoch [16/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2480824558003778
+
+Batch_idx 1
+
+Loss: 1.2564013712385314
+
+Batch_idx 2
+
+Loss: 1.2417915201869965
+
+Epoch [17/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2366897045285286
+
+Batch_idx 1
+
+Loss: 1.2393006753750475
+
+Batch_idx 2
+
+Loss: 1.2375335428190812
+
+Epoch [18/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2253044480256998
+
+Batch_idx 1
+
+Loss: 1.2224852441973273
+
+Batch_idx 2
+
+Loss: 1.2381461068332318
+
+Epoch [19/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2199304929147354
+
+Batch_idx 1
+
+Loss: 1.2069852534209087
+
+Batch_idx 2
+
+Loss: 1.1981069840317318
+
+Epoch [20/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2082944944249456
+
+Batch_idx 1
+
+Loss: 1.1973671173572702
+
+Batch_idx 2
+
+Loss: 1.167575673063073
+
+Epoch [21/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1955849018457796
+
+Batch_idx 1
+
+Loss: 1.1834501578622052
+
+Batch_idx 2
+
+Loss: 1.1780818647986984
+
+Epoch [22/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.191693553435118
+
+Batch_idx 1
+
+Loss: 1.1687683617166122
+
+Batch_idx 2
+
+Loss: 1.1411396118134671
+
+Epoch [23/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1687138420809877
+
+Batch_idx 1
+
+Loss: 1.1632519362151041
+
+Batch_idx 2
+
+Loss: 1.177914679776643
+
+Epoch [24/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1489213615814087
+
+Batch_idx 1
+
+Loss: 1.1667230241569775
+
+Batch_idx 2
+
+Loss: 1.1357078422990297
+
+Epoch [25/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1518411041216476
+
+Batch_idx 1
+
+Loss: 1.1416711361252587
+
+Batch_idx 2
+
+Loss: 1.1378314594387242
+
+Epoch [26/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1379917808217175
+
+Batch_idx 1
+
+Loss: 1.136530084535358
+
+Batch_idx 2
+
+Loss: 1.1224637372756094
+
+Epoch [27/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1344244793296645
+
+Batch_idx 1
+
+Loss: 1.1208760128838247
+
+Batch_idx 2
+
+Loss: 1.1141532271990766
+
+Epoch [28/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.11415086436581
+
+Batch_idx 1
+
+Loss: 1.1188885674777167
+
+Batch_idx 2
+
+Loss: 1.1299611516601065
+
+Epoch [29/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.11507568323832
+
+Batch_idx 1
+
+Loss: 1.1015096122460124
+
+Batch_idx 2
+
+Loss: 1.112646823279202
+
+Epoch [30/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0995763721147642
+
+Batch_idx 1
+
+Loss: 1.1011602107004341
+
+Batch_idx 2
+
+Loss: 1.0912981883096478
+
+Epoch [31/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1015329698003784
+
+Batch_idx 1
+
+Loss: 1.0812220628199538
+
+Batch_idx 2
+
+Loss: 1.0900513831173422
+
+Epoch [32/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0825012070168047
+
+Batch_idx 1
+
+Loss: 1.084715531973116
+
+Batch_idx 2
+
+Loss: 1.0762724714897034
+
+Epoch [33/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0772628690516797
+
+Batch_idx 1
+
+Loss: 1.0783133381122934
+
+Batch_idx 2
+
+Loss: 1.0377224930993831
+
+Epoch [34/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0706730244044367
+
+Batch_idx 1
+
+Loss: 1.0632616469835987
+
+Batch_idx 2
+
+Loss: 1.069003298574265
+
+Epoch [35/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0539703645891765
+
+Batch_idx 1
+
+Loss: 1.0665136286404417
+
+Batch_idx 2
+
+Loss: 1.0464751417605969
+
+Epoch [36/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.049659128223755
+
+Batch_idx 1
+
+Loss: 1.050494726638115
+
+Batch_idx 2
+
+Loss: 1.0759414259644018
+
+Epoch [37/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0521985087813108
+
+Batch_idx 1
+
+Loss: 1.0375055408205691
+
+Batch_idx 2
+
+Loss: 1.040325178665506
+
+Epoch [38/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0339037287238582
+
+Batch_idx 1
+
+Loss: 1.039147845701954
+
+Batch_idx 2
+
+Loss: 1.048643294257407
+
+Epoch [39/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0293828853241123
+
+Batch_idx 1
+
+Loss: 1.0391760515324318
+
+Batch_idx 2
+
+Loss: 0.9781234492913974
+
+Epoch [40/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.022565113525579
+
+Batch_idx 1
+
+Loss: 1.0250052975910873
+
+Batch_idx 2
+
+Loss: 1.0212951120637992
+
+Epoch [41/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.008902363827485
+
+Batch_idx 1
+
+Loss: 1.0239910854533976
+
+Batch_idx 2
+
+Loss: 1.02286551595482
+
+Epoch [42/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0064790711324474
+
+Batch_idx 1
+
+Loss: 1.0134627483171161
+
+Batch_idx 2
+
+Loss: 1.0154605465912747
+
+Epoch [43/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.003510382761069
+
+Batch_idx 1
+
+Loss: 1.0055798967785814
+
+Batch_idx 2
+
+Loss: 0.9968102189410543
+
+Epoch [44/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0023070741202587
+
+Batch_idx 1
+
+Loss: 0.995168673411239
+
+Batch_idx 2
+
+Loss: 0.983399891749927
+
+Epoch [45/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9983765282559841
+
+Batch_idx 1
+
+Loss: 0.9867951771372308
+
+Batch_idx 2
+
+Loss: 0.9777511143184858
+
+Epoch [46/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9812872784119084
+
+Batch_idx 1
+
+Loss: 0.9928819137848593
+
+Batch_idx 2
+
+Loss: 0.963180678922703
+
+Epoch [47/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9853399118421887
+
+Batch_idx 1
+
+Loss: 0.9767979396459731
+
+Batch_idx 2
+
+Loss: 0.9560967271213572
+
+Epoch [48/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.977501200073333
+
+Batch_idx 1
+
+Loss: 0.9738898129460697
+
+Batch_idx 2
+
+Loss: 0.9448887613795386
+
+Epoch [49/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9667704934258885
+
+Batch_idx 1
+
+Loss: 0.9698004508371169
+
+Batch_idx 2
+
+Loss: 0.9651885235843152
+
+Epoch [50/50] Loss: 0.0003
+
+Accuracy:0.7610693400167085 Precision:0.7670196671709532 Recall: 0.678714859437751F1-score: 0.7201704545454546
+
+Accuracy:0.4509090909090909 Precision:0.0 Recall: 0.0F1-score: nan
+
+Accuracy:0.36132177681473454 Precision:0.8957027752909579 Recall: 0.36132177681473454F1-score: 0.5149253731343283
+
+Batch_idx 0
+
+Loss: 1.597993305479482
+
+Batch_idx 1
+
+Loss: 1.586314164126746
+
+Batch_idx 2
+
+Loss: 1.5786696154140054
+
+Epoch [1/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5654550470313462
+
+Batch_idx 1
+
+Loss: 1.5547778612042822
+
+Batch_idx 2
+
+Loss: 1.5425860572960193
+
+Epoch [2/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5345438204578137
+
+Batch_idx 1
+
+Loss: 1.5244701729655683
+
+Batch_idx 2
+
+Loss: 1.5159076067746955
+
+Epoch [3/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5051014953676276
+
+Batch_idx 1
+
+Loss: 1.4974199939838164
+
+Batch_idx 2
+
+Loss: 1.4803969516233666
+
+Epoch [4/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4803316035515035
+
+Batch_idx 1
+
+Loss: 1.465113738860649
+
+Batch_idx 2
+
+Loss: 1.470584086123042
+
+Epoch [5/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4514797874855705
+
+Batch_idx 1
+
+Loss: 1.4452383570836163
+
+Batch_idx 2
+
+Loss: 1.4291946121565122
+
+Epoch [6/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4293025478734476
+
+Batch_idx 1
+
+Loss: 1.417026090176992
+
+Batch_idx 2
+
+Loss: 1.4198505883265875
+
+Epoch [7/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4032290579026487
+
+Batch_idx 1
+
+Loss: 1.3964102430578869
+
+Batch_idx 2
+
+Loss: 1.4063348837833256
+
+Epoch [8/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.380064737519615
+
+Batch_idx 1
+
+Loss: 1.3805710037261139
+
+Batch_idx 2
+
+Loss: 1.3593620774369541
+
+Epoch [9/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3586450299051684
+
+Batch_idx 1
+
+Loss: 1.3578599213433673
+
+Batch_idx 2
+
+Loss: 1.3648295062718268
+
+Epoch [10/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3397750610110897
+
+Batch_idx 1
+
+Loss: 1.3396394024365554
+
+Batch_idx 2
+
+Loss: 1.3395479247080238
+
+Epoch [11/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3173328101295352
+
+Batch_idx 1
+
+Loss: 1.3263509590809754
+
+Batch_idx 2
+
+Loss: 1.3195898355906965
+
+Epoch [12/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3074886897821218
+
+Batch_idx 1
+
+Loss: 1.3043961158730966
+
+Batch_idx 2
+
+Loss: 1.287168686084074
+
+Epoch [13/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2924929603447863
+
+Batch_idx 1
+
+Loss: 1.2864669119132648
+
+Batch_idx 2
+
+Loss: 1.2736091030162966
+
+Epoch [14/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2778059099252037
+
+Batch_idx 1
+
+Loss: 1.2711883386264828
+
+Batch_idx 2
+
+Loss: 1.2519981088607204
+
+Epoch [15/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2590940487611455
+
+Batch_idx 1
+
+Loss: 1.2591023841653555
+
+Batch_idx 2
+
+Loss: 1.2485405254097337
+
+Epoch [16/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2459150008882107
+
+Batch_idx 1
+
+Loss: 1.2435857593731203
+
+Batch_idx 2
+
+Loss: 1.2393729585946547
+
+Epoch [17/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.234058638409472
+
+Batch_idx 1
+
+Loss: 1.2273814433459038
+
+Batch_idx 2
+
+Loss: 1.234607313926493
+
+Epoch [18/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.22347664644216
+
+Batch_idx 1
+
+Loss: 1.2149549360603056
+
+Batch_idx 2
+
+Loss: 1.2033357285280661
+
+Epoch [19/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2117714833801294
+
+Batch_idx 1
+
+Loss: 1.2001287623790917
+
+Batch_idx 2
+
+Loss: 1.2045135880320204
+
+Epoch [20/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1916369330678582
+
+Batch_idx 1
+
+Loss: 1.195025777402231
+
+Batch_idx 2
+
+Loss: 1.2020291718289375
+
+Epoch [21/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1854212676980376
+
+Batch_idx 1
+
+Loss: 1.180936896077643
+
+Batch_idx 2
+
+Loss: 1.1735213476107684
+
+Epoch [22/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1805224036908475
+
+Batch_idx 1
+
+Loss: 1.1685528993658316
+
+Batch_idx 2
+
+Loss: 1.1301544170027262
+
+Epoch [23/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1535927813028912
+
+Batch_idx 1
+
+Loss: 1.1677770168537798
+
+Batch_idx 2
+
+Loss: 1.1629000989352065
+
+Epoch [24/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1546266775816751
+
+Batch_idx 1
+
+Loss: 1.1439895428385296
+
+Batch_idx 2
+
+Loss: 1.166722383242848
+
+Epoch [25/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1451413060364926
+
+Batch_idx 1
+
+Loss: 1.1367837528102023
+
+Batch_idx 2
+
+Loss: 1.1337078288483287
+
+Epoch [26/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.129621669283693
+
+Batch_idx 1
+
+Loss: 1.1299730582199408
+
+Batch_idx 2
+
+Loss: 1.1437694618527605
+
+Epoch [27/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1152266608422265
+
+Batch_idx 1
+
+Loss: 1.1290524590566782
+
+Batch_idx 2
+
+Loss: 1.111901982708196
+
+Epoch [28/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1160650939660204
+
+Batch_idx 1
+
+Loss: 1.1102454465147564
+
+Batch_idx 2
+
+Loss: 1.0999120093541732
+
+Epoch [29/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1095712424366213
+
+Batch_idx 1
+
+Loss: 1.0975439900242856
+
+Batch_idx 2
+
+Loss: 1.100167020426233
+
+Epoch [30/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1031218873740118
+
+Batch_idx 1
+
+Loss: 1.090350143412654
+
+Batch_idx 2
+
+Loss: 1.0654692958647984
+
+Epoch [31/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0771508780385066
+
+Batch_idx 1
+
+Loss: 1.097676025527393
+
+Batch_idx 2
+
+Loss: 1.0680871763267514
+
+Epoch [32/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0656583467474376
+
+Batch_idx 1
+
+Loss: 1.0910219891964974
+
+Batch_idx 2
+
+Loss: 1.071560542423161
+
+Epoch [33/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0776972998859546
+
+Batch_idx 1
+
+Loss: 1.0630025894806023
+
+Batch_idx 2
+
+Loss: 1.0629482657632474
+
+Epoch [34/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.068228873523859
+
+Batch_idx 1
+
+Loss: 1.0584063428719115
+
+Batch_idx 2
+
+Loss: 1.0451725354031784
+
+Epoch [35/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0494928886794348
+
+Batch_idx 1
+
+Loss: 1.058850876328051
+
+Batch_idx 2
+
+Loss: 1.0575214189076503
+
+Epoch [36/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0529817522573888
+
+Batch_idx 1
+
+Loss: 1.0372535073418931
+
+Batch_idx 2
+
+Loss: 1.0710110184444352
+
+Epoch [37/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0416689402299755
+
+Batch_idx 1
+
+Loss: 1.0363104359824513
+
+Batch_idx 2
+
+Loss: 1.047691722654192
+
+Epoch [38/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0274336131306232
+
+Batch_idx 1
+
+Loss: 1.0344316089727237
+
+Batch_idx 2
+
+Loss: 1.0531246309099587
+
+Epoch [39/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0252125318768148
+
+Batch_idx 1
+
+Loss: 1.0246822457387674
+
+Batch_idx 2
+
+Loss: 1.0332057328164432
+
+Epoch [40/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0220814711765398
+
+Batch_idx 1
+
+Loss: 1.0175249972822291
+
+Batch_idx 2
+
+Loss: 1.0044791475503152
+
+Epoch [41/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0093454598261913
+
+Batch_idx 1
+
+Loss: 1.012354459468171
+
+Batch_idx 2
+
+Loss: 1.0294633229251329
+
+Epoch [42/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0094590729296142
+
+Batch_idx 1
+
+Loss: 1.0046972929448412
+
+Batch_idx 2
+
+Loss: 0.9858583235067687
+
+Epoch [43/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0055017823062509
+
+Batch_idx 1
+
+Loss: 0.9921324529569764
+
+Batch_idx 2
+
+Loss: 1.004199153945718
+
+Epoch [44/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9955363813262494
+
+Batch_idx 1
+
+Loss: 0.9907689703511487
+
+Batch_idx 2
+
+Loss: 0.9925234913349474
+
+Epoch [45/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9877156131666749
+
+Batch_idx 1
+
+Loss: 0.9864252504382124
+
+Batch_idx 2
+
+Loss: 0.9850608748414245
+
+Epoch [46/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9807804077973004
+
+Batch_idx 1
+
+Loss: 0.9827016548035277
+
+Batch_idx 2
+
+Loss: 0.968409679585092
+
+Epoch [47/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9795237433433129
+
+Batch_idx 1
+
+Loss: 0.9698677006675523
+
+Batch_idx 2
+
+Loss: 0.9782611789200748
+
+Epoch [48/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9728597582669423
+
+Batch_idx 1
+
+Loss: 0.9616467159034728
+
+Batch_idx 2
+
+Loss: 0.9973424918939798
+
+Epoch [49/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9605871340674548
+
+Batch_idx 1
+
+Loss: 0.9614241331293946
+
+Batch_idx 2
+
+Loss: 0.9992421222490633
+
+Epoch [50/50] Loss: 0.0003
+
+Accuracy:0.7602339181286549 Precision:0.7631975867269984 Recall: 0.677376171352075F1-score: 0.7177304964539007
+
+Accuracy:0.4509090909090909 Precision:0.0 Recall: 0.0F1-score: nan
+
+Accuracy:0.3604189237992055 Precision:0.8910714285714286 Recall: 0.3604189237992055F1-score: 0.5132424787863205
+
+Batch_idx 0
+
+Loss: 1.6015958012782805
+
+Batch_idx 1
+
+Loss: 1.5915102015358538
+
+Batch_idx 2
+
+Loss: 1.5797400190873134
+
+Epoch [1/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5702927816320542
+
+Batch_idx 1
+
+Loss: 1.5588548283391954
+
+Batch_idx 2
+
+Loss: 1.5479256561352543
+
+Epoch [2/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5387639431347575
+
+Batch_idx 1
+
+Loss: 1.5293003311143685
+
+Batch_idx 2
+
+Loss: 1.5234428721157265
+
+Epoch [3/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.508937445549501
+
+Batch_idx 1
+
+Loss: 1.5000235544346547
+
+Batch_idx 2
+
+Loss: 1.5096280671927058
+
+Epoch [4/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4831087581419033
+
+Batch_idx 1
+
+Loss: 1.4739599883250158
+
+Batch_idx 2
+
+Loss: 1.4681914296471468
+
+Epoch [5/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4583633090294925
+
+Batch_idx 1
+
+Loss: 1.446338956428354
+
+Batch_idx 2
+
+Loss: 1.454661165668122
+
+Epoch [6/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4283322339280369
+
+Batch_idx 1
+
+Loss: 1.4305730933090095
+
+Batch_idx 2
+
+Loss: 1.4170400709567508
+
+Epoch [7/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4140025027446215
+
+Batch_idx 1
+
+Loss: 1.3994210041465693
+
+Batch_idx 2
+
+Loss: 1.391693839111902
+
+Epoch [8/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3862004250514517
+
+Batch_idx 1
+
+Loss: 1.3815489996494899
+
+Batch_idx 2
+
+Loss: 1.3918413889525962
+
+Epoch [9/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.368395650695544
+
+Batch_idx 1
+
+Loss: 1.3618803168928482
+
+Batch_idx 2
+
+Loss: 1.3507294855683414
+
+Epoch [10/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.341494767788315
+
+Batch_idx 1
+
+Loss: 1.3497605981877916
+
+Batch_idx 2
+
+Loss: 1.3381843973620453
+
+Epoch [11/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3285905764112123
+
+Batch_idx 1
+
+Loss: 1.3251830732502734
+
+Batch_idx 2
+
+Loss: 1.327131313301017
+
+Epoch [12/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3163857216749846
+
+Batch_idx 1
+
+Loss: 1.304912151338778
+
+Batch_idx 2
+
+Loss: 1.2975282361634528
+
+Epoch [13/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.29260952193883
+
+Batch_idx 1
+
+Loss: 1.2959232896359765
+
+Batch_idx 2
+
+Loss: 1.2840927543522178
+
+Epoch [14/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.278778119993585
+
+Batch_idx 1
+
+Loss: 1.279349619449798
+
+Batch_idx 2
+
+Loss: 1.2649318296143575
+
+Epoch [15/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2694369587808967
+
+Batch_idx 1
+
+Loss: 1.2602418472985228
+
+Batch_idx 2
+
+Loss: 1.2421665065851961
+
+Epoch [16/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2607495069628762
+
+Batch_idx 1
+
+Loss: 1.239298574648208
+
+Batch_idx 2
+
+Loss: 1.2386221540637083
+
+Epoch [17/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.24430862051916
+
+Batch_idx 1
+
+Loss: 1.229379528133266
+
+Batch_idx 2
+
+Loss: 1.220806809454751
+
+Epoch [18/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.231208061471583
+
+Batch_idx 1
+
+Loss: 1.2177834728850785
+
+Batch_idx 2
+
+Loss: 1.2001981961719184
+
+Epoch [19/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2151503077637258
+
+Batch_idx 1
+
+Loss: 1.2102866749300576
+
+Batch_idx 2
+
+Loss: 1.1798434417626118
+
+Epoch [20/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1948358256882137
+
+Batch_idx 1
+
+Loss: 1.2021753500990335
+
+Batch_idx 2
+
+Loss: 1.1969276206336907
+
+Epoch [21/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1921129699370734
+
+Batch_idx 1
+
+Loss: 1.1839091239176252
+
+Batch_idx 2
+
+Loss: 1.1735986447694138
+
+Epoch [22/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.17509042087278
+
+Batch_idx 1
+
+Loss: 1.1757459955147556
+
+Batch_idx 2
+
+Loss: 1.1818087523657084
+
+Epoch [23/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1705811053162283
+
+Batch_idx 1
+
+Loss: 1.1594372313709211
+
+Batch_idx 2
+
+Loss: 1.1655529432478806
+
+Epoch [24/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1534724272255386
+
+Batch_idx 1
+
+Loss: 1.1605730774437444
+
+Batch_idx 2
+
+Loss: 1.1231145326199383
+
+Epoch [25/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1433910631442712
+
+Batch_idx 1
+
+Loss: 1.1450829691443045
+
+Batch_idx 2
+
+Loss: 1.1487542614849893
+
+Epoch [26/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1404528099159403
+
+Batch_idx 1
+
+Loss: 1.1346152613564904
+
+Batch_idx 2
+
+Loss: 1.0971890819598118
+
+Epoch [27/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1286167457055325
+
+Batch_idx 1
+
+Loss: 1.1232698703117985
+
+Batch_idx 2
+
+Loss: 1.1171872935043916
+
+Epoch [28/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1264497420390103
+
+Batch_idx 1
+
+Loss: 1.1051463385737406
+
+Batch_idx 2
+
+Loss: 1.1176741490921014
+
+Epoch [29/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1040796564561999
+
+Batch_idx 1
+
+Loss: 1.1088257066572271
+
+Batch_idx 2
+
+Loss: 1.1140495729115745
+
+Epoch [30/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0992094251515783
+
+Batch_idx 1
+
+Loss: 1.0978538370836677
+
+Batch_idx 2
+
+Loss: 1.0957681539258857
+
+Epoch [31/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0821532744726003
+
+Batch_idx 1
+
+Loss: 1.095905540646475
+
+Batch_idx 2
+
+Loss: 1.0985828416390473
+
+Epoch [32/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0781220656665782
+
+Batch_idx 1
+
+Loss: 1.0848864679897148
+
+Batch_idx 2
+
+Loss: 1.0792216761182145
+
+Epoch [33/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0769315786665683
+
+Batch_idx 1
+
+Loss: 1.066688887570446
+
+Batch_idx 2
+
+Loss: 1.0925061400664702
+
+Epoch [34/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0633720184238038
+
+Batch_idx 1
+
+Loss: 1.0667418398335655
+
+Batch_idx 2
+
+Loss: 1.0699140797955544
+
+Epoch [35/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0573693067283105
+
+Batch_idx 1
+
+Loss: 1.0541784163643793
+
+Batch_idx 2
+
+Loss: 1.0822586594763117
+
+Epoch [36/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0498414903271824
+
+Batch_idx 1
+
+Loss: 1.0559850391215209
+
+Batch_idx 2
+
+Loss: 1.0130931469775
+
+Epoch [37/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0410845867992904
+
+Batch_idx 1
+
+Loss: 1.044108242576876
+
+Batch_idx 2
+
+Loss: 1.0426725034316235
+
+Epoch [38/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0411645548906001
+
+Batch_idx 1
+
+Loss: 1.0296929716058598
+
+Batch_idx 2
+
+Loss: 1.0349327888087214
+
+Epoch [39/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0247170508065533
+
+Batch_idx 1
+
+Loss: 1.031341556138602
+
+Batch_idx 2
+
+Loss: 1.0331909532283674
+
+Epoch [40/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0202280186595265
+
+Batch_idx 1
+
+Loss: 1.025350359799487
+
+Batch_idx 2
+
+Loss: 1.0047222118743082
+
+Epoch [41/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.022317149550992
+
+Batch_idx 1
+
+Loss: 1.0113503041734058
+
+Batch_idx 2
+
+Loss: 0.9905820027468196
+
+Epoch [42/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0197439303299238
+
+Batch_idx 1
+
+Loss: 0.9989794764426322
+
+Batch_idx 2
+
+Loss: 0.9950059125510362
+
+Epoch [43/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0038140545005216
+
+Batch_idx 1
+
+Loss: 1.0001306752508812
+
+Batch_idx 2
+
+Loss: 1.0007582595127902
+
+Epoch [44/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9958577283264127
+
+Batch_idx 1
+
+Loss: 0.9968160197259968
+
+Batch_idx 2
+
+Loss: 0.9865286117278267
+
+Epoch [45/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9981010331284841
+
+Batch_idx 1
+
+Loss: 0.9847820999489513
+
+Batch_idx 2
+
+Loss: 0.9639428489156874
+
+Epoch [46/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9915924505159521
+
+Batch_idx 1
+
+Loss: 0.9788113828391257
+
+Batch_idx 2
+
+Loss: 0.9604846969849773
+
+Epoch [47/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9874203726588184
+
+Batch_idx 1
+
+Loss: 0.9689015217613199
+
+Batch_idx 2
+
+Loss: 0.9696428505447429
+
+Epoch [48/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9678487981026243
+
+Batch_idx 1
+
+Loss: 0.9759093642956823
+
+Batch_idx 2
+
+Loss: 0.9714980193534442
+
+Epoch [49/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9665033058259647
+
+Batch_idx 1
+
+Loss: 0.9668735999915591
+
+Batch_idx 2
+
+Loss: 0.961490520802727
+
+Epoch [50/50] Loss: 0.0003
+
+Accuracy:0.7593984962406015 Precision:0.7667682926829268 Recall: 0.6733601070950469F1-score: 0.7170349251603706
+
+Accuracy:0.4509090909090909 Precision:0.0 Recall: 0.0F1-score: nan
+
+Accuracy:0.36023835319609965 Precision:0.8926174496644296 Recall: 0.36023835319609965F1-score: 0.513315322269394
+
+Batch_idx 0
+
+Loss: 1.6214604496733613
+
+Batch_idx 1
+
+Loss: 1.6097287216827743
+
+Batch_idx 2
+
+Loss: 1.5996124207041225
+
+Epoch [1/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5875925178973596
+
+Batch_idx 1
+
+Loss: 1.5775734811737248
+
+Batch_idx 2
+
+Loss: 1.5686825294356503
+
+Epoch [2/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5565255609794852
+
+Batch_idx 1
+
+Loss: 1.5458858579346915
+
+Batch_idx 2
+
+Loss: 1.5375633370418766
+
+Epoch [3/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5256710890302414
+
+Batch_idx 1
+
+Loss: 1.5177012426444718
+
+Batch_idx 2
+
+Loss: 1.50850808992961
+
+Epoch [4/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4973418250116142
+
+Batch_idx 1
+
+Loss: 1.4895401882230141
+
+Batch_idx 2
+
+Loss: 1.4836696804130431
+
+Epoch [5/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4707365885779322
+
+Batch_idx 1
+
+Loss: 1.4634102823794002
+
+Batch_idx 2
+
+Loss: 1.4565070144964833
+
+Epoch [6/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4481881282848166
+
+Batch_idx 1
+
+Loss: 1.4361016245182268
+
+Batch_idx 2
+
+Loss: 1.4308607939259452
+
+Epoch [7/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4198099997678604
+
+Batch_idx 1
+
+Loss: 1.4182273817965154
+
+Batch_idx 2
+
+Loss: 1.4035107511983147
+
+Epoch [8/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4025593794545097
+
+Batch_idx 1
+
+Loss: 1.3908732380486402
+
+Batch_idx 2
+
+Loss: 1.380990195542503
+
+Epoch [9/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3766810281584994
+
+Batch_idx 1
+
+Loss: 1.3732711979297414
+
+Batch_idx 2
+
+Loss: 1.3713401953315567
+
+Epoch [10/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3600455869411268
+
+Batch_idx 1
+
+Loss: 1.350353227285849
+
+Batch_idx 2
+
+Loss: 1.3508300972407963
+
+Epoch [11/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3377387151349953
+
+Batch_idx 1
+
+Loss: 1.3374314571296528
+
+Batch_idx 2
+
+Loss: 1.3185687230633993
+
+Epoch [12/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3207816186933594
+
+Batch_idx 1
+
+Loss: 1.3162079157197544
+
+Batch_idx 2
+
+Loss: 1.3201866797668376
+
+Epoch [13/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.307633418820561
+
+Batch_idx 1
+
+Loss: 1.2959526083747677
+
+Batch_idx 2
+
+Loss: 1.3020259161835566
+
+Epoch [14/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2928729768885086
+
+Batch_idx 1
+
+Loss: 1.2817504922948193
+
+Batch_idx 2
+
+Loss: 1.2657094995986502
+
+Epoch [15/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.270575430699124
+
+Batch_idx 1
+
+Loss: 1.2725788154308753
+
+Batch_idx 2
+
+Loss: 1.2598633140063928
+
+Epoch [16/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2627299624395032
+
+Batch_idx 1
+
+Loss: 1.2502833487923826
+
+Batch_idx 2
+
+Loss: 1.2542081298253138
+
+Epoch [17/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.246045861478271
+
+Batch_idx 1
+
+Loss: 1.236834373822416
+
+Batch_idx 2
+
+Loss: 1.2580811123261018
+
+Epoch [18/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2289669622389559
+
+Batch_idx 1
+
+Loss: 1.229667465865276
+
+Batch_idx 2
+
+Loss: 1.2302449693543516
+
+Epoch [19/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2117914336198474
+
+Batch_idx 1
+
+Loss: 1.2234406674612608
+
+Batch_idx 2
+
+Loss: 1.2038384654573753
+
+Epoch [20/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2070037433312482
+
+Batch_idx 1
+
+Loss: 1.2066609091368894
+
+Batch_idx 2
+
+Loss: 1.173231463465584
+
+Epoch [21/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1985036479507367
+
+Batch_idx 1
+
+Loss: 1.189075539736567
+
+Batch_idx 2
+
+Loss: 1.1806531823084907
+
+Epoch [22/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1761211349237992
+
+Batch_idx 1
+
+Loss: 1.183905889837207
+
+Batch_idx 2
+
+Loss: 1.2033821338881696
+
+Epoch [23/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.178084242004927
+
+Batch_idx 1
+
+Loss: 1.16395232919217
+
+Batch_idx 2
+
+Loss: 1.1657079811299162
+
+Epoch [24/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1616291092231839
+
+Batch_idx 1
+
+Loss: 1.1596097233563005
+
+Batch_idx 2
+
+Loss: 1.152679554082415
+
+Epoch [25/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1465595878205563
+
+Batch_idx 1
+
+Loss: 1.1555666645632598
+
+Batch_idx 2
+
+Loss: 1.1337784158907294
+
+Epoch [26/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1381332334552776
+
+Batch_idx 1
+
+Loss: 1.1399978441001895
+
+Batch_idx 2
+
+Loss: 1.152570136690459
+
+Epoch [27/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.128411173981052
+
+Batch_idx 1
+
+Loss: 1.127785200629327
+
+Batch_idx 2
+
+Loss: 1.160354837580721
+
+Epoch [28/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.118789675139255
+
+Batch_idx 1
+
+Loss: 1.1241120501476876
+
+Batch_idx 2
+
+Loss: 1.1152093897884114
+
+Epoch [29/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1167712095663005
+
+Batch_idx 1
+
+Loss: 1.1115142103796
+
+Batch_idx 2
+
+Loss: 1.0816910138279248
+
+Epoch [30/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1065773793472988
+
+Batch_idx 1
+
+Loss: 1.1013144435546582
+
+Batch_idx 2
+
+Loss: 1.0914522043831236
+
+Epoch [31/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0931908677164437
+
+Batch_idx 1
+
+Loss: 1.0979436400033344
+
+Batch_idx 2
+
+Loss: 1.0797025767704893
+
+Epoch [32/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0904041278365375
+
+Batch_idx 1
+
+Loss: 1.079987785802918
+
+Batch_idx 2
+
+Loss: 1.0979669133675398
+
+Epoch [33/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0812173039113901
+
+Batch_idx 1
+
+Loss: 1.0753263332420093
+
+Batch_idx 2
+
+Loss: 1.0715532346760466
+
+Epoch [34/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0690262187183581
+
+Batch_idx 1
+
+Loss: 1.0728965552057146
+
+Batch_idx 2
+
+Loss: 1.0556934037277192
+
+Epoch [35/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0651900254047508
+
+Batch_idx 1
+
+Loss: 1.062462604989254
+
+Batch_idx 2
+
+Loss: 1.0382406373664346
+
+Epoch [36/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0542593306369095
+
+Batch_idx 1
+
+Loss: 1.058294915876432
+
+Batch_idx 2
+
+Loss: 1.0295983902036332
+
+Epoch [37/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0448836583336063
+
+Batch_idx 1
+
+Loss: 1.050865930617324
+
+Batch_idx 2
+
+Loss: 1.0383952480429892
+
+Epoch [38/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0328795913214988
+
+Batch_idx 1
+
+Loss: 1.0451514069894068
+
+Batch_idx 2
+
+Loss: 1.0507030991394473
+
+Epoch [39/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0285077790589587
+
+Batch_idx 1
+
+Loss: 1.0379591737837857
+
+Batch_idx 2
+
+Loss: 1.0276791122227649
+
+Epoch [40/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0396598094854015
+
+Batch_idx 1
+
+Loss: 1.0131719805095227
+
+Batch_idx 2
+
+Loss: 1.0181993425743365
+
+Epoch [41/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0221914428433
+
+Batch_idx 1
+
+Loss: 1.017335889384778
+
+Batch_idx 2
+
+Loss: 1.0101345238677302
+
+Epoch [42/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0062742348446276
+
+Batch_idx 1
+
+Loss: 1.010773565691442
+
+Batch_idx 2
+
+Loss: 1.0679729052558045
+
+Epoch [43/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0084064460882112
+
+Batch_idx 1
+
+Loss: 1.006579294419227
+
+Batch_idx 2
+
+Loss: 0.9858193912286153
+
+Epoch [44/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0025221274899156
+
+Batch_idx 1
+
+Loss: 0.995163490840695
+
+Batch_idx 2
+
+Loss: 1.0128159025440502
+
+Epoch [45/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9943306766724096
+
+Batch_idx 1
+
+Loss: 0.9945392955567329
+
+Batch_idx 2
+
+Loss: 0.9805671282086842
+
+Epoch [46/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9830989717246894
+
+Batch_idx 1
+
+Loss: 0.9935973153470593
+
+Batch_idx 2
+
+Loss: 0.976681957796622
+
+Epoch [47/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9813198265865265
+
+Batch_idx 1
+
+Loss: 0.9815961524456132
+
+Batch_idx 2
+
+Loss: 0.9853434994113325
+
+Epoch [48/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9650297240083308
+
+Batch_idx 1
+
+Loss: 0.9800143726451627
+
+Batch_idx 2
+
+Loss: 1.0232040807811793
+
+Epoch [49/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9722657032062564
+
+Batch_idx 1
+
+Loss: 0.9670171564805631
+
+Batch_idx 2
+
+Loss: 0.979455391434227
+
+Epoch [50/50] Loss: 0.0003
+
+Accuracy:0.7593984962406015 Precision:0.7674772036474165 Recall: 0.6760374832663989F1-score: 0.7188612099644128
+
+Accuracy:0.4509090909090909 Precision:0.0 Recall: 0.0F1-score: nan
+
+Accuracy:0.3595160707836764 Precision:0.8968468468468469 Recall: 0.3595160707836764F1-score: 0.5132766176849705
+
+Batch_idx 0
+
+Loss: 1.6049031122689443
+
+Batch_idx 1
+
+Loss: 1.593364303739019
+
+Batch_idx 2
+
+Loss: 1.5832238821823441
+
+Epoch [1/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.572300785786732
+
+Batch_idx 1
+
+Loss: 1.5618391743266489
+
+Batch_idx 2
+
+Loss: 1.5514888389097785
+
+Epoch [2/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.541733293312392
+
+Batch_idx 1
+
+Loss: 1.5315132982338122
+
+Batch_idx 2
+
+Loss: 1.5170554225610262
+
+Epoch [3/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5147919464299215
+
+Batch_idx 1
+
+Loss: 1.4997514904919231
+
+Batch_idx 2
+
+Loss: 1.4925738042978305
+
+Epoch [4/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4876061264997007
+
+Batch_idx 1
+
+Loss: 1.4737489963919506
+
+Batch_idx 2
+
+Loss: 1.454962650987723
+
+Epoch [5/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.457805367687933
+
+Batch_idx 1
+
+Loss: 1.450473430515865
+
+Batch_idx 2
+
+Loss: 1.4392027419806592
+
+Epoch [6/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.433090708226012
+
+Batch_idx 1
+
+Loss: 1.423696382161994
+
+Batch_idx 2
+
+Loss: 1.4324454442822985
+
+Epoch [7/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4085649761039092
+
+Batch_idx 1
+
+Loss: 1.403990136578232
+
+Batch_idx 2
+
+Loss: 1.3964391875282727
+
+Epoch [8/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3862858027029685
+
+Batch_idx 1
+
+Loss: 1.3840395572560784
+
+Batch_idx 2
+
+Loss: 1.367021231086918
+
+Epoch [9/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.371861633166966
+
+Batch_idx 1
+
+Loss: 1.3581403217221524
+
+Batch_idx 2
+
+Loss: 1.3414856575344487
+
+Epoch [10/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.354030242523503
+
+Batch_idx 1
+
+Loss: 1.336917623485657
+
+Batch_idx 2
+
+Loss: 1.324474417370307
+
+Epoch [11/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3308856145693722
+
+Batch_idx 1
+
+Loss: 1.3207674459005694
+
+Batch_idx 2
+
+Loss: 1.3251505164224386
+
+Epoch [12/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3159451412462606
+
+Batch_idx 1
+
+Loss: 1.3025147034014894
+
+Batch_idx 2
+
+Loss: 1.2975912081795324
+
+Epoch [13/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2863570296309892
+
+Batch_idx 1
+
+Loss: 1.2975587793357062
+
+Batch_idx 2
+
+Loss: 1.2961942747644999
+
+Epoch [14/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.279124707743212
+
+Batch_idx 1
+
+Loss: 1.2757172900689404
+
+Batch_idx 2
+
+Loss: 1.2655924420897258
+
+Epoch [15/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2663012426392422
+
+Batch_idx 1
+
+Loss: 1.2588311276456723
+
+Batch_idx 2
+
+Loss: 1.2518539563585742
+
+Epoch [16/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2554122419921152
+
+Batch_idx 1
+
+Loss: 1.244553045733271
+
+Batch_idx 2
+
+Loss: 1.2163935108693211
+
+Epoch [17/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2351818863508093
+
+Batch_idx 1
+
+Loss: 1.2350074430987332
+
+Batch_idx 2
+
+Loss: 1.2217408815922142
+
+Epoch [18/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2150348064194967
+
+Batch_idx 1
+
+Loss: 1.2286057832516246
+
+Batch_idx 2
+
+Loss: 1.2136034334478407
+
+Epoch [19/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2159198399758555
+
+Batch_idx 1
+
+Loss: 1.1988571278271942
+
+Batch_idx 2
+
+Loss: 1.2261665618857502
+
+Epoch [20/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1989138961557524
+
+Batch_idx 1
+
+Loss: 1.1971004732934531
+
+Batch_idx 2
+
+Loss: 1.1815346658337387
+
+Epoch [21/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1923794507651209
+
+Batch_idx 1
+
+Loss: 1.1782181651446433
+
+Batch_idx 2
+
+Loss: 1.1870946349621947
+
+Epoch [22/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1785978531273427
+
+Batch_idx 1
+
+Loss: 1.1706343249551767
+
+Batch_idx 2
+
+Loss: 1.1706477471451318
+
+Epoch [23/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.15475399508533
+
+Batch_idx 1
+
+Loss: 1.173600429847176
+
+Batch_idx 2
+
+Loss: 1.1580951529228853
+
+Epoch [24/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1577671876557023
+
+Batch_idx 1
+
+Loss: 1.150718960207335
+
+Batch_idx 2
+
+Loss: 1.1402697444614665
+
+Epoch [25/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1385496514036881
+
+Batch_idx 1
+
+Loss: 1.1483108259574333
+
+Batch_idx 2
+
+Loss: 1.1391167260335775
+
+Epoch [26/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1380948088159253
+
+Batch_idx 1
+
+Loss: 1.1330633855285814
+
+Batch_idx 2
+
+Loss: 1.1040818847883336
+
+Epoch [27/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1253234600148359
+
+Batch_idx 1
+
+Loss: 1.1218087621395703
+
+Batch_idx 2
+
+Loss: 1.1282278773347154
+
+Epoch [28/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1107990631616662
+
+Batch_idx 1
+
+Loss: 1.1175921901315307
+
+Batch_idx 2
+
+Loss: 1.119474158305095
+
+Epoch [29/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.108594886402593
+
+Batch_idx 1
+
+Loss: 1.1052888478425489
+
+Batch_idx 2
+
+Loss: 1.0885144967659217
+
+Epoch [30/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.09871917643113
+
+Batch_idx 1
+
+Loss: 1.0957837479623187
+
+Batch_idx 2
+
+Loss: 1.0945024619717052
+
+Epoch [31/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0845173832273458
+
+Batch_idx 1
+
+Loss: 1.088489961365956
+
+Batch_idx 2
+
+Loss: 1.1150520976680194
+
+Epoch [32/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0795999783773853
+
+Batch_idx 1
+
+Loss: 1.0843341075587338
+
+Batch_idx 2
+
+Loss: 1.0570519480696425
+
+Epoch [33/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0747417287184575
+
+Batch_idx 1
+
+Loss: 1.0687411598937626
+
+Batch_idx 2
+
+Loss: 1.077714761987801
+
+Epoch [34/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0632269866177193
+
+Batch_idx 1
+
+Loss: 1.0626444553890195
+
+Batch_idx 2
+
+Loss: 1.0806383075404158
+
+Epoch [35/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.060627564031413
+
+Batch_idx 1
+
+Loss: 1.054460628037791
+
+Batch_idx 2
+
+Loss: 1.0426494816134362
+
+Epoch [36/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0422079983133836
+
+Batch_idx 1
+
+Loss: 1.0556071787961023
+
+Batch_idx 2
+
+Loss: 1.0505282580269721
+
+Epoch [37/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0536055257943484
+
+Batch_idx 1
+
+Loss: 1.0333603004074086
+
+Batch_idx 2
+
+Loss: 1.0186461281530772
+
+Epoch [38/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.029883851147902
+
+Batch_idx 1
+
+Loss: 1.042794976160443
+
+Batch_idx 2
+
+Loss: 1.0126771219509199
+
+Epoch [39/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.030103173639775
+
+Batch_idx 1
+
+Loss: 1.0289042158724515
+
+Batch_idx 2
+
+Loss: 0.9993710031887629
+
+Epoch [40/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0166184268254292
+
+Batch_idx 1
+
+Loss: 1.026200679449939
+
+Batch_idx 2
+
+Loss: 1.0103569977824671
+
+Epoch [41/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0211247188239343
+
+Batch_idx 1
+
+Loss: 1.0105118435916933
+
+Batch_idx 2
+
+Loss: 0.9899117184507835
+
+Epoch [42/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0113430188844332
+
+Batch_idx 1
+
+Loss: 1.0078737041833528
+
+Batch_idx 2
+
+Loss: 0.9802428075360039
+
+Epoch [43/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0032432695081765
+
+Batch_idx 1
+
+Loss: 0.9975360297317566
+
+Batch_idx 2
+
+Loss: 1.0110506546114886
+
+Epoch [44/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0019309564635197
+
+Batch_idx 1
+
+Loss: 0.9907588791870203
+
+Batch_idx 2
+
+Loss: 0.9732312418662336
+
+Epoch [45/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9942970357878247
+
+Batch_idx 1
+
+Loss: 0.984753178515409
+
+Batch_idx 2
+
+Loss: 0.9771103194305222
+
+Epoch [46/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9808010256657801
+
+Batch_idx 1
+
+Loss: 0.9844834452981018
+
+Batch_idx 2
+
+Loss: 0.9834500601548958
+
+Epoch [47/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9820509748957191
+
+Batch_idx 1
+
+Loss: 0.9730906939261098
+
+Batch_idx 2
+
+Loss: 0.9672603465889885
+
+Epoch [48/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9678587673895211
+
+Batch_idx 1
+
+Loss: 0.9729176624131617
+
+Batch_idx 2
+
+Loss: 0.9806924980281868
+
+Epoch [49/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9643420572733421
+
+Batch_idx 1
+
+Loss: 0.9649282214662278
+
+Batch_idx 2
+
+Loss: 0.9770533916879968
+
+Epoch [50/50] Loss: 0.0003
+
+Accuracy:0.7627401837928154 Precision:0.7681818181818182 Recall: 0.678714859437751F1-score: 0.7206823027718551
+
+Accuracy:0.4509090909090909 Precision:0.0 Recall: 0.0F1-score: nan
+
+Accuracy:0.3605994944023113 Precision:0.8927134555207867 Recall: 0.3605994944023113F1-score: 0.5136977491961414
+
+Batch_idx 0
+
+Loss: 1.5970875210864803
+
+Batch_idx 1
+
+Loss: 1.586699817602299
+
+Batch_idx 2
+
+Loss: 1.5763406047611042
+
+Epoch [1/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5651270413879357
+
+Batch_idx 1
+
+Loss: 1.5539721933337598
+
+Batch_idx 2
+
+Loss: 1.5463564525560032
+
+Epoch [2/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5343061466425878
+
+Batch_idx 1
+
+Loss: 1.5250137232144845
+
+Batch_idx 2
+
+Loss: 1.510078747090146
+
+Epoch [3/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.50793527014323
+
+Batch_idx 1
+
+Loss: 1.4934794062131262
+
+Batch_idx 2
+
+Loss: 1.481602271934484
+
+Epoch [4/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4777799143352213
+
+Batch_idx 1
+
+Loss: 1.4687706688068454
+
+Batch_idx 2
+
+Loss: 1.4593325833796011
+
+Epoch [5/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4544343259151729
+
+Batch_idx 1
+
+Loss: 1.4400955300329712
+
+Batch_idx 2
+
+Loss: 1.4386325784765361
+
+Epoch [6/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4270912609756434
+
+Batch_idx 1
+
+Loss: 1.4189494569872279
+
+Batch_idx 2
+
+Loss: 1.416221114715778
+
+Epoch [7/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4037961604612772
+
+Batch_idx 1
+
+Loss: 1.3978321447119908
+
+Batch_idx 2
+
+Loss: 1.387877249895403
+
+Epoch [8/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3847494418181336
+
+Batch_idx 1
+
+Loss: 1.3738158837667962
+
+Batch_idx 2
+
+Loss: 1.369298265350555
+
+Epoch [9/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3605530875963296
+
+Batch_idx 1
+
+Loss: 1.3556850929723565
+
+Batch_idx 2
+
+Loss: 1.3632514509854166
+
+Epoch [10/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3418450381659632
+
+Batch_idx 1
+
+Loss: 1.341054083365867
+
+Batch_idx 2
+
+Loss: 1.3120345458796279
+
+Epoch [11/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3278441708930857
+
+Batch_idx 1
+
+Loss: 1.3173269164246173
+
+Batch_idx 2
+
+Loss: 1.3060751636949839
+
+Epoch [12/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3087187082939962
+
+Batch_idx 1
+
+Loss: 1.2988697870358352
+
+Batch_idx 2
+
+Loss: 1.3132538804430232
+
+Epoch [13/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2936476919857043
+
+Batch_idx 1
+
+Loss: 1.2812779593193455
+
+Batch_idx 2
+
+Loss: 1.300284157223044
+
+Epoch [14/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.278152303255158
+
+Batch_idx 1
+
+Loss: 1.270641629925068
+
+Batch_idx 2
+
+Loss: 1.2542842683680517
+
+Epoch [15/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2592618040316623
+
+Batch_idx 1
+
+Loss: 1.2540586960732545
+
+Batch_idx 2
+
+Loss: 1.2835682300311038
+
+Epoch [16/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2524873553689762
+
+Batch_idx 1
+
+Loss: 1.2360825794707477
+
+Batch_idx 2
+
+Loss: 1.2481319492627199
+
+Epoch [17/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2352021726524511
+
+Batch_idx 1
+
+Loss: 1.2257233941013224
+
+Batch_idx 2
+
+Loss: 1.2433834101380061
+
+Epoch [18/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2288828853709108
+
+Batch_idx 1
+
+Loss: 1.2098617029360996
+
+Batch_idx 2
+
+Loss: 1.2073366926372124
+
+Epoch [19/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2061551371067465
+
+Batch_idx 1
+
+Loss: 1.2092247812604917
+
+Batch_idx 2
+
+Loss: 1.1872757280001103
+
+Epoch [20/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1973338195010839
+
+Batch_idx 1
+
+Loss: 1.1905672758359365
+
+Batch_idx 2
+
+Loss: 1.2029030608806297
+
+Epoch [21/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1883245450958317
+
+Batch_idx 1
+
+Loss: 1.1781287209864892
+
+Batch_idx 2
+
+Loss: 1.1817403038018797
+
+Epoch [22/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1835284030379525
+
+Batch_idx 1
+
+Loss: 1.1641580942206327
+
+Batch_idx 2
+
+Loss: 1.1494990033924677
+
+Epoch [23/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1639824360066395
+
+Batch_idx 1
+
+Loss: 1.1615436319242696
+
+Batch_idx 2
+
+Loss: 1.14556494307868
+
+Epoch [24/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1531342332578538
+
+Batch_idx 1
+
+Loss: 1.1460246057299952
+
+Batch_idx 2
+
+Loss: 1.1736205704550204
+
+Epoch [25/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1423997459746327
+
+Batch_idx 1
+
+Loss: 1.1367901773675566
+
+Batch_idx 2
+
+Loss: 1.1626053159410226
+
+Epoch [26/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1395772988019786
+
+Batch_idx 1
+
+Loss: 1.1241157194051865
+
+Batch_idx 2
+
+Loss: 1.1269620161359153
+
+Epoch [27/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1104851068736308
+
+Batch_idx 1
+
+Loss: 1.1322422214893941
+
+Batch_idx 2
+
+Loss: 1.1330141072307889
+
+Epoch [28/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1074316241237587
+
+Batch_idx 1
+
+Loss: 1.1188132901234926
+
+Batch_idx 2
+
+Loss: 1.111796900769462
+
+Epoch [29/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0916251232791598
+
+Batch_idx 1
+
+Loss: 1.1141775344598799
+
+Batch_idx 2
+
+Loss: 1.1207509810959433
+
+Epoch [30/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0949080772502615
+
+Batch_idx 1
+
+Loss: 1.0996879358507958
+
+Batch_idx 2
+
+Loss: 1.070811274510709
+
+Epoch [31/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0987029618622912
+
+Batch_idx 1
+
+Loss: 1.074933781300734
+
+Batch_idx 2
+
+Loss: 1.0891807548149737
+
+Epoch [32/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0852914466214771
+
+Batch_idx 1
+
+Loss: 1.0747239411995784
+
+Batch_idx 2
+
+Loss: 1.0605936734951782
+
+Epoch [33/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0695246033172239
+
+Batch_idx 1
+
+Loss: 1.0724033399437671
+
+Batch_idx 2
+
+Loss: 1.06704712591463
+
+Epoch [34/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0604007569904965
+
+Batch_idx 1
+
+Loss: 1.063332710455992
+
+Batch_idx 2
+
+Loss: 1.0759539793604789
+
+Epoch [35/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.054890582528148
+
+Batch_idx 1
+
+Loss: 1.055421397135259
+
+Batch_idx 2
+
+Loss: 1.0550115045813928
+
+Epoch [36/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0420067012787784
+
+Batch_idx 1
+
+Loss: 1.053607568277297
+
+Batch_idx 2
+
+Loss: 1.0470221662796013
+
+Epoch [37/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.041769879631967
+
+Batch_idx 1
+
+Loss: 1.0396854354295653
+
+Batch_idx 2
+
+Loss: 1.0363228006448146
+
+Epoch [38/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0297113274631766
+
+Batch_idx 1
+
+Loss: 1.0339128181844632
+
+Batch_idx 2
+
+Loss: 1.0538853068429637
+
+Epoch [39/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0357316456706351
+
+Batch_idx 1
+
+Loss: 1.0191556969853712
+
+Batch_idx 2
+
+Loss: 1.0121906184146174
+
+Epoch [40/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0203055457288366
+
+Batch_idx 1
+
+Loss: 1.0159584841607534
+
+Batch_idx 2
+
+Loss: 1.0408903872682036
+
+Epoch [41/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0173454302858933
+
+Batch_idx 1
+
+Loss: 1.0101985995907654
+
+Batch_idx 2
+
+Loss: 1.0033177940932296
+
+Epoch [42/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.013810056703858
+
+Batch_idx 1
+
+Loss: 1.001738920139784
+
+Batch_idx 2
+
+Loss: 0.9895991604572033
+
+Epoch [43/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.999755536400064
+
+Batch_idx 1
+
+Loss: 1.0021347145744626
+
+Batch_idx 2
+
+Loss: 0.9904426985520884
+
+Epoch [44/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9939789034164618
+
+Batch_idx 1
+
+Loss: 0.9975364920332482
+
+Batch_idx 2
+
+Loss: 0.968569008797724
+
+Epoch [45/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9934429115082097
+
+Batch_idx 1
+
+Loss: 0.9867479595978417
+
+Batch_idx 2
+
+Loss: 0.9579269274167964
+
+Epoch [46/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9895706710048565
+
+Batch_idx 1
+
+Loss: 0.9751546424351604
+
+Batch_idx 2
+
+Loss: 0.975360688544666
+
+Epoch [47/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9842903776101851
+
+Batch_idx 1
+
+Loss: 0.9643352876660843
+
+Batch_idx 2
+
+Loss: 0.9988093323168193
+
+Epoch [48/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9666847066728669
+
+Batch_idx 1
+
+Loss: 0.9789296060839393
+
+Batch_idx 2
+
+Loss: 0.9353685460773867
+
+Epoch [49/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9717373314860277
+
+Batch_idx 1
+
+Loss: 0.9602969322491505
+
+Batch_idx 2
+
+Loss: 0.9483325214971728
+
+Epoch [50/50] Loss: 0.0003
+
+Accuracy:0.7568922305764411 Precision:0.7629179331306991 Recall: 0.6720214190093708F1-score: 0.7145907473309608
+
+Accuracy:0.4509090909090909 Precision:0.0 Recall: 0.0F1-score: nan
+
+Accuracy:0.3616829180209462 Precision:0.892602495543672 Recall: 0.3616829180209462F1-score: 0.5147776921099975
+
+Batch_idx 0
+
+Loss: 1.61495340893585
+
+Batch_idx 1
+
+Loss: 1.6040751774155952
+
+Batch_idx 2
+
+Loss: 1.5930292583768415
+
+Epoch [1/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5821745456696563
+
+Batch_idx 1
+
+Loss: 1.5708621315317348
+
+Batch_idx 2
+
+Loss: 1.56278019030609
+
+Epoch [2/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5501154637105956
+
+Batch_idx 1
+
+Loss: 1.5410583087481178
+
+Batch_idx 2
+
+Loss: 1.528437686164121
+
+Epoch [3/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5192005588882729
+
+Batch_idx 1
+
+Loss: 1.5123133702206437
+
+Batch_idx 2
+
+Loss: 1.5064744369434075
+
+Epoch [4/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4920225120586015
+
+Batch_idx 1
+
+Loss: 1.4846505497536353
+
+Batch_idx 2
+
+Loss: 1.4728753938393453
+
+Epoch [5/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.465393255322026
+
+Batch_idx 1
+
+Loss: 1.457171973540355
+
+Batch_idx 2
+
+Loss: 1.4581975573633326
+
+Epoch [6/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4408953795387869
+
+Batch_idx 1
+
+Loss: 1.4331851225102026
+
+Batch_idx 2
+
+Loss: 1.4273531463923894
+
+Epoch [7/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4190731089581814
+
+Batch_idx 1
+
+Loss: 1.4083309356445788
+
+Batch_idx 2
+
+Loss: 1.4050933852950398
+
+Epoch [8/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3974262500341519
+
+Batch_idx 1
+
+Loss: 1.3869836480014721
+
+Batch_idx 2
+
+Loss: 1.3787262677416554
+
+Epoch [9/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3759681286945107
+
+Batch_idx 1
+
+Loss: 1.3660154132911622
+
+Batch_idx 2
+
+Loss: 1.3663421892208067
+
+Epoch [10/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3579465913801283
+
+Batch_idx 1
+
+Loss: 1.3456570294577979
+
+Batch_idx 2
+
+Loss: 1.341867953258358
+
+Epoch [11/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3333189533620153
+
+Batch_idx 1
+
+Loss: 1.3314688351903292
+
+Batch_idx 2
+
+Loss: 1.3382689200349078
+
+Epoch [12/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.317855232606899
+
+Batch_idx 1
+
+Loss: 1.3155582829177448
+
+Batch_idx 2
+
+Loss: 1.2957763047495356
+
+Epoch [13/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3064832738589192
+
+Batch_idx 1
+
+Loss: 1.2951591566347187
+
+Batch_idx 2
+
+Loss: 1.2711038413959954
+
+Epoch [14/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2828785304953134
+
+Batch_idx 1
+
+Loss: 1.2870134209793727
+
+Batch_idx 2
+
+Loss: 1.2568144035510502
+
+Epoch [15/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2678112601409304
+
+Batch_idx 1
+
+Loss: 1.2705558483363912
+
+Batch_idx 2
+
+Loss: 1.2528572350657519
+
+Epoch [16/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2572545385744482
+
+Batch_idx 1
+
+Loss: 1.2491622523688688
+
+Batch_idx 2
+
+Loss: 1.261081310178074
+
+Epoch [17/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2444810665269417
+
+Batch_idx 1
+
+Loss: 1.2355627018301796
+
+Batch_idx 2
+
+Loss: 1.2416106930640518
+
+Epoch [18/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.233540457749779
+
+Batch_idx 1
+
+Loss: 1.2201058217660552
+
+Batch_idx 2
+
+Loss: 1.2309302357587362
+
+Epoch [19/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2209441387935274
+
+Batch_idx 1
+
+Loss: 1.2080562053419386
+
+Batch_idx 2
+
+Loss: 1.2161940415230805
+
+Epoch [20/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.207292611415815
+
+Batch_idx 1
+
+Loss: 1.201975966020896
+
+Batch_idx 2
+
+Loss: 1.1751806857141738
+
+Epoch [21/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1952404493267774
+
+Batch_idx 1
+
+Loss: 1.1897539487579791
+
+Batch_idx 2
+
+Loss: 1.171321697010317
+
+Epoch [22/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1870785321260118
+
+Batch_idx 1
+
+Loss: 1.1767183349392625
+
+Batch_idx 2
+
+Loss: 1.150505427584166
+
+Epoch [23/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1783558501624924
+
+Batch_idx 1
+
+Loss: 1.15912515933087
+
+Batch_idx 2
+
+Loss: 1.1710455590171822
+
+Epoch [24/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1620727208872135
+
+Batch_idx 1
+
+Loss: 1.1536462477814644
+
+Batch_idx 2
+
+Loss: 1.166417570798822
+
+Epoch [25/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1452958357129581
+
+Batch_idx 1
+
+Loss: 1.1545332042559124
+
+Batch_idx 2
+
+Loss: 1.1263606552419387
+
+Epoch [26/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1271675917662263
+
+Batch_idx 1
+
+Loss: 1.1487179928106017
+
+Batch_idx 2
+
+Loss: 1.148037887550079
+
+Epoch [27/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.132000134849295
+
+Batch_idx 1
+
+Loss: 1.1270845161672927
+
+Batch_idx 2
+
+Loss: 1.1222947246460269
+
+Epoch [28/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.120396388466664
+
+Batch_idx 1
+
+Loss: 1.1232251937126483
+
+Batch_idx 2
+
+Loss: 1.0916978831177155
+
+Epoch [29/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1085569139357836
+
+Batch_idx 1
+
+Loss: 1.1102391240992522
+
+Batch_idx 2
+
+Loss: 1.1297927037478341
+
+Epoch [30/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.103660329283678
+
+Batch_idx 1
+
+Loss: 1.1003939959803115
+
+Batch_idx 2
+
+Loss: 1.1010383278849996
+
+Epoch [31/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0944376469434125
+
+Batch_idx 1
+
+Loss: 1.0984745516009202
+
+Batch_idx 2
+
+Loss: 1.0515937186155564
+
+Epoch [32/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.086379455141256
+
+Batch_idx 1
+
+Loss: 1.0830897896940344
+
+Batch_idx 2
+
+Loss: 1.0875651962355484
+
+Epoch [33/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0852657743560297
+
+Batch_idx 1
+
+Loss: 1.066563770149886
+
+Batch_idx 2
+
+Loss: 1.0902799626153983
+
+Epoch [34/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0715534193420315
+
+Batch_idx 1
+
+Loss: 1.067607243373791
+
+Batch_idx 2
+
+Loss: 1.0604215014798213
+
+Epoch [35/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.063689718680037
+
+Batch_idx 1
+
+Loss: 1.0658984189293288
+
+Batch_idx 2
+
+Loss: 1.012505473466249
+
+Epoch [36/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.050444687473447
+
+Batch_idx 1
+
+Loss: 1.0549908198939124
+
+Batch_idx 2
+
+Loss: 1.0656226245619242
+
+Epoch [37/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.047067764666211
+
+Batch_idx 1
+
+Loss: 1.0432589967681658
+
+Batch_idx 2
+
+Loss: 1.0605739985206106
+
+Epoch [38/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.045765394804449
+
+Batch_idx 1
+
+Loss: 1.0359417013133188
+
+Batch_idx 2
+
+Loss: 1.0143534126937777
+
+Epoch [39/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0237306435742153
+
+Batch_idx 1
+
+Loss: 1.0402096119483881
+
+Batch_idx 2
+
+Loss: 1.032161972004283
+
+Epoch [40/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.028584368844633
+
+Batch_idx 1
+
+Loss: 1.0206250390128617
+
+Batch_idx 2
+
+Loss: 1.0329616074910954
+
+Epoch [41/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.022573297204359
+
+Batch_idx 1
+
+Loss: 1.01720768036685
+
+Batch_idx 2
+
+Loss: 1.0008097953927146
+
+Epoch [42/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0228373360739345
+
+Batch_idx 1
+
+Loss: 0.9990405848055005
+
+Batch_idx 2
+
+Loss: 1.0231922830919247
+
+Epoch [43/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0028479705772384
+
+Batch_idx 1
+
+Loss: 1.009610349421291
+
+Batch_idx 2
+
+Loss: 0.9966613089392341
+
+Epoch [44/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0003629171257862
+
+Batch_idx 1
+
+Loss: 0.9918286719987622
+
+Batch_idx 2
+
+Loss: 1.0424542803683494
+
+Epoch [45/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9896520401844313
+
+Batch_idx 1
+
+Loss: 0.9991190605358204
+
+Batch_idx 2
+
+Loss: 0.9759304438234218
+
+Epoch [46/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9899255694810297
+
+Batch_idx 1
+
+Loss: 0.9753983708747048
+
+Batch_idx 2
+
+Loss: 1.0456174832842198
+
+Epoch [47/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9733888867178196
+
+Batch_idx 1
+
+Loss: 0.9875027697969352
+
+Batch_idx 2
+
+Loss: 0.9910667012421102
+
+Epoch [48/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9777588123801688
+
+Batch_idx 1
+
+Loss: 0.9736083820713033
+
+Batch_idx 2
+
+Loss: 0.9736220810176375
+
+Epoch [49/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9624810851726484
+
+Batch_idx 1
+
+Loss: 0.9791112875419885
+
+Batch_idx 2
+
+Loss: 0.9574014982247284
+
+Epoch [50/50] Loss: 0.0003
+
+Accuracy:0.7593984962406015 Precision:0.7666666666666667 Recall: 0.677376171352075F1-score: 0.7192608386638238
+
+Accuracy:0.4509090909090909 Precision:0.0 Recall: 0.0F1-score: nan
+
+Accuracy:0.36005778259299387 Precision:0.8949730700179533 Recall: 0.36005778259299387F1-score: 0.5135204738604171
+
+Batch_idx 0
+
+Loss: 1.6114362617642761
+
+Batch_idx 1
+
+Loss: 1.6001728544778795
+
+Batch_idx 2
+
+Loss: 1.5883977793954358
+
+Epoch [1/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5782947026900587
+
+Batch_idx 1
+
+Loss: 1.5680785871022824
+
+Batch_idx 2
+
+Loss: 1.5549753463739362
+
+Epoch [2/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5471920631329226
+
+Batch_idx 1
+
+Loss: 1.5373208954895778
+
+Batch_idx 2
+
+Loss: 1.5253593925655218
+
+Epoch [3/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5169049817855984
+
+Batch_idx 1
+
+Loss: 1.507958905030646
+
+Batch_idx 2
+
+Loss: 1.5056777282052347
+
+Epoch [4/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4911343125485772
+
+Batch_idx 1
+
+Loss: 1.481203823428023
+
+Batch_idx 2
+
+Loss: 1.4587381940315647
+
+Epoch [5/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4640069449090143
+
+Batch_idx 1
+
+Loss: 1.4540157923367227
+
+Batch_idx 2
+
+Loss: 1.451558903821795
+
+Epoch [6/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4414337408229956
+
+Batch_idx 1
+
+Loss: 1.4285482821499407
+
+Batch_idx 2
+
+Loss: 1.418691971362799
+
+Epoch [7/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4157110841689915
+
+Batch_idx 1
+
+Loss: 1.4094591121083162
+
+Batch_idx 2
+
+Loss: 1.3872656596892006
+
+Epoch [8/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.390847917006568
+
+Batch_idx 1
+
+Loss: 1.3890412422632017
+
+Batch_idx 2
+
+Loss: 1.378249676064124
+
+Epoch [9/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3757280423835443
+
+Batch_idx 1
+
+Loss: 1.3634130525496346
+
+Batch_idx 2
+
+Loss: 1.35524227625897
+
+Epoch [10/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.353931719572265
+
+Batch_idx 1
+
+Loss: 1.3457808090452643
+
+Batch_idx 2
+
+Loss: 1.3415825021578758
+
+Epoch [11/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3367273253641947
+
+Batch_idx 1
+
+Loss: 1.3248461331601957
+
+Batch_idx 2
+
+Loss: 1.3336840404987256
+
+Epoch [12/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3191987051394582
+
+Batch_idx 1
+
+Loss: 1.3076455125732853
+
+Batch_idx 2
+
+Loss: 1.3188345517544415
+
+Epoch [13/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2979870240706906
+
+Batch_idx 1
+
+Loss: 1.2986899842858441
+
+Batch_idx 2
+
+Loss: 1.2852312179574448
+
+Epoch [14/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2878773947289974
+
+Batch_idx 1
+
+Loss: 1.2750840319890344
+
+Batch_idx 2
+
+Loss: 1.2882697301314583
+
+Epoch [15/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.268113994189125
+
+Batch_idx 1
+
+Loss: 1.2704537591894194
+
+Batch_idx 2
+
+Loss: 1.2383556868704828
+
+Epoch [16/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2619323305295602
+
+Batch_idx 1
+
+Loss: 1.2479646474572161
+
+Batch_idx 2
+
+Loss: 1.2269255805041006
+
+Epoch [17/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2475752670933495
+
+Batch_idx 1
+
+Loss: 1.2360285412070997
+
+Batch_idx 2
+
+Loss: 1.2073708086567572
+
+Epoch [18/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2326381072779165
+
+Batch_idx 1
+
+Loss: 1.222882921291945
+
+Batch_idx 2
+
+Loss: 1.2103649315230052
+
+Epoch [19/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2191702101863664
+
+Batch_idx 1
+
+Loss: 1.2113675965318773
+
+Batch_idx 2
+
+Loss: 1.1978277363876026
+
+Epoch [20/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2082838452670868
+
+Batch_idx 1
+
+Loss: 1.1976623760838934
+
+Batch_idx 2
+
+Loss: 1.1904278687391119
+
+Epoch [21/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1898558469149096
+
+Batch_idx 1
+
+Loss: 1.1940167249203852
+
+Batch_idx 2
+
+Loss: 1.1730618827897812
+
+Epoch [22/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1863149758786937
+
+Batch_idx 1
+
+Loss: 1.1748281394459728
+
+Batch_idx 2
+
+Loss: 1.16468978733456
+
+Epoch [23/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1702652478898357
+
+Batch_idx 1
+
+Loss: 1.165583983086815
+
+Batch_idx 2
+
+Loss: 1.1804403229428393
+
+Epoch [24/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1605992580102096
+
+Batch_idx 1
+
+Loss: 1.161200380873679
+
+Batch_idx 2
+
+Loss: 1.1233129486373852
+
+Epoch [25/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.141986932829542
+
+Batch_idx 1
+
+Loss: 1.1551133024862188
+
+Batch_idx 2
+
+Loss: 1.1444008105184398
+
+Epoch [26/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1323611691329378
+
+Batch_idx 1
+
+Loss: 1.1434341989806094
+
+Batch_idx 2
+
+Loss: 1.1464134236264119
+
+Epoch [27/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1327108156822203
+
+Batch_idx 1
+
+Loss: 1.1255250024500925
+
+Batch_idx 2
+
+Loss: 1.1260736005785794
+
+Epoch [28/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.11763859398928
+
+Batch_idx 1
+
+Loss: 1.1231823215396937
+
+Batch_idx 2
+
+Loss: 1.1106280981942824
+
+Epoch [29/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1165760918884937
+
+Batch_idx 1
+
+Loss: 1.1048733256568022
+
+Batch_idx 2
+
+Loss: 1.111243410318257
+
+Epoch [30/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1085447985770165
+
+Batch_idx 1
+
+Loss: 1.0957008230519485
+
+Batch_idx 2
+
+Loss: 1.1004280636017232
+
+Epoch [31/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1002126646954529
+
+Batch_idx 1
+
+Loss: 1.0865854032122053
+
+Batch_idx 2
+
+Loss: 1.0942360131196038
+
+Epoch [32/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0928088962917015
+
+Batch_idx 1
+
+Loss: 1.0806101304452378
+
+Batch_idx 2
+
+Loss: 1.0620207030934545
+
+Epoch [33/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0785187437444588
+
+Batch_idx 1
+
+Loss: 1.075920029894633
+
+Batch_idx 2
+
+Loss: 1.0728826383436583
+
+Epoch [34/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0740599626563854
+
+Batch_idx 1
+
+Loss: 1.065519420135584
+
+Batch_idx 2
+
+Loss: 1.058046471625669
+
+Epoch [35/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0627483350276175
+
+Batch_idx 1
+
+Loss: 1.0594125716131566
+
+Batch_idx 2
+
+Loss: 1.0649649073919596
+
+Epoch [36/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0516336571311689
+
+Batch_idx 1
+
+Loss: 1.051805349897949
+
+Batch_idx 2
+
+Loss: 1.082296839335149
+
+Epoch [37/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0344999836636248
+
+Batch_idx 1
+
+Loss: 1.055539401580307
+
+Batch_idx 2
+
+Loss: 1.064943429704103
+
+Epoch [38/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.032285374804452
+
+Batch_idx 1
+
+Loss: 1.0439916769055433
+
+Batch_idx 2
+
+Loss: 1.0549080942002023
+
+Epoch [39/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.031857856068546
+
+Batch_idx 1
+
+Loss: 1.0330765140458826
+
+Batch_idx 2
+
+Loss: 1.0303985708859562
+
+Epoch [40/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0214415202715472
+
+Batch_idx 1
+
+Loss: 1.0293811075517234
+
+Batch_idx 2
+
+Loss: 1.0272599991666655
+
+Epoch [41/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0249656670759917
+
+Batch_idx 1
+
+Loss: 1.0139636925468578
+
+Batch_idx 2
+
+Loss: 1.0072003153542703
+
+Epoch [42/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0139419418519267
+
+Batch_idx 1
+
+Loss: 1.0116962464367334
+
+Batch_idx 2
+
+Loss: 1.0031699641982819
+
+Epoch [43/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0145564678937133
+
+Batch_idx 1
+
+Loss: 0.9919763879011875
+
+Batch_idx 2
+
+Loss: 1.0375497608911841
+
+Epoch [44/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9956222658780496
+
+Batch_idx 1
+
+Loss: 1.0047366928470558
+
+Batch_idx 2
+
+Loss: 0.9908199021910202
+
+Epoch [45/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9890942625722228
+
+Batch_idx 1
+
+Loss: 0.9996749035930396
+
+Batch_idx 2
+
+Loss: 0.9799944758119935
+
+Epoch [46/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9874364839103278
+
+Batch_idx 1
+
+Loss: 0.9871296237316177
+
+Batch_idx 2
+
+Loss: 0.9884855309531069
+
+Epoch [47/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9828693948784827
+
+Batch_idx 1
+
+Loss: 0.9770279116297362
+
+Batch_idx 2
+
+Loss: 1.0018209162665574
+
+Epoch [48/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9755698889205517
+
+Batch_idx 1
+
+Loss: 0.9782340409074922
+
+Batch_idx 2
+
+Loss: 0.9599976724025778
+
+Epoch [49/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9715803245644925
+
+Batch_idx 1
+
+Loss: 0.9629388472256633
+
+Batch_idx 2
+
+Loss: 1.0087464217815105
+
+Epoch [50/50] Loss: 0.0003
+
+Accuracy:0.7652464494569757 Precision:0.7723823975720789 Recall: 0.6813922356091031F1-score: 0.7240398293029873
+
+Accuracy:0.4509090909090909 Precision:0.0 Recall: 0.0F1-score: nan
+
+Accuracy:0.36096063560852293 Precision:0.8936075100581136 Recall: 0.36096063560852293F1-score: 0.5142122186495177
+
+Batch_idx 0
+
+Loss: 1.5996418941648238
+
+Batch_idx 1
+
+Loss: 1.5885850755357087
+
+Batch_idx 2
+
+Loss: 1.5763504802658717
+
+Epoch [1/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5668310768963272
+
+Batch_idx 1
+
+Loss: 1.5570665632390341
+
+Batch_idx 2
+
+Loss: 1.5456597726354884
+
+Epoch [2/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5363505383791707
+
+Batch_idx 1
+
+Loss: 1.5276611556302426
+
+Batch_idx 2
+
+Loss: 1.5080271912772603
+
+Epoch [3/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.5067956070278412
+
+Batch_idx 1
+
+Loss: 1.4983880861817216
+
+Batch_idx 2
+
+Loss: 1.4907358119965188
+
+Epoch [4/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.481595764514707
+
+Batch_idx 1
+
+Loss: 1.4696764222883008
+
+Batch_idx 2
+
+Loss: 1.4597297118107018
+
+Epoch [5/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4521636870956722
+
+Batch_idx 1
+
+Loss: 1.4476983599161333
+
+Batch_idx 2
+
+Loss: 1.4399171669853004
+
+Epoch [6/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4284163290683878
+
+Batch_idx 1
+
+Loss: 1.4237378038666477
+
+Batch_idx 2
+
+Loss: 1.413095326428499
+
+Epoch [7/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.4008023302357469
+
+Batch_idx 1
+
+Loss: 1.4053977711875523
+
+Batch_idx 2
+
+Loss: 1.3957976184548988
+
+Epoch [8/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3868979939534165
+
+Batch_idx 1
+
+Loss: 1.375604547720998
+
+Batch_idx 2
+
+Loss: 1.380469836956203
+
+Epoch [9/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3680718497656188
+
+Batch_idx 1
+
+Loss: 1.3593558548197118
+
+Batch_idx 2
+
+Loss: 1.3252378712506176
+
+Epoch [10/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.3416114903506777
+
+Batch_idx 1
+
+Loss: 1.3451075193177353
+
+Batch_idx 2
+
+Loss: 1.3257802311367524
+
+Epoch [11/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.332267615416031
+
+Batch_idx 1
+
+Loss: 1.3163758033560722
+
+Batch_idx 2
+
+Loss: 1.3213553467509127
+
+Epoch [12/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.309456565594795
+
+Batch_idx 1
+
+Loss: 1.3071331978035634
+
+Batch_idx 2
+
+Loss: 1.2911820448634546
+
+Epoch [13/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.298735413759193
+
+Batch_idx 1
+
+Loss: 1.2851437415254026
+
+Batch_idx 2
+
+Loss: 1.2777584586047945
+
+Epoch [14/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2804141492498435
+
+Batch_idx 1
+
+Loss: 1.2720032361607077
+
+Batch_idx 2
+
+Loss: 1.267671469932115
+
+Epoch [15/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2554254227609798
+
+Batch_idx 1
+
+Loss: 1.2659862814464904
+
+Batch_idx 2
+
+Loss: 1.2651127259319137
+
+Epoch [16/50] Loss: 0.0004
+
+Batch_idx 0
+
+Loss: 1.2508035946554044
+
+Batch_idx 1
+
+Loss: 1.2462668630728804
+
+Batch_idx 2
+
+Loss: 1.2256727624673631
+
+Epoch [17/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.2341976800831247
+
+Batch_idx 1
+
+Loss: 1.2361164393127604
+
+Batch_idx 2
+
+Loss: 1.2140755747972725
+
+Epoch [18/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.226304832834705
+
+Batch_idx 1
+
+Loss: 1.2156573458163187
+
+Batch_idx 2
+
+Loss: 1.219630527587804
+
+Epoch [19/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.211653702436931
+
+Batch_idx 1
+
+Loss: 1.2027827474334571
+
+Batch_idx 2
+
+Loss: 1.2269681636810807
+
+Epoch [20/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.199245373940126
+
+Batch_idx 1
+
+Loss: 1.19911926696862
+
+Batch_idx 2
+
+Loss: 1.1633005013008055
+
+Epoch [21/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1858630889797463
+
+Batch_idx 1
+
+Loss: 1.1863995655873047
+
+Batch_idx 2
+
+Loss: 1.1745828917333145
+
+Epoch [22/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1742229408315867
+
+Batch_idx 1
+
+Loss: 1.1725778959710031
+
+Batch_idx 2
+
+Loss: 1.185991600993466
+
+Epoch [23/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1660325297334286
+
+Batch_idx 1
+
+Loss: 1.1652426349328495
+
+Batch_idx 2
+
+Loss: 1.1363616679125268
+
+Epoch [24/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1469382834197794
+
+Batch_idx 1
+
+Loss: 1.1583822907350518
+
+Batch_idx 2
+
+Loss: 1.1611532671797276
+
+Epoch [25/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1465121362935042
+
+Batch_idx 1
+
+Loss: 1.1416684354091042
+
+Batch_idx 2
+
+Loss: 1.1311066986864877
+
+Epoch [26/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.133964984257945
+
+Batch_idx 1
+
+Loss: 1.1318325435149494
+
+Batch_idx 2
+
+Loss: 1.1400575171477665
+
+Epoch [27/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1169394131693369
+
+Batch_idx 1
+
+Loss: 1.134759322832817
+
+Batch_idx 2
+
+Loss: 1.0997454418424002
+
+Epoch [28/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1146068086980185
+
+Batch_idx 1
+
+Loss: 1.1118643170061928
+
+Batch_idx 2
+
+Loss: 1.1355934089066118
+
+Epoch [29/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.1063497839449417
+
+Batch_idx 1
+
+Loss: 1.1030473959983742
+
+Batch_idx 2
+
+Loss: 1.12171161114579
+
+Epoch [30/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0859932531872405
+
+Batch_idx 1
+
+Loss: 1.1097039380397336
+
+Batch_idx 2
+
+Loss: 1.0883380439422996
+
+Epoch [31/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0913362602519354
+
+Batch_idx 1
+
+Loss: 1.0841907567352573
+
+Batch_idx 2
+
+Loss: 1.1015926648792838
+
+Epoch [32/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.071479822725826
+
+Batch_idx 1
+
+Loss: 1.089510382778828
+
+Batch_idx 2
+
+Loss: 1.0801555482157665
+
+Epoch [33/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0706316486110108
+
+Batch_idx 1
+
+Loss: 1.0765621870244368
+
+Batch_idx 2
+
+Loss: 1.0553709890956098
+
+Epoch [34/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0668283394438085
+
+Batch_idx 1
+
+Loss: 1.0588105849872573
+
+Batch_idx 2
+
+Loss: 1.0876632692388037
+
+Epoch [35/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0626701280880602
+
+Batch_idx 1
+
+Loss: 1.0476603413097747
+
+Batch_idx 2
+
+Loss: 1.0793188739344564
+
+Epoch [36/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0471553719532638
+
+Batch_idx 1
+
+Loss: 1.0494831931403616
+
+Batch_idx 2
+
+Loss: 1.062484429102361
+
+Epoch [37/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0405050842025045
+
+Batch_idx 1
+
+Loss: 1.0439503708429179
+
+Batch_idx 2
+
+Loss: 1.0400745657876551
+
+Epoch [38/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0403045044150014
+
+Batch_idx 1
+
+Loss: 1.0308287488571193
+
+Batch_idx 2
+
+Loss: 1.026777651419275
+
+Epoch [39/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0223892895622664
+
+Batch_idx 1
+
+Loss: 1.0309949484009633
+
+Batch_idx 2
+
+Loss: 1.044922570808209
+
+Epoch [40/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0207679017324267
+
+Batch_idx 1
+
+Loss: 1.0171332647243712
+
+Batch_idx 2
+
+Loss: 1.049232324258807
+
+Epoch [41/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.009759787576273
+
+Batch_idx 1
+
+Loss: 1.0215831071704227
+
+Batch_idx 2
+
+Loss: 0.9978408545241532
+
+Epoch [42/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0072964330072276
+
+Batch_idx 1
+
+Loss: 1.012894497534987
+
+Batch_idx 2
+
+Loss: 0.9783290464885332
+
+Epoch [43/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 1.0114380009903783
+
+Batch_idx 1
+
+Loss: 0.9974178285760649
+
+Batch_idx 2
+
+Loss: 0.9600636330254412
+
+Epoch [44/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9971388041920929
+
+Batch_idx 1
+
+Loss: 0.9977953751765967
+
+Batch_idx 2
+
+Loss: 0.9644220591817556
+
+Epoch [45/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9951466173104232
+
+Batch_idx 1
+
+Loss: 0.9846424870048515
+
+Batch_idx 2
+
+Loss: 0.9770821297577233
+
+Epoch [46/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9781451536771619
+
+Batch_idx 1
+
+Loss: 0.9924337722698053
+
+Batch_idx 2
+
+Loss: 0.9512420315985843
+
+Epoch [47/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9810981508067423
+
+Batch_idx 1
+
+Loss: 0.9704549620912125
+
+Batch_idx 2
+
+Loss: 0.995541713765299
+
+Epoch [48/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.9646062565176459
+
+Batch_idx 1
+
+Loss: 0.977132541746964
+
+Batch_idx 2
+
+Loss: 0.978397190959292
+
+Epoch [49/50] Loss: 0.0003
+
+Batch_idx 0
+
+Loss: 0.964097655947216
+
+Batch_idx 1
+
+Loss: 0.9651304492743348
+
+Batch_idx 2
+
+Loss: 0.9836047133481877
+
+Epoch [50/50] Loss: 0.0003
+
+Accuracy:0.7635756056808688 Precision:0.7715582450832073 Recall: 0.6827309236947792F1-score: 0.7244318181818181
+
+Accuracy:0.4509090909090909 Precision:0.0 Recall: 0.0F1-score: nan
+
+Accuracy:0.3605994944023113 Precision:0.8959174517720951 Recall: 0.3605994944023113F1-score: 0.5142268572164285

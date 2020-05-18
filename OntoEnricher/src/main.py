@@ -1,4 +1,4 @@
-import bcolz, pickle, torch, os, shelve
+import bcolz, pickle, torch, os, sys, shelve
 import concurrent.futures
 import numpy as np
 from math import ceil
@@ -11,6 +11,8 @@ from scipy import spatial
 import torch.optim as optim
 import torch.nn as nn
 from sklearn.metrics import accuracy_score
+
+torch.set_printoptions(precision=20)
 
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 NUM_RELATIONS = len(relations)
@@ -140,7 +142,10 @@ class LSTM(nn.Module):
         lstm_inp = torch.Tensor([]).to(device)
         for edge in path:
             word_embed = self.normalize_embeddings(self.word_embeddings(edge[0]))
-            print (self.word_embeddings(edge[0]))
+            print (edge[0], self.word_embeddings(edge[0]), embeddings[0])
+            emb = self.word_embeddings(edge[0])
+            print (emb, self.normalize_embeddings(emb))
+            sys.exit(0)
             pos_embed = self.normalize_embeddings(self.pos_embeddings(edge[1]))
             dep_embed = self.normalize_embeddings(self.dep_embeddings(edge[2]))
             dir_embed = self.normalize_embeddings(self.dir_embeddings(edge[3]))
@@ -231,11 +236,10 @@ for epoch in range(num_epochs):
         batch_start = batch_idx * batch_size
         batch = epoch_idx[batch_start:batch_end]
         
-        # print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
         data = [{NULL_PATH: 1} if not el else el for el in np.array(parsed_train[1])[batch]]
         data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
         labels, embeddings_idx = np.array(parsed_train[2])[batch], np.array(parsed_train[0])[batch]
-        
+        print ("data", data, "Emb", embeddings_idx) 
         # Run the forward pass
         outputs = lstm(data, embeddings_idx)
         # print (outputs, labels)

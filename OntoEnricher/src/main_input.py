@@ -1,4 +1,4 @@
-import bcolz, pickle, torch, os, shelve
+import bcolz, pickle, torch, os, shelve, sys
 import concurrent.futures
 import numpy as np
 from math import ceil
@@ -19,15 +19,15 @@ mappingDict = {key: idx for (idx,key) in enumerate(relations)}
 mappingDict_inv = {idx: key for (idx,key) in enumerate(relations)}
 
 output_folder = "../junk/Output/"
-dataset_file = "../junk/glove_input.pkl"
+dataset_file = sys.argv[1]
 prefix = "/home/vivek.iyer/"
 output_folder = "../junk/Output/Wiki2Vec_output/"
-model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/glove-vanilla.pt"
+model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/wiki2vec-input.pt"
 
 if not os.path.isdir(output_folder):  
     os.mkdir(output_folder)
-if os.path.exists("Logs"):
-    os.remove("Logs")
+#if os.path.exists("Logs"):
+#    os.remove("Logs")
         
 def write(statement):
     op_file = open("Logs", "a+")
@@ -60,7 +60,6 @@ NULL_PATH = ((0, 0, 0, 0),)
 
 file = open(dataset_file, 'rb')
 parsed_train, parsed_test, parsed_instances, parsed_knocked, pos_indexer, dep_indexer, dir_indexer  = pickle.load(file)
-parsed_train = tuple(el[:10] for el in parsed_train)
 
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 NUM_RELATIONS = len(relations)
@@ -102,7 +101,6 @@ class LSTM(nn.Module):
         lstm_inp = torch.Tensor([]).to(device)
         for edge in path:
             word_embed = self.normalize_embeddings(edge[0])
-            print (word_embed)
             pos_embed = self.normalize_embeddings(self.pos_embeddings(edge[1].long()))
             dep_embed = self.normalize_embeddings(self.dep_embeddings(edge[2].long()))
             dir_embed = self.normalize_embeddings(self.dir_embeddings(edge[3].long()))
@@ -150,7 +148,6 @@ def log_loss(output, target):
     return torch.sum(prob_losses)
 
 def tensorifyTuple(tup):
-    print (tup)
     return tuple([tuple([torch.DoubleTensor([[e]]).to(device) for e in edge]) for edge in tup])
     
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -159,7 +156,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 # print ("num_relations:", NUM_RELATIONS)
 HIDDEN_DIM = 60
 NUM_LAYERS = 2
-num_epochs = 1
+num_epochs = 50
 batch_size = 5000
 
 dataset_size = len(parsed_train[2])
@@ -168,7 +165,7 @@ num_batches = int(ceil(dataset_size/batch_size))
 
 lr = 0.001
 dropout = 0.3
-lstm = LSTM().to(device)
+lstm = nn.DataParallel(LSTM()).to(device)
 criterion = nn.NLLLoss()
 optimizer = optim.AdamW(lstm.parameters(), lr=lr)
 
@@ -177,7 +174,7 @@ loss_list = []
 
 for epoch in range(num_epochs):
     
-    total_loss, epoch_idx = 0, np.arange(dataset_size)
+    total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
     
     if False:
         lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
@@ -239,7 +236,7 @@ def test(test_dataset, message, output_file):
     results = []
     global mappingDict, mappingDict_inv
     dataset_size = len(test_dataset[2])
-    batch_size = min(32, dataset_size)
+    batch_size = min(5000, dataset_size)
     num_batches = int(ceil(dataset_size/batch_size))
 
     test_perm = np.random.permutation(dataset_size)
