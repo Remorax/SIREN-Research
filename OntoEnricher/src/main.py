@@ -1,4 +1,4 @@
-import bcolz, pickle, torch, os, sys, shelve
+import bcolz, pickle, torch, os, shelve, sys
 import concurrent.futures
 import numpy as np
 from math import ceil
@@ -12,8 +12,6 @@ import torch.optim as optim
 import torch.nn as nn
 from sklearn.metrics import accuracy_score
 
-torch.set_printoptions(precision=20)
-
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 NUM_RELATIONS = len(relations)
 
@@ -21,29 +19,38 @@ mappingDict = {key: idx for (idx,key) in enumerate(relations)}
 mappingDict_inv = {idx: key for (idx,key) in enumerate(relations)}
 
 output_folder = "../junk/Output/"
-embeddings_folder = "../junk/Glove.dat/"
-dataset_file = "../junk/glove_vanilla.pkl"
+dataset_file = sys.argv[1]
 prefix = "/home/vivek.iyer/"
 output_folder = "../junk/Output/Wiki2Vec_output/"
-model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/glove-vanilla.pt"
+model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/wiki2vec-input.pt"
+embeddings_folder = "../junk/Glove.dat/"
+
 
 if not os.path.isdir(output_folder):  
     os.mkdir(output_folder)
-if os.path.exists("Logs"):
-    os.remove("Logs")
-def load_embeddings_from_disk():
-    try:
-        embeddings = bcolz.open(embeddings_folder)[:]
-        word2idx = pickle.load(open(embeddings_folder + 'words_index.pkl', 'rb'))
-        write("Emb: " + str(type(embeddings)))
-    except:
-        embeddings, word2idx  = create_embeddings()
-    return embeddings, word2idx
+#if os.path.exists("Logs"):
+#    os.remove("Logs")
         
 def write(statement):
     op_file = open("Logs", "a+")
     op_file.write("\n" + str(statement) + "\n")
     op_file.close()
+
+
+def load_checkpoint(model, optimizer, filename=model_filename):
+    # Note: Input model & optimizer should be pre-defined.  This routine only updates their states.
+    start_epoch = 0
+    if os.path.isfile(filename):
+        write("=> loading checkpoint '{}'".format(filename))
+        checkpoint = torch.load(filename)
+        start_epoch = checkpoint['epoch']
+        model.load_state_dict(checkpoint['state_dict'])
+        optimizer.load_state_dict(checkpoint['optimizer'])
+        write("=> loaded checkpoint '{}' (epoch {})".format(filename, checkpoint['epoch']))
+    else:
+        write("=> no checkpoint found at '{}'".format(filename))
+
+    return model, optimizer, start_epoch
 
 def create_embeddings():
     words = ['_unk_']
@@ -69,21 +76,14 @@ def create_embeddings():
     
     return vectors, word2idx
 
-def load_checkpoint(model, optimizer, filename=model_filename):
-    # Note: Input model & optimizer should be pre-defined.  This routine only updates their states.
-    start_epoch = 0
-    if os.path.isfile(filename):
-        write("=> loading checkpoint '{}'".format(filename))
-        checkpoint = torch.load(filename)
-        start_epoch = checkpoint['epoch']
-        model.load_state_dict(checkpoint['state_dict'])
-        optimizer.load_state_dict(checkpoint['optimizer'])
-        write("=> loaded checkpoint '{}' (epoch {})".format(filename, checkpoint['epoch']))
-    else:
-        write("=> no checkpoint found at '{}'".format(filename))
-
-    return model, optimizer, start_epoch
-
+def load_embeddings_from_disk():
+    try:
+        embeddings = bcolz.open(embeddings_folder)[:]
+        word2idx = pickle.load(open(embeddings_folder + 'words_index.pkl', 'rb'))
+        write("Emb: " + str(type(embeddings)))
+    except:
+        embeddings, word2idx  = create_embeddings()
+    return embeddings, word2idx
 
 POS_DIM = 4
 DEP_DIM = 5
@@ -94,7 +94,6 @@ NULL_PATH = ((0, 0, 0, 0),)
 
 file = open(dataset_file, 'rb')
 parsed_train, parsed_test, parsed_instances, parsed_knocked, pos_indexer, dep_indexer, dir_indexer  = pickle.load(file)
-parsed_train = tuple(el[:10] for el in parsed_train)
 
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 NUM_RELATIONS = len(relations)
@@ -114,8 +113,8 @@ class LSTM(nn.Module):
         self.input_dim = POS_DIM + DEP_DIM + EMBEDDING_DIM + DIR_DIM
         self.W = nn.Linear(self.hidden_dim, NUM_RELATIONS)
         self.dropout_layer = nn.Dropout(p=dropout)
-        self.softmax = nn.LogSoftmax()
-        
+        self.softmax = nn.ReLU()
+
         self.word_embeddings = nn.Embedding(len(emb_indexer), EMBEDDING_DIM)
         self.word_embeddings.load_state_dict({'weight': torch.from_numpy(np.array(embeddings))})
         self.word_embeddings.require_grad = False
@@ -142,10 +141,6 @@ class LSTM(nn.Module):
         lstm_inp = torch.Tensor([]).to(device)
         for edge in path:
             word_embed = self.normalize_embeddings(self.word_embeddings(edge[0]))
-            print (edge[0], self.word_embeddings(edge[0]), embeddings[0])
-            emb = self.word_embeddings(edge[0])
-            print (emb, self.normalize_embeddings(emb))
-            sys.exit(0)
             pos_embed = self.normalize_embeddings(self.pos_embeddings(edge[1]))
             dep_embed = self.normalize_embeddings(self.dep_embeddings(edge[2]))
             dir_embed = self.normalize_embeddings(self.dir_embeddings(edge[3]))
@@ -201,25 +196,25 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 # print ("num_relations:", NUM_RELATIONS)
 HIDDEN_DIM = 60
 NUM_LAYERS = 2
-num_epochs = 1
+num_epochs = 100
 batch_size = 5000
 
 dataset_size = len(parsed_train[2])
 batch_size = min(batch_size, dataset_size)
 num_batches = int(ceil(dataset_size/batch_size))
 
-lr = 0.001
+lr = 0.01
 dropout = 0.3
-lstm = LSTM().to(device)
+lstm = nn.DataParallel(LSTM()).to(device)
 criterion = nn.NLLLoss()
 optimizer = optim.AdamW(lstm.parameters(), lr=lr)
 
-                    
+                   
 loss_list = []
 
 for epoch in range(num_epochs):
     
-    total_loss, epoch_idx = 0, np.arange(dataset_size)
+    total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
     
     if False:
         lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
@@ -236,15 +231,16 @@ for epoch in range(num_epochs):
         batch_start = batch_idx * batch_size
         batch = epoch_idx[batch_start:batch_end]
         
+        # print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
         data = [{NULL_PATH: 1} if not el else el for el in np.array(parsed_train[1])[batch]]
         data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
         labels, embeddings_idx = np.array(parsed_train[2])[batch], np.array(parsed_train[0])[batch]
-        print ("data", data, "Emb", embeddings_idx) 
+        
         # Run the forward pass
         outputs = lstm(data, embeddings_idx)
         # print (outputs, labels)
-        #loss = log_loss(outputs, torch.LongTensor(labels).to(device))
-        loss = criterion(outputs, torch.LongTensor(labels).to(device))
+        loss = log_loss(outputs, torch.LongTensor(labels).to(device))
+        #loss = criterion(outputs, torch.LongTensor(labels).to(device))
         
         write("Loss: " + str(loss.item()))
         # Backprop and perform Adam optimisation
@@ -281,7 +277,7 @@ def test(test_dataset, message, output_file):
     results = []
     global mappingDict, mappingDict_inv
     dataset_size = len(test_dataset[2])
-    batch_size = min(32, dataset_size)
+    batch_size = min(5000, dataset_size)
     num_batches = int(ceil(dataset_size/batch_size))
 
     test_perm = np.random.permutation(dataset_size)
