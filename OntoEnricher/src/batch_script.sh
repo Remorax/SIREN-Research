@@ -10,4 +10,6 @@
 module load cuda/10.2
 module load cudnn/7.6.5-cuda-10.2 
 
-python3 main.py
+#rm -rf Logs
+
+python3 main_input.py ../junk/wiki2vec_resolved.pkl

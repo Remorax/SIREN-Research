@@ -1,4 +1,4 @@
-import bcolz, pickle, torch, os, shelve
+import bcolz, pickle, torch, os, shelve, sys
 import concurrent.futures
 import numpy as np
 from math import ceil
@@ -17,39 +17,40 @@ NUM_RELATIONS = len(relations)
 
 mappingDict = {key: idx for (idx,key) in enumerate(relations)}
 mappingDict_inv = {idx: key for (idx,key) in enumerate(relations)}
-# prefix = "../junk/Files/temp_threshold_3_4/temp"
-# train_file = "../junk/train.tsv"
-# test_file = "../junk/test.tsv"
-# output_folder = "../junk/Output/"
-# embeddings_folder = "../junk/Glove.dat"
-# embeddings_file = "/Users/vivek/SIREN-Research/Archive-LSTM/glove.6B/glove.6B.300d.txt"
 
+output_folder = "../junk/Output/"
+dataset_file = sys.argv[1]
 prefix = "/home/vivek.iyer/"
 output_folder = "../junk/Output/Wiki2Vec_output/"
-embeddings_folder = "../junk/Wiki2vec_lite.dat/"
-embeddings_file = "/home/vivek.iyer/glove.6B.300d.txt"
-model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/baseline.pt"
+model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/wiki2vec-input.pt"
+embeddings_folder = "../junk/Glove.dat/"
+
 
 if not os.path.isdir(output_folder):  
     os.mkdir(output_folder)
-if os.path.exists("Logs"):
-    os.remove("Logs")
-def load_embeddings_from_disk():
-    try:
-        vectors = bcolz.open(embeddings_folder)[:]
-        words = pickle.load(open(embeddings_folder + 'words.pkl', 'rb'))
-        word2idx = pickle.load(open(embeddings_folder + 'words_index.pkl', 'rb'))
-
-        embeddings = vectors
-        write("Emb: " + str(type(embeddings)))
-    except:
-        embeddings, word2idx  = create_embeddings()
-    return embeddings, word2idx
+#if os.path.exists("Logs"):
+#    os.remove("Logs")
         
 def write(statement):
     op_file = open("Logs", "a+")
     op_file.write("\n" + str(statement) + "\n")
     op_file.close()
+
+
+def load_checkpoint(model, optimizer, filename=model_filename):
+    # Note: Input model & optimizer should be pre-defined.  This routine only updates their states.
+    start_epoch = 0
+    if os.path.isfile(filename):
+        write("=> loading checkpoint '{}'".format(filename))
+        checkpoint = torch.load(filename)
+        start_epoch = checkpoint['epoch']
+        model.load_state_dict(checkpoint['state_dict'])
+        optimizer.load_state_dict(checkpoint['optimizer'])
+        write("=> loaded checkpoint '{}' (epoch {})".format(filename, checkpoint['epoch']))
+    else:
+        write("=> no checkpoint found at '{}'".format(filename))
+
+    return model, optimizer, start_epoch
 
 def create_embeddings():
     words = ['_unk_']
@@ -71,26 +72,18 @@ def create_embeddings():
     vectors = bcolz.carray(vectors, rootdir=embeddings_folder, mode='w')
     vectors.flush()
 
-    pickle.dump(words, open(embeddings_folder + 'words.pkl', 'wb'))
     pickle.dump(word2idx, open(embeddings_folder + 'words_index.pkl', 'wb'))
     
     return vectors, word2idx
 
-def load_checkpoint(model, optimizer, filename=model_filename):
-    # Note: Input model & optimizer should be pre-defined.  This routine only updates their states.
-    start_epoch = 0
-    if os.path.isfile(filename):
-        write("=> loading checkpoint '{}'".format(filename))
-        checkpoint = torch.load(filename)
-        start_epoch = checkpoint['epoch']
-        model.load_state_dict(checkpoint['state_dict'])
-        optimizer.load_state_dict(checkpoint['optimizer'])
-        write("=> loaded checkpoint '{}' (epoch {})".format(filename, checkpoint['epoch']))
-    else:
-        write("=> no checkpoint found at '{}'".format(filename))
-
-    return model, optimizer, start_epoch
-
+def load_embeddings_from_disk():
+    try:
+        embeddings = bcolz.open(embeddings_folder)[:]
+        word2idx = pickle.load(open(embeddings_folder + 'words_index.pkl', 'rb'))
+        write("Emb: " + str(type(embeddings)))
+    except:
+        embeddings, word2idx  = create_embeddings()
+    return embeddings, word2idx
 
 POS_DIM = 4
 DEP_DIM = 5
@@ -99,8 +92,9 @@ EMBEDDING_DIM = 300
 NULL_PATH = ((0, 0, 0, 0),)
 
 
-file = open("dataset_parsed_wiki2vec_new.pkl", 'rb')
+file = open(dataset_file, 'rb')
 parsed_train, parsed_test, parsed_instances, parsed_knocked, pos_indexer, dep_indexer, dir_indexer  = pickle.load(file)
+
 relations = ["hypernym", "hyponym", "concept", "instance", "none"]
 NUM_RELATIONS = len(relations)
 
@@ -119,8 +113,8 @@ class LSTM(nn.Module):
         self.input_dim = POS_DIM + DEP_DIM + EMBEDDING_DIM + DIR_DIM
         self.W = nn.Linear(self.hidden_dim, NUM_RELATIONS)
         self.dropout_layer = nn.Dropout(p=dropout)
-        self.softmax = nn.LogSoftmax()
-        
+        self.softmax = nn.ReLU()
+
         self.word_embeddings = nn.Embedding(len(emb_indexer), EMBEDDING_DIM)
         self.word_embeddings.load_state_dict({'weight': torch.from_numpy(np.array(embeddings))})
         self.word_embeddings.require_grad = False
@@ -209,19 +203,13 @@ dataset_size = len(parsed_train[2])
 batch_size = min(batch_size, dataset_size)
 num_batches = int(ceil(dataset_size/batch_size))
 
-lr = 0.001
+lr = 0.01
 dropout = 0.3
 lstm = nn.DataParallel(LSTM()).to(device)
 criterion = nn.NLLLoss()
 optimizer = optim.AdamW(lstm.parameters(), lr=lr)
 
-lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
-lstm = lstm.to(device)
-for state in optimizer.state.values():
-    for k, v in state.items():
-        if isinstance(v, torch.Tensor):
-            state[k] = v.to(device)
-                    
+                   
 loss_list = []
 
 for epoch in range(num_epochs):
@@ -251,8 +239,8 @@ for epoch in range(num_epochs):
         # Run the forward pass
         outputs = lstm(data, embeddings_idx)
         # print (outputs, labels)
-        #loss = log_loss(outputs, torch.LongTensor(labels).to(device))
-        loss = criterion(outputs, torch.LongTensor(labels).to(device))
+        loss = log_loss(outputs, torch.LongTensor(labels).to(device))
+        #loss = criterion(outputs, torch.LongTensor(labels).to(device))
         
         write("Loss: " + str(loss.item()))
         # Backprop and perform Adam optimisation
@@ -289,7 +277,7 @@ def test(test_dataset, message, output_file):
     results = []
     global mappingDict, mappingDict_inv
     dataset_size = len(test_dataset[2])
-    batch_size = min(32, dataset_size)
+    batch_size = min(5000, dataset_size)
     num_batches = int(ceil(dataset_size/batch_size))
 
     test_perm = np.random.permutation(dataset_size)
@@ -326,5 +314,4 @@ with torch.no_grad():
     test(parsed_test, "Test Set:", output_folder + "test.tsv")
     test(parsed_instances, "Instance Set:", output_folder + "test_instance.tsv")
     test(parsed_knocked, "Knocked out Set:", output_folder + "test_knocked.tsv")
-    
-[vivek.iyer@ada src]$ 
+
