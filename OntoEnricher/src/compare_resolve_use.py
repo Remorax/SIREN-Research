@@ -6,7 +6,7 @@ import concurrent.futures
 import threading
 import subprocess
 import re
-
+import time
 t = time.time()
 def write(statement):
     op_file = open("Logs", "a+")
@@ -29,7 +29,7 @@ stats()
 USE_folder = "/home/vlead/USE"
 
 f = open("../junk/failed_instances", "rb")
-failed, _ = pickle.load(f)
+failed = pickle.load(f)
 
 def compare(arg):
     global use_embeds
