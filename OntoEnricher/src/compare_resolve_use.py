@@ -3,10 +3,32 @@ import tensorflow as tf
 import tensorflow_hub as hub
 import numpy as np
 import concurrent.futures
+import threading
+import subprocess
+import re
+
+t = time.time()
+def write(statement):
+    op_file = open("Logs", "a+")
+    op_file.write("\n" + str(statement) + "\n")
+    op_file.close()
+
+def stats():
+    t = threading.Timer(60, stats)
+    t.daemon=True
+    t.start()
+    bashCommand1 = "ps -ef"
+    process1 = subprocess.Popen(bashCommand1.split(), stdout=subprocess.PIPE)
+    output, error = process1.communicate()
+    output = re.findall(".* python3.*", output.decode("utf-8"))
+    write("\n".join(output))
+
+stats()
+
 
 USE_folder = "/home/vlead/USE"
 
-f = open("../junk/failed_words", "rb")
+f = open("../junk/failed_instances", "rb")
 failed, _ = pickle.load(f)
 
 def compare(arg):
@@ -19,8 +41,7 @@ def compare(arg):
         if sim > max_sim:
             max_sim = sim
             closest_word = w[0]
-    print ("Original word: ", wd, "Closest Word: ", closest_word, "Sim: ", max_sim)
-    sys.stdout.flush()
+    # print ("Original word: ", wd, "Closest Word: ", closest_word, "Sim: ", max_sim)
     return (wd, closest_word, max_sim)
 
 def extractUSEEmbeddings(words):
@@ -47,6 +68,8 @@ def run():
 
     resolved_file = open("../junk/resolved_use.pkl", "wb")
     pickle.dump(results, resolved_file)
+
+    write("Time taken for execution: {}".format(time.time() - t))
 
 if __name__ == '__main__':
     run()
