@@ -215,49 +215,52 @@ loss_list = []
 
 epochs_range = range(prev_epoch, num_epochs) if prev_epoch!=-1 else range(num_epochs)
 
-for epoch in epochs_range:
-    
-    total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
-    
-    if prev_epoch!=-1 and epoch==prev_epoch:
-        lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
-        lstm = lstm.to(device)
-        for state in optimizer.state.values():
-            for k, v in state.items():
-                if isinstance(v, torch.Tensor):
-                    state[k] = v.to(device)
-                    
-    for batch_idx in range(num_batches):
+try:
+    for epoch in epochs_range:
         
-        write("Batch_idx " + str(batch_idx))
-        batch_end = (batch_idx+1) * batch_size
-        batch_start = batch_idx * batch_size
-        batch = epoch_idx[batch_start:batch_end]
+        total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
         
-        # print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
-        data = [{NULL_PATH: 1} if not el else el for el in np.array(parsed_train[1])[batch]]
-        data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
-        labels, embeddings_idx = np.array(parsed_train[2])[batch], np.array(parsed_train[0])[batch]
+        if prev_epoch!=-1 and epoch==prev_epoch:
+            lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
+            lstm = lstm.to(device)
+            for state in optimizer.state.values():
+                for k, v in state.items():
+                    if isinstance(v, torch.Tensor):
+                        state[k] = v.to(device)
+                        
+        for batch_idx in range(num_batches):
+            
+            write("Batch_idx " + str(batch_idx))
+            batch_end = (batch_idx+1) * batch_size
+            batch_start = batch_idx * batch_size
+            batch = epoch_idx[batch_start:batch_end]
+            
+            # print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
+            data = [{NULL_PATH: 1} if not el else el for el in np.array(parsed_train[1])[batch]]
+            data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in data]
+            labels, embeddings_idx = np.array(parsed_train[2])[batch], np.array(parsed_train[0])[batch]
+            
+            # Run the forward pass
+            outputs = lstm(data, embeddings_idx)
+            # print (outputs, labels)
+            loss = log_loss(outputs, torch.LongTensor(labels).to(device))
+            #loss = criterion(outputs, torch.LongTensor(labels).to(device))
+            
+            write("Loss: " + str(loss.item()))
+            # Backprop and perform Adam optimisation
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+            total_loss += loss.item()
+        state = {'epoch': epoch + 1, 'state_dict': lstm.state_dict(),
+                 'optimizer': optimizer.state_dict()}
+        torch.save(state, model_filename)
         
-        # Run the forward pass
-        outputs = lstm(data, embeddings_idx)
-        # print (outputs, labels)
-        loss = log_loss(outputs, torch.LongTensor(labels).to(device))
-        #loss = criterion(outputs, torch.LongTensor(labels).to(device))
-        
-        write("Loss: " + str(loss.item()))
-        # Backprop and perform Adam optimisation
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
-        total_loss += loss.item()
-    state = {'epoch': epoch + 1, 'state_dict': lstm.state_dict(),
-             'optimizer': optimizer.state_dict()}
-    torch.save(state, model_filename)
-    
-    total_loss /= dataset_size
-    write('Epoch [{}/{}] Loss: {:.4f}'.format(epoch + 1, num_epochs, total_loss))
-    loss_list.append(loss.item())
+        total_loss /= dataset_size
+        write('Epoch [{}/{}] Loss: {:.4f}'.format(epoch + 1, num_epochs, total_loss))
+        loss_list.append(loss.item())
+except:
+    sys.exit(epoch)
 
 def calculate_recall(true, pred):
     true_f, pred_f = [], []
@@ -318,3 +321,4 @@ with torch.no_grad():
     test(parsed_instances, "Instance Set:", output_folder + "test_instance.tsv")
     test(parsed_knocked, "Knocked out Set:", output_folder + "test_knocked.tsv")
 
+sys.exit(0)
