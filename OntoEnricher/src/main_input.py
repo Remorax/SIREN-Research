@@ -20,6 +20,8 @@ mappingDict_inv = {idx: key for (idx,key) in enumerate(relations)}
 
 output_folder = "../junk/Output/"
 dataset_file = sys.argv[1]
+prev_epoch = float(sys.argv[2])
+print (prev_epoch)
 prefix = "/home/vivek.iyer/"
 output_folder = "../junk/Output/USE_output_" + str(dataset_file.split("_")[-1]) + "/"
 model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/use-input.pt"
@@ -178,48 +180,55 @@ optimizer = optim.AdamW(lstm.parameters(), lr=lr)
                    
 loss_list = []
 
-for epoch in range(38, num_epochs):
+epochs_range = range(prev_epoch, num_epochs) if prev_epoch!=-1 else range(num_epochs)
+
+try:
+    for epoch in epochs_range:
     
-    total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
-    
-    if epoch==38:
-        lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
-        lstm = lstm.to(device)
-        for state in optimizer.state.values():
-            for k, v in state.items():
-                if isinstance(v, torch.Tensor):
-                    state[k] = v.to(device)
-                    
-    for batch_idx in range(num_batches):
+        total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
         
-        write("Batch_idx " + str(batch_idx))
-        batch_end = (batch_idx+1) * batch_size
-        batch_start = batch_idx * batch_size
-        batch = epoch_idx[batch_start:batch_end]
+        if prev_epoch!=-1 and epoch==prev_epoch:
+            lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
+            lstm = lstm.to(device)
+            for state in optimizer.state.values():
+                for k, v in state.items():
+                    if isinstance(v, torch.Tensor):
+                        state[k] = v.to(device)
+                        
+        for batch_idx in range(num_batches):
+            
+            write("Batch_idx " + str(batch_idx))
+            batch_end = (batch_idx+1) * batch_size
+            batch_start = batch_idx * batch_size
+            batch = epoch_idx[batch_start:batch_end]
+            
+            # print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
+            data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in np.array(parsed_train[1])[batch]]
+            labels, embeddings_idx = np.array(parsed_train[2])[batch], np.array(parsed_train[0])[batch]
+            
+            # Run the forward pass
+            outputs = lstm(data, embeddings_idx)
+            # print (outputs, labels)
+            #loss = log_loss(outputs, torch.LongTensor(labels).to(device))
+            loss = criterion(outputs, torch.LongTensor(labels).to(device))
+            
+            write("Loss: " + str(loss.item()))
+            # Backprop and perform Adam optimisation
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+            total_loss += loss.item()
+        state = {'epoch': epoch + 1, 'state_dict': lstm.state_dict(),
+                 'optimizer': optimizer.state_dict()}
+        torch.save(state, model_filename)
         
-        # print ("x_train", x_train[batch], "emb", embed_indices_train[batch])
-        data = [{tensorifyTuple(e): dictElem[e] for e in dictElem} for dictElem in np.array(parsed_train[1])[batch]]
-        labels, embeddings_idx = np.array(parsed_train[2])[batch], np.array(parsed_train[0])[batch]
-        
-        # Run the forward pass
-        outputs = lstm(data, embeddings_idx)
-        # print (outputs, labels)
-        #loss = log_loss(outputs, torch.LongTensor(labels).to(device))
-        loss = criterion(outputs, torch.LongTensor(labels).to(device))
-        
-        write("Loss: " + str(loss.item()))
-        # Backprop and perform Adam optimisation
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
-        total_loss += loss.item()
-    state = {'epoch': epoch + 1, 'state_dict': lstm.state_dict(),
-             'optimizer': optimizer.state_dict()}
-    torch.save(state, model_filename)
-    
-    total_loss /= dataset_size
-    write('Epoch [{}/{}] Loss: {:.4f}'.format(epoch + 1, num_epochs, total_loss))
-    loss_list.append(loss.item())
+        total_loss /= dataset_size
+        write('Epoch [{}/{}] Loss: {:.4f}'.format(epoch + 1, num_epochs, total_loss))
+        loss_list.append(loss.item())
+
+except Exception as e:
+    print (e)
+    sys.exit(epoch)
 
 def calculate_recall(true, pred):
     true_f, pred_f = [], []
@@ -279,3 +288,4 @@ with torch.no_grad():
     test(parsed_instances, "Instance Set:", output_folder + "test_instance.tsv")
     test(parsed_knocked, "Knocked out Set:", output_folder + "test_knocked.tsv")
 
+sys.exit(0)
