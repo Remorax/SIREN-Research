@@ -51,17 +51,19 @@ def closest_word_USE(argument):
     print ("Percentage done: ", float(counter.value*100/len(failed)))
     return word1, closest_word, max_sim
 
+def run():
+    resolved = dict()
+    print ("Working on it...")
+    counter = Value('i', 0)
+    a = time.time()
+    failed_embeddings = extractUSEEmbeddings(failed)
+    print ("Took me {} seconds to extract USE embeddings...".format(time.time()-a))
+    with concurrent.futures.ProcessPoolExecutor(max_workers=10) as executor:
+        for res in executor.map(closest_word_USE, zip(failed, failed_embeddings)):
+            resolved[res[0]] = (res[1], res[2])
 
-resolved = dict()
-print ("Working on it...")
-counter = Value('i', 0)
-a = time.time()
-failed_embeddings = extractUSEEmbeddings(failed)
-print ("Took me {} seconds to extract USE embeddings...".format(time.time()-a))
-with concurrent.futures.ProcessPoolExecutor() as executor:
-    for res in executor.map(closest_word_USE, zip(failed, failed_embeddings)):
-        resolved[res[0]] = (res[1], res[2])
+    f = open("resolved", "wb")
+    pickle.dump(resolved, f)
 
-f = open("resolved", "wb")
-pickle.dump(resolved, f)
-    
+if __name__ == '__main__':
+    run()
