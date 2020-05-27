@@ -21,8 +21,8 @@ mappingDict_inv = {idx: key for (idx,key) in enumerate(relations)}
 output_folder = "../junk/Output/"
 dataset_file = sys.argv[1]
 prefix = "/home/vivek.iyer/"
-output_folder = "../junk/Output/Wiki2Vec_output/"
-model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/wiki2vec-input.pt"
+output_folder = "../junk/Output/USE_output_" + str(dataset_file.split("_")[-1]) + "/"
+model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/use-input.pt"
 
 if not os.path.isdir(output_folder):  
     os.mkdir(output_folder)
@@ -54,7 +54,7 @@ def load_checkpoint(model, optimizer, filename=model_filename):
 POS_DIM = 4
 DEP_DIM = 5
 DIR_DIM = 1
-EMBEDDING_DIM = 300
+EMBEDDING_DIM = 512
 NULL_PATH = ((0, 0, 0, 0),)
 
 
@@ -75,10 +75,11 @@ class LSTM(nn.Module):
         
         self.hidden_dim = HIDDEN_DIM + 2 * EMBEDDING_DIM
         self.input_dim = POS_DIM + DEP_DIM + EMBEDDING_DIM + DIR_DIM
-        self.layer1_dim = LAYER1_DIM
+        #self.layer1_dim = LAYER1_DIM
         #self.W1 = nn.Linear(self.hidden_dim, self.layer1_dim)
         #self.W2 = nn.Linear(self.layer1_dim, NUM_RELATIONS)
-        
+        self.W = nn.Linear(self.hidden_dim, NUM_RELATIONS)
+
         self.dropout_layer = nn.Dropout(p=dropout)
         self.softmax = nn.LogSoftmax()
         
@@ -133,8 +134,8 @@ class LSTM(nn.Module):
             y = torch.DoubleTensor([[emb_indexer[idx][1]]]).to(device).view(EMBEDDING_DIM)
             path_embedding_cat = torch.cat((x, path_embedding, y))
             # print ("Path embedding after cat with embeddings: ", path_embedding.shape)
-            layer1_output  = self.W1(path_embedding_cat)
-            probabilities = self.softmax(self.W2(layer1_output))
+            #layer1_output  = self.W1(path_embedding_cat)
+            probabilities = self.softmax(self.W(path_embedding_cat))
             # print ("Probabilities: ", probabilities)
             h = torch.cat((h, probabilities.view(1,-1)), 0)
             idx += 1
@@ -158,10 +159,10 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
 # print ("num_relations:", NUM_RELATIONS)
-HIDDEN_DIM = 180
-LAYER1_DIM = 60
-NUM_LAYERS = 2
-num_epochs = 100
+HIDDEN_DIM = 120
+#LAYER1_DIM = 60
+NUM_LAYERS = 3
+num_epochs = 50
 batch_size = 5000
 
 dataset_size = len(parsed_train[2])
@@ -177,11 +178,11 @@ optimizer = optim.AdamW(lstm.parameters(), lr=lr)
                    
 loss_list = []
 
-for epoch in range(60, num_epochs):
+for epoch in range(38, num_epochs):
     
     total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
     
-    if epoch==60:
+    if epoch==38:
         lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
         lstm = lstm.to(device)
         for state in optimizer.state.values():

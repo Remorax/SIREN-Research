@@ -20,9 +20,10 @@ mappingDict_inv = {idx: key for (idx,key) in enumerate(relations)}
 
 output_folder = "../junk/Output/"
 dataset_file = sys.argv[1]
+prev_epoch = float(sys.argv[2])
 prefix = "/home/vivek.iyer/"
-output_folder = "../junk/Output/Wiki2Vec_output/"
-model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/wiki2vec-input.pt"
+output_folder = "../junk/Output/glove_vanilla_output/"
+model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/glove-vanilla.pt"
 embeddings_folder = "../junk/Glove.dat/"
 
 
@@ -113,7 +114,7 @@ class LSTM(nn.Module):
         self.input_dim = POS_DIM + DEP_DIM + EMBEDDING_DIM + DIR_DIM
         self.W = nn.Linear(self.hidden_dim, NUM_RELATIONS)
         self.dropout_layer = nn.Dropout(p=dropout)
-        self.softmax = nn.ReLU()
+        self.softmax = nn.Softmax()
 
         self.word_embeddings = nn.Embedding(len(emb_indexer), EMBEDDING_DIM)
         self.word_embeddings.load_state_dict({'weight': torch.from_numpy(np.array(embeddings))})
@@ -196,7 +197,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 # print ("num_relations:", NUM_RELATIONS)
 HIDDEN_DIM = 60
 NUM_LAYERS = 2
-num_epochs = 100
+num_epochs = 10
 batch_size = 5000
 
 dataset_size = len(parsed_train[2])
@@ -212,11 +213,13 @@ optimizer = optim.AdamW(lstm.parameters(), lr=lr)
                    
 loss_list = []
 
-for epoch in range(num_epochs):
+epochs_range = range(prev_epoch, num_epochs) if prev_epoch!=-1 else range(num_epochs)
+
+for epoch in epochs_range:
     
     total_loss, epoch_idx = 0, np.random.permutation(dataset_size)
     
-    if False:
+    if prev_epoch!=-1 and epoch==prev_epoch:
         lstm, optimizer, curr_epoch = load_checkpoint(lstm, optimizer)
         lstm = lstm.to(device)
         for state in optimizer.state.values():
