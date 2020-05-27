@@ -21,6 +21,7 @@ mappingDict_inv = {idx: key for (idx,key) in enumerate(relations)}
 output_folder = "../junk/Output/"
 dataset_file = sys.argv[1]
 prev_epoch = float(sys.argv[2])
+print (prev_epoch)
 prefix = "/home/vivek.iyer/"
 output_folder = "../junk/Output/glove_vanilla_output/"
 model_filename = "/home/vivek.iyer/SIREN-Research/OntoEnricher/src/glove-vanilla.pt"
@@ -259,7 +260,8 @@ try:
         total_loss /= dataset_size
         write('Epoch [{}/{}] Loss: {:.4f}'.format(epoch + 1, num_epochs, total_loss))
         loss_list.append(loss.item())
-except:
+except Exception as e:
+    print (e)
     sys.exit(epoch)
 
 def calculate_recall(true, pred):

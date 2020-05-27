@@ -1,796 +1,546 @@
 
+=> no checkpoint found at '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/use-input.pt'
+
 Batch_idx 0
 
-Loss: 1.6115043633514177
+Loss: 1.6223603826367081
 
 Batch_idx 1
 
-Loss: 1.4920624794921764
+Loss: 1.5016906948479651
 
 Batch_idx 2
 
-Loss: 1.3854244817469965
+Loss: 1.4084523747005049
 
-Epoch [1/50] Loss: 0.0004
+Epoch [39/50] Loss: 0.0004
 
 Batch_idx 0
 
-Loss: 1.3061659035022608
+Loss: 1.31345879409791
 
 Batch_idx 1
 
-Loss: 1.221753766082977
+Loss: 1.231702797873019
 
 Batch_idx 2
 
-Loss: 1.1557477595191397
+Loss: 1.1479321087551992
 
-Epoch [2/50] Loss: 0.0003
+Epoch [40/50] Loss: 0.0003
 
 Batch_idx 0
 
-Loss: 1.1104223967014386
+Loss: 1.1114571769637043
 
 Batch_idx 1
 
-Loss: 1.0492587423892608
+Loss: 1.0623936607314985
 
 Batch_idx 2
 
-Loss: 1.0403152793963375
+Loss: 1.0199251104059461
 
-Epoch [3/50] Loss: 0.0003
+Epoch [41/50] Loss: 0.0003
 
 Batch_idx 0
 
-Loss: 0.9723668737254305
+Loss: 0.9752991741371033
 
 Batch_idx 1
 
-Loss: 0.9576143044760529
+Loss: 0.9641361823734358
 
 Batch_idx 2
 
-Loss: 0.8961146982432873
+Loss: 0.8837669503269937
 
-Epoch [4/50] Loss: 0.0003
+Epoch [42/50] Loss: 0.0003
 
 Batch_idx 0
 
-Loss: 0.8867248294162855
+Loss: 0.8942648175618492
 
 Batch_idx 1
 
-Loss: 0.8587690708210164
+Loss: 0.8673455563489395
 
 Batch_idx 2
 
-Loss: 0.8992239510464063
+Loss: 0.8365229656882004
 
-Epoch [5/50] Loss: 0.0002
+Epoch [43/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.8227251609411668
+Loss: 0.8135407161763979
 
 Batch_idx 1
 
-Loss: 0.7931187918562926
+Loss: 0.8102608465341152
 
 Batch_idx 2
 
-Loss: 0.800421149417258
+Loss: 0.7925578681030665
 
-Epoch [6/50] Loss: 0.0002
+Epoch [44/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.7646856464424808
+Loss: 0.7639537693480539
 
 Batch_idx 1
 
-Loss: 0.7474234172136243
+Loss: 0.7591732172902128
 
 Batch_idx 2
 
-Loss: 0.7594038289309554
+Loss: 0.7084987374360404
 
-Epoch [7/50] Loss: 0.0002
+Epoch [45/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.7244897189470743
+Loss: 0.7235094843531733
 
 Batch_idx 1
 
-Loss: 0.7185499431053236
+Loss: 0.7106463410092924
 
 Batch_idx 2
 
-Loss: 0.6489920423940179
+Loss: 0.7304822911517058
 
-Epoch [8/50] Loss: 0.0002
+Epoch [46/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.6855570513696289
+Loss: 0.6963973681696917
 
 Batch_idx 1
 
-Loss: 0.6894109992317377
+Loss: 0.676200616721716
 
 Batch_idx 2
 
-Loss: 0.6618689675234068
+Loss: 0.6962642493733512
 
-Epoch [9/50] Loss: 0.0002
+Epoch [47/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.6680715866052939
+Loss: 0.6714892600502786
 
 Batch_idx 1
 
-Loss: 0.6571017346973167
+Loss: 0.6592177755879008
 
 Batch_idx 2
 
-Loss: 0.658434849859017
+Loss: 0.6272390441533945
 
-Epoch [10/50] Loss: 0.0002
+Epoch [48/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.6585739233335045
+Loss: 0.6472177391872861
 
 Batch_idx 1
 
-Loss: 0.6273928643357888
+Loss: 0.6421359078952804
 
 Batch_idx 2
 
-Loss: 0.6512515071685976
+Loss: 0.6274958174237381
 
-Epoch [11/50] Loss: 0.0002
+Epoch [49/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.6348595830813758
+Loss: 0.6170761871661294
 
 Batch_idx 1
 
-Loss: 0.6226174032909139
+Loss: 0.63725708079651
 
 Batch_idx 2
 
-Loss: 0.6078378408865425
+Loss: 0.6306029249786244
 
-Epoch [12/50] Loss: 0.0002
+Epoch [50/50] Loss: 0.0002
+
+Accuracy:0.7911445279866333 Precision:0.7664835164835165 Recall: 0.7469879518072289F1-score: 0.7566101694915256
+
+Accuracy:0.23272727272727273 Precision:0.024390243902439025 Recall: 0.050505050505050504F1-score: 0.03289473684210526
+
+Accuracy:0.6610689779703864 Precision:0.8929268292682927 Recall: 0.6610689779703864F1-score: 0.7597011828180121
+
+=> no checkpoint found at '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/use-input.pt'
 
 Batch_idx 0
 
-Loss: 0.6128015992304139
+Loss: 1.6111917612150433
 
 Batch_idx 1
 
-Loss: 0.6200192399210076
+Loss: 1.4945995515639807
 
 Batch_idx 2
 
-Loss: 0.5630006515449532
+Loss: 1.3891603342351342
 
-Epoch [13/50] Loss: 0.0002
+Epoch [39/50] Loss: 0.0004
 
 Batch_idx 0
 
-Loss: 0.5983353671687015
+Loss: 1.30305183482792
 
 Batch_idx 1
 
-Loss: 0.6086582590720849
+Loss: 1.2312117755748624
 
 Batch_idx 2
 
-Loss: 0.5567296577911515
+Loss: 1.1530699374130116
 
-Epoch [14/50] Loss: 0.0002
+Epoch [40/50] Loss: 0.0003
 
 Batch_idx 0
 
-Loss: 0.5863958464062335
+Loss: 1.1039415076014938
 
 Batch_idx 1
 
-Loss: 0.5956187895800663
+Loss: 1.0606797879494738
 
 Batch_idx 2
 
-Loss: 0.5693675571244918
+Loss: 1.0392759881431883
 
-Epoch [15/50] Loss: 0.0002
+Epoch [41/50] Loss: 0.0003
 
 Batch_idx 0
 
-Loss: 0.5779393515396452
+Loss: 0.9815473186462447
 
 Batch_idx 1
 
-Loss: 0.5827247299217336
+Loss: 0.9459633293076753
 
 Batch_idx 2
 
-Loss: 0.5790844639126542
+Loss: 0.9118064319153605
 
-Epoch [16/50] Loss: 0.0002
+Epoch [42/50] Loss: 0.0003
 
 Batch_idx 0
 
-Loss: 0.5784073714784906
+Loss: 0.8827189078051397
 
 Batch_idx 1
 
-Loss: 0.5661185046211414
+Loss: 0.8709249753150794
 
 Batch_idx 2
 
-Loss: 0.568456854591099
+Loss: 0.8301192775515267
 
-Epoch [17/50] Loss: 0.0002
+Epoch [43/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.5588159209161455
+Loss: 0.8112527608727164
 
 Batch_idx 1
 
-Loss: 0.5732496581957828
+Loss: 0.8002606532859683
 
 Batch_idx 2
 
-Loss: 0.5428772647050579
+Loss: 0.8135575210828735
 
-Epoch [18/50] Loss: 0.0002
+Epoch [44/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.5566782969511275
+Loss: 0.7658393477958606
 
 Batch_idx 1
 
-Loss: 0.5554846026672233
+Loss: 0.7404874996850536
 
 Batch_idx 2
 
-Loss: 0.5754756464470151
+Loss: 0.7702946611299286
 
-Epoch [19/50] Loss: 0.0002
+Epoch [45/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.556076391985965
+Loss: 0.7259386619693347
 
 Batch_idx 1
 
-Loss: 0.5455534522950768
+Loss: 0.7090240152809729
 
 Batch_idx 2
 
-Loss: 0.5586113595701718
+Loss: 0.6926626923069826
 
-Epoch [20/50] Loss: 0.0002
+Epoch [46/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.5520192107752989
+Loss: 0.6889239578948415
 
 Batch_idx 1
 
-Loss: 0.5425296629231506
+Loss: 0.6839965212974345
 
 Batch_idx 2
 
-Loss: 0.5263000310804405
+Loss: 0.6793091904628974
 
-Epoch [21/50] Loss: 0.0002
+Epoch [47/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.5527630140378599
+Loss: 0.6624940082342131
 
 Batch_idx 1
 
-Loss: 0.5366224162826095
+Loss: 0.6630022883579867
 
 Batch_idx 2
 
-Loss: 0.4873830545847053
+Loss: 0.6565218034141331
 
-Epoch [22/50] Loss: 0.0001
+Epoch [48/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.5307594763604937
+Loss: 0.6492857957998006
 
 Batch_idx 1
 
-Loss: 0.5371437045643609
+Loss: 0.6389325338965823
 
 Batch_idx 2
 
-Loss: 0.5599269820018975
+Loss: 0.6323553111468675
 
-Epoch [23/50] Loss: 0.0002
+Epoch [49/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.5277418657510466
+Loss: 0.6268634805468387
 
 Batch_idx 1
 
-Loss: 0.5391699949438372
+Loss: 0.6303368346142243
 
 Batch_idx 2
 
-Loss: 0.5046474974845501
+Loss: 0.6062019309465357
 
-Epoch [24/50] Loss: 0.0001
+Epoch [50/50] Loss: 0.0002
+
+Accuracy:0.7936507936507936 Precision:0.7759336099585062 Recall: 0.751004016064257F1-score: 0.7632653061224491
+
+Accuracy:0.24 Precision:0.024630541871921183 Recall: 0.050505050505050504F1-score: 0.033112582781456956
+
+Accuracy:0.6524015890213073 Precision:0.8978628230616302 Recall: 0.6524015890213073F1-score: 0.7556996444258525
+
+=> no checkpoint found at '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/use-input.pt'
 
 Batch_idx 0
 
-Loss: 0.5224246642867751
+Loss: 1.617392330513418
 
 Batch_idx 1
 
-Loss: 0.5335633500382962
+Loss: 1.4999346867374337
 
 Batch_idx 2
 
-Loss: 0.5199977460608831
+Loss: 1.3867249009961053
 
-Epoch [25/50] Loss: 0.0001
+Epoch [39/50] Loss: 0.0004
 
 Batch_idx 0
 
-Loss: 0.5062579959532331
+Loss: 1.3117739714042536
 
 Batch_idx 1
 
-Loss: 0.540316229074587
+Loss: 1.2328780829412571
 
 Batch_idx 2
 
-Loss: 0.5263077203900283
+Loss: 1.1533244877891242
 
-Epoch [26/50] Loss: 0.0001
+Epoch [40/50] Loss: 0.0003
 
 Batch_idx 0
 
-Loss: 0.5251020356828738
+Loss: 1.1072443043639093
 
 Batch_idx 1
 
-Loss: 0.5164145490090628
+Loss: 1.0673147863005232
 
 Batch_idx 2
 
-Loss: 0.5049010303048284
+Loss: 1.025977897607096
 
-Epoch [27/50] Loss: 0.0001
+Epoch [41/50] Loss: 0.0003
 
 Batch_idx 0
 
-Loss: 0.5234279465900558
+Loss: 0.9851891113803698
 
 Batch_idx 1
 
-Loss: 0.5093514036568793
+Loss: 0.948868481932585
 
 Batch_idx 2
 
-Loss: 0.5138371837511551
+Loss: 0.9112424890963774
 
-Epoch [28/50] Loss: 0.0001
+Epoch [42/50] Loss: 0.0003
 
 Batch_idx 0
 
-Loss: 0.5078492346177185
+Loss: 0.8905070594851923
 
 Batch_idx 1
 
-Loss: 0.512410803956427
+Loss: 0.8735796753324958
 
 Batch_idx 2
 
-Loss: 0.5541859952291464
+Loss: 0.8173072288579698
 
-Epoch [29/50] Loss: 0.0001
+Epoch [43/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.5143069576504415
+Loss: 0.8294207494213474
 
 Batch_idx 1
 
-Loss: 0.5050606132461867
+Loss: 0.7998220827461743
 
 Batch_idx 2
 
-Loss: 0.5153122952245212
+Loss: 0.7620866181969782
 
-Epoch [30/50] Loss: 0.0001
+Epoch [44/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.5160664888419364
+Loss: 0.7699913088148254
 
 Batch_idx 1
 
-Loss: 0.4934374057529366
+Loss: 0.7486511366951413
 
 Batch_idx 2
 
-Loss: 0.5391067958976498
+Loss: 0.7544533338497982
 
-Epoch [31/50] Loss: 0.0001
+Epoch [45/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.4983071844480694
+Loss: 0.7287167264295151
 
 Batch_idx 1
 
-Loss: 0.5131448298996188
+Loss: 0.7093644909234611
 
 Batch_idx 2
 
-Loss: 0.4873163271682972
+Loss: 0.7310604226907303
 
-Epoch [32/50] Loss: 0.0001
+Epoch [46/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.49638771358449724
+Loss: 0.6975671118934575
 
 Batch_idx 1
 
-Loss: 0.5087742924457661
+Loss: 0.6831038700902271
 
 Batch_idx 2
 
-Loss: 0.4909087223589382
+Loss: 0.6642428692254532
 
-Epoch [33/50] Loss: 0.0001
+Epoch [47/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.4968080192218046
+Loss: 0.6716100114568095
 
 Batch_idx 1
 
-Loss: 0.5038257545895317
+Loss: 0.6544929813129884
 
 Batch_idx 2
 
-Loss: 0.481777981722205
+Loss: 0.6645800637578745
 
-Epoch [34/50] Loss: 0.0001
+Epoch [48/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.5069949784451526
+Loss: 0.6415746023689164
 
 Batch_idx 1
 
-Loss: 0.4893186490054495
+Loss: 0.6474224539465457
 
 Batch_idx 2
 
-Loss: 0.47764918866493383
+Loss: 0.6432156510511575
 
-Epoch [35/50] Loss: 0.0001
+Epoch [49/50] Loss: 0.0002
 
 Batch_idx 0
 
-Loss: 0.48780747317052847
+Loss: 0.6361699829007785
 
 Batch_idx 1
 
-Loss: 0.4961469155636204
+Loss: 0.6214388374405507
 
 Batch_idx 2
 
-Loss: 0.5255360498641886
+Loss: 0.6224560464809022
 
-Epoch [36/50] Loss: 0.0001
+Epoch [50/50] Loss: 0.0002
+
+Accuracy:0.7928153717627402 Precision:0.7713498622589532 Recall: 0.749665327978581F1-score: 0.7603530210454854
+
+Accuracy:0.24363636363636362 Precision:0.024875621890547265 Recall: 0.050505050505050504F1-score: 0.03333333333333333
+
+Accuracy:0.6672083784759841 Precision:0.8981526494895479 Recall: 0.6672083784759841F1-score: 0.7656444260256943
+
+=> no checkpoint found at '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/use-input.pt'
 
 Batch_idx 0
 
-Loss: 0.4839152403683715
+Loss: 1.609318214002133
 
 Batch_idx 1
 
-Loss: 0.5007581184230224
+Loss: 1.4945954202450822
 
 Batch_idx 2
 
-Loss: 0.4874228316978075
+Loss: 1.4001240204681888
 
-Epoch [37/50] Loss: 0.0001
-
-Batch_idx 0
-
-Loss: 0.4928323468974221
-
-Batch_idx 1
-
-Loss: 0.4901653571135608
-
-Batch_idx 2
-
-Loss: 0.4693579341298623
-
-Epoch [38/50] Loss: 0.0001
+Epoch [39/50] Loss: 0.0004
 
 Batch_idx 0
-
-Loss: 0.48829670749525905
-
-Batch_idx 1
-
-=> loading checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/use-input.pt'
-
-=> loaded checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/use-input.pt' (epoch 38)
-
-Batch_idx 0
-
-Loss: 0.48553991216425
-
-Batch_idx 1
-
-Loss: 0.4933295296949168
-
-Batch_idx 2
-
-Loss: 0.4668952120340289
-
-Epoch [39/50] Loss: 0.0001
-
-Batch_idx 0
-
-Loss: 0.49403935649239195
-
-Batch_idx 1
-
-Loss: 0.4793155206757501
-
-Batch_idx 2
-
-Loss: 0.4741908867499553
-
-Epoch [40/50] Loss: 0.0001
-
-Batch_idx 0
-
-Loss: 0.4764197193030352
-
-Batch_idx 1
-
-Loss: 0.48556033065477666
-
-Batch_idx 2
-
-Loss: 0.5200062247831659
-
-Epoch [41/50] Loss: 0.0001
-
-Batch_idx 0
-
-Loss: 0.47640733049248063
-
-Batch_idx 1
-
-Loss: 0.4802657968724113
-
-Batch_idx 2
-
-Loss: 0.52813811072137
-
-Epoch [42/50] Loss: 0.0001
-
-Batch_idx 0
-
-Loss: 0.4744403758692365
-
-Batch_idx 1
-
-Loss: 0.4881763994807076
-
-Batch_idx 2
-
-Loss: 0.4601941416808499
-
-Epoch [43/50] Loss: 0.0001
-
-Batch_idx 0
-
-Loss: 0.4801249891370152
-
-Batch_idx 1
-
-Loss: 0.4729776696493275
-
-Batch_idx 2
-
-Loss: 0.4980550653891928
-
-Epoch [44/50] Loss: 0.0001
-
-Batch_idx 0
-
-Loss: 0.4739112371470078
-
-Batch_idx 1
-
-Loss: 0.47547714606810415
-
-Batch_idx 2
-
-Loss: 0.49768742568089486
-
-Epoch [45/50] Loss: 0.0001
-
-Batch_idx 0
-
-Loss: 0.48206069051852757
-
-Batch_idx 1
-
-Loss: 0.4638442771541495
-
-Batch_idx 2
-
-Loss: 0.49504475825638644
-
-Epoch [46/50] Loss: 0.0001
-
-Batch_idx 0
-
-Loss: 0.46630193348077603
-
-Batch_idx 1
-
-Loss: 0.48127922837844417
-
-Batch_idx 2
-
-Loss: 0.46329898949078746
-
-Epoch [47/50] Loss: 0.0001
-
-Batch_idx 0
-
-Loss: 0.4691834651871406
-
-Batch_idx 1
-
-Loss: 0.4734646962657942
-
-Batch_idx 2
-
-Loss: 0.4737719270392077
-
-Epoch [48/50] Loss: 0.0001
-
-Batch_idx 0
-
-Loss: 0.46253933687936344
-
-Batch_idx 1
-
-Loss: 0.4787872131133292
-
-Batch_idx 2
-
-Loss: 0.45688944775467916
-
-Epoch [49/50] Loss: 0.0001
-
-Batch_idx 0
-
-Loss: 0.46511826504593984
-
-Batch_idx 1
-
-Loss: 0.46906042872133386
-
-Batch_idx 2
-
-Loss: 0.4869025884233815
-
-Epoch [50/50] Loss: 0.0001
-
-Accuracy:0.8028404344193818 Precision:0.7737931034482759 Recall: 0.751004016064257F1-score: 0.7622282608695653
-
-Accuracy:0.14909090909090908 Precision:0.037815126050420166 Recall: 0.09090909090909091F1-score: 0.05341246290801187
-
-Accuracy:0.7663416395810762 Precision:0.9244173382705293 Recall: 0.7663416395810762F1-score: 0.8379899299042354
-
-=> loading checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/use-input.pt'
-
-=> loaded checkpoint '/home/vivek.iyer/SIREN-Research/OntoEnricher/src/use-input.pt' (epoch 50)
-
-Batch_idx 0
-
-Loss: 0.46418687225441074
-
-Batch_idx 1
-
-Loss: 0.4680614624548369
-
-Batch_idx 2
-
-Loss: 0.48400619523754584
-
-Epoch [39/50] Loss: 0.0001
-
-Batch_idx 0
-
-Loss: 0.4614126090241925
-
-Batch_idx 1
-
-Loss: 0.469069669465715
-
-Batch_idx 2
-
-Loss: 0.46898351475570815
-
-Epoch [40/50] Loss: 0.0001
-
-Batch_idx 0
-
-Loss: 0.4688624932946113
-
-Batch_idx 1
-
-Loss: 0.46350230943226006
-
-Batch_idx 2
-
-Loss: 0.4373142747376764
-
-Epoch [41/50] Loss: 0.0001
-
-Batch_idx 0
-
-Loss: 0.4602811130196571
-
-Batch_idx 1
-
-Loss: 0.46894294469348724
-
-Batch_idx 2
-
-Loss: 0.4468036565555302
-
-Epoch [42/50] Loss: 0.0001
-
-Batch_idx 0
-
-Loss: 0.4661130268390547
-
-Batch_idx 1
-
-Loss: 0.4615313507654549
-
-Batch_idx 2
-
-Loss: 0.4352155131052773
-
-Epoch [43/50] Loss: 0.0001
-
-Batch_idx 0
-
-Loss: 0.45704703283923764
-
-Batch_idx 1

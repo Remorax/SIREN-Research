@@ -18,7 +18,8 @@ do
 	echo "Doing "$current
 	python3 main_input.py $current -1
 	if [[ $? = 0 ]]; then
-    		continue
+    		rm *.pt
+		continue
 	else
     		python3 main_input.py $current $?
 fi
