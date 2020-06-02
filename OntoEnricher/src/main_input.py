@@ -20,7 +20,7 @@ mappingDict_inv = {idx: key for (idx,key) in enumerate(relations)}
 
 output_folder = "../junk/Output/"
 dataset_file = sys.argv[1]
-prev_epoch = float(sys.argv[2])
+prev_epoch = int(sys.argv[2])
 print (prev_epoch)
 prefix = "/home/vivek.iyer/"
 output_folder = "../junk/Output/USE_output_" + str(dataset_file.split("_")[-1]) + "/"
@@ -77,10 +77,10 @@ class LSTM(nn.Module):
         
         self.hidden_dim = HIDDEN_DIM + 2 * EMBEDDING_DIM
         self.input_dim = POS_DIM + DEP_DIM + EMBEDDING_DIM + DIR_DIM
-        #self.layer1_dim = LAYER1_DIM
-        #self.W1 = nn.Linear(self.hidden_dim, self.layer1_dim)
-        #self.W2 = nn.Linear(self.layer1_dim, NUM_RELATIONS)
-        self.W = nn.Linear(self.hidden_dim, NUM_RELATIONS)
+        self.layer1_dim = LAYER1_DIM
+        self.W1 = nn.Linear(self.hidden_dim, self.layer1_dim)
+        self.W2 = nn.Linear(self.layer1_dim, NUM_RELATIONS)
+        #self.W = nn.Linear(self.hidden_dim, NUM_RELATIONS)
 
         self.dropout_layer = nn.Dropout(p=dropout)
         self.softmax = nn.LogSoftmax()
@@ -136,8 +136,8 @@ class LSTM(nn.Module):
             y = torch.DoubleTensor([[emb_indexer[idx][1]]]).to(device).view(EMBEDDING_DIM)
             path_embedding_cat = torch.cat((x, path_embedding, y))
             # print ("Path embedding after cat with embeddings: ", path_embedding.shape)
-            #layer1_output  = self.W1(path_embedding_cat)
-            probabilities = self.softmax(self.W(path_embedding_cat))
+            layer1_output  = self.softmax(self.W1(path_embedding_cat))
+            probabilities = self.softmax(self.W2(path_embedding_cat))
             # print ("Probabilities: ", probabilities)
             h = torch.cat((h, probabilities.view(1,-1)), 0)
             idx += 1
@@ -161,8 +161,8 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
 # print ("num_relations:", NUM_RELATIONS)
-HIDDEN_DIM = 120
-#LAYER1_DIM = 60
+HIDDEN_DIM = 250
+LAYER1_DIM = 120
 NUM_LAYERS = 3
 num_epochs = 50
 batch_size = 5000
