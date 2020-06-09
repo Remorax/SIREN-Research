@@ -10,18 +10,20 @@
 module load cuda/10.2
 module load cudnn/7.6.5-cuda-10.2 
 
-#rm -rf Logs
+rm -rf Logs
+rm *.pt
 files=($(ls -d ../junk/use_input_*))
-
+files=("../junk/use_input_0.8000000000000003.pkl")
 for current in "${files[@]}";
 do
 	echo "Doing "$current
 	python3 main_input.py $current -1
-	if [[ $? = 0 ]]; then
+	exit_code=$?
+	if [[ $exit_code = 0 ]]; then
     		rm *.pt
 		continue
 	else
-    		python3 main_input.py $current $?
+    		python3 main_input.py $current $exit_code
 fi
 done
 
