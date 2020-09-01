@@ -136,8 +136,8 @@ class LSTM(nn.Module):
             y = torch.DoubleTensor([[emb_indexer[idx][1]]]).to(device).view(EMBEDDING_DIM)
             path_embedding_cat = torch.cat((x, path_embedding, y))
             # print ("Path embedding after cat with embeddings: ", path_embedding.shape)
-            layer1_output  = self.softmax(self.W1(path_embedding_cat))
-            probabilities = self.softmax(self.W2(path_embedding_cat))
+            # layer1_output  = self.softmax(self.W1(path_embedding_cat))
+            probabilities = self.softmax(self.W(path_embedding_cat))
             # print ("Probabilities: ", probabilities)
             h = torch.cat((h, probabilities.view(1,-1)), 0)
             idx += 1
