@@ -75,12 +75,12 @@ class LSTM(nn.Module):
         super(LSTM, self).__init__()
         self.cache = {}
         
-        self.hidden_dim = HIDDEN_DIM + 2 * EMBEDDING_DIM
+        self.hidden_dim = 2 * HIDDEN_DIM + 2 * EMBEDDING_DIM
         self.input_dim = POS_DIM + DEP_DIM + EMBEDDING_DIM + DIR_DIM
         self.layer1_dim = LAYER1_DIM
-        self.W1 = nn.Linear(self.hidden_dim, self.layer1_dim)
-        self.W2 = nn.Linear(self.layer1_dim, NUM_RELATIONS)
-        #self.W = nn.Linear(self.hidden_dim, NUM_RELATIONS)
+        # self.W1 = nn.Linear(self.hidden_dim, self.layer1_dim)
+        # self.W2 = nn.Linear(self.layer1_dim, NUM_RELATIONS)
+        self.W = nn.Linear(self.hidden_dim, NUM_RELATIONS)
 
         self.dropout_layer = nn.Dropout(p=dropout)
         self.softmax = nn.LogSoftmax()
@@ -93,7 +93,7 @@ class LSTM(nn.Module):
         nn.init.xavier_uniform_(self.dep_embeddings.weight)
         nn.init.xavier_uniform_(self.dir_embeddings.weight)
 
-        self.lstm = nn.LSTM(self.input_dim, HIDDEN_DIM, NUM_LAYERS)
+        self.lstm = nn.LSTM(self.input_dim, HIDDEN_DIM, NUM_LAYERS, bidirectional=True)
     
     def normalize_embeddings(self, embeds):
         
