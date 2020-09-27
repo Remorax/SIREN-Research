@@ -66,7 +66,7 @@ def run():
         results = {i: results[i] if results[i][1] > output[i][1] else output[i] for i in results}
         print ("Parsing done for", file)
 
-    resolved_file = open("../junk/resolved_use.pkl", "wb")
+    resolved_file = open("../junk/resolved_use_unbracketed.pkl", "wb")
     pickle.dump(results, resolved_file)
 
     write("Time taken for execution: {}".format(time.time() - t))
