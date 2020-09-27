@@ -9,7 +9,7 @@ import re
 import time
 t = time.time()
 def write(statement):
-    op_file = open("Logs", "a+")
+    op_file = open("usage_stats", "a+")
     op_file.write("\n" + str(statement) + "\n")
     op_file.close()
 
@@ -28,8 +28,8 @@ stats()
 
 USE_folder = "/home/vlead/USE"
 
-f = open("../junk/failed_instances", "rb")
-failed = pickle.load(f)
+f = open("../junk/failed_words", "rb")
+failed, _ = pickle.load(f)
 
 def compare(arg):
     global use_embeds
