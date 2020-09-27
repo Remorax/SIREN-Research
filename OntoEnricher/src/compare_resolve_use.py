@@ -50,7 +50,7 @@ def extractUSEEmbeddings(words):
     return word_embeddings.numpy()
 use_embeds = []
 def run():
-    failed_embeds = extractUSEEmbeddings(failed)
+    failed_embeds = extractUSEEmbeddings([elem.split("(")[0].strip() for elem in failed])
     global use_embeds
     print ("Extracted failed embeddings")
     results = {i: ("", -1000) for i in failed}
