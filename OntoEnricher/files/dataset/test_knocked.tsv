@@ -1,5 +1,4 @@
 CO2 fire extinguisher	asset	hypernym
-CO2 fire extinguisher	fire extinguisher	concept
 CO2 fire extinguisher	fire extinguisher	hypernym
 CO2 fire extinguisher	movable asset	hypernym
 CO2 fire extinguisher	tangible asset	hypernym
@@ -408,7 +407,7 @@ asset	external staff control	hyponym
 asset	external staff control compliant organizations	hyponym
 asset	external staff policy	hyponym
 asset	fire extinguisher	hyponym
-asset	fire extinguisher	instance
+asset	fire extinguisher	hyponym
 asset	fire extinguisher control compliant section	hyponym
 asset	fire safety	hyponym
 asset	fire safety and training	hyponym
@@ -938,8 +937,7 @@ bared window control compliant section	section	hypernym
 bared window control compliant section	tangible asset	hypernym
 bared window section	compliant control	hypernym
 bared window section	control	hypernym
-boolean scale	scale	concept
-boolean scale	scale	instance
+boolean scale	scale	hypernym
 building	asset	hypernym
 building	compliant control	hypernym
 building	control	hypernym
@@ -948,14 +946,14 @@ building	tangible asset	hypernym
 business continuity	asset	hypernym
 business continuity	intangible asset	hypernym
 business continuity	policy	hypernym
-business continuity management	compliant control	concept
 business continuity management	compliant control	hypernym
-business continuity management	control	concept
+business continuity management	compliant control	hypernym
+business continuity management	control	hypernym
 business continuity management	control	hypernym
 business continuity management process	asset	hypernym
-business continuity management process	compliant control	concept
 business continuity management process	compliant control	hypernym
-business continuity management process	control	concept
+business continuity management process	compliant control	hypernym
+business continuity management process	control	hypernym
 business continuity management process	control	hypernym
 business continuity management process	intangible asset	hypernym
 business continuity management process	organization	hypernym
@@ -963,9 +961,9 @@ business continuity management process control	asset	hypernym
 business continuity management process control	intangible asset	hypernym
 business continuity management process control	organization	hypernym
 business continuity management process control compliant organization	asset	hypernym
-business continuity management process control compliant organization	compliant control	concept
 business continuity management process control compliant organization	compliant control	hypernym
-business continuity management process control compliant organization	control	concept
+business continuity management process control compliant organization	compliant control	hypernym
+business continuity management process control compliant organization	control	hypernym
 business continuity management process control compliant organization	control	hypernym
 business continuity management process control compliant organization	intangible asset	hypernym
 business continuity management process control compliant organization	organization	hypernym
@@ -1170,11 +1168,8 @@ compliant control	bared window control compliant section	hyponym
 compliant control	bared window section	hyponym
 compliant control	building	hyponym
 compliant control	business continuity management	hyponym
-compliant control	business continuity management	instance
 compliant control	business continuity management process	hyponym
-compliant control	business continuity management process	instance
 compliant control	business continuity management process control compliant organization	hyponym
-compliant control	business continuity management process control compliant organization	instance
 compliant control	cabling security	hyponym
 compliant control	cabling security building	hyponym
 compliant control	cabling security control compliant building	hyponym
@@ -1328,7 +1323,6 @@ compliant control	intrusion alarm system	hyponym
 compliant control	intrusion alarm system control	hyponym
 compliant control	intrusion alarm system control compliant section	hyponym
 compliant control	kensington lock	hyponym
-compliant control	kensington lock	instance
 compliant control	kensington lock control	hyponym
 compliant control	kensington lock control compliant computer	hyponym
 compliant control	lightning arrester	hyponym
@@ -1657,11 +1651,8 @@ control	bared window control compliant section	hyponym
 control	bared window section	hyponym
 control	building	hyponym
 control	business continuity management	hyponym
-control	business continuity management	instance
 control	business continuity management process	hyponym
-control	business continuity management process	instance
 control	business continuity management process control compliant organization	hyponym
-control	business continuity management process control compliant organization	instance
 control	cabling security	hyponym
 control	cabling security building	hyponym
 control	cabling security control compliant building	hyponym
@@ -1815,7 +1806,6 @@ control	intrusion alarm system	hyponym
 control	intrusion alarm system control	hyponym
 control	intrusion alarm system control compliant section	hyponym
 control	kensington lock	hyponym
-control	kensington lock	instance
 control	kensington lock control	hyponym
 control	kensington lock control compliant computer	hyponym
 control	lightning arrester	hyponym
@@ -2544,10 +2534,7 @@ external staff policy	asset	hypernym
 external staff policy	intangible asset	hypernym
 external staff policy	policy	hypernym
 fire extinguisher	CO2 fire extinguisher	hyponym
-fire extinguisher	CO2 fire extinguisher	instance
-fire extinguisher	asset	concept
 fire extinguisher	asset	hypernym
-fire extinguisher	movable asset	concept
 fire extinguisher	movable asset	hypernym
 fire extinguisher	tangible asset	hypernym
 fire extinguisher control	compliant control	hypernym
@@ -3343,9 +3330,9 @@ kensignton lock control compliant computer	computer	hypernym
 kensignton lock control compliant computer	movable asset	hypernym
 kensignton lock control compliant computer	tangible asset	hypernym
 kensington lock	asset	hypernym
-kensington lock	compliant control	concept
 kensington lock	compliant control	hypernym
-kensington lock	control	concept
+kensington lock	compliant control	hypernym
+kensington lock	control	hypernym
 kensington lock	control	hypernym
 kensington lock	movable asset	hypernym
 kensington lock	tangible asset	hypernym
@@ -3366,8 +3353,7 @@ lightning arrester control	compliant control	hypernym
 lightning arrester control	control	hypernym
 lightning arrester control compliant building	compliant control	hypernym
 lightning arrester control compliant building	control	hypernym
-likert scale	scale	concept
-likert scale	scale	instance
+likert scale	scale	hypernym
 loading area	asset	hypernym
 loading area	immovable asset	hypernym
 loading area	section	hypernym
@@ -3579,7 +3565,6 @@ movable asset	emergency substitute device	hyponym
 movable asset	entry checkpoint	hyponym
 movable asset	equipment identification control compliant computer	hyponym
 movable asset	fire extinguisher	hyponym
-movable asset	fire extinguisher	instance
 movable asset	firewall	hyponym
 movable asset	firewall control compliant computer	hyponym
 movable asset	internet filter control compliant computer	hyponym
@@ -4626,8 +4611,8 @@ safety door control compliant section	immovable asset	hypernym
 safety door control compliant section	section	hypernym
 safety door control compliant section	server room	hypernym
 safety door control compliant section	tangible asset	hypernym
-scale	boolean scale	instance
-scale	likert scale	instance
+scale	boolean scale	hyponym
+scale	likert scale	hyponym
 section	air conditioning control compliant server room	hyponym
 section	asset	hypernym
 section	bared window control compliant section	hyponym
