@@ -1,275 +1,275 @@
-policy	Barracuda	none
-Barracuda	protection	instance
-Barracuda	tool	instance
-operation	Barracuda	none
-money	Barracuda Cloud Generation network	none
-Barracuda	SecOps	instance
-business	secure Barracuda cloud	none
-backup solution	secure Barracuda cloud	concept
-Barracuda	wide range	none
-Barracuda	user	none
-Barracuda Cloud Generation network	secure	instance
-Barracuda Cloud Generation network	infrastructure cost	none
-Barracuda	website	none
-Barracuda	Emailborne attack interrupt business operation	instance
-Barracuda	consumptionbased pricing	none
-Barracuda	Public Cloud Security product	instance
-Barracuda	Data	none
-Barracuda Cloud Generation network	hybrid network	none
-Barracuda Cloud Generation network	site	none
-approach	secure Barracuda cloud	none
-premise	Barracuda Cloud Generation network	none
-Barracuda	firewall	instance
-Barracuda	tool necessary	instance
-Barracuda	first solution purposebuilt	none
-solution	Barracuda	none
-user security awareness	Barracuda	concept
-Barracuda Cloud Generation network	onpremises	none
-Barracuda	range	none
-industry	Barracuda Cloud Generation network	none
-money	Barracuda	none
-Barracuda Cloud Generation network	multiple site	none
-Barracuda	Fullyfeatured APIs enable DevOps	none
-cloudbased Office 365 data such	Barracuda	none
-purposebuilt	Barracuda	none
-Barracuda	threat vector	instance
-Barracuda	data	none
-Barracuda	multiple layer	none
-Barracuda Cloud Generation network	firewall	instance
-Barracuda	loss	none
-Barracuda	DevOps	none
-Barracuda	compromise business integrity	instance
-Barracuda	data  regardless	instance
-connection	Barracuda Cloud Generation network	none
-purposebuilt	Barracuda Cloud Generation network	none
-Barracuda	important	none
-reliable connection	Barracuda	none
-email	secure Barracuda cloud	concept
-cloud application	Barracuda	none
-cloud	secure Barracuda cloud	concept
-infrastructure look	Barracuda	none
-damage	Barracuda	none
-Barracuda	application	none
-Barracuda Cloud Generation network	user	none
-Barracuda	device	none
-Barracuda Cloud Generation network	look	none
-data loss	secure Barracuda cloud	concept
-targeted cyberattacks	Barracuda	concept
-multiple vendor	Barracuda	none
-Barracuda	look	none
-infrastructure look	Barracuda Cloud Generation network	none
-Barracuda	gateway defense	instance
-layer	Barracuda	none
-Barracuda Cloud Generation network	data  regardless	none
-Barracuda	infrastructure	none
-Barracuda	highperformance network solution	none
-email resiliency	Barracuda	concept
-theft	Barracuda	concept
-Barracuda	infrastructure cost	none
-application firewall	Barracuda Cloud Generation network	concept
-Barracuda	approach	none
-Barracuda	matter	none
-application firewall	Barracuda	concept
-cloud	Barracuda	none
-loss	secure Barracuda cloud	concept
-familiar developer tool	Barracuda	none
-Barracuda	hybrid network	none
-Barracuda Cloud Generation network	network	none
-multiple vendor	secure Barracuda cloud	concept
-need	secure Barracuda cloud	concept
-Barracuda	Barracuda Cloud Generation network	none
-vendor	Barracuda	none
-location	Barracuda	none
-awareness	Barracuda	none
-Barracuda Cloud Generation network	application	none
-cloud	Barracuda Cloud Generation network	none
-monitor compliance policy	Barracuda	concept
-email infrastructure	Barracuda	none
-protection	secure Barracuda cloud	concept
-aspect	Barracuda	none
-financial damage	Barracuda	none
-theft	secure Barracuda cloud	concept
-Barracuda	email	none
-Barracuda	highperformance network solution reside	none
-premise	Barracuda	none
-Barracuda	secure	instance
-Barracuda	onpremises	none
-unlimited storage	Barracuda	none
-connection	Barracuda	none
-Barracuda Cloud Generation network	cost	none
-Barracuda	workload	none
-vendor	secure Barracuda cloud	concept
-product	Barracuda	none
-Barracuda	web application	none
-resiliency	Barracuda	concept
-industry	Barracuda	none
-need	Barracuda	none
-solution	secure Barracuda cloud	concept
-public cloud	secure Barracuda cloud	concept
-unlimited storage	secure Barracuda cloud	concept
-fraud protection	Barracuda	concept
-reliable connection	Barracuda Cloud Generation network	concept
-backup solution	Barracuda	concept
-Barracuda	site	none
-data loss	Barracuda	concept
-Barracuda Cloud Generation network	consumptionbased pricing	none
-storage	Barracuda	none
-control	Barracuda	none
-Barracuda	reside	none
-Barracuda	mobile device	none
-remediation	Barracuda	concept
-Barracuda	business	none
-Barracuda	security	instance
-public cloud	Barracuda	none
-cloudbased Office 365 data such	secure Barracuda cloud	concept
-Barracuda	vector	none
-Data	secure Barracuda cloud	concept
-Barracuda	perimeter	none
-Barracuda	security control	instance
-integrity	Barracuda	none
-Barracuda	cost	none
-location	secure Barracuda cloud	concept
-Barracuda	network perimeter	none
-allinone approach	Barracuda	none
-Barracuda	defense	instance
-Barracuda	network	none
-storage	secure Barracuda cloud	concept
-Barracuda	75	none
-Barracuda Cloud Generation network	first solution purposebuilt	none
-allinone approach	secure Barracuda cloud	none
-Barracuda	multiple site	none
-Barracuda	secure Barracuda cloud	concept
-management	Cisco	none
-combination	Cisco ASA 5500X Series NextGeneration Firewalls help	none
-continuous threat protection	Cisco	none
-Cisco	device	none
-available	Cisco ASA 5500X Series NextGeneration Firewalls	none
-Cisco ASA 5500X Series NextGeneration Firewalls help	service	none
-Cisco	support cost	none
-malware protection	Cisco ASA 5500X firewall	concept
-Cisco Cisco ASA 5500X Series	proven Cisco ASA firewall protection	instance
-malware protection	proven Cisco ASA firewall protection	concept
-available	Cisco	none
-Cisco Cisco ASA 5500X Series	FirePOWER	none
-protection	proven Cisco ASA firewall protection	concept
-wide range	Cisco ASA 5500X Series NextGeneration Firewalls	none
+cloudbased Office 365 data such	secure Barracuda cloud	none
 Cisco ASA 5500X firewall	user	none
-following capability	Cisco Adaptive Security Appliance	none
-effectiveness	Cisco ASA 5500X Series NextGeneration Firewalls help	none
-malware protection	Cisco Cisco ASA 5500X Series	concept
-protection	Cisco	none
-Cisco ASA	malware protection	instance
-availability risk management	Cisco	none
-deployed stateful firewall	Cisco ASA 5500X Series NextGeneration Firewalls help	concept
-Cisco Adaptive Security Appliance	capability	none
-ASA	Cisco Cisco ASA 5500X Series	none
-Cisco ASA	Cisco Cisco ASA 5500X Series	none
-Cisco Cisco ASA 5500X Series	device	none
-Cisco Cisco ASA 5500X Series	industryleading Sourcefire threat	instance
-industryleading Sourcefire threat	proven Cisco ASA firewall protection	concept
-Cisco Cisco ASA 5500X Series	protection	instance
-Appliance	Cisco Adaptive Security Appliance	concept
-Cisco ASA 5500X firewall	network visibility	none
-Cisco ASA	proven Cisco ASA firewall protection	concept
-Cisco ASA 5500X firewall	cloud drive productivity	none
-ASA	Cisco	none
-Cisco ASA 5500X firewall	introduce risk	instance
-nextgeneration firewall capability	Cisco ASA 5500X Series NextGeneration Firewalls	concept
-software	Cisco Adaptive Security Appliance	none
-Series	proven Cisco ASA firewall protection	none
-inspection	Cisco ASA 5500X Series NextGeneration Firewalls	none
-Cisco ASA 5500X firewall	risk	instance
-Cisco ASA 5500X firewall	automation	instance
-FirePOWER	Cisco	none
-solution	proven Cisco ASA firewall protection	none
-solution	Cisco	none
-Cisco representative	representative	none
-Series	Cisco	none
-Cisco Adaptive Security Appliance	nextgeneration firewall capability	instance
-Cisco ASA 5500X firewall	device	instance
-cost	Cisco	none
-help	Cisco ASA 5500X Series NextGeneration Firewalls help	none
-form factor	Cisco ASA 5500X Series NextGeneration Firewalls	none
-inspection	Cisco Adaptive Security Appliance	concept
-Cisco ASA 5500X firewall	productivity	none
-single device	Cisco	none
-enterpriseclass stateful inspection	Cisco Adaptive Security Appliance	concept
-Cisco ASA 5500X firewall	threat	concept
-ASA	proven Cisco ASA firewall protection	none
-comprehensive range	Cisco ASA 5500X Series NextGeneration Firewalls help	none
-first threatfocused nextgeneration firewall	Cisco Cisco ASA 5500X Series	concept
-ASA software	Cisco ASA 5500X Series NextGeneration Firewalls	concept
-operational efficiency	Cisco	none
-Cisco Adaptive Security Appliance	ASA software	instance
-available	proven Cisco ASA firewall protection	concept
-Cisco ASA 5500X firewall	application	none
-Cisco ASA 5500X Series NextGeneration Firewalls help	industry	none
-range	Cisco ASA 5500X Series NextGeneration Firewalls help	none
-attack	Cisco	none
-Cisco ASA 5500X firewall	cost	none
-Cisco ASA 5500X firewall	visibility	none
-first threatfocused nextgeneration firewall	proven Cisco ASA firewall protection	concept
-ASA 5585X Adaptive Security Appliances	Cisco ASA	instance
-single device	proven Cisco ASA firewall protection	none
-industryleading Sourcefire threat	Cisco	none
-single device	Cisco Cisco ASA 5500X Series	none
-following capability	Cisco ASA 5500X Series NextGeneration Firewalls	none
-solution	Cisco Cisco ASA 5500X Series	none
-Software	Cisco ASA 5500X Series NextGeneration Firewalls	none
-Protect network	Cisco ASA 5500X Series NextGeneration Firewalls	concept
-nextgeneration network security service	Cisco ASA 5500X Series NextGeneration Firewalls help	concept
-solution	Cisco ASA 5500X Series NextGeneration Firewalls help	none
-available	Cisco Cisco ASA 5500X Series	concept
-size	Cisco ASA 5500X Series NextGeneration Firewalls	none
-performance	Cisco ASA 5500X Series NextGeneration Firewalls	none
-software	Cisco ASA 5500X Series NextGeneration Firewalls	none
-first threatfocused nextgeneration firewall	Cisco	concept
-Cisco ASA	ASA	instance
-Cisco ASA 5500X firewall	network	none
-network	Cisco ASA 5500X Series NextGeneration Firewalls	concept
-Cisco Cisco ASA 5500X Series	Cisco	none
 capability	Cisco ASA 5500X Series NextGeneration Firewalls	none
-Appliance	Cisco ASA 5500X Series NextGeneration Firewalls	none
-Cisco ASA 5500X firewall	firewall	instance
-available	Cisco ASA	concept
-malware protection	Cisco	none
-complexity	Cisco ASA 5500X firewall	none
-Cisco ASA	industryleading Sourcefire threat	instance
-productivity	Cisco ASA 5500X Series NextGeneration Firewalls help	none
-FirePOWER	proven Cisco ASA firewall protection	concept
-Cisco ASA	first threatfocused nextgeneration firewall	instance
-Cisco Adaptive Security Appliance	ASA	instance
-enterpriseclass stateful inspection	Cisco ASA 5500X Series NextGeneration Firewalls	concept
-ASA	Cisco ASA 5500X Series NextGeneration Firewalls	concept
-factor	Cisco ASA 5500X Series NextGeneration Firewalls	none
-Firewalls	Cisco ASA 5500X Series NextGeneration Firewalls	concept
-ASA 5585X Adaptive Security Appliances	proven Cisco ASA firewall protection	concept
-range	Cisco ASA 5500X Series NextGeneration Firewalls	none
-Cisco representative	Chat	none
-Cisco ASA	device	none
-Cisco ASA 5500X firewall	Mobility	none
 Cisco	Learn	none
-Cisco ASA	solution	none
-efficiency	Cisco	none
+protection	Cisco	none
+FirePOWER	Cisco	none
+inspection	Cisco ASA 5500X Series NextGeneration Firewalls	none
+ASA 5585X Adaptive Security Appliances	proven Cisco ASA firewall protection	concept
+Barracuda	SecOps	none
+Cisco ASA 5500X firewall	protection	concept
+backup solution	Barracuda	none
+Cisco ASA 5500X firewall	network	none
+first threatfocused nextgeneration firewall	proven Cisco ASA firewall protection	none
+nextgeneration firewall capability	Cisco ASA 5500X Series NextGeneration Firewalls	none
+Barracuda Cloud Generation network	hybrid network	none
+money	Barracuda Cloud Generation network	none
+range	Cisco ASA 5500X Series NextGeneration Firewalls help	none
+Cisco Adaptive Security Appliance	Cisco ASA 5500X Series NextGeneration Firewalls	instance
+operation	Barracuda	none
+Barracuda	tool	none
+Cisco ASA	solution	concept
+vendor	Barracuda	instance
+infrastructure look	Barracuda	none
+form factor	Cisco ASA 5500X Series NextGeneration Firewalls	none
+Barracuda	range	none
+cost	Cisco	none
+inspection	Cisco Adaptive Security Appliance	none
+integrity	Barracuda	none
+Barracuda	web application	none
+performance	Cisco ASA 5500X Series NextGeneration Firewalls	none
+Barracuda	security control	none
+layer	Barracuda	none
+following capability	Cisco ASA 5500X Series NextGeneration Firewalls	none
+Cisco ASA 5500X Series NextGeneration Firewalls help	service	concept
+Barracuda	network	none
 Cisco ASA	industry	none
-Series	Cisco ASA	none
-Cisco ASA 5500X firewall	superior threat	instance
-Cisco ASA 5500X Series NextGeneration Firewalls help	security effectiveness	instance
-Cisco ASA	protection	instance
-Cisco ASA	Cisco	none
-Cisco Cisco ASA 5500X Series	industry	none
-Cisco ASA 5500X Series NextGeneration Firewalls	multiscale performance	none
-proven Cisco ASA firewall protection	industry	none
-Cisco ASA 5500X firewall	asset	none
-proven Cisco ASA firewall protection	device	none
-Cisco	industry	none
-Cisco Adaptive Security Appliance	Software	none
-ASA 5585X Adaptive Security Appliances	Cisco Cisco ASA 5500X Series	concept
-Firewalls	Cisco Adaptive Security Appliance	concept
-Cisco ASA	FirePOWER	instance
-Cisco	proven Cisco ASA firewall protection	none
+Barracuda Cloud Generation network	multiple site	none
+connection	Barracuda Cloud Generation network	none
+Barracuda Cloud Generation network	network	concept
+enterpriseclass stateful inspection	Cisco ASA 5500X Series NextGeneration Firewalls	none
+Barracuda	loss	none
+ASA	proven Cisco ASA firewall protection	none
+cloudbased Office 365 data such	Barracuda	none
+public cloud	Barracuda	none
+efficiency	Cisco	none
+industryleading Sourcefire threat	Cisco	none
+Barracuda	Data	none
+available	Cisco ASA	none
+Data	secure Barracuda cloud	none
+ASA	Cisco ASA 5500X Series NextGeneration Firewalls	instance
+Barracuda	application	none
+Barracuda Cloud Generation network	onpremises	none
+industry	Barracuda	none
+Barracuda	device	none
+connection	Barracuda	none
+Cisco Adaptive Security Appliance	ASA	concept
+Barracuda	infrastructure cost	none
+solution	Cisco	none
+Barracuda	infrastructure	none
+multiple vendor	secure Barracuda cloud	none
+Barracuda	data  regardless	none
+reliable connection	Barracuda Cloud Generation network	none
+Barracuda	gateway defense	none
+Cisco ASA	Cisco Cisco ASA 5500X Series	instance
+combination	Cisco ASA 5500X Series NextGeneration Firewalls help	none
+malware protection	Cisco	none
 ASA 5585X Adaptive Security Appliances	Cisco	none
-Series	Cisco Cisco ASA 5500X Series	none
-Cisco Adaptive Security Appliance	Cisco ASA 5500X Series NextGeneration Firewalls	concept
+Barracuda	workload	none
+Cisco ASA	industryleading Sourcefire threat	none
+effectiveness	Cisco ASA 5500X Series NextGeneration Firewalls help	none
+unlimited storage	Barracuda	none
+available	Cisco ASA 5500X Series NextGeneration Firewalls	none
+Barracuda	data	none
+awareness	Barracuda	none
+email infrastructure	Barracuda	none
+available	Cisco	none
+storage	Barracuda	none
+cloud application	Barracuda	instance
+Cisco ASA	proven Cisco ASA firewall protection	none
+approach	secure Barracuda cloud	none
+management	Cisco	none
+single device	proven Cisco ASA firewall protection	none
+available	proven Cisco ASA firewall protection	none
+Cisco ASA 5500X firewall	firewall	concept
+protection	proven Cisco ASA firewall protection	instance
+complexity	Cisco ASA 5500X firewall	none
+fraud protection	Barracuda	none
+factor	Cisco ASA 5500X Series NextGeneration Firewalls	none
+premise	Barracuda	none
+Barracuda	Public Cloud Security product	none
+Barracuda	multiple layer	none
+Cisco ASA	malware protection	none
+Barracuda	hybrid network	none
+Barracuda	first solution purposebuilt	none
+monitor compliance policy	Barracuda	none
+need	Barracuda	none
+malware protection	proven Cisco ASA firewall protection	none
+Barracuda	important	none
+Cisco ASA	ASA	concept
+Barracuda	Barracuda Cloud Generation network	none
+Barracuda Cloud Generation network	infrastructure cost	none
+proven Cisco ASA firewall protection	industry	none
+availability risk management	Cisco	none
+Cisco ASA 5500X firewall	threat	none
+Barracuda	business	none
+damage	Barracuda	none
+ASA	Cisco Cisco ASA 5500X Series	instance
+targeted cyberattacks	Barracuda	none
+control	Barracuda	none
+Cisco ASA	first threatfocused nextgeneration firewall	none
+theft	Barracuda	none
+Cisco ASA 5500X Series NextGeneration Firewalls help	security effectiveness	none
+money	Barracuda	none
+Cisco ASA 5500X firewall	risk	none
+Barracuda Cloud Generation network	consumptionbased pricing	none
+solution	Barracuda	none
+public cloud	secure Barracuda cloud	instance
+Barracuda	matter	none
+Cisco Adaptive Security Appliance	nextgeneration firewall capability	none
+nextgeneration network security service	Cisco ASA 5500X Series NextGeneration Firewalls help	none
+solution	Cisco Cisco ASA 5500X Series	none
+Cisco	proven Cisco ASA firewall protection	none
+resiliency	Barracuda	none
+Cisco ASA	FirePOWER	none
+Barracuda	compromise business integrity	none
+Barracuda Cloud Generation network	firewall	none
+need	secure Barracuda cloud	none
+Barracuda Cloud Generation network	look	none
+location	Barracuda	none
+Barracuda	highperformance network solution reside	none
+malware protection	Cisco Cisco ASA 5500X Series	none
+Barracuda	reside	none
+remediation	Barracuda	none
+cloud	secure Barracuda cloud	instance
+ASA software	Cisco ASA 5500X Series NextGeneration Firewalls	none
+financial damage	Barracuda	none
+email	secure Barracuda cloud	none
+Cisco ASA 5500X firewall	productivity	none
+email resiliency	Barracuda	none
+first threatfocused nextgeneration firewall	Cisco	none
+Barracuda	network perimeter	none
+purposebuilt	Barracuda Cloud Generation network	none
+familiar developer tool	Barracuda	none
+Cisco Cisco ASA 5500X Series	industryleading Sourcefire threat	none
+Barracuda Cloud Generation network	secure	none
+loss	secure Barracuda cloud	none
+Cisco ASA 5500X firewall	application	concept
+data loss	secure Barracuda cloud	none
+Barracuda	75	none
+Barracuda Cloud Generation network	data  regardless	none
+Cisco	device	none
+Cisco ASA 5500X firewall	device	none
+Barracuda	DevOps	none
+Cisco Cisco ASA 5500X Series	device	none
+Barracuda	cost	none
+Firewalls	Cisco Adaptive Security Appliance	instance
+Appliance	Cisco Adaptive Security Appliance	instance
+productivity	Cisco ASA 5500X Series NextGeneration Firewalls help	none
+unlimited storage	secure Barracuda cloud	none
+first threatfocused nextgeneration firewall	Cisco Cisco ASA 5500X Series	none
+Barracuda	secure	none
+Barracuda	multiple site	none
+range	Cisco ASA 5500X Series NextGeneration Firewalls	none
+premise	Barracuda Cloud Generation network	none
+policy	Barracuda	none
+vendor	secure Barracuda cloud	none
+Series	Cisco	none
+Cisco	support cost	none
+Cisco ASA 5500X firewall	Mobility	none
+industryleading Sourcefire threat	proven Cisco ASA firewall protection	none
+Barracuda Cloud Generation network	user	none
+Barracuda Cloud Generation network	cost	none
+industry	Barracuda Cloud Generation network	none
+ASA 5585X Adaptive Security Appliances	Cisco Cisco ASA 5500X Series	none
+enterpriseclass stateful inspection	Cisco Adaptive Security Appliance	none
+Barracuda	consumptionbased pricing	none
+continuous threat protection	Cisco	none
+user security awareness	Barracuda	none
+Barracuda	onpremises	none
+Cisco Cisco ASA 5500X Series	protection	none
+Cisco ASA 5500X firewall	network visibility	none
+Barracuda	website	none
+Cisco ASA 5500X Series NextGeneration Firewalls	multiscale performance	none
+deployed stateful firewall	Cisco ASA 5500X Series NextGeneration Firewalls help	none
+Cisco ASA	protection	none
+help	Cisco ASA 5500X Series NextGeneration Firewalls help	instance
+Cisco ASA 5500X firewall	cloud drive productivity	none
+Cisco Cisco ASA 5500X Series	FirePOWER	none
+following capability	Cisco Adaptive Security Appliance	none
+aspect	Barracuda	none
+Cisco ASA 5500X firewall	superior threat	none
+Firewalls	Cisco ASA 5500X Series NextGeneration Firewalls	instance
+available	Cisco Cisco ASA 5500X Series	none
+Appliance	Cisco ASA 5500X Series NextGeneration Firewalls	instance
+Barracuda	defense	none
+allinone approach	Barracuda	none
+cloud	Barracuda	none
+network	Cisco ASA 5500X Series NextGeneration Firewalls	none
+Cisco representative	representative	concept
+Barracuda	user	none
+Cisco ASA 5500X firewall	cost	none
+Series	Cisco ASA	none
+Cisco ASA 5500X firewall	visibility	none
+backup solution	secure Barracuda cloud	none
+location	secure Barracuda cloud	none
+cloud	Barracuda Cloud Generation network	none
+Barracuda	tool necessary	none
+solution	Cisco ASA 5500X Series NextGeneration Firewalls help	none
+solution	secure Barracuda cloud	none
+Barracuda Cloud Generation network	site	none
+business	secure Barracuda cloud	none
 Cisco ASA	single device	none
-Cisco ASA 5500X firewall	protection	instance
+Barracuda	vector	none
+FirePOWER	proven Cisco ASA firewall protection	none
+Barracuda Cloud Generation network	application	none
+Barracuda	wide range	none
+Cisco ASA	device	concept
+single device	Cisco Cisco ASA 5500X Series	none
+size	Cisco ASA 5500X Series NextGeneration Firewalls	none
+Barracuda	threat vector	none
+Barracuda Cloud Generation network	first solution purposebuilt	none
+wide range	Cisco ASA 5500X Series NextGeneration Firewalls	none
+ASA 5585X Adaptive Security Appliances	Cisco ASA	concept
+software	Cisco ASA 5500X Series NextGeneration Firewalls	instance
+attack	Cisco	none
+Cisco ASA	Cisco	none
+storage	secure Barracuda cloud	none
+Cisco	industry	none
+Cisco representative	Chat	none
+proven Cisco ASA firewall protection	device	none
+Cisco ASA 5500X firewall	automation	none
+Barracuda	Emailborne attack interrupt business operation	none
+infrastructure look	Barracuda Cloud Generation network	none
+Barracuda	Fullyfeatured APIs enable DevOps	none
+Barracuda	protection	none
+protection	secure Barracuda cloud	none
+theft	secure Barracuda cloud	none
+Cisco Cisco ASA 5500X Series	proven Cisco ASA firewall protection	none
+product	Barracuda	instance
+Barracuda	email	none
+comprehensive range	Cisco ASA 5500X Series NextGeneration Firewalls help	none
+data loss	Barracuda	none
+Series	proven Cisco ASA firewall protection	none
+purposebuilt	Barracuda	none
+Barracuda	approach	none
+Cisco Adaptive Security Appliance	ASA software	concept
+application firewall	Barracuda Cloud Generation network	none
+Barracuda	secure Barracuda cloud	none
+Barracuda	look	none
+Barracuda	mobile device	none
+Protect network	Cisco ASA 5500X Series NextGeneration Firewalls	none
+Cisco ASA 5500X firewall	introduce risk	none
+solution	proven Cisco ASA firewall protection	none
+multiple vendor	Barracuda	none
+Cisco Cisco ASA 5500X Series	Cisco	none
+Barracuda	highperformance network solution	none
+allinone approach	secure Barracuda cloud	none
+Barracuda	site	none
+application firewall	Barracuda	none
+reliable connection	Barracuda	none
+Barracuda	perimeter	none
+ASA	Cisco	none
+Cisco ASA 5500X firewall	asset	concept
+malware protection	Cisco ASA 5500X firewall	none
+operational efficiency	Cisco	none
+single device	Cisco	none
+Cisco Adaptive Security Appliance	Software	concept
+Software	Cisco ASA 5500X Series NextGeneration Firewalls	instance
+Cisco Adaptive Security Appliance	capability	none
+Cisco ASA 5500X Series NextGeneration Firewalls help	industry	none
+Cisco Cisco ASA 5500X Series	industry	none
+Series	Cisco Cisco ASA 5500X Series	instance
+software	Cisco Adaptive Security Appliance	instance
+Barracuda	firewall	concept
+Barracuda	security	none
