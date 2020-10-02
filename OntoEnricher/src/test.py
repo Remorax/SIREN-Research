@@ -139,56 +139,7 @@ dropout = 0.3
 weight_decay = 0.001
 
 model = RelationPredictor(emb_vals).to(device)
-criterion = nn.NLLLoss()
-optimizer = optim.AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
-
-
-for epoch in range(num_epochs):
-    all_losses = []    
-    all_inp = list(zip(nodes_train, paths_train, counts_train, targets_train))
-    all_inp_shuffled = random.sample(all_inp, len(all_inp))
-    nodes_train, paths_train, counts_train, targets_train = list(zip(*all_inp_shuffled))
-
-    num_edges_all = [[len(path) for path in element] for element in paths_train]
-    max_edges = max(flatten(num_edges_all))
-    max_paths = max([len(elem) for elem in counts_train])
-
-    dataset_size = len(nodes_train)
-    batch_size = min(batch_size, dataset_size)
-    num_batches = int(ceil(dataset_size/batch_size))
-
-    for batch_idx in range(num_batches):
-        
-        batch_start = batch_idx * batch_size
-        batch_end = (batch_idx+1) * batch_size
-        
-        nodes = torch.LongTensor(nodes_train[batch_start:batch_end]).to(device)
-        paths = torch.LongTensor(pad_paths(paths_train[batch_start:batch_end], max_paths, max_edges)).to(device)
-        counts = torch.DoubleTensor(pad_counts(counts_train[batch_start:batch_end], max_paths)).to(device)
-        edgecounts = torch.LongTensor(pad_edgecounts(num_edges_all[batch_start:batch_end], max_paths)).to(device)
-        targets = torch.LongTensor(targets_train[batch_start:batch_end]).to(device)
-        
-        # Backprop and perform Adam optimisation
-        optimizer.zero_grad()
-
-        # Run the forward pass
-        outputs = model(nodes, paths, counts, edgecounts, max_paths, max_edges)
-
-        #loss = log_loss(outputs, torch.LongTensor(labels).to(device))
-        loss = criterion(outputs, targets)
-
-        loss.backward()
-        optimizer.step()
-
-        all_losses.append(loss.item())
-    
-    write("Epoch: {}/{} Mean Loss: {}".format(epoch, num_epochs, np.mean(all_losses)))  
-
-write("Training Complete!")
-
-model_dict = model.state_dict()
-model_dict = {key: model_dict[key] for key in model_dict if k!="name_embeddings.weight"}
-torch.save(model_dict, model_file)
+model.load_state_dict(torch.load(model_file, map_location=torch.device(device)))
 
 def calculate_recall(true, pred):
     true_f, pred_f = [], []
