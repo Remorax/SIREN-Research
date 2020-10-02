@@ -88,6 +88,7 @@ class RelationPredictor(nn.Module):
         paths_embed = paths_embed.reshape((-1, max_edges, self.input_dim))
 
         paths_packed = pack_padded_sequence(paths_embed, torch.flatten(edgecounts), batch_first=True, enforce_sorted=False)
+        self.lstm.flatten_parameters()
         _, (hidden_state, _) = self.lstm(paths_packed)
         paths_output = hidden_state.permute(1,2,0)
         paths_output_reshaped = paths_output.reshape(-1, max_paths, HIDDEN_DIM*NUM_LAYERS*self.n_directions)
@@ -135,7 +136,7 @@ lr = 0.001
 dropout = 0.3
 weight_decay = 0.001
 
-model = nn.DataParallel(RelationPredictor(emb_vals)).to(device)
+model = RelationPredictor(emb_vals).to(device)
 criterion = nn.NLLLoss()
 optimizer = optim.AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
 
