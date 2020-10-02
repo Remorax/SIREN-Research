@@ -186,7 +186,9 @@ for epoch in range(num_epochs):
 
 write("Training Complete!")
 
-torch.save(model.state_dict(), model_file)
+model_dict = model.state_dict()
+model_dict = {key: model_dict[key] for key in model_dict if k!="name_embeddings.weight"}
+torch.save(model_dict, model_file)
 
 def calculate_recall(true, pred):
     true_f, pred_f = [], []
