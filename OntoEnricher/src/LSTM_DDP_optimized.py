@@ -4,12 +4,14 @@ from math import ceil
 import torch.optim as optim
 import torch.nn as nn
 from torch.nn.utils.rnn import pack_padded_sequence
+import torch.multiprocessing as mp
+from torch.nn.parallel import DistributedDataParallel as DDP
+import torch.distributed as dist
 from sklearn.metrics import accuracy_score
 
 dataset_file = os.path.abspath("../Input/" + sys.argv[1])
 results_file = os.path.abspath("../Results/" + sys.argv[2])
-output_file =  os.path.abspath("../Outputs/" + sys.argv[3])
-model_file =  os.path.abspath("../Models/" + sys.argv[4])
+model_file =  os.path.abspath("../Models/" + sys.argv[3])
 
 f = open(dataset_file, "rb")
 (nodes_train, paths_train, counts_train, targets_train, 
@@ -19,13 +21,20 @@ f = open(dataset_file, "rb")
  emb_indexer, emb_indexer_inv, emb_vals, 
  pos_indexer, dep_indexer, dir_indexer, rel_indexer) = pickle.load(f)
 
-rel_indexer_inv = {rel_indexer[key]: key for key in rel_indexer}
 op_file = open(results_file, "w+")
+
+def distributed_main(batch_size, gpu_ids, use_flatten=True):
+    os.environ['MASTER_ADDR'] = 'localhost'
+    os.environ['MASTER_PORT'] = '5555'
+    mp.spawn(
+        distributed_warning,
+        nprocs=len(gpu_ids),
+        args=(batch_size, len(gpu_ids), use_flatten))
+
 
 def write(statement):
     global op_file
     op_file.write("\n" + str(statement) + "\n")
-    op_file.flush()
 
 POS_DIM = 4
 DEP_DIM = 6
@@ -138,7 +147,7 @@ lr = 0.001
 dropout = 0.3
 weight_decay = 0.001
 
-model = RelationPredictor(emb_vals).to(device)
+model = nn.DataParallel(RelationPredictor(emb_vals)).to(device)
 criterion = nn.NLLLoss()
 optimizer = optim.AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
 
@@ -183,8 +192,6 @@ for epoch in range(num_epochs):
 
 write("Training Complete!")
 
-torch.save(model.state_dict(), model_file)
-
 def calculate_recall(true, pred):
     true_f, pred_f = [], []
     for i,elem in enumerate(true):
@@ -203,7 +210,7 @@ def calculate_precision(true, pred):
 
 def test(nodes_test, paths_test, counts_test, targets_test, message):
     predictedLabels, trueLabels = [], []
-    results = []
+
     num_edges_all = [[len(path) for path in element] for element in paths_test]
     max_edges = max(flatten(num_edges_all))
     max_paths = max([len(elem) for elem in counts_test])
@@ -217,10 +224,10 @@ def test(nodes_test, paths_test, counts_test, targets_test, message):
         batch_start = batch_idx * batch_size
         batch_end = (batch_idx+1) * batch_size
 
-        nodes = torch.LongTensor(nodes_test[batch_start:batch_end]).to(device)
-        paths = torch.LongTensor(pad_paths(paths_test[batch_start:batch_end], max_paths, max_edges)).to(device)
-        counts = torch.DoubleTensor(pad_counts(counts_test[batch_start:batch_end], max_paths)).to(device)
-        edgecounts = torch.LongTensor(pad_edgecounts(num_edges_all[batch_start:batch_end], max_paths)).to(device)
+        nodes = torch.LongTensor(nodes_test[batch_start:batch_end])
+        paths = torch.LongTensor(pad_paths(paths_test[batch_start:batch_end], max_paths, max_edges))
+        counts = torch.DoubleTensor(pad_counts(counts_test[batch_start:batch_end], max_paths))
+        edgecounts = torch.LongTensor(pad_edgecounts(num_edges_all[batch_start:batch_end], max_paths))
         targets = torch.LongTensor(targets_test[batch_start:batch_end])
         
         outputs = model(nodes, paths, counts, edgecounts, max_paths, max_edges)
@@ -229,9 +236,7 @@ def test(nodes_test, paths_test, counts_test, targets_test, message):
         targets = [el.item() for el in targets]
         predictedLabels.extend(predicted)
         trueLabels.extend(targets)
-        results.extend(["\t".join(tup) for tup in zip(["\t".join([emb_indexer_inv[tup[0]], emb_indexer_inv[tup[1]]]) for tup in nodes.cpu().numpy()], [rel_indexer_inv[l] for l in predicted], [rel_indexer_inv[l] for l in targets])])
-
-    open(output_file + "_" + message + ".tsv", "w+").write("\n".join(results))
+    
     accuracy = accuracy_score(trueLabels, predictedLabels)
     recall = calculate_recall(trueLabels, predictedLabels)
     precision = calculate_precision(trueLabels, predictedLabels)
