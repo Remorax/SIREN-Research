@@ -142,8 +142,9 @@ model = RelationPredictor(emb_vals).to(device)
 criterion = nn.NLLLoss()
 optimizer = optim.AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
 
+
 for epoch in range(num_epochs):
-    
+    all_losses = []    
     all_inp = list(zip(nodes_train, paths_train, counts_train, targets_train))
     all_inp_shuffled = random.sample(all_inp, len(all_inp))
     nodes_train, paths_train, counts_train, targets_train = list(zip(*all_inp_shuffled))
@@ -179,7 +180,9 @@ for epoch in range(num_epochs):
         loss.backward()
         optimizer.step()
 
-        write("Epoch: {} Idx: {} Loss: {}".format(epoch, batch_idx, loss.item()))  
+        all_losses.append(loss.item())
+    
+    write("Epoch: {}/{} Mean Loss: {}".format(epoch, num_epochs, np.mean(all_losses)))  
 
 write("Training Complete!")
 
