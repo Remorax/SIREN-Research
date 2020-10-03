@@ -10,9 +10,9 @@
 module load cuda/10.2
 module load cudnn/7.6.5-cuda-10.2 
 
-thresholds=(0.72 0.73 0.74 0.75 0.76)
+dropouts=(0.35 0.4 0.45 0.5 0.6 0.7 0.8)
 
-for threshold in "${thresholds[@]}";
+for dropout in "${dropouts[@]}";
 do
-	python3 LSTM_optimized.py "data_use_"$threshold".pkl" "results_threshold_"$threshold".txt" "Output_threshold_"$threshold "threshold_"$threshold".pt"
+	python3 LSTM_output_dropout.py "data_use_0.86.pkl" "results_output_dropout_"$dropout".txt" "Output_output_dropout_"$dropout "output_dropout_"$dropout".pt" $dropout
 done
