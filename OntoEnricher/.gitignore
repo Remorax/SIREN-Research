@@ -2,5 +2,5 @@ junk/
 typescript
 src/1
 src/core
-*.pt
 src/slurm*
+files/Output/Baseline/*.pt

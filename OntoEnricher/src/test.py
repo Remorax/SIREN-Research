@@ -139,7 +139,7 @@ dropout = 0.3
 weight_decay = 0.001
 
 model = RelationPredictor(emb_vals).to(device)
-model.load_state_dict(torch.load(model_file, map_location=torch.device(device)))
+model.load_state_dict(torch.load(model_file, map_location=torch.device(device)), strict=False)
 
 def calculate_recall(true, pred):
     true_f, pred_f = [], []
