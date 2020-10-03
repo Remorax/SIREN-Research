@@ -99,7 +99,7 @@ class RelationPredictor(nn.Module):
 
         paths_weighted = torch.bmm(paths_output_reshaped.permute(0,2,1), counts.unsqueeze(-1)).squeeze(-1)
         representation = torch.cat((nodes_embed, paths_weighted), dim=-1)
-        probabilities = self.log_softmax(F.dropout(self.W(representation), dropout=dropout))
+        probabilities = self.log_softmax(F.dropout(self.W(representation), p=dropout))
         return probabilities
 
 def to_list(seq):
