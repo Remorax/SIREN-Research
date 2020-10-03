@@ -14,5 +14,5 @@ thresholds=(0.92 0.93 0.94 0.95 0.96)
 
 for threshold in "${thresholds[@]}";
 do
-	python3 LSTM_optimized.py "data_use_"$threshold".pkl" "results_threshold_"$threshold".txt" "Output_threshold_"$threshold "threshold_"$threshold".pt"
+	python3 test.py "data_use_"$threshold".pkl" "results_threshold_"$threshold".txt" "Output_threshold_"$threshold "threshold_"$threshold".pt"
 done
