@@ -1,0 +1,27 @@
+Keysight’s Threat Simulator delivers actionable recommendations for addressing vulnerabilities and real-time threat intelligence
+
+Keysight Technologies, Inc. (NYSE: KEYS), a leading technology company that helps enterprises, service providers and governments accelerate innovation to connect and secure the world, today announced Breach Defense, a security operations (SecOps) platform designed to improve operational security effectiveness. An integral element of the new platform is the Threat Simulator breach and attack simulation solution which enables network and security operations teams to measure the effectiveness of operational security by safely simulating the latest attacks and exploits on live networks.
+
+Security operations teams are faced with an increasingly complex network environment that is continuously under attack by a flood of cyber threats generated inside and outside of their organizations. According to a recent Keysight Security Operations Effectiveness survey:
+
+Good security tools don't always protect as expected: 50% of survey respondents stated they found their security solution was not working as expected after a breach had occurred.
+Most organizations don't verify their security is working as it should: Only 35% of respondents have test-based evidence to prove their security products are configured and working correctly.
+Most organizations recognize the value of security testing: 86% of respondents stated they would value a solution that finds and helps to remediate vulnerabilities in a company's security posture.
+"Even the best security products can't keep you safe unless they are properly configured," said Doug Close, senior vice president of cybersecurity at IT solutions provider Sayers. "Being able to automatically simulate attacks, detect security gaps and receive detailed recommendations gives customers a powerful advantage both for bridging gaps and improving day-to-day security operations."
+
+"An organization can be safe one day and vulnerable the next. Testing security capabilities at one point in time provides limited visibility to an organization's ongoing security posture," said Paula Musich, research director, security and risk management at market research firm Enterprise Management Associates. "At its heart, security is both a people and processes issue. By testing defenses on a regular basis using attack simulation, security operations teams can stay on top of changes that can turn good security hygiene into an exploitable vulnerability."
+
+Threat Simulator Delivers Confidence that Security Tools are Protecting as Intended
+
+Keysight's Threat Simulator solution provides enterprise security operations teams a method for testing security tools to determine their effectiveness in protecting the organization. It provides a continuous, automated security assessment of end-to-end production network security infrastructures, enabling organizations to quickly spot gaps and environment drift of security configurations, which is typically the result of someone in IT or a related group making a change without any malicious intent, while a patented recommendation engine provides clear remediation steps.
+
+"Today's network and security teams just don't know how effective their security solutions are on a continuous basis," said Scott Register, vice president, security solutions, Keysight Network Applications and Security Group (formerly Ixia Solutions Group). "Security breaches aren't always caused by a lack of capable products – often they are due to misconfigurations or a lack of security skills. Probing for coverage gaps has never been an easy task on a live network. Threat Simulator helps security operations teams find those gaps and gain actionable insight into how to close those gaps and improve their security posture."
+
+Breach Defense Suite – ThreatARMOR
+
+In addition to Threat Simulator, Keysight's Breach Defense SecOps platform includes ThreatARMOR, a threat intelligence gateway. Complementing an existing security infrastructure, ThreatARMOR reduces attack surface by blocking up to 80% of malicious traffic at the source—decreasing the number of security information and event management (SIEM) alerts. ThreatARMOR can: block traffic from known bad IP addresses at line-rate speeds; block malicious IP addresses manually or automatically from SIEM tools; identify and stop infected internal devices from communicating with known botnet C&C servers; block traffic by geography; and block unused IP space / unassigned IP addresses and hijacked domains from a network.
+
+About Keysight Technologies
+
+Keysight Technologies, Inc. (NYSE: KEYS) is a leading technology company that helps enterprises, service providers and governments accelerate innovation to connect and secure the world. Keysight's solutions optimize networks and bring electronic products to market faster and at a lower cost with offerings from design simulation, to prototype validation, to manufacturing test, to optimization in networks and cloud environments. Customers span the worldwide communications ecosystem, aerospace and defense, automotive, energy, semiconductor and general electronics end markets. Keysight generated revenues of $4.3B in fiscal year 2019. More information is available at www.keysight.com.
+
