@@ -10,9 +10,17 @@
 module load cuda/10.2
 module load cudnn/7.6.5-cuda-10.2 
 
-dropouts=(0.35 0.4 0.45 0.5 0.6 0.7 0.8)
+emb_dropouts=(0.3 0.35)
+hidden_dropouts=(0.2)
+output_dropouts=(0.15)
 
-for dropout in "${dropouts[@]}";
+for emb_dropout in "${emb_dropouts[@]}";
 do
-	python3 LSTM_lstm_dropout.py "data_use_0.86.pkl" "results_lstm_dropout_"$dropout".txt" "Output_lstm_dropout_"$dropout "lstm_dropout_"$dropout".pt" $dropout
+	for hidden_dropout in "${hidden_dropouts[@]}";
+	do
+		for output_dropout in "${output_dropouts[@]}";
+		do
+			python3 LSTM_dropout.py data_use_0.86.pkl "results_dropout_"$emb_dropout"_"$hidden_dropout"_"$output_dropout"_.txt" "Output_dropout_"$emb_dropout"_"$hidden_dropout"_"$output_dropout "dropout_"$emb_dropout"_"$hidden_dropout"_"$output_dropout".pt" $emb_dropout $hidden_dropout $output_dropout
+		done
+	done
 done
