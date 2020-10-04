@@ -12,11 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import en_core_web_sm
+import en_core_web_lg
 from collections.abc import Iterable
 
 # use spacy small model
-nlp = en_core_web_sm.load()
+nlp = en_core_web_lg.load()
 
 # dependency markers for subjects
 SUBJECTS = {"nsubj", "nsubjpass", "csubj", "csubjpass", "agent", "expl"}
