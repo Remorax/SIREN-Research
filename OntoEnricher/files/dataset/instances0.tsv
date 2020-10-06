@@ -1,748 +1,751 @@
-vulnerabilities	real-time threat intelligence	none
-actionable recommendations	real-time threat intelligence	none
-vulnerabilities	Keysight’s Threat Simulator	none
-vulnerabilities	actionable recommendations	none
-actionable recommendations	Keysight’s Threat Simulator	none
-real-time threat intelligence	Keysight’s Threat Simulator	none
-operational security effectiveness	leading technology company	none
-service providers	SecOps platform	none
-Breach Defense	security operations	none
-Breach Defense	Inc NYSE	none
-world	KEYS	none
-governments	leading technology company	none
-leading technology company	KEYS	none
-Keysight Technologies	security operations	none
-service providers	KEYS	none
-operational security effectiveness	world	none
-service providers	leading technology company	none
-world	SecOps platform	none
-governments	SecOps platform	none
-enterprises	leading technology company	none
-Keysight Technologies	operational security effectiveness	none
-Keysight Technologies	innovation	none
-leading technology company	security operations	none
-world	leading technology company	none
-governments	enterprises	none
-operational security effectiveness	Inc NYSE	none
-Keysight Technologies	Inc NYSE	none
-operational security effectiveness	security operations	none
-Breach Defense	leading technology company	none
-enterprises	world	none
-innovation	security operations	none
-Inc NYSE	SecOps platform	none
-service providers	Inc NYSE	none
-operational security effectiveness	innovation	none
-service providers	security operations	none
-Keysight Technologies	enterprises	none
-Inc NYSE	innovation	none
-operational security effectiveness	SecOps platform	none
-enterprises	Inc NYSE	none
-enterprises	security operations	none
-service providers	Keysight Technologies	none
-governments	KEYS	none
-service providers	innovation	none
-Breach Defense	enterprises	none
-operational security effectiveness	enterprises	none
-world	security operations	none
-enterprises	innovation	none
-KEYS	Inc NYSE	none
-KEYS	security operations	none
-enterprises	SecOps platform	none
-Breach Defense	world	none
-service providers	Breach Defense	none
-Keysight Technologies	KEYS	none
-world	innovation	none
-security operations	SecOps platform	none
-KEYS	innovation	none
-governments	innovation	none
-KEYS	SecOps platform	none
-Keysight Technologies	Breach Defense	none
-Keysight Technologies	SecOps platform	none
-Keysight Technologies	world	none
-governments	operational security effectiveness	none
-innovation	SecOps platform	none
-enterprises	KEYS	none
-Breach Defense	KEYS	none
-world	Inc NYSE	none
-Inc NYSE	security operations	none
-leading technology company	Inc NYSE	none
-governments	security operations	none
-governments	Inc NYSE	none
-Keysight Technologies	leading technology company	none
-governments	world	none
-service providers	governments	none
-service providers	operational security effectiveness	none
-leading technology company	SecOps platform	none
-leading technology company	innovation	none
-Breach Defense	SecOps platform	none
-service providers	enterprises	none
-Breach Defense	innovation	none
-Keysight Technologies	governments	none
-Breach Defense	operational security effectiveness	none
-operational security effectiveness	KEYS	none
-governments	Breach Defense	none
-service providers	world	none
-exploits	operational security	none
-effectiveness	network and security operations teams	none
-live networks	operational security	none
-effectiveness	live networks	none
-network and security operations teams	live networks	none
-integral element	new platform	none
-network and security operations teams	integral element	none
-effectiveness	new platform	none
-network and security operations teams	new platform	none
-latest attacks	integral element	none
-Threat Simulator breach and attack simulation solution	latest attacks	none
-Threat Simulator breach and attack simulation solution	new platform	none
-effectiveness	operational security	none
-network and security operations teams	operational security	none
-latest attacks	live networks	none
-integral element	operational security	none
-latest attacks	effectiveness	none
-latest attacks	network and security operations teams	none
-new platform	live networks	none
-effectiveness	exploits	none
-network and security operations teams	exploits	none
-Threat Simulator breach and attack simulation solution	exploits	none
-integral element	exploits	none
-Threat Simulator breach and attack simulation solution	operational security	none
-latest attacks	operational security	none
-integral element	live networks	none
-new platform	operational security	none
-exploits	live networks	none
-Threat Simulator breach and attack simulation solution	live networks	none
-latest attacks	exploits	none
-exploits	new platform	none
-Threat Simulator breach and attack simulation solution	network and security operations teams	none
-Threat Simulator breach and attack simulation solution	effectiveness	none
-Threat Simulator breach and attack simulation solution	integral element	none
-latest attacks	new platform	none
-effectiveness	integral element	none
-Security operations teams organizations	complex network environment	none
-attack	Security operations teams	none
-attack	Security operations teams organizations	none
-Security operations teams	Security operations teams organizations	none
-cyber threats	attack	none
-cyber threats	Security operations teams	none
-attack	complex network environment	none
-Security operations teams	complex network environment	none
-cyber threats	complex network environment	none
-cyber threats	Security operations teams organizations	none
-cyber threats	flood	none
-attack	flood	none
-Security operations teams	flood	none
-Security operations teams organizations	flood	none
-complex network environment	flood	none
-breach	50%	none
-50%	Good security tools	none
-survey respondents	survey respondents security solution	none
-Good security tools	recent Keysight Security Operations Effectiveness survey	none
-survey respondents security solution	breach	none
-survey respondents	breach	none
-breach	Good security tools	none
-survey respondents security solution	recent Keysight Security Operations Effectiveness survey	none
-50%	recent Keysight Security Operations Effectiveness survey	none
-survey respondents security solution	50%	none
-survey respondents security solution	Good security tools	none
-survey respondents	50%	none
-breach	recent Keysight Security Operations Effectiveness survey	none
-survey respondents	Good security tools	none
-survey respondents	recent Keysight Security Operations Effectiveness survey	none
-Most organizations security	security	none
-test-based evidence	respondents	none
-test-based evidence	respondents security products	none
-test-based evidence	Most organizations	none
-respondents	respondents security products	none
-test-based evidence	35%	none
-Most organizations	Most organizations security	none
-Most organizations security	respondents	none
-Most organizations	respondents security products	none
-Most organizations security	35%	none
-test-based evidence	security	none
-35%	respondents security products	none
-35%	security	none
-Most organizations	security	none
-test-based evidence	Most organizations security	none
-Most organizations	35%	none
-35%	respondents	none
-respondents	security	none
-Most organizations	respondents	none
-security	respondents security products	none
-Most organizations security	respondents security products	none
-solution	vulnerabilities	none
-solution	86%	none
-company's security posture	86%	none
-value	security testing	none
-respondents	solution	none
-company's security posture	value	none
-respondents	security testing	none
-86%	vulnerabilities	none
-value	solution	none
-value	vulnerabilities	none
-value	86%	none
-security testing	vulnerabilities	none
-company's security posture	respondents	none
-company's security posture	solution	none
-Most organizations	security testing	none
-company's security posture	vulnerabilities	none
-respondents	86%	none
-Most organizations	vulnerabilities	none
-Most organizations	value	none
-Most organizations	86%	none
-company's security posture	security testing	none
-security testing	86%	none
-respondents	vulnerabilities	none
-solution	security testing	none
-respondents	value	none
-Most organizations	respondents	none
-company's security posture	Most organizations	none
-Most organizations	solution	none
-best security products	senior vice president	none
-senior vice president	IT solutions provider Sayers	none
-Doug Close	you	none
-you	cybersecurity	none
-cybersecurity	IT solutions provider Sayers	none
-you	IT solutions provider Sayers	none
-best security products	Doug Close	none
-Doug Close	cybersecurity	none
-Doug Close	IT solutions provider Sayers	none
-best security products	IT solutions provider Sayers	none
-you	senior vice president	none
-best security products	cybersecurity	none
-best security products	you	none
-Doug Close	senior vice president	none
-senior vice president	cybersecurity	none
-detailed recommendations	gaps	none
-security gaps	gaps	none
-gaps	attacks	none
-powerful advantage	day	none
-detailed recommendations	day	none
-security gaps	customers	none
-customers	gaps	none
-security gaps	day	none
-customers	day	none
-attacks	day	none
-powerful advantage	gaps	none
-powerful advantage	detailed recommendations	none
-security gaps	attacks	none
-customers	attacks	none
-customers	detailed recommendations	none
-powerful advantage	attacks	none
-security gaps	detailed recommendations	none
-powerful advantage	customers	none
-detailed recommendations	attacks	none
-gaps	day	none
-security gaps	powerful advantage	none
-security capabilities	Paula Musich	none
-Paula Musich	market research firm Enterprise Management Associates	none
-security capabilities	one point	none
-security capabilities	limited visibility	none
-security capabilities	time	none
-limited visibility	time	none
-Paula Musich	limited visibility	none
-Paula Musich	time	none
-Paula Musich	organization's ongoing security posture	none
-organization's ongoing security posture	research director	none
-security capabilities	organization's ongoing security posture	none
-organization's ongoing security posture	limited visibility	none
-organization's ongoing security posture	time	none
-Paula Musich	security and risk management	none
-limited visibility	one point	none
-time	one point	none
-market research firm Enterprise Management Associates	research director	none
-security and risk management	time	none
-security and risk management	limited visibility	none
-organization's ongoing security posture	one point	none
-market research firm Enterprise Management Associates	one point	none
-security and risk management	research director	none
-market research firm Enterprise Management Associates	organization's ongoing security posture	none
-Paula Musich	one point	none
-limited visibility	research director	none
-time	research director	none
-Paula Musich	research director	none
-security and risk management	market research firm Enterprise Management Associates	none
-market research firm Enterprise Management Associates	limited visibility	none
-market research firm Enterprise Management Associates	time	none
-security and risk management	one point	none
-security capabilities	security and risk management	none
-security capabilities	research director	none
-security and risk management	organization's ongoing security posture	none
-one point	research director	none
-security capabilities	market research firm Enterprise Management Associates	none
-heart	security	none
-processes	security	none
-processes	people	none
-processes	heart	none
-heart	people	none
-security	issue	none
-processes	issue	none
-people	issue	none
-heart	issue	none
-security	people	none
-top	changes	none
-defenses	regular basis	none
-security operations teams	good security hygiene	none
-defenses	attack simulation	none
-exploitable vulnerability	testing	none
-changes	exploitable vulnerability	none
-attack simulation	regular basis	none
-testing	security operations teams	none
-changes	defenses	none
-top	good security hygiene	none
-top	defenses	none
-exploitable vulnerability	defenses	none
-testing	attack simulation	none
-changes	testing	none
-top	testing	none
-attack simulation	good security hygiene	none
-security operations teams	regular basis	none
-security operations teams	defenses	none
-testing	regular basis	none
-top	regular basis	none
-changes	regular basis	none
-defenses	good security hygiene	none
-security operations teams	attack simulation	none
-exploitable vulnerability	regular basis	none
-top	attack simulation	none
-testing	defenses	none
-changes	security operations teams	none
-top	security operations teams	none
-changes	attack simulation	none
-exploitable vulnerability	security operations teams	none
-top	exploitable vulnerability	none
-exploitable vulnerability	attack simulation	none
-exploitable vulnerability	good security hygiene	none
-regular basis	good security hygiene	none
-changes	good security hygiene	none
-testing	good security hygiene	none
-Threat Simulator	Security Tools	none
-Threat Simulator	Intended
-
-Keysight's Threat Simulator solution	none
-Confidence	Security Tools	none
-Threat Simulator	Confidence	none
-Security Tools	Intended
-
-Keysight's Threat Simulator solution	none
-Confidence	Intended
-
-Keysight's Threat Simulator solution	none
-organization	security tools effectiveness	none
-security tools	method	none
-method	security tools effectiveness	none
-security tools	security tools effectiveness	none
-enterprise security operations teams	security tools effectiveness	none
-method	organization	none
-enterprise security operations teams	organization	none
-security tools	organization	none
-enterprise security operations teams	method	none
-security tools	enterprise security operations teams	none
-continuous, automated security assessment	organizations	none
-gaps	end	none
-environment drift	security configurations	none
-continuous, automated security assessment	related group	none
-someone	related group	none
-IT	change	none
-continuous, automated security assessment	security configurations	none
-malicious intent	clear remediation steps	none
-someone	IT	none
-environment drift	end	none
-security configurations	patented recommendation engine	none
-IT	gaps	none
-environment drift	malicious intent	none
-related group	patented recommendation engine	none
-malicious intent	It	none
-someone	It	none
-malicious intent	organizations	none
-clear remediation steps	result	none
-environment drift	related group	none
-continuous, automated security assessment	change	none
-security configurations	gaps	none
-result	gaps	none
-result	It	none
-security configurations	IT	none
-malicious intent	someone	none
-security configurations	It	none
-IT	end	none
-related group	end	none
-security configurations	end	none
-gaps	related group	none
-clear remediation steps	patented recommendation engine	none
-someone	gaps	none
-organizations	related group	none
-environment drift	patented recommendation engine	none
-malicious intent	gaps	none
-change	end	none
-environment drift	It	none
-security configurations	someone	none
-IT	It	none
-security configurations	result	none
-result	end	none
-malicious intent	change	none
-gaps	patented recommendation engine	none
-clear remediation steps	organizations	none
-clear remediation steps	related group	none
-end	It	none
-continuous, automated security assessment	someone	none
-environment drift	clear remediation steps	none
-malicious intent	result	none
-someone	end	none
-organizations	patented recommendation engine	none
-someone	result	none
-change	It	none
-malicious intent	patented recommendation engine	none
-change	patented recommendation engine	none
-result	related group	none
-related group	It	none
-continuous, automated security assessment	It	none
-clear remediation steps	someone	none
-malicious intent	IT	none
-organizations	end	none
-malicious intent	related group	none
-change	organizations	none
-change	related group	none
-environment drift	result	none
-clear remediation steps	change	none
-result	patented recommendation engine	none
-environment drift	someone	none
-continuous, automated security assessment	clear remediation steps	none
-result	IT	none
-clear remediation steps	gaps	none
-someone	organizations	none
-result	change	none
-clear remediation steps	end	none
-result	organizations	none
-IT	patented recommendation engine	none
-continuous, automated security assessment	gaps	none
-gaps	It	none
-security configurations	change	none
-continuous, automated security assessment	result	none
-clear remediation steps	IT	none
-clear remediation steps	It	none
-environment drift	organizations	none
-security configurations	organizations	none
-change	gaps	none
-organizations	It	none
-IT	organizations	none
-someone	change	none
-IT	related group	none
-patented recommendation engine	end	none
-continuous, automated security assessment	patented recommendation engine	none
-patented recommendation engine	It	none
-continuous, automated security assessment	end	none
-gaps	organizations	none
-continuous, automated security assessment	malicious intent	none
-malicious intent	end	none
-security configurations	clear remediation steps	none
-continuous, automated security assessment	IT	none
-someone	patented recommendation engine	none
-security configurations	malicious intent	none
-continuous, automated security assessment	environment drift	none
-environment drift	gaps	none
-environment drift	IT	none
-security configurations	related group	none
-environment drift	change	none
-Ixia Solutions Group	Security Group	none
-Today's network and security teams security solutions	continuous basis	none
-security solutions	Today's network and security teams security solutions	none
-Keysight Network Applications	Today's network and security teams	none
-Today's network and security teams	Ixia Solutions Group	none
-security solutions	Keysight Network Applications	none
-Keysight Network Applications	continuous basis	none
-Today's network and security teams	Security Group	none
-vice president	Today's network and security teams security solutions	none
-Today's network and security teams	continuous basis	none
-security solutions	Ixia Solutions Group	none
-Ixia Solutions Group	Today's network and security teams security solutions	none
-Security Group	Today's network and security teams security solutions	none
-security solutions	continuous basis	none
-vice president	Today's network and security teams	none
-security solutions	vice president	none
-Scott Register	vice president	none
-vice president	continuous basis	none
-security solutions	Security Group	none
-Ixia Solutions Group	continuous basis	none
-Scott Register	Ixia Solutions Group	none
-vice president	Ixia Solutions Group	none
-Scott Register	Security Group	none
-Scott Register	Keysight Network Applications	none
-vice president	Keysight Network Applications	none
-Scott Register	security solutions	none
-Scott Register	continuous basis	none
-vice president	Security Group	none
-Today's network and security teams	Today's network and security teams security solutions	none
-Keysight Network Applications	Ixia Solutions Group	none
-security solutions	Today's network and security teams	none
-Scott Register	Today's network and security teams security solutions	none
-Keysight Network Applications	Today's network and security teams security solutions	none
-Scott Register	Today's network and security teams	none
-Keysight Network Applications	Security Group	none
-Security Group	continuous basis	none
-security skills	lack	none
-security skills	misconfigurations	none
-lack	misconfigurations	none
-Security breaches	capable products	none
-capable products	misconfigurations	none
-security skills	Security breaches	none
-lack	Security breaches	none
-security skills	capable products	none
-lack	capable products	none
-Security breaches	misconfigurations	none
-easy task	coverage gaps	none
-live network	coverage gaps	none
-easy task	live network	none
-security operations teams	gaps	none
-gaps security posture	gaps	none
-Threat Simulator	security operations teams	none
-gaps security posture	actionable insight	none
-actionable insight	gaps	none
-gaps security posture	security operations teams	none
-Threat Simulator	actionable insight	none
-Threat Simulator	gaps	none
-gaps security posture	Threat Simulator	none
-security operations teams	actionable insight	none
-Keysight's Breach Defense SecOps platform	ThreatARMOR	none
-threat intelligence gateway	Keysight's Breach Defense SecOps platform	none
-Threat Simulator	Keysight's Breach Defense SecOps platform	none
-ThreatARMOR	addition	none
-Threat Simulator	threat intelligence gateway	none
-threat intelligence gateway	addition	none
-Keysight's Breach Defense SecOps platform	addition	none
-Threat Simulator	ThreatARMOR	none
-Threat Simulator	addition	none
-threat intelligence gateway	ThreatARMOR	none
-event management	attack surface	none
-up to 80%	source	none
-malicious traffic	source	none
-ThreatARMOR	source	none
-number	existing security infrastructure	none
-number	security information	none
-attack surface	source	none
-SIEM alerts	source	none
-attack surface	security information	none
-number	up to 80%	none
-number	attack surface	none
-SIEM alerts	event management	none
-SIEM alerts	existing security infrastructure	none
-SIEM alerts	malicious traffic	none
-SIEM alerts	ThreatARMOR	none
-SIEM alerts	security information	none
-existing security infrastructure	source	none
-security information	source	none
-up to 80%	event management	none
-event management	source	none
-up to 80%	attack surface	none
-malicious traffic	up to 80%	none
-ThreatARMOR	up to 80%	none
-malicious traffic	event management	none
-ThreatARMOR	event management	none
-malicious traffic	attack surface	none
-ThreatARMOR	attack surface	none
-up to 80%	existing security infrastructure	none
-up to 80%	security information	none
-malicious traffic	number	none
-ThreatARMOR	number	none
-malicious traffic	existing security infrastructure	none
-malicious traffic	security information	none
-ThreatARMOR	existing security infrastructure	none
-ThreatARMOR	security information	none
-SIEM alerts	up to 80%	none
-SIEM alerts	number	none
-existing security infrastructure	security information	none
-event management	existing security infrastructure	none
-event management	security information	none
-number	event management	none
-SIEM alerts	attack surface	none
-number	source	none
-attack surface	existing security infrastructure	none
-malicious traffic	ThreatARMOR	none
-unassigned IP addresses	line-rate speeds	none
-unassigned IP addresses	SIEM tools	none
-known bad IP addresses	ThreatARMOR	none
-geography	network	none
-traffic	SIEM tools	none
-internal devices	malicious IP addresses	none
-geography	line-rate speeds	none
-unused IP space	domains	none
-internal devices	unassigned IP addresses	none
-network	line-rate speeds	none
-known bad IP addresses	SIEM tools	none
-known bad IP addresses	line-rate speeds	none
-known botnet C&C servers	SIEM tools	none
-network	unassigned IP addresses	none
-malicious IP addresses	traffic	none
-malicious IP addresses	unused IP space	none
-known botnet C&C servers	traffic	none
-unused IP space	unassigned IP addresses	none
-known botnet C&C servers	unused IP space	none
-domains	traffic	none
-unused IP space	line-rate speeds	none
-internal devices	SIEM tools	none
-internal devices	ThreatARMOR	none
-geography	domains	none
-known bad IP addresses	unused IP space	none
-ThreatARMOR	unassigned IP addresses	none
-known bad IP addresses	network	none
-known bad IP addresses	malicious IP addresses	none
-geography	traffic	none
-network	traffic	none
-domains	ThreatARMOR	none
-malicious IP addresses	SIEM tools	none
-network	ThreatARMOR	none
-internal devices	domains	none
-malicious IP addresses	line-rate speeds	none
-geography	ThreatARMOR	none
-geography	SIEM tools	none
-geography	malicious IP addresses	none
-internal devices	network	none
-known bad IP addresses	unassigned IP addresses	none
-domains	SIEM tools	none
-domains	line-rate speeds	none
-ThreatARMOR	traffic	none
-internal devices	traffic	none
-known botnet C&C servers	geography	none
-known botnet C&C servers	internal devices	none
-known bad IP addresses	known botnet C&C servers	none
-malicious IP addresses	unassigned IP addresses	none
-traffic	unassigned IP addresses	none
-unused IP space	SIEM tools	none
-geography	unassigned IP addresses	none
-known botnet C&C servers	ThreatARMOR	none
-geography	unused IP space	none
-malicious IP addresses	network	none
-known botnet C&C servers	malicious IP addresses	none
-known botnet C&C servers	unassigned IP addresses	none
-known bad IP addresses	geography	none
-malicious IP addresses	ThreatARMOR	none
-known botnet C&C servers	network	none
-network	SIEM tools	none
-SIEM tools	line-rate speeds	none
-known bad IP addresses	domains	none
-known bad IP addresses	traffic	none
-traffic	line-rate speeds	none
-unused IP space	network	none
-ThreatARMOR	SIEM tools	none
-ThreatARMOR	line-rate speeds	none
-known botnet C&C servers	line-rate speeds	none
-internal devices	line-rate speeds	none
-malicious IP addresses	domains	none
-internal devices	unused IP space	none
-unused IP space	ThreatARMOR	none
-known bad IP addresses	internal devices	none
-known botnet C&C servers	domains	none
-unused IP space	traffic	none
-domains	network	none
-domains	unassigned IP addresses	none
-geography	internal devices	none
-leading technology company	Inc NYSE	none
-governments	enterprises	none
-Keysight Technologies	Inc NYSE	none
-governments	Inc NYSE	none
-enterprises	innovation	none
-KEYS	Inc NYSE	none
-world	KEYS	none
-Keysight Technologies	leading technology company	none
-governments	leading technology company	none
-governments	world	none
-leading technology company	KEYS	none
-service providers	KEYS	none
-service providers	governments	none
-enterprises	world	none
-Keysight Technologies	KEYS	none
-leading technology company	innovation	none
-service providers	leading technology company	none
-world	innovation	none
-service providers	Inc NYSE	none
-Keysight Technologies	enterprises	none
-Inc NYSE	innovation	none
-KEYS	innovation	none
-enterprises	leading technology company	none
-service providers	enterprises	none
-Keysight Technologies	innovation	none
-governments	innovation	none
-enterprises	Inc NYSE	none
-Keysight Technologies	governments	none
-service providers	Keysight Technologies	none
-Keysight Technologies	world	none
-enterprises	KEYS	none
-governments	KEYS	none
-service providers	world	none
-world	Inc NYSE	none
-service providers	innovation	none
-world	leading technology company	none
-electronic products	manufacturing test	none
-electronic products	offerings	none
-manufacturing test	to optimization	none
-cloud environments	manufacturing test	none
-cloud environments	offerings	none
-offerings	to optimization	none
-networks	electronic products	none
-prototype validation	offerings	none
-design simulation	to optimization	none
-prototype validation	lower cost	none
-networks	manufacturing test	none
-networks	offerings	none
-networks	prototype validation	none
-cloud environments	design simulation	none
-design simulation	Keysight's solutions	none
-manufacturing test	lower cost	none
-offerings	lower cost	none
-electronic products	Keysight's solutions	none
-design simulation	lower cost	none
-electronic products	lower cost	none
-networks	to optimization	none
-networks	design simulation	none
-prototype validation	Keysight's solutions	none
-networks	Keysight's solutions	none
-Keysight's solutions	lower cost	none
-manufacturing test	design simulation	none
-to optimization	lower cost	none
-manufacturing test	Keysight's solutions	none
-offerings	Keysight's solutions	none
-cloud environments	to optimization	none
-electronic products	design simulation	none
-electronic products	to optimization	none
-networks	lower cost	none
-design simulation	prototype validation	none
-design simulation	offerings	none
-cloud environments	Keysight's solutions	none
-manufacturing test	offerings	none
-prototype validation	to optimization	none
-networks	cloud environments	none
-cloud environments	electronic products	none
-manufacturing test	prototype validation	none
-Keysight's solutions	to optimization	none
-electronic products	prototype validation	none
-cloud environments	lower cost	none
-cloud environments	prototype validation	none
-end markets	general electronics	none
-semiconductor	general electronics	none
-aerospace	general electronics	none
-semiconductor	aerospace	none
-worldwide communications ecosystem	Customers	none
-end markets	aerospace	none
-general electronics	Customers	none
-worldwide communications ecosystem	energy	none
-worldwide communications ecosystem	semiconductor	none
-aerospace	energy	none
-defense	general electronics	none
-aerospace	defense	none
-aerospace	Customers	none
-worldwide communications ecosystem	general electronics	none
-defense	Customers	none
-end markets	semiconductor	none
-defense	energy	none
-worldwide communications ecosystem	defense	none
-energy	Customers	none
-end markets	worldwide communications ecosystem	none
-end markets	Customers	none
-worldwide communications ecosystem	aerospace	none
-semiconductor	Customers	none
-semiconductor	defense	none
-end markets	energy	none
-energy	general electronics	none
-end markets	defense	none
-semiconductor	energy	none
-Keysight	fiscal year	none
-fiscal year	revenues	none
-Keysight	revenues	none
+Color Profiles Image	basic features	none
+modern operating system	OS	none
+modern operating system	Part	none
+Color Profiles Image	Part	none
+OS	basic features	none
+modern operating system	basic features	none
+modern operating system	Color Profiles Image	none
+OS	Part	none
+Part	basic features	none
+OS	Color Profiles Image	none
+feature	attackers	none
+attackers	accessible attack surface	none
+information disclosure	remote code execution	none
+information disclosure	feature	none
+feature	Image parsing	none
+information disclosure	attackers	none
+attackers	remote code execution	none
+attackers	Image parsing	none
+accessible attack surface	Image parsing	none
+Image parsing	vulnerability	none
+information disclosure	Image parsing	none
+feature	remote code execution	none
+remote code execution	vulnerability	none
+remote code execution	accessible attack surface	none
+attackers	vulnerability	none
+remote code execution	Image parsing	none
+feature	accessible attack surface	none
+information disclosure	accessible attack surface	none
+information disclosure	vulnerability	none
+accessible attack surface	vulnerability	none
+feature	vulnerability	none
+harness	Windows OS’ built-in image parsers	none
+vulnerabilities	fuzzing	none
+fuzzing	harness	none
+fuzzing	Windows OS’ built-in image parsers	none
+I	harness	none
+I	Windows OS’ built-in image parsers	none
+related file formats	Windows OS’ built-in image parsers	none
+related file formats	vulnerabilities	none
+multi-part blog series	harness	none
+multi-part blog series	Windows OS’ built-in image parsers	none
+corpus	harness	none
+corpus	Windows OS’ built-in image parsers	none
+corpus	related file formats	none
+multi-part blog series	I	none
+vulnerabilities	Windows OS’ built-in image parsers	none
+vulnerabilities	harness	none
+multi-part blog series	related file formats	none
+I	vulnerabilities	none
+corpus	I	none
+I	fuzzing	none
+multi-part blog series	corpus	none
+related file formats	harness	none
+related file formats	fuzzing	none
+multi-part blog series	vulnerabilities	none
+I	related file formats	none
+multi-part blog series	fuzzing	none
+corpus	vulnerabilities	none
+corpus	fuzzing	none
+part	series	none
+image format	I	none
+images	series	none
+image format	series	none
+images	I	none
+I	part	none
+color profiles	something	none
+itself	part	none
+color profiles	images	none
+image format	itself	none
+itself	series	none
+I	series	none
+image format	part	none
+images	something	none
+color profiles	part	none
+color profiles	itself	none
+color profiles	image format	none
+something	itself	none
+something	I	none
+something	image format	none
+something	series	none
+images	part	none
+something	part	none
+color profiles	series	none
+images	itself	none
+color profiles	I	none
+images	image format	none
+itself	I	none
+What	ICC Color Profile	none
+color space	more-than-adequate description	none
+data	set	none
+color space	set	none
+standards	more-than-adequate description	none
+color management	color input or output device	none
+ICC	color input or output device	none
+more-than-adequate description	color input or output device	none
+color space	ICC color profiles	none
+data	ICC color profiles	none
+ICC color profiles	set	none
+data	color space	none
+ICC color profiles	ICC	none
+data	ICC	none
+color space	ICC	none
+International Color Consortium	ICC	none
+data	color input or output device	none
+International Color Consortium	Wikipedia	none
+ICC profile	Wikipedia	none
+data	International Color Consortium	none
+Wikipedia	color input or output device	none
+data	color management	none
+color management	ICC profile	none
+color management	ICC	none
+more-than-adequate description	ICC profile	none
+International Color Consortium	ICC profile	none
+standards	set	none
+ICC	Wikipedia	none
+color management	Wikipedia	none
+standards	ICC color profiles	none
+more-than-adequate description	Wikipedia	none
+set	color input or output device	none
+color space	International Color Consortium	none
+ICC	ICC profile	none
+standards	color input or output device	none
+ICC color profiles	International Color Consortium	none
+data	Wikipedia	none
+standards	color management	none
+color management	color space	none
+data	ICC profile	none
+color space	ICC profile	none
+set	ICC profile	none
+color management	International Color Consortium	none
+ICC color profiles	ICC profile	none
+color management	more-than-adequate description	none
+color space	Wikipedia	none
+set	Wikipedia	none
+ICC	more-than-adequate description	none
+ICC color profiles	Wikipedia	none
+standards	Wikipedia	none
+color management	set	none
+more-than-adequate description	set	none
+data	standards	none
+International Color Consortium	set	none
+standards	ICC profile	none
+data	more-than-adequate description	none
+International Color Consortium	more-than-adequate description	none
+standards	color space	none
+ICC profile	color input or output device	none
+color management	ICC color profiles	none
+standards	ICC	none
+International Color Consortium	color input or output device	none
+color space	color input or output device	none
+ICC	set	none
+standards	International Color Consortium	none
+ICC color profiles	more-than-adequate description	none
+ICC color profiles	color input or output device	none
+PCS	Profiles	none
+device source	viewing requirement	none
+mapping	profile connection space	none
+Profiles	profile connection space	none
+particular device	mapping	none
+PCS	viewing requirement	none
+color attributes	viewing requirement	none
+Profiles	particular device	none
+particular device	device source	none
+viewing requirement	profile connection space	none
+PCS	profile connection space	none
+device source	profile connection space	none
+mapping	viewing requirement	none
+color attributes	particular device	none
+PCS	particular device	none
+Profiles	viewing requirement	none
+color space	profile connection space	none
+color attributes	color space	none
+color attributes	profile connection space	none
+color attributes	PCS	none
+PCS	color space	none
+color space	particular device	none
+color space	viewing requirement	none
+particular device	viewing requirement	none
+PCS	device source	none
+color space	mapping	none
+PCS	mapping	none
+color attributes	mapping	none
+color space	device source	none
+color attributes	Profiles	none
+Profiles	device source	none
+color attributes	device source	none
+mapping	device source	none
+Profiles	mapping	none
+particular device	profile connection space	none
+color space	Profiles	none
+L*a*b	PCS	none
+PCS	CIELAB	none
+L*a*b	CIELAB	none
+series	parameters	none
+tables	parameters	none
+tables	interpolation	none
+tables	series	none
+tables	Mappings	none
+parameters	Mappings	none
+parameters	interpolation	none
+series	Mappings	none
+series	interpolation	none
+Mappings	interpolation	none
+series	transformations	none
+transformations	interpolation	none
+parameters	transformations	none
+transformations	Mappings	none
+tables	transformations	none
+images	software processes	none
+images	ICC color profile	none
+binary file	software processes	none
+binary file	ICC color profile	none
+software processes	ICC color profile	none
+ICC	simpler terms	none
+ICC color profile	simpler terms	none
+software processes	ICC	none
+binary file	ICC	none
+images	ICC	none
+ICC	ICC color profile	none
+images	simpler terms	none
+binary file	simpler terms	none
+images	binary file	none
+software processes	simpler terms	none
+ICC specification	100 pages	none
+math	different types	none
+file format	specifications	none
+better understanding	different types	none
+file format	color transformation	none
+color profiles	different types	none
+color transformation	different types	none
+color profiles	file format	none
+math	file format	none
+math	color transformation	none
+better understanding	file format	none
+math	specifications	none
+better understanding	specifications	none
+color profiles	specifications	none
+file format	different types	none
+better understanding	color transformation	none
+color profiles	color transformation	none
+color transformation	specifications	none
+different types	specifications	none
+color profiles	better understanding	none
+color profiles	math	none
+math	better understanding	none
+us	understanding	none
+fuzzing dictionaries	file format internals	none
+information	good corpus	none
+fuzzing	good corpus	none
+information	fuzzing	none
+us	information	none
+fuzzing dictionaries	information	none
+file format internals	fuzzing	none
+us	good corpus	none
+us	file format internals	none
+understanding	fuzzing	none
+us	fuzzing	none
+file format internals	good corpus	none
+fuzzing dictionaries	understanding	none
+understanding	file format internals	none
+fuzzing dictionaries	fuzzing	none
+fuzzing dictionaries	us	none
+understanding	information	none
+understanding	good corpus	none
+information	file format internals	none
+fuzzing dictionaries	good corpus	none
+Windows	Windows Windows	none
+Windows	History	none
+Color Management	Windows Windows	none
+Color Management	History	none
+Windows	Color Management	none
+Windows Windows	History	none
+Image Color Management (ICM) version	Color Management	none
+Color Management	version	none
+Image Color Management (ICM) version	History	none
+Windows	Image Color Management (ICM) version	none
+Windows Windows	version	none
+Image Color Management (ICM) version	Windows Windows	none
+History	version	none
+Image Color Management (ICM) version	version	none
+Windows	version	none
+WCS	Windows Color System	none
+major overhaul	Windows Vista	none
+major overhaul	WCS	none
+Windows Vista	Windows Color System	none
+major overhaul	Windows Color System	none
+WCS	Windows Vista	none
+WCS color profiles	XML file format	none
+ICC color profiles	WCS color profiles	none
+WCS color profiles	XML	none
+XML	XML file format	none
+binary files	XML	none
+binary files	XML file format	none
+ICC color profiles	XML	none
+ICC color profiles	XML file format	none
+ICC color profiles	binary files	none
+binary files	WCS color profiles	none
+I	blog post	none
+I	ICC color profiles	none
+blog post	ICC color profiles	none
+Microsoft	supported Windows APIs	none
+Microsoft	list	none
+supported Windows APIs	list	none
+OpenColorProfile	we	none
+MSCMS.dll	OpenColorProfile	none
+named APIs	we	none
+OpenColorProfile	named APIs	none
+named APIs	it	none
+MSCMS.dll	we	none
+OpenColorProfile	it	none
+MSCMS.dll	it	none
+MSCMS.dll	named APIs	none
+it	we	none
+Adobe’s CMM	CMM	none
+loading	Adobe’s CMM	none
+loading	Microsoft’s Color Management Module	none
+DLL	Adobe’s CMM	none
+loading	generic entry point	none
+DLL	generic entry point	none
+generic entry point	third-party CMMs	none
+loading	third-party CMMs	none
+DLL	CMM	none
+Microsoft’s Color Management Module	third-party CMMs	none
+generic entry point	Adobe’s CMM	none
+Adobe’s CMM	third-party CMMs	none
+Microsoft’s Color Management Module	DLL	none
+Microsoft’s Color Management Module	Adobe’s CMM	none
+Microsoft’s Color Management Module	generic entry point	none
+generic entry point	CMM	none
+loading	CMM	none
+DLL	third-party CMMs	none
+third-party CMMs	CMM	none
+Microsoft’s Color Management Module	CMM	none
+loading	DLL	none
+ICM32.dll	Microsoft’s CMM	none
+ICM32.dll	ICM	none
+ICM	system32 directory	none
+Microsoft’s CMM	ICM	none
+ICM32.dll	system32 directory	none
+Microsoft’s CMM	system32 directory	none
+same code	decades	none
+third-party	CMM	none
+Windows 95 era	CMM	none
+same code	ships	none
+security fixes	CMM	none
+ships	third-party	none
+security fixes	third-party	none
+Windows 95 era	third-party	none
+Windows 95 era	same code	none
+third-party	decades	none
+security fixes	same code	none
+Windows 95 era	security fixes	none
+same code	CMM	none
+security fixes	decades	none
+Windows 95 era	decades	none
+ships	decades	none
+decades	CMM	none
+same code	third-party	none
+security fixes	ships	none
+Windows 95 era	ships	none
+ships	CMM	none
+old module	new vulnerability	none
+me	new vulnerability	none
+old module	me	none
+old module	hope	none
+hope	new vulnerability	none
+hope	me	none
+external researchers	small module	none
+small module	fuzzing	none
+small module	review	none
+certain degree	hopes	none
+multiple rounds	hopes	none
+certain degree	fuzzing	none
+certain degree	internal product security teams	none
+multiple rounds	internal product security teams	none
+external researchers	review	none
+small module	internal product security teams	none
+internal product security teams	hopes	none
+external researchers	fuzzing	none
+certain degree	review	none
+internal product security teams	fuzzing	none
+external researchers	internal product security teams	none
+certain degree	multiple rounds	none
+small module	multiple rounds	none
+small module	hopes	none
+multiple rounds	fuzzing	none
+external researchers	multiple rounds	none
+hopes	fuzzing	none
+external researchers	certain degree	none
+review	internal product security teams	none
+external researchers	hopes	none
+review	multiple rounds	none
+review	hopes	none
+review	fuzzing	none
+small module	certain degree	none
+relative silence	ICM32	none
+relative silence	Project Zero and ZDI researchers	none
+relative silence	we	none
+Project Zero and ZDI researchers	recent vulnerabilities	none
+ICM32	we	none
+Project Zero and ZDI researchers	we	none
+recent vulnerabilities	multiple bugs	none
+relative silence	recent vulnerabilities	none
+recent vulnerabilities	we	none
+ICM32	multiple bugs	none
+Project Zero and ZDI researchers	multiple bugs	none
+ICM32	recent vulnerabilities	none
+we	multiple bugs	none
+ICM32	Project Zero and ZDI researchers	none
+relative silence	multiple bugs	none
+Windows	ICM APIs	none
+Windows	API sequence	none
+API sequence	MSDN	none
+MSDN	we	none
+ICM APIs	we	none
+Windows	ICC related operations	none
+API sequence	we	none
+ICC related operations	MSDN	none
+API sequence	list	none
+Windows	MSDN	none
+Windows	list	none
+list	ICM APIs	none
+ICC related operations	we	none
+API sequence	ICM APIs	none
+Windows	we	none
+list	MSDN	none
+API sequence	ICC related operations	none
+ICC related operations	list	none
+list	we	none
+MSDN	ICM APIs	none
+ICC related operations	ICM APIs	none
+hope	EXEs	none
+API sequence	ways	none
+hope	ways	none
+API sequence	EXEs	none
+color profile APIs	disassembly	none
+disassembly	EXEs	none
+disassembly	ways	none
+API sequence	color profile APIs	none
+API sequence	disassembly	none
+API sequence	hope	none
+color profile APIs	EXEs	none
+Windows DLLs	hope	none
+Windows DLLs	disassembly	none
+color profile APIs	Windows DLLs	none
+Windows DLLs	EXEs	none
+Windows DLLs	ways	none
+API sequence	Windows DLLs	none
+EXEs	ways	none
+color profile APIs	ways	none
+color profile APIs	hope	none
+disassembly	hope	none
+Little CMS	open source Color Management Systems	none
+LCMS	harness	none
+approach	open source Color Management Systems	none
+approach	Little CMS	none
+harness	open source Color Management Systems	none
+Little CMS	harness	none
+LCMS	open source Color Management Systems	none
+LCMS	approach	none
+LCMS	Little CMS	none
+approach	harness	none
+color transformations	APIs	none
+color profiles	color transformations	none
+color profiles	functionality	none
+small set	APIs	none
+small set	color transformations	none
+functionality	color transformations	none
+color profiles	small set	none
+color profiles	APIs	none
+functionality	APIs	none
+small set	functionality	none
+Dictionary Sites	Corpus	none
+multiple color profiles	Corpus	none
+multiple color profiles	Dictionary Sites	none
+multiple color profiles	internet	none
+Corpus	internet	none
+Dictionary Sites	internet	none
+images	other main source	none
+color profile	other main source	none
+images	color profile	none
+programming/tools color profile	to stand-alone files	none
+programming/tools color profile	programming/tools	none
+many image files	other main source	none
+images	programming/tools color profile	none
+programming/tools color profile	many image files	none
+programming/tools color profile	color profile	none
+many image files	to stand-alone files	none
+programming/tools	to stand-alone files	none
+images	many image files	none
+other main source	to stand-alone files	none
+programming/tools	many image files	none
+many image files	color profile	none
+programming/tools	other main source	none
+programming/tools	color profile	none
+images	to stand-alone files	none
+color profile	to stand-alone files	none
+programming/tools color profile	other main source	none
+images	programming/tools	none
+corpus	we	none
+specification	seven different color profiles	none
+specification	we	none
+seven different color profiles	one sample	none
+corpus	seven different color profiles	none
+corpus	one sample	none
+we	one sample	none
+corpus	specification	none
+specification	one sample	none
+we	seven different color profiles	none
+fuzzing	first set	none
+fuzzing	corpuses	none
+corpuses	code coverage information	none
+first set	corpuses	none
+fuzzing	code coverage information	none
+first set	code coverage information	none
+dictionary	specifications	none
+list	specifications	none
+fuzzer	values	none
+additional code paths	specifications	none
+fuzzer	specifications	none
+fuzzer	additional code paths	none
+list	values	none
+fuzzer	dictionary	none
+fuzzer	list	none
+values	unique tag names	none
+additional code paths	unique tag names	none
+unique tag names	specifications	none
+dictionary	unique tag names	none
+list	additional code paths	none
+list	unique tag names	none
+list	dictionary	none
+fuzzer	unique tag names	none
+values	specifications	none
+values	additional code paths	none
+values	dictionary	none
+dictionary	additional code paths	none
+One	dictionaries	none
+One	LCMS	none
+open source fuzzing attempts	LCMS	none
+LCMS	dictionaries	none
+open source fuzzing attempts	One	none
+open source fuzzing attempts	dictionaries	none
+16-core machine	harness	none
+first set	corpuses	none
+I	first set	none
+harness	first set	none
+I	corpuses	none
+16-core machine	I	none
+harness	corpuses	none
+I	harness	none
+16-core machine	corpuses	none
+16-core machine	first set	none
+MSCMS.dll	ICM32.dll	none
+MSCMS.dll	feedback	none
+fuzzer	feedback	none
+ICM32.dll	Code coverage information	none
+fuzzer	MSCMS.dll	none
+fuzzer	ICM32.dll	none
+fuzzer	Code coverage information	none
+ICM32.dll	feedback	none
+MSCMS.dll	Code coverage information	none
+feedback	Code coverage information	none
+days	Crashes	none
+couple	Crashes	none
+couple	days	none
+file	stream	none
+file	ncl2’ tag/element	none
+code	stream	none
+file	size	none
+ncl2’ tag/element	stream	none
+ncl2’ tag/element	code	none
+size	stream	none
+file	code	none
+code	size	none
+ncl2’ tag/element	size	none
+complete content	same call	none
+element	buffer	none
+element	complete content	none
+same call	buffer	none
+element	same call	none
+complete content	buffer	none
+/write	number	none
+number	buffer	none
+values	/write	none
+buffer size	buffer	none
+values	number	none
+buffer size	values	none
+number	count	none
+values	buffer	none
+buffer size	number	none
+values	count	none
+/write	buffer	none
+buffer size	/write	none
+buffer	count	none
+buffer size	count	none
+/write	count	none
+offset	buffer pointer	none
+offset	verification	none
+verification	buffer pointer	none
+vulnerability	buffer pointer	none
+vulnerability	verification	none
+vulnerability	offset	none
+error	3 byte	none
+Microsoft	bug	none
+bug	fix	none
+Microsoft	verification	none
+bug	verification	none
+verification	fix	none
+Microsoft	fix	none
+content	allocation	none
+content	Additional Vulnerabilities	none
+previous vulnerability	allocation	none
+CMGetPartialProfileElement function	previous vulnerability	none
+Additional Vulnerabilities	one	none
+CMGetPartialProfileElement function	allocation	none
+one	allocation	none
+CMGetPartialProfileElement function	content	none
+CMGetPartialProfileElement function	size	none
+size	allocation	none
+content	size	none
+pattern	one	none
+content	pattern	none
+content	one	none
+CMGetPartialProfileElement function	pattern	none
+pattern	size	none
+size	previous vulnerability	none
+Additional Vulnerabilities	size	none
+CMGetPartialProfileElement function	Additional Vulnerabilities	none
+pattern	previous vulnerability	none
+Additional Vulnerabilities	allocation	none
+previous vulnerability	one	none
+pattern	allocation	none
+Additional Vulnerabilities	previous vulnerability	none
+Additional Vulnerabilities	pattern	none
+content	previous vulnerability	none
+size	one	none
+CMGetPartialProfileElement function	one	none
+offset	bugs	none
+bugs	size	none
+offset	size	none
+sort	integer overflow	none
+offset	pattern	none
+integer overflow	size	none
+unconstrained size	size	none
+sort	bugs	none
+unconstrained size	integer overflow	none
+bugs	pattern	none
+pattern	size	none
+unconstrained size	pattern	none
+integer overflow	pattern	none
+sort	unconstrained size	none
+unconstrained size	offset	none
+sort	size	none
+unconstrained size	bugs	none
+offset	integer overflow	none
+integer overflow	bugs	none
+sort	pattern	none
+sort	offset	none
+function	such instances	none
+I	function	none
+I	such instances	none
+I	unchecked offset access	none
+three instances	unchecked offset access	none
+I	three instances	none
+exported and documented MSCMS functions	GetNamedProfileInfo	none
+exported and documented MSCMS functions	functions	none
+functions	GetNamedProfileInfo	none
+other two functions	allocBuffer	none
+minimum length check	size	none
+ncl2’ elements	bound read	none
+ncl2’ elements	CMConvIndexToNameProfile	none
+size	other two functions	none
+ncl2’ elements	size	none
+offsets	ncl2’ elements	none
+minimum length check	other two functions	none
+minimum length check	ncl2’ elements	none
+CMConvIndexToNameProfile	bug	none
+other two functions	bound read	none
+offsets	minimum length check	none
+CMConvIndexToNameProfile	bound read	none
+offsets	bug	none
+minimum length check	CMConvIndexToNameProfile	none
+offsets	bound read	none
+ncl2’ elements	other two functions	none
+size	CMConvIndexToNameProfile	none
+CMConvIndexToNameProfile	allocBuffer	none
+offsets	CMConvIndexToNameProfile	none
+other two functions	bug	none
+minimum length check	bug	none
+size	allocBuffer	none
+offsets	allocBuffer	none
+size	bug	none
+CMConvIndexToNameProfile	other two functions	none
+minimum length check	allocBuffer	none
+bug	allocBuffer	none
+offsets	other two functions	none
+ncl2’ elements	allocBuffer	none
+allocBuffer	bound read	none
+minimum length check	bound read	none
+bug	bound read	none
+ncl2’ elements	bug	none
+size	bound read	none
+offsets	size	none
+Windows binaries	fact	none
+three vulnerabilities	Windows binaries	none
+none	functions	none
+three vulnerabilities	Microsoft	none
+Microsoft	fact	none
+three vulnerabilities	functions	none
+Microsoft	functions	none
+three vulnerabilities	none	none
+Microsoft	none	none
+none	Windows binaries	none
+functions	fact	none
+three vulnerabilities	fact	none
+Microsoft	Windows binaries	none
+none	fact	none
+functions	Windows binaries	none
+Windows	third-party software	none
+Windows	we	none
+we	APIs	none
+third-party software	APIs	none
+we	third-party software	none
+Windows	APIs	none
+blog series	we	none
+color profiles	we	none
+harness	we	none
+color profiles	corpus	none
+blog series	corpus	none
+multiple vulnerabilities	corpus	none
+part	we	none
+part	harness	none
+multiple vulnerabilities	part	none
+corpus	harness	none
+blog series	part	none
+color profiles	part	none
+blog series	color profiles	none
+corpus	we	none
+blog series	harness	none
+color profiles	harness	none
+multiple vulnerabilities	we	none
+color profiles	multiple vulnerabilities	none
+blog series	multiple vulnerabilities	none
+multiple vulnerabilities	harness	none
+corpus	part	none
+we	vulnerability class	none
+part	vulnerability class	none
+uninitialized memory	vulnerability class	none
+we	uninitialized memory	none
+uninitialized memory	part	none
+we	part	none

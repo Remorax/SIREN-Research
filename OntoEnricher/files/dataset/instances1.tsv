@@ -1,1251 +1,469 @@
-YOU	ZERO-DAY THREATS	none
-zero-day malware	zero-day phishing and social engineering attacks	none
-zero-day malware	8,3001 new, previously undiscovered cyber attacks	none
-zero-day phishing and social engineering attacks	8,3001 new, previously undiscovered cyber attacks	none
-
-associated file signatures	anti-virus, firewalls	none
-network	other core security solutions	none
-anti-virus, firewalls	network	none
-
-associated file signatures	other core security solutions	none
-
-associated file signatures	network	none
-anti-virus, firewalls	other core security solutions	none
-half	fact	none
-best AV solutions	half	none
-best AV solutions	fact	none
-fact	malware strains	none
-best AV solutions	wild	none
-wild	half	none
-wild	malware strains	none
-wild	fact	none
-half	malware strains	none
-best AV solutions	malware strains	none
-compromise	existing indicators	none
-existing indicators	IOCs	none
-existing indicators	what	none
-COMMON NETWORK SECURITY APPROACHES	LIMITATIONS	none
-COMMON NETWORK SECURITY APPROACHES	IOCs	none
-you	what	none
-existing indicators	LIMITATIONS	none
-you	existing indicators	none
-LIMITATIONS	what	none
-COMMON NETWORK SECURITY APPROACHES	existing indicators	none
-compromise	COMMON NETWORK SECURITY APPROACHES	none
-compromise	what	none
-COMMON NETWORK SECURITY APPROACHES	you	none
-you	LIMITATIONS	none
-compromise	LIMITATIONS	none
-what	IOCs	none
-COMMON NETWORK SECURITY APPROACHES	what	none
-you	IOCs	none
-LIMITATIONS	IOCs	none
-compromise	you	none
-compromise	IOCs	none
-several approaches	organizations	none
-several approaches	zero-day threats	none
-organizations	zero-day threats	none
-analysis	malware evasion
-techniques	none
-malware evasion
-techniques	network	none
-malware evasion
-techniques	default	none
-analysis	Conventional sandboxing solutions	none
-malware	network	none
-analysis	network	none
-malware	analysis	none
-analysis	default	none
-malware evasion
-techniques	Conventional sandboxing solutions	none
-Conventional sandboxing solutions	default	none
-malware	malware evasion
-techniques	none
-network	default	none
-malware	Conventional sandboxing solutions	none
-malware	default	none
-Conventional sandboxing solutions	network	none
-HVAC
-systems	cameras	none
-only line	dedicated servers	none
-defense	Endpoint security	none
-advantages	defense	none
-HVAC
-systems	defense	none
-cameras	dedicated servers	none
-elevators	dedicated servers	none
-enterprise IoT	datacenters	none
-datacenters	dedicated servers	none
-advantages	Endpoint security	none
-network perimeter	dedicated servers	none
-network perimeter	enterprise IoT	none
-only line	advantages	none
-enterprise IoT	Endpoint security	none
-cameras	advantages	none
-defense	dedicated servers	none
-advantages	enterprise IoT	none
-elevators	Endpoint security	none
-datacenters	Endpoint security	none
-HVAC
-systems	datacenters	none
-defense	enterprise IoT	none
-network perimeter	cameras	none
-elevators	HVAC
-systems	none
-elevators	defense	none
-elevators	cameras	none
-network perimeter	HVAC
-systems	none
-advantages	dedicated servers	none
-network perimeter	elevators	none
-only line	cameras	none
-enterprise IoT	dedicated servers	none
-Endpoint security	dedicated servers	none
-elevators	only line	none
-network perimeter	only line	none
-elevators	enterprise IoT	none
-only line	datacenters	none
-cameras	enterprise IoT	none
-cameras	datacenters	none
-elevators	datacenters	none
-network perimeter	advantages	none
-only line	enterprise IoT	none
-network perimeter	datacenters	none
-elevators	advantages	none
-HVAC
-systems	dedicated servers	none
-cameras	Endpoint security	none
-HVAC
-systems	advantages	none
-only line	Endpoint security	none
-HVAC
-systems	enterprise IoT	none
-defense	datacenters	none
-advantages	datacenters	none
-network perimeter	Endpoint security	none
-cameras	defense	none
-only line	defense	none
-only line	HVAC
-systems	none
-network perimeter	defense	none
-HVAC
-systems	Endpoint security	none
-damage	detection-first strategy	none
-damage	incident response	none
-incident response	detection-first strategy	none
-you	zero-day threats	none
-you	such critical limitations	none
-zero-day threats	such critical limitations	none
-network	zero-day threats	none
-you	network	none
-network	such critical limitations	none
-ZERO-DAY PROTECTION	CHECK POINT SANDBLAST NETWORK	none
-SandBlast Network	world	none
-Check Point	world	none
-SandBlast Network	Check Point	none
-best2 zero-day protection	threat extraction	none
-revolutionary AI engines	email and web downloads	none
-best2 zero-day protection	email and web downloads	none
-evasion-resistant threat emulation	best2 zero-day protection	none
-revolutionary AI engines	threat extraction	none
-combination	best2 zero-day protection	none
-threat extraction	email and web downloads	none
-evasion-resistant threat emulation	combination	none
-combination	email and web downloads	none
-evasion-resistant threat emulation	email and web downloads	none
-combination	threat extraction	none
-combination	revolutionary AI engines	none
-evasion-resistant threat emulation	threat extraction	none
-evasion-resistant threat emulation	revolutionary AI engines	none
-revolutionary AI engines	best2 zero-day protection	none
-prevention-first strategy	cyberattacks	none
-cyberattacks	social engineering	none
-SandBlast Network	prevention-first strategy	none
-prevention-first strategy	organizations	none
-SandBlast Network	organizations	none
-cyberattacks	organizations	none
-prevention-first strategy	unknown
-ransomware	none
-SandBlast Network	phishing	none
-phishing	Trojans	none
-Trojans	social engineering	none
-devastating attacks	organizations	none
-social engineering	organizations	none
-SandBlast Network	cyberattacks	none
-Trojans	cyberattacks	none
-SandBlast Network	devastating attacks	none
-devastating attacks	unknown
-ransomware	none
-unknown
-ransomware	cyberattacks	none
-SandBlast Network	social engineering	none
-unknown
-ransomware	social engineering	none
-phishing	organizations	none
-unknown
-ransomware	Trojans	none
-phishing	cyberattacks	none
-phishing	devastating attacks	none
-Trojans	organizations	none
-phishing	social engineering	none
-prevention-first strategy	Trojans	none
-phishing	unknown
-ransomware	none
-devastating attacks	Trojans	none
-phishing	prevention-first strategy	none
-devastating attacks	social engineering	none
-devastating attacks	cyberattacks	none
-SandBlast Network	Trojans	none
-devastating attacks	prevention-first strategy	none
-SandBlast Network	unknown
-ransomware	none
-prevention-first strategy	social engineering	none
-unknown
-ransomware	organizations	none
-current infrastructure	agility	none
-SandBlast Network	automated
-policy configuration	none
-current infrastructure	automated
-policy configuration	none
-business productivity	automated
-policy configuration	none
-business productivity	agility	none
-SandBlast Network	current infrastructure	none
-SandBlast Network	agility	none
-agility	automated
-policy configuration	none
-current infrastructure	business productivity	none
-SandBlast Network	business productivity	none
-world’s best malware catch rate	numerous innovative, proprietary
-technologies	none
-SandBlast Network	record speed	none
-world’s best malware catch rate	record speed	none
-numerous innovative, proprietary
-technologies	SandBlast Network	none
-numerous innovative, proprietary
-technologies	record speed	none
-world’s best malware catch rate	SandBlast Network	none
-vast network	revolutionary AI	none
-revolutionary AI	non-AI engines	none
-non-AI engines	pre-emptive user protections	none
-revolutionary AI	pre-emptive user protections	none
-vast network	non-AI engines	none
-vast network	pre-emptive user protections	none
-pre-emptive user protections	moment	none
-revolutionary AI	moment	none
-non-AI engines	moment	none
-vast network	moment	none
-users	web	none
-Pre-emptive User Protections	email	none
-SandBlast network	users	none
-users	pre-emptive user protections	none
-advanced
-email protections	threat extraction	none
-advanced
-email protections	pre-emptive user protections	none
-SandBlast network	web	none
-Pre-emptive User Protections	advanced
-email protections	none
-web	threat extraction	none
-email	advanced
-email protections	none
-pre-emptive user protections	threat extraction	none
-advanced
-email protections	web	none
-SandBlast network	pre-emptive user protections	none
-SandBlast network	threat extraction	none
-Pre-emptive User Protections	SandBlast network	none
-advanced
-email protections	users	none
-email	threat extraction	none
-SandBlast network	email	none
-users	threat extraction	none
-email	web	none
-email	users	none
-Pre-emptive User Protections	web	none
-web	pre-emptive user protections	none
-Pre-emptive User Protections	users	none
-SandBlast network	advanced
-email protections	none
-Pre-emptive User Protections	pre-emptive user protections	none
-Pre-emptive User Protections	threat extraction	none
-email	pre-emptive user protections	none
-reconstructed versions	SandBlast Threat Extraction	none
-SandBlast Threat Extraction	web	none
-SandBlast Threat Extraction	malicious files	none
-web	malicious files	none
-reconstructed versions	malicious files	none
-email	web	none
-email	malicious files	none
-email	SandBlast Threat Extraction	none
-reconstructed versions	email	none
-reconstructed versions	web	none
-SandBlast Threat	malicious content	none
-unacceptable delays	malicious content	none
-flow	emulation	none
-Extraction	background	none
-emulation	first strategy	none
-emulation	practical prevention	none
-background	emulation	none
-background	practical prevention	none
-Extraction	uninterrupted business	none
-traditional
-sandboxes	uninterrupted business	none
-users	uninterrupted business	none
-SandBlast Threat	users	none
-SandBlast Threat	traditional
-sandboxes	none
-unacceptable delays	traditional
-sandboxes	none
-unacceptable delays	users	none
-malicious content	traditional
-sandboxes	none
-malicious content	users	none
-Extraction	traditional
-sandboxes	none
-flow	background	none
-Extraction	emulation	none
-Extraction	users	none
-Extraction	first strategy	none
-background	malicious content	none
-background	uninterrupted business	none
-SandBlast Threat	first strategy	none
-unacceptable delays	first strategy	none
-SandBlast Threat	emulation	none
-SandBlast Threat	uninterrupted business	none
-SandBlast Threat	unacceptable delays	none
-unacceptable delays	emulation	none
-unacceptable delays	uninterrupted business	none
-emulation	malicious content	none
-malicious content	uninterrupted business	none
-traditional
-sandboxes	practical prevention	none
-users	practical prevention	none
-flow	Extraction	none
-flow	unacceptable delays	none
-flow	uninterrupted business	none
-Extraction	malicious content	none
-flow	first strategy	none
-background	traditional
-sandboxes	none
-background	users	none
-background	first strategy	none
-first strategy	practical prevention	none
-SandBlast Threat	background	none
-unacceptable delays	background	none
-first strategy	traditional
-sandboxes	none
-first strategy	users	none
-SandBlast Threat	flow	none
-emulation	traditional
-sandboxes	none
-SandBlast Threat	practical prevention	none
-unacceptable delays	Extraction	none
-unacceptable delays	practical prevention	none
-emulation	users	none
-malicious content	practical prevention	none
-flow	users	none
-flow	traditional
-sandboxes	none
-flow	practical prevention	none
-first strategy	uninterrupted business	none
-emulation	uninterrupted business	none
-uninterrupted business	practical prevention	none
-first strategy	malicious content	none
-Extraction	practical prevention	none
-flow	malicious content	none
-SandBlast Threat	Extraction	none
-traditional
-sandboxes	users	none
-Extraction	email	none
-integrated document and image sanitization solution	SandBlast Threat	none
-integrated document and image sanitization solution	email	none
-integrated document and image sanitization solution	Extraction	none
-SandBlast Threat	email	none
-web downloads	email	none
-SandBlast Threat	web downloads	none
-SandBlast Threat	Extraction	none
-integrated document and image sanitization solution	web downloads	none
-web downloads	Extraction	none
-other email-based threats	phishing	none
-phishing	emails	none
-compromise	social engineering	none
-compromise	BEC	none
-other email-based threats	BEC	none
-other email-based threats	emails	none
-94%	other email-based threats	none
-phishing	social engineering	none
-social engineering	emails	none
-other email-based threats	compromise	none
-94%	social engineering	none
-94%	compromise	none
-BEC	emails	none
-other email-based threats	social engineering	none
-phishing	compromise	none
-compromise	emails	none
-94%	BEC	none
-phishing	BEC	none
-BEC	social engineering	none
-94%	phishing	none
-94%	emails	none
-email messages	
-incoming email	none
-
-incoming email	sender	none
-SandBlast Network	text	none
-email links	aspects	none
-
-incoming email	users	none
-email links	email attachments	none
-aspects	recipient details	none
-email links	users	none
-
-incoming email	email attachments	none
-email messages	text	none
-SandBlast Network	recipient details	none
-Threat Extraction	recipient details	none
-’ mailbox	users	none
-users	email attachments	none
-email messages	email links	none
-SandBlast Network	
-incoming email	none
-
-incoming email	risk	none
-sender	risk	none
-email messages	email attachments	none
-email messages	aspects	none
+IXIA THREATARMOR Hyper Box	Japanese Internet industry	none
+recent years	HYPER BOX TACKLES ATTACK TRAFFIC	none
+glut	cyberattacks	none
+IXIA THREATARMOR Hyper Box	veteran	none
+veteran	Japanese Internet industry	none
+glut	HYPER BOX TACKLES ATTACK TRAFFIC	none
+recent years	cyberattacks	none
+HYPER BOX TACKLES ATTACK TRAFFIC	cyberattacks	none
+HYPER BOX TACKLES ATTACK TRAFFIC	veteran	none
+recent years	Japanese Internet industry	none
+recent years	veteran	none
+IXIA THREATARMOR Hyper Box	HYPER BOX TACKLES ATTACK TRAFFIC	none
+HYPER BOX TACKLES ATTACK TRAFFIC	Japanese Internet industry	none
+glut	veteran	none
+IXIA THREATARMOR Hyper Box	cyberattacks	none
+cyberattacks	Japanese Internet industry	none
+glut	Japanese Internet industry	none
+veteran	cyberattacks	none
+recent years	IXIA THREATARMOR Hyper Box	none
+glut	IXIA THREATARMOR Hyper Box	none
+glut	recent years	none
+they service	shared network	none
+daily basis	shared network	none
+daily basis	they service	none
+attacks	shared network	none
+they service	they	none
+they service	attacks	none
+logs	they service	none
+they	shared network	none
+logs	shared network	none
+powerful security devices	they service	none
+powerful security devices	logs	none
+logs	they	none
+logs	daily basis	none
+logs	attacks	none
+daily basis	they	none
+attacks	they	none
+powerful security devices	shared network	none
+daily basis	attacks	none
+powerful security devices	they	none
+powerful security devices	daily basis	none
+powerful security devices	attacks	none
+Hyper Box promise	Hyper Box	none
+Hyper Box promise	Ixia ThreatARMOR	none
+Ixia ThreatARMOR	Hyper Box	none
+SIEM alerts	result	none
+known bad IP addresses	result	none
+Hyper Box promise	SIEM alerts	none
+Ixia ThreatARMOR	SIEM alerts	none
+known bad IP addresses	SIEM alerts	none
+SIEM alerts	Hyper Box	none
+result	Hyper Box	none
+Hyper Box promise	result	none
+Hyper Box promise	known bad IP addresses	none
+Ixia ThreatARMOR	known bad IP addresses	none
+Ixia ThreatARMOR	result	none
+known bad IP addresses	Hyper Box	none
+Hyper Box’s strength data centers	Tokyo	none
+Tokyo	Hyper Box’s strength	none
+strength robust support structure	Hyper Box’s strength	none
+Tokyo	strength robust support structure	none
+Hyper Box’s strength data centers	strength robust support structure	none
+Hyper Box’s strength data centers	Hyper Box’s strength	none
+industry low-cost, high-quality hosting services	telephone assistance	none
+telephone assistance	Hyper Box	none
+Japan’s first domestic enterprise	industry	none
+Japan’s first domestic enterprise	telephone assistance	none
+industry	Hyper Box	none
+industry low-cost, high-quality hosting services	industry	none
+industry low-cost, high-quality hosting services	Hyper Box	none
+Japan’s first domestic enterprise	industry low-cost, high-quality hosting services	none
+telephone assistance	industry	none
+Japan’s first domestic enterprise	Hyper Box	none
+wide range	users	none
+technical experience	Hyper Box	none
+years	wide range	none
+technical experience	years	none
+technical experience	users	none
+technical experience	wide range	none
+wide range	Hyper Box	none
+years	Hyper Box	none
+years	users	none
+users	Hyper Box	none
+AUTOMATED RESPONSES	MASSIVE ATTACK TRAFFIC	none
+MASSIVE ATTACK TRAFFIC	MANUAL	none
+AUTOMATED RESPONSES	MANUAL	none
+cyberattacks	domestic and international service providers	none
+cyberattacks	Hyper Box	none
+domestic and international service providers	Hyper Box	none
+attack traffic	network	none
+onslaught	attack traffic	none
+onslaught	network	none
+ways	it	none
+user systems	Attack traffic	none
+server	user systems	none
+extra measures	Attack traffic	none
+extra measures	server	none
+server	Attack traffic	none
+extra measures	user systems	none
+Essential security infrastructures	place	none
+IDSs	place	none
+Essential security infrastructures	firewalls	none
+IDSs	firewalls	none
+Essential security infrastructures	IDSs	none
+firewalls	place	none
+users	private enterprises	none
+counterattacks	risk	none
+user communication	networks	none
+private enterprises	shared networks	none
+services	networks	none
+counterattacks	private enterprises	none
+aggressive measures	counterattacks	none
+shared networks	networks	none
+risk	networks	none
+users	shared networks	none
+services	user communication	none
+shared networks	risk	none
+aggressive measures	networks	none
+aggressive measures	risk	none
+services	users	none
+aggressive measures	user communication	none
+aggressive measures	private enterprises	none
+private enterprises	user communication	none
+aggressive measures	users	none
+counterattacks	networks	none
+services	shared networks	none
+user communication	risk	none
+services	aggressive measures	none
+services	counterattacks	none
+counterattacks	user communication	none
+aggressive measures	shared networks	none
+services	risk	none
+counterattacks	users	none
+shared networks	user communication	none
 users	risk	none
-threats	Threat Extraction	none
-Threat Extraction	users	none
-threats	’ mailbox	none
-aspects	risk	none
-’ mailbox	email attachments	none
-threats	sender	none
-’ mailbox	email links	none
-SandBlast Network	email attachments	none
-text	aspects	none
-SandBlast Network	aspects	none
-aspects	email attachments	none
-
-incoming email	Threat Extraction	none
-
-incoming email	text	none
-text	sender	none
-SandBlast Network	sender	none
-Threat Extraction	risk	none
-sender	email attachments	none
-aspects	sender	none
-’ mailbox	sender	none
-threats	recipient details	none
-’ mailbox	recipient details	none
-threats	text	none
-threats	
-incoming email	none
-recipient details	risk	none
-email messages	sender	none
-threats	users	none
-text	recipient details	none
-SandBlast Network	’ mailbox	none
-email messages	SandBlast Network	none
-threats	aspects	none
-text	risk	none
-’ mailbox	Threat Extraction	none
-SandBlast Network	email links	none
-text	users	none
-users	aspects	none
-SandBlast Network	Threat Extraction	none
-recipient details	email attachments	none
-email links	recipient details	none
-threats	email attachments	none
-
-incoming email	aspects	none
-email messages	’ mailbox	none
-users	sender	none
-’ mailbox	aspects	none
-email links	risk	none
-text	Threat Extraction	none
-Threat Extraction	sender	none
-
-incoming email	email links	none
-text	email attachments	none
-email links	text	none
-sender	recipient details	none
-email messages	users	none
-threats	email links	none
-
-incoming email	’ mailbox	none
-Threat Extraction	aspects	none
-’ mailbox	text	none
-SandBlast Network	risk	none
-email messages	Threat Extraction	none
-
-incoming email	recipient details	none
-threats	risk	none
-threats	email messages	none
-risk	email attachments	none
-email links	Threat Extraction	none
-Threat Extraction	email attachments	none
-users	recipient details	none
-threats	SandBlast Network	none
-SandBlast Network	users	none
-’ mailbox	risk	none
-email messages	recipient details	none
-email messages	risk	none
-email links	sender	none
-URL reputation	malicious links	none
-Click-Time Protection	clicks	none
-over 300 parameters	AI-based
-phishing protection	none
-rules-based engines	links	none
-clicks	Threat Emulation	none
-over 300 parameters	AI-based fraud protection	none
-Threat Emulation	multiple innovative technologies	none
-over 300 parameters	email	none
-Click-Time Protection	AI-based
-phishing protection	none
-over 300 parameters	clicks	none
-Click-Time Protection	SandBlast Network	none
-clicks	malicious links	none
-email	Threat Emulation	none
-rules-based engines	NLP	none
-email	Natural Language Processing	none
-URL reputation	multiple innovative technologies	none
-email	AI-based fraud protection	none
-rules-based engines	Natural Language Processing	none
-links	Threat Emulation	none
-email	NLP	none
-rules-based engines	Threat Emulation	none
-Click-Time Protection	Threat Emulation	none
-real time	URL reputation	none
-real time	multiple innovative technologies	none
-NLP	links	none
-AI-based
-phishing protection	AI-based fraud protection	none
-NLP	Natural Language Processing	none
-over 300 parameters	Threat Emulation	none
-links	URL reputation	none
-links	multiple innovative technologies	none
-real time	Natural Language Processing	none
-AI-based
-phishing protection	URL reputation	none
-AI-based
-phishing protection	multiple innovative technologies	none
-real time	Threat Emulation	none
-over 300 parameters	real time	none
-Click-Time Protection	over 300 parameters	none
-
-end	AI-based
-phishing protection	none
-email	links	none
-over 300 parameters	rules-based engines	none
-over 300 parameters	NLP	none
-links	Natural Language Processing	none
-AI-based
-phishing protection	links	none
-SandBlast Network	links	none
-
-end	AI-based fraud protection	none
-
-end	email	none
-SandBlast Network	
-end	none
-AI-based fraud protection	NLP	none
-Click-Time Protection	rules-based engines	none
-URL reputation	Threat Emulation	none
-AI-based fraud protection	URL reputation	none
-AI-based fraud protection	multiple innovative technologies	none
-Natural Language Processing	multiple innovative technologies	none
-
-end	URL reputation	none
-real time	
-end	none
-
-end	multiple innovative technologies	none
-malicious links	multiple innovative technologies	none
-Click-Time Protection	links	none
-SandBlast Network	AI-based
-phishing protection	none
-AI-based
-phishing protection	malicious links	none
-SandBlast Network	AI-based fraud protection	none
-
-end	links	none
-SandBlast Network	clicks	none
-
-end	Natural Language Processing	none
-email	clicks	none
-over 300 parameters	malicious links	none
-malicious links	Threat Emulation	none
-real time	clicks	none
-real time	AI-based fraud protection	none
-AI-based fraud protection	malicious links	none
-real time	email	none
-AI-based
-phishing protection	Threat Emulation	none
-real time	malicious links	none
-AI-based
-phishing protection	clicks	none
-Click-Time Protection	
-end	none
-rules-based engines	URL reputation	none
-real time	links	none
-rules-based engines	multiple innovative technologies	none
-NLP	URL reputation	none
-NLP	multiple innovative technologies	none
-Natural Language Processing	malicious links	none
-AI-based fraud protection	clicks	none
-Click-Time Protection	AI-based fraud protection	none
-Click-Time Protection	NLP	none
-Click-Time Protection	email	none
-
-end	clicks	none
-rules-based engines	email	none
-Natural Language Processing	Threat Emulation	none
-Click-Time Protection	Natural Language Processing	none
-SandBlast Network	rules-based engines	none
-SandBlast Network	URL reputation	none
-SandBlast Network	multiple innovative technologies	none
-over 300 parameters	links	none
-clicks	URL reputation	none
-rules-based engines	malicious links	none
-clicks	multiple innovative technologies	none
-over 300 parameters	Natural Language Processing	none
-Click-Time Protection	URL reputation	none
-Click-Time Protection	multiple innovative technologies	none
-clicks	Natural Language Processing	none
-real time	rules-based engines	none
-real time	NLP	none
-clicks	links	none
-clicks	NLP	none
-email	malicious links	none
-SandBlast Network	malicious links	none
-rules-based engines	clicks	none
-SandBlast Network	email	none
-Click-Time Protection	real time	none
-AI-based fraud protection	links	none
-
-end	NLP	none
-rules-based engines	
-end	none
-email	URL reputation	none
-email	multiple innovative technologies	none
-over 300 parameters	SandBlast Network	none
-NLP	Threat Emulation	none
-
-end	malicious links	none
-AI-based
-phishing protection	email	none
-AI-based
-phishing protection	NLP	none
-Click-Time Protection	malicious links	none
-AI-based fraud protection	Natural Language Processing	none
-
-end	Threat Emulation	none
-real time	AI-based
-phishing protection	none
-over 300 parameters	URL reputation	none
-over 300 parameters	multiple innovative technologies	none
-SandBlast Network	Threat Emulation	none
-AI-based
-phishing protection	Natural Language Processing	none
-SandBlast Network	Natural Language Processing	none
-SandBlast Network	real time	none
-rules-based engines	AI-based fraud protection	none
-SandBlast Network	NLP	none
-links	malicious links	none
-rules-based engines	AI-based
-phishing protection	none
-over 300 parameters	
-end	none
-NLP	malicious links	none
-AI-based fraud protection	Threat Emulation	none
-Natural Language Processing	URL reputation	none
-largest repository	four billion security decisions	none
-four billion security decisions	real-time	none
-ThreatCloud – Dynamic Threat Intelligence Repository	four billion security decisions	none
-ThreatCloud – Dynamic Threat Intelligence Repository	largest repository	none
-ThreatCloud – Dynamic Threat Intelligence Repository	real-time	none
-ThreatCloud – Dynamic Threat Intelligence Repository	security	none
-security	real-time	none
-largest repository	real-time	none
-security	largest repository	none
-security	four billion security decisions	none
-determine	emails	none
-they	breakthrough AI engines	none
-determine	suspicious files	none
-Point ThreatCloud	emails	none
-they	emails	none
-determine	breakthrough AI engines	none
-suspicious files	they	none
-Point ThreatCloud	they	none
-determine	they	none
-suspicious files	breakthrough AI engines	none
-Point ThreatCloud	breakthrough AI engines	none
-Point ThreatCloud	determine	none
-Point ThreatCloud	suspicious files	none
-breakthrough AI engines	emails	none
-suspicious files	emails	none
-browsing	cyber attack data	none
-antiphishing	ThreatCloud	none
-browsing	antiphishing	none
-zero day protection	ThreatCloud	none
-browsing	ThreatCloud	none
-antiphishing	cyber attack data	none
-zero day protection	cyber attack data	none
-ThreatCloud	cyber attack data	none
-browsing	zero day protection	none
-antiphishing	zero day protection	none
-Hundreds of millions	endpoints	none
-protected assets	endpoints	none
-protected assets	Hundreds of millions	none
-cloud	Hundreds of millions	none
-cloud	networks	none
-protected assets	cloud	none
-cloud	endpoints	none
-Hundreds of millions	networks	none
-endpoints	networks	none
-protected assets	networks	none
-Check Point Research Labs	Top notch research	none
-AI-Generated Threat Emulation Verdicts	industry	none
-AI-Generated Threat Emulation Verdicts	best threat intelligence	none
-industry	best threat intelligence	none
-files	evasive attacks	none
-threat intelligence	files	none
-deep CPU-level emulation	files	none
-SandBlast Network	files	none
-threat intelligence	evasive attacks	none
-files	nation states	none
-threat intelligence	nation states	none
-evasive attacks	emails	none
-threat intelligence	emails	none
-SandBlast Network	threat intelligence	none
-deep CPU-level emulation	emails	none
-files	emails	none
-nation states	evasive attacks	none
-deep CPU-level emulation	evasive attacks	none
-SandBlast Network	emails	none
-SandBlast Network	nation states	none
-deep CPU-level emulation	threat intelligence	none
-deep CPU-level emulation	nation states	none
-nation states	emails	none
-SandBlast Network	deep CPU-level emulation	none
-SandBlast Network	evasive attacks	none
-OS-level inspection	documents	none
-documents	Mac devices	none
-
-broad range	PC	none
-enterprise users	PC	none
-Mac devices	file types	none
-documents	best zero-day protection	none
-It	file types	none
-OS-level inspection	PC	none
-threats	Mac devices	none
-Mac devices	It	none
-
-broad range	Mac devices	none
-Mac devices	enterprise users	none
-OS-level inspection	executables	none
-OS-level inspection	Mac devices	none
-PC	file types	none
-executables	best zero-day protection	none
-documents	file types	none
-It	best zero-day protection	none
-OS-level inspection	best zero-day protection	none
-
-broad range	executables	none
-enterprise users	executables	none
-PC	It	none
-documents	PC	none
-documents	It	none
-executables	PC	none
-executables	It	none
-documents	
-broad range	none
-documents	enterprise users	none
-documents	executables	none
-
-broad range	best zero-day protection	none
-enterprise users	best zero-day protection	none
-threats	executables	none
-PC	best zero-day protection	none
-executables	file types	none
-OS-level inspection	file types	none
-threats	enterprise users	none
-threats	
-broad range	none
-
-broad range	It	none
-enterprise users	It	none
-Mac devices	PC	none
-threats	file types	none
-OS-level inspection	It	none
-threats	OS-level inspection	none
-file types	best zero-day protection	none
-OS-level inspection	enterprise users	none
-OS-level inspection	
-broad range	none
-
-broad range	file types	none
-Mac devices	executables	none
-enterprise users	file types	none
-threats	It	none
-
-broad range	enterprise users	none
-Mac devices	best zero-day protection	none
-threats	PC	none
-threats	best zero-day protection	none
-threats	documents	none
-SandBlast Network	millions	none
-single conclusive
-AI-generated verdict	runtime behaviors	none
-SandBlast Network	power	none
-exhaustive AI engines	single conclusive
-AI-generated verdict	none
-single conclusive
-AI-generated verdict	power	none
-SandBlast Network	runtime behaviors	none
-parameters	rich
-rule-based engines	none
-millions	data science	none
-millions	newest threats	none
-power	data science	none
-power	newest threats	none
-runtime behaviors	parameters	none
-data science	rich
-rule-based engines	none
-SandBlast Network	exhaustive AI engines	none
-exhaustive AI engines	power	none
-rich
-rule-based engines	newest threats	none
-single conclusive
-AI-generated verdict	data science	none
-single conclusive
-AI-generated verdict	newest threats	none
-exhaustive AI engines	runtime behaviors	none
-exhaustive AI engines	rich
-rule-based engines	none
-power	parameters	none
-runtime behaviors	data science	none
-power	rich
-rule-based engines	none
-runtime behaviors	newest threats	none
-data science	newest threats	none
-exhaustive AI engines	millions	none
-SandBlast Network	parameters	none
-runtime behaviors	rich
-rule-based engines	none
-single conclusive
-AI-generated verdict	parameters	none
-exhaustive AI engines	newest threats	none
-exhaustive AI engines	data science	none
-millions	power	none
-single conclusive
-AI-generated verdict	rich
-rule-based engines	none
-power	runtime behaviors	none
-parameters	data science	none
-parameters	newest threats	none
-exhaustive AI engines	parameters	none
-SandBlast Network	data science	none
-SandBlast Network	single conclusive
-AI-generated verdict	none
-SandBlast Network	newest threats	none
-millions	runtime behaviors	none
-millions	rich
-rule-based engines	none
-millions	parameters	none
-SandBlast Network	rich
-rule-based engines	none
-millions	single conclusive
-AI-generated verdict	none
-wild	AI heuristics	none
-AI heuristics	latest threats	none
-wild	latest threats	none
-need	policies	none
-INTUITIVE MANAGEMENT
-SandBlast Network	policies	none
-network segment	security policies	none
-box	security policies	none
-e.g. data center	need	none
-box	single click setup4	none
-policies	security policies	none
-guest network	security policies	none
-perimeter, internal
-network etc	security policies	none
-perimeter, internal
-network etc	need	none
-single click setup4	security policies	none
-single click setup4	policies	none
-INTUITIVE MANAGEMENT
-SandBlast Network	single click setup4	none
-need	single click setup4	none
-e.g. data center	policies	none
-guest network	need	none
-INTUITIVE MANAGEMENT
-SandBlast Network	perimeter, internal
-network etc	none
-e.g. data center	perimeter, internal
-network etc	none
-e.g. data center	guest network	none
-INTUITIVE MANAGEMENT
-SandBlast Network	network segment	none
-e.g. data center	box	none
-INTUITIVE MANAGEMENT
-SandBlast Network	box	none
-e.g. data center	security policies	none
-INTUITIVE MANAGEMENT
-SandBlast Network	security policies	none
-guest network	box	none
-perimeter, internal
-network etc	box	none
-e.g. data center	network segment	none
-box	network segment	none
-need	security policies	none
-guest network	network segment	none
-INTUITIVE MANAGEMENT
-SandBlast Network	need	none
-guest network	policies	none
-perimeter, internal
-network etc	network segment	none
-perimeter, internal
-network etc	policies	none
-network segment	policies	none
-guest network	single click setup4	none
-perimeter, internal
-network etc	single click setup4	none
-network segment	single click setup4	none
-e.g. data center	single click setup4	none
-box	need	none
-guest network	INTUITIVE MANAGEMENT
-SandBlast Network	none
-box	policies	none
-guest network	perimeter, internal
-network etc	none
-e.g. data center	INTUITIVE MANAGEMENT
-SandBlast Network	none
-network segment	need	none
-optimal network performance	Network settings	none
-need	Network settings	none
-business	need	none
-optimal network performance	need	none
-need	effective security	none
-Network settings	effective security	none
-optimal network performance	effective security	none
-business	Network settings	none
-optimal network performance	business	none
-business	effective security	none
-power	cost-effective zero-day protection strategy	none
-organizations	processing	none
-specific network segment	processing	none
-bandwidth	policies	none
-power	processing	none
-power	organizations	none
-power	specific network segment	none
-policies	processing	none
-power	bandwidth	none
-power	policies	none
-cost-effective zero-day protection strategy	policies	none
-bandwidth	organizations	none
-bandwidth	specific network segment	none
-bandwidth	cost-effective zero-day protection strategy	none
-organizations	policies	none
-specific network segment	policies	none
-organizations	specific network segment	none
-cost-effective zero-day protection strategy	organizations	none
-bandwidth	processing	none
-cost-effective zero-day protection strategy	processing	none
-cost-effective zero-day protection strategy	specific network segment	none
-latest features	technology	none
-policy updates	need	none
-best practice policies	technology	none
-policy updates	auto-updated threat prevention engines	none
-background	technology	none
-policy updates	technology	none
-latest features	best practice policies	none
-auto-updated threat prevention engines	need	none
-latest features	background	none
-best practice policies	need	none
-latest features	organizations	none
-background	need	none
-auto-updated threat prevention engines	latest features	none
-organizations	technology	none
-policy updates	organizations	none
-auto-updated threat prevention engines	technology	none
-need	organizations	none
-policy updates	background	none
-policy updates	best practice policies	none
-policy updates	latest features	none
-auto-updated threat prevention engines	best practice policies	none
-best practice policies	organizations	none
-latest features	need	none
-best practice policies	background	none
-auto-updated threat prevention engines	background	none
-auto-updated threat prevention engines	organizations	none
-need	technology	none
-background	organizations	none
-Current SIEM	SOC Workflows	none
-forensic reports	SOC
-infrastructure	none
-actionable intelligence	advanced network forensics	none
-SIEM	forensic reports	none
-SIEM	SOC
-infrastructure	none
-logs	security teams	none
-SandBlast Network	actionable intelligence	none
-SandBlast Network	SandBlast Network SIEM platform	none
-SandBlast Network	security teams	none
-forensic reports	security teams	none
-SandBlast Network	advanced network forensics	none
-SIEM	security teams	none
-logs	SandBlast Network SIEM platform	none
-security teams	actionable intelligence	none
-SandBlast Network	SOC
-infrastructure	none
-SandBlast Network	forensic reports	none
-SandBlast Network SIEM platform	advanced network forensics	none
-SIEM	SandBlast Network SIEM platform	none
-SandBlast Network SIEM platform	actionable intelligence	none
-security teams	advanced network forensics	none
-SandBlast Network SIEM platform	security teams	none
-logs	actionable intelligence	none
-SandBlast Network	SIEM	none
-logs	advanced network forensics	none
-SandBlast Network	logs	none
-forensic reports	actionable intelligence	none
-security teams	SOC
-infrastructure	none
-SIEM	actionable intelligence	none
-forensic reports	advanced network forensics	none
-logs	forensic reports	none
-logs	SOC
-infrastructure	none
-logs	SIEM	none
-SIEM	advanced network forensics	none
-SandBlast Network SIEM platform	forensic reports	none
-SandBlast Network SIEM platform	SOC
-infrastructure	none
-actionable intelligence	SOC
-infrastructure	none
-SOC
-infrastructure	advanced network forensics	none
-SandBlast Network	private threat intelligence	none
-remediation	time	none
-investigation	advanced forensics	none
-advanced forensics	time	none
-investigation	remediation	none
-advanced forensics	remediation	none
-investigation	time	none
-malware	malware families	none
-malware families	MITRE	none
-malware	visibility	none
-visibility	network	none
-malware	network	none
-malware families	zero-day phishing	none
-visibility	MITRE	none
-malware families	network	none
-malware	MITRE	none
-malware families	visibility	none
-visibility	zero-day phishing	none
-network	MITRE	none
-network	zero-day phishing	none
-malware	zero-day phishing	none
-MITRE	zero-day phishing	none
-Point	Compliance	none
-gold standard	efficient security management	none
-Point	gold standard	none
-efficient security management	confidence	none
-Point	confidence	none
-first strategy	insights	none
-first strategy	Compliance	none
-efficient security management	insights	none
-confidence	prevention	none
-prevention	insights	none
-Point	transparency	none
-gold standard	prevention	none
-gold standard	first strategy	none
-first strategy	transparency	none
-Point	prevention	none
-confidence	first strategy	none
-gold standard	insights	none
-insights	transparency	none
-gold standard	Compliance	none
-efficient security management	first strategy	none
-Point	insights	none
-Compliance	transparency	none
-confidence	insights	none
-confidence	Compliance	none
-prevention	transparency	none
-first strategy	prevention	none
-Point	first strategy	none
-efficient security management	Compliance	none
-efficient security management	prevention	none
-gold standard	transparency	none
-gold standard	confidence	none
-insights	Compliance	none
-Point	efficient security management	none
-confidence	transparency	none
-prevention	Compliance	none
-efficient security management	transparency	none
-enterprise	reporting	none
-enterprise	government-grade compliance	none
-R80 console	reporting	none
-enterprise	R80 console	none
-reporting	Compliance	none
-government-grade compliance	reporting	none
-R80 console	Compliance	none
-enterprise	Compliance	none
-government-grade compliance	Compliance	none
-government-grade compliance	R80 console	none
-instant alerts	full visibility	none
-instant alerts	
-compliance stance	none
-real time	Logging	none
-Easy-to-use best practices	broad array	none
-policy changes	actionable configuration guidelines	none
-real time	broad array	none
-regulatory mandates	Easy-to-use best practices	none
-Logging	Reporting	none
-regulatory mandates	instant alerts	none
-actionable configuration guidelines	instant alerts	none
-Easy-to-use best practices	Reporting	none
-real time	full visibility	none
-broad array	instant alerts	none
-Logging	broad array	none
-real time	
-compliance stance	none
-policy changes	Reporting	none
-real time	Reporting	none
-actionable configuration guidelines	broad array	none
-Easy-to-use best practices	full visibility	none
-policy changes	broad array	none
-regulatory mandates	real time	none
-actionable configuration guidelines	Reporting	none
-Easy-to-use best practices	
-compliance stance	none
-Reporting	instant alerts	none
-Logging	
-compliance stance	none
-regulatory mandates	broad array	none
-policy changes	real time	none
-regulatory mandates	actionable configuration guidelines	none
-Logging	full visibility	none
-policy changes	Easy-to-use best practices	none
-policy changes	
-compliance stance	none
-actionable configuration guidelines	full visibility	none
-regulatory mandates	Logging	none
-policy changes	full visibility	none
-actionable configuration guidelines	
-compliance stance	none
-real time	Easy-to-use best practices	none
-broad array	
-compliance stance	none
-real time	instant alerts	none
-broad array	full visibility	none
-policy changes	Logging	none
-regulatory mandates	full visibility	none
-Reporting	full visibility	none
-actionable configuration guidelines	Easy-to-use best practices	none
-regulatory mandates	
-compliance stance	none
-Reporting	
-compliance stance	none
-
-compliance stance	full visibility	none
-regulatory mandates	Reporting	none
-Logging	actionable configuration guidelines	none
-Logging	Easy-to-use best practices	none
-Logging	instant alerts	none
-broad array	Reporting	none
-policy changes	instant alerts	none
-Easy-to-use best practices	instant alerts	none
-policy changes	regulatory mandates	none
-real time	actionable configuration guidelines	none
-SIEM	audit-ready reports	none
-SMOOTH BUSINESS PRODUCTIVITY	audit-ready reports	none
-broad integration ecosystem	SMOOTH BUSINESS PRODUCTIVITY	none
-view	log server	none
-broad integration ecosystem	view	none
-SIEM	broad integration ecosystem	none
-SIEM	SMOOTH BUSINESS PRODUCTIVITY	none
-SIEM	view	none
-SMOOTH BUSINESS PRODUCTIVITY	view	none
-audit-ready reports	log server	none
-SIEM	log server	none
-SMOOTH BUSINESS PRODUCTIVITY	log server	none
-broad integration ecosystem	log server	none
-broad integration ecosystem	audit-ready reports	none
-audit-ready reports	view	none
-SandBlast Network	
-true prevention-first strategy	none
-business productivity	
-true prevention-first strategy	none
-only zero-day protection solution	business productivity	none
-only zero-day protection solution	
-true prevention-first strategy	none
-only zero-day protection solution	SandBlast Network	none
-SandBlast Network	business productivity	none
-1.5 seconds	email attachments	none
-SandBlast Threat	browsing workflows	none
-web downloads	browsing workflows	none
-web downloads	users	none
-SandBlast Threat	users	none
-Extraction	email attachments	none
-1.5 seconds	administration	none
-current email	browsing workflows	none
-Extraction	users	none
-current email	email attachments	none
-Extraction	1.5 seconds	none
-SandBlast Threat	administration	none
-web downloads	administration	none
-users	administration	none
-SandBlast Threat	web downloads	none
-Extraction	administration	none
-web downloads	1.5 seconds	none
-SandBlast Threat	1.5 seconds	none
-administration	browsing workflows	none
-current email	administration	none
-SandBlast Threat	email attachments	none
-web downloads	email attachments	none
-users	email attachments	none
-users	browsing workflows	none
-1.5 seconds	current email	none
-Extraction	browsing workflows	none
-1.5 seconds	users	none
-browsing workflows	email attachments	none
-SandBlast Threat	current email	none
-web downloads	current email	none
-users	current email	none
-Extraction	current email	none
-SandBlast Threat	Extraction	none
-1.5 seconds	browsing workflows	none
-web downloads	Extraction	none
-administration	email attachments	none
-web	networks	none
-blazing-speed, AI-generated Threat Emulation verdicts	multiple attack vectors	none
-Sandblast Network	multiple attack vectors	none
-blazing-speed, AI-generated Threat Emulation verdicts	email	none
-web	multiple attack vectors	none
-powerful zero-day protection	web	none
-blazing-speed, AI-generated Threat Emulation verdicts	powerful zero-day protection	none
-Sandblast Network	email	none
-blazing-speed, AI-generated Threat Emulation verdicts	user activity	none
-Sandblast Network	web	none
-multiple attack vectors	networks	none
-blazing-speed, AI-generated Threat Emulation verdicts	networks	none
-user activity	networks	none
-powerful zero-day protection	email	none
-powerful zero-day protection	multiple attack vectors	none
-email	web	none
-email	multiple attack vectors	none
-blazing-speed, AI-generated Threat Emulation verdicts	Sandblast Network	none
-blazing-speed, AI-generated Threat Emulation verdicts	web	none
-email	networks	none
-powerful zero-day protection	networks	none
-user activity	web	none
-Sandblast Network	user activity	none
-user activity	multiple attack vectors	none
-Sandblast Network	networks	none
-powerful zero-day protection	user activity	none
-email	user activity	none
-powerful zero-day protection	Sandblast Network	none
+services	private enterprises	none
+users	networks	none
+users	user communication	none
+private enterprises	risk	none
+private enterprises	networks	none
+counterattacks	shared networks	none
+Engineering department	who	none
+who	manual countermeasures	none
+Mr. Naoya Matsuura	network and security operations	none
+network and security operations	manual countermeasures	none
+Mr. Naoya Matsuura	Hyper Box	none
+Mr. Naoya Matsuura	result	none
+massive attack traffic	who	none
+result	Engineering department	none
+result	Hyper Box	none
+massive attack traffic	Hyper Box	none
+massive attack traffic	Engineering department	none
+who	Hyper Box	none
+massive attack traffic	manual countermeasures	none
+massive attack traffic	Mr. Naoya Matsuura	none
+network and security operations	Engineering department	none
+Mr. Naoya Matsuura	Engineering department	none
+result	who	none
+Mr. Naoya Matsuura	manual countermeasures	none
+Engineering department	manual countermeasures	none
+Hyper Box	manual countermeasures	none
+network and security operations	who	none
+massive attack traffic	result	none
+Mr. Naoya Matsuura	who	none
+Engineering department	Hyper Box	none
+result	manual countermeasures	none
+massive attack traffic	network and security operations	none
+result	network and security operations	none
+network and security operations	Hyper Box	none
+ThreatARMOR	countermeasures	none
+article	countermeasures	none
+countermeasures	Hyper Box	none
+article	Hyper Box	none
+ThreatARMOR	article	none
+ThreatARMOR	Hyper Box	none
+Mr. Matsuura	same idea	none
+Mr. Matsuura	unnecessary traffic	none
+Mr. Matsuura	manual countermeasures	none
+unnecessary traffic	manual countermeasures	none
+known threats	manual countermeasures	none
+unnecessary traffic	same idea	none
+manual countermeasures	same idea	none
+concept	unnecessary traffic	none
+known threats	unnecessary traffic	none
+Mr. Matsuura	known threats	none
+concept	known threats	none
+known threats	same idea	none
+concept	same idea	none
+concept	Mr. Matsuura	none
+concept	manual countermeasures	none
+ThreatARMOR	time	none
+new product	time	none
+ThreatARMOR	new product	none
+Ixia	actual user machines	none
+Mr. Matsuura	actual user machines	none
+Ixia	Mr. Matsuura	none
+Mr. Matsuura	new product	none
+new product	demonstration	none
+ThreatARMOR	proof	none
+concept	new product	none
+concept	Mr. Matsuura	none
+new product	proof	none
+PoC tests	new product	none
+concept	network	none
+demonstration	proof	none
+new product	ThreatARMOR	none
+concept	ThreatARMOR	none
+new product	network	none
+concept	proof	none
+Mr. Matsuura	demonstration	none
+Mr. Matsuura	ThreatARMOR	none
+demonstration	ThreatARMOR	none
+PoC tests	proof	none
+concept	demonstration	none
+PoC tests	ThreatARMOR	none
+PoC tests	network	none
+network	ThreatARMOR	none
+Mr. Matsuura	network	none
+concept	PoC tests	none
+Mr. Matsuura	proof	none
+network	demonstration	none
+PoC tests	demonstration	none
+Mr. Matsuura	PoC tests	none
+network	proof	none
+blocked traffic	ThreatARMOR	none
+main one proprietary “ATI Rap Sheet	blocked traffic	none
+many reasons	blocked traffic	none
+blocked traffic	main one	none
+many reasons	main one	none
+Mr. Matsuura	blocked traffic	none
+Mr. Matsuura	ThreatARMOR	none
+Mr. Matsuura	instance	none
+main one proprietary “ATI Rap Sheet	main one	none
+many reasons	ThreatARMOR	none
+Mr. Matsuura	many reasons	none
+main one	instance	none
+many reasons	instance	none
+main one proprietary “ATI Rap Sheet	Mr. Matsuura	none
+main one proprietary “ATI Rap Sheet	instance	none
+ThreatARMOR	main one	none
+Mr. Matsuura	main one	none
+main one proprietary “ATI Rap Sheet	many reasons	none
+main one proprietary “ATI Rap Sheet	ThreatARMOR	none
+ThreatARMOR	instance	none
+blocked traffic	instance	none
+ThreatARMOR	simple black box	none
+kind	information	none
+ThreatARMOR	information	none
+kind	simple black box	none
+kind	ThreatARMOR	none
+information	simple black box	none
+I	level	none
+I	sensitivity	none
+sensitivity	level	none
+I	network operation	none
+network operation	level	none
+sensitivity	network operation	none
+trouble	Mr. Matsuura	none
+Mr. Matsuura	communication	none
+Mr. Matsuura	fail-open system	none
+Mr. Matsuura	One reason	none
+communication	fail-open system	none
+trouble	ThreatARMOR	none
+ThreatARMOR	One reason	none
+communication	One reason	none
+ThreatARMOR	fail-open system	none
+trouble	communication	none
+One reason	fail-open system	none
+communication	ThreatARMOR	none
+trouble	One reason	none
+Mr. Matsuura	ThreatARMOR	none
+trouble	fail-open system	none
+use	contrast	none
+he	fail-close system	none
+use	shared network	none
+most security devices	shared network	none
+he	use	none
+most security devices	contrast	none
+most security devices	he	none
+fail-close system	shared network	none
+fail-close system	contrast	none
+most security devices	use	none
+he	shared network	none
+use	fail-close system	none
+he	contrast	none
+contrast	shared network	none
+most security devices	fail-close system	none
+security	opinion	none
+opinion	networks	none
+service providers	networks	none
+security	networks	none
+ThreatARMOR	networks	none
+service providers	opinion	none
+ThreatARMOR	opinion	none
+service providers	security	none
+service providers	ThreatARMOR	none
+security	ThreatARMOR	none
+ThreatARMOR	IDS	none
+INTRUSIONS	IDS	none
+March	operation	none
+INTRUSIONS	demo	none
+IDS	end	none
+FURTHER REDUCTIONS	NUMBER	none
+IDS	Hyper Box	none
+March	IDS	none
+INTRUSIONS	NUMBER	none
+operation	ThreatARMOR	none
+March	demo	none
+INTRUSIONS	operation	none
+March	ThreatARMOR	none
+March	REDUCED	none
+FURTHER REDUCTIONS	operation	none
+demo	operation	none
+demo	REDUCED	none
+IDS	REDUCED	none
+FURTHER REDUCTIONS	IDS	none
+end	REDUCED	none
+NUMBER	REDUCED	none
+ThreatARMOR	REDUCED	none
+March	Hyper Box	none
+operation	NUMBER	none
+March	end	none
+FURTHER REDUCTIONS	end	none
+operation	REDUCED	none
+Hyper Box	REDUCED	none
+demo	Hyper Box	none
+FURTHER REDUCTIONS	Hyper Box	none
+demo	end	none
+operation	IDS	none
+INTRUSIONS	end	none
+end	Hyper Box	none
+FURTHER REDUCTIONS	INTRUSIONS	none
+ThreatARMOR	end	none
+March	INTRUSIONS	none
+FURTHER REDUCTIONS	demo	none
+INTRUSIONS	Hyper Box	none
+ThreatARMOR	NUMBER	none
+NUMBER	Hyper Box	none
+ThreatARMOR	Hyper Box	none
+demo	NUMBER	none
+NUMBER	end	none
+IDS	NUMBER	none
+FURTHER REDUCTIONS	March	none
+operation	Hyper Box	none
+March	NUMBER	none
+FURTHER REDUCTIONS	REDUCED	none
+operation	end	none
+FURTHER REDUCTIONS	ThreatARMOR	none
+demo	IDS	none
+demo	ThreatARMOR	none
+INTRUSIONS	REDUCED	none
+INTRUSIONS	ThreatARMOR	none
+functions	 early stages	none
+TAP/remote mode	 early stages	none
+performance	TAP/remote mode	none
+TAP/remote mode	functions	none
+performance	functions	none
+performance	 early stages	none
+system	month	none
+system	inline/block mode	none
+inline/block mode	month	none
+Hyper Box’s traffic	ThreatARMOR	none
+Hyper Box’s traffic	4%	none
+ThreatARMOR	4%	none
+attacks	traffic	none
+enormous amount	traffic	none
+percentage	attacks	none
+considerable number	traffic	none
+considerable number	shared networks	none
+percentage	traffic	none
+enormous amount	shared networks	none
+enormous amount	percentage	none
+shared networks	attacks	none
+enormous amount	considerable number	none
+considerable number	percentage	none
+enormous amount	attacks	none
+percentage	shared networks	none
+considerable number	attacks	none
+shared networks	traffic	none
+200k cases	intrusions	none
+200k cases	1 million cases	none
+200k cases	number	none
+intrusions	IDSs	none
+intrusions	number	none
+intrusions	1 million cases	none
+200k cases	IDSs	none
+IDSs	number	none
+IDSs	1 million cases	none
+number	1 million cases	none
+decrease	amount	none
+decrease	addition	none
+Mr. Matsuura	decrease	none
+spam e-mails	amount	none
+Mr. Matsuura	spam e-mails	none
+amount	addition	none
+spam e-mails	decrease	none
+Mr. Matsuura	amount	none
+spam e-mails	addition	none
+Mr. Matsuura	addition	none
+sophisticated management interface	ThreatARMOR	none
+ThreatARMOR	Mr. Matsuura	none
+Mr. Matsuura	it	none
+sophisticated management interface	Mr. Matsuura	none
+sophisticated management interface	it	none
+ThreatARMOR	it	none
+He	dashboard	none
+He	system status	none
+dashboard	system status	none
+IDSs	firewalls	none
+He	firewalls	none
+He	IDSs	none
+logs	firewalls	none
+logs	IDSs	none
+He	logs	none
+peace	mind	none
+peace	blocked attacks	none
+glance	mind	none
+glance	blocked attacks	none
+blocked attacks	mind	none
+glance	peace	none
+Mr. Matsuura	order	none
+Mr. Matsuura	better services	none
+order	we	none
+better services	we time	none
+better services	order	none
+ThreatARMOR	we	none
+order	research	none
+better services	ThreatARMOR	none
+we time	we	none
+planning	research	none
+better services	we	none
+Mr. Matsuura	ThreatARMOR	none
+research	we	none
+ThreatARMOR	order	none
+we time	ThreatARMOR	none
+planning	better services	none
+we time	order	none
+Mr. Matsuura	planning	none
+ThreatARMOR	research	none
+planning	we time	none
+we time	research	none
+planning	order	none
+Mr. Matsuura	we	none
+planning	ThreatARMOR	none
+Mr. Matsuura	research	none
+better services	research	none
+planning	we	none
+Mr. Matsuura	we time	none
+range	ThreatARMOR	none
+ThreatARMOR	he	none
+range	addition	none
+Ixia	future	none
+future	addition	none
+Ixia	addition	none
+range	he	none
+applications	range	none
+future	he	none
+applications	he	none
+Ixia	he	none
+future	applications	none
+Ixia	range	none
+applications	addition	none
+applications	ThreatARMOR	none
+future	ThreatARMOR	none
+future	range	none
+Ixia	applications	none
+Ixia	ThreatARMOR	none
+addition	he	none
+ThreatARMOR	addition	none
