@@ -1,2719 +1,744 @@
-same call	stream	none
-PCS	Wikipedia	none
-ZDI researchers	small module	none
-attackers	rendering	none
-such	valuable	none
-ICC	images	none
-mapping	ICC	none
-dictionaries	list	none
-Code coverage information	couple	none
-bound read	write	none
-ways	harness	none
-fact	third-party software	none
-hopes	new vulnerability	none
-basic features	fuzzing	none
-color profiles—not	code execution	none
-hope	multiple bugs	none
-hopes	security fixes	none
-CMConvIndexToNameProfile	size	none
-allocBuffer	size	none
-functions	none	none
-color profiles	ICC specification	none
-list	OpenColorProfile	none
-corpus	OS	none
-number	device coordinates	none
-byte	code	none
-content	unconstrained size	none
-color transformations	color profile APIs	none
-understanding	fuzzing	none
-CMM—the ICM—can	third-party CMMs such	none
-16-core machine	feedback	none
-rendering	vulnerability	none
-CMM—the ICM—can	such	none
-size	byte	none
-2017-2018	recent vulnerabilities	none
-verification	bound read	none
-approach	MSDN	none
-byte	complete content	none
-vulnerabilities	Image parsing	none
-ConvertIndexToColorName	CMGetNamedProfileInfoProfile	none
-same call	byte	none
-file format	color profiles	none
-APIs	OpenColorProfile	none
-good corpus	different types	none
-attackers	fuzzing	none
-offset	code	none
-color space	set	none
-color input	Wikipedia	none
-approach	open source Color Management	none
-Windows	ICC color profiles	none
-operations	ICC	none
-certain degree	new vulnerability	none
-etc	additional code paths	none
-transformations	color input	none
-CIELAB	Wikipedia	none
-Simply	first set	none
-present	size	none
-external researchers	security fixes	none
-harness	fuzzing	none
-same code	Windows	none
-complete content	stream	none
-OS	information disclosure	none
-fuzzing	code coverage information	none
-write	tag/element	none
-image format	multi-part blog series	none
-WCS	onwards	none
-color space	transformations	none
-fuzzer	MSCMS.dll	none
-CMM—the ICM—can	Adobe ’	none
-Windows	open source Color Management	none
-understanding	pages	none
-basic features	accessible attack surface	none
-review	fuzzing	none
-ICM32.dll	such instances	none
-valuable	vulnerability	none
-Simply	code coverage information	none
-supported Windows APIs	OpenColorProfile	none
-same call	bound read	none
-vulnerability	multi-part blog series	none
-bound read/write	minimum length check	none
-dictionaries	math	none
-Windows ’ CMM	third-party	none
-file	buffer pointer	none
-multiple rounds	recent vulnerabilities	none
-vulnerabilities	accessible attack surface	none
-tables	series	none
-same code	hope	none
-Windows OS ’ built-in image parsers	basic features	none
-attackers	vulnerability	none
-more-than-adequate description	standards	none
-previous vulnerability	CMGetPartialProfileElement function	none
-Windows	end	none
-security fixes	multiple bugs	none
-list	Windows	none
-International Color Consortium	parameters	none
-color space	color input	none
-bound read	offset	none
-harness	corpuses	none
-part	images	none
-basic features	multi-part blog series	none
-accessible	instances	none
-Reading	specifications	none
-ICM32	security fixes	none
-write	values	none
-Reading	pages	none
-list	Windows DLLs	none
-Little CMS	EXEs	none
-ICM APIs	open source Color Management	none
-ICM32.dll	such	none
-valuable	information disclosure	none
-ICM32	hopes	none
-CIEXYZ	* b *	none
-functions	instances	none
-uninitialized memory	multiple vulnerabilities	none
-approach	list	none
-such	color profile APIs	none
-bound read	tag/element	none
-CIEXYZ	parameters	none
-2017-2018	security fixes	none
-function	pattern	none
-corpus	different color profiles	none
-attempts	unique tag names	none
-none	APIs	none
-vulnerability class	harness	none
-other	allocBuffer	none
-Color Management Module	such	none
-buffer pointer	‘	none
-color space	standards	none
-external researchers	multiple bugs	none
-corpus	file formats	none
-dictionary	list	none
-size	vulnerability	none
-DLL	CMM—the ICM—can	none
-buffer	buffer size	none
-part	code execution	none
-loading	Microsoft ’	none
-ICM	XML file format	none
-* b *	interpolation	none
-relative silence	security fixes	none
-blog post	XML	none
-buffer	code	none
-good corpus	color profiles	none
-operations	APIs	none
-International Color Consortium	Wikipedia	none
-Windows	EXEs	none
-small module	certain degree	none
-Color Management Module	Microsoft	none
-corpus	color profiles	none
-CIEXYZ	device source	none
-output device	color space	none
-harness	accessible attack surface	none
-color space	data	none
-many image files	stand-alone files	none
-color space	International Color Consortium	none
-generic entry point	OpenColorProfile	none
-ICM32	such	none
-transformations	series	none
-images	something	none
-generic entry point	Adobe ’	none
-ZDI researchers	multiple bugs	none
-International Color Consortium	* b *	none
-such	OpenColorProfile	none
-disassembly	Windows	none
-system32 directory	Adobe ’	none
-Reading	understanding	none
-Project Zero	multiple bugs	none
-loading	generic entry point	none
-hope	color profiles	none
-ZDI researchers	hopes	none
-DLL	OpenColorProfile	none
-corpus	basic features	none
-attackers	valuable	none
-WCS	XML	none
-internet	color profile	none
-Crashes	fuzzer	none
-API sequence	operations	none
-old module	new vulnerability	none
-ConvertIndexToColorName	CMConvertColorNameToIndex	none
-Windows	Image Parsing	none
-multiple rounds	2017-2018	none
-CMGetPartialProfileElement function	sort	none
-byte	‘	none
-blog post	binary files	none
-review	security fixes	none
-onwards	certain degree	none
-profile connection space	CIELAB	none
-list	values	none
-Furthermore	pages	none
-‘	size	none
-open source Color Management	ways	none
-buffer	device coordinates	none
-third-party	fuzzing	none
-Little CMS	ICC	none
-specifications	etc	none
-number	buffer pointer	none
-buffer size	code	none
-content	present	none
-stand-alone files	images	none
-color management	interpolation	none
-more-than-adequate description	tables	none
-requirement	standards	none
-system32 directory	Microsoft	none
-series	images	none
-CIEXYZ	Wikipedia	none
-Windows OS ’ built-in image parsers	multi-part blog series	none
-”	requirement	none
-transformations	ICC	none
-”	International Color Consortium	none
-CMConvNameToIndexProfile	functions	none
-color management	set	none
-interpolation	series	none
-external researchers	review	none
-recent vulnerabilities	fuzzing	none
-parameters	interpolation	none
-tables	Wikipedia	none
-decades	2017-2018	none
-sure	different color profiles	none
-previous vulnerability	present	none
-operations	small set	none
-relative silence	Project Zero	none
-API sequence	Little CMS	none
-content	sort	none
-Color Management Module	supported Windows APIs	none
-recent vulnerabilities	internal product security teams	none
-sure read/write	code	none
-version	Windows Color System	none
-verification	values	none
-function	integer	none
-allocation	size	none
-APIs	MSCMS.dll	none
-read	allocBuffer	none
-Furthermore	different types	none
-Reading	color profiles	none
-LCMS	values	none
-bound read	element ‘ ncl2 ’	none
-Profiles	CIELAB	none
-series	information disclosure	none
-target color space	CIELAB	none
-relative silence	review	none
-multiple rounds	ZDI researchers	none
-relative silence	certain degree	none
-‘	stream	none
-multiple rounds	new vulnerability	none
-color	Wikipedia	none
-major overhaul	onwards	none
-OS	images	none
-Stay	talked	none
-vulnerability class	multiple vulnerabilities	none
-color profiles	color profile APIs	none
-output device	particular device	none
-other	‘	none
-same code	external researchers	none
-OS	modern operating system	none
-information	pages	none
-International Color Consortium	series	none
-ICM32	review	none
-Mappings	CIELAB	none
-output device	color input	none
-ICC color profiles	Profiles	none
-image format	feature	none
-* b *	tables	none
-present	CMGetPartialProfileElement function	none
-Project Zero	certain degree	none
-harness	code execution	none
-Furthermore	information	none
-Color Management Module	list	none
-corpus	corpuses	none
-vulnerability	fuzzing	none
-L	transformations	none
-error	code	none
-vulnerabilities	part	none
-such	modern operating system	none
-fuzzing	multiple bugs	none
-era	Windows ’ CMM	none
-fact	APIs	none
-color management	target color space	none
-ICC	ICC color profile	none
-color	more-than-adequate description	none
-internet	Sites	none
-feedback	corpuses	none
-ZDI researchers	Project Zero	none
-Image parsing	modern operating system	none
-such	ICC	none
-corpus	talked	none
-pattern	integer	none
-harness	information disclosure	none
-element ‘ ncl2 ’	stream	none
-write	vulnerability	none
-element ‘ ncl2 ’	tag/element	none
-standards	particular device	none
-ICM32.dll	third-party CMMs such	none
-such	rendering	none
-system32 directory	MSCMS.dll	none
-third-party	small module	none
-* b *	CIELAB	none
-ICC color profile	binary file	none
-buffer size	element ‘ ncl2 ’	none
-such	internal product security teams	none
-Windows	fuzzing	none
-attackers	multi-part blog series	none
-2017-2018	hopes	none
-small module	old module	none
-CIEXYZ	Mappings	none
-tables	standards	none
-multiple rounds	same code	none
-MSCMS functions	CMGetNamedProfileInfoProfile	none
-such	file formats	none
-functionality	EXEs	none
-fuzzer	unique tag names	none
-”	device source	none
-”	color space	none
-number	byte	none
-same code	third-party	none
-attackers	images	none
-”	Wikipedia	none
-ICM32	internal product security teams	none
-color input	series	none
-programming/tools	images	none
-part	accessible attack surface	none
-file	sure read/write	none
-color profiles—not	vulnerability	none
-ICM APIs	Windows	none
-output device	set	none
-internal product security teams	onwards	none
-list	color profile APIs	none
-L	tables	none
-external researchers	small module	none
-Windows	multiple bugs	none
-disassembly	functionality	none
-hope	certain degree	none
-harness	multi-part blog series	none
-mapping	requirement	none
-corpus	multiple vulnerabilities	none
-code execution	multi-part blog series	none
-ICM APIs	such	none
-many image files	color profile	none
-error	sure read/write	none
-color profiles	EXEs	none
-ICM32	third-party	none
-operations	color transformations	none
-color	color space	none
-error	same call	none
-dictionaries	fuzzer	none
-write	device coordinates	none
-size	code	none
-MSDN	ICC	none
-attackers	image format	none
-”	mapping	none
-blog post	WCS	none
-ICC	ICC profile	none
-such	vulnerabilities	none
-sure	corpuses	none
-CMConvIndexToNameProfile	minimum length check	none
-feedback	couple	none
-ICM32	Windows ’ CMM	none
-MSDN	color profile APIs	none
-color input	tables	none
-vulnerabilities	valuable	none
-color transformations	small set	none
-multiple rounds	onwards	none
-version	XML	none
-approach	ICM APIs	none
-functions	size	none
-list	specifications	none
-complete content	sure read/write	none
-Windows OS ’ built-in image parsers	valuable	none
-ICC color profiles	International Color Consortium	none
-open source	fuzzer	none
-number	write	none
-corpus	code execution	none
-corpus	Image parsing	none
-Windows	recent vulnerabilities	none
-decades	new vulnerability	none
-valuable	series	none
-ConvertIndexToColorName	MSCMS functions	none
-functionality	Windows DLLs	none
-WCS	WCS color profiles	none
-era	recent vulnerabilities	none
-hope	functionality	none
-ICM32.dll	sort	none
-functions	Windows binaries	none
-operations	Windows DLLs	none
-multiple rounds	hopes	none
-PCS	requirement	none
-ICM APIs	LCMS	none
-review	Project Zero	none
-profile connection space	particular device	none
-different types	color transformation	none
-PCS	parameters	none
-OS	series	none
-number	count	none
-such	third-party	none
-Simply	specification	none
-Reading	good corpus	none
-harness	16-core machine	none
-byte	buffer pointer	none
-functions	MSCMS functions	none
-Windows	2017-2018	none
-PCS	ICC	none
-color management	device source	none
-Windows	Windows binaries	none
-code execution	images	none
-Little CMS	hope	none
-system32 directory	third-party CMMs such	none
-LCMS	additional code paths	none
-hope	disassembly	none
-same code	hopes	none
-color input	Mappings	none
-device source	ICC	none
-basic features	part	none
-Windows OS ’ built-in image parsers	corpus	none
-era	hope	none
-easy	math	none
-multiple rounds	hope	none
-functions	’ elements	none
-Simply	corpuses	none
-number	vulnerability	none
-ICC color profiles	tables	none
-ICC color profiles	PCS	none
-Windows	Color Profiles	none
-operations	open source Color Management	none
-CIEXYZ	data	none
-color profiles	ICC	none
-ICM APIs	ways	none
-output device	target color space	none
-Mappings	interpolation	none
-tables	particular device	none
-small module	fuzzing	none
-Part	Color Profiles	none
-relative silence	hopes	none
-API sequence	small set	none
-series	something	none
-version	Image Color Management	none
-valuable	multi-part blog series	none
-MSCMS functions	instances	none
-offsets	read	none
-corpus	valuable	none
-* b *	standards	none
-PCS	* b *	none
-profile connection space	color management	none
-ZDI researchers	external researchers	none
-old module	multiple bugs	none
-harness	fuzzer	none
-verification	stream	none
-harness	something	none
-Microsoft ’	CMM	none
-valuable	images	none
-API sequence	EXEs	none
-straight	Microsoft	none
-fix	bug	none
-sure	fuzzing	none
-PCS	tables	none
-blog series	vulnerability class	none
-ICM32.dll	pattern	none
-math	information	none
-part	vulnerability	none
-error	vulnerability	none
-MSCMS.dll	CMM	none
-CMConvIndexToNameProfile	read	none
-ICM32.dll	first set	none
-requirement	ICC	none
-such	recent vulnerabilities	none
-XML file format	Windows	none
-ICM	Windows	none
-external researchers	certain degree	none
-hope	open source Color Management	none
-complete content	‘	none
-error	stream	none
-”	more-than-adequate description	none
-understanding	good corpus	none
-OS	multi-part blog series	none
-basic features	series	none
-target color space	Profiles	none
-pages	ICC specification	none
-profile connection space	output device	none
-review	internal product security teams	none
-complete content	offset	none
-list	CMM	none
-Little CMS	harness	none
-part	something	none
-count	stream	none
-specification	code coverage information	none
-Windows OS ’ built-in image parsers	image format	none
-ZDI researchers	security fixes	none
-operations	end	none
-Windows	color profile APIs	none
-size	buffer	none
-device source	Wikipedia	none
-decades	same code	none
-Microsoft	such	none
-fuzzing	color profiles	none
-dictionaries	attempts	none
-Windows Color System	Windows Vista onwards	none
-Windows	certain degree	none
-Windows ’ CMM	Windows	none
-same call	tag/element	none
-target color space	ICC	none
-multiple rounds	such	none
-L	Profiles	none
-Color Management Module	MSCMS.dll	none
-external researchers	internal product security teams	none
-CMConvIndexToNameProfile	bug	none
-internet	images	none
-system32 directory	such	none
-element ‘ ncl2 ’	offset	none
-code execution	information disclosure	none
-color transformations	end	none
-offset	sort	none
-CMConvIndexToNameProfile	’ elements	none
-vulnerabilities	something	none
-same code	old module	none
-output device	interpolation	none
-output device	L	none
-specification	sample	none
-dictionaries	file format internals	none
-allocation	CMGetPartialProfileElement function	none
-small set	Windows DLLs	none
-Windows Color System	ICC color profiles	none
-dictionaries	LCMS	none
-WCS color profiles	Image Color Management	none
-bound read/write	’ elements	none
-fuzzing	internal product security teams	none
-multiple bugs	new vulnerability	none
-external researchers	fuzzing	none
-external researchers	new vulnerability	none
-loading	Color Management Module	none
-OS	fuzzing	none
-understanding	math	none
-error	write	none
-more-than-adequate description	data	none
-good corpus	color transformation	none
-size	minimum length check	none
-verification	device coordinates	none
-blog post	Image Color Management	none
-profile connection space	transformations	none
-more-than-adequate description	device source	none
-same code	security fixes	none
-Windows Color System	onwards	none
-same code	recent vulnerabilities	none
-output device	* b *	none
-Mappings	series	none
-* b *	Profiles	none
-Windows OS ’ built-in image parsers	vulnerabilities	none
-such instances	integer	none
-specifications	file format	none
-standards	data	none
-”	L	none
-unconstrained size	such instances	none
-color space	color management	none
-verification	buffer	none
-same call	buffer	none
-complete content	vulnerability	none
-harness	talked	none
-complete content	buffer size	none
-color	device source	none
-color input	particular device	none
-‘	bug	none
-ICM32	fuzzing	none
-API sequence	list	none
+Color Profiles	modern operating system	none
+Color Profiles	OS	none
 OS	basic features	none
-color transformations	LCMS	none
-blog post	onwards	none
-decades	review	none
-present	pattern	none
-functions	Windows	none
-color space	Profiles	none
-color	CIELAB	none
-system32 directory	supported Windows APIs	none
-Windows OS ’ built-in image parsers	Image parsing	none
-other	offsets	none
-ICC color profiles	WCS color profiles	none
-such	attackers	none
-requirement	color input	none
-DLL	system32 directory	none
-blog post	WCS color profiles	none
-CIEXYZ	output device	none
-file	device coordinates	none
-operations	ways	none
-list	small set	none
-functions	Microsoft	none
-specifications	values	none
-open source	etc	none
-ICM32	onwards	none
-bound read/write	‘	none
-LCMS	unique tag names	none
-multiple rounds	internal product security teams	none
-harness	LCMS	none
-ICM	WCS	none
-L	ICC profile	none
-ICC color profiles	L	none
-multiple rounds	Windows	none
-end	harness	none
-ICC color profiles	Mappings	none
-review	recent vulnerabilities	none
-ICM32.dll	Microsoft ’	none
-operations	color profile APIs	none
-function	size	none
-review	onwards	none
-size	write	none
-buffer	element ‘ ncl2 ’	none
-error	bound read	none
-verification	byte	none
-recent vulnerabilities	old module	none
-same code	Windows ’ CMM	none
-‘	sure read/write	none
-transformations	interpolation	none
-color profiles	pages	none
-Code coverage information	16-core machine	none
-such	MSDN	none
-count	buffer size	none
-color transformations	functionality	none
-previous vulnerability	offset	none
-GetNamedProfileInfo	instances	none
-Furthermore	file format internals	none
-fuzzing	certain degree	none
-harness	feedback	none
-series	multi-part blog series	none
-ICC	EXEs	none
-count	sure read/write	none
-rendering	Image parsing	none
-values	buffer size	none
-rendering	fuzzing	none
-vulnerabilities	vulnerability	none
-Windows	WCS	none
-unconstrained size	size	none
-Windows Color System	WCS color profiles	none
-era	new vulnerability	none
-ICM32	recent vulnerabilities	none
-bound read	sure read/write	none
-third-party	Project Zero	none
-major overhaul	Windows Vista onwards	none
-fuzzing	new vulnerability	none
-recent vulnerabilities	Project Zero	none
-parameters	series	none
-list	etc	none
-open source Color Management	Windows DLLs	none
-PCS	particular device	none
-open source Color Management	color profiles	none
-attempts	specifications	none
-rendering	series	none
-transformations	Mappings	none
-information	file format	none
-color	ICC color profiles	none
-bugs such	CMGetPartialProfileElement function	none
-file formats	something	none
-harness	couple	none
-error	‘	none
-profile connection space	”	none
-Furthermore	file format	none
-major overhaul	Windows Color System	none
-target color space	tables	none
-dictionaries	file format	none
-APIs	color profiles	none
-CMConvertColorNameToIndex	instances	none
-ICC color profiles	* b *	none
-element ‘ ncl2 ’	sure read/write	none
-bound read	count	none
-functions	fact	none
-L	device source	none
-Windows	color transformations	none
-XML file format	XML	none
-XML file format	ICC color profiles	none
-binary files	onwards	none
-fuzzing	accessible attack surface	none
-rendering	part	none
-Windows ’ CMM	security fixes	none
-disassembly	open source Color Management	none
-ICM	XML	none
-instances	CMGetNamedProfileInfoProfile	none
-end	color profiles	none
-ICM32.dll	Crashes	none
-Microsoft ’	MSCMS.dll	none
-ICC color profiles	device source	none
-bound read	buffer size	none
-days	MSCMS.dll	none
-ICM APIs	Windows DLLs	none
-sort	such instances	none
-CMM—the ICM—can	list	none
-Stay	uninitialized memory	none
-error	complete content	none
-CMConvIndexToNameProfile	offsets	none
-function	offset	none
-L	International Color Consortium	none
-system32 directory	OpenColorProfile	none
-color	L	none
-function	CMGetPartialProfileElement function	none
-byte	write	none
-Windows	Windows Vista onwards	none
-corpuses	couple	none
-color management	International Color Consortium	none
-buffer	sure read/write	none
-accessible attack surface	images	none
-functionality	ICC	none
-profile connection space	L	none
-Microsoft ’	list	none
-valuable	file formats	none
-OS	Image parsing	none
-color space	Wikipedia	none
-Little CMS	such	none
-such	Adobe ’	none
-rendering	something	none
-file	‘	none
-verification	offset	none
-XML file format	WCS color profiles	none
-hope	internal product security teams	none
-recent vulnerabilities	multiple bugs	none
-ICM32	new vulnerability	none
-attackers	vulnerabilities	none
-decades	security fixes	none
-parameters	Mappings	none
-”	ICC profile	none
-rendering	accessible attack surface	none
-ICC	small set	none
-16-core machine	first set	none
-size	tag/element	none
-ICM32.dll	unconstrained size	none
-CIELAB	data	none
-different types	color profiles	none
-more-than-adequate description	target color space	none
-write	complete content	none
-complete content	count	none
-third-party	multiple bugs	none
-offsets	bug	none
-functions	minimum length check	none
-”	ICC color profiles	none
-Color Management Module	OpenColorProfile	none
-talked	color profiles	none
-mapping	interpolation	none
-loading	CMM	none
-onwards	multiple bugs	none
-* b *	Mappings	none
-output device	”	none
-review	multiple bugs	none
-file	complete content	none
-ZDI researchers	such	none
-feature	code execution	none
-color	International Color Consortium	none
-target color space	International Color Consortium	none
-part	color profiles	none
-dictionaries	different types	none
-third-party CMMs such	OpenColorProfile	none
-function	sort	none
-ZDI researchers	2017-2018	none
-ICC	simpler terms	none
-open source	LCMS	none
-Microsoft ’	Adobe ’	none
-Reading	ICC specification	none
-DLL	MSCMS.dll	none
-MSCMS.dll	such	none
-APIs	harness	none
-Windows Vista onwards	Image Color Management	none
-offsets	’ elements	none
-such	Image parsing	none
-era	small module	none
-fuzzer	couple	none
-unconstrained size	pattern	none
-color	color input	none
-end	Windows DLLs	none
-other	size	none
-Windows OS ’ built-in image parsers	modern operating system	none
-size	sort	none
-uninitialized memory	color profiles	none
-buffer	stream	none
-corpus	modern operating system	none
-Color Management Module	Adobe ’	none
-color space	L	none
-* b *	series	none
-approach	APIs	none
-rendering	file formats	none
-color profiles—not	attackers	none
-Project Zero	fuzzing	none
-bugs such	present	none
-ICC color profiles	standards	none
-end	LCMS	none
-color	interpolation	none
-such	operations	none
-Windows ’ CMM	external researchers	none
-read	bug	none
-Microsoft ’	OpenColorProfile	none
-same call	vulnerability	none
-WCS	binary files	none
-ZDI researchers	old module	none
-requirement	Mappings	none
-vulnerabilities due	APIs	none
-multiple color profiles	profile	none
-days	16-core machine	none
-color	transformations	none
-such	APIs	none
-math	color transformation	none
-read	size	none
-corpus	vulnerabilities	none
-ICM APIs	APIs	none
-ZDI researchers	relative silence	none
-Project Zero	hopes	none
-open source	unique tag names	none
-profile connection space	ICC	none
-size	bound read	none
-list	MSDN	none
-unconstrained size	sort	none
-open source Color Management	ICC	none
-standards	ICC profile	none
-ICM32.dll	offset	none
-hopes	old module	none
-multiple color profiles	Sites	none
-version	major overhaul	none
-harness	first set	none
-list	supported Windows APIs	none
-XML	WCS color profiles	none
-buffer pointer	device coordinates	none
-color management	Mappings	none
-bound read/write	bug	none
-allocBuffer	’ elements	none
-International Color Consortium	interpolation	none
-operations	functionality	none
-MSDN	Windows DLLs	none
-interpolation	CIELAB	none
-color management	PCS	none
-color profiles—not	multi-part blog series	none
-tables	set	none
-approach	EXEs	none
-interpolation	standards	none
-ICM32.dll	harness	none
-allocation	pattern	none
-feature	multi-part blog series	none
-color transformation	file format internals	none
-loading	DLL	none
-mapping	CIELAB	none
-dictionary	values	none
-count	buffer	none
-CMConvertColorNameToIndex	functions	none
-color input	parameters	none
-device source	particular device	none
-different color profiles	sample	none
-sure	Simply	none
-color profiles	LCMS	none
-International Color Consortium	color input	none
-programming/tools	internet	none
-error	size	none
-feature	part	none
-PCS	transformations	none
-buffer size	tag/element	none
-series	particular device	none
-CMConvNameToIndexProfile	CMGetNamedProfileInfoProfile	none
-read	’ elements	none
-basic features	harness	none
-‘	element ‘ ncl2 ’	none
-allocation	integer	none
-ICM APIs	hope	none
-code execution	something	none
-CIEXYZ	standards	none
-Windows Vista onwards	ICC color profiles	none
-International Color Consortium	particular device	none
-such	certain degree	none
-mapping	* b *	none
-API sequence	functionality	none
-ICC color profiles	Image Color Management	none
-file	element ‘ ncl2 ’	none
-profile connection space	color	none
-Color Management Module	CMM—the ICM—can	none
-vulnerabilities	feature	none
-such	series	none
-LCMS	ICC	none
-recent vulnerabilities	onwards	none
-hope	onwards	none
-such	color profiles—not	none
-Windows ’ CMM	2017-2018	none
-bug	’ elements	none
-external researchers	2017-2018	none
-XML file format	Windows Vista onwards	none
-color management	data	none
-harness	series	none
-fuzzing	first set	none
-size	offset	none
-hope	2017-2018	none
-Little CMS	Windows	none
-such	color profiles	none
-allocBuffer	minimum length check	none
-color input	ICC	none
-relative silence	fuzzing	none
-output device	mapping	none
-APIs	Windows DLLs	none
-Windows	Project Zero	none
-hope	review	none
-feature	file formats	none
-different types	math	none
-internal product security teams	hopes	none
-API sequence	hope	none
-Reading	fuzzing	none
-major overhaul	XML	none
-information disclosure	fuzzing	none
-transformations	tables	none
-Windows	ICC	none
-ICC color profiles	ICC	none
-file format internals	ICC specification	none
-Windows ’ CMM	Project Zero	none
-fact	Microsoft	none
-standards	CIELAB	none
-byte	vulnerability	none
-ICC color profiles	requirement	none
-set	data	none
-such	security fixes	none
-harness	vulnerability	none
-such	Project Zero	none
-loading	APIs	none
-MSDN	color profiles	none
-color profiles—not	images	none
-operations	harness	none
-functionality	LCMS	none
-bound read	stream	none
-previous vulnerability	bugs such	none
-CMConvNameToIndexProfile	MSCMS functions	none
-color	ICC profile	none
-ICM32	Project Zero	none
-* b *	requirement	none
-external researchers	recent vulnerabilities	none
-straight	bug	none
-Windows binaries	APIs	none
-Windows	ways	none
-CMM—the ICM—can	system32 directory	none
-same code	review	none
-math	file format internals	none
-attackers	OS	none
-programming/tools	multiple color profiles	none
-attackers	modern operating system	none
-color profiles	Windows DLLs	none
-file formats	multi-part blog series	none
-output device	ICC	none
-fuzzer	corpuses	none
-CMM	OpenColorProfile	none
-image format	code execution	none
-target color space	parameters	none
-version	onwards	none
-CIEXYZ	ICC profile	none
-output device	more-than-adequate description	none
-open source	additional code paths	none
-list	ICM APIs	none
-ZDI researchers	Windows	none
-color management	color input	none
-many image files	multiple color profiles	none
-values	sure read/write	none
-APIs	ICC	none
-multiple rounds	third-party	none
-2017-2018	old module	none
-multiple rounds	security fixes	none
-such	Windows	none
-vulnerability	accessible attack surface	none
-fuzzing	security fixes	none
-basic features	something	none
-good corpus	math	none
-simpler terms	images	none
-fuzzer	feedback	none
-error	element ‘ ncl2 ’	none
-ICC color profiles	interpolation	none
-rendering	modern operating system	none
-L	* b *	none
-CMConvIndexToNameProfile	‘	none
-XML file format	binary files	none
-vulnerabilities	fuzzing	none
-WCS	ICC color profiles	none
-target color space	interpolation	none
-understanding	easy	none
-such	2017-2018	none
-approach	end	none
-color management	ICC color profiles	none
-Windows	functionality	none
-bugs such	sort	none
-Windows OS ’ built-in image parsers	file formats	none
-color profiles	functionality	none
-parameters	standards	none
-verification	buffer pointer	none
-output device	data	none
-feature	Image parsing	none
-series	ICC profile	none
-Mappings	ICC	none
-color profiles—not	basic features	none
-fuzzing	file format	none
-MSCMS.dll	couple	none
-number	values	none
-content	allocation	none
-CMConvNameToIndexProfile	unchecked offset access	none
-vulnerabilities due	third-party software	none
-list	EXEs	none
-hope	color transformations	none
-dictionaries	pages	none
-corpus	code coverage information	none
-Stay	color profiles	none
-end	EXEs	none
-attempts	LCMS	none
-EXEs	Windows DLLs	none
-understanding	information	none
-different types	file format	none
-loading	list	none
-ICC color profile	software	none
-more-than-adequate description	Profiles	none
-buffer size	stream	none
-multiple rounds	decades	none
-color	data	none
-Windows OS ’ built-in image parsers	fuzzing	none
-CIEXYZ	CIELAB	none
-Crashes	days	none
-open source Color Management	harness	none
-ICC color profiles	transformations	none
-Mappings	ICC profile	none
-MSDN	functionality	none
-CIEXYZ	target color space	none
-corpus	images	none
-era	review	none
-MSCMS.dll	Adobe ’	none
-XML	Windows Vista onwards	none
-API sequence	harness	none
-more-than-adequate description	* b *	none
-multi-part blog series	images	none
-era	same code	none
-internet	multiple color profiles	none
-color space	mapping	none
-dictionaries	color transformation	none
-open source Color Management	MSDN	none
-Windows OS ’ built-in image parsers	code execution	none
-interpolation	ICC profile	none
-specifications	color transformation	none
-functions	bug	none
-ICM APIs	EXEs	none
-transformations	* b *	none
-sure read/write	device coordinates	none
-CIEXYZ	more-than-adequate description	none
-fuzzing	hopes	none
-corpus	harness	none
-multi-part blog series	something	none
-ICM APIs	small set	none
-buffer pointer	write	none
-count	offset	none
-corpus	series	none
-version	Windows	none
-ICM APIs	end	none
-Image parsing	images	none
-open source	attempts	none
-‘	minimum length check	none
-MSCMS.dll	16-core machine	none
-same code	relative silence	none
-PCS	Mappings	none
-other main source	profile	none
-Mappings	tables	none
-Profiles	interpolation	none
-CMConvIndexToNameProfile	CMConvertColorNameToIndex	none
-recent vulnerabilities	certain degree	none
-functions	read	none
-approach	hope	none
-Crashes	16-core machine	none
-number	same call	none
-ConvertIndexToColorName	functions	none
-dictionaries	etc	none
-series	CIELAB	none
-API sequence	open source Color Management	none
-color space	interpolation	none
-file	write	none
-profile connection space	ICC color profiles	none
-profile connection space	Wikipedia	none
-Crashes	couple	none
-size	complete content	none
-dictionaries	easy	none
-bugs such	integer	none
-CMM	Adobe ’	none
-approach	LCMS	none
-file formats	accessible attack surface	none
-L	ICC	none
-requirement	device source	none
-‘	buffer size	none
-byte	buffer size	none
-color profiles—not	information disclosure	none
-rendering	valuable	none
-Little CMS	color profiles	none
-good corpus	file format	none
-CMConvertColorNameToIndex	MSCMS functions	none
-functions	accessible	none
-WCS	Image Color Management	none
-Image parsing	accessible attack surface	none
-Windows ’ CMM	multiple bugs	none
-open source	values	none
-number	buffer	none
-APIs	functionality	none
-days	Code coverage information	none
-major overhaul	binary files	none
-image format	vulnerability	none
-Windows OS ’ built-in image parsers	images	none
-Part	Image Parsing	none
-bug	size	none
-ConvertIndexToColorName	unchecked offset access	none
-corpus	first set	none
-fuzzer	etc	none
-code execution	fuzzing	none
-security fixes	certain degree	none
-”	series	none
-ICM32.dll	APIs	none
-more-than-adequate description	Wikipedia	none
-generic entry point	supported Windows APIs	none
-list	color transformations	none
-color	tables	none
-part	harness	none
-vulnerability	images	none
-CIEXYZ	PCS	none
-Windows	onwards	none
-ways	small set	none
-attackers	series	none
-Little CMS	APIs	none
-etc	values	none
-external researchers	old module	none
-file	buffer	none
-CIEXYZ	set	none
-color space	series	none
-corpus	part	none
-Windows	Windows Color System	none
-DLL	such	none
-ICM APIs	ICC	none
-valuable	Image parsing	none
-OS	vulnerability	none
-PCS	CIELAB	none
-target color space	standards	none
-count	vulnerability	none
-list	operations	none
-ZDI researchers	certain degree	none
-more-than-adequate description	Mappings	none
-same code	certain degree	none
-interpolation	ICC	none
-third-party	hopes	none
-interpolation	particular device	none
-specifications	information	none
-blog post	ICC color profiles	none
-such	EXEs	none
-2017-2018	internal product security teams	none
-API sequence	color profile APIs	none
-easy	file format	none
-vulnerabilities	code execution	none
-internet	other main source	none
-era	internal product security teams	none
-vulnerability	buffer	none
-hope	Windows ’ CMM	none
-device source	data	none
-disassembly	APIs	none
-straight	fix	none
-more-than-adequate description	requirement	none
-multi-part blog series	accessible attack surface	none
-number	offset	none
-attackers	basic features	none
-image format	part	none
-third-party CMMs such	CMM	none
-2017-2018	fuzzing	none
-relative silence	small module	none
-internet	stand-alone files	none
-Microsoft	verification	none
-list	Little CMS	none
-internal product security teams	certain degree	none
-blog post	Windows Vista onwards	none
-same code	small module	none
-”	interpolation	none
-image format	harness	none
-APIs	such	none
-math	color profiles	none
-stand-alone files	other main source	none
-ICM	WCS color profiles	none
-APIs	EXEs	none
-specifications	pages	none
-element ‘ ncl2 ’	code	none
-good corpus	information	none
-same code	new vulnerability	none
-pattern	sort	none
-such	code execution	none
-Little CMS	Windows DLLs	none
-verification	sure read/write	none
-values	tag/element	none
-color management	CIELAB	none
-code coverage information	first set	none
-hope	hopes	none
-corpus	vulnerability	none
-modern operating system	images	none
-same call	count	none
-file	stream	none
-color space	particular device	none
+modern operating system	basic features	none
+Color Profiles	basic features	none
+OS	modern operating system	none
+feature	attackers	none
 attackers	accessible attack surface	none
-”	target color space	none
-Project Zero	new vulnerability	none
-‘	’ elements	none
-API sequence	end	none
-PCS	data	none
-math	ICC specification	none
-content	such instances	none
-verification	vulnerability	none
-Stay	part	none
-size	buffer size	none
-hope	ways	none
-series	modern operating system	none
-ICC color profiles	ICC profile	none
-OS	rendering	none
-PCS	ICC profile	none
-color space	ICC color profiles	none
-allocBuffer	bug	none
-write	sure read/write	none
-CIEXYZ	tables	none
-code coverage information	corpuses	none
-number	file	none
-such	old module	none
-software	simpler terms	none
-none	third-party software	none
-Stay	vulnerability class	none
-color profile APIs	ICC	none
-vulnerability	tag/element	none
-mapping	particular device	none
-Furthermore	color transformation	none
-profile connection space	parameters	none
-color transformation	pages	none
-target color space	requirement	none
-Windows OS ’ built-in image parsers	rendering	none
-supported Windows APIs	Microsoft	none
-rendering	feature	none
-more-than-adequate description	set	none
-function	allocation	none
-color space	ICC profile	none
-complete content	buffer	none
-hope	new vulnerability	none
-ICM	onwards	none
-binary files	Windows Vista onwards	none
-MSCMS.dll	Code coverage information	none
-recent vulnerabilities	security fixes	none
-mapping	Mappings	none
-fuzzing	information	none
-write	offset	none
-security fixes	new vulnerability	none
-16-core machine	corpuses	none
-PCS	color input	none
-Reading	Furthermore	none
-transformations	set	none
-standards	Wikipedia	none
-GetNamedProfileInfo	unchecked offset access	none
-feature	accessible attack surface	none
-error	buffer pointer	none
-third-party	relative silence	none
-dictionaries	values	none
-Furthermore	easy	none
-ICC color profiles	data	none
-days	couple	none
-same call	device coordinates	none
-list	additional code paths	none
-number	bound read	none
-WCS color profiles	onwards	none
-Profiles	ICC profile	none
-profile connection space	series	none
-device source	set	none
-offset	such instances	none
-interpolation	data	none
-profile connection space	color input	none
-target color space	transformations	none
-requirement	ICC profile	none
-multiple rounds	fuzzing	none
-Little CMS	ways	none
-open source	specifications	none
-* b *	color input	none
-ICM32.dll	corpuses	none
-requirement	data	none
-vulnerabilities	information disclosure	none
-output device	series	none
-Little CMS	color profile APIs	none
-International Color Consortium	PCS	none
-programming/tools	Sites	none
-blog post	Windows Color System	none
-ICM	Windows Color System	none
-CMM—the ICM—can	Microsoft ’	none
-CMM—the ICM—can	CMM	none
-functions	APIs	none
-decades	ZDI researchers	none
-such	external researchers	none
-ways	ICC	none
-tag/element	code	none
-part	series	none
-valuable	harness	none
-offsets	minimum length check	none
-Image parsing	series	none
-International Color Consortium	transformations	none
-corpus	rendering	none
-ICC	binary file	none
-Windows	XML	none
-CIELAB	ICC	none
-”	data	none
-number	element ‘ ncl2 ’	none
-era	security fixes	none
-list	ICC	none
-attempts	values	none
-CIEXYZ	mapping	none
-bugs such	unconstrained size	none
-output device	tables	none
-vulnerabilities due	Microsoft	none
-Color Management Module	Microsoft ’	none
-vulnerability class	color profiles	none
-disassembly	color transformations	none
-Windows ’ CMM	onwards	none
-complete content	code	none
-count	values	none
-Windows OS ’ built-in image parsers	information disclosure	none
-specifications	ICC specification	none
-first set	couple	none
-code execution	accessible attack surface	none
-requirement	series	none
-size	values	none
-dictionaries	open source	none
-hope	LCMS	none
-other main source	color profile	none
-basic features	modern operating system	none
-disassembly	ICC	none
-write	buffer	none
-count	device coordinates	none
-content	integer	none
-generic entry point	list	none
-fuzzing	different types	none
-other main source	Sites	none
-ICM	Image Color Management	none
-output device	standards	none
-ICM APIs	color transformations	none
-series	standards	none
-ICM32	era	none
-byte	element ‘ ncl2 ’	none
-sure	specification	none
-valuable	fuzzing	none
-harness	Image parsing	none
-byte	tag/element	none
-such	onwards	none
-Color Management Module	APIs	none
-ICM APIs	disassembly	none
-Windows Vista onwards	WCS color profiles	none
-Image parsing	code execution	none
-fuzzer	list	none
-set	ICC profile	none
-file	code	none
-generic entry point	APIs	none
-color profiles—not	accessible attack surface	none
-LCMS	small set	none
-different color profiles	code coverage information	none
-color	PCS	none
-series	accessible attack surface	none
-specification	corpuses	none
-Stay	blog series	none
-mapping	data	none
-API sequence	Windows	none
-vulnerability	sure read/write	none
-profile connection space	Profiles	none
-allocation	such instances	none
-color	Profiles	none
-Sites	images	none
-CMConvNameToIndexProfile	accessible	none
-L	standards	none
-‘	device coordinates	none
-such	relative silence	none
-PCS	series	none
-Furthermore	fuzzing	none
-color profiles	small set	none
-uninitialized memory	harness	none
-modern operating system	file formats	none
-more-than-adequate description	particular device	none
-color	target color space	none
-color management	transformations	none
-third-party CMMs such	list	none
-fuzzer	LCMS	none
-attempts	fuzzer	none
-fuzzing	something	none
-file	offset	none
-CMM—the ICM—can	OpenColorProfile	none
-hope	relative silence	none
-ZDI researchers	internal product security teams	none
-image format	fuzzing	none
-International Color Consortium	Profiles	none
-API sequence	approach	none
-ways	EXEs	none
-dictionaries	specifications	none
-part	multi-part blog series	none
-CMConvIndexToNameProfile	ConvertIndexToColorName	none
-Image parsing	multi-part blog series	none
-OS	harness	none
-ICC color profiles	color input	none
-image format	vulnerabilities	none
-easy	color profiles	none
-Microsoft ’	third-party CMMs such	none
-vulnerability	values	none
-binary file	simpler terms	none
-accessible attack surface	something	none
-ways	Windows DLLs	none
-vulnerability	offset	none
-2017-2018	multiple bugs	none
-API sequence	LCMS	none
-”	particular device	none
-disassembly	end	none
-end	functionality	none
-unconstrained size	present	none
-L	interpolation	none
-CMConvIndexToNameProfile	instances	none
-ICC	Wikipedia	none
-list	unique tag names	none
-rendering	images	none
-same call	buffer size	none
-hopes	certain degree	none
-ICM32.dll	Color Management Module	none
-color transformations	EXEs	none
-many image files	profile	none
-good corpus	pages	none
-fix	Microsoft	none
-Image parsing	fuzzing	none
-basic features	file formats	none
-color profiles—not	corpus	none
-color management	L	none
-more-than-adequate description	transformations	none
-color	standards	none
-ICM32.dll	OpenColorProfile	none
-L	series	none
-multiple rounds	multiple bugs	none
-era	relative silence	none
-output device	International Color Consortium	none
-color	particular device	none
-good corpus	specifications	none
-same call	size	none
-Profiles	Mappings	none
-‘	functions	none
-ZDI researchers	fuzzing	none
-corpus	specification	none
-file	buffer size	none
-mapping	ICC color profiles	none
-other	minimum length check	none
-such	multi-part blog series	none
-binary files	ICC color profiles	none
-read	minimum length check	none
-specifications	unique tag names	none
-target color space	data	none
-such	multiple bugs	none
-disassembly	harness	none
-additional code paths	values	none
-supported Windows APIs	CMM	none
-era	fuzzing	none
-harness	modern operating system	none
-target color space	ICC color profiles	none
-none	Microsoft	none
-APIs	end	none
-APIs	Adobe ’	none
-buffer size	sure read/write	none
-CIEXYZ	interpolation	none
-hope	Project Zero	none
-programming/tools	other main source	none
-onwards	old module	none
-Profiles	data	none
-small module	multiple bugs	none
-buffer pointer	vulnerability	none
-color profile APIs	small set	none
-unchecked offset access	CMGetNamedProfileInfoProfile	none
-color input	data	none
-International Color Consortium	ICC profile	none
-”	* b *	none
-CIEXYZ	Profiles	none
-PCS	device source	none
-such	ways	none
-corpus	sure	none
-operations	Windows	none
-APIs	Microsoft	none
-system32 directory	list	none
-CIEXYZ	profile connection space	none
-functions	unchecked offset access	none
-fuzzer	specifications	none
-ICM32.dll	Code coverage information	none
-output device	ICC color profiles	none
-CIEXYZ	ICC	none
-parameters	data	none
-harness	images	none
-Windows	APIs	none
-sure	code coverage information	none
-external researchers	relative silence	none
-basic features	vulnerability	none
-decades	small module	none
-generic entry point	DLL	none
-color management	series	none
-ways	LCMS	none
-values	code	none
-easy	specifications	none
-approach	harness	none
-color space	PCS	none
-ICC profile	particular device	none
-good corpus	fuzzing	none
-external researchers	Project Zero	none
-International Color Consortium	CIELAB	none
-different types	easy	none
-more-than-adequate description	PCS	none
-color transformation	ICC specification	none
-MSDN	ways	none
-CMConvNameToIndexProfile	instances	none
-old module	security fixes	none
-L	set	none
-color input	Profiles	none
-values	stream	none
-ICC color profile	images	none
-such	information disclosure	none
-part	Image parsing	none
-part	file formats	none
-Stay	multiple vulnerabilities	none
-harness	days	none
-buffer pointer	stream	none
-feature	fuzzing	none
-harness	ICC	none
-Color Management Module	third-party CMMs such	none
-bound read	buffer	none
-content	pattern	none
-specifications	file format internals	none
-PCS	interpolation	none
-write	element ‘ ncl2 ’	none
-ConvertIndexToColorName	instances	none
-values	element ‘ ncl2 ’	none
-basic features	rendering	none
-such	corpus	none
-relative silence	recent vulnerabilities	none
-Windows	MSDN	none
-transformations	requirement	none
-harness	file formats	none
-2017-2018	onwards	none
-color space	device source	none
-ICM	blog post	none
-different types	file format internals	none
-bound read	‘	none
-Crashes	Code coverage information	none
-straight	verification	none
-Windows ’ CMM	fuzzing	none
-loading	such	none
-Windows OS ’ built-in image parsers	vulnerability	none
-different color profiles	first set	none
-information	ICC specification	none
-version	XML file format	none
-more-than-adequate description	color input	none
-information disclosure	multi-part blog series	none
-DLL	Microsoft ’	none
-same call	code	none
-vulnerability	code	none
-dictionaries	color profiles	none
-hopes	multiple bugs	none
-ZDI researchers	hope	none
-sample	code coverage information	none
-Reading	color transformation	none
-operations	color profiles	none
-color space	ICC	none
-ways	functionality	none
-bound read	byte	none
-accessible	GetNamedProfileInfo	none
-requirement	particular device	none
-such	harness	none
-decades	internal product security teams	none
-APIs	third-party software	none
-Windows	none	none
-mapping	color input	none
-feature	something	none
-vulnerability	element ‘ ncl2 ’	none
-many image files	images	none
-LCMS	EXEs	none
-PCS	set	none
-vulnerabilities	harness	none
-stand-alone files	multiple color profiles	none
-ICM32	ZDI researchers	none
-decades	Project Zero	none
-Windows	small module	none
-tag/element	offset	none
-L	parameters	none
-profile connection space	* b *	none
-target color space	set	none
-hope	Windows DLLs	none
-mapping	Profiles	none
-decades	hope	none
-target color space	ICC profile	none
-CMConvIndexToNameProfile	CMConvNameToIndexProfile	none
-fuzzing	pages	none
-byte	count	none
-number	‘	none
-internal product security teams	new vulnerability	none
-APIs	LCMS	none
-series	data	none
-such	image format	none
-approach	such	none
-series	code execution	none
-easy	ICC specification	none
-byte	values	none
-Windows Color System	WCS	none
-International Color Consortium	tables	none
-hope	end	none
-color	requirement	none
-International Color Consortium	ICC	none
-size	buffer pointer	none
-attackers	part	none
-16-core machine	couple	none
-Profiles	tables	none
-easy	information	none
-Little CMS	LCMS	none
-part	blog series	none
-Windows Color System	XML	none
-Reading	math	none
-XML	ICC color profiles	none
-error	verification	none
-ICM	Windows Vista onwards	none
-information disclosure	images	none
-ICM32	decades	none
-Windows OS ’ built-in image parsers	harness	none
-modern operating system	information disclosure	none
-tables	data	none
-Project Zero	old module	none
-ICC color profiles	Wikipedia	none
-unique tag names	additional code paths	none
-ICM32.dll	supported Windows APIs	none
-list	open source Color Management	none
-ICM32.dll	system32 directory	none
-error	values	none
-fuzzing	color transformation	none
-profile connection space	standards	none
-fact	Windows binaries	none
-CIELAB	particular device	none
-color management	mapping	none
-target color space	mapping	none
-era	multiple bugs	none
-relative silence	2017-2018	none
-small module	recent vulnerabilities	none
-fuzzing	images	none
-ways	color profiles	none
-size	file	none
-transformations	data	none
-bound read/write	allocBuffer	none
-CMM—the ICM—can	APIs	none
-‘	offsets	none
-profile connection space	tables	none
-ICM32	Windows	none
-XML file format	onwards	none
-vulnerability	stream	none
-decades	relative silence	none
-different types	information	none
-ICM APIs	functionality	none
+information disclosure	remote code execution	none
+information disclosure	feature	none
+feature	Image parsing	none
+information disclosure	attackers	none
+attackers	remote code execution	none
 attackers	Image parsing	none
-loading	Adobe ’	none
-hope	operations	none
-function	such instances	none
-same call	complete content	none
-* b *	device source	none
-WCS	Windows Vista onwards	none
-decades	fuzzing	none
-ICC	particular device	none
-series	file formats	none
-profile connection space	mapping	none
-Little CMS	small set	none
-operations	MSDN	none
-tables	ICC	none
-device source	ICC profile	none
-sample	corpuses	none
-device coordinates	offset	none
-buffer pointer	buffer size	none
-functionality	color profile APIs	none
-Windows	WCS color profiles	none
-vulnerabilities	images	none
-Code coverage information	corpuses	none
-byte	file	none
-relative silence	new vulnerability	none
-binary file	images	none
-Stay	harness	none
-ICM32.dll	Adobe ’	none
-list	LCMS	none
-OS	accessible attack surface	none
-ICM32	multiple bugs	none
-other main source	images	none
-ICM32.dll	integer	none
-attackers	code execution	none
-part	uninitialized memory	none
-Profiles	set	none
-dictionaries	information	none
-write	code	none
-approach	color transformations	none
-blog series	harness	none
-same code	2017-2018	none
-ICM32	hope	none
-fuzzer	16-core machine	none
-ICM APIs	MSDN	none
-such	accessible attack surface	none
-OS	code execution	none
-file format internals	color profiles	none
-‘	values	none
-MSCMS.dll	first set	none
-L	color input	none
-part	talked	none
-color profiles—not	fuzzing	none
-verification	element ‘ ncl2 ’	none
-era	ZDI researchers	none
-device source	series	none
-other	bound read/write	none
-Microsoft	third-party software	none
-modern operating system	multi-part blog series	none
-vulnerability	series	none
-error	count	none
-data	Wikipedia	none
-third-party CMMs such	MSCMS.dll	none
-third-party CMMs such	such	none
-Windows ’ CMM	small module	none
-color profiles—not	rendering	none
-color input	interpolation	none
-Reading	file format internals	none
-programming/tools	profile	none
-write	buffer size	none
-binary files	XML	none
-hope	recent vulnerabilities	none
-bound read	code	none
-color profiles	multiple vulnerabilities	none
-Little CMS	end	none
-verification	buffer size	none
-previous vulnerability	function	none
-bound read/write	read	none
-parameters	tables	none
-valuable	part	none
-Profiles	ICC	none
-parameters	Wikipedia	none
-dictionary	etc	none
-vulnerabilities due	Windows	none
-Furthermore	ICC specification	none
-generic entry point	ICM32.dll	none
-‘	buffer	none
-disassembly	color profiles	none
-MSCMS.dll	OpenColorProfile	none
-feature	modern operating system	none
-color transformation	information	none
-bug	minimum length check	none
-multiple rounds	external researchers	none
-vulnerability	something	none
-count	‘	none
-rendering	vulnerabilities	none
-API sequence	color transformations	none
-math	file format	none
-open source Color Management	end	none
-understanding	color profiles	none
-easy	file format internals	none
-ICM32.dll	MSCMS.dll	none
-bugs such	such instances	none
-such	hopes	none
-color	output device	none
-relative silence	internal product security teams	none
-vulnerability	modern operating system	none
-small module	hopes	none
-vulnerability	code execution	none
-element ‘ ncl2 ’	device coordinates	none
-CMConvertColorNameToIndex	GetNamedProfileInfo	none
-era	old module	none
-understanding	different types	none
-International Color Consortium	Mappings	none
-ICC color profiles	onwards	none
-Reading	different types	none
-target color space	Wikipedia	none
-hope	third-party	none
-size	’ elements	none
-L	Mappings	none
-such	end	none
-fact	Windows	none
-Windows ’ CMM	old module	none
-mapping	series	none
-file	values	none
-ZDI researchers	review	none
-Profiles	standards	none
-Little CMS	functionality	none
-mapping	L	none
-specification	first set	none
-feature	images	none
-approach	ICC	none
-hope	EXEs	none
-functions	allocBuffer	none
-decades	Windows	none
-sort	integer	none
-* b *	Wikipedia	none
-dictionary	fuzzer	none
-API sequence	APIs	none
-error	tag/element	none
-same call	file	none
-corpus	Stay	none
-”	Profiles	none
-series	Wikipedia	none
-image format	accessible attack surface	none
-end	ICC	none
-such	disassembly	none
-such	something	none
-Windows	old module	none
-multiple color profiles	color profile	none
-Windows	third-party	none
-disassembly	small set	none
-other	’ elements	none
-binary files	Image Color Management	none
-specifications	color profiles	none
-days	fuzzer	none
-such	OS	none
-onwards	Image Color Management	none
-generic entry point	Color Management Module	none
-CMM—the ICM—can	Microsoft	none
-byte	buffer	none
-DLL	supported Windows APIs	none
-sample	first set	none
-output device	CIELAB	none
-write	stream	none
-era	third-party	none
-buffer pointer	offset	none
+accessible attack surface	Image parsing	none
+Image parsing	vulnerability	none
+information disclosure	Image parsing	none
+feature	remote code execution	none
+remote code execution	vulnerability	none
+remote code execution	accessible attack surface	none
+attackers	vulnerability	none
+remote code execution	Image parsing	none
+feature	accessible attack surface	none
 information disclosure	accessible attack surface	none
-‘	code	none
-vulnerabilities due	Windows binaries	none
-CIEXYZ	requirement	none
-vulnerability	Image parsing	none
-color management	requirement	none
-file formats	fuzzing	none
-feedback	first set	none
-CIEXYZ	ICC color profiles	none
-decades	external researchers	none
-many image files	other main source	none
-color management	Wikipedia	none
-such	small set	none
-previous vulnerability	unconstrained size	none
-operations	LCMS	none
-decades	multiple bugs	none
-third-party	recent vulnerabilities	none
-History	Color Management	none
-bugs such	size	none
-present	allocation	none
-size	device coordinates	none
-present	sort	none
-bugs such	offset	none
-values	offset	none
-Windows OS ’ built-in image parsers	OS	none
-profile connection space	data	none
-CMConvertColorNameToIndex	CMGetNamedProfileInfoProfile	none
-target color space	L	none
-attempts	additional code paths	none
-feature	series	none
-blog series	color profiles	none
-image format	basic features	none
-profile connection space	more-than-adequate description	none
-ICM32	same code	none
-color profiles—not	Image parsing	none
-Part	Windows	none
-Windows	color profiles	none
-fuzzing	sample	none
-rendering	harness	none
-Windows Vista onwards	onwards	none
-Windows	third-party software	none
-profile	images	none
-harness	functionality	none
-requirement	CIELAB	none
-fact	none	none
-XML	onwards	none
-size	stream	none
-blog post	XML file format	none
-requirement	set	none
-byte	device coordinates	none
-such	feature	none
-CMM—the ICM—can	MSCMS.dll	none
-profile connection space	Mappings	none
-color space	requirement	none
-review	certain degree	none
-offset	size	none
-version	WCS	none
-internal product security teams	security fixes	none
-unconstrained size	offset	none
-end	color profile APIs	none
-valuable	accessible attack surface	none
-multiple rounds	review	none
-CMConvIndexToNameProfile	MSCMS functions	none
-Windows	new vulnerability	none
-part	multiple vulnerabilities	none
-size	count	none
-APIs	supported Windows APIs	none
-programming/tools	stand-alone files	none
-parameters	ICC	none
-fuzzer	first set	none
-accessible	unchecked offset access	none
-verification	code	none
-DLL	list	none
-bugs such	pattern	none
-Crashes	first set	none
-open source Color Management	functionality	none
-other main source	multiple color profiles	none
-buffer size	offset	none
-loading	Microsoft	none
-basic features	Image parsing	none
-open source Color Management	color transformations	none
-CIEXYZ	color management	none
-ICM32.dll	CMGetPartialProfileElement function	none
-more-than-adequate description	color space	none
-such	functionality	none
-uninitialized memory	vulnerability class	none
-era	2017-2018	none
-color	color management	none
-color profiles—not	feature	none
-ICM32.dll	CMM	none
-target color space	PCS	none
-ICM32.dll	content	none
-generic entry point	third-party CMMs such	none
-unconstrained size	function	none
-pattern	size	none
-ICC color profiles	parameters	none
-MSCMS.dll	corpuses	none
-number	size	none
-L	Wikipedia	none
-such	hope	none
-easy	color transformation	none
-approach	color profile APIs	none
-error	buffer size	none
-color profile	profile	none
-offsets	allocBuffer	none
-basic features	images	none
-color space	target color space	none
-Mappings	Wikipedia	none
-hopes	onwards	none
-stream	tag/element	none
-recent vulnerabilities	new vulnerability	none
-color space	CIELAB	none
-CMConvIndexToNameProfile	CMGetNamedProfileInfoProfile	none
-CMConvertColorNameToIndex	CMConvNameToIndexProfile	none
-Little CMS	color transformations	none
-sure	sample	none
-other	bug	none
-PCS	Profiles	none
-vulnerability class	talked	none
-dictionary	LCMS	none
-open source Color Management	EXEs	none
-color management	ICC	none
-approach	ways	none
-ICM32	relative silence	none
-number	stream	none
-color transformation	file format	none
-2017-2018	certain degree	none
-DLL	APIs	none
-corpus	vulnerability class	none
-harness	Code coverage information	none
-same call	sure read/write	none
-external researchers	onwards	none
-offset	integer	none
-disassembly	LCMS	none
-color profile APIs	Windows DLLs	none
-dictionaries	fuzzing	none
-output device	requirement	none
-vulnerability	device coordinates	none
-particular device	data	none
-harness	small set	none
-Code coverage information	feedback	none
-size	‘	none
-color	parameters	none
-ICM32.dll	list	none
-profile connection space	PCS	none
-MSDN	APIs	none
-ICM32.dll	DLL	none
-standards	ICC	none
-2017-2018	new vulnerability	none
-fuzzing	specifications	none
-L	particular device	none
-same code	such	none
-system32 directory	APIs	none
-transformations	CIELAB	none
-such	review	none
-Microsoft	Adobe ’	none
-ICC color profiles	CIELAB	none
-transformations	device source	none
-file format	ICC specification	none
-set	standards	none
-transformations	Profiles	none
-same call	buffer pointer	none
-corpus	feature	none
-target color space	Mappings	none
-ICM32.dll	present	none
-Image parsing	file formats	none
-profile connection space	International Color Consortium	none
-functionality	small set	none
-corpus	blog series	none
-stream	device coordinates	none
-other	read	none
-size	integer	none
-accessible	MSCMS functions	none
-CIEXYZ	”	none
-dictionary	attempts	none
-review	hopes	none
-dictionary	additional code paths	none
-bound read	file	none
-multiple rounds	certain degree	none
-many image files	Sites	none
-‘	tag/element	none
-uninitialized memory	blog series	none
-Color Management	Windows	none
-Microsoft	bug	none
-hope	harness	none
-Windows	internal product security teams	none
-version	Windows Vista onwards	none
-count	element ‘ ncl2 ’	none
-image format	information disclosure	none
-‘	offset	none
-ZDI researchers	Windows ’ CMM	none
-dictionaries	unique tag names	none
-modern operating system	something	none
-such	part	none
-good corpus	ICC specification	none
-complete content	element ‘ ncl2 ’	none
-vulnerability	information disclosure	none
-CIEXYZ	color	none
-feature	valuable	none
-APIs	ways	none
-write	count	none
-third-party	security fixes	none
-basic features	feature	none
-disassembly	EXEs	none
-DLL	Microsoft	none
-color management	parameters	none
-XML	Image Color Management	none
-buffer size	device coordinates	none
-ICC color profile	simpler terms	none
-International Color Consortium	standards	none
-color transformations	harness	none
-more-than-adequate description	ICC color profiles	none
-ICM32.dll	function	none
-specification	fuzzing	none
-third-party	internal product security teams	none
-MSDN	EXEs	none
-color management	ICC profile	none
-color transformations	ICC	none
-onwards	security fixes	none
-color	series	none
-verification	‘	none
-functions	third-party software	none
-none	Windows binaries	none
-fuzzing	multi-part blog series	none
-device source	interpolation	none
-file formats	information disclosure	none
-verification	file	none
-CMConvertColorNameToIndex	unchecked offset access	none
-list	such	none
-PCS	standards	none
-etc	unique tag names	none
-API sequence	ICC	none
-color input	set	none
-Furthermore	specifications	none
-output device	parameters	none
-GetNamedProfileInfo	CMGetNamedProfileInfoProfile	none
-third-party CMMs such	Microsoft	none
-Windows Color System	binary files	none
-end	small set	none
-fuzzer	values	none
-era	decades	none
-same call	write	none
-color profile APIs	EXEs	none
-present	function	none
-Windows OS ’ built-in image parsers	part	none
-basic features	information disclosure	none
-functions	GetNamedProfileInfo	none
-vulnerabilities due	fact	none
-open source Color Management	APIs	none
-mapping	standards	none
-valuable	something	none
-previous vulnerability	allocation	none
-multiple rounds	small module	none
-hope	small set	none
-‘	read	none
-major overhaul	WCS color profiles	none
-unconstrained size	integer	none
-Profiles	series	none
-CMGetPartialProfileElement function	integer	none
-buffer pointer	sure read/write	none
-GetNamedProfileInfo	MSCMS functions	none
-hope	color profile APIs	none
-count	tag/element	none
-CMConvertColorNameToIndex	accessible	none
-ICM32	certain degree	none
-number	error	none
-Profiles	device source	none
-bugs such	allocation	none
-file formats	code execution	none
-same code	multiple bugs	none
-software	binary file	none
-dictionary	unique tag names	none
-buffer pointer	values	none
-* b *	ICC	none
-major overhaul	WCS	none
-color management	Profiles	none
-MSCMS.dll	Microsoft	none
-harness	color profile APIs	none
-Microsoft ’	supported Windows APIs	none
-bound read	buffer pointer	none
-multiple rounds	Windows ’ CMM	none
-image format	modern operating system	none
-multiple rounds	relative silence	none
-part	vulnerability class	none
-color	ICC	none
-corpus	fuzzing	none
-bound read/write	size	none
-present	offset	none
-list	APIs	none
-small module	internal product security teams	none
-Windows	Microsoft	none
-image format	images	none
-ICM32.dll	couple	none
-era	onwards	none
-Reading	information	none
-third-party	2017-2018	none
-functions	CMGetNamedProfileInfoProfile	none
-requirement	Wikipedia	none
-”	color input	none
-sure read/write	tag/element	none
-bugs such	function	none
-generic entry point	MSCMS.dll	none
-color	Mappings	none
-Sites	profile	none
-API sequence	ICM APIs	none
-file format internals	pages	none
-API sequence	ways	none
-Windows	hopes	none
-bound read/write	functions	none
-color	set	none
-error	file	none
-set	particular device	none
-stand-alone files	profile	none
-Corpus	Dictionary	none
-Windows ’ CMM	new vulnerability	none
-Windows OS ’ built-in image parsers	color profiles—not	none
-more-than-adequate description	interpolation	none
-CIEXYZ	International Color Consortium	none
-number	buffer size	none
-bound read	device coordinates	none
-buffer pointer	count	none
-sure read/write	stream	none
-Little CMS	disassembly	none
-write	‘	none
-era	certain degree	none
-different color profiles	corpuses	none
-list	harness	none
-Project Zero	onwards	none
-understanding	ICC specification	none
-number	sure read/write	none
-XML file format	Windows Color System	none
-output device	Wikipedia	none
-target color space	particular device	none
-ConvertIndexToColorName	GetNamedProfileInfo	none
-color	”	none
-Furthermore	color profiles	none
-”	parameters	none
-loading	CMM—the ICM—can	none
-unique tag names	values	none
-small module	security fixes	none
-different color profiles	fuzzing	none
-list	Adobe ’	none
-Profiles	Wikipedia	none
-loading	MSCMS.dll	none
-unchecked offset access	instances	none
-dictionary	open source	none
-color input	device source	none
-part	modern operating system	none
-dictionaries	ICC specification	none
-image format	file formats	none
-LCMS	Windows DLLs	none
-file	vulnerability	none
-list	functionality	none
-Little CMS	MSDN	none
-verification	write	none
-History	Windows	none
-Windows OS ’ built-in image parsers	series	none
-tables	device source	none
-parameters	particular device	none
-ICM32.dll	size	none
-uninitialized memory	talked	none
-color profiles—not	file formats	none
-mapping	tables	none
-approach	Little CMS	none
-onwards	new vulnerability	none
-loading	ICM32.dll	none
-loading	supported Windows APIs	none
-corpuses	first set	none
-color input	ICC profile	none
-image format	series	none
-* b *	parameters	none
-Simply	sample	none
-harness	MSCMS.dll	none
-Windows OS ’ built-in image parsers	something	none
-approach	operations	none
-color transformations	Windows DLLs	none
-review	2017-2018	none
-hope	ICC	none
-ICM32.dll	previous vulnerability	none
-image format	something	none
-hope	external researchers	none
-third-party	new vulnerability	none
-same code	onwards	none
-OS	vulnerabilities	none
-operations	disassembly	none
-attackers	file formats	none
-ICM APIs	color profiles	none
-mapping	set	none
-basic features	valuable	none
-rendering	information disclosure	none
-* b *	ICC profile	none
-same code	internal product security teams	none
-allocation	sort	none
-more-than-adequate description	parameters	none
-CIEXYZ	color input	none
-such	new vulnerability	none
-decades	onwards	none
-ICM32.dll	feedback	none
-days	feedback	none
-major overhaul	Image Color Management	none
-information	file format internals	none
-CMConvIndexToNameProfile	bound read/write	none
-set	CIELAB	none
-Mappings	standards	none
-approach	Windows DLLs	none
-”	CIELAB	none
-profile connection space	set	none
-stand-alone files	Sites	none
-ICM32.dll	bugs such	none
-color transformations	ways	none
-OS	part	none
-ICM APIs	harness	none
-International Color Consortium	device source	none
-API sequence	disassembly	none
-color management	* b *	none
-tables	ICC profile	none
-ICM	binary files	none
-attackers	harness	none
-fuzzing	ICC specification	none
-buffer pointer	element ‘ ncl2 ’	none
-L	data	none
-binary files	WCS color profiles	none
-Windows	binary files	none
-APIs	small set	none
-sure	first set	none
-LCMS	etc	none
-harness	Windows DLLs	none
-* b *	set	none
-fuzzing	corpuses	none
-count	code	none
-other	functions	none
-OS	file formats	none
-L	requirement	none
-output device	transformations	none
-file format	pages	none
-requirement	parameters	none
-Windows	Image Color Management	none
-color management	tables	none
-image format	OS	none
-such	small module	none
-version	WCS color profiles	none
-third-party CMMs such	APIs	none
-programming/tools	color profile	none
-MSDN	end	none
-color space	Mappings	none
-byte	offset	none
-attackers	something	none
-ZDI researchers	recent vulnerabilities	none
-software	images	none
-relative silence	onwards	none
-size	verification	none
-dictionaries	understanding	none
-basic features	code execution	none
-generic entry point	CMM	none
-Image Parsing	Color Profiles	none
-output device	color management	none
-image format	Image parsing	none
-system32 directory	Microsoft ’	none
-CMConvIndexToNameProfile	GetNamedProfileInfo	none
-Windows	review	none
-color transformations	color profiles	none
-version	ICM	none
-system32 directory	CMM	none
-internet	many image files	none
-part	fuzzing	none
-previous vulnerability	pattern	none
-file formats	images	none
-approach	functionality	none
-part	information disclosure	none
-disassembly	MSDN	none
-disassembly	Windows DLLs	none
-error	buffer	none
-transformations	particular device	none
-series	ICC	none
-vulnerabilities	multi-part blog series	none
-parameters	ICC profile	none
-same call	element ‘ ncl2 ’	none
-color profiles—not	OS	none
-output device	ICC profile	none
-color profile APIs	LCMS	none
-color profiles—not	something	none
-ICM32.dll	Microsoft	none
-approach	small set	none
-fuzzing	onwards	none
-color profiles—not	modern operating system	none
-profile connection space	target color space	none
-L	PCS	none
-Reading	easy	none
-talked	multiple vulnerabilities	none
-content	bugs such	none
-functions	offsets	none
-corpus	multi-part blog series	none
-more-than-adequate description	ICC profile	none
-modern operating system	fuzzing	none
-Crashes	feedback	none
-buffer	values	none
-blog series	talked	none
-byte	sure read/write	none
-Microsoft ’	such	none
-International Color Consortium	requirement	none
-small set	EXEs	none
-corpus	something	none
-such	open source Color Management	none
-hope	small module	none
-Mappings	device source	none
-major overhaul	ICC color profiles	none
-APIs	CMM	none
-same code	Project Zero	none
-error	offset	none
-Windows	security fixes	none
-Little CMS	open source Color Management	none
-Windows binaries	third-party software	none
-profile connection space	color space	none
-CMConvIndexToNameProfile	other	none
-L	CIELAB	none
-Profiles	particular device	none
-ICM	ICC color profiles	none
-review	old module	none
-Sites	color profile	none
-disassembly	color profile APIs	none
-color transformation	color profiles	none
-days	corpuses	none
-”	set	none
-target color space	color input	none
-ICC profile	data	none
-third-party	old module	none
-2017-2018	Project Zero	none
-”	Mappings	none
-internal product security teams	old module	none
-transformations	Wikipedia	none
-specifications	LCMS	none
-color input	standards	none
-APIs	color transformations	none
-attempts	list	none
-Project Zero	security fixes	none
-different color profiles	Simply	none
-tables	interpolation	none
-more-than-adequate description	ICC	none
-bound read	complete content	none
-approach	disassembly	none
-supported Windows APIs	such	none
-decades	hopes	none
-Windows OS ’ built-in image parsers	such	none
-more-than-adequate description	International Color Consortium	none
-pattern	CMGetPartialProfileElement function	none
-file	tag/element	none
-vulnerability	file formats	none
-programming/tools	many image files	none
-Project Zero	internal product security teams	none
-corpus	information disclosure	none
-such	LCMS	none
-stream	offset	none
-requirement	Profiles	none
-CIEXYZ	transformations	none
-such	Windows DLLs	none
-understanding	color transformation	none
-mapping	parameters	none
-file	count	none
-bound read	vulnerability	none
-buffer pointer	complete content	none
-attempts	etc	none
-output device	Mappings	none
-hope	security fixes	none
-values	device coordinates	none
-ZDI researchers	new vulnerability	none
-”	standards	none
-size	such instances	none
-ICM32	multiple rounds	none
-previous vulnerability	integer	none
-transformations	parameters	none
-more-than-adequate description	color management	none
-list	disassembly	none
-fuzzing	file format internals	none
-math	pages	none
-corpus	Simply	none
-CMM—the ICM—can	supported Windows APIs	none
-number	complete content	none
-supported Windows APIs	Adobe ’	none
-different types	pages	none
-good corpus	file format internals	none
-approach	Windows	none
-certain degree	multiple bugs	none
-profile connection space	ICC profile	none
-color profiles—not	vulnerabilities	none
-target color space	* b *	none
-previous vulnerability	sort	none
-Microsoft ’	Microsoft	none
-harness	color profiles	none
-Reading	file format	none
-era	multiple rounds	none
-valuable	modern operating system	none
-operations	EXEs	none
-Microsoft ’	APIs	none
-pattern	such instances	none
-vulnerabilities due	none	none
-feature	harness	none
-mapping	International Color Consortium	none
-dictionaries	Furthermore	none
-target color space	series	none
-DLL	CMM	none
-Windows	LCMS	none
-list	MSCMS.dll	none
-transformations	ICC profile	none
-minimum length check	’ elements	none
-bound read	values	none
-content	size	none
-XML file format	Image Color Management	none
-multiple rounds	Project Zero	none
-valuable	code execution	none
-bound read/write	offsets	none
-Windows OS ’ built-in image parsers	feature	none
-fuzzing	math	none
-same call	‘	none
-buffer pointer	buffer	none
-Mappings	particular device	none
-color input	CIELAB	none
-size	CMGetPartialProfileElement function	none
-device coordinates	code	none
-harness	EXEs	none
-Windows	external researchers	none
-CMConvIndexToNameProfile	accessible	none
-OS	valuable	none
-ZDI researchers	third-party	none
-‘	vulnerability	none
-present	integer	none
-complete content	device coordinates	none
-decades	old module	none
-previous vulnerability	size	none
-hope	fuzzing	none
-vulnerability	buffer size	none
-ICM	major overhaul	none
-Windows OS ’ built-in image parsers	attackers	none
-ICM APIs	color profile APIs	none
-era	Project Zero	none
-information disclosure	something	none
-stream	code	none
-”	color management	none
-ICM APIs	operations	none
-”	transformations	none
-Windows ’ CMM	certain degree	none
-Windows	harness	none
-list	color profiles	none
-previous vulnerability	content	none
-color profiles—not	valuable	none
-present	such instances	none
-external researchers	hopes	none
-color space	* b *	none
-corpus	uninitialized memory	none
-Crashes	harness	none
-color profile	images	none
-more-than-adequate description	mapping	none
-CMM	such	none
-Windows ’ CMM	relative silence	none
-old module	certain degree	none
-file format	file format internals	none
-MSDN	color transformations	none
-buffer pointer	tag/element	none
-tables	CIELAB	none
-list	Microsoft	none
-such	Windows ’ CMM	none
-offset	CMGetPartialProfileElement function	none
-CMConvNameToIndexProfile	GetNamedProfileInfo	none
-fuzzer	Code coverage information	none
-same call	values	none
-external researchers	third-party	none
-vulnerabilities	series	none
-hope	MSDN	none
-fuzzer	additional code paths	none
-output device	PCS	none
-relative silence	multiple bugs	none
-Little CMS	operations	none
-offsets	size	none
-Image parsing	information disclosure	none
-Windows OS ’ built-in image parsers	accessible attack surface	none
-review	small module	none
-recent vulnerabilities	hopes	none
-information	color profiles	none
-MSDN	small set	none
-stand-alone files	color profile	none
-same call	verification	none
-series	fuzzing	none
-MSDN	harness	none
-buffer pointer	code	none
-era	external researchers	none
-generic entry point	system32 directory	none
-target color space	device source	none
-interpolation	Wikipedia	none
-Windows ’ CMM	hopes	none
-open source	list	none
-rendering	code execution	none
-Mappings	data	none
-attackers	feature	none
-era	hopes	none
-dictionary	specifications	none
-corpus	accessible attack surface	none
-Windows ’ CMM	recent vulnerabilities	none
-blog series	multiple vulnerabilities	none
-corpus	sample	none
-Windows ’ CMM	internal product security teams	none
-color management	standards	none
-open source Color Management	color profile APIs	none
-byte	stream	none
-ICM32.dll	CMM—the ICM—can	none
-dictionaries	additional code paths	none
-understanding	file format	none
-XML file format	WCS	none
-hope	old module	none
-unchecked offset access	MSCMS functions	none
-vulnerabilities	modern operating system	none
-days	first set	none
-OS	feature	none
-ICM32.dll	days	none
-Microsoft	CMM	none
-set	interpolation	none
-modern operating system	accessible attack surface	none
-API sequence	MSDN	none
-internet	profile	none
-OS	something	none
-Microsoft	OpenColorProfile	none
-decades	third-party	none
-International Color Consortium	set	none
-easy	pages	none
-different types	specifications	none
-fuzzing	easy	none
-ways	color profile APIs	none
-unconstrained size	allocation	none
-ICC color profiles	particular device	none
-image format	corpus	none
-Code coverage information	first set	none
-such	images	none
-generic entry point	Microsoft	none
-era	such	none
-Crashes	corpuses	none
-color profiles—not	harness	none
-set	Wikipedia	none
-Image parsing	something	none
-loading	OpenColorProfile	none
-verification	tag/element	none
-allocation	offset	none
-rendering	multi-part blog series	none
-”	tables	none
-small module	Project Zero	none
-output device	device source	none
-ZDI researchers	same code	none
-API sequence	such	none
-open source Color Management	small set	none
-set	series	none
-mapping	ICC profile	none
-DLL	Adobe ’	none
-number	verification	none
-Windows Color System	Image Color Management	none
-‘	allocBuffer	none
-Color Management Module	system32 directory	none
-Windows binaries	Microsoft	none
-generic entry point	such	none
-complete content	values	none
-color	* b *	none
-MSCMS.dll	feedback	none
-vulnerabilities	file formats	none
-”	ICC	none
-blog post	Windows	none
-error	byte	none
-Color Management Module	DLL	none
-different color profiles	specification	none
-same call	offset	none
-parameters	CIELAB	none
-color management	particular device	none
-pattern	offset	none
-ICM32	2017-2018	none
-review	new vulnerability	none
-parameters	Profiles	none
-math	specifications	none
-blog post	major overhaul	none
-open source Color Management	LCMS	none
-International Color Consortium	data	none
-set	ICC	none
-CIEXYZ	L	none
-buffer	offset	none
-major overhaul	Windows	none
-vulnerabilities due	functions	none
-list	hope	none
-Furthermore	math	none
-device source	standards	none
-ICM32	old module	none
-previous vulnerability	such instances	none
-understanding	file format internals	none
-profile connection space	device source	none
-small module	2017-2018	none
-color profiles—not	series	none
-color profiles—not	image format	none
-dictionaries	dictionary	none
-parameters	set	none
-DLL	third-party CMMs such	none
-third-party	onwards	none
-bug	verification	none
-attackers	corpus	none
+information disclosure	vulnerability	none
+accessible attack surface	vulnerability	none
 feature	vulnerability	none
-relative silence	old module	none
-third-party CMMs such	supported Windows APIs	none
-* b *	particular device	none
-supported Windows APIs	MSCMS.dll	none
-API sequence	color profiles	none
-CMConvIndexToNameProfile	unchecked offset access	none
-small module	onwards	none
-API sequence	Windows DLLs	none
-Windows	relative silence	none
-ICM32.dll	16-core machine	none
-CIEXYZ	particular device	none
-size	element ‘ ncl2 ’	none
-number	code	none
-internal product security teams	multiple bugs	none
-era	Windows	none
-basic features	vulnerabilities	none
-Mappings	set	none
-good corpus	Furthermore	none
-size	sure read/write	none
-CMConvIndexToNameProfile	functions	none
-unconstrained size	CMGetPartialProfileElement function	none
-ICC	software	none
-CIEXYZ	series	none
-version	binary files	none
-OpenColorProfile	Adobe ’	none
-device coordinates	tag/element	none
-image format	valuable	none
-such	fuzzing	none
-decades	recent vulnerabilities	none
-decades	certain degree	none
-verification	complete content	none
-specifications	additional code paths	none
-color	mapping	none
-output device	Profiles	none
-color profiles	harness	none
-image format	rendering	none
-more-than-adequate description	L	none
-such	vulnerability	none
-more-than-adequate description	series	none
-decades	such	none
-CIELAB	ICC profile	none
-transformations	standards	none
-error	device coordinates	none
-disassembly	ways	none
-Windows	small set	none
-third-party CMMs such	Adobe ’	none
-multiple color profiles	images	none
-small module	new vulnerability	none
-content	function	none
-mapping	transformations	none
-buffer	tag/element	none
-ICM32	external researchers	none
-list	ways	none
-dictionaries	good corpus	none
-fix	verification	none
-Windows	Windows DLLs	none
-particular device	Wikipedia	none
-understanding	specifications	none
-decades	Windows ’ CMM	none
-parameters	device source	none
-modern operating system	code execution	none
-sure read/write	offset	none
-version	ICC color profiles	none
-attackers	information disclosure	none
-ConvertIndexToColorName	CMConvNameToIndexProfile	none
-feature	information disclosure	none
-ICC color profiles	series	none
-APIs	color profile APIs	none
-verification	count	none
-device source	CIELAB	none
-version	blog post	none
-CMConvIndexToNameProfile	allocBuffer	none
-more-than-adequate description	CIELAB	none
-ICM32.dll	fuzzer	none
-approach	color profiles	none
-Windows ’ CMM	review	none
-end	ways	none
-CMGetPartialProfileElement function	such instances	none
-number	tag/element	none
-harness	multiple vulnerabilities	none
-profile connection space	interpolation	none
-content	CMGetPartialProfileElement function	none
-loading	third-party CMMs such	none
-loading	system32 directory	none
+harness	Windows OS’ built-in image parsers	none
+vulnerabilities	fuzzing	none
+fuzzing	harness	none
+fuzzing	Windows OS’ built-in image parsers	none
+I	harness	none
+I	Windows OS’ built-in image parsers	none
+related file formats	Windows OS’ built-in image parsers	none
+related file formats	vulnerabilities	none
+multi-part blog series	harness	none
+multi-part blog series	Windows OS’ built-in image parsers	none
+corpus	harness	none
+corpus	Windows OS’ built-in image parsers	none
+corpus	related file formats	none
+multi-part blog series	I	none
+vulnerabilities	Windows OS’ built-in image parsers	none
+vulnerabilities	harness	none
+multi-part blog series	related file formats	none
+I	vulnerabilities	none
+corpus	I	none
+I	fuzzing	none
+multi-part blog series	corpus	none
+related file formats	harness	none
+related file formats	fuzzing	none
+multi-part blog series	vulnerabilities	none
+I	related file formats	none
+multi-part blog series	fuzzing	none
+corpus	vulnerabilities	none
+corpus	fuzzing	none
+part	series	none
+image format	I	none
+images	series	none
+image format	series	none
+images	I	none
+I	part	none
+color profiles	something	none
+itself	part	none
+color profiles	images	none
+image format	itself	none
+itself	series	none
+I	series	none
+image format	part	none
+images	something	none
+color profiles	part	none
+color profiles	itself	none
+color profiles	image format	none
+something	itself	none
+something	I	none
+something	image format	none
+something	series	none
+images	part	none
+something	part	none
+color profiles	series	none
+images	itself	none
+color profiles	I	none
+images	image format	none
+itself	I	none
+What	ICC Color Profile	none
+color space	more-than-adequate description	none
+data	set	none
+color space	set	none
+standards	more-than-adequate description	none
+color management	color input or output device	none
+ICC	color input or output device	none
+more-than-adequate description	color input or output device	none
+color space	ICC color profiles	none
+data	ICC color profiles	none
 ICC color profiles	set	none
-Crashes	MSCMS.dll	none
-mapping	PCS	none
-ConvertIndexToColorName	accessible	none
-requirement	tables	none
-”	PCS	none
-different types	ICC specification	none
-requirement	interpolation	none
-Little CMS	ICM APIs	none
-dictionaries	Reading	none
-third-party	certain degree	none
-such	color transformations	none
-Simply	fuzzing	none
-hope	APIs	none
-ICC	data	none
-MSDN	LCMS	none
-color space	tables	none
-accessible	CMGetNamedProfileInfoProfile	none
-hope	Windows	none
-such	basic features	none
-generic entry point	CMM—the ICM—can	none
-generic entry point	Microsoft ’	none
-good corpus	easy	none
-list	end	none
-mapping	Wikipedia	none
-ICM32	small module	none
-third-party	review	none
-CIEXYZ	color space	none
-* b *	data	none
-XML file format	major overhaul	none
-ICM32.dll	allocation	none
+data	color space	none
+ICC color profiles	ICC	none
+data	ICC	none
+color space	ICC	none
+International Color Consortium	ICC	none
+data	color input or output device	none
+International Color Consortium	Wikipedia	none
 ICC profile	Wikipedia	none
-multiple rounds	old module	none
-fuzzing	old module	none
-content	offset	none
-Color Management Module	CMM	none
-ZDI researchers	onwards	none
-understanding	Furthermore	none
+data	International Color Consortium	none
+Wikipedia	color input or output device	none
+data	color management	none
+color management	ICC profile	none
+color management	ICC	none
+more-than-adequate description	ICC profile	none
+International Color Consortium	ICC profile	none
+standards	set	none
+ICC	Wikipedia	none
+color management	Wikipedia	none
+standards	ICC color profiles	none
+more-than-adequate description	Wikipedia	none
+set	color input or output device	none
+color space	International Color Consortium	none
+ICC	ICC profile	none
+standards	color input or output device	none
+ICC color profiles	International Color Consortium	none
+data	Wikipedia	none
+standards	color management	none
+color management	color space	none
+data	ICC profile	none
+color space	ICC profile	none
+set	ICC profile	none
+color management	International Color Consortium	none
+ICC color profiles	ICC profile	none
+color management	more-than-adequate description	none
+color space	Wikipedia	none
+set	Wikipedia	none
+ICC	more-than-adequate description	none
+ICC color profiles	Wikipedia	none
+standards	Wikipedia	none
+color management	set	none
+more-than-adequate description	set	none
+data	standards	none
+International Color Consortium	set	none
+standards	ICC profile	none
+data	more-than-adequate description	none
+International Color Consortium	more-than-adequate description	none
+standards	color space	none
+ICC profile	color input or output device	none
+color management	ICC color profiles	none
+standards	ICC	none
+International Color Consortium	color input or output device	none
+color space	color input or output device	none
+ICC	set	none
+standards	International Color Consortium	none
+ICC color profiles	more-than-adequate description	none
+ICC color profiles	color input or output device	none
+PCS	Profiles	none
+device source	viewing requirement	none
+mapping	profile connection space	none
+Profiles	profile connection space	none
+particular device	mapping	none
+PCS	viewing requirement	none
+color attributes	viewing requirement	none
+Profiles	particular device	none
+particular device	device source	none
+viewing requirement	profile connection space	none
+PCS	profile connection space	none
+device source	profile connection space	none
+mapping	viewing requirement	none
+color attributes	particular device	none
+PCS	particular device	none
+Profiles	viewing requirement	none
+color space	profile connection space	none
+color attributes	color space	none
+color attributes	profile connection space	none
+color attributes	PCS	none
+PCS	color space	none
+color space	particular device	none
+color space	viewing requirement	none
+particular device	viewing requirement	none
+PCS	device source	none
+color space	mapping	none
+PCS	mapping	none
+color attributes	mapping	none
+color space	device source	none
+color attributes	Profiles	none
+Profiles	device source	none
+color attributes	device source	none
 mapping	device source	none
-complete content	tag/element	none
-color profiles—not	part	none
-color space	parameters	none
-ICC	Windows DLLs	none
-same code	fuzzing	none
-profile connection space	requirement	none
+Profiles	mapping	none
+particular device	profile connection space	none
+color space	Profiles	none
+L*a*b	PCS	none
+PCS	CIELAB	none
+L*a*b	CIELAB	none
+series	parameters	none
+tables	parameters	none
+tables	interpolation	none
+tables	series	none
+tables	Mappings	none
+parameters	Mappings	none
+parameters	interpolation	none
+series	Mappings	none
+series	interpolation	none
+Mappings	interpolation	none
+series	transformations	none
+transformations	interpolation	none
+parameters	transformations	none
+transformations	Mappings	none
+tables	transformations	none
+images	ICC color profile	none
+binary file	ICC color profile	none
+ICC	simpler terms	none
+binary file	ICC	none
+images	ICC	none
+ICC	ICC color profile	none
+images	simpler terms	none
+binary file	simpler terms	none
+images	binary file	none
+ICC color profile	simpler terms	none
+ICC specification	100 pages	none
+math	different types	none
+file format	specifications	none
+better understanding	different types	none
+file format	color transformation	none
+color profiles	different types	none
+color transformation	different types	none
+color profiles	file format	none
+math	file format	none
+math	color transformation	none
+better understanding	file format	none
+math	specifications	none
+better understanding	specifications	none
+color profiles	specifications	none
+file format	different types	none
+better understanding	color transformation	none
+color profiles	color transformation	none
+color transformation	specifications	none
+different types	specifications	none
+color profiles	better understanding	none
+color profiles	math	none
+math	better understanding	none
+us	understanding	none
+fuzzing dictionaries	file format internals	none
+information	good corpus	none
+fuzzing	good corpus	none
+information	fuzzing	none
+us	information	none
+fuzzing dictionaries	information	none
+file format internals	fuzzing	none
+us	good corpus	none
+us	file format internals	none
+understanding	fuzzing	none
+us	fuzzing	none
+file format internals	good corpus	none
+fuzzing dictionaries	understanding	none
+understanding	file format internals	none
+fuzzing dictionaries	fuzzing	none
+fuzzing dictionaries	us	none
+understanding	information	none
+understanding	good corpus	none
+information	file format internals	none
+fuzzing dictionaries	good corpus	none
+Color Management	History	none
+Windows	History	none
+Windows	Color Management	none
+Image Color Management (ICM) version	Color Management	none
+Color Management	version	none
+Image Color Management (ICM) version	History	none
+Windows	Image Color Management (ICM) version	none
+History	version	none
+Image Color Management (ICM) version	version	none
+Windows	version	none
+WCS	Windows Color System	none
+major overhaul	Windows Vista	none
+major overhaul	WCS	none
+Windows Vista	Windows Color System	none
+major overhaul	Windows Color System	none
+WCS	Windows Vista	none
+WCS color profiles	XML file format	none
+ICC color profiles	WCS color profiles	none
+WCS color profiles	XML	none
+XML	XML file format	none
+binary files	XML	none
+binary files	XML file format	none
+ICC color profiles	XML	none
+ICC color profiles	XML file format	none
+ICC color profiles	binary files	none
+binary files	WCS color profiles	none
+I	blog post	none
+I	ICC color profiles	none
+blog post	ICC color profiles	none
+Microsoft	supported Windows APIs	none
+Microsoft	list	none
+supported Windows APIs	list	none
+OpenColorProfile	we	none
+MSCMS.dll	OpenColorProfile	none
+named APIs	we	none
+OpenColorProfile	named APIs	none
+named APIs	it	none
+MSCMS.dll	we	none
+OpenColorProfile	it	none
+MSCMS.dll	it	none
+MSCMS.dll	named APIs	none
+it	we	none
+Adobe’s CMM	CMM	none
+loading	Adobe’s CMM	none
+loading	Microsoft’s Color Management Module	none
+DLL	Adobe’s CMM	none
+loading	generic entry point	none
+DLL	generic entry point	none
+generic entry point	third-party CMMs	none
+loading	third-party CMMs	none
+DLL	CMM	none
+Microsoft’s Color Management Module	third-party CMMs	none
+generic entry point	Adobe’s CMM	none
+Adobe’s CMM	third-party CMMs	none
+Microsoft’s Color Management Module	DLL	none
+Microsoft’s Color Management Module	Adobe’s CMM	none
+Microsoft’s Color Management Module	generic entry point	none
+generic entry point	CMM	none
+loading	CMM	none
+DLL	third-party CMMs	none
+third-party CMMs	CMM	none
+Microsoft’s Color Management Module	CMM	none
+loading	DLL	none
+ICM32.dll	Microsoft’s CMM	none
+ICM32.dll	ICM	none
+ICM	system32 directory	none
+Microsoft’s CMM	ICM	none
+ICM32.dll	system32 directory	none
+Microsoft’s CMM	system32 directory	none
+same code	decades	none
+third-party	CMM	none
+Windows 95 era	CMM	none
+same code	ships	none
+security fixes	CMM	none
+ships	third-party	none
+security fixes	third-party	none
+Windows 95 era	third-party	none
+Windows 95 era	same code	none
+third-party	decades	none
+security fixes	same code	none
+Windows 95 era	security fixes	none
+same code	CMM	none
+security fixes	decades	none
+Windows 95 era	decades	none
+ships	decades	none
+decades	CMM	none
+same code	third-party	none
+security fixes	ships	none
+Windows 95 era	ships	none
+ships	CMM	none
+old module	new vulnerability	none
+me	new vulnerability	none
+old module	me	none
+old module	hope	none
+hope	new vulnerability	none
+hope	me	none
+external researchers	small module	none
+small module	fuzzing	none
+small module	review	none
+certain degree	hopes	none
+multiple rounds	hopes	none
+certain degree	fuzzing	none
+certain degree	internal product security teams	none
+multiple rounds	internal product security teams	none
+external researchers	review	none
+small module	internal product security teams	none
+internal product security teams	hopes	none
+external researchers	fuzzing	none
+certain degree	review	none
+internal product security teams	fuzzing	none
+external researchers	internal product security teams	none
+certain degree	multiple rounds	none
+small module	multiple rounds	none
+small module	hopes	none
+multiple rounds	fuzzing	none
+external researchers	multiple rounds	none
+hopes	fuzzing	none
+external researchers	certain degree	none
+review	internal product security teams	none
+external researchers	hopes	none
+review	multiple rounds	none
+review	hopes	none
+review	fuzzing	none
+small module	certain degree	none
+relative silence	ICM32	none
+relative silence	Project Zero and ZDI researchers	none
+relative silence	we	none
+Project Zero and ZDI researchers	recent vulnerabilities	none
+ICM32	we	none
+Project Zero and ZDI researchers	we	none
+recent vulnerabilities	multiple bugs	none
+relative silence	recent vulnerabilities	none
+recent vulnerabilities	we	none
+ICM32	multiple bugs	none
+Project Zero and ZDI researchers	multiple bugs	none
+ICM32	recent vulnerabilities	none
+we	multiple bugs	none
+ICM32	Project Zero and ZDI researchers	none
+relative silence	multiple bugs	none
+Windows	ICM APIs	none
+Windows	API sequence	none
+API sequence	MSDN	none
+MSDN	we	none
+ICM APIs	we	none
+Windows	ICC related operations	none
+API sequence	we	none
+ICC related operations	MSDN	none
+API sequence	list	none
+Windows	MSDN	none
+Windows	list	none
+list	ICM APIs	none
+ICC related operations	we	none
+API sequence	ICM APIs	none
+Windows	we	none
+list	MSDN	none
+API sequence	ICC related operations	none
+ICC related operations	list	none
+list	we	none
+MSDN	ICM APIs	none
+ICC related operations	ICM APIs	none
+hope	EXEs	none
+API sequence	ways	none
+hope	ways	none
+API sequence	EXEs	none
+color profile APIs	disassembly	none
+disassembly	EXEs	none
+disassembly	ways	none
+API sequence	color profile APIs	none
+API sequence	disassembly	none
+API sequence	hope	none
+color profile APIs	EXEs	none
+Windows DLLs	hope	none
+Windows DLLs	disassembly	none
+color profile APIs	Windows DLLs	none
+Windows DLLs	EXEs	none
+Windows DLLs	ways	none
+API sequence	Windows DLLs	none
+EXEs	ways	none
+color profile APIs	ways	none
+color profile APIs	hope	none
+disassembly	hope	none
+Little CMS	open source Color Management Systems	none
+LCMS	harness	none
+approach	open source Color Management Systems	none
+approach	Little CMS	none
+harness	open source Color Management Systems	none
+Little CMS	harness	none
+LCMS	open source Color Management Systems	none
+LCMS	approach	none
+LCMS	Little CMS	none
+approach	harness	none
+color transformations	APIs	none
+color profiles	color transformations	none
+color profiles	functionality	none
+small set	APIs	none
+small set	color transformations	none
+functionality	color transformations	none
+color profiles	small set	none
+color profiles	APIs	none
+functionality	APIs	none
+small set	functionality	none
+Sites	internet	none
+multiple color profiles	Dictionary	none
+Corpus	Dictionary	none
+Sites	Dictionary	none
+internet	Corpus	none
+multiple color profiles	Corpus	none
+internet	Dictionary	none
+Sites	Corpus	none
+multiple color profiles	internet	none
+multiple color profiles	Sites	none
+images	other main source	none
+color profile	other main source	none
+images	color profile	none
+files	many image files	none
+programming/tools color profile	programming/tools	none
+many image files	other main source	none
+images	programming/tools color profile	none
+programming/tools color profile	many image files	none
+programming/tools color profile	color profile	none
+images	many image files	none
+programming/tools	many image files	none
+programming/tools color profile	files	none
+many image files	color profile	none
+programming/tools	other main source	none
+programming/tools	color profile	none
+files	color profile	none
+files	other main source	none
+programming/tools color profile	other main source	none
+programming/tools	files	none
+images	files	none
+images	programming/tools	none
+corpus	we	none
+specification	seven different color profiles	none
+specification	we	none
+seven different color profiles	one sample	none
+corpus	seven different color profiles	none
+corpus	one sample	none
+we	one sample	none
+corpus	specification	none
+specification	one sample	none
+we	seven different color profiles	none
+fuzzing	first set	none
+fuzzing	corpuses	none
+corpuses	code coverage information	none
+first set	corpuses	none
+fuzzing	code coverage information	none
+first set	code coverage information	none
+dictionary	specifications	none
+list	specifications	none
+fuzzer	values	none
+additional code paths	specifications	none
+fuzzer	specifications	none
+fuzzer	additional code paths	none
+list	values	none
+fuzzer	dictionary	none
+fuzzer	list	none
+values	unique tag names	none
+additional code paths	unique tag names	none
+unique tag names	specifications	none
+dictionary	unique tag names	none
+list	additional code paths	none
+list	unique tag names	none
+list	dictionary	none
+fuzzer	unique tag names	none
+values	specifications	none
+values	additional code paths	none
+values	dictionary	none
+dictionary	additional code paths	none
+One	dictionaries	none
+One	LCMS	none
+open source fuzzing attempts	LCMS	none
+LCMS	dictionaries	none
+open source fuzzing attempts	One	none
+open source fuzzing attempts	dictionaries	none
+16-core machine	harness	none
+first set	corpuses	none
+I	first set	none
+harness	first set	none
+I	corpuses	none
+16-core machine	I	none
+harness	corpuses	none
+I	harness	none
+16-core machine	corpuses	none
+16-core machine	first set	none
+MSCMS.dll	ICM32.dll	none
+MSCMS.dll	feedback	none
+fuzzer	feedback	none
+ICM32.dll	Code coverage information	none
+fuzzer	MSCMS.dll	none
+fuzzer	ICM32.dll	none
+fuzzer	Code coverage information	none
+ICM32.dll	feedback	none
+MSCMS.dll	Code coverage information	none
+feedback	Code coverage information	none
+days	Crashes	none
+couple	Crashes	none
+couple	days	none
+file	stream	none
+file	ncl2’ tag/element	none
+code	stream	none
+file	size	none
+ncl2’ tag/element	stream	none
+ncl2’ tag/element	code	none
+size	stream	none
+file	code	none
+code	size	none
+ncl2’ tag/element	size	none
+complete content	same call	none
+element	buffer	none
+element	complete content	none
+same call	buffer	none
+element	same call	none
+complete content	buffer	none
+/write	number	none
+number	buffer	none
+values	/write	none
+buffer size	buffer	none
+values	number	none
+buffer size	values	none
+number	count	none
+values	buffer	none
+buffer size	number	none
+values	count	none
+/write	buffer	none
+buffer size	/write	none
+buffer	count	none
+buffer size	count	none
+/write	count	none
+offset	buffer pointer	none
+offset	verification	none
+verification	buffer pointer	none
+vulnerability	buffer pointer	none
+vulnerability	verification	none
+vulnerability	offset	none
+error	3 byte	none
+Microsoft	bug	none
+bug	fix	none
+Microsoft	verification	none
+bug	verification	none
+verification	fix	none
+Microsoft	fix	none
+content	allocation	none
+content	Additional Vulnerabilities	none
+previous vulnerability	allocation	none
+CMGetPartialProfileElement function	previous vulnerability	none
+Additional Vulnerabilities	one	none
+CMGetPartialProfileElement function	allocation	none
+one	allocation	none
+CMGetPartialProfileElement function	content	none
+CMGetPartialProfileElement function	size	none
+size	allocation	none
+content	size	none
+pattern	one	none
+content	pattern	none
+content	one	none
+CMGetPartialProfileElement function	pattern	none
+pattern	size	none
+size	previous vulnerability	none
+Additional Vulnerabilities	size	none
+CMGetPartialProfileElement function	Additional Vulnerabilities	none
+pattern	previous vulnerability	none
+Additional Vulnerabilities	allocation	none
+previous vulnerability	one	none
+pattern	allocation	none
+Additional Vulnerabilities	previous vulnerability	none
+Additional Vulnerabilities	pattern	none
+content	previous vulnerability	none
+size	one	none
+CMGetPartialProfileElement function	one	none
+offset	bugs	none
+bugs	size	none
+offset	size	none
+sort	integer overflow	none
+offset	pattern	none
+integer overflow	size	none
+unconstrained size	size	none
+sort	bugs	none
+unconstrained size	integer overflow	none
+bugs	pattern	none
+pattern	size	none
+unconstrained size	pattern	none
+integer overflow	pattern	none
+sort	unconstrained size	none
+unconstrained size	offset	none
+sort	size	none
+unconstrained size	bugs	none
+offset	integer overflow	none
+integer overflow	bugs	none
+sort	pattern	none
+sort	offset	none
+I	ICM32.dll	none
+I	such instances	none
+such instances	ICM32.dll	none
+I	function	none
+function	such instances	none
+function	ICM32.dll	none
+I	unchecked offset access	none
+three instances	unchecked offset access	none
+I	three instances	none
+exported and documented MSCMS functions	GetNamedProfileInfo	none
+exported and documented MSCMS functions	functions	none
+functions	GetNamedProfileInfo	none
+other two functions	allocBuffer	none
+minimum length check	size	none
+ncl2’ elements	bound read	none
+ncl2’ elements	CMConvIndexToNameProfile	none
+size	other two functions	none
+ncl2’ elements	size	none
+offsets	ncl2’ elements	none
+minimum length check	other two functions	none
+minimum length check	ncl2’ elements	none
+CMConvIndexToNameProfile	bug	none
+other two functions	bound read	none
+offsets	minimum length check	none
+CMConvIndexToNameProfile	bound read	none
+offsets	bug	none
+minimum length check	CMConvIndexToNameProfile	none
+offsets	bound read	none
+ncl2’ elements	other two functions	none
+size	CMConvIndexToNameProfile	none
+CMConvIndexToNameProfile	allocBuffer	none
+offsets	CMConvIndexToNameProfile	none
+other two functions	bug	none
+minimum length check	bug	none
+size	allocBuffer	none
+offsets	allocBuffer	none
+size	bug	none
+CMConvIndexToNameProfile	other two functions	none
+minimum length check	allocBuffer	none
+bug	allocBuffer	none
+offsets	other two functions	none
+ncl2’ elements	allocBuffer	none
+allocBuffer	bound read	none
+minimum length check	bound read	none
+bug	bound read	none
+ncl2’ elements	bug	none
+size	bound read	none
+offsets	size	none
+Windows binaries	fact	none
+three vulnerabilities	Windows binaries	none
+none	functions	none
+three vulnerabilities	Microsoft	none
+Microsoft	fact	none
+three vulnerabilities	functions	none
+Microsoft	functions	none
+three vulnerabilities	none	none
+Microsoft	none	none
+none	Windows binaries	none
+functions	fact	none
+three vulnerabilities	fact	none
+Microsoft	Windows binaries	none
+none	fact	none
+functions	Windows binaries	none
+Windows	third-party software	none
+Windows	we	none
+we	APIs	none
+third-party software	APIs	none
+we	third-party software	none
+Windows	APIs	none
+blog series	we	none
+color profiles	we	none
+harness	we	none
+color profiles	corpus	none
+blog series	corpus	none
+multiple vulnerabilities	corpus	none
+part	we	none
+part	harness	none
+multiple vulnerabilities	part	none
+corpus	harness	none
+blog series	part	none
+color profiles	part	none
+blog series	color profiles	none
+corpus	we	none
+blog series	harness	none
+color profiles	harness	none
+multiple vulnerabilities	we	none
+color profiles	multiple vulnerabilities	none
+blog series	multiple vulnerabilities	none
+multiple vulnerabilities	harness	none
+corpus	part	none
+we	vulnerability class	none
+part	vulnerability class	none
+uninitialized memory	vulnerability class	none
+we	uninitialized memory	none
+uninitialized memory	part	none
+we	part	none
