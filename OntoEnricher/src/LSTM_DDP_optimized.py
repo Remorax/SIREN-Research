@@ -23,14 +23,15 @@ f = open(dataset_file, "rb")
 
 op_file = open(results_file, "w+")
 
-def distributed_main(batch_size, gpu_ids, use_flatten=True):
+def setup(rank, world_size):
     os.environ['MASTER_ADDR'] = 'localhost'
-    os.environ['MASTER_PORT'] = '5555'
-    mp.spawn(
-        distributed_warning,
-        nprocs=len(gpu_ids),
-        args=(batch_size, len(gpu_ids), use_flatten))
+    os.environ['MASTER_PORT'] = '12355'
 
+    # initialize the process group
+    dist.init_process_group("gloo", rank=rank, world_size=world_size)
+
+def cleanup():
+    dist.destroy_process_group()
 
 def write(statement):
     global op_file
