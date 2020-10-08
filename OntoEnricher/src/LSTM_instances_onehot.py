@@ -108,7 +108,7 @@ class RelationPredictor(nn.Module):
         paths_output_reshaped = paths_output.reshape(-1, max_paths, HIDDEN_DIM*NUM_LAYERS*self.n_directions)
         # paths_output has dim (batch_size, max_paths, HIDDEN_DIM, NUM_LAYERS*self.n_directions)
 
-        counts = F.one_hot(counts.argmax(1), num_classes=counts.shape[-1])
+        counts = F.one_hot(counts.argmax(1), num_classes=counts.shape[-1]).double()
         paths_weighted = torch.bmm(paths_output_reshaped.permute(0,2,1), counts.unsqueeze(-1)).squeeze(-1)
         representation = torch.cat((nodes_embed, paths_weighted), dim=-1)
         probabilities = self.log_softmax(self.W(representation))
