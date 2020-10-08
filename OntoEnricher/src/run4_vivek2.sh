@@ -10,9 +10,4 @@
 module load cuda/10.2
 module load cudnn/7.6.5-cuda-10.2 
 
-thresholds=(0.97 0.98 0.99 1.0)
-
-for threshold in "${thresholds[@]}";
-do
-	python3 LSTM_optimized.py "data_use_unbracketed_"$threshold".pkl" "results_threshold_unbracketed_"$threshold".txt" "Output_threshold_unbracketed_"$threshold "threshold_unbracketed_"$threshold".pt"
-done
+python3 LSTM_instances_avg.py data_instances.pkl results_instances_avg.txt Output_instances_avg instances_avg.pt
