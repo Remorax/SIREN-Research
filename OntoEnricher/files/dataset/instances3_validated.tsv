@@ -75,7 +75,7 @@ service providers	operational security effectiveness	none
 leading technology company	SecOps platform	none
 leading technology company	innovation	none
 Breach Defense	SecOps platform	concept
-service providers	enterprises	hypernym 
+service providers	enterprises	hypernym
 Breach Defense	innovation	concept
 Keysight Technologies	governments	none
 Breach Defense	operational security effectiveness	none
@@ -95,7 +95,7 @@ latest attacks	integral element	none
 Threat Simulator breach and attack simulation solution	latest attacks	none
 Threat Simulator breach and attack simulation solution	new platform	none
 effectiveness	operational security	none
-network and security operations teams	operational security	hypernym 
+network and security operations teams	operational security	hypernym
 latest attacks	live networks	none
 integral element	operational security	none
 latest attacks	effectiveness	none
@@ -111,7 +111,7 @@ integral element	live networks	none
 new platform	operational security	none
 exploits	live networks	none
 Threat Simulator breach and attack simulation solution	live networks	none
-latest attacks	exploits	hyponym 
+latest attacks	exploits	hyponym
 exploits	new platform	none
 Threat Simulator breach and attack simulation solution	network and security operations teams	none
 Threat Simulator breach and attack simulation solution	effectiveness	none
@@ -436,7 +436,7 @@ environment drift	gaps	none
 environment drift	IT	none
 security configurations	related group	none
 environment drift	change	none
-Ixia Solutions Group	Security Group	concept 
+Ixia Solutions Group	Security Group	concept
 Today's network and security teams security solutions	continuous basis	none
 security solutions	Today's network and security teams security solutions	none
 Keysight Network Applications	Today's network and security teams	none
@@ -495,7 +495,7 @@ Threat Simulator	actionable insight	none
 Threat Simulator	gaps	none
 gaps security posture	Threat Simulator	none
 security operations teams	actionable insight	none
-Keysight's Breach Defense SecOps platform	ThreatARMOR	instance 
+Keysight's Breach Defense SecOps platform	ThreatARMOR	instance
 threat intelligence gateway	Keysight's Breach Defense SecOps platform	none
 Threat Simulator	Keysight's Breach Defense SecOps platform	instance
 ThreatARMOR	addition	none
@@ -518,7 +518,7 @@ number	up to 80%	none
 number	attack surface	none
 SIEM alerts	event management	none
 SIEM alerts	existing security infrastructure	none
-SIEM alerts	malicious traffic	none 
+SIEM alerts	malicious traffic	none
 SIEM alerts	ThreatARMOR	none
 SIEM alerts	security information	hypernym
 existing security infrastructure	source	none

@@ -1,47 +1,89 @@
-Fuzzing Image Parsing in Windows, Part One: Color Profiles
+HYPER BOX TACKLES
+ATTACK TRAFFIC WITH
+IXIA THREATARMOR
+Hyper Box, a veteran of the Japanese Internet industry, had
+been suffering in recent years from a glut of cyberattacks. Since
+they were unable to utilize powerful security devices over the
+shared network provided by their service, they were forced to
+constantly check logs and manually respond to attacks on a
+daily basis. As a result, Hyper Box was interested in learning
+how Ixia ThreatARMOR delivers on its promise of filtering
+known bad IP addresses and minimizing SIEM alerts.
+Hyper Box’s strength is its robust support structure, concentrated
+at its data centers in Tokyo. Known in the industry for its low-cost,
+high-quality hosting services, Hyper Box is Japan’s first domestic
+enterprise to provide telephone assistance 24 hours a day, 365
+days a year. Know-how and years of technical experience allow
+Hyper Box to support a wide range of users.
+SHIFTING FROM MANUAL TO AUTOMATED
+RESPONSES TO MASSIVE ATTACK TRAFFIC
+Hyper Box had been suffering from the cyberattacks, like many of
+the domestic and international service providers. The onslaught of
+attack traffic into the network has increased every year. Finding
+ways to counter it was becoming increasingly challenging. Attack
+traffic would sometimes cause the server to crash entirely, making
+it necessary to take extra measures to protect user systems.
 
-Image parsing and rendering are basic features of any modern operating system (OS). Image parsing is an easily accessible attack surface, and a vulnerability that may lead to remote code execution or information disclosure in such a feature is valuable to attackers. In this multi-part blog series, I am reviewing Windows OS’ built-in image parsers and related file formats: specifically looking at creating a harness, hunting for corpus and fuzzing to find vulnerabilities. In part one of this series I am looking at color profiles—not an image format itself, but something which is regularly embedded within images. 
+Essential security infrastructures, such as firewalls or IDSs, were
+in place. However, unlike the networks of private enterprises,
+shared networks providing services to users are unable to
+adopt aggressive measures for counterattacks due to the risk of
+blocking user communication.
+As a result, Mr. Naoya Matsuura, who oversees network and
+security operations in the Engineering department at Hyper Box,
+resorted to taking manual countermeasures to the massive
+attack traffic.
+SECURITY OPERATIONS AUTOMATED AT
+LOW COST
+While investigating countermeasures, Hyper Box discovered an
+article introducing ThreatARMOR. The concept of automatically
+eliminating unnecessary traffic based on known threats was the
+same idea behind the manual countermeasures Mr. Matsuura had
+been implementing.
+At that time, ThreatARMOR was a new product. Mr. Matsuura
+contacted Ixia to observe a test run on actual user machines.
+Normally, a new product is not introduced until after proof of
+concept (PoC) tests, but Mr. Matsuura decided to introduce
+ThreatARMOR to the network during the demonstration.
+There were many reasons Mr. Matsuura opted to use
+ThreatARMOR, but a main one was its proprietary “ATI Rap
+Sheet,” which indicates why each instance of blocked traffic is
+flagged. That kind of information makes ThreatARMOR much
+more than just a simple black box.
+“I was thrilled with the level of sensitivity to the network
+operation. One reason is that ThreatARMOR employs a fail-open
+system, and even when trouble occurs, communication is never
+interrupted,” said Mr. Matsuura. “In contrast, most security devices
+adopt a fail-close system, which makes them inappropriate for use
+over a shared network,” he added. In his opinion, “ThreatARMOR
+is ideal for helping to strengthen the security of service
+providers’ networks.”
 
-What is an ICC Color Profile?
-Wikipedia provides a more-than-adequate description of ICC color profiles: "In color management, an ICC profile is a set of data that characterizes a color input or output device, or a color space, according to standards promulgated by the International Color Consortium (ICC). Profiles describe the color attributes of a particular device or viewing requirement by defining a mapping between the device source or target color space and a profile connection space (PCS). This PCS is either CIELAB (L*a*b*) or CIEXYZ. Mappings may be specified using tables, to which interpolation is applied, or through a series of parameters for transformations.”
+NUMBER OF INTRUSIONS DETECTED BY IDS
+REDUCED TO ONE-FIFTH WITH FURTHER
+REDUCTIONS EXPECTED
+After seeing the demo, Hyper Box moved quickly and
+ThreatARMOR went into operation at the end of March. In the 
 
-In simpler terms, an ICC color profile is a binary file that gets embedded into images and parsed whenever ICC supported software processes the images. 
-
-Specification
-The ICC specification is around 100 pages and should be easy to skim through. Reading through specifications gives a better understanding of the file format, different types of color profiles, and math behind the color transformation. Furthermore, understanding of its file format internals provides us with information that can be used to optimize fuzzing, select a good corpus, and prepare fuzzing dictionaries.
-
-History of Color Management in Windows
-Windows started to ship Image Color Management (ICM) version 1.0 on Windows 95, and version 2.0 beginning with Windows 98 onwards. A major overhaul to Windows Color System (WCS) 1.0 happened in Windows Vista onwards. While ICC color profiles are binary files, WCS color profiles use XML as its file format. In this blog post, I am going to concentrate on ICC color profiles.
-
-Microsoft has a list of supported Windows APIs. Looking into some of the obviously named APIs, such as OpenColorProfile, we can see that it is implemented in MSCMS.dll. This DLL is a generic entry point and supports loading of Microsoft’s Color Management Module (CMM) and third-party CMMs such as Adobe’s CMM. Microsoft’s CMM—the ICM—can be found as ICM32.dll in system32 directory. 
-
-Windows’ CMM was written by a third-party during the Windows 95 era and still ships more or less with the same code (with security fixes over the decades). Seeing such an old module gives me some hope of finding a new vulnerability. But this is also a small module that may have gone through multiple rounds of review and fuzzing: both by internal product security teams and by external researchers, reducing my hopes to a certain degree. Looking for any recent vulnerabilities in ICM32, we can see multiple bugs from 2017-2018 by Project Zero and ZDI researchers, but then relative silence from 2019 onwards.
-
-Making a Harness
-Although there is a list of ICM APIs in MSDN, we need to find an API sequence used by Windows for any ICC related operations. One of the ways to find our API sequence is to search a disassembly of Windows DLLs and EXEs in hope to find the color profile APIs being used. Another approach is to find a harness for open source Color Management Systems such as Little CMS (LCMS). Both of these end up pointing to very small set of APIs with functionality to open color profiles and create color transformations.
-
-Hunting for Corpus and Dictionary
-Sites offering multiple color profiles can be found all over the internet. One of the other main source of color profile is images; many image files contain a color profile but require some programming/tools to dump their color profile to stand-alone files.
-
-Simply skimming through the specification, we can also make sure the corpus contains at least one sample from all of the seven different color profiles. This along with the code coverage information can be used to prepare the first set of corpuses for fuzzing.
-
-A dictionary, which helps the fuzzer to find additional code paths, can be prepared by combing through specifications and creating a list of unique tag names and values. One can also find dictionaries from open source fuzzing attempts on LCMS, etc.
-
-Fuzzing
-I used a 16-core machine to fuzz the harness with my first set of corpuses. Code coverage information from MSCMS.dll and ICM32.dll was used as feedback for my fuzzer. Crashes started to appear within a couple of days.
-
-Here the code tries to read the ‘ncl2’ tag/element and get the size of the stream from file. A buffer is allocated and the same call is made once again to read the complete content of the element ‘ncl2’. This buffer is parsed to find the count and number of device coordinates, and the values are verified by making sure read/write ends up with in the buffer size. The vulnerability here is that the offset (0x51) used for verification is smaller than the offset (0x54) used to advance the buffer pointer. This error provides a 3 byte out of bound read and write.
-
-The fix for this was pretty straight forward—change the verification offset to 0x54, which is how Microsoft fixed this bug.
-
-Additional Vulnerabilities
-While looking at the previous vulnerability, one can see a pattern of using the CMGetPartialProfileElement function for reading the size, allocation, and reading content. This sort of pattern can introduce bugs such as unconstrained size or integer overflow while adding an offset to the size, etc. I decided to pursue this function and see if such instances are present within ICM32.dll.
-
-I found three instances which had an unchecked offset access: CMConvIndexToNameProfile, CMConvNameToIndexProfile and CMGetNamedProfileInfoProfile. All of these functions are accessible through exported and documented MSCMS functions: ConvertIndexToColorName, CMConvertColorNameToIndex, and GetNamedProfileInfo respectively.
-
-The bug discovered in CMConvIndexToNameProfile and the other two functions is that there is no minimum length check for ‘ncl2’ elements and offsets 12 and 16 are directly accessed for both read and write—providing out of bound read/write to allocBuffer, if the size of allocBuffer is smaller than 12.
-
-Microsoft decided not to immediately fix these three vulnerabilities due to the fact that none of the Windows binaries use these functions. Independently, we did not find any Windows or third-party software using these APIs.
-
-Conclusion
-In part one of this blog series, we looked into color profiles, wrote a harness, hunted for corpus and successfully found multiple vulnerabilities. Stay tuned for part two, where we will be looking at a relatively less talked about vulnerability class: uninitialized memory.
+early stages, performance and functions were tested once again
+in a TAP/remote mode and also monitored. However, after about a
+month, the system was switched to an inline/block mode.
+ThreatARMOR blocked 4% of all Hyper Box’s traffic. Considering
+the enormous amount of traffic flowing into Hyper Box’s shared
+networks, this percentage meant that a considerable number
+of attacks was successfully blocked. The number of intrusions
+detected by the IDSs decreased from 1 million cases to 200k
+cases. In addition, Mr. Matsuura saw a decrease in the amount of
+spam e-mails.
+Mr. Matsuura appreciated how easy it was to implement
+ThreatARMOR, and noted that the sophisticated management
+interface is especially user-friendly. He was particularly pleased
+with how the system status can be checked by merely looking
+at a dashboard. He said that he used to frantically watch the
+logs of firewalls and IDSs. Now, however, blocked attacks can be
+recognized at a glance, providing peace of mind.
+“Thanks to ThreatARMOR, we can devote our time to research
+and planning, in order to provide better services,” said Mr.
+Matsuura. In addition, he is looking forward to seeing how Ixia
+expands the range and applications of ThreatARMOR in
+the future.

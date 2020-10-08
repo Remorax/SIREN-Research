@@ -1,89 +1,116 @@
-HYPER BOX TACKLES
-ATTACK TRAFFIC WITH
-IXIA THREATARMOR
-Hyper Box, a veteran of the Japanese Internet industry, had
-been suffering in recent years from a glut of cyberattacks. Since
-they were unable to utilize powerful security devices over the
-shared network provided by their service, they were forced to
-constantly check logs and manually respond to attacks on a
-daily basis. As a result, Hyper Box was interested in learning
-how Ixia ThreatARMOR delivers on its promise of filtering
-known bad IP addresses and minimizing SIEM alerts.
-Hyper Box’s strength is its robust support structure, concentrated
-at its data centers in Tokyo. Known in the industry for its low-cost,
-high-quality hosting services, Hyper Box is Japan’s first domestic
-enterprise to provide telephone assistance 24 hours a day, 365
-days a year. Know-how and years of technical experience allow
-Hyper Box to support a wide range of users.
-SHIFTING FROM MANUAL TO AUTOMATED
-RESPONSES TO MASSIVE ATTACK TRAFFIC
-Hyper Box had been suffering from the cyberattacks, like many of
-the domestic and international service providers. The onslaught of
-attack traffic into the network has increased every year. Finding
-ways to counter it was becoming increasingly challenging. Attack
-traffic would sometimes cause the server to crash entirely, making
-it necessary to take extra measures to protect user systems.
+CAN YOU DEFEND AGAINST ZERO-DAY THREATS?
+Every day, 8,3001 new, previously undiscovered cyber attacks emerge, including
+zero-day malware, zero-day phishing and social engineering attacks. With no
+associated file signatures, anti-virus, firewalls and other core security solutions
+cannot identify them as malicious and block them from entering the network. In
+fact, even the best AV solutions detect only half of malware strains in the wild.
+With no existing indicators of compromise (IOCs), how do you protect against what
+you do not know?
+COMMON NETWORK SECURITY APPROACHES HAVE LIMITATIONS
+To protect against zero-day threats, organizations use several approaches.
+These include:
+• Conventional sandboxing solutions, which are susceptible to malware evasion
+techniques, and by default, are configured to let malware enter the network before
+analysis is complete.
+• Endpoint security, which has its advantages but cannot protect datacenters running
+dedicated servers and enterprise IoT, such as cameras, elevators and HVAC
+systems—for which the network perimeter often serves as the only line of defense.
+• A detection-first strategy that mainly relies on incident response, which is expensive,
+and often kicks in after the damage is already done.
+With such critical limitations, how can you protect your network from zero-day threats?
+CHECK POINT SANDBLAST NETWORK
+– NUMBER ONE IN ZERO-DAY PROTECTION
+Check Point SandBlast Network provides the world’s best2 zero-day protection,
+through a combination of evasion-resistant threat emulation, revolutionary AI engines
+and threat extraction that pre-emptively sanitizes email and web downloads.
+Empowering organizations to take a prevention-first strategy to cyberattacks,
+SandBlast Network defends against the most devastating attacks, including unknown
+ransomware, Trojans, phishing and social engineering.
+SandBlast Network deploys with your current infrastructure, offering fully automated
+policy configuration, without compromising business productivity and agility.
 
-Essential security infrastructures, such as firewalls or IDSs, were
-in place. However, unlike the networks of private enterprises,
-shared networks providing services to users are unable to
-adopt aggressive measures for counterattacks due to the risk of
-blocking user communication.
-As a result, Mr. Naoya Matsuura, who oversees network and
-security operations in the Engineering department at Hyper Box,
-resorted to taking manual countermeasures to the massive
-attack traffic.
-SECURITY OPERATIONS AUTOMATED AT
-LOW COST
-While investigating countermeasures, Hyper Box discovered an
-article introducing ThreatARMOR. The concept of automatically
-eliminating unnecessary traffic based on known threats was the
-same idea behind the manual countermeasures Mr. Matsuura had
-been implementing.
-At that time, ThreatARMOR was a new product. Mr. Matsuura
-contacted Ixia to observe a test run on actual user machines.
-Normally, a new product is not introduced until after proof of
-concept (PoC) tests, but Mr. Matsuura decided to introduce
-ThreatARMOR to the network during the demonstration.
-There were many reasons Mr. Matsuura opted to use
-ThreatARMOR, but a main one was its proprietary “ATI Rap
-Sheet,” which indicates why each instance of blocked traffic is
-flagged. That kind of information makes ThreatARMOR much
-more than just a simple black box.
-“I was thrilled with the level of sensitivity to the network
-operation. One reason is that ThreatARMOR employs a fail-open
-system, and even when trouble occurs, communication is never
-interrupted,” said Mr. Matsuura. “In contrast, most security devices
-adopt a fail-close system, which makes them inappropriate for use
-over a shared network,” he added. In his opinion, “ThreatARMOR
-is ideal for helping to strengthen the security of service
-providers’ networks.”
+BEST ZERO-DAY CATCH RATE
+To achieve the world’s best malware catch rate at record speed,
+SandBlast Network employs numerous innovative, proprietary
+technologies. These include pre-emptive user protections, a vast network
+of up-to-the-moment threat intelligence and revolutionary AI
+and non-AI engines.
+Pre-emptive User Protections
+To protect users across email and web, SandBlast network employs
+pre-emptive user protections, namely threat extraction and advanced
+email protections.
+• SandBlast Threat Extraction promptly delivers clean and
+reconstructed versions of potentially malicious files that are received by
+email or downloaded from the web. Maintaining uninterrupted business
+flow, while emulation continues in the background, SandBlast Threat
+Extraction eliminates unacceptable delays created by traditional
+sandboxes, offering a practical prevention-first strategy that blocks
+malicious content from reaching users at all. SandBlast Threat
+Extraction instantly cleans web downloads and email with the industry’s
+only fully integrated document and image sanitization solution.
+• Advanced Email Protections – With emails accounting for 94% of
+worldwide breaches3, defending against phishing, business email
+compromise (BEC), social engineering and other email-based threats
+has become imperative. SandBlast Network protects users against
+these threats, using Threat Extraction to eliminate risk from all
+incoming email, as well as vetting all aspects of email messages
+before they enter your users’ mailbox, including email attachments,
+email links, sender and recipient details and the text within. To this
+end, SandBlast Network evaluates over 300 parameters per email with
+multiple innovative technologies and rules-based engines, that include
+Natural Language Processing (NLP), Threat Emulation, AI-based
+phishing protection, AI-based fraud protection, URL reputation,
+emulating clicks on links and Click-Time Protection (also called URL
+rewriting) which analyzes and blocks malicious links in real time, as
+they are clicked.
+ThreatCloud – Dynamic Threat Intelligence Repository
+Comprising the largest repository of real-time, security intelligence—
+utilized in four billion security decisions daily—Check Point ThreatCloud
+examines suspicious files and emails with breakthrough AI engines to
+determine if they are malicious or benign.
+Powering SandBlast Network’s zero day protection, including antiphishing and safe browsing, ThreatCloud gleans cyber attack data from:
+• Hundreds of millions of protected assets worldwide across cloud,
+endpoints and networks
+• Over 100,000 security gateways
+• Top notch research by Check Point Research Labs
+• The industry’s best threat intelligence feeds
 
-NUMBER OF INTRUSIONS DETECTED BY IDS
-REDUCED TO ONE-FIFTH WITH FURTHER
-REDUCTIONS EXPECTED
-After seeing the demo, Hyper Box moved quickly and
-ThreatARMOR went into operation at the end of March. In the 
-
-early stages, performance and functions were tested once again
-in a TAP/remote mode and also monitored. However, after about a
-month, the system was switched to an inline/block mode.
-ThreatARMOR blocked 4% of all Hyper Box’s traffic. Considering
-the enormous amount of traffic flowing into Hyper Box’s shared
-networks, this percentage meant that a considerable number
-of attacks was successfully blocked. The number of intrusions
-detected by the IDSs decreased from 1 million cases to 200k
-cases. In addition, Mr. Matsuura saw a decrease in the amount of
-spam e-mails.
-Mr. Matsuura appreciated how easy it was to implement
-ThreatARMOR, and noted that the sophisticated management
-interface is especially user-friendly. He was particularly pleased
-with how the system status can be checked by merely looking
-at a dashboard. He said that he used to frantically watch the
-logs of firewalls and IDSs. Now, however, blocked attacks can be
-recognized at a glance, providing peace of mind.
-“Thanks to ThreatARMOR, we can devote our time to research
-and planning, in order to provide better services,” said Mr.
-Matsuura. In addition, he is looking forward to seeing how Ixia
-expands the range and applications of ThreatARMOR in
-the future.
+AI-Generated Threat Emulation Verdicts
+Inspecting files and emails for which no threat intelligence exists, SandBlast Network performs deep CPU-level emulation
+that is resistant to the most evasive attacks, even by nation states. It also employs OS-level inspection to examine a
+broad range of file types, including executables and documents, and emulates threats across PC and Mac devices,
+ensuring the best zero-day protection for all enterprise users.
+SandBlast Network leverages the power of data science to detect the newest threats with exhaustive AI engines and rich
+rule-based engines that process millions of parameters collected from runtime behaviors—reaching a single conclusive
+AI-generated verdict. AI heuristics are continually optimized against the latest threats unleashed to the wild.
+INTUITIVE MANAGEMENT
+SandBlast Network offers single click setup4 of security policies thanks to out-of-the-box best practice profiles that eliminate
+the need to manually configure policies for each network segment, e.g. data center, guest network, perimeter, internal
+network etc. Network settings are optimized per business need to provide the most effective security while maintaining
+optimal network performance. By only deploying policies that are relevant to the specific network segment being protected,
+organizations save on bandwidth and processing power for a more cost-effective zero-day protection strategy.
+And thanks to auto-updated threat prevention engines, organizations always run with the latest features, best practice policies
+and technology, as these are automatically updated in the background, with no need to push policy updates manually.
+Supports Current SIEM and SOC Workflows
+SandBlast Network offers advanced network forensics and actionable intelligence that integrate with your SIEM and SOC
+infrastructure, enabling security teams to:
+• Quickly integrate logs and forensic reports into their SIEM platform
+• Enforce private threat intelligence in SandBlast Network
+• Accelerate investigation and time-to-remediation with advanced forensics
+• Gain visibility into zero-day phishing and malware targeting the network, including malware families, MITRE
+ATT&CK techniques used and much more
+• Build confidence in a prevention-first strategy through insights and transparency
+Compliance and Reporting
+Serving as the gold standard for efficient security management, Check Point’s R80 console provides enterprise and
+government-grade compliance and reporting, including:
+• Compliance – Easy-to-use best practices, mapped to a broad array of regulatory mandates, offer full visibility into your
+compliance stance with actionable configuration guidelines, and instant alerts that apprise of any policy changes in real time
+• Logging and Reporting – Generate audit-ready reports, view logs online, integrate them right into your log server or
+SIEM with our broad integration ecosystem, or export them as needed
+SMOOTH BUSINESS PRODUCTIVITY
+SandBlast Network is the only zero-day protection solution that does not compromise business productivity, enabling a
+true prevention-first strategy. Letting users maintain their current email and browsing workflows, SandBlast Threat
+Extraction cleans email attachments and web downloads in 1.5 seconds, while slashing administration overhead by
+up to 70%. .
+Thanks to blazing-speed, AI-generated Threat Emulation verdicts, Sandblast Network protects user activity across email,
+web and networks, for powerful zero-day protection against multiple attack vectors.
