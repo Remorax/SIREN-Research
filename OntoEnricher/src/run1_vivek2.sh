@@ -10,4 +10,4 @@
 module load cuda/10.2
 module load cudnn/7.6.5-cuda-10.2 
 
-python3 LSTM_instances.py data_instances.pkl results_instances.txt Output_instances instances.pt
+python3 test_instance.py data_instances.pkl results_instances.txt Output_instances instances.pt
