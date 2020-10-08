@@ -225,7 +225,7 @@ def test(nodes_test, paths_test, counts_test, targets_test, message):
     max_paths = max([len(elem) for elem in counts_test])
 
     dataset_size = len(nodes_test)
-    batch_size = min(32, dataset_size)
+    batch_size = min(16, dataset_size)
     num_batches = int(ceil(dataset_size/batch_size))
 
     for batch_idx in range(num_batches):
@@ -270,5 +270,9 @@ with torch.no_grad():
     test(nodes_instances3, paths_instances_old3, counts_instances_old3, targets_instances3, "Instances3 (original)")
     test(nodes_instances3, paths_instances_new3, counts_instances_new3, targets_instances3, "Instances3 (webpage)")
     test(nodes_instances3, paths_instances3, counts_instances3, targets_instances3, "Instances3 (hybrid)")
+
+    test(nodes_instances4, paths_instances_old4, counts_instances_old4, targets_instances4, "Instances4 (original)")
+    test(nodes_instances4, paths_instances_new4, counts_instances_new4, targets_instances4, "Instances4 (webpage)")
+    test(nodes_instances4, paths_instances4, counts_instances4, targets_instances4, "Instances4 (hybrid)")
 
 op_file.close()
