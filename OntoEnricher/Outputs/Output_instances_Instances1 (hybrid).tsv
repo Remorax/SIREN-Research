@@ -1,0 +1,744 @@
+Color Profiles Image	basic features	none	none
+modern operating system	OS	hypernym	hypernym
+modern operating system	Part	hypernym	none
+Color Profiles Image	Part	none	none
+OS	basic features	none	none
+modern operating system	basic features	hypernym	none
+modern operating system	Color Profiles Image	none	none
+OS	Part	none	none
+Part	basic features	none	none
+OS	Color Profiles Image	none	none
+feature	attackers	none	none
+attackers	accessible attack surface	hyponym	none
+information disclosure	remote code execution	hyponym	none
+information disclosure	feature	hypernym	none
+feature	Image parsing	none	none
+information disclosure	attackers	hypernym	none
+attackers	remote code execution	none	none
+attackers	Image parsing	none	none
+accessible attack surface	Image parsing	hypernym	hyponym
+Image parsing	vulnerability	hypernym	hypernym
+information disclosure	Image parsing	hyponym	none
+feature	remote code execution	hyponym	none
+remote code execution	vulnerability	hypernym	none
+remote code execution	accessible attack surface	none	none
+attackers	vulnerability	hypernym	none
+remote code execution	Image parsing	hypernym	none
+feature	accessible attack surface	none	none
+information disclosure	accessible attack surface	hyponym	none
+information disclosure	vulnerability	hypernym	none
+accessible attack surface	vulnerability	hypernym	hypernym
+feature	vulnerability	hypernym	none
+harness	Windows OS’ built-in image parsers	none	none
+vulnerabilities	fuzzing	hyponym	none
+fuzzing	harness	hypernym	none
+fuzzing	Windows OS’ built-in image parsers	none	none
+I	harness	none	none
+I	Windows OS’ built-in image parsers	none	none
+related file formats	Windows OS’ built-in image parsers	none	none
+related file formats	vulnerabilities	hypernym	none
+multi-part blog series	harness	hypernym	none
+multi-part blog series	Windows OS’ built-in image parsers	none	none
+corpus	harness	hypernym	none
+corpus	Windows OS’ built-in image parsers	none	none
+corpus	related file formats	none	none
+multi-part blog series	I	none	none
+vulnerabilities	Windows OS’ built-in image parsers	hyponym	none
+vulnerabilities	harness	hypernym	none
+multi-part blog series	related file formats	hypernym	none
+I	vulnerabilities	none	none
+corpus	I	none	none
+I	fuzzing	none	none
+multi-part blog series	corpus	hypernym	none
+related file formats	harness	none	none
+related file formats	fuzzing	none	none
+multi-part blog series	vulnerabilities	hypernym	none
+I	related file formats	none	none
+multi-part blog series	fuzzing	hypernym	none
+corpus	vulnerabilities	none	none
+corpus	fuzzing	hyponym	none
+part	series	none	none
+image format	I	none	none
+images	series	none	none
+image format	series	hypernym	none
+images	I	none	none
+I	part	none	none
+color profiles	something	none	none
+itself	part	hypernym	none
+color profiles	images	none	none
+image format	itself	none	none
+itself	series	none	none
+I	series	none	none
+image format	part	hypernym	none
+images	something	none	none
+color profiles	part	hypernym	none
+color profiles	itself	hypernym	none
+color profiles	image format	hypernym	none
+something	itself	none	none
+something	I	none	none
+something	image format	none	none
+something	series	none	none
+images	part	none	none
+something	part	none	none
+color profiles	series	hypernym	none
+images	itself	none	none
+color profiles	I	none	none
+images	image format	none	none
+itself	I	none	none
+What	ICC Color Profile	none	none
+color space	more-than-adequate description	none	none
+data	set	hyponym	none
+color space	set	hypernym	none
+standards	more-than-adequate description	none	none
+color management	color input or output device	none	none
+ICC	color input or output device	none	none
+more-than-adequate description	color input or output device	none	none
+color space	ICC color profiles	none	none
+data	ICC color profiles	none	none
+ICC color profiles	set	none	none
+data	color space	none	none
+ICC color profiles	ICC	none	none
+data	ICC	none	none
+color space	ICC	none	none
+International Color Consortium	ICC	none	none
+data	color input or output device	none	none
+International Color Consortium	Wikipedia	none	none
+ICC profile	Wikipedia	none	none
+data	International Color Consortium	none	none
+Wikipedia	color input or output device	none	none
+data	color management	hyponym	none
+color management	ICC profile	none	none
+color management	ICC	none	none
+more-than-adequate description	ICC profile	none	none
+International Color Consortium	ICC profile	none	none
+standards	set	none	none
+ICC	Wikipedia	none	none
+color management	Wikipedia	none	none
+standards	ICC color profiles	none	none
+more-than-adequate description	Wikipedia	none	none
+set	color input or output device	none	none
+color space	International Color Consortium	none	none
+ICC	ICC profile	none	none
+standards	color input or output device	none	none
+ICC color profiles	International Color Consortium	none	none
+data	Wikipedia	none	none
+standards	color management	instance	none
+color management	color space	hypernym	none
+data	ICC profile	none	hyponym
+color space	ICC profile	none	none
+set	ICC profile	none	none
+color management	International Color Consortium	none	none
+ICC color profiles	ICC profile	none	none
+color management	more-than-adequate description	none	none
+color space	Wikipedia	none	none
+set	Wikipedia	none	none
+ICC	more-than-adequate description	none	none
+ICC color profiles	Wikipedia	none	none
+standards	Wikipedia	none	none
+color management	set	hypernym	none
+more-than-adequate description	set	none	none
+data	standards	hypernym	none
+International Color Consortium	set	none	none
+standards	ICC profile	none	none
+data	more-than-adequate description	none	none
+International Color Consortium	more-than-adequate description	none	none
+standards	color space	none	none
+ICC profile	color input or output device	none	none
+color management	ICC color profiles	none	none
+standards	ICC	none	none
+International Color Consortium	color input or output device	none	none
+color space	color input or output device	none	none
+ICC	set	none	none
+standards	International Color Consortium	none	none
+ICC color profiles	more-than-adequate description	none	none
+ICC color profiles	color input or output device	none	none
+PCS	Profiles	none	none
+device source	viewing requirement	none	none
+mapping	profile connection space	hyponym	none
+Profiles	profile connection space	none	none
+particular device	mapping	none	none
+PCS	viewing requirement	none	none
+color attributes	viewing requirement	hypernym	none
+Profiles	particular device	none	none
+particular device	device source	none	none
+viewing requirement	profile connection space	none	none
+PCS	profile connection space	none	none
+device source	profile connection space	hyponym	none
+mapping	viewing requirement	none	none
+color attributes	particular device	hypernym	none
+PCS	particular device	none	none
+Profiles	viewing requirement	none	none
+color space	profile connection space	none	none
+color attributes	color space	none	none
+color attributes	profile connection space	none	none
+color attributes	PCS	none	none
+PCS	color space	none	none
+color space	particular device	none	none
+color space	viewing requirement	none	none
+particular device	viewing requirement	hyponym	none
+PCS	device source	none	none
+color space	mapping	hypernym	none
+PCS	mapping	none	none
+color attributes	mapping	hypernym	none
+color space	device source	hypernym	none
+color attributes	Profiles	none	none
+Profiles	device source	none	none
+color attributes	device source	none	none
+mapping	device source	hyponym	none
+Profiles	mapping	none	none
+particular device	profile connection space	none	none
+color space	Profiles	none	none
+L*a*b	PCS	none	none
+PCS	CIELAB	none	none
+L*a*b	CIELAB	none	none
+series	parameters	none	none
+tables	parameters	hypernym	none
+tables	interpolation	hypernym	none
+tables	series	hypernym	none
+tables	Mappings	none	none
+parameters	Mappings	none	none
+parameters	interpolation	none	none
+series	Mappings	none	none
+series	interpolation	none	none
+Mappings	interpolation	none	none
+series	transformations	none	none
+transformations	interpolation	none	none
+parameters	transformations	none	none
+transformations	Mappings	none	none
+tables	transformations	hypernym	none
+images	software processes	none	none
+images	ICC color profile	none	none
+binary file	software processes	hypernym	none
+binary file	ICC color profile	none	hyponym
+software processes	ICC color profile	none	none
+ICC	simpler terms	none	none
+ICC color profile	simpler terms	none	none
+software processes	ICC	none	none
+binary file	ICC	none	none
+images	ICC	none	none
+ICC	ICC color profile	none	none
+images	simpler terms	instance	none
+binary file	simpler terms	hypernym	none
+images	binary file	hyponym	hyponym
+software processes	simpler terms	hyponym	none
+ICC specification	100 pages	none	none
+math	different types	none	none
+file format	specifications	none	none
+better understanding	different types	hypernym	none
+file format	color transformation	none	none
+color profiles	different types	none	none
+color transformation	different types	hypernym	none
+color profiles	file format	none	none
+math	file format	none	none
+math	color transformation	hyponym	none
+better understanding	file format	hypernym	none
+math	specifications	none	none
+better understanding	specifications	none	none
+color profiles	specifications	none	none
+file format	different types	none	none
+better understanding	color transformation	hypernym	none
+color profiles	color transformation	none	none
+color transformation	specifications	none	none
+different types	specifications	none	none
+color profiles	better understanding	hypernym	none
+color profiles	math	none	none
+math	better understanding	none	none
+us	understanding	none	none
+fuzzing dictionaries	file format internals	none	none
+information	good corpus	none	none
+fuzzing	good corpus	none	none
+information	fuzzing	hyponym	none
+us	information	none	none
+fuzzing dictionaries	information	hypernym	none
+file format internals	fuzzing	hypernym	none
+us	good corpus	none	none
+us	file format internals	none	none
+understanding	fuzzing	hyponym	none
+us	fuzzing	hyponym	none
+file format internals	good corpus	none	none
+fuzzing dictionaries	understanding	hypernym	none
+understanding	file format internals	none	none
+fuzzing dictionaries	fuzzing	hypernym	none
+fuzzing dictionaries	us	hypernym	none
+understanding	information	hypernym	none
+understanding	good corpus	instance	none
+information	file format internals	none	none
+fuzzing dictionaries	good corpus	hypernym	none
+Windows	Windows Windows	none	none
+Windows	History	none	none
+Color Management	Windows Windows	none	none
+Color Management	History	none	none
+Windows	Color Management	none	none
+Windows Windows	History	none	none
+Image Color Management (ICM) version	Color Management	none	none
+Color Management	version	none	none
+Image Color Management (ICM) version	History	none	none
+Windows	Image Color Management (ICM) version	none	none
+Windows Windows	version	none	none
+Image Color Management (ICM) version	Windows Windows	none	none
+History	version	none	none
+Image Color Management (ICM) version	version	none	none
+Windows	version	none	none
+WCS	Windows Color System	none	none
+major overhaul	Windows Vista	none	none
+major overhaul	WCS	none	none
+Windows Vista	Windows Color System	none	none
+major overhaul	Windows Color System	none	none
+WCS	Windows Vista	none	none
+WCS color profiles	XML file format	none	none
+ICC color profiles	WCS color profiles	none	none
+WCS color profiles	XML	none	none
+XML	XML file format	none	none
+binary files	XML	hypernym	none
+binary files	XML file format	none	none
+ICC color profiles	XML	none	none
+ICC color profiles	XML file format	none	none
+ICC color profiles	binary files	none	hypernym
+binary files	WCS color profiles	none	none
+I	blog post	none	none
+I	ICC color profiles	none	none
+blog post	ICC color profiles	none	none
+Microsoft	supported Windows APIs	none	none
+Microsoft	list	none	none
+supported Windows APIs	list	hypernym	none
+OpenColorProfile	we	none	none
+MSCMS.dll	OpenColorProfile	none	none
+named APIs	we	hypernym	none
+OpenColorProfile	named APIs	none	concept
+named APIs	it	hypernym	none
+MSCMS.dll	we	none	none
+OpenColorProfile	it	hypernym	none
+MSCMS.dll	it	none	none
+MSCMS.dll	named APIs	none	none
+it	we	none	none
+Adobe’s CMM	CMM	none	concept
+loading	Adobe’s CMM	none	none
+loading	Microsoft’s Color Management Module	none	none
+DLL	Adobe’s CMM	none	none
+loading	generic entry point	hyponym	none
+DLL	generic entry point	none	hypernym
+generic entry point	third-party CMMs	none	none
+loading	third-party CMMs	none	none
+DLL	CMM	none	none
+Microsoft’s Color Management Module	third-party CMMs	none	none
+generic entry point	Adobe’s CMM	none	none
+Adobe’s CMM	third-party CMMs	none	hypernym
+Microsoft’s Color Management Module	DLL	none	none
+Microsoft’s Color Management Module	Adobe’s CMM	none	none
+Microsoft’s Color Management Module	generic entry point	none	none
+generic entry point	CMM	none	none
+loading	CMM	none	none
+DLL	third-party CMMs	none	none
+third-party CMMs	CMM	none	hypernym
+Microsoft’s Color Management Module	CMM	none	concept
+loading	DLL	none	none
+ICM32.dll	Microsoft’s CMM	none	concept
+ICM32.dll	ICM	none	none
+ICM	system32 directory	none	none
+Microsoft’s CMM	ICM	none	none
+ICM32.dll	system32 directory	none	none
+Microsoft’s CMM	system32 directory	none	none
+same code	decades	none	none
+third-party	CMM	none	none
+Windows 95 era	CMM	none	none
+same code	ships	hypernym	none
+security fixes	CMM	none	none
+ships	third-party	none	none
+security fixes	third-party	hypernym	none
+Windows 95 era	third-party	none	none
+Windows 95 era	same code	none	none
+third-party	decades	none	none
+security fixes	same code	hypernym	none
+Windows 95 era	security fixes	none	none
+same code	CMM	none	none
+security fixes	decades	hypernym	none
+Windows 95 era	decades	none	none
+ships	decades	hypernym	none
+decades	CMM	none	none
+same code	third-party	none	none
+security fixes	ships	hypernym	none
+Windows 95 era	ships	none	none
+ships	CMM	none	none
+old module	new vulnerability	hypernym	none
+me	new vulnerability	hyponym	none
+old module	me	hypernym	none
+old module	hope	hypernym	none
+hope	new vulnerability	hyponym	none
+hope	me	none	none
+external researchers	small module	none	none
+small module	fuzzing	concept	none
+small module	review	concept	none
+certain degree	hopes	hypernym	none
+multiple rounds	hopes	none	none
+certain degree	fuzzing	none	none
+certain degree	internal product security teams	hyponym	none
+multiple rounds	internal product security teams	none	none
+external researchers	review	hypernym	none
+small module	internal product security teams	hyponym	none
+internal product security teams	hopes	hypernym	none
+external researchers	fuzzing	none	none
+certain degree	review	none	none
+internal product security teams	fuzzing	hypernym	none
+external researchers	internal product security teams	hyponym	none
+certain degree	multiple rounds	none	none
+small module	multiple rounds	concept	none
+small module	hopes	hypernym	none
+multiple rounds	fuzzing	hypernym	none
+external researchers	multiple rounds	none	none
+hopes	fuzzing	none	none
+external researchers	certain degree	none	none
+review	internal product security teams	none	none
+external researchers	hopes	none	none
+review	multiple rounds	instance	none
+review	hopes	hypernym	none
+review	fuzzing	hyponym	none
+small module	certain degree	hypernym	none
+relative silence	ICM32	none	none
+relative silence	Project Zero and ZDI researchers	none	none
+relative silence	we	hypernym	none
+Project Zero and ZDI researchers	recent vulnerabilities	none	none
+ICM32	we	none	none
+Project Zero and ZDI researchers	we	none	none
+recent vulnerabilities	multiple bugs	none	hyponym
+relative silence	recent vulnerabilities	none	none
+recent vulnerabilities	we	hypernym	none
+ICM32	multiple bugs	none	none
+Project Zero and ZDI researchers	multiple bugs	none	none
+ICM32	recent vulnerabilities	none	none
+we	multiple bugs	none	none
+ICM32	Project Zero and ZDI researchers	none	none
+relative silence	multiple bugs	none	none
+Windows	ICM APIs	none	none
+Windows	API sequence	none	none
+API sequence	MSDN	none	none
+MSDN	we	none	none
+ICM APIs	we	hypernym	none
+Windows	ICC related operations	none	none
+API sequence	we	hypernym	none
+ICC related operations	MSDN	none	none
+API sequence	list	none	none
+Windows	MSDN	none	none
+Windows	list	none	none
+list	ICM APIs	none	none
+ICC related operations	we	hypernym	none
+API sequence	ICM APIs	none	instance
+Windows	we	none	none
+list	MSDN	none	none
+API sequence	ICC related operations	none	none
+ICC related operations	list	hypernym	none
+list	we	hypernym	none
+MSDN	ICM APIs	none	none
+ICC related operations	ICM APIs	none	none
+hope	EXEs	none	none
+API sequence	ways	hypernym	none
+hope	ways	hypernym	none
+API sequence	EXEs	none	none
+color profile APIs	disassembly	none	none
+disassembly	EXEs	none	none
+disassembly	ways	none	none
+API sequence	color profile APIs	none	hyponym
+API sequence	disassembly	none	none
+API sequence	hope	none	none
+color profile APIs	EXEs	none	none
+Windows DLLs	hope	none	none
+Windows DLLs	disassembly	none	none
+color profile APIs	Windows DLLs	none	none
+Windows DLLs	EXEs	none	none
+Windows DLLs	ways	none	none
+API sequence	Windows DLLs	none	none
+EXEs	ways	none	none
+color profile APIs	ways	hypernym	none
+color profile APIs	hope	hypernym	none
+disassembly	hope	none	none
+Little CMS	open source Color Management Systems	none	concept
+LCMS	harness	none	none
+approach	open source Color Management Systems	none	none
+approach	Little CMS	none	none
+harness	open source Color Management Systems	none	none
+Little CMS	harness	none	none
+LCMS	open source Color Management Systems	none	concept
+LCMS	approach	none	none
+LCMS	Little CMS	none	none
+approach	harness	hypernym	none
+color transformations	APIs	hypernym	none
+color profiles	color transformations	none	none
+color profiles	functionality	hypernym	none
+small set	APIs	none	none
+small set	color transformations	none	none
+functionality	color transformations	hyponym	none
+color profiles	small set	none	none
+color profiles	APIs	none	none
+functionality	APIs	hyponym	none
+small set	functionality	none	none
+Dictionary Sites	Corpus	none	none
+multiple color profiles	Corpus	none	none
+multiple color profiles	Dictionary Sites	none	none
+multiple color profiles	internet	hypernym	none
+Corpus	internet	none	none
+Dictionary Sites	internet	none	none
+images	other main source	none	none
+color profile	other main source	none	none
+images	color profile	none	none
+programming/tools color profile	to stand-alone files	none	none
+programming/tools color profile	programming/tools	none	none
+many image files	other main source	none	none
+images	programming/tools color profile	instance	none
+programming/tools color profile	many image files	concept	none
+programming/tools color profile	color profile	concept	none
+many image files	to stand-alone files	hypernym	none
+programming/tools	to stand-alone files	hyponym	none
+images	many image files	hyponym	none
+other main source	to stand-alone files	none	none
+programming/tools	many image files	concept	none
+many image files	color profile	none	none
+programming/tools	other main source	none	none
+programming/tools	color profile	concept	none
+images	to stand-alone files	hyponym	none
+color profile	to stand-alone files	hyponym	none
+programming/tools color profile	other main source	none	none
+images	programming/tools	instance	none
+corpus	we	none	none
+specification	seven different color profiles	none	none
+specification	we	none	none
+seven different color profiles	one sample	hypernym	none
+corpus	seven different color profiles	instance	none
+corpus	one sample	none	none
+we	one sample	none	none
+corpus	specification	none	none
+specification	one sample	none	none
+we	seven different color profiles	none	none
+fuzzing	first set	none	none
+fuzzing	corpuses	hypernym	none
+corpuses	code coverage information	hyponym	none
+first set	corpuses	none	none
+fuzzing	code coverage information	none	none
+first set	code coverage information	none	none
+dictionary	specifications	hypernym	none
+list	specifications	hypernym	none
+fuzzer	values	none	none
+additional code paths	specifications	hypernym	none
+fuzzer	specifications	none	none
+fuzzer	additional code paths	concept	none
+list	values	hypernym	none
+fuzzer	dictionary	none	none
+fuzzer	list	none	none
+values	unique tag names	hyponym	none
+additional code paths	unique tag names	none	none
+unique tag names	specifications	none	none
+dictionary	unique tag names	none	none
+list	additional code paths	none	none
+list	unique tag names	hyponym	none
+list	dictionary	hypernym	none
+fuzzer	unique tag names	none	none
+values	specifications	hypernym	none
+values	additional code paths	none	none
+values	dictionary	hypernym	none
+dictionary	additional code paths	none	none
+One	dictionaries	none	none
+One	LCMS	none	none
+open source fuzzing attempts	LCMS	none	none
+LCMS	dictionaries	none	none
+open source fuzzing attempts	One	hypernym	none
+open source fuzzing attempts	dictionaries	hypernym	none
+16-core machine	harness	hypernym	none
+I	first set	none	none
+harness	first set	none	none
+I	corpuses	none	none
+16-core machine	I	none	none
+harness	corpuses	instance	none
+16-core machine	corpuses	instance	none
+16-core machine	first set	none	none
+MSCMS.dll	ICM32.dll	none	none
+MSCMS.dll	feedback	none	none
+fuzzer	feedback	hypernym	none
+ICM32.dll	Code coverage information	none	none
+fuzzer	MSCMS.dll	none	none
+fuzzer	ICM32.dll	none	none
+fuzzer	Code coverage information	none	none
+ICM32.dll	feedback	none	none
+MSCMS.dll	Code coverage information	none	none
+feedback	Code coverage information	none	none
+days	Crashes	none	none
+couple	Crashes	none	none
+couple	days	none	none
+file	stream	hypernym	none
+file	ncl2’ tag/element	instance	none
+code	stream	hypernym	none
+file	size	hypernym	none
+ncl2’ tag/element	stream	hypernym	none
+ncl2’ tag/element	code	hypernym	none
+size	stream	none	none
+file	code	hypernym	none
+code	size	hypernym	none
+ncl2’ tag/element	size	hypernym	none
+complete content	same call	none	none
+element	buffer	none	none
+element	complete content	none	none
+same call	buffer	hypernym	none
+element	same call	none	none
+complete content	buffer	hypernym	none
+/write	number	none	none
+number	buffer	hypernym	none
+values	/write	none	none
+buffer size	buffer	hypernym	none
+values	number	hypernym	none
+buffer size	values	hypernym	none
+number	count	hypernym	none
+values	buffer	none	none
+buffer size	number	hypernym	none
+values	count	none	none
+/write	buffer	none	none
+buffer size	/write	none	none
+buffer	count	none	none
+buffer size	count	none	none
+/write	count	none	none
+offset	buffer pointer	hyponym	none
+offset	verification	hypernym	none
+verification	buffer pointer	none	none
+vulnerability	buffer pointer	hyponym	none
+vulnerability	verification	hyponym	none
+vulnerability	offset	hyponym	none
+error	3 byte	instance	none
+Microsoft	bug	none	none
+bug	fix	none	none
+Microsoft	verification	none	none
+bug	verification	hypernym	none
+verification	fix	hypernym	none
+Microsoft	fix	none	none
+content	allocation	hypernym	none
+content	Additional Vulnerabilities	none	none
+previous vulnerability	allocation	hypernym	none
+CMGetPartialProfileElement function	previous vulnerability	none	none
+Additional Vulnerabilities	one	hypernym	none
+CMGetPartialProfileElement function	allocation	none	none
+one	allocation	none	none
+CMGetPartialProfileElement function	content	hypernym	none
+CMGetPartialProfileElement function	size	hypernym	none
+size	allocation	hypernym	none
+content	size	hypernym	none
+pattern	one	hypernym	none
+content	pattern	hypernym	none
+content	one	hypernym	none
+CMGetPartialProfileElement function	pattern	hypernym	none
+pattern	size	hypernym	none
+size	previous vulnerability	none	none
+Additional Vulnerabilities	size	hypernym	none
+CMGetPartialProfileElement function	Additional Vulnerabilities	none	none
+pattern	previous vulnerability	none	none
+Additional Vulnerabilities	allocation	hypernym	none
+previous vulnerability	one	hypernym	none
+pattern	allocation	hypernym	none
+Additional Vulnerabilities	previous vulnerability	hypernym	none
+Additional Vulnerabilities	pattern	hypernym	none
+content	previous vulnerability	none	none
+size	one	none	none
+CMGetPartialProfileElement function	one	none	none
+offset	bugs	hypernym	none
+bugs	size	hypernym	none
+offset	size	none	none
+sort	integer overflow	hyponym	none
+offset	pattern	none	none
+integer overflow	size	hypernym	none
+unconstrained size	size	hypernym	none
+sort	bugs	none	none
+unconstrained size	integer overflow	hypernym	none
+bugs	pattern	none	none
+unconstrained size	pattern	hypernym	none
+integer overflow	pattern	hypernym	none
+sort	unconstrained size	none	none
+unconstrained size	offset	none	none
+sort	size	hypernym	none
+unconstrained size	bugs	hypernym	hypernym
+offset	integer overflow	none	none
+integer overflow	bugs	hypernym	hypernym
+sort	pattern	none	none
+sort	offset	hypernym	none
+function	such instances	hyponym	none
+I	function	none	none
+I	such instances	none	none
+I	unchecked offset access	none	none
+three instances	unchecked offset access	none	none
+I	three instances	none	none
+exported and documented MSCMS functions	GetNamedProfileInfo	none	none
+exported and documented MSCMS functions	functions	hypernym	hypernym
+functions	GetNamedProfileInfo	none	none
+other two functions	allocBuffer	none	none
+minimum length check	size	hypernym	none
+ncl2’ elements	bound read	none	none
+ncl2’ elements	CMConvIndexToNameProfile	none	none
+size	other two functions	hyponym	none
+ncl2’ elements	size	none	none
+offsets	ncl2’ elements	none	none
+minimum length check	other two functions	concept	none
+minimum length check	ncl2’ elements	none	none
+CMConvIndexToNameProfile	bug	none	none
+other two functions	bound read	none	none
+offsets	minimum length check	hyponym	none
+CMConvIndexToNameProfile	bound read	none	none
+offsets	bug	hypernym	none
+minimum length check	CMConvIndexToNameProfile	none	none
+offsets	bound read	none	none
+ncl2’ elements	other two functions	concept	none
+size	CMConvIndexToNameProfile	none	none
+CMConvIndexToNameProfile	allocBuffer	none	none
+offsets	CMConvIndexToNameProfile	none	none
+other two functions	bug	none	none
+minimum length check	bug	none	none
+size	allocBuffer	none	none
+offsets	allocBuffer	none	none
+size	bug	hypernym	none
+CMConvIndexToNameProfile	other two functions	none	none
+minimum length check	allocBuffer	none	none
+bug	allocBuffer	none	none
+offsets	other two functions	instance	none
+ncl2’ elements	allocBuffer	none	none
+allocBuffer	bound read	none	none
+minimum length check	bound read	none	none
+bug	bound read	none	none
+ncl2’ elements	bug	none	none
+size	bound read	none	none
+offsets	size	hypernym	none
+Windows binaries	fact	none	none
+three vulnerabilities	Windows binaries	none	none
+none	functions	none	none
+three vulnerabilities	Microsoft	hypernym	none
+Microsoft	fact	none	none
+three vulnerabilities	functions	hypernym	none
+Microsoft	functions	none	none
+three vulnerabilities	none	hypernym	none
+Microsoft	none	none	none
+none	Windows binaries	none	none
+functions	fact	hypernym	none
+three vulnerabilities	fact	hypernym	none
+Microsoft	Windows binaries	none	none
+none	fact	hypernym	none
+functions	Windows binaries	none	none
+Windows	third-party software	none	concept
+we	APIs	none	none
+third-party software	APIs	hypernym	none
+we	third-party software	hyponym	none
+Windows	APIs	none	none
+blog series	we	none	none
+color profiles	we	hypernym	none
+harness	we	hypernym	none
+color profiles	corpus	none	none
+blog series	corpus	none	none
+multiple vulnerabilities	corpus	hypernym	none
+part	we	none	none
+part	harness	none	none
+multiple vulnerabilities	part	hypernym	none
+blog series	part	hypernym	none
+blog series	color profiles	none	none
+blog series	harness	none	none
+color profiles	harness	none	none
+multiple vulnerabilities	we	hypernym	none
+color profiles	multiple vulnerabilities	none	none
+blog series	multiple vulnerabilities	none	none
+multiple vulnerabilities	harness	hypernym	none
+corpus	part	none	none
+we	vulnerability class	hyponym	none
+part	vulnerability class	hyponym	none
+uninitialized memory	vulnerability class	none	hypernym
+we	uninitialized memory	hyponym	none
+uninitialized memory	part	hypernym	none
+we	part	none	none

@@ -1,0 +1,462 @@
+IXIA THREATARMOR Hyper Box	Japanese Internet industry	concept	none
+recent years	HYPER BOX TACKLES ATTACK TRAFFIC	none	none
+glut	cyberattacks	hyponym	none
+IXIA THREATARMOR Hyper Box	veteran	concept	none
+veteran	Japanese Internet industry	none	none
+glut	HYPER BOX TACKLES ATTACK TRAFFIC	instance	none
+recent years	cyberattacks	hypernym	none
+HYPER BOX TACKLES ATTACK TRAFFIC	cyberattacks	hypernym	none
+HYPER BOX TACKLES ATTACK TRAFFIC	veteran	hypernym	none
+recent years	Japanese Internet industry	none	none
+recent years	veteran	none	none
+IXIA THREATARMOR Hyper Box	HYPER BOX TACKLES ATTACK TRAFFIC	none	none
+HYPER BOX TACKLES ATTACK TRAFFIC	Japanese Internet industry	hypernym	none
+glut	veteran	none	none
+IXIA THREATARMOR Hyper Box	cyberattacks	concept	none
+cyberattacks	Japanese Internet industry	instance	none
+glut	Japanese Internet industry	instance	none
+veteran	cyberattacks	hypernym	none
+recent years	IXIA THREATARMOR Hyper Box	none	none
+glut	IXIA THREATARMOR Hyper Box	instance	none
+glut	recent years	none	none
+they service	shared network	hyponym	none
+daily basis	shared network	none	none
+daily basis	they service	none	none
+attacks	shared network	hyponym	none
+they service	they	none	none
+they service	attacks	hypernym	none
+logs	they service	none	none
+they	shared network	hyponym	none
+logs	shared network	hyponym	none
+powerful security devices	they service	hypernym	none
+powerful security devices	logs	hypernym	none
+logs	they	hypernym	none
+logs	daily basis	none	none
+logs	attacks	hypernym	none
+daily basis	they	none	none
+attacks	they	hypernym	none
+powerful security devices	shared network	hypernym	none
+daily basis	attacks	hypernym	none
+powerful security devices	they	hypernym	none
+powerful security devices	daily basis	hypernym	none
+powerful security devices	attacks	hypernym	none
+Hyper Box promise	Hyper Box	none	none
+Hyper Box promise	Ixia ThreatARMOR	none	none
+Ixia ThreatARMOR	Hyper Box	none	none
+SIEM alerts	result	concept	none
+known bad IP addresses	result	hypernym	none
+Hyper Box promise	SIEM alerts	none	none
+Ixia ThreatARMOR	SIEM alerts	none	none
+known bad IP addresses	SIEM alerts	hypernym	none
+SIEM alerts	Hyper Box	none	none
+result	Hyper Box	instance	none
+Hyper Box promise	result	hypernym	none
+Hyper Box promise	known bad IP addresses	hypernym	none
+Ixia ThreatARMOR	known bad IP addresses	hypernym	none
+Ixia ThreatARMOR	result	hypernym	none
+known bad IP addresses	Hyper Box	hypernym	none
+Hyper Box’s strength data centers	Tokyo	hypernym	none
+Tokyo	Hyper Box’s strength	none	none
+strength robust support structure	Hyper Box’s strength	none	none
+Tokyo	strength robust support structure	none	none
+Hyper Box’s strength data centers	strength robust support structure	hypernym	none
+Hyper Box’s strength data centers	Hyper Box’s strength	none	none
+"industry low-cost, high-quality hosting services"	telephone assistance	hypernym	none
+telephone assistance	Hyper Box	instance	none
+Japan’s first domestic enterprise	industry	hypernym	none
+Japan’s first domestic enterprise	telephone assistance	none	none
+industry	Hyper Box	none	none
+"industry low-cost, high-quality hosting services"	industry	hypernym	none
+"industry low-cost, high-quality hosting services"	Hyper Box	hypernym	none
+Japan’s first domestic enterprise	"industry low-cost, high-quality hosting services"	none	none
+telephone assistance	industry	hypernym	none
+Japan’s first domestic enterprise	Hyper Box	none	instance
+wide range	users	hypernym	none
+technical experience	Hyper Box	none	none
+years	wide range	none	none
+technical experience	years	none	none
+technical experience	users	hypernym	none
+technical experience	wide range	none	none
+wide range	Hyper Box	none	none
+years	Hyper Box	none	none
+years	users	none	none
+users	Hyper Box	none	none
+AUTOMATED RESPONSES	MASSIVE ATTACK TRAFFIC	instance	none
+MASSIVE ATTACK TRAFFIC	MANUAL	hypernym	none
+AUTOMATED RESPONSES	MANUAL	hypernym	none
+cyberattacks	domestic and international service providers	instance	none
+cyberattacks	Hyper Box	instance	none
+domestic and international service providers	Hyper Box	none	none
+attack traffic	network	hypernym	none
+onslaught	attack traffic	hyponym	none
+onslaught	network	hypernym	none
+ways	it	none	none
+user systems	Attack traffic	hyponym	none
+server	user systems	hyponym	none
+extra measures	Attack traffic	none	none
+extra measures	server	hypernym	none
+server	Attack traffic	hyponym	none
+extra measures	user systems	hypernym	none
+Essential security infrastructures	place	hypernym	none
+IDSs	place	hypernym	none
+Essential security infrastructures	firewalls	hypernym	hyponym
+IDSs	firewalls	hypernym	none
+Essential security infrastructures	IDSs	hypernym	hyponym
+firewalls	place	hypernym	none
+users	private enterprises	none	none
+counterattacks	risk	hypernym	none
+user communication	networks	hypernym	none
+private enterprises	shared networks	hyponym	none
+services	networks	hypernym	none
+counterattacks	private enterprises	none	none
+aggressive measures	counterattacks	none	none
+shared networks	networks	hypernym	hypernym
+risk	networks	hypernym	none
+users	shared networks	hyponym	none
+services	user communication	hyponym	hyponym
+shared networks	risk	hypernym	hypernym
+aggressive measures	networks	hypernym	none
+aggressive measures	risk	hypernym	none
+services	users	none	none
+aggressive measures	user communication	hypernym	none
+aggressive measures	private enterprises	none	none
+private enterprises	user communication	hypernym	none
+aggressive measures	users	hypernym	none
+counterattacks	networks	hypernym	none
+services	shared networks	hyponym	none
+user communication	risk	hypernym	none
+services	aggressive measures	hyponym	none
+services	counterattacks	none	none
+counterattacks	user communication	hypernym	none
+aggressive measures	shared networks	hypernym	none
+services	risk	hypernym	none
+counterattacks	users	hypernym	none
+shared networks	user communication	hypernym	none
+users	risk	hypernym	none
+services	private enterprises	none	none
+users	networks	hyponym	none
+users	user communication	hyponym	none
+private enterprises	risk	hypernym	none
+private enterprises	networks	hypernym	none
+counterattacks	shared networks	none	none
+Engineering department	who	none	none
+who	manual countermeasures	none	none
+Mr. Naoya Matsuura	network and security operations	concept	none
+network and security operations	manual countermeasures	hypernym	none
+Mr. Naoya Matsuura	Hyper Box	none	none
+Mr. Naoya Matsuura	result	hypernym	none
+massive attack traffic	who	hypernym	none
+result	Engineering department	hyponym	none
+massive attack traffic	Hyper Box	hypernym	none
+massive attack traffic	Engineering department	hypernym	none
+who	Hyper Box	none	none
+massive attack traffic	manual countermeasures	hypernym	none
+massive attack traffic	Mr. Naoya Matsuura	none	none
+network and security operations	Engineering department	hypernym	none
+Mr. Naoya Matsuura	Engineering department	concept	none
+result	who	none	none
+Mr. Naoya Matsuura	manual countermeasures	none	none
+Engineering department	manual countermeasures	none	none
+Hyper Box	manual countermeasures	none	none
+network and security operations	who	hypernym	none
+massive attack traffic	result	hypernym	none
+Mr. Naoya Matsuura	who	none	none
+Engineering department	Hyper Box	none	none
+result	manual countermeasures	hyponym	none
+massive attack traffic	network and security operations	hypernym	none
+result	network and security operations	hyponym	none
+network and security operations	Hyper Box	hypernym	none
+ThreatARMOR	countermeasures	hypernym	concept
+article	countermeasures	hyponym	none
+countermeasures	Hyper Box	instance	none
+article	Hyper Box	none	none
+ThreatARMOR	article	hypernym	none
+ThreatARMOR	Hyper Box	none	none
+Mr. Matsuura	same idea	none	none
+Mr. Matsuura	unnecessary traffic	none	none
+Mr. Matsuura	manual countermeasures	none	none
+unnecessary traffic	manual countermeasures	hypernym	none
+known threats	manual countermeasures	hypernym	none
+unnecessary traffic	same idea	none	none
+manual countermeasures	same idea	none	none
+concept	unnecessary traffic	none	none
+known threats	unnecessary traffic	none	none
+Mr. Matsuura	known threats	none	none
+concept	known threats	none	none
+known threats	same idea	hypernym	none
+concept	same idea	none	none
+concept	Mr. Matsuura	none	none
+concept	manual countermeasures	none	none
+ThreatARMOR	time	hypernym	none
+new product	time	none	none
+ThreatARMOR	new product	none	concept
+Ixia	actual user machines	hyponym	none
+Mr. Matsuura	actual user machines	none	none
+Ixia	Mr. Matsuura	none	none
+Mr. Matsuura	new product	none	none
+new product	demonstration	none	none
+ThreatARMOR	proof	concept	none
+concept	new product	none	none
+new product	proof	none	none
+PoC tests	new product	none	none
+concept	network	hypernym	none
+demonstration	proof	hypernym	none
+new product	ThreatARMOR	none	instance
+concept	ThreatARMOR	none	none
+new product	network	hypernym	none
+concept	proof	none	none
+Mr. Matsuura	demonstration	none	none
+Mr. Matsuura	ThreatARMOR	none	none
+demonstration	ThreatARMOR	none	none
+PoC tests	proof	hypernym	none
+concept	demonstration	hypernym	none
+PoC tests	ThreatARMOR	none	none
+PoC tests	network	hypernym	none
+network	ThreatARMOR	instance	none
+Mr. Matsuura	network	hypernym	none
+concept	PoC tests	none	none
+Mr. Matsuura	proof	none	none
+network	demonstration	hypernym	none
+PoC tests	demonstration	hypernym	none
+Mr. Matsuura	PoC tests	none	none
+network	proof	hypernym	none
+blocked traffic	ThreatARMOR	none	none
+main one proprietary “ATI Rap Sheet	blocked traffic	none	none
+many reasons	blocked traffic	none	none
+blocked traffic	main one	hypernym	none
+many reasons	main one	none	none
+Mr. Matsuura	blocked traffic	none	none
+Mr. Matsuura	instance	hypernym	none
+main one proprietary “ATI Rap Sheet	main one	none	none
+many reasons	ThreatARMOR	none	none
+Mr. Matsuura	many reasons	none	none
+main one	instance	none	none
+many reasons	instance	none	none
+main one proprietary “ATI Rap Sheet	Mr. Matsuura	none	none
+main one proprietary “ATI Rap Sheet	instance	hypernym	none
+ThreatARMOR	main one	none	none
+Mr. Matsuura	main one	none	none
+main one proprietary “ATI Rap Sheet	many reasons	none	none
+main one proprietary “ATI Rap Sheet	ThreatARMOR	none	none
+ThreatARMOR	instance	hypernym	none
+blocked traffic	instance	hypernym	none
+ThreatARMOR	simple black box	none	none
+kind	information	none	none
+ThreatARMOR	information	hypernym	none
+kind	simple black box	none	none
+kind	ThreatARMOR	none	none
+information	simple black box	hyponym	none
+I	level	none	none
+I	sensitivity	none	none
+sensitivity	level	hypernym	none
+I	network operation	hyponym	none
+network operation	level	hypernym	none
+sensitivity	network operation	hyponym	none
+trouble	Mr. Matsuura	none	none
+Mr. Matsuura	communication	hypernym	none
+Mr. Matsuura	fail-open system	none	none
+Mr. Matsuura	One reason	none	none
+communication	fail-open system	hyponym	none
+trouble	ThreatARMOR	none	none
+ThreatARMOR	One reason	none	none
+communication	One reason	instance	none
+ThreatARMOR	fail-open system	none	concept
+trouble	communication	hypernym	none
+One reason	fail-open system	none	none
+communication	ThreatARMOR	instance	none
+trouble	One reason	none	none
+trouble	fail-open system	none	none
+use	contrast	hypernym	none
+he	fail-close system	none	none
+use	shared network	hyponym	none
+most security devices	shared network	hypernym	none
+he	use	none	none
+most security devices	contrast	hypernym	none
+most security devices	he	hypernym	none
+fail-close system	shared network	none	none
+fail-close system	contrast	none	none
+most security devices	use	hypernym	none
+he	shared network	hyponym	none
+use	fail-close system	none	none
+he	contrast	none	none
+contrast	shared network	hyponym	none
+most security devices	fail-close system	none	none
+security	opinion	hypernym	none
+opinion	networks	hypernym	none
+service providers	networks	hypernym	none
+security	networks	hypernym	none
+ThreatARMOR	networks	hypernym	none
+service providers	opinion	hypernym	none
+ThreatARMOR	opinion	hypernym	none
+service providers	security	hypernym	none
+service providers	ThreatARMOR	none	none
+security	ThreatARMOR	instance	none
+ThreatARMOR	IDS	hypernym	concept
+INTRUSIONS	IDS	hypernym	none
+March	operation	none	none
+INTRUSIONS	demo	hypernym	none
+IDS	end	hypernym	none
+FURTHER REDUCTIONS	NUMBER	hypernym	none
+IDS	Hyper Box	instance	none
+March	IDS	concept	none
+INTRUSIONS	NUMBER	hypernym	none
+operation	ThreatARMOR	instance	none
+March	demo	none	none
+INTRUSIONS	operation	hypernym	none
+March	ThreatARMOR	none	none
+March	REDUCED	none	none
+FURTHER REDUCTIONS	operation	hypernym	none
+demo	operation	hypernym	none
+demo	REDUCED	none	none
+IDS	REDUCED	none	none
+FURTHER REDUCTIONS	IDS	hypernym	none
+end	REDUCED	none	none
+NUMBER	REDUCED	none	none
+ThreatARMOR	REDUCED	none	none
+March	Hyper Box	none	none
+operation	NUMBER	hypernym	none
+March	end	none	none
+FURTHER REDUCTIONS	end	hypernym	none
+operation	REDUCED	none	none
+Hyper Box	REDUCED	none	none
+demo	Hyper Box	instance	none
+FURTHER REDUCTIONS	Hyper Box	none	none
+demo	end	concept	none
+operation	IDS	hyponym	none
+INTRUSIONS	end	hypernym	none
+end	Hyper Box	none	none
+FURTHER REDUCTIONS	INTRUSIONS	hypernym	none
+ThreatARMOR	end	hypernym	none
+March	INTRUSIONS	hyponym	none
+FURTHER REDUCTIONS	demo	hypernym	none
+INTRUSIONS	Hyper Box	instance	none
+ThreatARMOR	NUMBER	hypernym	none
+NUMBER	Hyper Box	none	none
+demo	NUMBER	hypernym	none
+NUMBER	end	none	none
+IDS	NUMBER	hypernym	none
+FURTHER REDUCTIONS	March	hypernym	none
+operation	Hyper Box	instance	none
+March	NUMBER	none	none
+FURTHER REDUCTIONS	REDUCED	hypernym	none
+operation	end	hypernym	none
+FURTHER REDUCTIONS	ThreatARMOR	none	none
+demo	IDS	hypernym	none
+demo	ThreatARMOR	none	none
+INTRUSIONS	REDUCED	hypernym	none
+INTRUSIONS	ThreatARMOR	instance	none
+functions	 early stages	none	none
+TAP/remote mode	 early stages	none	none
+performance	TAP/remote mode	instance	none
+TAP/remote mode	functions	hypernym	none
+performance	functions	hypernym	none
+performance	 early stages	none	none
+system	month	hypernym	none
+system	inline/block mode	none	none
+inline/block mode	month	hypernym	none
+Hyper Box’s traffic	ThreatARMOR	none	none
+Hyper Box’s traffic	4%	hypernym	none
+ThreatARMOR	4%	none	none
+attacks	traffic	hypernym	none
+enormous amount	traffic	hypernym	none
+percentage	attacks	hypernym	none
+considerable number	traffic	hypernym	none
+considerable number	shared networks	none	none
+percentage	traffic	hypernym	none
+enormous amount	shared networks	none	none
+enormous amount	percentage	hypernym	none
+shared networks	attacks	hypernym	none
+enormous amount	considerable number	none	none
+considerable number	percentage	hypernym	none
+enormous amount	attacks	hypernym	none
+percentage	shared networks	hyponym	none
+considerable number	attacks	hypernym	none
+shared networks	traffic	hypernym	none
+200k cases	intrusions	hypernym	instance
+200k cases	1 million cases	none	none
+200k cases	number	hypernym	none
+intrusions	IDSs	instance	none
+intrusions	number	hypernym	none
+intrusions	1 million cases	instance	none
+200k cases	IDSs	none	none
+IDSs	number	hypernym	none
+IDSs	1 million cases	none	none
+number	1 million cases	none	none
+decrease	amount	none	none
+decrease	addition	hypernym	none
+Mr. Matsuura	decrease	none	none
+spam e-mails	amount	hypernym	none
+Mr. Matsuura	spam e-mails	none	none
+amount	addition	hypernym	none
+spam e-mails	decrease	hypernym	none
+Mr. Matsuura	amount	hypernym	none
+spam e-mails	addition	hypernym	none
+Mr. Matsuura	addition	hypernym	none
+sophisticated management interface	ThreatARMOR	hypernym	none
+ThreatARMOR	Mr. Matsuura	none	none
+Mr. Matsuura	it	hypernym	none
+sophisticated management interface	Mr. Matsuura	none	none
+sophisticated management interface	it	hypernym	none
+ThreatARMOR	it	hypernym	none
+He	dashboard	none	none
+He	system status	none	none
+dashboard	system status	none	none
+He	firewalls	hyponym	none
+He	IDSs	none	none
+logs	firewalls	hyponym	none
+logs	IDSs	none	none
+He	logs	none	none
+peace	mind	hypernym	none
+peace	blocked attacks	none	none
+glance	mind	hypernym	none
+glance	blocked attacks	none	none
+blocked attacks	mind	hypernym	none
+glance	peace	none	none
+Mr. Matsuura	order	none	none
+Mr. Matsuura	better services	none	none
+order	we	hypernym	none
+better services	we time	none	none
+better services	order	hypernym	none
+ThreatARMOR	we	hypernym	none
+order	research	hypernym	none
+better services	ThreatARMOR	none	none
+we time	we	none	none
+planning	research	hypernym	none
+better services	we	hypernym	none
+research	we	none	none
+ThreatARMOR	order	hypernym	none
+we time	ThreatARMOR	none	none
+planning	better services	none	none
+we time	order	none	none
+Mr. Matsuura	planning	none	none
+ThreatARMOR	research	hypernym	none
+planning	we time	none	none
+we time	research	none	none
+planning	order	none	none
+Mr. Matsuura	we	hypernym	none
+planning	ThreatARMOR	none	none
+Mr. Matsuura	research	hypernym	none
+better services	research	hypernym	none
+planning	we	none	none
+Mr. Matsuura	we time	none	none
+range	ThreatARMOR	none	none
+ThreatARMOR	he	hypernym	none
+range	addition	hypernym	none
+Ixia	future	hypernym	none
+future	addition	hypernym	none
+Ixia	addition	hypernym	none
+range	he	hypernym	none
+applications	range	none	none
+future	he	none	none
+applications	he	instance	none
+Ixia	he	hypernym	none
+future	applications	hypernym	none
+Ixia	range	hypernym	none
+applications	addition	hypernym	none
+applications	ThreatARMOR	instance	instance
+future	ThreatARMOR	none	none
+future	range	none	none
+Ixia	applications	hypernym	none
+Ixia	ThreatARMOR	none	none
+addition	he	hypernym	none
+ThreatARMOR	addition	hypernym	none
