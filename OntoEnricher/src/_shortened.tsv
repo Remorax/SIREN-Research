@@ -1,0 +1,544 @@
+vulnerabilities	real-time threat intelligence	hyponym	none
+actionable recommendations	real-time threat intelligence	hyponym	hyponym
+vulnerabilities	Keysight’s Threat Simulator	instance	none
+vulnerabilities	actionable recommendations	instance	none
+actionable recommendations	Keysight’s Threat Simulator	none	none
+real-time threat intelligence	Keysight’s Threat Simulator	instance	none
+service providers	SecOps platform	none	none
+Breach Defense	security operations	hypernym	none
+Breach Defense	Inc NYSE	none	none
+leading technology company	KEYS	hypernym	none
+service providers	KEYS	hypernym	none
+service providers	leading technology company	hypernym	none
+enterprises	leading technology company	instance	none
+leading technology company	security operations	hypernym	none
+Breach Defense	leading technology company	none	none
+enterprises	world	none	none
+innovation	security operations	hyponym	none
+Inc NYSE	SecOps platform	none	none
+service providers	Inc NYSE	instance	none
+service providers	security operations	hyponym	none
+Inc NYSE	innovation	concept	none
+enterprises	Inc NYSE	none	none
+enterprises	security operations	hyponym	none
+service providers	Keysight Technologies	instance	none
+service providers	innovation	hypernym	none
+Breach Defense	enterprises	hypernym	none
+enterprises	innovation	none	none
+enterprises	SecOps platform	none	none
+Breach Defense	world	hypernym	none
+service providers	Breach Defense	hypernym	none
+security operations	SecOps platform	instance	none
+innovation	SecOps platform	none	none
+enterprises	KEYS	none	none
+Breach Defense	KEYS	hypernym	none
+Inc NYSE	security operations	concept	none
+leading technology company	Inc NYSE	none	none
+service providers	governments	hypernym	none
+service providers	operational security effectiveness	hyponym	none
+leading technology company	SecOps platform	none	none
+leading technology company	innovation	hypernym	none
+Breach Defense	SecOps platform	none	concept
+service providers	enterprises	hypernym	none
+Breach Defense	innovation	hypernym	concept
+Breach Defense	operational security effectiveness	hyponym	none
+service providers	world	hypernym	none
+exploits	operational security	hyponym	none
+effectiveness	network and security operations teams	hypernym	none
+live networks	operational security	hypernym	none
+effectiveness	live networks	instance	none
+network and security operations teams	live networks	hypernym	none
+integral element	new platform	none	none
+network and security operations teams	integral element	concept	none
+effectiveness	new platform	none	none
+network and security operations teams	new platform	hypernym	none
+latest attacks	integral element	hypernym	none
+Threat Simulator breach and attack simulation solution	latest attacks	hypernym	none
+Threat Simulator breach and attack simulation solution	new platform	hypernym	none
+effectiveness	operational security	hyponym	none
+network and security operations teams	operational security	hypernym	hypernym
+latest attacks	live networks	hypernym	none
+integral element	operational security	hypernym	none
+latest attacks	effectiveness	hypernym	none
+latest attacks	network and security operations teams	hypernym	none
+new platform	live networks	hyponym	none
+effectiveness	exploits	none	none
+network and security operations teams	exploits	hypernym	none
+Threat Simulator breach and attack simulation solution	exploits	hypernym	none
+integral element	exploits	hypernym	none
+Threat Simulator breach and attack simulation solution	operational security	hypernym	none
+latest attacks	operational security	hypernym	none
+integral element	live networks	hypernym	none
+new platform	operational security	hyponym	none
+exploits	live networks	hypernym	none
+Threat Simulator breach and attack simulation solution	live networks	hypernym	none
+latest attacks	exploits	hypernym	hyponym
+exploits	new platform	hyponym	none
+Threat Simulator breach and attack simulation solution	network and security operations teams	hypernym	none
+Threat Simulator breach and attack simulation solution	effectiveness	hypernym	none
+Threat Simulator breach and attack simulation solution	integral element	hypernym	none
+latest attacks	new platform	none	none
+effectiveness	integral element	hypernym	none
+Security operations teams organizations	complex network environment	hypernym	none
+attack	Security operations teams	hyponym	none
+attack	Security operations teams organizations	hyponym	none
+Security operations teams	Security operations teams organizations	hyponym	none
+cyber threats	attack	hypernym	none
+cyber threats	Security operations teams	hyponym	none
+attack	complex network environment	hypernym	none
+Security operations teams	complex network environment	hyponym	none
+cyber threats	complex network environment	instance	none
+cyber threats	Security operations teams organizations	hyponym	none
+cyber threats	flood	hypernym	none
+attack	flood	none	none
+Security operations teams	flood	hypernym	none
+Security operations teams organizations	flood	hypernym	none
+breach	50%	instance	none
+50%	Good security tools	hyponym	none
+survey respondents	survey respondents security solution	none	none
+survey respondents security solution	breach	hypernym	none
+survey respondents	breach	hypernym	none
+breach	Good security tools	hyponym	none
+survey respondents security solution	recent Keysight Security Operations Effectiveness survey	none	none
+50%	recent Keysight Security Operations Effectiveness survey	none	none
+survey respondents security solution	50%	hypernym	none
+survey respondents security solution	Good security tools	hypernym	none
+survey respondents	50%	none	none
+breach	recent Keysight Security Operations Effectiveness survey	hyponym	none
+survey respondents	Good security tools	hyponym	none
+survey respondents	recent Keysight Security Operations Effectiveness survey	none	none
+test-based evidence	respondents	none	none
+test-based evidence	respondents security products	none	none
+test-based evidence	Most organizations	none	none
+respondents	respondents security products	none	none
+test-based evidence	35%	none	none
+test-based evidence	security	hypernym	none
+35%	respondents security products	none	none
+35%	security	hypernym	none
+test-based evidence	Most organizations security	none	none
+35%	respondents	none	none
+respondents	security	hyponym	none
+security	respondents security products	hyponym	none
+value	security testing	hyponym	none
+respondents	solution	none	none
+respondents	security testing	hyponym	none
+86%	vulnerabilities	concept	none
+value	solution	hypernym	none
+value	vulnerabilities	concept	none
+value	86%	none	none
+security testing	vulnerabilities	hypernym	none
+respondents	86%	none	none
+security testing	86%	hypernym	none
+respondents	vulnerabilities	hypernym	none
+respondents	value	hypernym	none
+best security products	senior vice president	hypernym	none
+senior vice president	IT solutions provider Sayers	none	none
+cybersecurity	IT solutions provider Sayers	instance	none
+best security products	Doug Close	none	none
+best security products	IT solutions provider Sayers	instance	none
+best security products	cybersecurity	hypernym	none
+best security products	you	hypernym	none
+senior vice president	cybersecurity	instance	none
+detailed recommendations	gaps	hypernym	none
+security gaps	gaps	hypernym	hypernym
+gaps	attacks	hypernym	none
+detailed recommendations	day	hypernym	none
+security gaps	customers	hypernym	none
+customers	gaps	hypernym	none
+security gaps	day	hypernym	none
+customers	day	none	none
+attacks	day	hypernym	none
+security gaps	attacks	hypernym	none
+customers	attacks	hypernym	none
+customers	detailed recommendations	none	none
+security gaps	detailed recommendations	hypernym	none
+detailed recommendations	attacks	hypernym	none
+gaps	day	concept	none
+security gaps	powerful advantage	hypernym	none
+security capabilities	Paula Musich	instance	none
+Paula Musich	market research firm Enterprise Management Associates	none	none
+security capabilities	one point	hypernym	none
+security capabilities	limited visibility	hypernym	none
+security capabilities	time	hypernym	none
+limited visibility	time	hypernym	none
+Paula Musich	limited visibility	none	none
+Paula Musich	time	hypernym	none
+Paula Musich	organization's ongoing security posture	none	none
+security capabilities	organization's ongoing security posture	hyponym	none
+Paula Musich	security and risk management	none	none
+limited visibility	one point	none	none
+time	one point	none	none
+market research firm Enterprise Management Associates	research director	none	none
+security and risk management	time	hypernym	none
+security and risk management	limited visibility	hypernym	none
+market research firm Enterprise Management Associates	one point	none	none
+security and risk management	research director	none	none
+market research firm Enterprise Management Associates	organization's ongoing security posture	none	none
+Paula Musich	one point	none	none
+limited visibility	research director	hypernym	none
+time	research director	none	none
+Paula Musich	research director	none	none
+security and risk management	market research firm Enterprise Management Associates	none	none
+market research firm Enterprise Management Associates	limited visibility	none	none
+market research firm Enterprise Management Associates	time	hypernym	none
+security and risk management	one point	hypernym	none
+security capabilities	security and risk management	hypernym	none
+security capabilities	research director	hypernym	none
+security and risk management	organization's ongoing security posture	hyponym	none
+security capabilities	market research firm Enterprise Management Associates	instance	none
+heart	security	hypernym	none
+processes	security	hypernym	none
+processes	people	hypernym	none
+processes	heart	hypernym	none
+heart	people	hypernym	none
+security	issue	hypernym	none
+processes	issue	hypernym	none
+people	issue	hypernym	none
+heart	issue	hypernym	none
+security	people	hypernym	none
+defenses	regular basis	concept	none
+security operations teams	good security hygiene	hypernym	none
+defenses	attack simulation	instance	none
+exploitable vulnerability	testing	concept	none
+changes	exploitable vulnerability	instance	none
+attack simulation	regular basis	hypernym	none
+testing	security operations teams	hyponym	none
+changes	defenses	hypernym	none
+exploitable vulnerability	defenses	hypernym	none
+testing	attack simulation	instance	none
+changes	testing	hypernym	none
+attack simulation	good security hygiene	hypernym	none
+security operations teams	regular basis	hypernym	none
+security operations teams	defenses	hypernym	none
+testing	regular basis	instance	none
+changes	regular basis	none	none
+defenses	good security hygiene	hyponym	none
+security operations teams	attack simulation	hypernym	none
+exploitable vulnerability	regular basis	hypernym	none
+testing	defenses	hypernym	none
+changes	security operations teams	none	none
+changes	attack simulation	hyponym	none
+exploitable vulnerability	security operations teams	hyponym	none
+exploitable vulnerability	attack simulation	hypernym	none
+exploitable vulnerability	good security hygiene	hyponym	none
+regular basis	good security hygiene	hyponym	none
+changes	good security hygiene	instance	none
+testing	good security hygiene	hyponym	none
+Security Tools	Intended Keysight's Threat Simulator solution	instance	none
+Threat Simulator	Intended Keysight's Threat Simulator solution	none	none
+Threat Simulator	Security Tools	hypernym	concept
+Threat Simulator	Confidence	hypernym	none
+security tools	method	hypernym	hypernym
+method	security tools effectiveness	concept	none
+security tools	security tools effectiveness	hyponym	none
+enterprise security operations teams	security tools effectiveness	hypernym	none
+method	organization	concept	none
+enterprise security operations teams	organization	none	none
+security tools	organization	hypernym	none
+enterprise security operations teams	method	hypernym	none
+security tools	enterprise security operations teams	hypernym	none
+"continuous, automated security assessment"	organizations	hypernym	none
+gaps	end	hypernym	none
+environment drift	security configurations	none	none
+"continuous, automated security assessment"	related group	hypernym	none
+IT	change	none	none
+"continuous, automated security assessment"	security configurations	hypernym	none
+malicious intent	clear remediation steps	none	none
+environment drift	end	hypernym	none
+security configurations	patented recommendation engine	instance	none
+IT	gaps	none	none
+environment drift	malicious intent	none	none
+related group	patented recommendation engine	none	none
+malicious intent	It	hypernym	none
+malicious intent	organizations	concept	none
+clear remediation steps	result	hypernym	none
+environment drift	related group	none	none
+"continuous, automated security assessment"	change	hypernym	none
+security configurations	gaps	hypernym	none
+result	gaps	none	none
+result	It	hypernym	none
+security configurations	IT	hypernym	none
+malicious intent	someone	concept	none
+security configurations	It	hypernym	none
+IT	end	none	none
+related group	end	hypernym	none
+security configurations	end	hypernym	none
+gaps	related group	hypernym	none
+clear remediation steps	patented recommendation engine	hypernym	none
+environment drift	patented recommendation engine	none	none
+malicious intent	gaps	concept	none
+change	end	hypernym	none
+environment drift	It	hypernym	none
+security configurations	someone	hypernym	none
+IT	It	none	none
+security configurations	result	hypernym	none
+result	end	none	none
+malicious intent	change	hypernym	none
+gaps	patented recommendation engine	none	none
+clear remediation steps	organizations	hypernym	none
+clear remediation steps	related group	hypernym	none
+end	It	hypernym	none
+"continuous, automated security assessment"	someone	hypernym	none
+environment drift	clear remediation steps	none	none
+malicious intent	result	concept	none
+change	It	hypernym	none
+malicious intent	patented recommendation engine	none	none
+change	patented recommendation engine	hyponym	none
+result	related group	none	none
+related group	It	hypernym	none
+"continuous, automated security assessment"	It	hypernym	none
+clear remediation steps	someone	hypernym	none
+malicious intent	IT	hypernym	none
+malicious intent	related group	concept	none
+change	organizations	concept	none
+change	related group	none	none
+environment drift	result	hypernym	none
+clear remediation steps	change	hypernym	none
+result	patented recommendation engine	hyponym	none
+environment drift	someone	hypernym	none
+"continuous, automated security assessment"	clear remediation steps	none	none
+result	IT	hypernym	none
+clear remediation steps	gaps	hypernym	none
+result	change	hypernym	none
+clear remediation steps	end	hypernym	none
+result	organizations	none	none
+IT	patented recommendation engine	none	none
+"continuous, automated security assessment"	gaps	hypernym	none
+gaps	It	hypernym	none
+security configurations	change	hypernym	none
+"continuous, automated security assessment"	result	hypernym	none
+clear remediation steps	IT	hypernym	none
+clear remediation steps	It	hypernym	none
+environment drift	organizations	hypernym	none
+security configurations	organizations	hypernym	none
+change	gaps	hypernym	none
+IT	organizations	none	none
+IT	related group	none	none
+patented recommendation engine	end	hypernym	none
+"continuous, automated security assessment"	patented recommendation engine	hypernym	none
+patented recommendation engine	It	hypernym	none
+"continuous, automated security assessment"	end	hypernym	none
+gaps	organizations	hypernym	none
+"continuous, automated security assessment"	malicious intent	hypernym	none
+malicious intent	end	hypernym	none
+security configurations	clear remediation steps	none	none
+"continuous, automated security assessment"	IT	hypernym	none
+security configurations	malicious intent	hyponym	none
+"continuous, automated security assessment"	environment drift	hypernym	none
+environment drift	gaps	hypernym	none
+environment drift	IT	hypernym	none
+security configurations	related group	hypernym	none
+environment drift	change	hypernym	none
+Ixia Solutions Group	Security Group	concept	concept
+security solutions	Today's network and security teams security solutions	hyponym	none
+security solutions	Keysight Network Applications	hyponym	none
+vice president	Today's network and security teams security solutions	none	none
+security solutions	Ixia Solutions Group	instance	none
+Ixia Solutions Group	Today's network and security teams security solutions	concept	none
+Security Group	Today's network and security teams security solutions	hyponym	none
+security solutions	continuous basis	hypernym	none
+vice president	Today's network and security teams	none	none
+security solutions	vice president	instance	none
+Scott Register	vice president	none	none
+vice president	continuous basis	none	none
+security solutions	Security Group	hypernym	none
+Ixia Solutions Group	continuous basis	hypernym	none
+Scott Register	Ixia Solutions Group	none	none
+vice president	Ixia Solutions Group	none	none
+Scott Register	Security Group	concept	none
+Scott Register	Keysight Network Applications	none	none
+vice president	Keysight Network Applications	none	none
+Scott Register	security solutions	hyponym	none
+Scott Register	continuous basis	none	none
+vice president	Security Group	none	none
+security solutions	Today's network and security teams	hyponym	none
+Scott Register	Today's network and security teams security solutions	hyponym	none
+Scott Register	Today's network and security teams	hyponym	none
+Security Group	continuous basis	hypernym	none
+security skills	lack	hypernym	none
+security skills	misconfigurations	instance	none
+lack	misconfigurations	hypernym	none
+Security breaches	capable products	hypernym	none
+capable products	misconfigurations	none	none
+security skills	Security breaches	hyponym	none
+lack	Security breaches	hyponym	none
+security skills	capable products	hypernym	none
+lack	capable products	none	none
+Security breaches	misconfigurations	hypernym	none
+easy task	coverage gaps	none	none
+live network	coverage gaps	none	none
+easy task	live network	hypernym	none
+security operations teams	gaps	hypernym	none
+gaps security posture	gaps	hypernym	none
+Threat Simulator	security operations teams	hyponym	none
+gaps security posture	actionable insight	hypernym	none
+actionable insight	gaps	hypernym	none
+gaps security posture	security operations teams	hypernym	none
+Threat Simulator	actionable insight	hypernym	none
+Threat Simulator	gaps	hypernym	none
+gaps security posture	Threat Simulator	hypernym	none
+security operations teams	actionable insight	hypernym	none
+threat intelligence gateway	Keysight's Breach Defense SecOps platform	none	none
+Threat Simulator	Keysight's Breach Defense SecOps platform	none	instance
+ThreatARMOR	addition	hypernym	none
+Threat Simulator	threat intelligence gateway	hyponym	none
+threat intelligence gateway	addition	hypernym	none
+Threat Simulator	ThreatARMOR	none	instance
+Threat Simulator	addition	hypernym	none
+threat intelligence gateway	ThreatARMOR	hypernym	instance
+event management	attack surface	instance	none
+up to 80%	source	none	none
+malicious traffic	source	hypernym	none
+ThreatARMOR	source	none	none
+number	existing security infrastructure	hyponym	none
+number	security information	hyponym	none
+attack surface	source	hypernym	none
+SIEM alerts	source	concept	none
+attack surface	security information	concept	none
+number	up to 80%	none	none
+number	attack surface	none	none
+SIEM alerts	event management	concept	none
+SIEM alerts	existing security infrastructure	hyponym	none
+SIEM alerts	malicious traffic	concept	none
+SIEM alerts	ThreatARMOR	concept	none
+SIEM alerts	security information	concept	hypernym
+existing security infrastructure	source	hypernym	none
+security information	source	hypernym	none
+up to 80%	event management	none	none
+event management	source	hypernym	none
+up to 80%	attack surface	hypernym	none
+malicious traffic	up to 80%	concept	none
+ThreatARMOR	up to 80%	none	none
+malicious traffic	event management	hypernym	none
+ThreatARMOR	event management	none	none
+malicious traffic	attack surface	concept	none
+ThreatARMOR	attack surface	none	none
+up to 80%	existing security infrastructure	hypernym	none
+up to 80%	security information	hypernym	none
+malicious traffic	number	hypernym	none
+ThreatARMOR	number	hypernym	none
+malicious traffic	existing security infrastructure	hypernym	none
+malicious traffic	security information	hypernym	none
+ThreatARMOR	existing security infrastructure	none	concept
+ThreatARMOR	security information	hyponym	none
+SIEM alerts	up to 80%	none	none
+SIEM alerts	number	concept	none
+existing security infrastructure	security information	hypernym	none
+event management	existing security infrastructure	hypernym	none
+event management	security information	hypernym	none
+number	event management	none	none
+SIEM alerts	attack surface	concept	none
+number	source	none	none
+attack surface	existing security infrastructure	hypernym	none
+malicious traffic	ThreatARMOR	hypernym	none
+unassigned IP addresses	line-rate speeds	none	none
+unassigned IP addresses	SIEM tools	hypernym	none
+geography	network	hypernym	none
+traffic	SIEM tools	none	none
+internal devices	malicious IP addresses	hyponym	none
+geography	line-rate speeds	none	none
+unused IP space	domains	hypernym	none
+internal devices	unassigned IP addresses	hyponym	none
+network	line-rate speeds	instance	none
+network	unassigned IP addresses	hyponym	none
+malicious IP addresses	traffic	hypernym	none
+malicious IP addresses	unused IP space	hypernym	none
+unused IP space	unassigned IP addresses	none	none
+unused IP space	line-rate speeds	none	none
+internal devices	SIEM tools	none	none
+internal devices	ThreatARMOR	none	none
+geography	domains	hypernym	none
+ThreatARMOR	unassigned IP addresses	hyponym	none
+geography	traffic	hypernym	none
+network	traffic	hypernym	none
+malicious IP addresses	SIEM tools	hypernym	none
+network	ThreatARMOR	instance	none
+internal devices	domains	hypernym	none
+malicious IP addresses	line-rate speeds	none	none
+geography	ThreatARMOR	none	none
+geography	SIEM tools	none	none
+geography	malicious IP addresses	hyponym	none
+internal devices	network	hypernym	none
+ThreatARMOR	traffic	hypernym	none
+internal devices	traffic	hypernym	none
+malicious IP addresses	unassigned IP addresses	hypernym	none
+traffic	unassigned IP addresses	hyponym	none
+unused IP space	SIEM tools	none	none
+geography	unassigned IP addresses	hyponym	none
+geography	unused IP space	none	none
+malicious IP addresses	network	hypernym	none
+malicious IP addresses	ThreatARMOR	hypernym	none
+network	SIEM tools	instance	none
+SIEM tools	line-rate speeds	none	none
+traffic	line-rate speeds	instance	none
+unused IP space	network	hypernym	none
+ThreatARMOR	SIEM tools	none	none
+ThreatARMOR	line-rate speeds	none	none
+internal devices	line-rate speeds	none	none
+malicious IP addresses	domains	hypernym	none
+internal devices	unused IP space	hyponym	none
+unused IP space	ThreatARMOR	none	none
+unused IP space	traffic	hypernym	none
+geography	internal devices	none	none
+electronic products	manufacturing test	none	none
+electronic products	offerings	hypernym	none
+manufacturing test	to optimization	none	none
+cloud environments	manufacturing test	none	none
+cloud environments	offerings	hypernym	none
+networks	electronic products	hyponym	none
+prototype validation	offerings	hypernym	none
+design simulation	to optimization	hypernym	none
+prototype validation	lower cost	hypernym	none
+networks	manufacturing test	none	none
+networks	offerings	hypernym	none
+networks	prototype validation	none	none
+cloud environments	design simulation	none	none
+design simulation	Keysight's solutions	none	none
+manufacturing test	lower cost	none	none
+electronic products	Keysight's solutions	none	none
+design simulation	lower cost	instance	none
+electronic products	lower cost	hypernym	none
+networks	to optimization	hyponym	none
+networks	design simulation	concept	none
+prototype validation	Keysight's solutions	none	none
+networks	Keysight's solutions	instance	none
+manufacturing test	design simulation	none	none
+manufacturing test	Keysight's solutions	none	none
+cloud environments	to optimization	instance	none
+electronic products	design simulation	none	none
+electronic products	to optimization	none	none
+networks	lower cost	hypernym	none
+design simulation	prototype validation	none	none
+design simulation	offerings	hypernym	none
+cloud environments	Keysight's solutions	none	none
+manufacturing test	offerings	none	none
+prototype validation	to optimization	hypernym	none
+networks	cloud environments	instance	none
+cloud environments	electronic products	hypernym	none
+manufacturing test	prototype validation	none	none
+electronic products	prototype validation	hyponym	none
+cloud environments	lower cost	none	none
+cloud environments	prototype validation	none	none
+end markets	general electronics	none	none
+semiconductor	general electronics	hypernym	none
+aerospace	general electronics	none	none
+semiconductor	aerospace	hypernym	none
+end markets	aerospace	none	none
+general electronics	Customers	none	none
+aerospace	energy	hypernym	none
+defense	general electronics	hypernym	none
+aerospace	defense	hypernym	none
+aerospace	Customers	none	none
+defense	Customers	none	none
+end markets	semiconductor	hypernym	none
+defense	energy	hypernym	none
+energy	Customers	none	none
+end markets	worldwide communications ecosystem	hypernym	none
+end markets	Customers	hypernym	none
+semiconductor	Customers	hypernym	none
+semiconductor	defense	hypernym	none
+end markets	energy	hypernym	none
+energy	general electronics	hypernym	none
+end markets	defense	hypernym	none
+semiconductor	energy	hypernym	none
+fiscal year	revenues	hypernym	none

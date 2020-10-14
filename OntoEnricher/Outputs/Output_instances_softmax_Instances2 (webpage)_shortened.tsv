@@ -1,0 +1,13 @@
+powerful security devices	attacks	hypernym	none
+Essential security infrastructures	firewalls	hypernym	hyponym
+user communication	networks	hypernym	none
+services	networks	hyponym	none
+risk	networks	hypernym	none
+services	user communication	hyponym	hyponym
+user communication	risk	hypernym	none
+services	risk	hypernym	none
+article	countermeasures	hypernym	none
+security	networks	hyponym	none
+INTRUSIONS	IDS	hypernym	none
+attacks	traffic	hypernym	none
+planning	research	hypernym	none
