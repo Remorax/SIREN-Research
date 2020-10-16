@@ -28,7 +28,7 @@ livewire (networking)	system	hypernym	hypernym
 mode deactivation therapy	approach	hypernym	hypernym
 property	transient (computer programming)	hyponym	hyponym
 computer	transistorized computer	none	hyponym
-alureon	trojan	hypernym	hypernym
+alureon	trojan	concept	hypernym
 goguardian	provider	concept	hypernym
 database	translation memory	none	hyponym
 2013 drive4copd 300	race	concept	hypernym
@@ -64,7 +64,7 @@ outline of computer science	study	hypernym	hypernym
 pda	treo 90	instance	instance
 algebraic eraser	protocol	hypernym	hypernym
 cipher	trifid cipher	instance	instance
-mame	emulator	instance	hypernym
+mame	emulator	hypernym	hypernym
 guerrilla mail	service	hypernym	hypernym
 csdn	networks	concept	hypernym
 lizard squad	hat	hypernym	hypernym
@@ -88,7 +88,7 @@ turkish national research institute of electronics and cryptology	organization	h
 security	truman national security project	instance	hyponym
 system	trust management (information system)	hyponym	hyponym
 xml	trusted data format	hyponym	hyponym
-teslateam	group	none	concept
+teslateam	group	concept	concept
 document	trusted storage specification	hyponym	hyponym
 security	trust-preferred security	hyponym	hyponym
 security	trustwave securebrowsing	instance	instance
@@ -180,7 +180,7 @@ mac os x panther	release	concept	hypernym
 organization	uptime institute	none	instance
 html	urban dead	none	hyponym
 monero (cryptocurrency)	cryptocurrency	hypernym	hypernym
-trashmail	service	concept	hypernym
+trashmail	service	hypernym	hypernym
 email	urlabs	instance	instance
 document	user account policy	hyponym	hyponym
 shodan	intelligence	hypernym	hypernym
@@ -210,7 +210,7 @@ schmidt-samoa cryptosystem	technique	hypernym	hypernym
 methodology	value network analysis	hyponym	hyponym
 software	valve anti-cheat	instance	hyponym
 openid connect	layer	hypernym	hypernym
-spycatcher	book	concept	hypernym
+spycatcher	book	hypernym	hypernym
 document	common minimum programme	none	hyponym
 windows metafile	format	concept	hypernym
 south african wireless community networks	networks	hypernym	hypernym
@@ -274,7 +274,7 @@ operation socialist	name	hypernym	hypernym
 fore systems	network	hypernym	hypernym
 software	virtual places chat	instance	instance
 meet-in-the-middle attack	attack	hypernym	hypernym
-magen (security)	technology	hypernym	hypernym
+magen (security)	technology	none	hypernym
 appliance	virtual security appliance	hyponym	hyponym
 ethernet	virtual security switch	instance	hyponym
 james b. rosenwald	co-founder	none	concept
@@ -286,7 +286,7 @@ corey schou	professor	concept	concept
 emulator	virtualdrive pro	instance	instance
 message	virus hoax	hyponym	hyponym
 netfilter	framework	hypernym	hypernym
-website	virustotal	instance	instance
+website	virustotal	concept	instance
 botnet	virut	instance	instance
 security	vis (criminal organisation)	hyponym	instance
 clearos	company	concept	concept
@@ -294,7 +294,7 @@ network socket	endpoint	hypernym	hypernym
 separation kernel	kernel	hypernym	hypernym
 security convergence	parts	hypernym	hypernym
 root cause analysis	method	hypernym	hypernym
-authorization	visa (document)	hypernym	hyponym
+authorization	visa (document)	instance	hyponym
 madryga	cipher	concept	hypernym
 xenix	version	concept	hypernym
 database	visa information system	hyponym	instance
@@ -313,7 +313,7 @@ emulator	vmac	instance	instance
 hypervisor	vmware esx	instance	instance
 hypervisor	vmware fusion	instance	instance
 vmware	vmware vmfs	instance	instance
-rostec	corporation	instance	hypernym
+rostec	corporation	concept	hypernym
 hypervisor	vmware workstation	instance	instance
 nurech.b	worm	concept	concept
 software	vnmr	instance	instance
@@ -366,8 +366,8 @@ bronze	war of 1812 monument	none	instance
 emulator	warajevo	instance	instance
 cybercrime in canada	phenomenon	hypernym	hypernym
 owasp	community	hypernym	hypernym
-challenge	wargame (hacking)	instance	instance
-netizen	portmanteau	hypernym	hypernym
+challenge	wargame (hacking)	hypernym	instance
+netizen	portmanteau	none	hypernym
 usb	warm mouse	none	instance
 comparison of firewalls	comparison	hypernym	hypernym
 microsoft	wav	instance	hyponym
@@ -399,7 +399,7 @@ server	websiphon	instance	instance
 software	website x5 incomedia	instance	instance
 server	websitepro	instance	instance
 software	wedoist	instance	instance
-control	weemote	none	instance
+control	weemote	instance	instance
 asset disposal and information security alliance	organization	hypernym	hypernym
 cyber threat intelligence integration center	united	hypernym	hypernym
 hacker	weev	instance	instance
@@ -518,7 +518,7 @@ uc browser	browser	hypernym	concept
 emulator	wzonka-lad	instance	instance
 system	x window system protocols and architecture	none	instance
 netlimiter	traffic	hypernym	hypernym
-rhodecode	company	hypernym	concept
+rhodecode	company	concept	concept
 message	x12.852	instance	instance
 software	x265	instance	instance
 software	advanced systems analysis program	hyponym	hyponym
@@ -637,7 +637,7 @@ tcp port service multiplexer	protocol	hypernym	hypernym
 emulator	xterm	instance	instance
 parameter validation	processing	hypernym	hypernym
 mark surman	director	none	concept
-acid (computer virus)	virus	hypernym	hypernym
+acid (computer virus)	virus	concept	hypernym
 kaisa nyberg	cryptographer	concept	hypernym
 hypervisor	xtratum	instance	instance
 software	xtree	instance	instance
@@ -668,7 +668,7 @@ software	yosemite server backup	instance	instance
 kiuwan	software	hypernym	hypernym
 signed and encrypted email over the internet	approach	hypernym	hypernym
 signature	depiction	hypernym	hypernym
-website	youtube	none	instance
+website	youtube	hypernym	instance
 dayz (video game)	game	hypernym	concept
 server	yproxy	instance	instance
 compiler	zbasic	instance	instance
@@ -688,7 +688,7 @@ hitachi	company	concept	concept
 server	zeus web server	instance	instance
 software	zinstall winwin	instance	instance
 virus information alliance	partnership	hypernym	concept
-share (p2p)	name	hypernym	hypernym
+share (p2p)	name	concept	hypernym
 json web token	standard	hypernym	hypernym
 host based security system	name	hypernym	hypernym
 online banking	system	hypernym	hypernym
@@ -725,7 +725,7 @@ smartphone	zte blade c	instance	instance
 category	data center infrastructure management	hyponym	hyponym
 fault-tolerant computer system	systems	hypernym	hypernym
 organization	common computing security standards forum	hyponym	hyponym
-kaspersky internet security	suite	hypernym	hypernym
+kaspersky internet security	suite	concept	hypernym
 smartphone	zte blade l	instance	instance
 gnome keyring	application	hypernym	hypernym
 forever (website)	archive	hypernym	hypernym
@@ -749,7 +749,7 @@ title	marialis cultus	none	none
 frog	afrixalus schneideri	none	none
 organization	vaccinate alaska coalition	none	none
 computer	visual 1050	none	none
-title	khedive	instance	none
+title	khedive	none	none
 pine mountain lake, california	community	concept	none
 war	irving corey	none	none
 shark	dwarf false catshark	none	none
@@ -803,14 +803,14 @@ pageant	miss tennessee	none	none
 diplomat	colin crowe	none	none
 pageant	miss south africa	none	none
 title	baron hemphill	none	none
-section	ophiolite	hypernym	none
+section	ophiolite	none	none
 database	vehicle register	none	none
 pageant	miss new york teen usa	none	none
 airport	xinyuan nalati airport	none	none
 printer	john nichols (printer)	none	none
 airport	frankfort dow memorial field	none	none
 mark willis (politician)	businessman	none	none
-system	freedos	hypernym	none
+system	freedos	instance	none
 pageant	nuestra belleza veracruz	none	none
 title	ready set word	none	none
 computer	street racing syndicate	none	none
@@ -867,7 +867,7 @@ organization	ilinden (organization)	none	none
 virus	maize chlorotic dwarf virus	none	none
 duo	max elto	none	none
 airport	calabozo airport	none	none
-website	webmonkey	hypernym	none
+website	webmonkey	instance	none
 computer	worknc	none	none
 end-of-life (product)	term	hypernym	none
 system	kenora transit	none	none
@@ -886,7 +886,7 @@ mystery diners	series	hypernym	none
 title	male portraits by antonello da messina	none	none
 applet	jme molecule editor	instance	none
 diplomat	louise hand	none	none
-system	paywall	hypernym	none
+system	paywall	none	none
 defender	maddalena musumeci	none	none
 diplomat	luke schaub	none	none
 journalism	alexis duprey	none	none
@@ -1009,7 +1009,7 @@ radio	killerbee 106.3	none	none
 label	musique en wallonie	none	none
 pageant	miss malaysia universe	none	none
 airport	baltimore municipal airport	none	none
-system	gost 16876-71	hypernym	none
+system	gost 16876-71	none	none
 defender	bo svensson	none	none
 organization	council for the national interest	none	none
 software	auto clicker	instance	none
@@ -1027,7 +1027,7 @@ imail	method	hypernym	none
 label	discovery records	none	none
 policy	accidental death and dismemberment insurance	none	none
 system	delta a	none	none
-wxsqlite3	wrapper	hypernym	none
+wxsqlite3	wrapper	none	none
 pseudonym	sylvia thorpe	none	none
 label	galy records	none	none
 bitlocker	feature	hypernym	none
@@ -1061,7 +1061,7 @@ system	dry media reaction	none	none
 fine bubble diffusers	technology	hypernym	none
 title	a universe of consciousness	none	none
 title	tekfur	none	none
-unicore	technology	hypernym	none
+unicore	technology	none	none
 duo	playaz circle	none	none
 organization	ampei	none	none
 leidos	company	hypernym	none
@@ -1126,7 +1126,7 @@ organization	national press club (united states)	none	none
 printer	andrew brice	none	none
 label	lgbt hip hop	none	none
 outpost	fort william (oregon)	none	none
-thailand	ramakien	instance	none
+thailand	ramakien	none	none
 halifax international security forum	organization	concept	none
 defender	richard green (soccer)	none	none
 system	sharon city school district	none	none

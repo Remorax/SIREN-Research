@@ -1,4 +1,4 @@
-workstation	tracktion	hyponym	instance
+workstation	tracktion	hypernym	instance
 invincea	venture	concept	hypernym
 contract	trademark (computer security)	hyponym	hyponym
 mixed threat attack	attack	hypernym	hypernym
@@ -20,9 +20,9 @@ information	transaction processing	hyponym	hyponym
 dot chinese website	domain	hypernym	hypernym
 ryan ackroyd	hacker	concept	concept
 threat (computer)	danger	hypernym	hypernym
-software	transaction processing management system	instance	hyponym
+software	transaction processing management system	hyponym	hyponym
 microsoft	transact-sql	instance	instance
-computer	transformers: cyber missions	instance	instance
+computer	transformers: cyber missions	none	instance
 port control protocol	protocol	hypernym	hypernym
 livewire (networking)	system	hypernym	hypernym
 mode deactivation therapy	approach	hypernym	hypernym
@@ -64,12 +64,12 @@ outline of computer science	study	hypernym	hypernym
 pda	treo 90	instance	instance
 algebraic eraser	protocol	hypernym	hypernym
 cipher	trifid cipher	instance	instance
-mame	emulator	instance	hypernym
+mame	emulator	concept	hypernym
 guerrilla mail	service	hypernym	hypernym
 csdn	networks	hypernym	hypernym
 lizard squad	hat	hypernym	hypernym
 helpsystems	prairie	none	hypernym
-organization	trinet	instance	instance
+organization	trinet	none	instance
 libressl	implementation	hypernym	hypernym
 cyberoam	provider	concept	hypernym
 verification and validation	procedures	hypernym	hypernym
@@ -101,7 +101,7 @@ connect expo (conference)	business	hypernym	hypernym
 cipher	turing (cipher)	instance	instance
 organization	turkish national research institute of electronics and cryptology	none	instance
 organization	turn 2 foundation	none	instance
-email	turnpike (software)	instance	instance
+email	turnpike (software)	none	instance
 software	tutsim	instance	instance
 server	tux web server	instance	instance
 ethereum	cryptocurrency	hypernym	hypernym
@@ -111,7 +111,7 @@ php standard recommendation	specification	hypernym	hypernym
 credant technologies	company	concept	concept
 software	twister (software)	instance	instance
 domain name scams	types	hypernym	hypernym
-crime	cybercrime	hyponym	hyponym
+crime	cybercrime	hypernym	hyponym
 cyber security and information systems information analysis center	department	hypernym	concept
 avalanche (phishing group)	syndicate	concept	hypernym
 cipher	twofish	instance	instance
@@ -183,11 +183,11 @@ monero (cryptocurrency)	cryptocurrency	hypernym	hypernym
 trashmail	service	hypernym	hypernym
 email	urlabs	instance	instance
 document	user account policy	hyponym	hyponym
-shodan	intelligence	concept	hypernym
+shodan	intelligence	hypernym	hypernym
 steve gibson (computer programmer)	engineer	concept	concept
 software	user agent	instance	hyponym
 information security oversight office	component	hypernym	hypernym
-dovecot (software)	imap	instance	hypernym
+dovecot (software)	imap	concept	hypernym
 digital citizens alliance	united	hypernym	hypernym
 roman seleznev	hacker	concept	concept
 tp-link	manufacturer	concept	concept
@@ -210,7 +210,7 @@ schmidt-samoa cryptosystem	technique	hypernym	hypernym
 methodology	value network analysis	hyponym	hyponym
 software	valve anti-cheat	instance	hyponym
 openid connect	layer	hypernym	hypernym
-spycatcher	book	instance	hypernym
+spycatcher	book	hypernym	hypernym
 document	common minimum programme	none	hyponym
 windows metafile	format	concept	hypernym
 south african wireless community networks	networks	hypernym	hypernym
@@ -223,7 +223,7 @@ servizio informazioni militare	organization	hypernym	hypernym
 compiler	vbcc	instance	instance
 emulator	vdmsound	instance	instance
 compiler	vector pascal	instance	instance
-azure ad connect	tool	concept	hypernym
+azure ad connect	tool	hypernym	hypernym
 archil gegeshidze	fellow	concept	concept
 software	ventrilo	instance	instance
 mobile identification number	part	hypernym	hypernym
@@ -250,7 +250,7 @@ software	video ad platform	instance	hyponym
 bios	video bios	none	hyponym
 automation workshop	application	hypernym	hypernym
 software	video calibration software	instance	hyponym
-software	video editing software	instance	hyponym
+software	video editing software	hyponym	hyponym
 software	video game bot	instance	hyponym
 emulator	video game console emulator	instance	hyponym
 wireless supplicant	program	hypernym	hypernym
@@ -274,7 +274,7 @@ operation socialist	name	hypernym	hypernym
 fore systems	network	hypernym	hypernym
 software	virtual places chat	instance	instance
 meet-in-the-middle attack	attack	hypernym	hypernym
-magen (security)	technology	none	hypernym
+magen (security)	technology	hypernym	hypernym
 appliance	virtual security appliance	hyponym	hyponym
 ethernet	virtual security switch	instance	hyponym
 james b. rosenwald	co-founder	none	concept
@@ -299,7 +299,7 @@ madryga	cipher	concept	hypernym
 xenix	version	concept	hypernym
 database	visa information system	hyponym	instance
 software	visq	instance	instance
-microsoft	visual j	instance	instance
+microsoft	visual j	none	instance
 cryptography standards	number	hypernym	hypernym
 national defence radio establishment	agency	none	hypernym
 software	visualarq	instance	instance
@@ -318,7 +318,7 @@ hypervisor	vmware workstation	instance	instance
 nurech.b	worm	concept	concept
 software	vnmr	instance	instance
 the secret history of hacking	film	hypernym	hypernym
-cyberchase	series	none	hypernym
+cyberchase	series	concept	hypernym
 private server	machine	hypernym	hypernym
 qa ltd	company	concept	concept
 methodology	voice over ip	hyponym	hyponym
@@ -338,7 +338,7 @@ computer	vp8 image analyzer	none	instance
 system administrator	person	hypernym	hypernym
 cyberspace administration of china	censorship	hypernym	hypernym
 memory corruption	safety	hypernym	hypernym
-server	vsftpd	instance	instance
+server	vsftpd	hyponym	instance
 network switch	device	hypernym	concept
 software	vspeech	instance	instance
 wireless lock	concept	hypernym	hypernym
@@ -399,7 +399,7 @@ server	websiphon	instance	instance
 software	website x5 incomedia	instance	instance
 server	websitepro	instance	instance
 software	wedoist	instance	instance
-control	weemote	instance	instance
+control	weemote	concept	instance
 asset disposal and information security alliance	organization	hypernym	hypernym
 cyber threat intelligence integration center	united	hypernym	hypernym
 hacker	weev	instance	instance
@@ -489,22 +489,22 @@ database	wordnet	instance	instance
 x86	family	hypernym	hypernym
 mysocialcloud	vault	hypernym	hypernym
 disconnect mobile	android	hypernym	hypernym
-oracle policy automation	suite	concept	hypernym
+oracle policy automation	suite	hypernym	hypernym
 software	workwriter	instance	instance
 server	world chess network	instance	instance
-hackers (anthology)	anthology	hypernym	hypernym
+hackers (anthology)	anthology	concept	hypernym
 federal bureau of investigation	intelligence	hypernym	hypernym
 organization	world wide web consortium	none	instance
 chief risk officer	executive	none	hypernym
 ascii	worldbet	instance	instance
 jennifer seberry	cryptographer	concept	hypernym
 server	courier mail server	instance	hyponym
-base24	series	none	hypernym
+base24	series	hypernym	hypernym
 system	wormhole switching	none	instance
 microid	protocol	hypernym	hypernym
 norton personal firewall	firewall	hypernym	hypernym
 protection	wrestling headgear	instance	instance
-sawmill (software)	package	concept	hypernym
+sawmill (software)	package	none	hypernym
 adaptive chosen-ciphertext attack	form	hypernym	hypernym
 xsolla	management	concept	hypernym
 hardware trojan	modification	hypernym	hypernym
@@ -558,14 +558,14 @@ security parameter index	tag	hypernym	hypernym
 emulator	xenia (emulator)	instance	instance
 openbsd	xenocara	instance	instance
 cipher	xenon (cipher)	instance	instance
-software	xenon (program)	hyponym	instance
+software	xenon (program)	instance	instance
 server	xenoserver	instance	instance
 cryptome	foundation	concept	concept
 ecomstation	pc	concept	hypernym
 affine cipher	cipher	hypernym	hypernym
 mike belshe	scientist	concept	hypernym
 librem	computer	concept	hypernym
-server	xephyr	none	instance
+server	xephyr	instance	instance
 software	xfdtd	instance	instance
 software	xfrog	instance	instance
 smartphone	xiaomi mi 1	instance	instance
@@ -582,7 +582,7 @@ randomness extractor	function	hypernym	hypernym
 proprietary protocol	protocol	hypernym	hypernym
 color code	system	hypernym	hypernym
 bit-flipping attack	attack	hypernym	hypernym
-vxworks	system	hypernym	hypernym
+vxworks	system	concept	hypernym
 redos	attack	hypernym	hypernym
 smartphone	xiaomi mi 4c	instance	instance
 walsh report (cryptography)	review	hypernym	hypernym
@@ -636,8 +636,8 @@ spylocked	software	concept	hypernym
 tcp port service multiplexer	protocol	hypernym	hypernym
 emulator	xterm	instance	instance
 parameter validation	processing	hypernym	hypernym
-mark surman	director	none	concept
-acid (computer virus)	virus	hypernym	hypernym
+mark surman	director	concept	concept
+acid (computer virus)	virus	instance	hypernym
 kaisa nyberg	cryptographer	concept	hypernym
 hypervisor	xtratum	instance	instance
 software	xtree	instance	instance
@@ -667,8 +667,8 @@ partitioning cryptanalysis	form	hypernym	hypernym
 software	yosemite server backup	instance	instance
 kiuwan	software	hypernym	hypernym
 signed and encrypted email over the internet	approach	hypernym	hypernym
-signature	depiction	hypernym	hypernym
-website	youtube	hypernym	instance
+signature	depiction	none	hypernym
+website	youtube	instance	instance
 dayz (video game)	game	concept	concept
 server	yproxy	instance	instance
 compiler	zbasic	instance	instance
@@ -684,7 +684,7 @@ ring	zero ring	none	hyponym
 malware	zeroaccess botnet	instance	hyponym
 cryptocurrency	zerocoin	instance	instance
 software	zerofootprint	instance	instance
-hitachi	company	none	concept
+hitachi	company	hypernym	concept
 server	zeus web server	instance	instance
 software	zinstall winwin	instance	instance
 virus information alliance	partnership	hypernym	concept
@@ -692,7 +692,7 @@ share (p2p)	name	hypernym	hypernym
 json web token	standard	hypernym	hypernym
 host based security system	name	hypernym	hypernym
 online banking	system	hypernym	hypernym
-software	zipeg	instance	instance
+software	zipeg	none	instance
 zero days	film	none	hypernym
 cipher	zk-crypt	instance	instance
 darwin (operating system)	unix	hypernym	hypernym
@@ -704,7 +704,7 @@ cipher	zodiac (cipher)	instance	instance
 natural computing	terminology	hypernym	hypernym
 ext2	system	hypernym	hypernym
 secure channel	way	hypernym	hypernym
-computer	zombie (computer science)	instance	instance
+computer	zombie (computer science)	hypernym	instance
 data authentication algorithm	government	hypernym	hypernym
 cross-application scripting	vulnerability	hypernym	hypernym
 lethic botnet	botnet	concept	hypernym
@@ -719,13 +719,13 @@ information technology professional examination council	organization	hypernym	hy
 no-ip	company	concept	concept
 smartphone	zte blade	instance	instance
 android lollipop	version	concept	hypernym
-row hammer	effect	hypernym	hypernym
+row hammer	effect	none	hypernym
 separation of concerns	principle	hypernym	hypernym
 smartphone	zte blade c	instance	instance
 category	data center infrastructure management	hyponym	hyponym
 fault-tolerant computer system	systems	hypernym	hypernym
 organization	common computing security standards forum	hyponym	hyponym
-kaspersky internet security	suite	concept	hypernym
+kaspersky internet security	suite	hypernym	hypernym
 smartphone	zte blade l	instance	instance
 gnome keyring	application	hypernym	hypernym
 forever (website)	archive	hypernym	hypernym
@@ -733,7 +733,7 @@ ping of death	attack	hypernym	hypernym
 data anonymization	sanitization	hypernym	hypernym
 smartphone	zte open	instance	instance
 strong authentication	notion	hypernym	hypernym
-sagan (software)	performance	hypernym	hypernym
+sagan (software)	performance	concept	hypernym
 dvd-audio	format	hypernym	hypernym
 object identifier	identifier	hypernym	hypernym
 emulator	zterm	instance	instance
@@ -810,7 +810,7 @@ airport	xinyuan nalati airport	none	none
 printer	john nichols (printer)	none	none
 airport	frankfort dow memorial field	none	none
 mark willis (politician)	businessman	none	none
-system	freedos	none	none
+system	freedos	instance	none
 pageant	nuestra belleza veracruz	none	none
 title	ready set word	none	none
 computer	street racing syndicate	none	none
@@ -862,12 +862,12 @@ defender	giannis sfakianakis	none	none
 war	gheorghe pä	none	none
 organization	national socialism association	none	none
 airport	walaha airport	none	none
-organization	connect (biotechnology organization)	instance	none
+organization	connect (biotechnology organization)	none	none
 organization	ilinden (organization)	none	none
 virus	maize chlorotic dwarf virus	none	none
 duo	max elto	none	none
 airport	calabozo airport	none	none
-website	webmonkey	hyponym	none
+website	webmonkey	hypernym	none
 computer	worknc	none	none
 end-of-life (product)	term	hypernym	none
 system	kenora transit	none	none
@@ -954,7 +954,7 @@ system	clansman	none	none
 label	blow up records	none	none
 title	rm-2493	none	none
 role	dragon warriors	none	none
-computer	george (computer)	instance	none
+computer	george (computer)	none	none
 diplomat	antoine charles iv de gramont	none	none
 defender	mată	none	none
 airport	santa rita airport	none	none
@@ -1061,7 +1061,7 @@ system	dry media reaction	none	none
 fine bubble diffusers	technology	hypernym	none
 title	a universe of consciousness	none	none
 title	tekfur	none	none
-unicore	technology	concept	none
+unicore	technology	hypernym	none
 duo	playaz circle	none	none
 organization	ampei	none	none
 leidos	company	concept	none
@@ -1086,7 +1086,7 @@ safety	torri williams	none	none
 label	gita records	none	none
 system	bow river pathway	none	none
 printer	john filby childs	none	none
-computer	fm-8	instance	none
+computer	fm-8	none	none
 duo	ushiroyubi sasaregumi	none	none
 title	kakurenbo (sayuri ishikawa song)	none	none
 fire	richardson fire	none	none
@@ -1112,7 +1112,7 @@ war	alec de candole	none	none
 software	systemimager	hyponym	none
 diplomat	scot marciel	none	none
 system	miller woods	none	none
-title	exclusivity	hyponym	none
+title	exclusivity	hypernym	none
 title	the saddest song i ever heard	none	none
 hawker hurricane variants	aircraft	none	none
 title	the time has come (martina mcbride song)	none	none
@@ -1136,7 +1136,7 @@ computer	uberstudent	none	none
 title	visions (paul field album)	none	none
 guard	lin houston	none	none
 station hypo	signals	hypernym	none
-capacitor	component	none	none
+capacitor	component	hypernym	none
 document	riddick's senate procedure	none	none
 frog	cochranella ocellifera	none	none
 airport	domestic airport	none	none
@@ -1148,7 +1148,7 @@ system	mozilla persona	none	none
 pageant	miss myanmar	none	none
 atari 7800	game	concept	none
 title	renewers of the church	none	none
-system	jughead (search engine)	none	none
+system	jughead (search engine)	instance	none
 detective	roy carson	none	none
 diplomat	william crosbie	none	none
 organization	international association of emergency managers	none	none
@@ -1168,7 +1168,7 @@ radio	willie webber	none	none
 airport	puelches airport	none	none
 organization	utah fc	none	none
 organization	funredes	none	none
-methodology	order of integration (calculus)	none	none
+methodology	order of integration (calculus)	hyponym	none
 airport	saint-pierre airport	none	none
 organization	young men's institute	none	none
 aircraft fairing	structure	none	none

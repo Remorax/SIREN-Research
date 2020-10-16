@@ -63,10 +63,10 @@ IT component	wireless access point	hyponym	hyponym
 IT component	workstation	none	hyponym
 PDA	IT component	hypernym	hypernym
 PDA	asset	hypernym	hypernym
-PDA	mobile	instance	hypernym
+PDA	mobile	hypernym	hypernym
 PDA	mobile device	hypernym	hypernym
 PDA	movable asset	instance	hypernym
-PDA	tangible asset	instance	hypernym
+PDA	tangible asset	hypernym	hypernym
 WKOITSicherheitshandbuch	control	hypernym	concept
 WKOITSicherheitshandbuch	control standard	none	concept
 WKOITSicherheitshandbuch	control standards	none	concept
@@ -93,7 +93,7 @@ access control regulation policy	policy	hypernym	hypernym
 access log book	asset	hypernym	hypernym
 access log book	document	hypernym	hypernym
 access log book	movable asset	none	hypernym
-access log book	tangible asset	hypernym	hypernym
+access log book	tangible asset	none	hypernym
 access regulation	compliant control	hypernym	hypernym
 access regulation	control	hypernym	hypernym
 access regulation control compliant building	compliant control	hypernym	hypernym
@@ -105,7 +105,7 @@ activities monitoring	asset	hypernym	hypernym
 activities monitoring	intangible asset	none	hypernym
 activities monitoring	software	hypernym	hypernym
 activities monitoring software	asset	hypernym	hypernym
-activities monitoring software	intangible asset	hypernym	hypernym
+activities monitoring software	intangible asset	none	hypernym
 activities monitoring software	software	hypernym	hypernym
 air condition	asset	none	hypernym
 air condition	movable asset	none	hypernym
@@ -232,7 +232,7 @@ asset	assets	hypernym	hyponym
 asset	assets control	none	hyponym
 asset	assets control compliant organization	none	hyponym
 asset	assets control policy	hyponym	hyponym
-asset	attacker	hyponym	hyponym
+asset	attacker	none	hyponym
 asset	attacker profile	hyponym	hyponym
 asset	audit logging	hyponym	hyponym
 asset	audit logging and monitoring	hyponym	hyponym
@@ -254,8 +254,8 @@ asset	backup	hyponym	hyponym
 asset	backup media	hyponym	hyponym
 asset	backup software	hyponym	hyponym
 asset	backup storage in-house control compliant backup media	instance	hyponym
-asset	backup storage outside control compliant backup media	instance	hyponym
-asset	bared window	none	hyponym
+asset	backup storage outside control compliant backup media	hyponym	hyponym
+asset	bared window	hyponym	hyponym
 asset	bared window control compliant section	none	hyponym
 asset	building	hypernym	hyponym
 asset	business continuity	hyponym	hyponym
@@ -270,10 +270,10 @@ asset	cabling security policy	hyponym	hyponym
 asset	cd	none	hyponym
 asset	cd and dvd	none	hyponym
 asset	change control procedures	none	hyponym
-asset	change control procedures control	none	hyponym
+asset	change control procedures control	hyponym	hyponym
 asset	change control procedures control compliant control compliant building	none	hyponym
 asset	change control procedures policy	none	hyponym
-asset	checklist	none	hyponym
+asset	checklist	hyponym	hyponym
 asset	clear desk	none	hyponym
 asset	clear desk control	hyponym	hyponym
 asset	clear desk control compliant organization	none	hyponym
@@ -290,11 +290,11 @@ asset	communication scanning	hyponym	hyponym
 asset	communication scanning control	hyponym	hyponym
 asset	communication scanning control compliant organization	hyponym	hyponym
 asset	complex firewall	hyponym	hyponym
-asset	compliance	hypernym	hyponym
+asset	compliance	none	hyponym
 asset	compliance control	hyponym	hyponym
 asset	compliance control compliance organization	hyponym	hyponym
 asset	compliance policy	hyponym	hyponym
-asset	computer	hypernym	hyponym
+asset	computer	none	hyponym
 asset	config	none	hyponym
 asset	config data	hyponym	hyponym
 asset	configuration data	hyponym	hyponym
@@ -303,7 +303,7 @@ asset	configuration data control compliant organization	hyponym	hyponym
 asset	configuration data digital format	hyponym	hyponym
 asset	configuration data hard copy	hyponym	hyponym
 asset	contract	hypernym	hyponym
-asset	data	hyponym	hyponym
+asset	data	hypernym	hyponym
 asset	data archiving	hyponym	hyponym
 asset	data archiving control	hyponym	hyponym
 asset	data archiving control compliant organization	hyponym	hyponym
@@ -350,7 +350,7 @@ asset	disciplinary process	none	hyponym
 asset	disciplinary process control	hyponym	hyponym
 asset	disciplinary process control compliant organization	none	hyponym
 asset	disciplinary process policy	hyponym	hyponym
-asset	document	concept	hyponym
+asset	document	hypernym	hyponym
 asset	documented operational procedures	hyponym	hyponym
 asset	documented operational procedures control	hyponym	hyponym
 asset	documented operational procedures control compliant organization	none	hyponym
@@ -361,7 +361,7 @@ asset	electric installation control	none	hyponym
 asset	electric installation control compliant organization	none	hyponym
 asset	electric installation policy	none	hyponym
 asset	electronic commerce services	instance	hyponym
-asset	electronic commerce services control	instance	hyponym
+asset	electronic commerce services control	hyponym	hyponym
 asset	electronic commerce services control compliant organization	instance	hyponym
 asset	electronic messaging protection	hyponym	hyponym
 asset	electronic messaging protection control	hyponym	hyponym
@@ -372,7 +372,7 @@ asset	emergency planning control compliant organization	none	hyponym
 asset	emergency planning policy	hyponym	hyponym
 asset	emergency recovery	hyponym	hyponym
 asset	emergency recovery control	hyponym	hyponym
-asset	emergency recovery control compliant organization	none	hyponym
+asset	emergency recovery control compliant organization	instance	hyponym
 asset	emergency recovery policy	hyponym	hyponym
 asset	emergency substitute device	hyponym	hyponym
 asset	employment contract	none	hyponym
@@ -415,7 +415,7 @@ asset	fire safety control	hyponym	hyponym
 asset	fire safety control compliant organizations	none	hyponym
 asset	fire safety policy	hyponym	hyponym
 asset	fire suppression control compliant section	none	hyponym
-asset	fire suppression system	none	hyponym
+asset	fire suppression system	hyponym	hyponym
 asset	firewall	hyponym	hyponym
 asset	firewall control compliant computer	hyponym	hyponym
 asset	firewall policy	hyponym	hyponym
@@ -430,7 +430,7 @@ asset	human resource development	none	hyponym
 asset	human resource development control	hyponym	hyponym
 asset	human resource development control compliant organization	none	hyponym
 asset	human resource development policy	none	hyponym
-asset	identification	hypernym	hyponym
+asset	identification	none	hyponym
 asset	identification software	hyponym	hyponym
 asset	information passing	hyponym	hyponym
 asset	information passing control	hyponym	hyponym
@@ -534,7 +534,7 @@ asset	online encryption	hyponym	hyponym
 asset	online encryption software	hyponym	hyponym
 asset	operational procedures	none	hyponym
 asset	operational procedures policy	hyponym	hyponym
-asset	organization	instance	hyponym
+asset	organization	none	hyponym
 asset	organizational records protection	hyponym	hyponym
 asset	organizational records protection control	hyponym	hyponym
 asset	organizational records protection control compliant organization	instance	hyponym
@@ -614,7 +614,7 @@ asset	risk assessment control	hyponym	hyponym
 asset	risk assessment control compliance organization	hyponym	hyponym
 asset	risks	hypernym	hyponym
 asset	risks policy	hyponym	hyponym
-asset	role	hyponym	hyponym
+asset	role	hypernym	hyponym
 asset	safety door	hyponym	hyponym
 asset	safety door control compliant section	none	hyponym
 asset	section	hypernym	hyponym
@@ -655,7 +655,7 @@ asset	sensitive data	hyponym	hyponym
 asset	sensitive information	hyponym	hyponym
 asset	sensitive information control	hyponym	hyponym
 asset	sensitive information control compliant organization	hyponym	hyponym
-asset	server	concept	hyponym
+asset	server	hypernym	hyponym
 asset	server rack	instance	hyponym
 asset	server room	hyponym	hyponym
 asset	service contract	none	hyponym
@@ -673,7 +673,7 @@ asset	social network	hyponym	hyponym
 asset	social network control	hyponym	hyponym
 asset	social network control compliant organization	hyponym	hyponym
 asset	social network policy	hyponym	hyponym
-asset	software	concept	hyponym
+asset	software	hypernym	hyponym
 asset	software application	hyponym	hyponym
 asset	software application policy	hyponym	hyponym
 asset	staff employment	none	hyponym
@@ -688,7 +688,7 @@ asset	system capacity monitoring	hyponym	hyponym
 asset	system capacity monitoring control	hyponym	hyponym
 asset	system capacity monitoring control compliant organization	hyponym	hyponym
 asset	system capacity software	hyponym	hyponym
-asset	system image	none	hyponym
+asset	system image	hyponym	hyponym
 asset	systems acquisition	hyponym	hyponym
 asset	systems acquisition control	hyponym	hyponym
 asset	systems acquisition control compliant organization	none	hyponym
@@ -708,7 +708,7 @@ asset	technical vulnerabilities policy	hyponym	hyponym
 asset	teleworking	none	hyponym
 asset	teleworking control	none	hyponym
 asset	teleworking control compliant organization	none	hyponym
-asset	teleworking policy	none	hyponym
+asset	teleworking policy	hyponym	hyponym
 asset	teleworkstation	none	hyponym
 asset	temperature surveillance control compliant server room	hyponym	hyponym
 asset	temperature surveillance system	hyponym	hyponym
@@ -734,7 +734,7 @@ asset	unauthorized use prevention compliant organization	hyponym	hyponym
 asset	unauthorized use prevention control	hyponym	hyponym
 asset	unauthorized use prevention control compliant organization	none	hyponym
 asset	uninterruptible power supply control compliant server room	instance	hyponym
-asset	uninterruptible power supply unit	none	hyponym
+asset	uninterruptible power supply unit	hyponym	hyponym
 asset	usb stick	instance	hyponym
 asset	user authentication	hyponym	hyponym
 asset	user authentication control	hyponym	hyponym
@@ -779,11 +779,11 @@ asset	workstation access rights	hyponym	hyponym
 asset	workstation access rights policy	hyponym	hyponym
 asset importance	asset	hypernym	hypernym
 asset threat probability	asset	hypernym	hypernym
-assets	asset	concept	hypernym
+assets	asset	none	hypernym
 assets	compliant control	hyponym	hypernym
-assets	control	hypernym	hypernym
+assets	control	none	hypernym
 assets	intangible asset	none	hypernym
-assets	organization	concept	hypernym
+assets	organization	hyponym	hypernym
 assets control	asset	hypernym	hypernym
 assets control	compliant control	none	hypernym
 assets control	control	hypernym	hypernym
@@ -798,7 +798,7 @@ assets control compliant organization	organization	hypernym	hypernym
 assets control policy	asset	hypernym	hypernym
 assets control policy	intangible asset	none	hypernym
 assets control policy	policy	hypernym	hypernym
-attacker	asset	hyponym	hypernym
+attacker	asset	none	hypernym
 attacker	immovable asset	none	hypernym
 attacker	tangible asset	none	hypernym
 attacker profile	asset	hypernym	hypernym
@@ -852,7 +852,7 @@ audit monitoring control	organization	hypernym	hypernym
 audit monitoring control compliant organization	asset	hypernym	hypernym
 audit monitoring control compliant organization	compliant control	hypernym	hypernym
 audit monitoring control compliant organization	control	hypernym	hypernym
-audit monitoring control compliant organization	intangible asset	hypernym	hypernym
+audit monitoring control compliant organization	intangible asset	none	hypernym
 audit monitoring control compliant organization	organization	hypernym	hypernym
 audit organization	compliant control	none	hypernym
 audit organization	control	hypernym	hypernym
@@ -901,7 +901,7 @@ backup media	magnetic tape	none	hyponym
 backup media	movable asset	none	hypernym
 backup media	removable hard disk	none	hyponym
 backup media	tangible asset	none	hypernym
-backup media	usb stick	hypernym	hyponym
+backup media	usb stick	none	hyponym
 backup software	asset	hypernym	hypernym
 backup software	intangible asset	none	hypernym
 backup software	software	hypernym	hypernym
@@ -912,7 +912,7 @@ backup storage in-house control compliant backup media	compliant control	hyperny
 backup storage in-house control compliant backup media	control	hypernym	hypernym
 backup storage in-house control compliant backup media	movable asset	none	hypernym
 backup storage in-house control compliant backup media	tangible asset	none	hypernym
-backup storage media	compliant control	hypernym	hypernym
+backup storage media	compliant control	none	hypernym
 backup storage media	control	hypernym	hypernym
 backup storage outside control compliant backup media	IT component	hypernym	hypernym
 backup storage outside control compliant backup media	asset	hypernym	hypernym
@@ -922,7 +922,7 @@ backup storage outside control compliant backup media	control	hypernym	hypernym
 backup storage outside control compliant backup media	movable asset	none	hypernym
 backup storage outside control compliant backup media	tangible asset	none	hypernym
 bared window	asset	hypernym	hypernym
-bared window	compliant control	hypernym	hypernym
+bared window	compliant control	none	hypernym
 bared window	control	hypernym	hypernym
 bared window	immovable asset	none	hypernym
 bared window	section connector	hypernym	hypernym
@@ -987,12 +987,12 @@ cd	asset	none	hypernym
 cd	backup media	none	hypernym
 cd	movable asset	none	hypernym
 cd	tangible asset	none	hypernym
-cd and dvd	IT component	hypernym	hypernym
+cd and dvd	IT component	none	hypernym
 cd and dvd	asset	none	hypernym
 cd and dvd	backup media	none	hypernym
 cd and dvd	movable asset	none	hypernym
 cd and dvd	tangible asset	none	hypernym
-change control	compliant control	hyponym	hypernym
+change control	compliant control	hypernym	hypernym
 change control	control	hypernym	hypernym
 change control procedures	asset	hypernym	hypernym
 change control procedures	compliant control	hypernym	hypernym
@@ -1005,14 +1005,14 @@ change control procedures control	intangible asset	none	hypernym
 change control procedures control	organization	hypernym	hypernym
 change control procedures control compliant control	compliant control	hypernym	hypernym
 change control procedures control compliant control	control	hypernym	hypernym
-change control procedures control compliant control	intangible asset	hypernym	hypernym
+change control procedures control compliant control	intangible asset	none	hypernym
 change control procedures control compliant control	organization	hypernym	hypernym
 change control procedures control compliant control compliant building	asset	hypernym	hypernym
 change control procedures policy	asset	hypernym	hypernym
 change control procedures policy	intangible asset	none	hypernym
 change control procedures policy	policy	hypernym	hypernym
 checklist	asset	hypernym	hypernym
-checklist	document	concept	hypernym
+checklist	document	hypernym	hypernym
 checklist	movable asset	none	hypernym
 checklist	tangible asset	none	hypernym
 clear desk	asset	hypernym	hypernym
@@ -1067,7 +1067,7 @@ cloud computing control	organization	hypernym	hypernym
 cloud computing control compliant organization	asset	hypernym	hypernym
 cloud computing control compliant organization	compliant control	hypernym	hypernym
 cloud computing control compliant organization	control	hypernym	hypernym
-cloud computing control compliant organization	intangible asset	hypernym	hypernym
+cloud computing control compliant organization	intangible asset	none	hypernym
 cloud computing control compliant organization	organization	hypernym	hypernym
 cloud computing policy	asset	hypernym	hypernym
 cloud computing policy	intangible asset	none	hypernym
@@ -1079,7 +1079,7 @@ cloud service contract	intangible asset	none	hypernym
 communication scanning	asset	hypernym	hypernym
 communication scanning	compliant control	hypernym	hypernym
 communication scanning	control	hypernym	hypernym
-communication scanning	intangible asset	hypernym	hypernym
+communication scanning	intangible asset	none	hypernym
 communication scanning	organization	hypernym	hypernym
 communication scanning control	asset	hypernym	hypernym
 communication scanning control	compliant control	hypernym	hypernym
@@ -1089,7 +1089,7 @@ communication scanning control	organization	hypernym	hypernym
 communication scanning control compliant organization	asset	hypernym	hypernym
 communication scanning control compliant organization	compliant control	hypernym	hypernym
 communication scanning control compliant organization	control	hypernym	hypernym
-communication scanning control compliant organization	intangible asset	hypernym	hypernym
+communication scanning control compliant organization	intangible asset	none	hypernym
 communication scanning control compliant organization	organization	hypernym	hypernym
 complex firewall	IT component	hypernym	hypernym
 complex firewall	asset	hypernym	hypernym
@@ -1097,7 +1097,7 @@ complex firewall	firewall	hypernym	hypernym
 complex firewall	movable asset	hypernym	hypernym
 complex firewall	network component	hypernym	hypernym
 complex firewall	tangible asset	hypernym	hypernym
-compliance	asset	hypernym	hypernym
+compliance	asset	none	hypernym
 compliance	intangible asset	hyponym	hypernym
 compliance	organization	hypernym	hypernym
 compliance	policy	hypernym	hypernym
@@ -1119,7 +1119,7 @@ compliant control	access control	hypernym	hyponym
 compliant control	access control compliant organization	hyponym	hyponym
 compliant control	access control regulation control compliant organization	hyponym	hyponym
 compliant control	access regulation	hypernym	hyponym
-compliant control	access regulation control compliant building	hyponym	hyponym
+compliant control	access regulation control compliant building	none	hyponym
 compliant control	air conditioning control	hypernym	hyponym
 compliant control	air conditioning control compliant server room	instance	hyponym
 compliant control	air conditioning server room	instance	hyponym
@@ -1155,13 +1155,13 @@ compliant control	automatic locking control compliant mobile device	none	hyponym
 compliant control	backup media	hypernym	hyponym
 compliant control	backup storage in-house control compliant backup media	instance	hyponym
 compliant control	backup storage media	hyponym	hyponym
-compliant control	backup storage outside control compliant backup media	instance	hyponym
+compliant control	backup storage outside control compliant backup media	hyponym	hyponym
 compliant control	bared window	hyponym	hyponym
 compliant control	bared window control compliant section	none	hyponym
 compliant control	bared window section	none	hyponym
 compliant control	building	hypernym	hyponym
 compliant control	business continuity management	hyponym	hyponym
-compliant control	business continuity management process	none	hyponym
+compliant control	business continuity management process	hyponym	hyponym
 compliant control	business continuity management process control compliant organization	none	hyponym
 compliant control	cabling security	hyponym	hyponym
 compliant control	cabling security building	hyponym	hyponym
@@ -1215,7 +1215,7 @@ compliant control	data secrecy control compliant organization	hyponym	hyponym
 compliant control	data security handbook	hyponym	hyponym
 compliant control	data security handbook control	hyponym	hyponym
 compliant control	data security handbook control compliant organization	hyponym	hyponym
-compliant control	delivery and loading areas	hypernym	hyponym
+compliant control	delivery and loading areas	none	hyponym
 compliant control	delivery and loading areas control	none	hyponym
 compliant control	delivery and loading areas control compliant building	none	hyponym
 compliant control	disciplinary process	hypernym	hyponym
@@ -1228,7 +1228,7 @@ compliant control	electric installation	hypernym	hyponym
 compliant control	electric installation control	none	hyponym
 compliant control	electric installation control compliant organization	none	hyponym
 compliant control	electronic commerce services	instance	hyponym
-compliant control	electronic commerce services control	instance	hyponym
+compliant control	electronic commerce services control	hyponym	hyponym
 compliant control	electronic commerce services control compliant organization	instance	hyponym
 compliant control	electronic messaging protection	hyponym	hyponym
 compliant control	electronic messaging protection control	hyponym	hyponym
@@ -1244,7 +1244,7 @@ compliant control	encryption of confidential data control	hyponym	hyponym
 compliant control	encryption of confidential data control compliant organization	hyponym	hyponym
 compliant control	environmental conditions monitoring	hyponym	hyponym
 compliant control	environmental conditions monitoring control compliant organization	none	hyponym
-compliant control	environmental conditions monitoring control compliant sever room	hypernym	hyponym
+compliant control	environmental conditions monitoring control compliant sever room	hyponym	hyponym
 compliant control	environmental conditions monitoring control control	hyponym	hyponym
 compliant control	environmental conditions monitoring sever room	hyponym	hyponym
 compliant control	equipment identification	hypernym	hyponym
@@ -1288,7 +1288,7 @@ compliant control	human behavior guidelines control	none	hyponym
 compliant control	human behavior guidelines control compliant control organization	none	hyponym
 compliant control	human behavior guidelines control compliant organization	none	hyponym
 compliant control	human behavior guidelines policy	none	hyponym
-compliant control	human resource development	hyponym	hyponym
+compliant control	human resource development	none	hyponym
 compliant control	human resource development control	hyponym	hyponym
 compliant control	human resource development control compliant organization	none	hyponym
 compliant control	human resource development policy	none	hyponym
@@ -1461,7 +1461,7 @@ compliant control	social network control	hyponym	hyponym
 compliant control	social network control compliant organization	hyponym	hyponym
 compliant control	system capacity	hypernym	hyponym
 compliant control	system capacity control	hyponym	hyponym
-compliant control	system capacity control compliant organization	none	hyponym
+compliant control	system capacity control compliant organization	hyponym	hyponym
 compliant control	system capacity monitoring	hyponym	hyponym
 compliant control	system capacity monitoring control	hyponym	hyponym
 compliant control	system capacity monitoring control compliant organization	hyponym	hyponym
@@ -1470,7 +1470,7 @@ compliant control	systems acquisition control	hyponym	hyponym
 compliant control	systems acquisition control compliant organization	none	hyponym
 compliant control	systems testing	hypernym	hyponym
 compliant control	systems testing and acquisition	none	hyponym
-compliant control	systems testing and acquisition control	none	hyponym
+compliant control	systems testing and acquisition control	hyponym	hyponym
 compliant control	systems testing and acquisition control compliant organization	none	hyponym
 compliant control	systems testing control	hyponym	hyponym
 compliant control	systems testing control compliant organization	hyponym	hyponym
@@ -1490,7 +1490,7 @@ compliant control	theft protection control compliant mobile device	hyponym	hypon
 compliant control	third party service management	hyponym	hyponym
 compliant control	third party service management control	hyponym	hyponym
 compliant control	third party service management control compliant organization	none	hyponym
-compliant control	unauthorized use control compliant organization	none	hyponym
+compliant control	unauthorized use control compliant organization	hyponym	hyponym
 compliant control	unauthorized use prevention	hyponym	hyponym
 compliant control	unauthorized use prevention compliant organization	hyponym	hyponym
 compliant control	unauthorized use prevention control	hyponym	hyponym
@@ -1533,7 +1533,7 @@ computer	asset	none	hypernym
 computer	automatic locking control compliant computer	hyponym	hyponym
 computer	clock synchronization control compliant computer	hyponym	hyponym
 computer	compliant control	none	hypernym
-computer	control	concept	hypernym
+computer	control	hypernym	hypernym
 computer	data encryption software control compliant computer	hyponym	hyponym
 computer	equipment identification control compliant computer	hyponym	hyponym
 computer	firewall control compliant computer	hyponym	hyponym
@@ -1544,7 +1544,7 @@ computer	notebook	none	hyponym
 computer	password regulation control compliant computer	hyponym	hyponym
 computer	personal firewall control compliant computer	hyponym	hyponym
 computer	processing validation control compliant computer	hyponym	hyponym
-computer	server	none	hyponym
+computer	server	hypernym	hyponym
 computer	tangible asset	none	hypernym
 computer	teleworkstation	none	hyponym
 computer	workstation	hypernym	hyponym
@@ -1602,9 +1602,9 @@ control	access control	hyponym	hyponym
 control	access control compliant organization	hyponym	hyponym
 control	access control regulation control compliant organization	hyponym	hyponym
 control	access regulation	hyponym	hyponym
-control	access regulation control compliant building	hyponym	hyponym
+control	access regulation control compliant building	none	hyponym
 control	air conditioning control	none	hyponym
-control	air conditioning control compliant server room	instance	hyponym
+control	air conditioning control compliant server room	hyponym	hyponym
 control	air conditioning server room	none	hyponym
 control	anti virus	hyponym	hyponym
 control	anti virus control	hyponym	hyponym
@@ -1621,7 +1621,7 @@ control	application evaluation control	hyponym	hyponym
 control	application evaluation control compliant organization	hyponym	hyponym
 control	appropriate contacts	hyponym	hyponym
 control	appropriate contacts compliant organization	none	hyponym
-control	assets	hypernym	hyponym
+control	assets	none	hyponym
 control	assets control	none	hyponym
 control	assets control compliant organization	none	hyponym
 control	audit logging	hyponym	hyponym
@@ -1644,7 +1644,7 @@ control	bared window control compliant section	none	hyponym
 control	bared window section	none	hyponym
 control	building	hypernym	hyponym
 control	business continuity management	hyponym	hyponym
-control	business continuity management process	none	hyponym
+control	business continuity management process	hyponym	hyponym
 control	business continuity management process control compliant organization	none	hyponym
 control	cabling security	hyponym	hyponym
 control	cabling security building	hyponym	hyponym
@@ -1716,7 +1716,7 @@ control	electronic commerce services control compliant organization	none	hyponym
 control	electronic messaging protection	hyponym	hyponym
 control	electronic messaging protection control	hyponym	hyponym
 control	electronic messaging protection control compliant organization	hyponym	hyponym
-control	emergency planning	none	hyponym
+control	emergency planning	hyponym	hyponym
 control	emergency planning control	hyponym	hyponym
 control	emergency planning control compliant organization	none	hyponym
 control	emergency recovery	hyponym	hyponym
@@ -1730,7 +1730,7 @@ control	environmental conditions monitoring control compliant organization	none	
 control	environmental conditions monitoring control compliant sever room	hyponym	hyponym
 control	environmental conditions monitoring control control	hyponym	hyponym
 control	environmental conditions monitoring sever room	hyponym	hyponym
-control	equipment identification	none	hyponym
+control	equipment identification	hyponym	hyponym
 control	equipment identification computer	hyponym	hyponym
 control	equipment identification control	hyponym	hyponym
 control	equipment identification control compliant computer	hyponym	hyponym
@@ -1761,7 +1761,7 @@ control	fire suppression control	none	hyponym
 control	fire suppression control compliant section	none	hyponym
 control	firewall	hypernym	hyponym
 control	firewall computer	hyponym	hyponym
-control	firewall control	hyponym	hyponym
+control	firewall control	hypernym	hyponym
 control	firewall control compliant computer	hyponym	hyponym
 control	firewall regulation	hyponym	hyponym
 control	firewall regulation control	hyponym	hyponym
@@ -1771,7 +1771,7 @@ control	human behavior guidelines control	none	hyponym
 control	human behavior guidelines control compliant control organization	none	hyponym
 control	human behavior guidelines control compliant organization	none	hyponym
 control	human behavior guidelines policy	none	hyponym
-control	human resource development	hyponym	hyponym
+control	human resource development	none	hyponym
 control	human resource development control	hyponym	hyponym
 control	human resource development control compliant organization	none	hyponym
 control	human resource development policy	none	hyponym
@@ -1854,7 +1854,7 @@ control	operational procedures	none	hyponym
 control	organizational records protection	hyponym	hyponym
 control	organizational records protection control	hyponym	hyponym
 control	organizational records protection control compliant organization	hyponym	hyponym
-control	outsourcing	instance	hyponym
+control	outsourcing	hypernym	hyponym
 control	outsourcing control	hyponym	hyponym
 control	outsourcing control compliant organization	none	hyponym
 control	password regulation	hyponym	hyponym
@@ -1946,7 +1946,7 @@ control	social network control	hyponym	hyponym
 control	social network control compliant organization	hyponym	hyponym
 control	system capacity	hyponym	hyponym
 control	system capacity control	hyponym	hyponym
-control	system capacity control compliant organization	none	hyponym
+control	system capacity control compliant organization	hyponym	hyponym
 control	system capacity monitoring	hyponym	hyponym
 control	system capacity monitoring control	hyponym	hyponym
 control	system capacity monitoring control compliant organization	hyponym	hyponym
@@ -1955,7 +1955,7 @@ control	systems acquisition control	hyponym	hyponym
 control	systems acquisition control compliant organization	none	hyponym
 control	systems testing	hyponym	hyponym
 control	systems testing and acquisition	none	hyponym
-control	systems testing and acquisition control	none	hyponym
+control	systems testing and acquisition control	hyponym	hyponym
 control	systems testing and acquisition control compliant organization	none	hyponym
 control	systems testing control	hyponym	hyponym
 control	systems testing control compliant organization	hyponym	hyponym
@@ -2035,13 +2035,13 @@ data archiving control	organization	hypernym	hypernym
 data archiving control compliant organization	asset	hypernym	hypernym
 data archiving control compliant organization	compliant control	hypernym	hypernym
 data archiving control compliant organization	control	hypernym	hypernym
-data archiving control compliant organization	intangible asset	hypernym	hypernym
+data archiving control compliant organization	intangible asset	none	hypernym
 data archiving control compliant organization	organization	hypernym	hypernym
 data archiving policy	asset	hypernym	hypernym
 data archiving policy	intangible asset	none	hypernym
 data archiving policy	policy	hypernym	hypernym
 data backup	asset	hypernym	hypernym
-data backup	compliant control	hypernym	hypernym
+data backup	compliant control	hyponym	hypernym
 data backup	control	hypernym	hypernym
 data backup	intangible asset	none	hypernym
 data backup	organization	hypernym	hypernym
@@ -2144,7 +2144,7 @@ data disposal policy	asset	hypernym	hypernym
 data disposal policy	intangible asset	none	hypernym
 data disposal policy	policy	hypernym	hypernym
 data encryption	asset	hypernym	hypernym
-data encryption	compliant control	hypernym	hypernym
+data encryption	compliant control	hyponym	hypernym
 data encryption	control	hypernym	hypernym
 data encryption	intangible asset	hyponym	hypernym
 data encryption	policy	hypernym	hypernym
@@ -2232,10 +2232,10 @@ disciplinary process policy	asset	hypernym	hypernym
 disciplinary process policy	intangible asset	none	hypernym
 disciplinary process policy	policy	hypernym	hypernym
 document	access log book	none	hyponym
-document	asset	concept	hypernym
+document	asset	hypernym	hypernym
 document	checklist	instance	hyponym
 document	config	none	hyponym
-document	config data	hyponym	hyponym
+document	config data	none	hyponym
 document	configuration data	hyponym	hyponym
 document	configuration data digital format	hyponym	hyponym
 document	configuration data hard copy	hyponym	hyponym
@@ -2256,7 +2256,7 @@ documented operational procedures control compliant organization	compliant contr
 documented operational procedures control compliant organization	control	hypernym	hypernym
 documented operational procedures control compliant organization	intangible asset	none	hypernym
 documented operational procedures control compliant organization	organization	hypernym	hypernym
-door	asset	concept	hypernym
+door	asset	none	hypernym
 door	immovable asset	none	hypernym
 door	safety door	none	hyponym
 door	section connector	none	hypernym
@@ -2267,7 +2267,7 @@ dvd	asset	none	hypernym
 dvd	backup media	none	hypernym
 dvd	movable asset	none	hypernym
 dvd	tangible asset	none	hypernym
-electric installation	asset	none	hypernym
+electric installation	asset	hypernym	hypernym
 electric installation	compliant control	none	hypernym
 electric installation	control	hypernym	hypernym
 electric installation	intangible asset	none	hypernym
@@ -2448,7 +2448,7 @@ equipment identification control compliant computer	movable asset	none	hypernym
 equipment identification control compliant computer	tangible asset	hypernym	hypernym
 equipment location	asset	none	hypernym
 equipment location	compliant control	none	hypernym
-equipment location	control	none	hypernym
+equipment location	control	hypernym	hypernym
 equipment location	intangible asset	none	hypernym
 equipment location	organization	none	hypernym
 equipment location control	asset	hypernym	hypernym
@@ -2704,7 +2704,7 @@ immovable asset	window	none	hyponym
 information passing	asset	hypernym	hypernym
 information passing	compliant control	hyponym	hypernym
 information passing	control	hypernym	hypernym
-information passing	intangible asset	hyponym	hypernym
+information passing	intangible asset	none	hypernym
 information passing	organization	hypernym	hypernym
 information passing	policy	hypernym	hypernym
 information passing control	asset	hypernym	hypernym
@@ -2807,14 +2807,14 @@ intangible asset	assets	hypernym	hyponym
 intangible asset	assets control	none	hyponym
 intangible asset	assets control compliant organization	none	hyponym
 intangible asset	assets control policy	none	hyponym
-intangible asset	audit logging	none	hyponym
+intangible asset	audit logging	hyponym	hyponym
 intangible asset	audit logging and monitoring	hyponym	hyponym
 intangible asset	audit logging and monitoring control	hyponym	hyponym
 intangible asset	audit logging and monitoring control compliant organization	none	hyponym
 intangible asset	audit logging and monitoring policy	hyponym	hyponym
 intangible asset	audit logging control	hyponym	hyponym
 intangible asset	audit logging control compliant organization	none	hyponym
-intangible asset	audit logging policy	none	hyponym
+intangible asset	audit logging policy	hyponym	hyponym
 intangible asset	audit monitoring	hyponym	hyponym
 intangible asset	audit monitoring control	hyponym	hyponym
 intangible asset	audit monitoring control compliant organization	none	hyponym
@@ -2842,7 +2842,7 @@ intangible asset	clear desk policy	none	hyponym
 intangible asset	clock synchronization	none	hyponym
 intangible asset	clock synchronization software	none	hyponym
 intangible asset	cloud computing	none	hyponym
-intangible asset	cloud computing control	hyponym	hyponym
+intangible asset	cloud computing control	none	hyponym
 intangible asset	cloud computing control compliant organization	none	hyponym
 intangible asset	cloud computing policy	none	hyponym
 intangible asset	cloud service contract	none	hyponym
@@ -2860,11 +2860,11 @@ intangible asset	contract	hypernym	hyponym
 intangible asset	data	hypernym	hyponym
 intangible asset	data archiving	hyponym	hyponym
 intangible asset	data archiving control	hyponym	hyponym
-intangible asset	data archiving control compliant organization	none	hyponym
+intangible asset	data archiving control compliant organization	hyponym	hyponym
 intangible asset	data archiving policy	hyponym	hyponym
 intangible asset	data backup	hyponym	hyponym
 intangible asset	data backup control	hyponym	hyponym
-intangible asset	data backup control compliant organization	none	hyponym
+intangible asset	data backup control compliant organization	hyponym	hyponym
 intangible asset	data backup policy	hyponym	hyponym
 intangible asset	data backup storage	hyponym	hyponym
 intangible asset	data backup storage and backup media	none	hyponym
@@ -2961,7 +2961,7 @@ intangible asset	firewall	hypernym	hyponym
 intangible asset	firewall policy	hyponym	hyponym
 intangible asset	firewall regulation	hyponym	hyponym
 intangible asset	firewall regulation control	hyponym	hyponym
-intangible asset	firewall regulation control compliant organization	none	hyponym
+intangible asset	firewall regulation control compliant organization	hyponym	hyponym
 intangible asset	human behavior guidelines	none	hyponym
 intangible asset	human behavior guidelines control	none	hyponym
 intangible asset	human behavior guidelines control compliant control organization	none	hyponym
@@ -3331,7 +3331,7 @@ kensington lock control	compliant control	hypernym	hypernym
 kensington lock control	control	hypernym	hypernym
 kensington lock control compliant computer	compliant control	hypernym	hypernym
 kensington lock control compliant computer	control	hypernym	hypernym
-level	asset	hypernym	hypernym
+level	asset	none	hypernym
 level	immovable asset	none	hypernym
 level	raised floor control compliant level	none	hyponym
 level	tangible asset	none	hypernym
@@ -3457,13 +3457,13 @@ media scanning control compliant organization	control	hypernym	hypernym
 media scanning control compliant organization	intangible asset	none	hypernym
 media scanning control compliant organization	organization	hypernym	hypernym
 mobile	IT component	instance	hypernym
-mobile	PDA	hyponym	hyponym
+mobile	PDA	concept	hyponym
 mobile	antivirus control compliant mobile	instance	hyponym
 mobile	asset	none	hypernym
 mobile	automatic locking control compliant mobile	instance	hyponym
 mobile	movable asset	none	hypernym
 mobile	smartphone	hypernym	hyponym
-mobile	tablet	hypernym	hyponym
+mobile	tablet	none	hyponym
 mobile	tangible asset	none	hypernym
 mobile	theft protection control compliant mobile	instance	hyponym
 mobile anti virus	compliant control	hypernym	hypernym
@@ -3486,10 +3486,10 @@ mobile code blocking control compliant organization	control	hypernym	hypernym
 mobile code blocking control compliant organization	intangible asset	hypernym	hypernym
 mobile code blocking control compliant organization	organization	hypernym	hypernym
 mobile device	IT component	hypernym	hypernym
-mobile device	PDA	none	hyponym
+mobile device	PDA	instance	hyponym
 mobile device	antivirus control compliant mobile device	instance	hyponym
 mobile device	asset	hypernym	hypernym
-mobile device	automatic locking control compliant mobile device	none	hyponym
+mobile device	automatic locking control compliant mobile device	instance	hyponym
 mobile device	compliant control	none	hypernym
 mobile device	control	hypernym	hypernym
 mobile device	intangible asset	none	hypernym
@@ -3498,7 +3498,7 @@ mobile device	organization	hypernym	hypernym
 mobile device	smartphone	hypernym	hyponym
 mobile device	tablet	hypernym	hyponym
 mobile device	tangible asset	none	hypernym
-mobile device	theft protection control compliant mobile device	none	hyponym
+mobile device	theft protection control compliant mobile device	instance	hyponym
 mobile device control	asset	hypernym	hypernym
 mobile device control	compliant control	hypernym	hypernym
 mobile device control	control	hypernym	hypernym
@@ -3529,15 +3529,15 @@ movable asset	access system	hypernym	hyponym
 movable asset	air condition	none	hyponym
 movable asset	air condition system	none	hyponym
 movable asset	alarm system	hyponym	hyponym
-movable asset	antivirus control compliant mobile	hyponym	hyponym
+movable asset	antivirus control compliant mobile	instance	hyponym
 movable asset	antivirus control compliant mobile device	hyponym	hyponym
 movable asset	antivirus software control compliant computer	hyponym	hyponym
 movable asset	automatic locking control compliant computer	hyponym	hyponym
 movable asset	automatic locking control compliant mobile	none	hyponym
 movable asset	automatic locking control compliant mobile device	none	hyponym
-movable asset	backup media	none	hyponym
+movable asset	backup media	hyponym	hyponym
 movable asset	backup storage in-house control compliant backup media	instance	hyponym
-movable asset	backup storage outside control compliant backup media	none	hyponym
+movable asset	backup storage outside control compliant backup media	instance	hyponym
 movable asset	cd	hypernym	hyponym
 movable asset	cd and dvd	none	hyponym
 movable asset	checklist	none	hyponym
@@ -3561,7 +3561,7 @@ movable asset	firewall control compliant computer	hyponym	hyponym
 movable asset	internet filter control compliant computer	hyponym	hyponym
 movable asset	internet gateway	instance	hyponym
 movable asset	intrusion alarm system	hyponym	hyponym
-movable asset	kensignton lock control compliant computer	none	hyponym
+movable asset	kensignton lock control compliant computer	instance	hyponym
 movable asset	kensington lock	none	hyponym
 movable asset	lockable depository	none	hyponym
 movable asset	magnetic tape	none	hyponym
@@ -3582,7 +3582,7 @@ movable asset	processing validation control compliant computer	hyponym	hyponym
 movable asset	removable hard disk	none	hyponym
 movable asset	server	hypernym	hyponym
 movable asset	server rack	hypernym	hyponym
-movable asset	shredder	none	hyponym
+movable asset	shredder	hypernym	hyponym
 movable asset	smartphone	hypernym	hyponym
 movable asset	smoke detector	none	hyponym
 movable asset	switch	hypernym	hyponym
@@ -3719,7 +3719,7 @@ networking policy	policy	hypernym	hypernym
 new facilities	compliant control	none	hypernym
 new facilities	control	hypernym	hypernym
 new facilities authorization	asset	hypernym	hypernym
-new facilities authorization	compliant control	none	hypernym
+new facilities authorization	compliant control	hypernym	hypernym
 new facilities authorization	control	hypernym	hypernym
 new facilities authorization	intangible asset	none	hypernym
 new facilities authorization	organization	hypernym	hypernym
@@ -3770,8 +3770,8 @@ organization	application evaluation control compliant organization	none	hyponym
 organization	appropriate	none	hyponym
 organization	appropriate contacts	none	hyponym
 organization	appropriate contacts compliant organization	none	hyponym
-organization	asset	concept	hypernym
-organization	assets	concept	hyponym
+organization	asset	none	hypernym
+organization	assets	hyponym	hyponym
 organization	assets control	none	hyponym
 organization	assets control compliant organization	none	hyponym
 organization	audit logging	hyponym	hyponym
@@ -3795,13 +3795,13 @@ organization	change control procedures control compliant control	none	hyponym
 organization	clear desk	none	hyponym
 organization	clear desk control	none	hyponym
 organization	clear desk control compliant organization	none	hyponym
-organization	cloud computing	hyponym	hyponym
+organization	cloud computing	none	hyponym
 organization	cloud computing control	hyponym	hyponym
 organization	cloud computing control compliant organization	none	hyponym
 organization	communication scanning	hyponym	hyponym
 organization	communication scanning control	hyponym	hyponym
 organization	communication scanning control compliant organization	none	hyponym
-organization	compliance	hypernym	hyponym
+organization	compliance	hyponym	hyponym
 organization	compliance control	none	hyponym
 organization	compliance control compliance organization	none	hyponym
 organization	configuration data	none	hyponym
@@ -3936,7 +3936,7 @@ organization	network routing	hyponym	hyponym
 organization	network routing control	hyponym	hyponym
 organization	network routing control compliant organization	none	hyponym
 organization	network segregation	none	hyponym
-organization	network segregation control	none	hyponym
+organization	network segregation control	hyponym	hyponym
 organization	network segregation control compliant organization	none	hyponym
 organization	network services agreement	none	hyponym
 organization	network services agreement control	none	hyponym
@@ -3978,12 +3978,12 @@ organization	removable media	none	hyponym
 organization	removable media control	none	hyponym
 organization	removable media control compliant organization	none	hyponym
 organization	restrictive granting of access rights	hyponym	hyponym
-organization	restrictive granting of access rights control	none	hyponym
+organization	restrictive granting of access rights control	hyponym	hyponym
 organization	restrictive granting of access rights control compliant organization	none	hyponym
 organization	risk assessment	none	hyponym
 organization	risk assessment control	hyponym	hyponym
 organization	risk assessment control compliance organization	none	hyponym
-organization	secure areas	hyponym	hyponym
+organization	secure areas	none	hyponym
 organization	secure areas control	hyponym	hyponym
 organization	secure areas control compliant building	none	hyponym
 organization	secure log on	hyponym	hyponym
@@ -4071,7 +4071,7 @@ organization	virus infection control compliant organization	none	hyponym
 organization	visible identification	none	hyponym
 organization	visible identification control	none	hyponym
 organization	visible identification control compliant building	none	hyponym
-organization	visitors	none	hyponym
+organization	visitors	hyponym	hyponym
 organization	visitors control	none	hyponym
 organization	visitors control compliant organization	none	hyponym
 organization	wlan	none	hyponym
@@ -4096,10 +4096,10 @@ os	asset	hypernym	hypernym
 os	intangible asset	none	hypernym
 os	software	hypernym	hypernym
 outsourcing	asset	hypernym	hypernym
-outsourcing	compliant control	none	hypernym
+outsourcing	compliant control	hyponym	hypernym
 outsourcing	control	hypernym	hypernym
 outsourcing	intangible asset	none	hypernym
-outsourcing	organization	concept	hypernym
+outsourcing	organization	none	hypernym
 outsourcing control	asset	hypernym	hypernym
 outsourcing control	compliant control	hypernym	hypernym
 outsourcing control	control	hypernym	hypernym
@@ -4241,7 +4241,7 @@ policy	audit logging and monitoring	hyponym	hyponym
 policy	audit logging and monitoring policy	hyponym	hyponym
 policy	audit logging policy	hyponym	hyponym
 policy	business continuity	none	hyponym
-policy	business continuity policy	none	hyponym
+policy	business continuity policy	hyponym	hyponym
 policy	cabling security	hyponym	hyponym
 policy	cabling security policy	hyponym	hyponym
 policy	change control procedures	none	hyponym
@@ -4288,7 +4288,7 @@ policy	fire safety	none	hyponym
 policy	fire safety and training	none	hyponym
 policy	fire safety and training policy	none	hyponym
 policy	fire safety policy	none	hyponym
-policy	firewall	hyponym	hyponym
+policy	firewall	hypernym	hyponym
 policy	firewall policy	hyponym	hyponym
 policy	human resource development	none	hyponym
 policy	human resource development policy	none	hyponym
@@ -4399,7 +4399,7 @@ port security diagnostic and configuration control	organization	hypernym	hyperny
 port security diagnostic and configuration control compliant organization	asset	hypernym	hypernym
 port security diagnostic and configuration control compliant organization	compliant control	hypernym	hypernym
 port security diagnostic and configuration control compliant organization	control	hypernym	hypernym
-port security diagnostic and configuration control compliant organization	intangible asset	hypernym	hypernym
+port security diagnostic and configuration control compliant organization	intangible asset	none	hypernym
 port security diagnostic and configuration control compliant organization	organization	hypernym	hypernym
 port security diagnostic control	asset	hypernym	hypernym
 port security diagnostic control	compliant control	hypernym	hypernym
@@ -4576,7 +4576,7 @@ risk assessment control compliance organization	compliant control	hypernym	hyper
 risk assessment control compliance organization	control	hypernym	hypernym
 risk assessment control compliance organization	intangible asset	none	hypernym
 risk assessment control compliance organization	organization	hypernym	hypernym
-risks	asset	concept	hypernym
+risks	asset	hypernym	hypernym
 risks	intangible asset	none	hypernym
 risks	policy	hypernym	hypernym
 risks policy	asset	hypernym	hypernym
@@ -4732,7 +4732,7 @@ security relevant patches control	organization	hypernym	hypernym
 security relevant patches control compliant organization	asset	hypernym	hypernym
 security relevant patches control compliant organization	compliant control	hypernym	hypernym
 security relevant patches control compliant organization	control	hypernym	hypernym
-security relevant patches control compliant organization	intangible asset	hypernym	hypernym
+security relevant patches control compliant organization	intangible asset	none	hypernym
 security relevant patches control compliant organization	organization	hypernym	hypernym
 security relevant updates	asset	hypernym	hypernym
 security relevant updates	compliant control	hypernym	hypernym
@@ -4796,7 +4796,7 @@ sensitive information control compliant organization	control	hypernym	hypernym
 sensitive information control compliant organization	intangible asset	hypernym	hypernym
 sensitive information control compliant organization	organization	hypernym	hypernym
 server	IT component	instance	hypernym
-server	asset	instance	hypernym
+server	asset	hypernym	hypernym
 server	computer	hypernym	hypernym
 server	movable asset	hyponym	hypernym
 server	tangible asset	hyponym	hypernym
@@ -4852,7 +4852,7 @@ site	section connector	none	hypernym
 site	tangible asset	none	hypernym
 smartphone	IT component	instance	hypernym
 smartphone	asset	hypernym	hypernym
-smartphone	mobile	concept	hypernym
+smartphone	mobile	hypernym	hypernym
 smartphone	mobile device	instance	hypernym
 smartphone	movable asset	instance	hypernym
 smartphone	tangible asset	instance	hypernym
@@ -4892,7 +4892,7 @@ software	activities monitoring	hyponym	hyponym
 software	activities monitoring software	hyponym	hyponym
 software	anti virus	hyponym	hyponym
 software	antivirus	hyponym	hyponym
-software	asset	hyponym	hypernym
+software	asset	instance	hypernym
 software	automatic locking	hyponym	hyponym
 software	automatic locking software	hyponym	hyponym
 software	backup	instance	hyponym
@@ -4998,7 +4998,7 @@ system capacity software	asset	hypernym	hypernym
 system capacity software	encryption software	hyponym	hypernym
 system capacity software	intangible asset	none	hypernym
 system capacity software	software	hypernym	hypernym
-system image	asset	hypernym	hypernym
+system image	asset	none	hypernym
 system image	intangible asset	none	hypernym
 system image	software	hypernym	hypernym
 systems acquisition	asset	hypernym	hypernym
@@ -5114,7 +5114,7 @@ tangible asset	intrusion alarm system	hyponym	hyponym
 tangible asset	intrusion alarm system control compliant section	hyponym	hyponym
 tangible asset	kensignton lock control compliant computer	none	hyponym
 tangible asset	kensington lock	none	hyponym
-tangible asset	level	hypernym	hyponym
+tangible asset	level	none	hyponym
 tangible asset	lightning arrester	none	hyponym
 tangible asset	loading area	none	hyponym
 tangible asset	location	hypernym	hyponym
@@ -5224,7 +5224,7 @@ temperature surveillance system	asset	hypernym	hypernym
 temperature surveillance system	movable asset	none	hypernym
 temperature surveillance system	tangible asset	none	hypernym
 test system	IT component	hypernym	hypernym
-test system	asset	hypernym	hypernym
+test system	asset	none	hypernym
 test system	movable asset	none	hypernym
 test system	tangible asset	none	hypernym
 theft protection	asset	hypernym	hypernym
@@ -5342,7 +5342,7 @@ uninterruptible power supply unit	power source	hypernym	hypernym
 uninterruptible power supply unit	tangible asset	none	hypernym
 usb stick	IT component	hypernym	hypernym
 usb stick	asset	hypernym	hypernym
-usb stick	backup media	instance	hypernym
+usb stick	backup media	hyponym	hypernym
 usb stick	movable asset	none	hypernym
 usb stick	tangible asset	none	hypernym
 user authentication	asset	hypernym	hypernym
@@ -5404,7 +5404,7 @@ user registration and deregistration control	control	hypernym	hypernym
 user registration and deregistration control	intangible asset	none	hypernym
 user registration and deregistration control	organization	hypernym	hypernym
 user registration and deregistration control compliant organization	asset	hypernym	hypernym
-user registration and deregistration control compliant organization	compliant control	hypernym	hypernym
+user registration and deregistration control compliant organization	compliant control	none	hypernym
 user registration and deregistration control compliant organization	control	hypernym	hypernym
 user registration and deregistration control compliant organization	intangible asset	none	hypernym
 user registration and deregistration control compliant organization	organization	hypernym	hypernym
@@ -5470,9 +5470,9 @@ visible identification control compliant building	intangible asset	none	hypernym
 visible identification control compliant building	organization	hypernym	hypernym
 visitors	asset	none	hypernym
 visitors	compliant control	none	hypernym
-visitors	control	hypernym	hypernym
+visitors	control	none	hypernym
 visitors	intangible asset	none	hypernym
-visitors	organization	hypernym	hypernym
+visitors	organization	none	hypernym
 visitors control	asset	hypernym	hypernym
 visitors control	compliant control	none	hypernym
 visitors control	control	hypernym	hypernym
