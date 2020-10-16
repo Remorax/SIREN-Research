@@ -10,4 +10,4 @@
 module load cuda/10.2
 module load cudnn/7.6.5-cuda-10.2 
 
-python3 test_instance_softmax.py data_instances_new.pkl results_instances_new_softmax.txt Output_instances_softmax instances_softmax.pt
+python3 LSTM_instances_softmax.py data_instances_new.pkl results_instances_new_softmax.txt Output_instances_softmax instances_softmax_new.pt
