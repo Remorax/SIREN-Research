@@ -57,7 +57,7 @@ class RelationPredictor(nn.Module):
         self.n_directions = 2 if bidirectional else 1
         
         self.input_dim = POS_DIM + DEP_DIM + self.EMBEDDING_DIM + DIR_DIM
-        self.output_dim = self.n_directions * HIDDEN_DIM + 2 * self.EMBEDDING_DIM
+        self.output_dim = self.n_directions * HIDDEN_DIM * NUM_LAYERS + 2 * self.EMBEDDING_DIM
         # self.layer1_dim = LAYER1_DIM
         # self.W1 = nn.Linear(self.hidden_dim, self.layer1_dim)
         # self.W2 = nn.Linear(self.layer1_dim, NUM_RELATIONS)

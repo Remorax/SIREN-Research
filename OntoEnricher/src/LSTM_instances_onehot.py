@@ -12,18 +12,22 @@ results_file = os.path.abspath("../Results/" + sys.argv[2])
 output_file =  os.path.abspath("../Outputs/" + sys.argv[3])
 model_file =  os.path.abspath("../Models/" + sys.argv[4])
 
+emb_dropout = float(sys.argv[5])
+hidden_dropout = float(sys.argv[6])
+output_dropout = float(sys.argv[7])
+NUM_LAYERS = int(sys.argv[8])
+HIDDEN_DIM = int(sys.argv[9])
+LAYER1_DIM = int(sys.argv[10])
+
 f = open(dataset_file, "rb")
 (nodes_train, paths_train, counts_train, targets_train, 
  nodes_test, paths_test, counts_test, targets_test,
  nodes_knocked, paths_knocked, counts_knocked, targets_knocked,
- nodes_instances1, paths_instances_old1, counts_instances_old1, 
- paths_instances_new1, counts_instances_new1, 
- paths_instances1, counts_instances1, targets_instances1,
- nodes_instances2, paths_instances_old2, counts_instances_old2, 
- paths_instances_new2, counts_instances_new2, 
- paths_instances2, counts_instances2, targets_instances2,
- emb_indexer, emb_indexer_inv, emb_vals, 
- pos_indexer, dep_indexer, dir_indexer, rel_indexer) = pickle.load(f)
+ nodes_instances_original, nodes_instances_webpage, nodes_instances_hybrid,
+ paths_instances_original, paths_instances_webpage, paths_instances_hybrid,
+ counts_instances_original, counts_instances_webpage, counts_instances_hybrid,
+ targets_instances_original, targets_instances_webpage, targets_instances_hybrid,
+ emb_indexer, emb_indexer_inv, emb_vals, pos_indexer, dep_indexer, dir_indexer, rel_indexer) = pickle.load(f)
 
 rel_indexer_inv = {rel_indexer[key]: key for key in rel_indexer}
 op_file = open(results_file, "w+")
@@ -56,12 +60,14 @@ class RelationPredictor(nn.Module):
         self.n_directions = 2 if bidirectional else 1
         
         self.input_dim = POS_DIM + DEP_DIM + self.EMBEDDING_DIM + DIR_DIM
-        self.output_dim = self.n_directions * HIDDEN_DIM + 2 * self.EMBEDDING_DIM
+        self.output_dim = self.n_directions * HIDDEN_DIM * NUM_LAYERS + 2 * self.EMBEDDING_DIM
         # self.layer1_dim = LAYER1_DIM
         # self.W1 = nn.Linear(self.hidden_dim, self.layer1_dim)
         # self.W2 = nn.Linear(self.layer1_dim, NUM_RELATIONS)
 
-        self.dropout_layer = nn.Dropout(p=dropout)
+        self.emb_dropout = nn.Dropout(p=emb_dropout)
+        self.hidden_dropout = nn.Dropout(p=hidden_dropout)
+        self.output_dropout = nn.Dropout(p=output_dropout)
         self.log_softmax = nn.LogSoftmax()
         
         self.name_embeddings = nn.Embedding(len(emb_vals), self.EMBEDDING_DIM)
@@ -78,7 +84,18 @@ class RelationPredictor(nn.Module):
         
         self.lstm = nn.LSTM(self.input_dim, HIDDEN_DIM, NUM_LAYERS, bidirectional=bidirectional, batch_first=True)
 
-        self.W = nn.Linear(self.output_dim, NUM_RELATIONS)
+        if LAYER1_DIM == 0:
+            self.W = nn.Linear(self.output_dim, NUM_RELATIONS)
+        else:
+            self.layer1_dim = LAYER1_DIM
+            self.W1 = nn.Linear(self.output_dim, self.layer1_dim)
+            self.W2 = nn.Linear(self.layer1_dim, NUM_RELATIONS)
+
+    def masked_softmax(self, inp):
+        # To softmax all non-zero tensor values
+        inp = inp.double()
+        mask = ((inp != 0).double() - 1) * 9999  # for -inf
+        return (inp + mask).softmax(dim=-1)
 
     def forward(self, nodes, paths, counts, edgecounts, max_paths, max_edges):
         '''
@@ -87,25 +104,28 @@ class RelationPredictor(nn.Module):
             counts: batch_size * max_paths
             edgecounts: batch_size * max_paths
         '''
-        word_embed = self.dropout_layer(self.name_embeddings(paths[:,:,:,0]))
-        pos_embed = self.dropout_layer(self.pos_embeddings(paths[:,:,:,1]))
-        dep_embed = self.dropout_layer(self.dep_embeddings(paths[:,:,:,2]))
-        dir_embed = self.dropout_layer(self.dir_embeddings(paths[:,:,:,3]))
+        word_embed = self.emb_dropout(self.name_embeddings(paths[:,:,:,0]))
+        pos_embed = self.emb_dropout(self.pos_embeddings(paths[:,:,:,1]))
+        dep_embed = self.emb_dropout(self.dep_embeddings(paths[:,:,:,2]))
+        dir_embed = self.emb_dropout(self.dir_embeddings(paths[:,:,:,3]))
         paths_embed = torch.cat((word_embed, pos_embed, dep_embed, dir_embed), dim=-1)
-        nodes_embed = self.dropout_layer(self.name_embeddings(nodes)).reshape(-1, 2*self.EMBEDDING_DIM)
+        nodes_embed = self.emb_dropout(self.name_embeddings(nodes)).reshape(-1, 2*self.EMBEDDING_DIM)
 
         paths_embed = paths_embed.reshape((-1, max_edges, self.input_dim))
 
         paths_packed = pack_padded_sequence(paths_embed, torch.flatten(edgecounts), batch_first=True, enforce_sorted=False)
         _, (hidden_state, _) = self.lstm(paths_packed)
-        paths_output = hidden_state.permute(1,2,0)
+        paths_output = self.hidden_dropout(hidden_state).permute(1,2,0)
         paths_output_reshaped = paths_output.reshape(-1, max_paths, HIDDEN_DIM*NUM_LAYERS*self.n_directions)
         # paths_output has dim (batch_size, max_paths, HIDDEN_DIM, NUM_LAYERS*self.n_directions)
 
         counts = F.one_hot(counts.argmax(1), num_classes=counts.shape[-1]).double()
         paths_weighted = torch.bmm(paths_output_reshaped.permute(0,2,1), counts.unsqueeze(-1)).squeeze(-1)
         representation = torch.cat((nodes_embed, paths_weighted), dim=-1)
-        probabilities = self.log_softmax(self.W(representation))
+        if LAYER1_DIM == 0:
+            probabilities = self.log_softmax(self.output_dropout(self.W(representation)))
+        else:
+            probabilities = self.log_softmax(self.output_dropout(self.W2(F.relu(self.W1(representation)))))
         return probabilities
 
 def to_list(seq):
@@ -134,15 +154,11 @@ def pad_edgecounts(edgecounts, max_paths):
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-HIDDEN_DIM = 250
-# LAYER1_DIM = 120
-NUM_LAYERS = 1
 num_epochs = 50
 batch_size = 32
 bidirectional = True
 
 lr = 0.001
-dropout = 0.3
 weight_decay = 0.001
 
 model = RelationPredictor(emb_vals).to(device)
@@ -254,14 +270,10 @@ model.eval()
 with torch.no_grad():
     test(nodes_test, paths_test, counts_test, targets_test, "Test")
     test(nodes_knocked, paths_knocked, counts_knocked, targets_knocked, "Knocked out")
-    
-    test(nodes_instances1, paths_instances_old1, counts_instances_old1, targets_instances1, "Instances_svo(original)")
-    test(nodes_instances1, paths_instances_new1, counts_instances_new1, targets_instances1, "Instances_svo(webpage)")
-    test(nodes_instances1, paths_instances1, counts_instances1, targets_instances1, "Instances_svo(hybrid)")
-    
-    test(nodes_instances2, paths_instances_old2, counts_instances_old2, targets_instances2, "Instances_nchunks(original)")
-    test(nodes_instances2, paths_instances_new2, counts_instances_new2, targets_instances2, "Instances_nchunks(webpage)")
-    test(nodes_instances2, paths_instances2, counts_instances2, targets_instances2, "Instances_nchunks(hybrid)")
-    
+
+    test(nodes_instances_original, paths_instances_original, counts_instances_original, targets_instances_original, "Instances_original")
+    test(nodes_instances_webpage, paths_instances_webpage, counts_instances_webpage, targets_instances_webpage, "Instances_webpage")
+    test(nodes_instances_hybrid, paths_instances_hybrid, counts_instances_hybrid, targets_instances_hybrid, "Instances_hybrid")
+
 
 op_file.close()

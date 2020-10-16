@@ -10,9 +10,12 @@
 module load cuda/10.2
 module load cudnn/7.6.5-cuda-10.2 
 
-emb_dropouts=(0.3 0.35)
-hidden_dropouts=(0.2)
+emb_dropouts=(0.35)
+hidden_dropouts=(0.8)
 output_dropouts=(0)
+NUM_LAYERS=(1)
+# HIDDEN_DIMS=((250, 120), (250, 60), (500, 0), (500, 250), (500, 150), (500, 60), (750, 300), (750, 150), (750, 500))
+
 
 for emb_dropout in "${emb_dropouts[@]}";
 do
@@ -20,7 +23,15 @@ do
 	do
 		for output_dropout in "${output_dropouts[@]}";
 		do
-			python3 LSTM_dropout.py data_use_0.86.pkl "results_dropout_"$emb_dropout"_"$hidden_dropout"_"$output_dropout"_.txt" "Output_dropout_"$emb_dropout"_"$hidden_dropout"_"$output_dropout "dropout_"$emb_dropout"_"$hidden_dropout"_"$output_dropout".pt" $emb_dropout $hidden_dropout $output_dropout
+			for NUM_LAYER in "${NUM_LAYERS[@]}";
+			do
+				for i in "180 0" "180 120" "180 60" "250 0"
+				do
+					set -- $i
+					echo $1 and $2
+					python3 LSTM_instances.py data_instances_v3.pkl "results_v3"$emb_dropout"_"$hidden_dropout"_"$output_dropout"_"$NUM_LAYER"_"$1"_"$2".txt" "Output_v3"$emb_dropout"_"$hidden_dropout"_"$output_dropout"_"$NUM_LAYER"_"$1"_"$2 "hyp_"$emb_dropout"_"$hidden_dropout"_"$output_dropout"_"$NUM_LAYER"_"$1"_"$2".pt" $emb_dropout $hidden_dropout $output_dropout $NUM_LAYER $1 $2
+				done	
+			done
 		done
 	done
 done
