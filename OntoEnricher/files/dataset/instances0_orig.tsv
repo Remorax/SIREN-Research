@@ -1,4 +1,10 @@
 same code	security fixes	none
+Image parsing	accessible attack surface	hypernym
+vulnerability	information disclosure	hypernym
+bug	minimum length check	hypernym
+Image parsing	vulnerability	hypernym
+code execution	vulnerability	hyponym
+vulnerability class	uninitialized memory	hyponym
 understanding	math	none
 understanding	color transformation	none
 stream	size	none
@@ -21,7 +27,6 @@ external researchers	small module	none
 tag/element	stream	none
 International Color Consortium	color management	none
 buffer size	count	none
-Image parsing	accessible attack surface	none
 something	image format	none
 byte	write	none
 Little CMS	LCMS	none
@@ -243,7 +248,6 @@ external researchers	certain degree	none
 functions	fact	none
 first set	16-core machine	none
 bound read	write	none
-vulnerability	information disclosure	none
 fuzzing	Windows OS ’ built-in image parsers	none
 corpus	color profiles	none
 functionality	small set	none
@@ -251,7 +255,6 @@ open source Color Management	LCMS	none
 Windows	API sequence	none
 unconstrained size	integer	none
 vulnerability class	talked	none
-vulnerability class	uninitialized memory	none
 basic features	rendering	none
 color profile	stand-alone files	none
 data	color input	none
@@ -375,7 +378,6 @@ ICM APIs	MSDN	none
 other	CMConvIndexToNameProfile	none
 fuzzing	corpus	none
 corpus	multiple vulnerabilities	none
-bug	minimum length check	none
 parameters	transformations	none
 programming/tools	many image files	none
 code coverage information	first set	none
@@ -516,7 +518,6 @@ images	profile	none
 open source Color Management	such	none
 fuzzing	vulnerabilities	none
 Little CMS	such	none
-code execution	vulnerability	none
 History	Windows	none
 Part	basic features	none
 Windows	operations	none
@@ -844,4 +845,3 @@ Part	Color Profiles Image parsing	none
 allocation	size	none
 present	function	none
 Color Profiles Image parsing	modern operating system	none
-Image parsing	vulnerability	none

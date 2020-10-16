@@ -25,7 +25,7 @@ cameras	datacenters	none
 pre-emptive user protections	vast network	none
 Click-Time Protection	URL rewriting	none
 dedicated servers	only line	none
-cyberattacks	social engineering	none
+cyberattacks	social engineering	hyponym
 email	threats	none
 SandBlast Network	organizations	none
 vast network	non-AI engines	none
@@ -61,7 +61,7 @@ forensic reports	network forensics	none
 Threat Emulation	real time	none
 exhaustive AI engines	single conclusive AI-generated verdict	none
 Easy-to-use	broad array	none
-zero-day protection	evasion-resistant threat emulation	none
+zero-day protection	evasion-resistant threat emulation	hyponym
 INTUITIVE MANAGEMENT SandBlast Network	single click setup4	none
 text	email	none
 single conclusive AI-generated verdict	data science	none
@@ -156,11 +156,11 @@ zero-day protection	file types	none
 SandBlast Threat Extraction	document	none
 advantages	datacenters	none
 URL rewriting	URL reputation	none
-rules-based engines	NLP	none
+rules-based engines	NLP	hyponym
 file types	enterprise users	none
 undiscovered cyber attacks	new	none
 malicious files	email	none
-safe browsing	SandBlast Network ’ s zero day protection	none
+safe browsing	SandBlast Network ’ s zero day protection	hypernym
 executables	broad range	none
 world ’ s	proprietary technologies	none
 cyberattacks	prevention-first strategy	none
@@ -270,7 +270,7 @@ security decisions	ThreatCloud – Dynamic Threat Intelligence Repository	none
 other email-based threats	BEC	none
 email attachments	text	none
 SandBlast Threat Extraction	%	none
-rules-based engines	AI-based fraud protection	none
+rules-based engines	AI-based fraud protection	hyponym
 instant alerts	Reporting	none
 such	Endpoint security	none
 perimeter	single click setup4	none
@@ -363,7 +363,7 @@ Natural Language Processing	real time	none
 auto-updated threat prevention engines	features	none
 network	file signatures	none
 revolutionary AI engines	pre-emptively sanitizes email	none
-elevators	Endpoint security	none
+elevators	Endpoint security	hypernym
 SandBlast network	advanced email protections	none
 malicious content	uninterrupted business flow	none
 need	internal network etc	none
@@ -445,7 +445,7 @@ Reporting	apprise	none
 datacenters	network perimeter	none
 web	SandBlast Threat Extraction	none
 rules-based engines	AI-based phishing protection	none
-SandBlast Network	links	none
+SandBlast Network	links	hyponym
 parameters	data science	none
 fact	half	none
 executables	documents	none
@@ -513,7 +513,7 @@ broad integration ecosystem	export	none
 email links	threats	none
 full visibility	policy changes	none
 threat intelligence exists	SandBlast Network performs	none
-unknown ransomware	cyberattacks	none
+unknown ransomware	cyberattacks	hyponym
 emails	threat intelligence exists	none
 true prevention-first strategy	SandBlast Network	none
 users	recipient details	none
@@ -525,7 +525,7 @@ nation states	CPU-level emulation	none
 file types	Mac devices	none
 Natural Language Processing	clicks	none
 policy updates	practice policies	none
-Threat Emulation	rules-based engines	none
+Threat Emulation	rules-based engines	hyponym
 sender	Threat Extraction	none
 SIEM	actionable intelligence	none
 SOC Workflows	Supports Current SIEM	none
@@ -629,12 +629,12 @@ security policies thanks	configure policies	none
 guest network	perimeter	none
 multiple innovative technologies	AI-based fraud protection	none
 auto-updated threat prevention engines	policy updates	none
-URL rewriting	rules-based engines	none
+URL rewriting	rules-based engines	hyponym
 security policies thanks	guest network	none
 advantages	elevators	none
 users current email	%	none
 out-of-the-box	configure policies	none
-undiscovered cyber attacks	zero-day phishing	none
+undiscovered cyber attacks	zero-day phishing	hyponym
 current infrastructure	SandBlast Network	none
 user activity	email	none
 Natural Language Processing	AI-based fraud protection	none
@@ -644,7 +644,7 @@ Click-Time Protection	Threat Emulation	none
 links	end	none
 unacceptable delays	malicious content	none
 cloud	protected assets	none
-HVAC	Endpoint security	none
+HVAC	Endpoint security	hypernym
 parameters	NLP	none
 block	other core security solutions	none
 Hundreds	endpoints	none
@@ -663,7 +663,7 @@ forensic reports	SIEM	none
 email	document	none
 Threat Extraction	email	none
 log server	SIEM	none
-zero-day protection	threat extraction	none
+zero-day protection	threat extraction	hyponym
 emails	worldwide breaches3	none
 URL rewriting	clicks	none
 clicks	email	none
@@ -815,8 +815,8 @@ aspects	text	none
 Easy-to-use	apprise	none
 network	zero-day phishing	none
 parameters	runtime	none
-rules-based engines	Natural Language Processing	none
-zero-day protection	revolutionary AI engines	none
+rules-based engines	Natural Language Processing	hyponym
+zero-day protection	revolutionary AI engines	hypernym
 business need	optimal network performance	none
 Reporting	broad array	none
 users	%	none
@@ -859,14 +859,14 @@ efficient security management	insights	none
 rich rule-based engines	power	none
 HVAC	such	none
 network	such critical limitations	none
-rules-based engines	URL reputation	none
+rules-based engines	URL reputation	hyponym
 clean	web	none
 broad integration ecosystem	log server	none
 powerful zero-day protection	web	none
-undiscovered cyber attacks	zero-day malware	none
+undiscovered cyber attacks	zero-day malware	hyponym
 Threat Emulation	clicks	none
 agility	policy configuration	none
-malware families	malware	none
+malware families	malware	hypernym
 mailbox	text	none
 sender	email attachments	none
 security teams	SandBlast Network offers	none
@@ -907,7 +907,7 @@ email links	mailbox	none
 AI-based phishing protection	malicious links	none
 email attachments	browsing workflows	none
 email messages	users	none
-cameras	Endpoint security	none
+cameras	Endpoint security	hypernym
 evasion-resistant threat emulation	web downloads	none
 SandBlast Threat Extraction	reconstructed versions	none
 insights	Check Point	none
@@ -987,7 +987,7 @@ networks	Thanks	none
 world ’ s	numerous innovative	none
 apprise	regulatory mandates	none
 complete	default	none
-undiscovered cyber attacks	social engineering attacks	none
+undiscovered cyber attacks	social engineering attacks	hyponym
 elevators	such	none
 emails	business email compromise	none
 • Quickly integrate logs	SandBlast Network SIEM platform •	none
@@ -1080,7 +1080,7 @@ ATT	CK techniques	none
 document	industry	none
 datacenters	enterprise IoT	none
 aspects	email	none
-Click-Time Protection	rules-based engines	none
+Click-Time Protection	rules-based engines	concept
 phishing	imperative	none
 Pre-emptive User	email	none
 security policies thanks	INTUITIVE MANAGEMENT SandBlast Network	none

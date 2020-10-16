@@ -1,5 +1,54 @@
 YOU	ZERO-DAY THREATS	none
-zero-day malware	zero-day phishing and social engineering attacks	hypernym
+revolutionary AI engines	best2 zero-day protection	hypernym
+Trojans	cyberattacks	hypernym
+phishing	cyberattacks	hypernym
+phishing	social engineering	hypernym
+cyberattacks	unknown ransomware	hypernym
+advanced email protections	pre-emptive user protections	hypernym
+Pre-emptive User Protections	advanced email protections	hypernym
+phishing	social engineering	hypernym
+Click-Time Protection	rules-based engines	hypernym
+antiphishing	zero day protection	hypernym
+guest network	network segment	hypernym
+perimeter	network segment	hypernym
+elevators	Endpoint security	hypernym
+HVAC systems	Endpoint security	hypernym
+cameras	Endpoint security	hypernym
+evasion-resistant threat emulation	best2 zero-day protection	hypernym
+best2 zero-day protection	threat extraction	hyponym
+pre-emptive user protections	threat extraction	hyponym
+Pre-emptive User Protections	threat extraction	hyponym
+rules-based engines	Threat Emulation	hyponym
+rules-based engines	URL reputation	hyponym
+rules-based engines	AI-based phishing protection	hyponym
+rules-based engines	AI-based fraud protection	hyponym
+network segment	internal network etc	hyponym
+malware	malware families	hyponym
+rules-based engines	Natural Language Processing	hyponym
+malware	zero-day phishing	none
+zero-day malware	zero-day phishing and social engineering attacks	none
+"anti-virus, firewalls"	other core security solutions	none
+Conventional sandboxing solutions	malware evasion techniques	none
+HVAC systems	enterprise IoT	none
+elevators	enterprise IoT	none
+cameras	enterprise IoT	none
+phishing	devastating attacks	none
+other email-based threats	worldwide breaches3	none
+social engineering	worldwide breaches3	none
+phishing	worldwide breaches3	none
+threats	risk	none
+Threat Emulation	multiple innovative technologies	none
+URL reputation	multiple innovative technologies	none
+AI-based fraud protection	multiple innovative technologies	none
+Click-Time Protection	multiple innovative technologies	none
+documents	file types	none
+executables	file types	none
+defense	Endpoint security	none
+devastating attacks	unknown ransomware	none
+devastating attacks	Trojans	none
+devastating attacks	social engineering	none
+devastating attacks	cyberattacks	none
+largest repository	ThreatCloud – Dynamic Threat Intelligence Repository	none
 zero-day malware	"8,3001 new, previously undiscovered cyber attacks"	none
 zero-day phishing and social engineering attacks	"8,3001 new, previously undiscovered cyber attacks"	none
 network	other core security solutions	none
@@ -7,7 +56,6 @@ network	other core security solutions	none
 associated file signatures	"anti-virus, firewalls"	none
 associated file signatures	network	none
 associated file signatures	other core security solutions	none
-"anti-virus, firewalls"	other core security solutions	hypernym
 half	fact	none
 best AV solutions	half	none
 best AV solutions	fact	none
@@ -51,14 +99,12 @@ analysis	malware evasion techniques	none
 malware	analysis	none
 analysis	default	none
 Conventional sandboxing solutions	default	none
-Conventional sandboxing solutions	malware evasion techniques	hypernym
 malware evasion techniques	default	none
 network	default	none
 malware	Conventional sandboxing solutions	none
 malware	default	none
 Conventional sandboxing solutions	network	none
 only line	dedicated servers	none
-defense	Endpoint security	hyponym
 advantages	defense	none
 cameras	dedicated servers	none
 HVAC systems	cameras	none
@@ -72,16 +118,13 @@ only line	advantages	none
 enterprise IoT	Endpoint security	none
 cameras	advantages	none
 defense	dedicated servers	none
-HVAC systems	enterprise IoT	hypernym
 advantages	enterprise IoT	none
 HVAC systems	datacenters	none
-elevators	Endpoint security	none
 datacenters	Endpoint security	none
 defense	enterprise IoT	none
 network perimeter	cameras	none
 HVAC systems	elevators	none
 elevators	defense	none
-HVAC systems	Endpoint security	none
 elevators	cameras	none
 HVAC systems	only line	none
 advantages	dedicated servers	none
@@ -93,9 +136,7 @@ enterprise IoT	dedicated servers	none
 Endpoint security	dedicated servers	none
 elevators	only line	none
 network perimeter	only line	none
-elevators	enterprise IoT	hypernym
 only line	datacenters	none
-cameras	enterprise IoT	hypernym
 cameras	datacenters	none
 network perimeter	advantages	none
 HVAC systems	dedicated servers	none
@@ -103,7 +144,6 @@ elevators	datacenters	none
 only line	enterprise IoT	none
 network perimeter	datacenters	none
 elevators	advantages	none
-cameras	Endpoint security	none
 only line	Endpoint security	none
 defense	datacenters	none
 advantages	datacenters	none
@@ -130,10 +170,8 @@ NUMBER	SANDBLAST NETWORK	none
 SandBlast Network	world	none
 Check Point	world	none
 SandBlast Network	Check Point	none
-best2 zero-day protection	threat extraction	hyponym
 revolutionary AI engines	email and web downloads	none
 best2 zero-day protection	email and web downloads	none
-evasion-resistant threat emulation	best2 zero-day protection	none
 revolutionary AI engines	threat extraction	none
 combination	best2 zero-day protection	none
 threat extraction	email and web downloads	none
@@ -144,7 +182,6 @@ combination	threat extraction	none
 combination	revolutionary AI engines	none
 evasion-resistant threat emulation	threat extraction	none
 evasion-resistant threat emulation	revolutionary AI engines	none
-revolutionary AI engines	best2 zero-day protection	hypernym
 prevention-first strategy	cyberattacks	none
 cyberattacks	social engineering	none
 SandBlast Network	prevention-first strategy	none
@@ -157,25 +194,16 @@ phishing	Trojans	none
 Trojans	social engineering	none
 devastating attacks	organizations	none
 SandBlast Network	cyberattacks	none
-Trojans	cyberattacks	hypernym
 SandBlast Network	devastating attacks	none
 unknown ransomware	social engineering	none
 SandBlast Network	social engineering	none
 phishing	organizations	none
 unknown ransomware	organizations	none
-phishing	cyberattacks	hypernym
-phishing	devastating attacks	hypernym
 Trojans	organizations	none
-phishing	social engineering	hypernym
-devastating attacks	unknown ransomware	hyponym
 prevention-first strategy	Trojans	none
-cyberattacks	unknown ransomware	hypernym
 phishing	unknown ransomware	none
 prevention-first strategy	unknown ransomware	none
-devastating attacks	Trojans	hyponym
 phishing	prevention-first strategy	none
-devastating attacks	social engineering	hyponym
-devastating attacks	cyberattacks	hyponym
 SandBlast Network	Trojans	none
 devastating attacks	prevention-first strategy	none
 prevention-first strategy	social engineering	none
@@ -215,12 +243,10 @@ SandBlast network	users	none
 users	pre-emptive user protections	none
 SandBlast network	web	none
 web	threat extraction	none
-pre-emptive user protections	threat extraction	hyponym
 SandBlast network	pre-emptive user protections	none
 SandBlast network	threat extraction	none
 Pre-emptive User Protections	SandBlast network	none
 email	threat extraction	none
-advanced email protections	pre-emptive user protections	hypernym
 advanced email protections	threat extraction	none
 SandBlast network	email	none
 users	threat extraction	none
@@ -230,10 +256,8 @@ email	users	none
 Pre-emptive User Protections	web	none
 web	pre-emptive user protections	none
 Pre-emptive User Protections	users	none
-Pre-emptive User Protections	advanced email protections	hypernym
 advanced email protections	SandBlast network	none
 Pre-emptive User Protections	pre-emptive user protections	none
-Pre-emptive User Protections	threat extraction	hyponym
 email	pre-emptive user protections	none
 SandBlast Threat Extraction	web	none
 SandBlast Threat Extraction	malicious files	none
@@ -308,11 +332,8 @@ other email-based threats	BEC	none
 other email-based threats	emails	none
 BEC	worldwide breaches3	none
 94%	other email-based threats	none
-phishing	social engineering	hypernym
 social engineering	emails	none
-other email-based threats	worldwide breaches3	hypernym
 94%	social engineering	none
-social engineering	worldwide breaches3	hypernym
 worldwide breaches3	emails	none
 BEC	emails	none
 other email-based threats	social engineering	none
@@ -320,7 +341,6 @@ other email-based threats	social engineering	none
 phishing	BEC	none
 BEC	social engineering	none
 94%	phishing	none
-phishing	worldwide breaches3	hypernym
 SandBlast Network	text	none
 email links	aspects	none
 email links	email attachments	none
@@ -400,7 +420,6 @@ Threat Extraction	aspects	none
 SandBlast Network	risk	none
 email messages	Threat Extraction	none
 risk	incoming email	none
-threats	risk	hypernym
 threats	email messages	none
 email links	Threat Extraction	none
 Threat Extraction	email attachments	none
@@ -417,7 +436,6 @@ Click-Time Protection	clicks	none
 rules-based engines	links	none
 clicks	Threat Emulation	none
 over 300 parameters	AI-based fraud protection	none
-Threat Emulation	multiple innovative technologies	hypernym
 over 300 parameters	email	none
 over 300 parameters	clicks	none
 Click-Time Protection	SandBlast Network	none
@@ -427,12 +445,9 @@ clicks	malicious links	none
 email	Threat Emulation	none
 rules-based engines	NLP	none
 email	Natural Language Processing	none
-URL reputation	multiple innovative technologies	hypernym
 email	AI-based fraud protection	none
-rules-based engines	Natural Language Processing	none
 links	Threat Emulation	none
 email	NLP	none
-rules-based engines	Threat Emulation	hyponym
 Click-Time Protection	Threat Emulation	none
 real time	URL reputation	none
 real time	multiple innovative technologies	none
@@ -454,10 +469,8 @@ over 300 parameters	NLP	none
 SandBlast Network	links	none
 AI-based fraud protection	NLP	none
 over 300 parameters	end	none
-Click-Time Protection	rules-based engines	hypernym
 NLP	AI-based phishing protection	none
 AI-based fraud protection	URL reputation	none
-AI-based fraud protection	multiple innovative technologies	hypernym
 Natural Language Processing	multiple innovative technologies	none
 URL reputation	Threat Emulation	none
 malicious links	multiple innovative technologies	none
@@ -477,7 +490,6 @@ real time	AI-based fraud protection	none
 AI-based fraud protection	malicious links	none
 real time	email	none
 real time	malicious links	none
-rules-based engines	URL reputation	hyponym
 real time	links	none
 rules-based engines	multiple innovative technologies	none
 NLP	URL reputation	none
@@ -503,7 +515,6 @@ over 300 parameters	Natural Language Processing	none
 real time	end	none
 AI-based phishing protection	URL reputation	none
 Click-Time Protection	URL reputation	none
-Click-Time Protection	multiple innovative technologies	hypernym
 SandBlast Network	end	none
 AI-based phishing protection	multiple innovative technologies	none
 AI-based fraud protection	AI-based phishing protection	none
@@ -535,13 +546,11 @@ AI-based phishing protection	end	none
 NLP	end	none
 over 300 parameters	URL reputation	none
 over 300 parameters	multiple innovative technologies	none
-rules-based engines	AI-based phishing protection	hyponym
 SandBlast Network	Threat Emulation	none
 AI-based phishing protection	Natural Language Processing	none
 SandBlast Network	Natural Language Processing	none
 SandBlast Network	real time	none
 Natural Language Processing	links	none
-rules-based engines	AI-based fraud protection	hyponym
 SandBlast Network	NLP	none
 AI-based fraud protection	end	none
 links	malicious links	none
@@ -550,7 +559,6 @@ AI-based fraud protection	Threat Emulation	none
 Natural Language Processing	URL reputation	none
 largest repository	four billion security decisions	none
 ThreatCloud – Dynamic Threat Intelligence Repository	"real-time, security"	none
-largest repository	ThreatCloud – Dynamic Threat Intelligence Repository	instance
 four billion security decisions	ThreatCloud – Dynamic Threat Intelligence Repository	none
 largest repository	"real-time, security"	none
 four billion security decisions	"real-time, security"	none
@@ -573,7 +581,6 @@ antiphishing	cyber attack data	none
 zero day protection	cyber attack data	none
 ThreatCloud	cyber attack data	none
 browsing	zero day protection	none
-antiphishing	zero day protection	hypernym
 Hundreds of millions	endpoints	none
 protected assets	endpoints	none
 protected assets	Hundreds of millions	none
@@ -629,7 +636,6 @@ OS-level inspection	Mac devices	none
 broad range	enterprise users	none
 PC	file types	none
 executables	best zero-day protection	none
-documents	file types	hypernym
 It	best zero-day protection	none
 OS-level inspection	best zero-day protection	none
 enterprise users	executables	none
@@ -644,7 +650,6 @@ enterprise users	best zero-day protection	none
 threats	executables	none
 broad range	PC	none
 PC	best zero-day protection	none
-executables	file types	hypernym
 OS-level inspection	file types	none
 threats	enterprise users	none
 enterprise users	It	none
@@ -741,7 +746,6 @@ need	security policies	none
 guest network	box	none
 box	network segment	none
 e.g. data center	network segment	none
-guest network	network segment	hypernym
 box	internal network etc	none
 guest network	policies	none
 e.g. data center	perimeter	none
@@ -751,13 +755,11 @@ perimeter	need	none
 guest network	single click setup4	none
 perimeter	policies	none
 network segment	single click setup4	none
-perimeter	network segment	hypernym
 policies	INTUITIVE MANAGEMENT SandBlast Network	none
 policies	internal network etc	none
 e.g. data center	internal network etc	none
 perimeter	box	none
 network segment	INTUITIVE MANAGEMENT SandBlast Network	none
-network segment	internal network etc	hyponym
 perimeter	INTUITIVE MANAGEMENT SandBlast Network	none
 e.g. data center	single click setup4	none
 box	need	none
@@ -870,7 +872,6 @@ advanced forensics	time	none
 investigation	remediation	none
 advanced forensics	remediation	none
 investigation	time	none
-malware	malware families	hyponym
 malware families	MITRE	none
 malware	visibility	none
 visibility	network	none
@@ -883,7 +884,6 @@ malware families	visibility	none
 visibility	zero-day phishing	none
 network	MITRE	none
 network	zero-day phishing	none
-malware	zero-day phishing	concept
 MITRE	zero-day phishing	none
 confidence	prevention	none
 efficient security management	first strategy	none
