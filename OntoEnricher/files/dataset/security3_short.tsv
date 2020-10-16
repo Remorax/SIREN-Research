@@ -1,0 +1,21 @@
+vulnerabilities	real-time threat intelligence	none
+operational security effectiveness	security operations	none
+network and security operations teams	operational security	hypernym
+Security operations teams	Security operations teams organizations	none
+cyber threats	Security operations teams	none
+cyber threats	Security operations teams organizations	none
+security	respondents security products	hyponym
+value	security testing	hyponym
+company's security posture	value	none
+value	vulnerabilities	none
+security testing	vulnerabilities	none
+company's security posture	vulnerabilities	none
+company's security posture	security testing	none
+best security products	cybersecurity	hypernym
+security capabilities	security and risk management	hyponym
+security operations teams	good security hygiene	none
+exploitable vulnerability	security operations teams	none
+exploitable vulnerability	good security hygiene	none
+security tools	security tools effectiveness	none
+security solutions	Security Group	none
+security skills	Security breaches	none
