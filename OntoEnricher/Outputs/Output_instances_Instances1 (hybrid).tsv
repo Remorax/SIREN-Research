@@ -1,5 +1,5 @@
 Color Profiles Image	basic features	none	none
-modern operating system	OS	hypernym	hypernym
+modern operating system	OS	hypernym	none
 modern operating system	Part	hypernym	none
 Color Profiles Image	Part	none	none
 OS	basic features	none	none
@@ -22,11 +22,11 @@ information disclosure	Image parsing	hyponym	none
 feature	remote code execution	hyponym	none
 remote code execution	vulnerability	hypernym	none
 remote code execution	accessible attack surface	none	none
-attackers	vulnerability	hypernym	none
+attackers	vulnerability	hypernym	hypernym
 remote code execution	Image parsing	hypernym	none
 feature	accessible attack surface	none	none
 information disclosure	accessible attack surface	hyponym	none
-information disclosure	vulnerability	hypernym	none
+information disclosure	vulnerability	hypernym	hypernym
 accessible attack surface	vulnerability	hypernym	hypernym
 feature	vulnerability	hypernym	none
 harness	Windows OS’ built-in image parsers	none	none
@@ -124,7 +124,7 @@ ICC color profiles	International Color Consortium	none	none
 data	Wikipedia	none	none
 standards	color management	instance	none
 color management	color space	hypernym	none
-data	ICC profile	none	hyponym
+data	ICC profile	none	none
 color space	ICC profile	none	none
 set	ICC profile	none	none
 color management	International Color Consortium	none	none
@@ -209,7 +209,7 @@ tables	transformations	hypernym	none
 images	software processes	none	none
 images	ICC color profile	none	none
 binary file	software processes	hypernym	none
-binary file	ICC color profile	none	hyponym
+binary file	ICC color profile	none	none
 software processes	ICC color profile	none	none
 ICC	simpler terms	none	none
 ICC color profile	simpler terms	none	none
@@ -219,7 +219,7 @@ images	ICC	none	none
 ICC	ICC color profile	none	none
 images	simpler terms	instance	none
 binary file	simpler terms	hypernym	none
-images	binary file	hyponym	hyponym
+images	binary file	hyponym	none
 software processes	simpler terms	hyponym	none
 ICC specification	100 pages	none	none
 math	different types	none	none
@@ -293,7 +293,7 @@ binary files	XML	hypernym	none
 binary files	XML file format	none	none
 ICC color profiles	XML	none	none
 ICC color profiles	XML file format	none	none
-ICC color profiles	binary files	none	hypernym
+ICC color profiles	binary files	none	none
 binary files	WCS color profiles	none	none
 I	blog post	none	none
 I	ICC color profiles	none	none
@@ -304,35 +304,35 @@ supported Windows APIs	list	hypernym	none
 OpenColorProfile	we	none	none
 MSCMS.dll	OpenColorProfile	none	none
 named APIs	we	hypernym	none
-OpenColorProfile	named APIs	none	concept
+OpenColorProfile	named APIs	none	none
 named APIs	it	hypernym	none
 MSCMS.dll	we	none	none
 OpenColorProfile	it	hypernym	none
 MSCMS.dll	it	none	none
 MSCMS.dll	named APIs	none	none
 it	we	none	none
-Adobe’s CMM	CMM	none	concept
+Adobe’s CMM	CMM	none	none
 loading	Adobe’s CMM	none	none
 loading	Microsoft’s Color Management Module	none	none
 DLL	Adobe’s CMM	none	none
 loading	generic entry point	hyponym	none
-DLL	generic entry point	none	hypernym
+DLL	generic entry point	none	none
 generic entry point	third-party CMMs	none	none
 loading	third-party CMMs	none	none
 DLL	CMM	none	none
 Microsoft’s Color Management Module	third-party CMMs	none	none
 generic entry point	Adobe’s CMM	none	none
-Adobe’s CMM	third-party CMMs	none	hypernym
+Adobe’s CMM	third-party CMMs	none	none
 Microsoft’s Color Management Module	DLL	none	none
 Microsoft’s Color Management Module	Adobe’s CMM	none	none
 Microsoft’s Color Management Module	generic entry point	none	none
 generic entry point	CMM	none	none
 loading	CMM	none	none
 DLL	third-party CMMs	none	none
-third-party CMMs	CMM	none	hypernym
-Microsoft’s Color Management Module	CMM	none	concept
+third-party CMMs	CMM	none	noneM
+Microsoft’s Color Management Module	CMM	none	none
 loading	DLL	none	none
-ICM32.dll	Microsoft’s CMM	none	concept
+ICM32.dll	Microsoft’s CMM	none	none
 ICM32.dll	ICM	none	none
 ICM	system32 directory	none	none
 Microsoft’s CMM	ICM	none	none
@@ -399,7 +399,7 @@ relative silence	we	hypernym	none
 Project Zero and ZDI researchers	recent vulnerabilities	none	none
 ICM32	we	none	none
 Project Zero and ZDI researchers	we	none	none
-recent vulnerabilities	multiple bugs	none	hyponym
+recent vulnerabilities	multiple bugs	none	none
 relative silence	recent vulnerabilities	none	none
 recent vulnerabilities	we	hypernym	none
 ICM32	multiple bugs	none	none
@@ -421,7 +421,7 @@ Windows	MSDN	none	none
 Windows	list	none	none
 list	ICM APIs	none	none
 ICC related operations	we	hypernym	none
-API sequence	ICM APIs	none	instance
+API sequence	ICM APIs	none	none
 Windows	we	none	none
 list	MSDN	none	none
 API sequence	ICC related operations	none	none
@@ -436,7 +436,7 @@ API sequence	EXEs	none	none
 color profile APIs	disassembly	none	none
 disassembly	EXEs	none	none
 disassembly	ways	none	none
-API sequence	color profile APIs	none	hyponym
+API sequence	color profile APIs	none	none
 API sequence	disassembly	none	none
 API sequence	hope	none	none
 color profile APIs	EXEs	none	none
@@ -450,13 +450,13 @@ EXEs	ways	none	none
 color profile APIs	ways	hypernym	none
 color profile APIs	hope	hypernym	none
 disassembly	hope	none	none
-Little CMS	open source Color Management Systems	none	concept
+Little CMS	open source Color Management Systems	none	none
 LCMS	harness	none	none
 approach	open source Color Management Systems	none	none
 approach	Little CMS	none	none
 harness	open source Color Management Systems	none	none
 Little CMS	harness	none	none
-LCMS	open source Color Management Systems	none	concept
+LCMS	open source Color Management Systems	none	none
 LCMS	approach	none	none
 LCMS	Little CMS	none	none
 approach	harness	hypernym	none

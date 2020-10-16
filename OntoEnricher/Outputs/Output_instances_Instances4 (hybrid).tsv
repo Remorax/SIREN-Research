@@ -167,12 +167,12 @@ Most organizations	35%	none	none
 35%	respondents	none	none
 respondents	security	hypernym	none
 Most organizations	respondents	none	none
-security	respondents security products	hyponym	none
+security	respondents security products	hyponym	hyponym
 Most organizations security	respondents security products	none	none
 solution	vulnerabilities	hyponym	none
 solution	86%	none	none
 company's security posture	86%	concept	none
-value	security testing	hyponym	none
+value	security testing	hyponym	hyponym
 respondents	solution	hypernym	none
 company's security posture	value	hypernym	none
 respondents	security testing	none	none
@@ -207,7 +207,7 @@ Doug Close	cybersecurity	hypernym	none
 Doug Close	IT solutions provider Sayers	none	none
 best security products	IT solutions provider Sayers	none	none
 you	senior vice president	none	none
-best security products	cybersecurity	hypernym	none
+best security products	cybersecurity	hypernym	hypernym
 best security products	you	hypernym	none
 Doug Close	senior vice president	none	none
 senior vice president	cybersecurity	hypernym	none
@@ -263,7 +263,7 @@ security and risk management	market research firm Enterprise Management Associat
 market research firm Enterprise Management Associates	limited visibility	none	none
 market research firm Enterprise Management Associates	time	none	none
 security and risk management	one point	none	none
-security capabilities	security and risk management	hyponym	none
+security capabilities	security and risk management	hyponym	hyponym
 security capabilities	research director	hyponym	none
 security and risk management	organization's ongoing security posture	none	none
 one point	research director	none	none
