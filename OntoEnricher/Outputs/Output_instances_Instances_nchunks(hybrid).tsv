@@ -1,41 +1,35 @@
 YOU	ZERO-DAY THREATS	none	none
-revolutionary AI engines	best2 zero-day protection	none	hypernym
-Trojans	cyberattacks	concept	hypernym
+revolutionary AI engines	best2 zero-day protection	none	none
+Pre-emptive User Protections	advanced email protections	none	none
+Click-Time Protection	rules-based engines	none	none
+HVAC systems	Endpoint security	none	hypernym
+cyberattacks	unknown ransomware	instance	none
+evasion-resistant threat emulation	best2 zero-day protection	instance	none
+perimeter	network segment	hyponym	none
+elevators	Endpoint security	hyponym	hypernym
+cameras	Endpoint security	hyponym	hypernym
 phishing	cyberattacks	hypernym	hypernym
 phishing	social engineering	hypernym	hypernym
-cyberattacks	unknown ransomware	instance	hypernym
-advanced email protections	pre-emptive user protections	concept	hypernym
-Pre-emptive User Protections	advanced email protections	none	hypernym
-Click-Time Protection	rules-based engines	none	hypernym
-antiphishing	zero day protection	concept	hypernym
 guest network	network segment	hypernym	hypernym
-perimeter	network segment	hyponym	hypernym
-elevators	Endpoint security	hyponym	hypernym
-HVAC systems	Endpoint security	none	hypernym
-cameras	Endpoint security	hyponym	hypernym
-evasion-resistant threat emulation	best2 zero-day protection	instance	hypernym
-best2 zero-day protection	threat extraction	concept	hyponym
-pre-emptive user protections	threat extraction	hypernym	hyponym
-Pre-emptive User Protections	threat extraction	hypernym	hyponym
-rules-based engines	Threat Emulation	none	hyponym
-rules-based engines	URL reputation	none	hyponym
-rules-based engines	AI-based phishing protection	none	hyponym
-rules-based engines	AI-based fraud protection	none	hyponym
+Trojans	cyberattacks	concept	hypernym
+advanced email protections	pre-emptive user protections	concept	hypernym
+antiphishing	zero day protection	concept	hypernym
+rules-based engines	Threat Emulation	none	none
+rules-based engines	URL reputation	none	none
+rules-based engines	AI-based phishing protection	none	none
+rules-based engines	AI-based fraud protection	none	none
+rules-based engines	Natural Language Processing	none	none
 network segment	internal network etc	hyponym	hyponym
 malware	malware families	hyponym	hyponym
-rules-based engines	Natural Language Processing	none	hyponym
-malware	zero-day phishing	instance	none
-zero-day malware	zero-day phishing and social engineering attacks	hyponym	none
-"anti-virus, firewalls"	other core security solutions	instance	none
-Conventional sandboxing solutions	malware evasion techniques	hypernym	none
+pre-emptive user protections	threat extraction	hypernym	hypernym
+Pre-emptive User Protections	threat extraction	hypernym	none
+best2 zero-day protection	threat extraction	concept	none
 HVAC systems	enterprise IoT	none	none
 elevators	enterprise IoT	none	none
 cameras	enterprise IoT	none	none
-phishing	devastating attacks	instance	none
 other email-based threats	worldwide breaches3	none	none
 social engineering	worldwide breaches3	none	none
 phishing	worldwide breaches3	none	none
-threats	risk	hypernym	none
 Threat Emulation	multiple innovative technologies	none	none
 URL reputation	multiple innovative technologies	none	none
 AI-based fraud protection	multiple innovative technologies	none	none
@@ -43,166 +37,78 @@ Click-Time Protection	multiple innovative technologies	none	none
 documents	file types	none	none
 executables	file types	none	none
 defense	Endpoint security	none	none
-devastating attacks	unknown ransomware	hyponym	none
 devastating attacks	Trojans	none	none
-devastating attacks	social engineering	hypernym	none
-devastating attacks	cyberattacks	hypernym	none
 largest repository	ThreatCloud – Dynamic Threat Intelligence Repository	none	none
-zero-day malware	"8,3001 new, previously undiscovered cyber attacks"	concept	none
-zero-day phishing and social engineering attacks	"8,3001 new, previously undiscovered cyber attacks"	hypernym	none
-network	other core security solutions	hyponym	none
-"anti-virus, firewalls"	network	hypernym	none
-associated file signatures	"anti-virus, firewalls"	hypernym	none
-associated file signatures	network	hypernym	none
-associated file signatures	other core security solutions	concept	none
-half	fact	hypernym	none
 best AV solutions	half	none	none
 best AV solutions	fact	none	none
-fact	malware strains	hyponym	none
 best AV solutions	wild	none	none
-wild	half	hypernym	none
 wild	malware strains	none	none
-wild	fact	hypernym	none
-half	malware strains	hyponym	none
 best AV solutions	malware strains	none	none
-compromise	existing indicators	hyponym	none
 existing indicators	IOCs	none	none
-existing indicators	what	hypernym	none
-COMMON NETWORK SECURITY APPROACHES	LIMITATIONS	hypernym	none
-COMMON NETWORK SECURITY APPROACHES	IOCs	hypernym	none
 you	what	none	none
 existing indicators	LIMITATIONS	none	none
 you	existing indicators	none	none
 LIMITATIONS	what	none	none
 COMMON NETWORK SECURITY APPROACHES	existing indicators	none	none
-compromise	COMMON NETWORK SECURITY APPROACHES	hyponym	none
 compromise	what	none	none
-COMMON NETWORK SECURITY APPROACHES	you	hypernym	none
 you	LIMITATIONS	none	none
 compromise	LIMITATIONS	none	none
 what	IOCs	none	none
-COMMON NETWORK SECURITY APPROACHES	what	hypernym	none
 you	IOCs	none	none
 LIMITATIONS	IOCs	none	none
 compromise	you	none	none
 compromise	IOCs	none	none
-several approaches	organizations	hypernym	none
 several approaches	zero-day threats	none	none
 organizations	zero-day threats	none	none
 analysis	Conventional sandboxing solutions	none	none
-network	malware evasion techniques	hyponym	none
-malware	network	hypernym	none
-malware	malware evasion techniques	hyponym	none
-analysis	network	hypernym	none
 analysis	malware evasion techniques	none	none
-malware	analysis	hypernym	none
-analysis	default	hypernym	none
-Conventional sandboxing solutions	default	hypernym	none
-malware evasion techniques	default	hypernym	none
-network	default	hypernym	none
-malware	Conventional sandboxing solutions	hyponym	none
-malware	default	hypernym	none
-Conventional sandboxing solutions	network	hypernym	none
 only line	dedicated servers	none	none
-advantages	defense	hypernym	none
 cameras	dedicated servers	none	none
 HVAC systems	cameras	none	none
 elevators	dedicated servers	none	none
-enterprise IoT	datacenters	hypernym	none
-datacenters	dedicated servers	hyponym	none
-advantages	Endpoint security	hyponym	none
 network perimeter	dedicated servers	none	none
 network perimeter	enterprise IoT	none	none
-only line	advantages	hypernym	none
-enterprise IoT	Endpoint security	hyponym	none
-cameras	advantages	hypernym	none
 defense	dedicated servers	none	none
 advantages	enterprise IoT	none	none
 HVAC systems	datacenters	none	none
-datacenters	Endpoint security	hyponym	none
 defense	enterprise IoT	none	none
 network perimeter	cameras	none	none
 HVAC systems	elevators	none	none
 elevators	defense	none	none
-elevators	cameras	hypernym	none
 HVAC systems	only line	none	none
-advantages	dedicated servers	hyponym	none
 network perimeter	elevators	none	none
 network perimeter	HVAC systems	none	none
 HVAC systems	defense	none	none
 only line	cameras	none	none
 enterprise IoT	dedicated servers	none	none
-Endpoint security	dedicated servers	hypernym	none
 elevators	only line	none	none
-network perimeter	only line	hypernym	none
-only line	datacenters	hypernym	none
-cameras	datacenters	hyponym	none
-network perimeter	advantages	hypernym	none
 HVAC systems	dedicated servers	none	none
-elevators	datacenters	hyponym	none
 only line	enterprise IoT	none	none
-network perimeter	datacenters	hypernym	none
-elevators	advantages	hypernym	none
 only line	Endpoint security	none	none
-defense	datacenters	hyponym	none
-advantages	datacenters	hyponym	none
 HVAC systems	advantages	none	none
-network perimeter	Endpoint security	hyponym	none
-cameras	defense	hypernym	none
-only line	defense	hypernym	none
-network perimeter	defense	hypernym	none
-damage	detection-first strategy	hyponym	none
 damage	incident response	none	none
 incident response	detection-first strategy	none	none
-you	zero-day threats	hyponym	none
 you	such critical limitations	none	none
-zero-day threats	such critical limitations	hypernym	none
-network	zero-day threats	hyponym	none
-you	network	concept	none
-network	such critical limitations	hyponym	none
 CHECK POINT	SANDBLAST NETWORK	none	none
 ZERO-DAY PROTECTION	SANDBLAST NETWORK	none	none
-ZERO-DAY PROTECTION	CHECK POINT	hypernym	none
 CHECK POINT	NUMBER	none	none
-ZERO-DAY PROTECTION	NUMBER	hypernym	none
 NUMBER	SANDBLAST NETWORK	none	none
 SandBlast Network	world	none	none
 Check Point	world	none	none
 SandBlast Network	Check Point	none	none
 revolutionary AI engines	email and web downloads	none	none
-best2 zero-day protection	email and web downloads	concept	none
 revolutionary AI engines	threat extraction	none	none
-combination	best2 zero-day protection	instance	none
-threat extraction	email and web downloads	hyponym	none
-evasion-resistant threat emulation	combination	hypernym	none
-combination	email and web downloads	hyponym	none
-evasion-resistant threat emulation	email and web downloads	hypernym	none
-combination	threat extraction	hyponym	none
 combination	revolutionary AI engines	none	none
-evasion-resistant threat emulation	threat extraction	hypernym	none
 evasion-resistant threat emulation	revolutionary AI engines	none	none
-prevention-first strategy	cyberattacks	hypernym	none
-cyberattacks	social engineering	hypernym	none
 SandBlast Network	prevention-first strategy	none	none
 prevention-first strategy	organizations	none	none
 SandBlast Network	organizations	none	none
-cyberattacks	organizations	hypernym	none
-social engineering	organizations	hypernym	none
-SandBlast Network	phishing	hypernym	none
-phishing	Trojans	instance	none
 Trojans	social engineering	none	none
-devastating attacks	organizations	hypernym	none
-SandBlast Network	cyberattacks	hypernym	none
 SandBlast Network	devastating attacks	none	none
-unknown ransomware	social engineering	concept	none
 SandBlast Network	social engineering	none	none
-phishing	organizations	hypernym	none
-unknown ransomware	organizations	hypernym	none
 Trojans	organizations	none	none
 prevention-first strategy	Trojans	none	none
-phishing	unknown ransomware	hyponym	none
 prevention-first strategy	unknown ransomware	none	none
-phishing	prevention-first strategy	instance	none
 SandBlast Network	Trojans	none	none
 devastating attacks	prevention-first strategy	none	none
 prevention-first strategy	social engineering	none	none
@@ -210,8 +116,6 @@ SandBlast Network	unknown ransomware	none	none
 Trojans	unknown ransomware	none	none
 current infrastructure	automated policy configuration	none	none
 current infrastructure	agility	none	none
-agility	automated policy configuration	hyponym	none
-business productivity	agility	hypernym	none
 SandBlast Network	current infrastructure	none	none
 SandBlast Network	agility	none	none
 SandBlast Network	automated policy configuration	none	none
@@ -219,7 +123,6 @@ business productivity	automated policy configuration	none	none
 current infrastructure	business productivity	none	none
 SandBlast Network	business productivity	none	none
 SandBlast Network	record speed	none	none
-world’s best malware catch rate	record speed	hypernym	none
 world’s best malware catch rate	"numerous innovative, proprietary technologies"	none	none
 world’s best malware catch rate	SandBlast Network	none	none
 "numerous innovative, proprietary technologies"	SandBlast Network	none	none
@@ -229,219 +132,106 @@ revolutionary AI	non-AI engines	none	none
 non-AI engines	pre-emptive user protections	none	none
 revolutionary AI	pre-emptive user protections	none	none
 vast network	non-AI engines	none	none
-vast network	pre-emptive user protections	hyponym	none
 pre-emptive user protections	moment	none	none
 revolutionary AI	moment	none	none
 non-AI engines	moment	none	none
 vast network	moment	none	none
-users	web	concept	none
-Pre-emptive User Protections	email	hypernym	none
-advanced email protections	users	hypernym	none
-advanced email protections	web	hypernym	none
 SandBlast network	users	none	none
-users	pre-emptive user protections	hyponym	none
-SandBlast network	web	hypernym	none
 web	threat extraction	none	none
 SandBlast network	pre-emptive user protections	none	none
 SandBlast network	threat extraction	none	none
 Pre-emptive User Protections	SandBlast network	none	none
-email	threat extraction	hyponym	none
-advanced email protections	threat extraction	hypernym	none
-SandBlast network	email	hypernym	none
-users	threat extraction	hyponym	none
-advanced email protections	email	hypernym	none
-email	web	hypernym	none
-email	users	hypernym	none
-Pre-emptive User Protections	web	hypernym	none
 web	pre-emptive user protections	none	none
-Pre-emptive User Protections	users	hypernym	none
 advanced email protections	SandBlast network	none	none
 Pre-emptive User Protections	pre-emptive user protections	none	none
-email	pre-emptive user protections	hyponym	none
-SandBlast Threat Extraction	web	hypernym	none
 SandBlast Threat Extraction	malicious files	none	none
-web	malicious files	hyponym	none
-email	clean and reconstructed versions	instance	none
 web	clean and reconstructed versions	none	none
 malicious files	clean and reconstructed versions	none	none
-email	malicious files	hyponym	none
 email	SandBlast Threat Extraction	none	none
 SandBlast Threat Extraction	clean and reconstructed versions	none	none
-unacceptable delays	malicious content	hypernym	none
-traditional sandboxes	users	hypernym	none
-emulation	first strategy	hypernym	none
 traditional sandboxes	first strategy	none	none
-emulation	practical prevention	hyponym	none
-background	emulation	hypernym	none
 background	practical prevention	none	none
-unacceptable delays	traditional sandboxes	instance	none
-unacceptable delays	users	hypernym	none
-malicious content	users	hypernym	none
 background	SandBlast Threat Extraction	none	none
 background	traditional sandboxes	none	none
 background	malicious content	none	none
 first strategy	SandBlast Threat Extraction	none	none
-unacceptable delays	first strategy	instance	none
-malicious content	uninterrupted business flow	hyponym	none
 SandBlast Threat Extraction	uninterrupted business flow	none	none
-unacceptable delays	emulation	hypernym	none
-users	practical prevention	hyponym	none
-emulation	malicious content	hyponym	none
 traditional sandboxes	uninterrupted business flow	none	none
 unacceptable delays	SandBlast Threat Extraction	none	none
 first strategy	uninterrupted business flow	none	none
 malicious content	SandBlast Threat Extraction	none	none
-uninterrupted business flow	practical prevention	hypernym	none
 background	users	none	none
-first strategy	practical prevention	hypernym	none
 background	first strategy	none	none
-traditional sandboxes	emulation	hypernym	none
 traditional sandboxes	practical prevention	none	none
-unacceptable delays	background	hypernym	none
-first strategy	users	hypernym	none
 unacceptable delays	uninterrupted business flow	none	none
-emulation	users	instance	none
 SandBlast Threat Extraction	practical prevention	none	none
-unacceptable delays	practical prevention	hypernym	none
-users	uninterrupted business flow	hyponym	none
-malicious content	practical prevention	concept	none
 SandBlast Threat Extraction	users	none	none
 traditional sandboxes	SandBlast Threat Extraction	none	none
 traditional sandboxes	malicious content	none	none
-first strategy	malicious content	hypernym	none
-emulation	SandBlast Threat Extraction	instance	none
 background	uninterrupted business flow	none	none
-emulation	uninterrupted business flow	instance	none
-SandBlast Threat Extraction	industry	hypernym	none
-web downloads	industry	hypernym	none
-integrated document and image sanitization solution	industry	hypernym	none
-email	industry	hypernym	none
-integrated document and image sanitization solution	email	hypernym	none
 integrated document and image sanitization solution	SandBlast Threat Extraction	none	none
-web downloads	email	hypernym	none
-integrated document and image sanitization solution	web downloads	hypernym	none
 web downloads	SandBlast Threat Extraction	none	none
-other email-based threats	phishing	hypernym	none
 94%	worldwide breaches3	none	none
-phishing	emails	hypernym	none
-94%	emails	concept	none
 other email-based threats	BEC	none	none
-other email-based threats	emails	hypernym	none
 BEC	worldwide breaches3	none	none
 94%	other email-based threats	none	none
 social engineering	emails	none	none
 94%	social engineering	none	none
-worldwide breaches3	emails	hypernym	none
 BEC	emails	none	none
 other email-based threats	social engineering	none	none
 94%	BEC	none	none
-phishing	BEC	hypernym	none
 BEC	social engineering	none	none
 94%	phishing	none	none
-SandBlast Network	text	hypernym	none
-email links	aspects	hypernym	none
-email links	email attachments	hyponym	none
 aspects	recipient details	none	none
-email links	users	hypernym	none
 recipient details	incoming email	none	none
-email messages	text	hypernym	none
 SandBlast Network	recipient details	none	none
 email links	incoming email	none	none
-email attachments	recipient details	instance	none
 Threat Extraction	recipient details	none	none
 ’ mailbox	users	none	none
-users	email attachments	hyponym	none
 email messages	email links	none	none
-sender	risk	hypernym	none
-email messages	email attachments	hyponym	none
-email messages	aspects	hypernym	none
 text	incoming email	none	none
-users	risk	hypernym	none
 SandBlast Network	incoming email	none	none
 threats	Threat Extraction	none	none
-Threat Extraction	users	hypernym	none
 threats	’ mailbox	none	none
-aspects	risk	hypernym	none
 ’ mailbox	email attachments	none	none
-threats	sender	hypernym	none
 ’ mailbox	email links	none	none
 SandBlast Network	email attachments	none	none
 text	aspects	none	none
-email attachments	risk	hypernym	none
-SandBlast Network	aspects	hypernym	none
 aspects	email attachments	none	none
-text	sender	hypernym	none
-SandBlast Network	sender	hypernym	none
-Threat Extraction	risk	hypernym	none
-email messages	incoming email	hyponym	none
 aspects	sender	none	none
 ’ mailbox	sender	none	none
 threats	recipient details	none	none
 ’ mailbox	recipient details	none	none
-threats	text	hypernym	none
-threats	incoming email	hyponym	none
-recipient details	risk	hypernym	none
-email messages	sender	hypernym	none
-email attachments	sender	concept	none
-threats	users	hypernym	none
 text	recipient details	none	none
-SandBlast Network	’ mailbox	hypernym	none
 ’ mailbox	incoming email	none	none
 sender	incoming email	none	none
-email messages	SandBlast Network	instance	none
-threats	aspects	hypernym	none
-text	risk	hypernym	none
-users	incoming email	hyponym	none
 ’ mailbox	Threat Extraction	none	none
 SandBlast Network	email links	none	none
 aspects	incoming email	none	none
 text	users	none	none
 users	aspects	none	none
 SandBlast Network	Threat Extraction	none	none
-email links	recipient details	hyponym	none
-email attachments	incoming email	hyponym	none
 threats	email attachments	none	none
 email messages	’ mailbox	none	none
-users	sender	hypernym	none
 ’ mailbox	aspects	none	none
-email links	risk	hypernym	none
 text	Threat Extraction	none	none
-Threat Extraction	sender	hypernym	none
-text	email attachments	hyponym	none
-email links	text	hypernym	none
-sender	recipient details	hyponym	none
-email messages	users	hypernym	none
 threats	email links	none	none
-Threat Extraction	aspects	hypernym	none
 ’ mailbox	text	none	none
-SandBlast Network	risk	hypernym	none
-email messages	Threat Extraction	hyponym	none
-risk	incoming email	hyponym	none
-threats	email messages	hyponym	none
 email links	Threat Extraction	none	none
 Threat Extraction	email attachments	none	none
-users	recipient details	hyponym	none
 threats	SandBlast Network	none	none
 SandBlast Network	users	none	none
 ’ mailbox	risk	none	none
 email messages	recipient details	none	none
 Threat Extraction	incoming email	none	none
-email messages	risk	hypernym	none
-email links	sender	hypernym	none
 URL reputation	malicious links	none	none
 Click-Time Protection	clicks	none	none
 rules-based engines	links	none	none
 clicks	Threat Emulation	none	none
 over 300 parameters	AI-based fraud protection	none	none
-over 300 parameters	email	hypernym	none
-over 300 parameters	clicks	concept	none
 Click-Time Protection	SandBlast Network	none	none
 end	URL reputation	none	none
-end	multiple innovative technologies	hyponym	none
 clicks	malicious links	none	none
-email	Threat Emulation	hyponym	none
-rules-based engines	NLP	hypernym	none
-email	Natural Language Processing	hyponym	none
 email	AI-based fraud protection	none	none
 links	Threat Emulation	none	none
 email	NLP	none	none
@@ -449,97 +239,61 @@ Click-Time Protection	Threat Emulation	none	none
 real time	URL reputation	none	none
 real time	multiple innovative technologies	none	none
 NLP	links	none	none
-Natural Language Processing	end	hypernym	none
-NLP	Natural Language Processing	hyponym	none
 Click-Time Protection	AI-based phishing protection	none	none
 over 300 parameters	Threat Emulation	none	none
 links	URL reputation	none	none
 links	multiple innovative technologies	none	none
 real time	Natural Language Processing	none	none
 real time	Threat Emulation	none	none
-over 300 parameters	real time	hypernym	none
 Click-Time Protection	over 300 parameters	none	none
-email	links	hypernym	none
-links	end	hypernym	none
 over 300 parameters	rules-based engines	none	none
-over 300 parameters	NLP	hypernym	none
 SandBlast Network	links	none	none
-AI-based fraud protection	NLP	hypernym	none
-over 300 parameters	end	hypernym	none
-NLP	AI-based phishing protection	hyponym	none
 AI-based fraud protection	URL reputation	none	none
 Natural Language Processing	multiple innovative technologies	none	none
 URL reputation	Threat Emulation	none	none
 malicious links	multiple innovative technologies	none	none
 Click-Time Protection	links	none	none
-AI-based phishing protection	malicious links	hypernym	none
 SandBlast Network	AI-based fraud protection	none	none
 SandBlast Network	clicks	none	none
 real time	AI-based phishing protection	none	none
-email	AI-based phishing protection	hyponym	none
 email	clicks	none	none
-over 300 parameters	malicious links	hypernym	none
 malicious links	Threat Emulation	none	none
-clicks	end	hypernym	none
 SandBlast Network	AI-based phishing protection	none	none
 real time	clicks	none	none
 real time	AI-based fraud protection	none	none
 AI-based fraud protection	malicious links	none	none
 real time	email	none	none
-real time	malicious links	hyponym	none
 real time	links	none	none
 rules-based engines	multiple innovative technologies	none	none
-NLP	URL reputation	hyponym	none
 NLP	multiple innovative technologies	none	none
-Natural Language Processing	malicious links	hypernym	none
-AI-based fraud protection	clicks	hypernym	none
 Click-Time Protection	AI-based fraud protection	none	none
-Click-Time Protection	NLP	hypernym	none
-Click-Time Protection	email	hypernym	none
-rules-based engines	email	hypernym	none
-Natural Language Processing	Threat Emulation	hypernym	none
 Click-Time Protection	Natural Language Processing	none	none
 SandBlast Network	rules-based engines	none	none
 Click-Time Protection	end	none	none
 SandBlast Network	URL reputation	none	none
-over 300 parameters	links	hypernym	none
 SandBlast Network	multiple innovative technologies	none	none
-email	end	hypernym	none
 clicks	URL reputation	none	none
 rules-based engines	malicious links	none	none
 clicks	multiple innovative technologies	none	none
 over 300 parameters	Natural Language Processing	none	none
-real time	end	hypernym	none
 AI-based phishing protection	URL reputation	none	none
 Click-Time Protection	URL reputation	none	none
-SandBlast Network	end	hypernym	none
 AI-based phishing protection	multiple innovative technologies	none	none
 AI-based fraud protection	AI-based phishing protection	none	none
 clicks	Natural Language Processing	none	none
 real time	rules-based engines	none	none
-AI-based phishing protection	links	hypernym	none
 real time	NLP	none	none
-clicks	links	hypernym	none
 clicks	NLP	none	none
-email	malicious links	hyponym	none
-rules-based engines	end	hypernym	none
 SandBlast Network	malicious links	none	none
 rules-based engines	clicks	none	none
 over 300 parameters	AI-based phishing protection	none	none
-SandBlast Network	email	hypernym	none
 Click-Time Protection	real time	none	none
-AI-based fraud protection	links	hypernym	none
 end	Threat Emulation	none	none
 clicks	AI-based phishing protection	none	none
-AI-based phishing protection	Threat Emulation	hypernym	none
-email	URL reputation	hyponym	none
 email	multiple innovative technologies	none	none
 over 300 parameters	SandBlast Network	none	none
-NLP	Threat Emulation	hyponym	none
-end	malicious links	hyponym	none
 Click-Time Protection	malicious links	none	none
 AI-based fraud protection	Natural Language Processing	none	none
-AI-based phishing protection	end	hypernym	none
 NLP	end	none	none
 over 300 parameters	URL reputation	none	none
 over 300 parameters	multiple innovative technologies	none	none
@@ -547,113 +301,67 @@ SandBlast Network	Threat Emulation	none	none
 AI-based phishing protection	Natural Language Processing	none	none
 SandBlast Network	Natural Language Processing	none	none
 SandBlast Network	real time	none	none
-Natural Language Processing	links	hypernym	none
-SandBlast Network	NLP	hypernym	none
-AI-based fraud protection	end	hypernym	none
 links	malicious links	none	none
-NLP	malicious links	hyponym	none
 AI-based fraud protection	Threat Emulation	none	none
 Natural Language Processing	URL reputation	none	none
-largest repository	four billion security decisions	hyponym	none
-ThreatCloud – Dynamic Threat Intelligence Repository	"real-time, security"	hypernym	none
 four billion security decisions	ThreatCloud – Dynamic Threat Intelligence Repository	none	none
-largest repository	"real-time, security"	hyponym	none
-four billion security decisions	"real-time, security"	hypernym	none
 they	breakthrough AI engines	none	none
 Point ThreatCloud	emails	none	none
 they	emails	none	none
-suspicious files	they	hypernym	none
 Point ThreatCloud	they	none	none
 suspicious files	breakthrough AI engines	none	none
 Point ThreatCloud	breakthrough AI engines	none	none
 Point ThreatCloud	suspicious files	none	none
-breakthrough AI engines	emails	hypernym	none
-suspicious files	emails	hypernym	none
-browsing	cyber attack data	hyponym	none
 antiphishing	ThreatCloud	none	none
-browsing	antiphishing	instance	none
 zero day protection	ThreatCloud	none	none
 browsing	ThreatCloud	none	none
-antiphishing	cyber attack data	hyponym	none
-zero day protection	cyber attack data	hyponym	none
 ThreatCloud	cyber attack data	none	none
-browsing	zero day protection	hyponym	none
 Hundreds of millions	endpoints	none	none
-protected assets	endpoints	hypernym	none
 protected assets	Hundreds of millions	none	none
 cloud	Hundreds of millions	none	none
-cloud	networks	hyponym	none
 protected assets	cloud	none	none
-cloud	endpoints	hypernym	none
 Hundreds of millions	networks	none	none
-endpoints	networks	hypernym	none
-protected assets	networks	hypernym	none
 Check Point Research Labs	Top notch research	none	none
-AI-Generated Threat Emulation Verdicts	industry	hypernym	none
 AI-Generated Threat Emulation Verdicts	best threat intelligence	none	none
-industry	best threat intelligence	hyponym	none
 files	evasive attacks	none	none
-threat intelligence	files	hypernym	none
-deep CPU-level emulation	files	hypernym	none
-SandBlast Network	files	hypernym	none
 threat intelligence	evasive attacks	none	none
 files	nation states	none	none
 threat intelligence	nation states	none	none
-evasive attacks	emails	hypernym	none
-threat intelligence	emails	hypernym	none
 SandBlast Network	threat intelligence	none	none
-deep CPU-level emulation	emails	hypernym	none
-files	emails	hypernym	none
 nation states	evasive attacks	none	none
 deep CPU-level emulation	evasive attacks	none	none
-SandBlast Network	emails	hypernym	none
 SandBlast Network	nation states	none	none
-deep CPU-level emulation	threat intelligence	hypernym	none
 deep CPU-level emulation	nation states	none	none
 nation states	emails	none	none
 SandBlast Network	deep CPU-level emulation	none	none
 SandBlast Network	evasive attacks	none	none
 broad range	best zero-day protection	none	none
-OS-level inspection	documents	hypernym	none
 documents	Mac devices	none	none
 enterprise users	PC	none	none
 Mac devices	file types	none	none
-documents	best zero-day protection	hyponym	none
 It	file types	none	none
 threats	broad range	none	none
-broad range	It	hypernym	none
-OS-level inspection	PC	hypernym	none
 threats	Mac devices	none	none
 Mac devices	It	none	none
 OS-level inspection	broad range	none	none
-broad range	file types	hypernym	none
-OS-level inspection	executables	hypernym	none
 Mac devices	enterprise users	none	none
 OS-level inspection	Mac devices	none	none
 broad range	enterprise users	none	none
 PC	file types	none	none
-executables	best zero-day protection	instance	none
 It	best zero-day protection	none	none
 OS-level inspection	best zero-day protection	none	none
 enterprise users	executables	none	none
 PC	It	none	none
 documents	PC	none	none
 documents	It	none	none
-executables	PC	hypernym	none
-executables	It	hypernym	none
 documents	enterprise users	none	none
-documents	executables	hyponym	none
-enterprise users	best zero-day protection	instance	none
 threats	executables	none	none
 broad range	PC	none	none
 PC	best zero-day protection	none	none
 OS-level inspection	file types	none	none
-threats	enterprise users	hyponym	none
 enterprise users	It	none	none
-file types	best zero-day protection	hyponym	none
 Mac devices	PC	none	none
 threats	file types	none	none
-OS-level inspection	It	hypernym	none
 threats	OS-level inspection	none	none
 OS-level inspection	enterprise users	none	none
 broad range	Mac devices	none	none
@@ -663,174 +371,74 @@ threats	It	none	none
 Mac devices	best zero-day protection	none	none
 threats	PC	none	none
 broad range	executables	none	none
-threats	best zero-day protection	hyponym	none
-threats	documents	hypernym	none
 documents	broad range	none	none
 SandBlast Network	millions	none	none
-SandBlast Network	power	hypernym	none
-rich rule-based engines	data science	hypernym	none
-rich rule-based engines	newest threats	hypernym	none
 SandBlast Network	runtime behaviors	none	none
 millions	data science	none	none
 millions	newest threats	none	none
-power	data science	hyponym	none
-power	newest threats	hyponym	none
-runtime behaviors	parameters	hypernym	none
 SandBlast Network	exhaustive AI engines	none	none
-exhaustive AI engines	power	hypernym	none
 exhaustive AI engines	rich rule-based engines	none	none
 exhaustive AI engines	runtime behaviors	none	none
 millions	single conclusive AI-generated verdict	none	none
 power	single conclusive AI-generated verdict	none	none
-power	parameters	hypernym	none
-runtime behaviors	data science	hypernym	none
 exhaustive AI engines	single conclusive AI-generated verdict	none	none
-runtime behaviors	newest threats	hypernym	none
 data science	newest threats	none	none
 SandBlast Network	rich rule-based engines	none	none
 exhaustive AI engines	millions	none	none
-SandBlast Network	parameters	hypernym	none
 SandBlast Network	single conclusive AI-generated verdict	none	none
-runtime behaviors	rich rule-based engines	instance	none
 single conclusive AI-generated verdict	newest threats	none	none
 runtime behaviors	single conclusive AI-generated verdict	none	none
 exhaustive AI engines	newest threats	none	none
-exhaustive AI engines	data science	hypernym	none
 data science	single conclusive AI-generated verdict	none	none
-millions	power	hypernym	none
 power	runtime behaviors	none	none
 parameters	data science	none	none
-parameters	newest threats	instance	none
-exhaustive AI engines	parameters	hypernym	none
-SandBlast Network	data science	hypernym	none
 SandBlast Network	newest threats	none	none
 rich rule-based engines	single conclusive AI-generated verdict	none	none
-millions	runtime behaviors	hyponym	none
-millions	parameters	hypernym	none
-power	rich rule-based engines	hyponym	none
-millions	rich rule-based engines	instance	none
-rich rule-based engines	parameters	hypernym	none
 parameters	single conclusive AI-generated verdict	none	none
 wild	AI heuristics	none	none
 AI heuristics	latest threats	none	none
-wild	latest threats	hyponym	none
-need	policies	hypernym	none
 box	INTUITIVE MANAGEMENT SandBlast Network	none	none
 network segment	security policies	none	none
-e.g. data center	need	hypernym	none
 box	single click setup4	none	none
-policies	security policies	hyponym	none
 perimeter	security policies	none	none
-guest network	security policies	hypernym	none
 single click setup4	INTUITIVE MANAGEMENT SandBlast Network	none	none
-perimeter	guest network	hyponym	none
-guest network	internal network etc	hypernym	none
 guest network	INTUITIVE MANAGEMENT SandBlast Network	none	none
-single click setup4	security policies	concept	none
-single click setup4	policies	hypernym	none
 e.g. data center	INTUITIVE MANAGEMENT SandBlast Network	none	none
-INTUITIVE MANAGEMENT SandBlast Network	internal network etc	hypernym	none
 security policies	internal network etc	none	none
-need	single click setup4	instance	none
 security policies	INTUITIVE MANAGEMENT SandBlast Network	none	none
 perimeter	single click setup4	none	none
-e.g. data center	policies	hypernym	none
-guest network	need	hypernym	none
-e.g. data center	guest network	hypernym	none
-e.g. data center	box	hypernym	none
-e.g. data center	security policies	hypernym	none
 need	security policies	none	none
-guest network	box	hypernym	none
 box	network segment	none	none
-e.g. data center	network segment	hypernym	none
 box	internal network etc	none	none
-guest network	policies	hypernym	none
-e.g. data center	perimeter	concept	none
 single click setup4	internal network etc	none	none
-network segment	policies	hypernym	none
 perimeter	need	none	none
 guest network	single click setup4	none	none
 perimeter	policies	none	none
-network segment	single click setup4	instance	none
 policies	INTUITIVE MANAGEMENT SandBlast Network	none	none
-policies	internal network etc	hyponym	none
-e.g. data center	internal network etc	hypernym	none
 perimeter	box	none	none
 network segment	INTUITIVE MANAGEMENT SandBlast Network	none	none
 perimeter	INTUITIVE MANAGEMENT SandBlast Network	none	none
-e.g. data center	single click setup4	instance	none
-box	need	hypernym	none
-perimeter	internal network etc	hyponym	none
-need	internal network etc	hyponym	none
 need	INTUITIVE MANAGEMENT SandBlast Network	none	none
-box	policies	hypernym	none
 box	security policies	none	none
-network segment	need	hypernym	none
-optimal network performance	Network settings	hypernym	none
 need	Network settings	none	none
-business	need	hypernym	none
-optimal network performance	need	hypernym	none
-need	effective security	hyponym	none
-Network settings	effective security	hypernym	none
-optimal network performance	effective security	hypernym	none
 business	Network settings	none	none
-optimal network performance	business	hypernym	none
-business	effective security	hyponym	none
-power	cost-effective zero-day protection strategy	hyponym	none
-organizations	processing	hypernym	none
-specific network segment	processing	hypernym	none
-bandwidth	policies	hypernym	none
-power	processing	hypernym	none
-power	organizations	hyponym	none
 power	specific network segment	none	none
-policies	processing	hypernym	none
-power	bandwidth	hypernym	none
-power	policies	hypernym	none
-cost-effective zero-day protection strategy	policies	hypernym	none
-bandwidth	organizations	instance	none
-bandwidth	specific network segment	hyponym	none
-bandwidth	cost-effective zero-day protection strategy	instance	none
-organizations	policies	hypernym	none
-specific network segment	policies	hypernym	none
 organizations	specific network segment	none	none
-cost-effective zero-day protection strategy	organizations	hypernym	none
-bandwidth	processing	hypernym	none
-cost-effective zero-day protection strategy	processing	hypernym	none
-cost-effective zero-day protection strategy	specific network segment	hypernym	none
-latest features	technology	hypernym	none
-policy updates	need	hypernym	none
-best practice policies	technology	hypernym	none
 policy updates	auto-updated threat prevention engines	none	none
-background	technology	hypernym	none
-policy updates	technology	hypernym	none
 latest features	best practice policies	none	none
-auto-updated threat prevention engines	need	hypernym	none
 latest features	background	none	none
 best practice policies	need	none	none
-latest features	organizations	hypernym	none
-background	need	hypernym	none
 auto-updated threat prevention engines	latest features	none	none
-organizations	technology	hypernym	none
-policy updates	organizations	hypernym	none
-auto-updated threat prevention engines	technology	hypernym	none
-need	organizations	instance	none
 policy updates	background	none	none
 policy updates	best practice policies	none	none
 policy updates	latest features	none	none
 auto-updated threat prevention engines	best practice policies	none	none
-best practice policies	organizations	hypernym	none
 latest features	need	none	none
 best practice policies	background	none	none
-auto-updated threat prevention engines	background	hypernym	none
-auto-updated threat prevention engines	organizations	hypernym	none
-need	technology	hypernym	none
-background	organizations	hyponym	none
 Current SIEM	SOC Workflows	none	none
 logs	SOC infrastructure	none	none
 SOC infrastructure	SIEM	none	none
 SIEM	forensic reports	none	none
-actionable intelligence	advanced network forensics	hyponym	none
-actionable intelligence	security teams	hyponym	none
 logs	security teams	none	none
 SandBlast Network	actionable intelligence	none	none
 SandBlast Network	SandBlast Network SIEM platform	none	none
@@ -840,71 +448,37 @@ SandBlast Network	advanced network forensics	none	none
 SandBlast Network	SOC infrastructure	none	none
 SIEM	security teams	none	none
 logs	SandBlast Network SIEM platform	none	none
-SOC infrastructure	advanced network forensics	hyponym	none
-SOC infrastructure	security teams	hypernym	none
 SandBlast Network	forensic reports	none	none
-SOC infrastructure	actionable intelligence	hyponym	none
-SOC infrastructure	SandBlast Network SIEM platform	instance	none
 SandBlast Network SIEM platform	advanced network forensics	none	none
 SIEM	SandBlast Network SIEM platform	none	none
 SandBlast Network SIEM platform	actionable intelligence	none	none
-security teams	advanced network forensics	instance	none
-SandBlast Network SIEM platform	security teams	concept	none
 logs	actionable intelligence	none	none
 SandBlast Network	SIEM	none	none
-logs	advanced network forensics	hyponym	none
 SOC infrastructure	forensic reports	none	none
 SandBlast Network	logs	none	none
 forensic reports	actionable intelligence	none	none
 SIEM	actionable intelligence	none	none
-forensic reports	advanced network forensics	hyponym	none
-logs	forensic reports	hyponym	none
 SIEM	advanced network forensics	none	none
 logs	SIEM	none	none
 SandBlast Network SIEM platform	forensic reports	none	none
 SandBlast Network	private threat intelligence	none	none
-remediation	time	hypernym	none
-investigation	advanced forensics	hyponym	none
-advanced forensics	time	hypernym	none
-investigation	remediation	hyponym	none
 advanced forensics	remediation	none	none
-investigation	time	hypernym	none
 malware families	MITRE	none	none
-malware	visibility	hyponym	none
-visibility	network	hypernym	none
 malware families	zero-day phishing	none	none
 visibility	MITRE	none	none
-malware families	network	hypernym	none
 malware	MITRE	none	none
-malware families	visibility	hypernym	none
 visibility	zero-day phishing	none	none
 network	MITRE	none	none
-network	zero-day phishing	instance	none
 MITRE	zero-day phishing	none	none
-confidence	prevention	hypernym	none
-efficient security management	first strategy	hypernym	none
 Point	gold standard	none	none
 Point	efficient security management	none	none
-efficient security management	confidence	hypernym	none
-confidence	gold standard	hypernym	none
 Point	confidence	none	none
-efficient security management	gold standard	hypernym	none
-prevention	gold standard	hypernym	none
-first strategy	prevention	hypernym	none
 Point	first strategy	none	none
-efficient security management	prevention	hypernym	none
 first strategy	gold standard	none	none
 Point	prevention	none	none
-confidence	first strategy	hyponym	none
-enterprise	reporting	concept	none
-enterprise	government-grade compliance	hyponym	none
 R80 console	reporting	none	none
 enterprise	R80 console	none	none
-reporting	Compliance	hypernym	none
-government-grade compliance	reporting	hypernym	none
-R80 console	Compliance	hypernym	none
 enterprise	Compliance	none	none
-government-grade compliance	Compliance	hypernym	none
 government-grade compliance	R80 console	none	none
 instant alerts	full visibility	none	none
 regulatory mandates	compliance stance	none	none
@@ -921,15 +495,11 @@ Easy-to-use best practices	full visibility	none	none
 policy changes	broad array	none	none
 regulatory mandates	real time	none	none
 compliance stance	Easy-to-use best practices	none	none
-compliance stance	actionable configuration guidelines	hyponym	none
 compliance stance	instant alerts	none	none
-regulatory mandates	broad array	hypernym	none
-policy changes	real time	hypernym	none
 regulatory mandates	actionable configuration guidelines	none	none
 policy changes	Easy-to-use best practices	none	none
 real time	compliance stance	none	none
 policy changes	compliance stance	none	none
-actionable configuration guidelines	full visibility	hypernym	none
 policy changes	full visibility	none	none
 real time	Easy-to-use best practices	none	none
 compliance stance	broad array	none	none
@@ -937,7 +507,6 @@ real time	instant alerts	none	none
 broad array	full visibility	none	none
 regulatory mandates	full visibility	none	none
 actionable configuration guidelines	Easy-to-use best practices	none	none
-compliance stance	full visibility	hypernym	none
 policy changes	instant alerts	none	none
 Easy-to-use best practices	instant alerts	none	none
 policy changes	regulatory mandates	none	none
@@ -945,81 +514,512 @@ real time	actionable configuration guidelines	none	none
 SIEM	audit-ready reports	none	none
 SMOOTH BUSINESS PRODUCTIVITY	audit-ready reports	none	none
 broad integration ecosystem	SMOOTH BUSINESS PRODUCTIVITY	none	none
-view	log server	instance	none
-broad integration ecosystem	view	hypernym	none
 SIEM	broad integration ecosystem	none	none
 SIEM	SMOOTH BUSINESS PRODUCTIVITY	none	none
 SIEM	view	none	none
 SMOOTH BUSINESS PRODUCTIVITY	view	none	none
-audit-ready reports	log server	instance	none
 SIEM	log server	none	none
 SMOOTH BUSINESS PRODUCTIVITY	log server	none	none
-broad integration ecosystem	log server	hypernym	none
 broad integration ecosystem	audit-ready reports	none	none
 audit-ready reports	view	none	none
-only zero-day protection solution	business productivity	concept	none
 SandBlast Network	true prevention-first strategy	none	none
 true prevention-first strategy	business productivity	none	none
-only zero-day protection solution	true prevention-first strategy	concept	none
 only zero-day protection solution	SandBlast Network	none	none
 up to 70%	browsing workflows	none	none
-1.5 seconds	email attachments	hypernym	none
 SandBlast Threat Extraction	current email	none	none
 web downloads	browsing workflows	none	none
-up to 70%	email attachments	hypernym	none
 users	SandBlast Threat Extraction	none	none
 web downloads	users	none	none
 1.5 seconds	administration	none	none
 up to 70%	1.5 seconds	none	none
-current email	browsing workflows	hypernym	none
-up to 70%	administration	concept	none
 current email	email attachments	none	none
 web downloads	administration	none	none
-users	administration	hypernym	none
 up to 70%	users	none	none
 web downloads	1.5 seconds	none	none
 1.5 seconds	SandBlast Threat Extraction	none	none
 administration	browsing workflows	none	none
 current email	administration	none	none
-web downloads	email attachments	hyponym	none
 SandBlast Threat Extraction	administration	none	none
-users	browsing workflows	instance	none
 up to 70%	SandBlast Threat Extraction	none	none
 1.5 seconds	current email	none	none
 1.5 seconds	users	none	none
-browsing workflows	email attachments	hypernym	none
 web downloads	up to 70%	none	none
 SandBlast Threat Extraction	email attachments	none	none
 web downloads	current email	none	none
-users	current email	hyponym	none
 up to 70%	current email	none	none
 SandBlast Threat Extraction	browsing workflows	none	none
 1.5 seconds	browsing workflows	none	none
-administration	email attachments	hyponym	none
-web	networks	hyponym	none
 "blazing-speed, AI-generated Threat Emulation verdicts"	multiple attack vectors	none	none
 Sandblast Network	multiple attack vectors	none	none
-"blazing-speed, AI-generated Threat Emulation verdicts"	email	hypernym	none
 web	multiple attack vectors	none	none
-powerful zero-day protection	web	hypernym	none
 "blazing-speed, AI-generated Threat Emulation verdicts"	powerful zero-day protection	none	none
-Sandblast Network	email	hypernym	none
 "blazing-speed, AI-generated Threat Emulation verdicts"	user activity	none	none
+email	multiple attack vectors	none	none
+"blazing-speed, AI-generated Threat Emulation verdicts"	Sandblast Network	none	none
+Sandblast Network	user activity	none	none
+malware	zero-day phishing	instance	none
+"anti-virus, firewalls"	other core security solutions	instance	none
+phishing	devastating attacks	instance	none
+combination	best2 zero-day protection	instance	none
+phishing	Trojans	instance	none
+phishing	prevention-first strategy	instance	none
+email	clean and reconstructed versions	instance	none
+unacceptable delays	traditional sandboxes	instance	none
+unacceptable delays	first strategy	instance	none
+emulation	users	instance	none
+emulation	SandBlast Threat Extraction	instance	none
+emulation	uninterrupted business flow	instance	none
+email attachments	recipient details	instance	none
+email messages	SandBlast Network	instance	none
+browsing	antiphishing	instance	none
+executables	best zero-day protection	instance	none
+enterprise users	best zero-day protection	instance	none
+runtime behaviors	rich rule-based engines	instance	none
+parameters	newest threats	instance	none
+millions	rich rule-based engines	instance	none
+need	single click setup4	instance	none
+network segment	single click setup4	instance	none
+e.g. data center	single click setup4	instance	none
+bandwidth	organizations	instance	none
+bandwidth	cost-effective zero-day protection strategy	instance	none
+need	organizations	instance	none
+SOC infrastructure	SandBlast Network SIEM platform	instance	none
+security teams	advanced network forensics	instance	none
+network	zero-day phishing	instance	none
+view	log server	instance	none
+audit-ready reports	log server	instance	none
+users	browsing workflows	instance	none
+email	user activity	instance	none
+zero-day malware	zero-day phishing and social engineering attacks	hyponym	none
+devastating attacks	unknown ransomware	hyponym	none
+network	other core security solutions	hyponym	none
+fact	malware strains	hyponym	none
+half	malware strains	hyponym	none
+compromise	existing indicators	hyponym	none
+compromise	COMMON NETWORK SECURITY APPROACHES	hyponym	none
+network	malware evasion techniques	hyponym	none
+malware	malware evasion techniques	hyponym	none
+malware	Conventional sandboxing solutions	hyponym	none
+datacenters	dedicated servers	hyponym	none
+advantages	Endpoint security	hyponym	none
+enterprise IoT	Endpoint security	hyponym	none
+datacenters	Endpoint security	hyponym	none
+advantages	dedicated servers	hyponym	none
+cameras	datacenters	hyponym	none
+elevators	datacenters	hyponym	none
+defense	datacenters	hyponym	none
+advantages	datacenters	hyponym	none
+network perimeter	Endpoint security	hyponym	none
+damage	detection-first strategy	hyponym	none
+you	zero-day threats	hyponym	none
+network	zero-day threats	hyponym	none
+network	such critical limitations	hyponym	none
+threat extraction	email and web downloads	hyponym	none
+combination	email and web downloads	hyponym	none
+combination	threat extraction	hyponym	none
+phishing	unknown ransomware	hyponym	none
+agility	automated policy configuration	hyponym	none
+vast network	pre-emptive user protections	hyponym	none
+users	pre-emptive user protections	hyponym	none
+email	threat extraction	hyponym	none
+users	threat extraction	hyponym	none
+email	pre-emptive user protections	hyponym	none
+web	malicious files	hyponym	none
+email	malicious files	hyponym	none
+emulation	practical prevention	hyponym	none
+malicious content	uninterrupted business flow	hyponym	none
+users	practical prevention	hyponym	none
+emulation	malicious content	hyponym	none
+users	uninterrupted business flow	hyponym	none
+email links	email attachments	hyponym	none
+users	email attachments	hyponym	none
+email messages	email attachments	hyponym	none
+email messages	incoming email	hyponym	none
+threats	incoming email	hyponym	none
+users	incoming email	hyponym	none
+email links	recipient details	hyponym	none
+email attachments	incoming email	hyponym	none
+text	email attachments	hyponym	none
+sender	recipient details	hyponym	none
+email messages	Threat Extraction	hyponym	none
+risk	incoming email	hyponym	none
+threats	email messages	hyponym	none
+users	recipient details	hyponym	none
+end	multiple innovative technologies	hyponym	none
+email	Threat Emulation	hyponym	none
+email	Natural Language Processing	hyponym	none
+NLP	Natural Language Processing	hyponym	none
+NLP	AI-based phishing protection	hyponym	none
+email	AI-based phishing protection	hyponym	none
+real time	malicious links	hyponym	none
+NLP	URL reputation	hyponym	none
+email	malicious links	hyponym	none
+email	URL reputation	hyponym	none
+NLP	Threat Emulation	hyponym	none
+end	malicious links	hyponym	none
+NLP	malicious links	hyponym	none
+largest repository	four billion security decisions	hyponym	none
+largest repository	"real-time, security"	hyponym	none
+browsing	cyber attack data	hyponym	none
+antiphishing	cyber attack data	hyponym	none
+zero day protection	cyber attack data	hyponym	none
+browsing	zero day protection	hyponym	none
+cloud	networks	hyponym	none
+industry	best threat intelligence	hyponym	none
+documents	best zero-day protection	hyponym	none
+documents	executables	hyponym	none
+threats	enterprise users	hyponym	none
+file types	best zero-day protection	hyponym	none
+threats	best zero-day protection	hyponym	none
+power	data science	hyponym	none
+power	newest threats	hyponym	none
+millions	runtime behaviors	hyponym	none
+power	rich rule-based engines	hyponym	none
+wild	latest threats	hyponym	none
+policies	security policies	hyponym	none
+perimeter	guest network	hyponym	none
+policies	internal network etc	hyponym	none
+perimeter	internal network etc	hyponym	none
+need	internal network etc	hyponym	none
+need	effective security	hyponym	none
+business	effective security	hyponym	none
+power	cost-effective zero-day protection strategy	hyponym	none
+power	organizations	hyponym	none
+bandwidth	specific network segment	hyponym	none
+background	organizations	hyponym	none
+actionable intelligence	advanced network forensics	hyponym	none
+actionable intelligence	security teams	hyponym	none
+SOC infrastructure	advanced network forensics	hyponym	none
+SOC infrastructure	actionable intelligence	hyponym	none
+logs	advanced network forensics	hyponym	none
+forensic reports	advanced network forensics	hyponym	none
+logs	forensic reports	hyponym	none
+investigation	advanced forensics	hyponym	none
+investigation	remediation	hyponym	none
+malware	visibility	hyponym	none
+confidence	first strategy	hyponym	none
+enterprise	government-grade compliance	hyponym	none
+compliance stance	actionable configuration guidelines	hyponym	none
+web downloads	email attachments	hyponym	none
+users	current email	hyponym	none
+administration	email attachments	hyponym	none
+web	networks	hyponym	none
+user activity	multiple attack vectors	hyponym	none
+Conventional sandboxing solutions	malware evasion techniques	hypernym	none
+threats	risk	hypernym	none
+devastating attacks	social engineering	hypernym	none
+devastating attacks	cyberattacks	hypernym	none
+zero-day phishing and social engineering attacks	"8,3001 new, previously undiscovered cyber attacks"	hypernym	none
+"anti-virus, firewalls"	network	hypernym	none
+associated file signatures	"anti-virus, firewalls"	hypernym	none
+associated file signatures	network	hypernym	none
+half	fact	hypernym	none
+wild	half	hypernym	none
+wild	fact	hypernym	none
+existing indicators	what	hypernym	none
+COMMON NETWORK SECURITY APPROACHES	LIMITATIONS	hypernym	none
+COMMON NETWORK SECURITY APPROACHES	IOCs	hypernym	none
+COMMON NETWORK SECURITY APPROACHES	you	hypernym	none
+COMMON NETWORK SECURITY APPROACHES	what	hypernym	none
+several approaches	organizations	hypernym	none
+malware	network	hypernym	none
+analysis	network	hypernym	none
+malware	analysis	hypernym	none
+analysis	default	hypernym	none
+Conventional sandboxing solutions	default	hypernym	none
+malware evasion techniques	default	hypernym	none
+network	default	hypernym	none
+malware	default	hypernym	none
+Conventional sandboxing solutions	network	hypernym	none
+advantages	defense	hypernym	none
+enterprise IoT	datacenters	hypernym	none
+only line	advantages	hypernym	none
+cameras	advantages	hypernym	none
+elevators	cameras	hypernym	none
+Endpoint security	dedicated servers	hypernym	none
+network perimeter	only line	hypernym	none
+only line	datacenters	hypernym	none
+network perimeter	advantages	hypernym	none
+network perimeter	datacenters	hypernym	none
+elevators	advantages	hypernym	none
+cameras	defense	hypernym	none
+only line	defense	hypernym	none
+network perimeter	defense	hypernym	none
+zero-day threats	such critical limitations	hypernym	none
+ZERO-DAY PROTECTION	CHECK POINT	hypernym	none
+ZERO-DAY PROTECTION	NUMBER	hypernym	none
+evasion-resistant threat emulation	combination	hypernym	none
+evasion-resistant threat emulation	email and web downloads	hypernym	none
+evasion-resistant threat emulation	threat extraction	hypernym	none
+prevention-first strategy	cyberattacks	hypernym	none
+cyberattacks	social engineering	hypernym	none
+cyberattacks	organizations	hypernym	none
+social engineering	organizations	hypernym	none
+SandBlast Network	phishing	hypernym	none
+devastating attacks	organizations	hypernym	none
+SandBlast Network	cyberattacks	hypernym	none
+phishing	organizations	hypernym	none
+unknown ransomware	organizations	hypernym	none
+business productivity	agility	hypernym	none
+world’s best malware catch rate	record speed	hypernym	none
+Pre-emptive User Protections	email	hypernym	none
+advanced email protections	users	hypernym	none
+advanced email protections	web	hypernym	none
+SandBlast network	web	hypernym	none
+advanced email protections	threat extraction	hypernym	none
+SandBlast network	email	hypernym	none
+advanced email protections	email	hypernym	none
+email	web	hypernym	none
+email	users	hypernym	none
+Pre-emptive User Protections	web	hypernym	none
+Pre-emptive User Protections	users	hypernym	none
+SandBlast Threat Extraction	web	hypernym	none
+unacceptable delays	malicious content	hypernym	none
+traditional sandboxes	users	hypernym	none
+emulation	first strategy	hypernym	none
+background	emulation	hypernym	none
+unacceptable delays	users	hypernym	none
+malicious content	users	hypernym	none
+unacceptable delays	emulation	hypernym	none
+uninterrupted business flow	practical prevention	hypernym	none
+first strategy	practical prevention	hypernym	none
+traditional sandboxes	emulation	hypernym	none
+unacceptable delays	background	hypernym	none
+first strategy	users	hypernym	none
+unacceptable delays	practical prevention	hypernym	none
+first strategy	malicious content	hypernym	none
+SandBlast Threat Extraction	industry	hypernym	none
+web downloads	industry	hypernym	none
+integrated document and image sanitization solution	industry	hypernym	none
+email	industry	hypernym	none
+integrated document and image sanitization solution	email	hypernym	none
+web downloads	email	hypernym	none
+integrated document and image sanitization solution	web downloads	hypernym	none
+other email-based threats	phishing	hypernym	none
+phishing	emails	hypernym	none
+other email-based threats	emails	hypernym	none
+worldwide breaches3	emails	hypernym	none
+phishing	BEC	hypernym	none
+SandBlast Network	text	hypernym	none
+email links	aspects	hypernym	none
+email links	users	hypernym	none
+email messages	text	hypernym	none
+sender	risk	hypernym	none
+email messages	aspects	hypernym	none
+users	risk	hypernym	none
+Threat Extraction	users	hypernym	none
+aspects	risk	hypernym	none
+threats	sender	hypernym	none
+email attachments	risk	hypernym	none
+SandBlast Network	aspects	hypernym	none
+text	sender	hypernym	none
+SandBlast Network	sender	hypernym	none
+Threat Extraction	risk	hypernym	none
+threats	text	hypernym	none
+recipient details	risk	hypernym	none
+email messages	sender	hypernym	none
+threats	users	hypernym	none
+SandBlast Network	’ mailbox	hypernym	none
+threats	aspects	hypernym	none
+text	risk	hypernym	none
+users	sender	hypernym	none
+email links	risk	hypernym	none
+Threat Extraction	sender	hypernym	none
+email links	text	hypernym	none
+email messages	users	hypernym	none
+Threat Extraction	aspects	hypernym	none
+SandBlast Network	risk	hypernym	none
+email messages	risk	hypernym	none
+email links	sender	hypernym	none
+over 300 parameters	email	hypernym	none
+rules-based engines	NLP	hypernym	none
+Natural Language Processing	end	hypernym	none
+over 300 parameters	real time	hypernym	none
+email	links	hypernym	none
+links	end	hypernym	none
+over 300 parameters	NLP	hypernym	none
+AI-based fraud protection	NLP	hypernym	none
+over 300 parameters	end	hypernym	none
+AI-based phishing protection	malicious links	hypernym	none
+over 300 parameters	malicious links	hypernym	none
+clicks	end	hypernym	none
+Natural Language Processing	malicious links	hypernym	none
+AI-based fraud protection	clicks	hypernym	none
+Click-Time Protection	NLP	hypernym	none
+Click-Time Protection	email	hypernym	none
+rules-based engines	email	hypernym	none
+Natural Language Processing	Threat Emulation	hypernym	none
+over 300 parameters	links	hypernym	none
+email	end	hypernym	none
+real time	end	hypernym	none
+SandBlast Network	end	hypernym	none
+AI-based phishing protection	links	hypernym	none
+clicks	links	hypernym	none
+rules-based engines	end	hypernym	none
+SandBlast Network	email	hypernym	none
+AI-based fraud protection	links	hypernym	none
+AI-based phishing protection	Threat Emulation	hypernym	none
+AI-based phishing protection	end	hypernym	none
+Natural Language Processing	links	hypernym	none
+SandBlast Network	NLP	hypernym	none
+AI-based fraud protection	end	hypernym	none
+ThreatCloud – Dynamic Threat Intelligence Repository	"real-time, security"	hypernym	none
+four billion security decisions	"real-time, security"	hypernym	none
+suspicious files	they	hypernym	none
+breakthrough AI engines	emails	hypernym	none
+suspicious files	emails	hypernym	none
+protected assets	endpoints	hypernym	none
+cloud	endpoints	hypernym	none
+endpoints	networks	hypernym	none
+protected assets	networks	hypernym	none
+AI-Generated Threat Emulation Verdicts	industry	hypernym	none
+threat intelligence	files	hypernym	none
+deep CPU-level emulation	files	hypernym	none
+SandBlast Network	files	hypernym	none
+evasive attacks	emails	hypernym	none
+threat intelligence	emails	hypernym	none
+deep CPU-level emulation	emails	hypernym	none
+files	emails	hypernym	none
+SandBlast Network	emails	hypernym	none
+deep CPU-level emulation	threat intelligence	hypernym	none
+OS-level inspection	documents	hypernym	none
+broad range	It	hypernym	none
+OS-level inspection	PC	hypernym	none
+broad range	file types	hypernym	none
+OS-level inspection	executables	hypernym	none
+executables	PC	hypernym	none
+executables	It	hypernym	none
+OS-level inspection	It	hypernym	none
+threats	documents	hypernym	none
+SandBlast Network	power	hypernym	none
+rich rule-based engines	data science	hypernym	none
+rich rule-based engines	newest threats	hypernym	none
+runtime behaviors	parameters	hypernym	none
+exhaustive AI engines	power	hypernym	none
+power	parameters	hypernym	none
+runtime behaviors	data science	hypernym	none
+runtime behaviors	newest threats	hypernym	none
+SandBlast Network	parameters	hypernym	none
+exhaustive AI engines	data science	hypernym	none
+millions	power	hypernym	none
+exhaustive AI engines	parameters	hypernym	none
+SandBlast Network	data science	hypernym	none
+millions	parameters	hypernym	none
+rich rule-based engines	parameters	hypernym	none
+need	policies	hypernym	none
+e.g. data center	need	hypernym	none
+guest network	security policies	hypernym	none
+guest network	internal network etc	hypernym	none
+single click setup4	policies	hypernym	none
+INTUITIVE MANAGEMENT SandBlast Network	internal network etc	hypernym	none
+e.g. data center	policies	hypernym	none
+guest network	need	hypernym	none
+e.g. data center	guest network	hypernym	none
+e.g. data center	box	hypernym	none
+e.g. data center	security policies	hypernym	none
+guest network	box	hypernym	none
+e.g. data center	network segment	hypernym	none
+guest network	policies	hypernym	none
+network segment	policies	hypernym	none
+e.g. data center	internal network etc	hypernym	none
+box	need	hypernym	none
+box	policies	hypernym	none
+network segment	need	hypernym	none
+optimal network performance	Network settings	hypernym	none
+business	need	hypernym	none
+optimal network performance	need	hypernym	none
+Network settings	effective security	hypernym	none
+optimal network performance	effective security	hypernym	none
+optimal network performance	business	hypernym	none
+organizations	processing	hypernym	none
+specific network segment	processing	hypernym	none
+bandwidth	policies	hypernym	none
+power	processing	hypernym	none
+policies	processing	hypernym	none
+power	bandwidth	hypernym	none
+power	policies	hypernym	none
+cost-effective zero-day protection strategy	policies	hypernym	none
+organizations	policies	hypernym	none
+specific network segment	policies	hypernym	none
+cost-effective zero-day protection strategy	organizations	hypernym	none
+bandwidth	processing	hypernym	none
+cost-effective zero-day protection strategy	processing	hypernym	none
+cost-effective zero-day protection strategy	specific network segment	hypernym	none
+latest features	technology	hypernym	none
+policy updates	need	hypernym	none
+best practice policies	technology	hypernym	none
+background	technology	hypernym	none
+policy updates	technology	hypernym	none
+auto-updated threat prevention engines	need	hypernym	none
+latest features	organizations	hypernym	none
+background	need	hypernym	none
+organizations	technology	hypernym	none
+policy updates	organizations	hypernym	none
+auto-updated threat prevention engines	technology	hypernym	none
+best practice policies	organizations	hypernym	none
+auto-updated threat prevention engines	background	hypernym	none
+auto-updated threat prevention engines	organizations	hypernym	none
+need	technology	hypernym	none
+SOC infrastructure	security teams	hypernym	none
+remediation	time	hypernym	none
+advanced forensics	time	hypernym	none
+investigation	time	hypernym	none
+visibility	network	hypernym	none
+malware families	network	hypernym	none
+malware families	visibility	hypernym	none
+confidence	prevention	hypernym	none
+efficient security management	first strategy	hypernym	none
+efficient security management	confidence	hypernym	none
+confidence	gold standard	hypernym	none
+efficient security management	gold standard	hypernym	none
+prevention	gold standard	hypernym	none
+first strategy	prevention	hypernym	none
+efficient security management	prevention	hypernym	none
+reporting	Compliance	hypernym	none
+government-grade compliance	reporting	hypernym	none
+R80 console	Compliance	hypernym	none
+government-grade compliance	Compliance	hypernym	none
+regulatory mandates	broad array	hypernym	none
+policy changes	real time	hypernym	none
+actionable configuration guidelines	full visibility	hypernym	none
+compliance stance	full visibility	hypernym	none
+broad integration ecosystem	view	hypernym	none
+broad integration ecosystem	log server	hypernym	none
+1.5 seconds	email attachments	hypernym	none
+up to 70%	email attachments	hypernym	none
+current email	browsing workflows	hypernym	none
+users	administration	hypernym	none
+browsing workflows	email attachments	hypernym	none
+"blazing-speed, AI-generated Threat Emulation verdicts"	email	hypernym	none
+powerful zero-day protection	web	hypernym	none
+Sandblast Network	email	hypernym	none
 Sandblast Network	web	hypernym	none
 multiple attack vectors	networks	hypernym	none
 "blazing-speed, AI-generated Threat Emulation verdicts"	networks	hypernym	none
 user activity	networks	hypernym	none
 powerful zero-day protection	email	hypernym	none
 powerful zero-day protection	multiple attack vectors	hypernym	none
-email	multiple attack vectors	none	none
-"blazing-speed, AI-generated Threat Emulation verdicts"	Sandblast Network	none	none
 "blazing-speed, AI-generated Threat Emulation verdicts"	web	hypernym	none
 email	networks	hypernym	none
 powerful zero-day protection	networks	hypernym	none
 user activity	web	hypernym	none
-Sandblast Network	user activity	none	none
-user activity	multiple attack vectors	hyponym	none
 Sandblast Network	networks	hypernym	none
 powerful zero-day protection	user activity	hypernym	none
-email	user activity	instance	none
 powerful zero-day protection	Sandblast Network	hypernym	none
+zero-day malware	"8,3001 new, previously undiscovered cyber attacks"	concept	none
+associated file signatures	other core security solutions	concept	none
+you	network	concept	none
+best2 zero-day protection	email and web downloads	concept	none
+unknown ransomware	social engineering	concept	none
+users	web	concept	none
+malicious content	practical prevention	concept	none
+94%	emails	concept	none
+email attachments	sender	concept	none
+over 300 parameters	clicks	concept	none
+single click setup4	security policies	concept	none
+e.g. data center	perimeter	concept	none
+SandBlast Network SIEM platform	security teams	concept	none
+enterprise	reporting	concept	none
+only zero-day protection solution	business productivity	concept	none
+only zero-day protection solution	true prevention-first strategy	concept	none
+up to 70%	administration	concept	none
