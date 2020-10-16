@@ -1,0 +1,22 @@
+a	b	pred	label
+vulnerabilities	real-time threat intelligence	hyponym	none
+operational security effectiveness	security operations	hyponym	none
+network and security operations teams	operational security	hypernym	hypernym
+Security operations teams	Security operations teams organizations	hyponym	none
+cyber threats	Security operations teams	hyponym	none
+cyber threats	Security operations teams organizations	hyponym	none
+security	respondents security products	hyponym	hyponym
+value	security testing	hyponym	hyponym
+company's security posture	value	hypernym	none
+value	vulnerabilities	hypernym	none
+security testing	vulnerabilities	hypernym	none
+company's security posture	vulnerabilities	hypernym	none
+company's security posture	security testing	hypernym	none
+best security products	cybersecurity	hypernym	hypernym
+security capabilities	security and risk management	hyponym	hyponym
+security operations teams	good security hygiene	hyponym	none
+exploitable vulnerability	security operations teams	hyponym	none
+exploitable vulnerability	good security hygiene	hyponym	none
+security tools	security tools effectiveness	hyponym	none
+security solutions	Security Group	hypernym	none
+security skills	Security breaches	hyponym	none

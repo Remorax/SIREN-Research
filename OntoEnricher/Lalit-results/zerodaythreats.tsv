@@ -1,0 +1,9 @@
+a	b	pred	label
+phishing	cyberattacks	hypernym	hypernym
+malware	zero-day phishing	instance	none
+actionable intelligence	security teams	hyponym	none
+threats	risk	hypernym	hypernym
+phishing	emails	hypernym	hypernym
+threat intelligence	emails	hypernym	none
+threats	documents	hypernym	none
+efficient security management	prevention	hypernym	hypernym

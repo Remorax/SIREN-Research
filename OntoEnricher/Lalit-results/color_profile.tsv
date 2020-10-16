@@ -1,0 +1,4 @@
+a	b	pred	label
+information disclosure	attackers	hypernym	none
+attackers	vulnerability	hypernym	hypernym
+information disclosure	vulnerability	hypernym	hypernym
