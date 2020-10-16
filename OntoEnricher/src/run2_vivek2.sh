@@ -10,4 +10,4 @@
 module load cuda/10.2
 module load cudnn/7.6.5-cuda-10.2 
 
-python3 LSTM_instances_onehot.py data_instances.pkl results_instances_onehot.txt Output_instances_onehot instances_onehot.pt
+python3 test_instance_onehot.py data_instances_new.pkl results_instances_onehot_new.txt Output_instances_onehot instances_onehot.pt

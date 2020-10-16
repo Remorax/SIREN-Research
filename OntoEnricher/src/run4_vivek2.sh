@@ -10,4 +10,4 @@
 module load cuda/10.2
 module load cudnn/7.6.5-cuda-10.2 
 
-python3 LSTM_instances_avg.py data_instances.pkl results_instances_avg.txt Output_instances_avg instances_avg.pt
+python3 test_instance_avg.py data_instances_new.pkl results_instances_avg_new.txt Output_instances_avg instances_avg.pt

@@ -81,12 +81,6 @@ class RelationPredictor(nn.Module):
 
         self.W = nn.Linear(self.output_dim, NUM_RELATIONS)
 
-    def masked_softmax(self, inp):
-        # To softmax all non-zero tensor values
-        inp = inp.double()
-        mask = ((inp != 0).double() - 1) * 9999  # for -inf
-        return (inp + mask).softmax(dim=-1)
-
     def forward(self, nodes, paths, counts, edgecounts, max_paths, max_edges):
         '''
             nodes: batch_size * 2
@@ -109,8 +103,10 @@ class RelationPredictor(nn.Module):
         paths_output_reshaped = paths_output.reshape(-1, max_paths, HIDDEN_DIM*NUM_LAYERS*self.n_directions)
         # paths_output has dim (batch_size, max_paths, HIDDEN_DIM, NUM_LAYERS*self.n_directions)
 
-        counts = F.one_hot(counts.argmax(1), num_classes=counts.shape[-1]).double()
-        paths_weighted = torch.bmm(paths_output_reshaped.permute(0,2,1), counts.unsqueeze(-1)).squeeze(-1)
+        batch_size = counts.shape[0]
+        counts_avg = counts/torch.sum(counts, dim=-1).view(batch_size, 1)
+
+        paths_weighted = torch.bmm(paths_output_reshaped.permute(0,2,1), counts_avg.unsqueeze(-1)).squeeze(-1)
         representation = torch.cat((nodes_embed, paths_weighted), dim=-1)
         probabilities = self.log_softmax(self.W(representation))
         return probabilities

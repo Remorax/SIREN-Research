@@ -22,12 +22,6 @@ f = open(dataset_file, "rb")
  nodes_instances2, paths_instances_old2, counts_instances_old2, 
  paths_instances_new2, counts_instances_new2, 
  paths_instances2, counts_instances2, targets_instances2,
- nodes_instances3, paths_instances_old3, counts_instances_old3, 
- paths_instances_new3, counts_instances_new3, 
- paths_instances3, counts_instances3, targets_instances3,
- nodes_instances4, paths_instances_old4, counts_instances_old4, 
- paths_instances_new4, counts_instances_new4, 
- paths_instances4, counts_instances4, targets_instances4,
  emb_indexer, emb_indexer_inv, emb_vals, 
  pos_indexer, dep_indexer, dir_indexer, rel_indexer) = pickle.load(f)
 
@@ -218,20 +212,13 @@ with torch.no_grad():
     test(nodes_test, paths_test, counts_test, targets_test, "Test")
     test(nodes_knocked, paths_knocked, counts_knocked, targets_knocked, "Knocked out")
     
-    test(nodes_instances1, paths_instances_old1, counts_instances_old1, targets_instances1, "Instances1 (original)")
-    test(nodes_instances1, paths_instances_new1, counts_instances_new1, targets_instances1, "Instances1 (webpage)")
-    test(nodes_instances1, paths_instances1, counts_instances1, targets_instances1, "Instances1 (hybrid)")
+    test(nodes_instances1, paths_instances_old1, counts_instances_old1, targets_instances1, "Instances_svo(original)")
+    test(nodes_instances1, paths_instances_new1, counts_instances_new1, targets_instances1, "Instances_svo(webpage)")
+    test(nodes_instances1, paths_instances1, counts_instances1, targets_instances1, "Instances_svo(hybrid)")
     
-    test(nodes_instances2, paths_instances_old2, counts_instances_old2, targets_instances2, "Instances2 (original)")
-    test(nodes_instances2, paths_instances_new2, counts_instances_new2, targets_instances2, "Instances2 (webpage)")
-    test(nodes_instances2, paths_instances2, counts_instances2, targets_instances2, "Instances2 (hybrid)")
+    test(nodes_instances2, paths_instances_old2, counts_instances_old2, targets_instances2, "Instances_nchunks(original)")
+    test(nodes_instances2, paths_instances_new2, counts_instances_new2, targets_instances2, "Instances_nchunks(webpage)")
+    test(nodes_instances2, paths_instances2, counts_instances2, targets_instances2, "Instances_nchunks(hybrid)")
     
-    test(nodes_instances3, paths_instances_old3, counts_instances_old3, targets_instances3, "Instances3 (original)")
-    test(nodes_instances3, paths_instances_new3, counts_instances_new3, targets_instances3, "Instances3 (webpage)")
-    test(nodes_instances3, paths_instances3, counts_instances3, targets_instances3, "Instances3 (hybrid)")
-
-    test(nodes_instances4, paths_instances_old4, counts_instances_old4, targets_instances4, "Instances4 (original)")
-    test(nodes_instances4, paths_instances_new4, counts_instances_new4, targets_instances4, "Instances4 (webpage)")
-    test(nodes_instances4, paths_instances4, counts_instances4, targets_instances4, "Instances4 (hybrid)")
 
 op_file.close()
