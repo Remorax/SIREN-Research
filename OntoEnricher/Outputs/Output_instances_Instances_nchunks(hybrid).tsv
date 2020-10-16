@@ -2,15 +2,15 @@ YOU	ZERO-DAY THREATS	none	none
 revolutionary AI engines	best2 zero-day protection	none	none
 Pre-emptive User Protections	advanced email protections	none	none
 Click-Time Protection	rules-based engines	none	none
-HVAC systems	Endpoint security	none	hypernym
+HVAC systems	Endpoint security	none	none
 cyberattacks	unknown ransomware	instance	none
 evasion-resistant threat emulation	best2 zero-day protection	instance	none
 perimeter	network segment	hyponym	none
-elevators	Endpoint security	hyponym	hypernym
-cameras	Endpoint security	hyponym	hypernym
+elevators	Endpoint security	hyponym	none
+cameras	Endpoint security	hyponym	none
 phishing	cyberattacks	hypernym	hypernym
-phishing	social engineering	hypernym	hypernym
-guest network	network segment	hypernym	hypernym
+phishing	social engineering	hypernym	none
+guest network	network segment	hypernym	none
 Trojans	cyberattacks	concept	hypernym
 advanced email protections	pre-emptive user protections	concept	hypernym
 antiphishing	zero day protection	concept	hypernym
@@ -19,8 +19,8 @@ rules-based engines	URL reputation	none	none
 rules-based engines	AI-based phishing protection	none	none
 rules-based engines	AI-based fraud protection	none	none
 rules-based engines	Natural Language Processing	none	none
-network segment	internal network etc	hyponym	hyponym
-malware	malware families	hyponym	hyponym
+network segment	internal network etc	hyponym	none
+malware	malware families	hyponym	none
 pre-emptive user protections	threat extraction	hypernym	hypernym
 Pre-emptive User Protections	threat extraction	hypernym	none
 best2 zero-day protection	threat extraction	concept	none
@@ -706,7 +706,7 @@ administration	email attachments	hyponym	none
 web	networks	hyponym	none
 user activity	multiple attack vectors	hyponym	none
 Conventional sandboxing solutions	malware evasion techniques	hypernym	none
-threats	risk	hypernym	none
+threats	risk	hypernym	hypernym
 devastating attacks	social engineering	hypernym	none
 devastating attacks	cyberattacks	hypernym	none
 zero-day phishing and social engineering attacks	"8,3001 new, previously undiscovered cyber attacks"	hypernym	none
@@ -796,7 +796,7 @@ integrated document and image sanitization solution	email	hypernym	none
 web downloads	email	hypernym	none
 integrated document and image sanitization solution	web downloads	hypernym	none
 other email-based threats	phishing	hypernym	none
-phishing	emails	hypernym	none
+phishing	emails	hypernym	hypernym
 other email-based threats	emails	hypernym	none
 worldwide breaches3	emails	hypernym	none
 phishing	BEC	hypernym	none
@@ -974,7 +974,7 @@ confidence	gold standard	hypernym	none
 efficient security management	gold standard	hypernym	none
 prevention	gold standard	hypernym	none
 first strategy	prevention	hypernym	none
-efficient security management	prevention	hypernym	none
+efficient security management	prevention	hypernym	hypernym
 reporting	Compliance	hypernym	none
 government-grade compliance	reporting	hypernym	none
 R80 console	Compliance	hypernym	none
