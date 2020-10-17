@@ -1,0 +1,33 @@
+information disclosure	attackers	hypernym	none
+attackers	vulnerability	hyponym	hypernym
+information disclosure	vulnerability	hypernym	hypernym
+Essential security infrastructures	firewalls	hypernym	hyponym
+phishing	cyberattacks	hypernym	hypernym
+malware	zero-day phishing	hyponym	none
+actionable intelligence	security teams	hypernym	none
+threats	risk	hypernym	hypernym
+phishing	emails	hypernym	hypernym
+threat intelligence	emails	hypernym	none
+threats	documents	hypernym	none
+efficient security management	prevention	hypernym	hypernym
+vulnerabilities	real-time threat intelligence	hyponym	none
+operational security effectiveness	security operations	hypernym	none
+network and security operations teams	operational security	hypernym	hypernym
+Security operations teams	Security operations teams organizations	hyponym	none
+cyber threats	Security operations teams	hyponym	none
+cyber threats	Security operations teams organizations	hyponym	none
+security	respondents security products	hyponym	hyponym
+value	security testing	hyponym	hyponym
+company's security posture	value	hypernym	none
+value	vulnerabilities	hyponym	none
+security testing	vulnerabilities	hypernym	none
+company's security posture	vulnerabilities	hypernym	none
+company's security posture	security testing	hypernym	none
+best security products	cybersecurity	hypernym	hypernym
+security capabilities	security and risk management	hyponym	hyponym
+security operations teams	good security hygiene	hyponym	none
+exploitable vulnerability	security operations teams	hyponym	none
+exploitable vulnerability	good security hygiene	hyponym	none
+security tools	security tools effectiveness	hyponym	none
+security solutions	Security Group	hypernym	none
+security skills	Security breaches	hyponym	none
