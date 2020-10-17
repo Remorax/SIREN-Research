@@ -1,0 +1,88 @@
+https://www.csoonline.com/article/3315700/what-is-application-security-a-process-and-tools-for-securing-software.html
+
+According to Veracode’s State of Software Security Vol. 10 report, 83% of the 85,000 applications it tested had at least one security flaw. Many had much more, as their research found a total of 10 million flaws, and 20% of all apps had at least one high severity flaw. Not all of those flaws presents a significant security risk, but the sheer number is troubling.
+
+The faster and sooner in the software development process you can find and fix security issues, the safer your enterprise will be. Because everyone makes mistakes, the challenge is to find those mistakes in a timely fashion. For example, a common coding error could allow unverified inputs. This mistake can turn into SQL injection attacks and then data leaks if a hacker finds them. 
+
+Application security tools that integrate into your application development environment can make this process and workflow simpler and more effective. These tools are also useful if you are doing compliance audits, since they can save time and the expense by catching problems before the auditors seen them. 
+
+The rapid growth in the application security segment has been helped by the changing nature of how enterprise apps are being constructed in the last several years. Gone are the days where an IT shop would take months to refine requirements, build and test prototypes, and deliver a finished product to an end-user department. The idea almost seems quaint nowadays.
+
+Instead, we have new working methods, called continuous deployment and integration, that refine an app daily, in some cases hourly. This means that security tools have to work in this ever-changing world and find issues with code quickly.
+
+Gartner, in its report on the app security hype cycle (updated September 2018), said that IT managers “need to go beyond identifying common application development security errors and protecting against common attack techniques.” They offer more than a dozen different categories of products and describe where in their “hype cycle” they are located.
+
+Many of these categories are still emerging and employ relatively new products. This shows how quickly the market is evolving as threats become more complex, more difficult to find, and more potent in their potential damage to your networks, your data, and your corporate reputation.
+Most common software weaknesses
+
+One way to keep aware of the software vulnerabilities that attacker are likely to exploit is MITRE's annual annual CWE Most Dangerous Software Weaknesses list. MITRE tracks CWEs (Common Weakness Enumeration), assigning them a number much as they do with its database of Common Vulnerabilities and Exposures (CVEs). Each weakness is rated depending on the frequency that it is the root cause of a vulnerability and the severity of its exploitation.
+
+Below are the top 10 CWEs in MITRE's 2020 CWE top 25 with scores:
+
+    Cross-site scripting (46.82)
+    Out-of-bounds write (46.17)
+    Improper input validation (33.47)
+    Out-of-bounds read (26.5)
+    Improper restriction of operations within the bounds of a memory buffer (23.73)
+    SQL injection (20.69)
+    Exposure of sensitive information to an unauthorized actor (19.16)
+    Use after free (18.87)
+    Cross-site reques forgery (CSRF) (17.29)
+    OS command injection (16.44)
+
+Application security tools
+
+While there are numerous application security software product categories, the meat of the matter has to do with two: security testing tools and application shielding products. The former is a more mature market with dozens of well-known vendors, some of them are lions of the software industry such as IBM, CA and MicroFocus. These tools are well enough along that Gartner has created its Magic Quadrant and classified their importance and success. Review sites such as IT Central Station have been able to survey and rank these vendors, too.
+
+Gartner categorizes the security testing tools into several broad buckets, and they are somewhat useful for how you decide what you need to protect your app portfolio:
+
+    Static testing, which analyzes code at fixed points during its development. This is useful for developers to check their code as they are writing it to ensure that security issues are being introduced during development.
+    Dynamic testing, which analyzes running code. This is more useful, as it can simulate attacks on production systems and reveal more complex attack patterns that use a combination of systems.
+    Interactive testing, which combines elements of both static and dynamic testing.
+    Mobile testing is designed specifically for the mobile environments and can examine how an attacker can leverage the mobile OS and the apps running on them in its entirety.
+
+Another way to look at the testing tools is how they are delivered, either via an on-premises tool or via a SaaS-based subscription service where you submit your code for online analysis. Some even do both.
+
+One caveat is the programming languages supported by each testing vendor. Some limit their tools to just one or two languages. (Java is usually a safe bet.)  Others are more involved in the Microsoft .Net universe. The same goes for integrated development environments (IDEs): some tools operate as plug-ins or extensions to these IDEs, so testing your code is as simple as clicking on a button.
+
+Another issue is whether any tool is isolated from other testing results or can incorporate them into its own analysis. IBM’s is one of the few that can import findings from manual code reviews, penetration testing, vulnerability assessments and competitors’ tests. This can be helpful, particularly if you have multiple tools that you need to keep track of.
+
+Let’s not forget about app shielding tools. The main objective of these tools is to harden the application so that attacks are more difficult to carry out. This is less charted territory. Here you’ll find a vast collection of smaller, point products that in many cases have limited history and customer bases. The goal of these products is to do more than just test for vulnerabilities and actively prevent your apps from corruption or compromise. They encompass a few different broad categories:
+
+    Runtime application self-protection (RASP): These tools could be considered a combination of testing and shielding. They provide a measure of protection against possible reverse-engineering attacks. RASP tools are continuously monitoring the behavior of the app, which is useful particularly in mobile environments when apps can be rewritten, run on a rooted phone or have privilege abuse to turn them into doing nefarious things. RASP tools can send alerts, terminate errant processes, or terminate the app itself if found compromised.
+    RASP will likely become the default on many mobile development environments and built-in as part of other mobile app protection tools. Expect to see more alliances among software vendors that have solid RASP solutions.  
+    Code obfuscation: Hackers often use obfuscation methods to hide their malware, and now tools allow developer to do this to help protect their code from being attacked.
+    Encryption and anti-tampering tools: These are other methods that can be used to keep the bad guys from gaining insights into your code.
+    Threat detection tools: These tools examine the environment or network where your apps are running and make an assessment about potential threats and misused trust relationships. Some tools can provide device “fingerprints” to determine whether a mobile phone has been rooted or otherwise compromised.
+
+Application security challenges
+
+Part of the problem is that IT has to satisfy several different masters to secure their apps. They first have to keep up with the evolving security and application development tools market, but that is just the entry point.
+
+IT also has to anticipate the business needs as more enterprises dive deeper into digital products and their application portfolio needs evolve to more complex infrastructure. They also have to understand how SaaS services are constructed and secured. This has been an issue, as a recent survey of 500 IT managers has found the average level of software design knowledge has been lacking. The report states, “CIOs may find themselves in the hot seat with senior leadership as they are held accountable for reducing complexity, staying on budget and how quickly they are modernizing to keep up with business demands.”
+
+Finally, the responsibility for application security could be spread across several different teams within your IT operations: The network folks could be responsible for running the web app firewalls and other network-centric tools, the desktop folks could be responsible for running endpoint-oriented tests, and various development groups could have other concerns. This makes it hard to suggest one tool that will fit everyone’s needs, which is why the market has become so fragmented.
+Application security trends
+
+In January 2019, Imperva published its State of Web Application Vulnerabilities in 2018. The overall findings were positive. While the number of web application vulnerabilities continues to grow, that growth is slowing. 
+
+That's due primarily to a decline in IoT vulnerabilities--only 38 new ones reported in 2018 versus 112 in 2017. API vulnerabilities, on the other hand, increased by 24% in 2018, but at less than half the 56% growth rate of 2017.
+
+Another area seeing more vulnerabilities emerge according to the Imperva report is in content management systems, Wordpress in particular. That platform saw a 30% increase in the number of reported vulnerabilities.
+
+The report noted that Drupal content management system, despite being far less popular than Wordpress, is becoming a target for attackers because of two vulnerabilities: Drupalgeddon2 (CVE-2018-7600) and Drupalgeddon3 (CVE-2018-7602). Both allow attacks to connect to back-end databases, scan and infect networks and clients with malware, or mine cryptocurrencies. Imperva claims to have blocked more than a half-million of attacks that use these vulnerabilities in 2018.  
+
+The Veracode report shows that the most common types of flaws are:
+
+    Information leakage (64%)
+    Cryptographic issues (62%)
+    CRLF injection (61%)
+    Code quality (56%)
+    Insufficient input validation (48%)
+    Cross-site scripting (47%)
+    Directory traversal (46%)
+    Credentials management (45%)
+
+(Percentages represent prevalence in the applications tested.) The rate of occurrence for all the above flaws has increased since Veracode began tracking them 10 years ago.
+
+One positive trend that the Veracode study found was that application scanning makes a big difference when it comes to fix rate and time to fix for application flaws. Overall fix rates, especially for high-severity flaws, are improving. The overall fix rate is 56%, up from 52% in 2018, and the highest severity flaws are fixed at a rate of 75.7%. A DevSecOps approach with frequent scanning and testing of software will drive down the time to fix flaws. Median time to repair for applications scanned 12 times or fewer per year was 68 days, while an average scan rate of daily or more lowered that rate to 19 days.

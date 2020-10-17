@@ -1,0 +1,30 @@
+https://www.bankinfosecurity.com/morgan-stanley-fined-60-million-for-data-protection-mishaps-a-15158?rf=2020-10-17__SUB_BIS__Slot1_ART15158&mkt_tok=eyJpIjoiTXpkbFlUZGhOalptWW1WbSIsInQiOiI2blRDaUFCUmtna2EyRWFcL1wvTWR4WGxORlpqVlYrSmV5OXp5TjRoWkI1a0s0aGdHam13XC82cTV3a0FvNk5rc0drSTZxMXNySEVoMW0yQVBXbWtMeUFNclhVTEg2V001YlwvS2Z2bWxCcjlaY3QrVmd6dktmXC9GUEpjVDRxVWN0cEZZIn0%3D
+
+The Office of the Comptroller of the Currency has fined Morgan Stanley $60 million for the investment bank's failure to properly oversee the decommissioning of several data centers, putting customer data at risk of exposure.
+
+When Morgan Stanley decommissioned two data centers related to the bank's wealth management business in 2016, the company did not properly oversee the third-party company responsible for ensuring that all personal data was removed, according to the OCC, which is part of the U.S. Treasury Department.
+
+"In connection with the decommissioning, the bank, among other things, failed to effectively assess or address the risks associated with the decommissioning of its hardware, failed to adequately assess the risk of using third-party vendors, including subcontractors, and failed to maintain an appropriate inventory of customer data stored on the devices," according to an OCC report.
+
+OCC also says Morgan Stanley neglected to exercise proper oversight while retiring certain network devices, such as computer servers, at a local branch in 2019.
+
+A spokesperson for Morgan Stanley says that the company does not believe that any customer data has ever been accessed or misused, and the bank continues to monitor the situation.
+
+"Moreover, we have instituted enhanced security procedures, including continuous fraud monitoring, and will continue to strengthen the controls that we have in place to protect our clients' information," the spokesperson says.
+
+The OCC fine come about a month after attorneys representing Morgan Stanley customers filed a lawsuit against the bank, claiming it failed to properly safeguard personally identifiable information when the company discarded equipment (see: Morgan Stanley Hit With $5 Million Data Breach Suit ).
+
+Morgan Stanley confirmed these incidents in data breach notification letters sent to the California attorney general and other states' attorneys general in July. The letter notes the data exposed may have included account names and numbers (at Morgan Stanley and any linked bank accounts), Social Security number, passport number, contact information, date of birth, asset value and holdings data. It says it offered victims two years of prepaid credit monitoring services.
+
+The lawsuit involves complaints from about 100 Morgan Stanley customers who claim they were affected by the company's practices.
+Protecting Data
+
+One reason why the OCC likely fined Morgan Stanely is that the bank failed to properly assess the data it was protecting, says Mark Rasch, an attorney with the law firm of Kohrman, Jackson & Krantz, who is not involved in the case.
+
+"The entities that are the custodians of the data don't understand the value of the data they are protecting. If this were a bank vault, they would understand," Rasch tells Information Security Media Group.
+
+Morgan Stanley may not have had a complete checklist in place to help ensure it properly disposed of decommissioned computers, Rasch says.
+
+Richard Santalesa, a technology and data privacy attorney at SmartEdgeLaw Group, a boutique law firm with offices in New York and Connecticut, notes that the size of the fine likely reflects that these similar incidents happened only three years apart and that the OCC wanted to make a point about how large financial institutions need to oversee personally identifiable information, even when it's left to third parties to handle.
+
+"I'm sure this latest action has made the desks of every CISO and chief privacy officer in the financial ecosphere," Santalesa says. "I know that if I were sitting in that C-seat, I'd immediately add a 'data destruction/deletion review' agenda item to my next department meeting."

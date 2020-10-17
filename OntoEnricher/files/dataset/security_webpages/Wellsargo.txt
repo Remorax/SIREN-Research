@@ -1,0 +1,11 @@
+Wells Fargo warned on Tuesday that its website is being targeted again by a distributed denial-of-service (DDOS) attack.
+
+The bank said most of its customers were not affected. “For customers who are having difficulty accessing the site and mobile banking, we encourage them to try logging on again as the disruption is usually intermittent,” Wells Fargo said in a statement.
+
+Wells Fargo is one of several large U.S. banks that have been targeted by cyberattacks in the past six months. A group claiming responsibility for the attacks, the Izz ad-Din al-Qassam Cyber Fighters, said Wells Fargo is being targeted due to the continued availability online of a video clip that denigrates Islam.
+
+The 14-minute trailer, available on YouTube, caused widespread protests last September in predominantly Muslim countries. Google restricted viewing in countries including India, Libya and Egypt but kept it available in most countries because it didn’t violate the company’s guidelines.
+
+The Izz ad-Din al-Qassam Cyber Fighters wrote on Pastebin on Tuesday that it was also targeting Citibank, Chase Bank, SunTrust and others.
+
+The group drew up a mock invoice, calculating the cost to a bank of a DDOS attack at about $30,000 per minute. It contained a formula for how much the banks should lose based on the number of times the offensive video has been watched. The group did not spell out how the attacks would cost the banks money or why it was attacking those banks.

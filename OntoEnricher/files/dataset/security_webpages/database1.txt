@@ -1,0 +1,54 @@
+https://www.sumologic.com/blog/what-is-database-security/
+
+What are the Challenges of Database Security?
+
+Security concerns for internet-based attacks are some of the most persistent challenges to database security. Hackers devise new ways to infiltrate databases and steal data almost daily. Organizations must ensure their database security measures are strong enough to withstand these attacks.
+
+Some of these cyber security threats can be difficult to detect, like phishing scams in which user credentials are compromised and used without permission. Malware and ransomware are also common cyber security threats.
+
+Another critical challenge for database security is making sure employees, partners, and contractors with database access don’t abuse their credentials. These exfiltration vulnerabilities are difficult to guard against because users with legitimate access can take data for their own purposes. Edward Snowden’s compromise of the NSA is the best example of this challenge. Organizations must also make sure users with legitimate access to database systems and applications are only privy to the information they need for work. Otherwise, there’s greater potential for them to compromise database security.
+How Can I Deploy Database Security?
+
+There are three layers of database security: the database level, the access level, and the perimeter level. Security at the database level occurs within the database itself, where the data live. Access layer security focuses on controlling who is allowed to access certain data or systems containing it. Database security at the perimeter level determines who can and cannot get into databases. Each level requires unique security solutions.
+
+Security Level
+	
+
+Database Security Solutions
+
+Database Level
+	
+
+    Masking
+    Tokenization
+    Encryption
+
+Access Level
+	
+
+    Access Control Lists
+    Permissions
+
+Perimeter Level
+	
+
+    Firewalls
+    Virtual Private Networks
+
+Database Security Best Practices
+
+Although there are several different approaches to database security, there are some best practices that can help every organization keep its databases safe. These database security best practices enable organizations to minimize their vulnerabilities while maximizing their database protection. Although these approaches can be deployed individually, they work best together to protect against a variety of circumstances impacting database security.
+
+    Physical database security: It’s critical to not overlook the physical hardware on which the data is stored, maintained, and manipulated. Physical database security includes locking the rooms that databases and their servers are in—whether they are on-premise assets or accessed through the cloud. It also involves having security teams monitor physical access to that equipment. A crucial aspect of this database security best practice is to have backups and disaster recovery measures in place in case of a physical catastrophe. It’s also important not to host web servers and applications on the same server as the database the organization wants to secure.
+    Web applications and firewalls: The use of web applications and firewalls is a database security best practice at the perimeter layer. Firewalls prevent intruders from accessing an organization’s IT network via the internet; they’re a crucial prerequisite for cyber security concerns. Web applications that interact with databases can be protected by application access management software. This database security measure is similar to access control lists and determines who can access web applications and how they can do so. There are also firewalls for individual web applications that deliver the same benefits as traditional firewalls.
+    Database encryption: Encryption is one of the most effective database security practices because it’s implemented where the data are in the database. However, organizations can encrypt data in motion as well as at rest, so that it’s protected as it flows between IT systems in an organization. Encrypted data is transfigured so it appears as gibberish unless it’s decrypted with the proper keys. Therefore, even if someone is able to access encrypted data, it will be meaningless to them. Database encryption is also key for maintaining data privacy, and can be effective for IoT security.
+    Manage passwords and permissions: Managing passwords and permissions is critical for maintaining database security. This task is usually overseen by dedicated security employees or IT teams. In some instances, this database security best practice involves access control lists. Organizations can take many different steps to manage passwords, such as using dual or multiple factor authentication measures, or giving users a finite amount of time to input credentials. However, this practice requires constant updating of access and permissions lists. It can be time consuming, but the results are worth it.
+    Isolate sensitive databases: It’s very difficult to penetrate database security if sensitive databases are isolated. Depending on how the isolation techniques are deployed, unauthorized users might not even know sensitive databases exist. Software defined perimeters are useful means of isolating sensitive databases so that they don’t appear to be on a particular user’s network. This approach makes it difficult to take over databases with lateral movement attacks; it’s also effective against zero-day attacks. Isolation strategies are one of the best ways to solidify database security at the access level. Competitive isolation solutions combine this approach with database layer security like public keys and encryption.
+    Change management: Change management requires outlining—ideally in advance—what procedures have to take place to safeguard databases during change. Examples of changes include mergers, acquisitions, or simply different users gaining access to various IT resources. It’s necessary to document what changes will take place for secure access of databases and their applications. It’s also important to identify all the applications and IT systems that’ll use that database, in addition to their data flows.
+    Database auditing: Database auditing usually requires regularly reading the log files for databases and their applications. This information reveals who accessed which repository or app, when they accessed it, and what they did there. If there is unauthorized access to data, timely audits can help reduce the overall impact of breaches by alerting database administrators. The quicker organizations can react to data breaches, the more time they have to notify any customers involved and limit the damage done. Database auditing provides centralized oversight for database security as a final step for protection.
+
+Modern Security Solutions
+
+Database security is one of the most important concerns throughout the data management landscape today. Organizations can decrease the ever growing threats to database security by using many of the approaches described above. There are even comprehensive solutions that reinforce database security that involve many of these techniques.
+
+Sumo Logic gives users real-time insights into their databases and applications, and deploys cutting edge Artificial Intelligence methods to add to the overall protection. Additional capabilities for trouble-shooting and system monitoring makes Sumo Logic the ultimate platform for fortifying database security. 

@@ -1,0 +1,811 @@
+Target Databreach
+
+1 INTRODUCTION
+Between November 27 and December 18, 2013, the Target
+Corporation’s network was breached, which became the
+second largest credit and debit card breach after the
+TJX breach in 2007. In the Target incident, 40 million
+credit and debit card numbers and 70 million records of
+personal information were stolen. The ordeal cost credit
+card unions over two hundred million dollars for just
+reissuing cards.
+Target Corp. is not the only target of data breaches. Up
+to the 23rd of September, 568 data breaches are reported
+in the year 2014 [1]. The latest significant breach, i.e., the
+Home Depot breach, came to light in September 2014.
+As of September 14, it is known that 23 out of 28 Home
+Depot stores in the State of Alabama were breached [2].
+The entire plot could involve a large portion of the 2,200
+Home Depot stores in the states and 287 stores overseas,
+which might result in a larger breach than the Target
+breach. We list four other significant breaches in the
+last two years. The increasing number and scale of data
+breach incidents are alarming.
+• Sally Beauty Supply discovered in March 2014 that
+282,000 cards were stolen [3].
+• Neiman Marcus reported that 1.1 million cards were
+stolen during July to October, 2013 [4].
+• Michaels and Aaron Brother reported that 3 million
+cards were stolen from May 2013 to January 2014 [5].
+• P.F. Chang’s data breach occurred from September
+2013 to June 2014 impacting over 7 million cards [6].
+Securing massive amounts of connected systems is
+known to be technically challenging, especially for re-
+• X. Shu, K. Tian, A. Ciambrone and D. Yao are with the Department of
+Computer Science, Virginia Tech, Blacksburg, VA, 24060.
+E-mail: fsubx, ketian, andrjc4, danfengg@vt.edu.
+• *K. Tian and A. Ciambrone contribute equally to the paper.
+tailers those possess vast networks across the nation,
+like Target and Home Depot. Target security division
+attempted to protect their systems and networks against
+cyber threats such as malware and data exfiltration. Six
+months prior to the breach, Target deployed a wellknown and reputable intrusion and malware detection
+service named FireEye [7], which was guided by the
+CIA during its early development [8]. Unfortunately,
+multiple malware alerts were ignored. Some prevention
+functionalities were turned off by the administrators
+who were not familiar with the FireEye system. Target
+Corp. missed the early discovery of the breach.
+This paper analyzes Target’s data breach incident from
+both technical and legal perspectives. The description of
+the incident and the analysis of the involved malware
+explain how flaws in the Target’s network were exploited
+and why the breach was undiscovered for weeks. The
+Target data breach is still under investigation and there
+is no arrest made known to the public. Even if the perpetrators are identified, cyber crimes involving extradition
+are notorious to prosecute. We discuss the difficulties
+of data breach discovery, investigation and prosecution
+with respect to legislation and international cooperation.
+An earlier incident, TJX data breach in 2007, is presented
+as the precedent for arresting and sentencing criminals
+committing financial cybercrimes.
+As we observe an increasing number of data breaches,
+these incidents bring us to rethink the effectiveness of
+existing security mechanisms, solutions, deployments
+and executions. Credit card breach has a huge negative
+impact on every entity in the payment ecosystem, including merchants, banks, card associations and customers.
+In this paper, we provide several insights into weak
+links in the payment ecosystem, specifically in existing
+security techniques and practices. We give several best
+practice suggestions for merchants and customers to
+enforce their data security and to minimize information
+arXiv:1701.04940v1 [cs.CR] 18 Jan 20172
+September
+Attackers
+compromised Fazio
+Mechanical
+Services.
+November 15
+Attackers
+broke into
+Target’s
+network
+and tested
+malware
+on POS
+machines.
+November 27
+Attackers
+began to
+collect
+credit card
+data.
+November 30
+POS malware fully
+installed.
+Attackers
+installed
+data
+exfiltration
+malware.
+Symantec
+and FireEye
+alerts
+triggered.
+December 2
+Attackers
+began to
+move credit
+card data
+out.
+Additional
+FireEye
+alerts
+triggered.
+December 12
+Department
+of Justice
+notified
+Target.
+December 15
+Target
+removed
+most
+malware.
+Fig. 1. Timeline of the Target data breach (2013).
+leak.
+The contributions of our work are summarized as
+follows.
+• We gather and verify information from multiple
+sources and describe the process of the Target data
+breach in details (Section 2).
+• We provide an in-depth analysis of the major malware used in the Target breach, including its design
+features for circumventing detections as well as the
+marketing of the malware (Section 3).
+• We discuss the complexities and challenges in
+data breach investigation and criminal prosecution,
+specifically from the legal perspective. We describe
+the TJX breach in 2007 as a precedent for arresting
+and sentencing cyber criminals (Section 4).
+• We provide three security guidelines for merchants
+to enhance their payment system security: i) payment system integrity enforcement, ii) effective alert
+system design, and iii) proper network segmentation (Section 5).
+• We discuss the current status of credit card security,
+point out problems in the credit card system, and
+give customers best practices to hide their information in purchase transactions (Section 6).
+2 THE TARGET INCIDENT
+The systems and networks of Target Corp. were breached
+in November and December, 2013, which results in 40
+million card numbers and 70 million personal records
+stolen [9]. Multiple parties get involved in the federal
+investigation of the incident. The list includes United
+State Secret Service, iSIGHT Partners, DELL SecureWorks, Seculert, the FBI, etc. In addition, companies like
+HP, McAfee and IntelCrawler provide analysis of the
+discovered malware, i.e., BlackPOS, and the marketing
+of the stolen cards.
+2.1 Breach Into Target
+There are multiple theories on how the criminals initially hacked into Target, and none of them have yet
+been confirmed by Target Corporation. However, the
+primary and most well-supported theory is that the
+initial breach didn’t actually occur inside Target [10].
+Instead, it occurred in a third party vendor, Fazio Mechanical Services, which is a heating, ventilation, and
+air-conditioning firm.
+According to this theory, we present the timeline of
+the incident in Fig. 1 and steps of the plot in Fig. 2.
+Attackers first penetrated into the Target network with
+compromised credentials from Fazio Mechanical. Then
+they probed the Target network and pinpointed weak
+points to exploit. Some vulnerabilities were used to gain
+access to the sensitive data, and others were used to
+build the bridge transferring data out of Target. Due
+to the weak segmentation between non-sensitive and
+sensitive networks inside Target, the attackers accessed
+the point of sale networks.
+2.1.1 Phase I: Initial Infection
+At some point the Fazio Mechanical Services system
+was compromised by what is believed to be a Citadel
+Trojan [11]. This Trojan was initially installed through
+a phishing attempt. Due to the poor security training
+and security system of the third party, the Trojan gave
+the attackers full range of power over the company’s
+system [10]. It is not known if Fazio Mechanical Services
+was targeted, or if it was part of a larger phishing
+attack to which it just happened to fall victim. But it
+is certain that Fazio Mechanical had access to Target’s
+Ariba external billing system, or the business section of
+Target network.3
+Fazio Mechanical
+Target network
+PoS terminals
+Compromised Hosts
+Drop sites
+①
+②
+③
+⑤ ④
+⑥
+⑦
+1. Phishing attack
+against Fazio
+Mechanical Service
+2. Accessing the
+Target network
+3. Gaining access to
+vulnerable machines
+4. Installing malware
+on PoS terminals
+5. Collecting card
+information from PoS
+6. Moving data out of
+the Target network
+7. Aggregating stolen
+card and person data
+Attacker
+control path
+data flow
+Fig. 2. Attack steps of the Target breach.
+2.1.2 Phase II: PoS Infection
+Due to Target’s poor segmentation of its network, all that
+the attackers needed in order to gain access into Target’s
+entire system was to access its business section. From
+there, they gained access to other parts of the Target
+network, including parts of the network that contained
+sensitive data. Once they gained access into Target’s
+network they started to test installing malware onto the
+point of sales devices. The attackers used a form of
+point of sales malware called BlackPOS, which is further
+discussed in Section 3.
+2.1.3 Phase III: Data collection
+Once BlackPOS was installed, updated and tested. The
+malware started to scan the memory of the point of sales
+to read the track information, especially card numbers, of
+the cards that are scanned by the card readers connected
+to the point of sales devices.
+2.1.4 Phase IV: Data exfiltration
+The card numbers were then encrypted and moved
+from the point of sales devices to internal repositories, which were compromised machines. During the
+breach the attackers took over three FTP servers on
+Target’s internal network and carefully chose backdoor
+user name “Best1 user” with password “BackupU$r”,
+which are normally created by IT management software
+Performance Assurance for Microsoft Servers. During peak
+times of the day, the malware on the point of sale
+devices would send credit card information in bulk to
+the closest FTP Server [12]. The stolen card information is
+then relayed to other compromised machines and finally
+pushed to drop sites in Miami and Brazil [13].
+2.1.5 Phase V: Monetization
+Sources indicate the stolen credit card information was
+aggregated at a server in Russia, and the attackers collected 11 GB data during November and December 2013.
+The credit cards from the Target breach were identified
+on black market forums for sell [14]. At this point, it is
+unclear how these sellers, e.g., Rescator (nick name), is
+connected with the stolen card and personal information.
+In Section 4.3, we describe the well studied case of TJX
+credit card breach. It hints possible paths of peddling
+stolen credit cards in the black market.
+2.2 Targets Security
+Target did not run their systems and networks without
+security measures. They had firewalls in place and they
+attempted to segment their network using Virtual local
+area networks (VLAN) [7]. Target also deployed FireEye, a well-known network security system, six months
+prior to the breach. FireEye provides multiple levels of
+security from malware detection to network intrusion
+detection system (NIDS).
+However, the breach demonstrates that sensitive data
+in Target, e.g., credit card information and personal
+records, is far from secure. Target failed at detecting or
+preventing the breach at several points, among which
+we list the four most vital ones:4
+• Target did not investigate into the security warnings
+generated by multiple security tools, e.g., FireEye,
+Symantec, and certain malware auto-removal functionalities were turned off [15].
+• Target did not take correct methods to segment their
+systems, failing to isolate their sensitive network
+assets from easily accessed network sections. The
+VLAN technique used for segmentation is reported
+easy to get around [16].
+• Target did not harden their point of sale terminals,
+allowing unauthorized software installation and
+configuration. The settings resulted in the spread of
+malware and sensitive card information read from
+point of sale terminals.
+• Target did not apply proper access control on verities of accounts and groups, especially the ones
+from third party partners [17]. The failure resulted in
+the initial break-in from the HVAC company Fazio
+Mechanical Services Inc.
+2.3 After the Breach
+The former CEO of the company, Gregg Steinhafel, resigned after the breach. Target appointed a new chief
+information officer Bob DeRodes and provided details
+on enhancing their security with 100 million dollars [18].
+The plan includes upgrading insecure point of sale machines and deploying chip-and-PIN-enabled technology
+for payment. Defenses such as better segmentation of the
+network, comprehensive log analysis and stricter access
+control are also mentioned in the plan.
+3 BLACKPOS
+BlackPOS, seen on underground forums since February
+2013 [19], is believed to be the major malware used in
+the data breaches at Target (2013), P.F. Chang’s (2013),
+and Home Depot (2014). The malware is a form of
+memory scrapper that takes a chunk of a systems memory and looks for credit card numbers. We describe
+the functionalities of BlackPOS captured in the Target
+breach, discuss its design features for circumventing
+detection techniques, and present the investigations of
+POS malware development and marketing.
+3.1 Components and Functionalities of BlackPOS
+Belonging to the BlackPOS family, the malware discovered in the Target breach is designed to infect Windowsbased POS machines. The functionality of BlacksPOS is
+not complicated and we present its components in Fig. 3.
+When a POS terminal is infected, the malware registers
+itself as a Windows service named “POSWDS”. The
+service automatically starts with the operating system,
+then i) it scans a list of processes which could interact
+with the card reader, and ii) it communicates with a compromised server (internal network repository) to upload
+retrieved credit card information. Predefined rules apply
+for matching the sensitive processes, as well as checking
+register service scan process list
+start service select process
+scan process
+check time scan mem chunks
+upload log extract track info
+program
+maintenance
+repository
+aggregation
+data exfiltration
+functionalities
+BlackPOS
+Fig. 3. Components and functionalities of BlackPOS.
+Yellow boxes are entry points of different functionalities.
+the time before sending obtained credit card numbers.
+Only during the busy office hours in the daytime, the
+repository aggregation function could be enabled and the
+card information is sent to the internal repository.
+Memory of target processes are read and analyzed in
+chunks, each of which is 10,000,000 bytes. BlackPOS uses
+a custom logic to search credit card numbers in the memory trunks. It is believed that this method is more efficient and incurs less overhead than generally used regular expressions [20]. Retrieved credit card information
+are encrypted and stored in file “C:nWINDOWSnsystem
+32nwinxml.dll” and then periodically uploaded to the
+internal repository via NetBIOS and SMB protocols.
+3.2 Design Features for Evading Detections
+BlackPOS evolves quickly during the past few years.
+The earliest versions of it are discovered by McAfee
+in November 2011 as PWS-FBOI and BackDoor-FBPP.
+They only contain the bare-bone logic for retrieving
+and leaking sensitive information from individual machines [21]. However, the modern versions – known to
+be used in the Target breach (2013) and the Neiman Marcus breach (2013) – are heavily customized for specific
+internal networks and perform sophisticated behaviors
+to hide themselves from common detection mechanisms.
+We detail multiple observed behaviors of BlackPOS in
+the Target breach to illustrate how it is designed to
+circumvent detections.
+• Multi-phase data exfiltration. Infected POS terminals
+do not send sensitive data to the external network
+directly. Instead, they gather data to a compromised
+internal server, which is used as a repository and5
+one of the relies to reach the external network [22].
+The multi-phase data exfiltration scheme minimizes
+anomalous data flows across network boundaries.
+• String obfuscation. Critical strings in the malware
+executables are obfuscated to evade signature-based
+anti-virus detection [21]. The strings include critical process names for scanning and NetBIOS commands for uploading data to the internal repository.
+• Self-destructive code. The malware avoids unnecessary infections to minimize its exposure. It destroys/deletes itself if the infected environment is
+not within its targets [23]. This behavior reduces the
+risk of being detected in an unfamiliar environment.
+• Data encryption. The retrieved credit card information is encrypted in the file “Winxml.dll” in each
+POS terminal before it is sent to the internal repository. The encryption guarantees that no credit card
+numbers are sent in plaintext, which hides the leak
+from traditional data loss prevention (DLP) systems.
+• Constrained communication. Communications in the
+internal network are programed during office hours
+of the day [20]. Busy office hour traffic helps hide
+anomalous communications between infected POS
+terminals and the compromised internal repository.
+• Customized attack vector. Internal IP addresses and
+login credentials of compromised servers are hardcoded in the malware. It indicates the malware
+author is aware of the internal network. The countermeasures against detections are deliberately designed along with the data exfiltration process.
+3.3 Malware Development and Marketing
+The Target breach attracts considerable attention to
+BlackPOS and similar POS malware, e.g., vSkimmer [24]
+and Dexter [25]. Several investigations have been performed to disclose the development and marketing of
+these pieces of malware. Terrogence web intelligence
+company tracked the sales of the malware on underground markets and pointed out BlackPOS was first
+posted for sale in February 2013 [19]. Cybercrime intelligence firm IntelCrawler indicated Rinat Shibaev, a 17-
+year-old boy, and Rinat Shabayev, a 23-year-old Russian
+man, are the principle developers of BlackPOS [26].
+Andrew Komarov, CEO of the company, also hinted that
+6 more retailer breaches are linked to BlackPOS [27].
+iSIGHT Partners, working with United States Secret
+Service, investigated the POS malware market and concluded a growing demand for such malware since 2010.
+FBI tracked about 20 data breach attacks in recent years
+and warned retailers about this increasing threat [28].
+4 PROSECUTION OF DATA BREACHES
+The Target data breach is still under investigation and
+there is no arrest known to the public. Tracking down
+data breach perpetrators is notoriously difficult, because
+the criminals usually operate across the world to set
+barriers for investigation and prosecution in terms of
+various laws and complex treaties among countries.
+In this section, we discuss i) the laws that apply to
+cybercrimes, especially data breaches, ii) the difficulties
+in data breach discovery and prosecution, and iii) a
+precedent of investigation and sentence in the TJX breach
+case happened in 2007.
+4.1 Cybercrime Law and Regulations
+The federal Computer Fraud and Abuse Act (CFAA) is
+the most applicable cybercrime law that applies to the
+Target breach itself. Other laws against theft and misuse
+of the wires apply, as well as specific laws prohibiting
+the sale of credit cards and identity theft [29]. Under the
+CFAA, unauthorized access to a computer engaged in
+interstate commerce, which causes damage over $5,000,
+is a crime punishable by 5 to 10 years in prison and up
+to $250,000 damages, per offense. Subsequent violations
+increase the potential penalty, and there are different
+provisions and penalties for unauthorized access to government or financial computers. The Federal Bureau of
+Investigation leads investigations and cases are prosecuted by the Department of Justice Computer Crimes
+and Intellectual Property Division.
+4.2 Barriers to Data Breach Investigation
+Businesses, for a long time, declined to publically disclose a data breach in fear that the information would
+hurt their reputation in the eyes of customers and investors would. Today, 47 states have data breach notification laws. Although not uniform, these laws generally
+require a business to report a data breach to affected
+customers when personally identifiable information has
+been lost. The requirement to report a data breach can
+aid law enforcement in tracking down the criminals, and
+arguably is an incentive for businesses to increase their
+security.
+In data breach plots, attackers usually hide their identities carefully using relays across the world in both the
+penetration phase (hacking into the system) and the exfiltration phase (leaking the data out). The international
+relays pose significant challenges for investigation and
+prosecution. In the Target breach case, two drop sites
+are found in Miami and Brazil, and the final aggregation
+server where all data is sent is discovered in Russia.
+There is no guarantee that all involved countries take the
+same level of effort as the United States to help investigate the incident. Each country is affected differently
+by the breach, let alone the complicated relations mixed
+with cooperation and divergences among them.
+In addition, if cyber criminals are from outside the
+United States then an arrest requires extradition from the
+foreign country. In order to extradite for prosecution, the
+United States and the country must be signatories to a
+treaty agreeing to such cooperation. Many countries in
+Asia, Africa and the Middle East do not have treaties
+with the United States. Even with a treaty, extradition
+involves a complicated process.6
+4.3 TJX Breach and the Sentence
+Before the Target data breach, 45.6 million credit
+card numbers and PINs were stolen in the TJX data
+breach [30]. The breach was fully investigated and the
+criminals were prosecuted and sentenced. The case sets
+a record for credit card breach as well as the stiffest
+sentence for a cybercrime. We describe details of the
+investigation from both technical and legal aspects.
+Albert Gonzalez, an American hacker, plotted the TJX
+data breach from July 2005 to January 2007. In addition
+to the TJX case, he was also charged with data breaches
+in BJ’s Wholesale Club, Boston Market, Barnes & Noble,
+Sports Authority, Forever 21, DSW and OfficeMax [31].
+All aforementioned data breaches done by Gonzalez
+were carried out with similar schemes. Taking the TJX
+case as an example, Gonzalez started with war-driving
+along Route No. 1 in Miami to discover vulnerable
+retailer’s hotspots. With the help of his accomplices –
+especially Stephen Watt, the author of the sniffer used
+in the data breaches – Gonzalez employed delicate SQL
+injections to gain access to the database and to install the
+sniffer software into the servers. Credit cards information was sniffed using ARP spoofing techniques and was
+uploaded onto two foreign servers leased by Gonzalez
+in Latvia and Ukraine.
+After obtaining the credit card information, Gonzalez
+sold the credit card numbers and PINs to a Ukrainian
+card seller Maksym Yastremskiy. Yastremskiy paid Gonzalez totaling $400,000 through 20 electronic funds transfers via e-gold during 2006 [32]. He peddled the stolen
+credit card information to other card sellers in the underground market. In 2007, Yastremskiy was arrested on
+a separate charge, i.e., hacking into 12 banks in Turkey.
+In May 2008, Gonzalez was apprehended with $1.1
+million cash, a 2006 BMW, a diamond and other assets.
+He schemed to earn $15 million from a series of data
+breaches, according to his chat logs found by the government. He worked as an informant for the U.S. Secret
+Service before he was arrested.
+Gonzalez was sentenced on March 25th and 26th, 2010
+for the TJX case and the Heartland Payment Systems
+case, respectively. U.S. District Judge Patti Saris sentenced Gonzalez to 20 years in prison, and U.S. District
+Court Judge Douglas P. Woodlock sentenced Gonzalez
+to 20 years for the Heartland Payment Systems case.
+According to the negotiation between Gonzalez and the
+government, the sentences run concurrently [33] and
+Gonzalez would be imprisoned for a total of 20 years,
+which has reached record high on cybercrime [34].
+5 LESSONS LEARNED TOWARD BETTER AND
+MORE EFFECTIVE SECURITY SOLUTIONS
+As we discussed in Section 2.2, there are several mistakes
+made by Target in the incident, including i) ignoring
+critical security alerts, ii) improper segmentation of its
+network and iii) insecure point of sale data handling. In
+this section, we analyze these three points in details and
+propose better design and more effective practices for
+developing and deploying security solutions.
+5.1 Enforcing Payment System Integrity
+In the Target breach, BlackPOS was installed on Target’s
+point of sale terminals, and the integrity of POS systems
+was compromised. This key step for data breach can
+be prevented by enforcing the integrity of point of
+sale terminals. Therefore, we provide a practical scheme
+using digital signatures and certificates for ensuring the
+integrity of operating systems on point of sales.
+The workflow of our POS integrity scheme is shown in
+Fig. 4. Our key idea is to allow only trusted executables
+running on POS machines. An executable is trusted if it
+is verified/audited and digitally signed by the merchant,
+i.e., Target Corp.
+Executable verification techniques such as digital signature for executables are known for a long time, and
+many modern operating systems provide utilities toward
+the goal, e.g., Microsoft Authenticode [35]. However, the
+execution policy is usually difficult to be enforced on a
+normal consumer’s computer because there are a variety
+of software providers on the Internet. Users may install
+software or run programs from providers whose identify
+cannot be verified. Public key infrastructure (PKI) helps
+relieve the issue, but it does not completely solve it due
+to the complexity introduced by the variety of software
+providers.
+However, this approach is useful and practical in
+the dedicated environment where i) POS terminals are
+specifically used for processing transaction and ii) they
+are possessed and controlled by the merchant, e.g., Target Corp. The first property ensures the software or
+programs running on POS terminals are limited and
+feasible to be audited. The second property guarantees
+one centralized integrity center auditing and signing all
+executables can be created.
+There are two players, integrity center and POS terminal
+and 5 steps in our integrity enforcement scheme. The
+integrity center has four tasks: i) key generation, ii)
+key distribution, iii) file auditing and iv) file signing.
+The POS terminal is hardened by a policy that only
+binaries signed by the merchant can execute. The fivestep-protocol is:
+1. The integrity center generates a public-private key
+pair hpk; ski and creates a self-signed certificate Cert
+containing pk.
+2. The integrity center distributes Cert to every POS
+terminal in the company. Cert is placed in the root
+certificate list at each terminal.
+3. The integrity center audits every binary that needs
+to be executed on POS, e.g., programs, installers,
+system patches, etc. and signs the binary with sk
+(encrypting the hash of the binary with sk).
+4. The signed binary is sent over the merchant network to POS terminals.7
+10100011001101
+01001010100011
+10101010101000
+10001111010101
+00001010101111
+01010101101001
+1
+10100011001101
+01001010100011
+10101010101000
+10001111010101
+00001010101111
+01010101101001
+signa 1ture 10100011001101
+01001010100011
+10101010101000
+10001111010101
+00001010101111
+01010101101001
+1
+signature
+①
+②
+③
+④
+⑤
+POS terminal
+Integrity center
+1. Key-pair and self-signed
+certificate generation
+2. Certificate (merchant’s
+identity) distribution
+3. Auditing the incoming
+executable
+4. Digitally signing and
+distributing executable
+5. Enforcing digital signature
+checking before execution
+Fig. 4. Our POS code update protocol with enhanced code integrity and authenticity verification.
+5. The POS terminal checks the binary signature using
+pk in Cert (encrypting the signature with pk to
+verify whether it is the hash of the binary) and
+executes only the ones correctly signed with sk.
+Adopting our payment system integrity enforcement
+protocol, merchants can achieve the following two security goals in their system.
+• system integrity: only trusted programs are allowed
+to be executed or installed on the payment system,
+which excludes the possibility of malware infection
+on point of sale devices.
+• program authenticity: every program or piece of software should pass the test at integrity center before it
+is executed on point of sale machines, which allows
+merchants to have the full control of the payment
+system functionalities.
+5.2 Developing Effective Security Alert Systems
+Target had been warned multiple times by a malware
+detection tool produced by FireEye Inc [36], [37]. Unfortunately, the monitoring team in Bangalore for Target
+Corp. took no actions in response to these alerts. They
+also turned off the functionality that can automatically
+remove a detected malware. These two serious mistakes
+hindered the detection of the leakage of millions of credit
+card information. For large corporations, processing a
+large number of security alerts produced by protection
+systems is challenging, if possible at all. Many of these
+alerts are usually false alarms, which seasoned security
+analysts learn to safely ignore. In this subsection, we first
+discuss the design of FireEye alerts, and then explore
+new out-of-box design strategies to improve the effectiveness of alerts.
+5.2.1 FireEye Alerts
+The raw data output from FireEye Threat Prevention
+Platform is in XML structure. Fig. 5 shows a FireEye alert
+of a piece of malware [38]. Basic information about the
+malware is provided, such as type and severity. Anomalous behaviors of the malware are tracked and listed
+in malicious-alert. The classtype=“anomaly-tag” indicates
+that this alert is triggered because of anomaly behavior
+detected. The msg and display−msg briefly describe the
+content of this alert.
+In the Target case, FireEye alerted the administrators
+with type “malware”, which is commonly seen in large
+companies or organizations. However, no sufficient detailed information was provided, e.g., the name of the
+malware or the data exfiltration behavior of the malware.
+Since the BlackPOS software, which extracts and steals
+sensitive financial information, is regarded as a zeroday malware and few administrators have experience
+dealing with it, the alerts were ignored [37].
+5.2.2 Security Alert Design
+Security alert systems are at the front line of cyber
+defense. They represent the first opportunity to detect,
+prevent, and stop attacks. Because human analysts are
+error-prone and tend be undertrained, making alert systems more usable and intelligent is critical.
+The needs for designing effective security warnings
+have been studied. Sunshine et al. studied the effectiveness of SSL warning [39]. Akhawe and Felt investigated
+the browser warnings including malware, phishing and
+SSL warnings [40]. Modic and Anderson proposed to
+adopt social-psychological techniques to increase the
+compliment for the warnings [41].
+Our thesis advocated in this paper on warnings differs
+from the existing security alert research. We consider
+the security protection needs for large companies and
+corporations that produce hundreds of alerts on daily
+basis. In these scenarios, the alert systems need to handle
+and differentiate warnings with a varying degrees of
+urgency.
+We argue that the design of alert systems needs to be
+adaptive and intelligent, beyond simply sending a list of8
+Fig. 5. A FireEye alert in XML.
+alerts. Specifically, we propose two design strategies for
+security alerts:
+• Adaptive warning strength. Existing security systems
+provide severity information along with each alert,
+but there is no guarantee that important alerts are
+not ignored by administrators. Thus, we propose
+two methods to strengthen the efficiency of alerts:
+– Raise the severity level of an alert when it is
+not handled within a limited amount of time.
+The purpose is to force security analysts to take
+actions toward severe alerts. This method is not
+applicable to all alerts, especially the less severe
+ones. Otherwise, it requires the administrators
+to address all alerts in the end, which may not
+be practical.
+– Besides color, font size, length of the alert bar,
+the system can raise alerts in different forms.
+For example, popping up flashing messages for
+the most critical alerts, emailing different level
+of alerts to different group of people.
+The multiform alarming method utilizes different ways to interact with different people. It also
+informs people who are not directly in charge
+of the issue to remind security analysts if issues
+are not solved for a long time.
+• Mining and presenting connections among alerts. One
+drawback of existing detection solution is the lack
+of ability to correlate alert events. Some alert events
+could belong to a single attack vector and happen in
+sequence. Sophisticated modern attacks are usually
+well planned and realized in steps. An alert may be
+triggered for each step, e.g., malware injected, file
+transmission. Connecting these alerts can reveal a
+grander scheme of the plot.
+One approach to connect alerts is to analyze the
+consequences of each malicious event. The consequences can be used to bridge alerts, connecting
+multiple alerts in different types to a plot. If the collection alerts indicate potential grander data breach,
+then sever alerts should be raised.
+5.3 Controlling Information Flow with Network Segmentation
+Target failed to segment its sensitive assets from normal
+network portions, which allows an attacker to escalate
+the intrusion if he/she attacks from the inside. We
+explain the severity of this issue.
+The most common strategies used in network architecture are techniques based on building a strong exterior,
+so that only those a system can trust can get inside.
+Because the only people inside are those who can be
+trusted, security on the internal network is either low
+or none existent. An example of this goes back to the
+Target breach. Once the attacker obtained the security
+credentials from Fazio Mechanical Services, they then
+had the ability to gain access into Target’s network. From
+there they compromised three FTP servers and installed
+malware on many point of sales devices [7].
+The security principle advocated in a zero trust network [16] is simply don’t trust anyone. This means
+all traffic is identified, authorized, and monitored. This
+makes all parts of the network secure regardless of
+location. In addition, virtual LANs cannot provide much
+security defense, because they cannot stop an intruder
+from gaining access into other portions of the network.
+The Target incidence demonstrates that virtual LANs,
+especially when not configured properly, is ineffective
+against the criminals.
+While the zero trust strategy protects from outsider
+attacks it also protects against insider attacks because
+all traffic is monitored and analyzed. If a member of
+a network does something unusual, e.g. deletes several9
+entries in a database that he or she usually does not
+access, the network administrators can detect the change
+in behaviors. However, this strategy has the trade-off for
+usability because monitoring all traffic leads to extremely
+huge computation power. And it is not convenient for
+practical usage in large scale networks.
+6 CREDIT CARD SECURITY AND BEST PRACTICES FOR CUSTOMERS
+Target and other breach incidents, e.g., Neiman Marcus,
+Sally’s Beauty and PF Chang’s, suggests that there is a
+high risk at current credit card regulation and technology. In this section, we discuss the issues in credit card
+regulation as well as advantages and problems of new
+technologies for securing credit card transactions.
+6.1 Credit Card Administration and Regulation
+Payment card security is self-regulated by the contract between the merchant and the card company. Major credit card companies require compliance with the
+Payment Card Industry Data Security Standard (PCIDSS) [42]. The description of Targets security, such
+as weak password at the POS, would not seem to
+meet many of the standards, thus drawing attention to
+whether the private contract self-regulation framework
+is effective.
+6.2 EMV: Toward a More Secure Payment System
+EMV (Europay, MasterCard, and Visa) payment system
+is the major technology developed to address the security issue in credit cards [43]. The EMV system adds a
+temper-resistant chip to a credit card. The chip stores
+confidential account information and provides on-chip
+cryptographic computations such as encryption and digital signing. The system works by authenticating through
+the chip and identifying the user by either a signature
+or a pin; this is where the system gets its name of chip
+and pin. The difference between the EMV system and
+the traditional magnetic strip system is that the data on
+the card’s chip is encrypted. Therefore it would be much
+more difficult for an attacker to commit fraud.
+However, a flaw is found in the design of the transaction protocol, which makes EMV ineffective. A no-pin
+attack is the scenario where the criminal has the card
+but not the pin. Murdech et al. show that by using an
+electric device between the card and the terminal, the
+terminal can be tricked into believing that the criminal
+has the correct pin even though he doesn’t [44].
+Another vulnerability is found in Point of Sale terminals. A POS terminal in the EMV system is assumed
+temper-resistant, meaning that no one can open the
+POS box and read/write to the internal circuits. Unfortunately, real EMV-equipped POS terminals can be
+tempered and authentication codes can be obtained and
+used at a later time on the same terminal to make
+additional transactions. Several criminals in Spain made
+use of this vulnerability as well as a vulnerability found
+in ATM random number generators. An ATM may generate predictable random numbers which gives criminals
+temporary access to credit card spending if the number
+is guessed correctly.
+Besides the two vulnerabilities, the most severe flaw in
+the EMV system is the card not present (such as when
+a purchase is made online) fraud abbreviated as CNP
+fraud. CNP fraud now accounts for over fifty percent of
+fraud in the United Kingdom where the EMV system is
+currently being used [45]. The EMV system is designed
+for securing card-present transactions, and it has nothing
+in place to prevent CNP fraud from occurring, which is
+why criminals are now using CNP fraud as their go to
+choice in fraudulent purchases.
+6.3 Tokenization and Best Practices for Customers
+Tokenization is a payment technology to minimize credit
+card information by merchants during transactions. In
+this section, we describe the technology and explain
+why it helps protect personal account information. We
+give customers best practices to hide their credit card
+information when shopping.
+With tokenization a customer asks an acquirer to act
+between he/she and the merchant. The acquirer i) takes
+the customer’s credit card information c, ii) generates a
+one-time token t based on c (t is independent of c), and
+iii) sends t to the merchant to process the transaction. t
+is bound to the merchant and can be nullified after the
+transaction.
+There are two approaches to utilize an acquirer. One
+is to pay through acquirer systems. Available systems
+include PayPal, Amazon payment, Google wallet and
+Apple pay. For example, customer Alice wants to buy
+an item in Amazon market from seller Bob. Alice can
+pay through the Amazon payment system and Bob only
+receives a token to process the transaction. Google wallet
+and Apple pay extend the service from online shopping
+to in-store purchases. They also provide contactless feature through near field communication (NFC), so that
+Alice does not need to swipe a card to authorize a
+purchase.
+The second approach to utilize an acquirer is to generate a one-time credit card number at acquirer banks.
+Bank of America and Citibank provide such service,
+namely ShopSafe and virtual card number, respectively.
+PayPal used to have a similar service and Discover
+terminated its virtual card service on March 16, 2014.
+7 CONCLUSION
+There is no silver bullet in cyber space against data
+breaches. With the increasing amount of data leak incidents in recent years, it is important to analyze the
+weak points in our systems, techniques and legislations
+and to seek solutions to the issue. In this paper, we
+presented a comprehensive analysis of the Target data
+breach and related incidents, such as the TJX breach. We10
+described several security guidelines to enhance security
+in merchants’ systems. We presented the state-of-theart credit card security techniques, and gave customers
+best practices to hide card information during purchase
+transactions.
