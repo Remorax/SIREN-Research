@@ -25,7 +25,7 @@ do
 		do
 			for NUM_LAYER in "${NUM_LAYERS[@]}";
 			do
-				for i in "750 150" "900 300"
+				for i in "900 300"
 				do
 					set -- $i
 					echo $1 and $2
