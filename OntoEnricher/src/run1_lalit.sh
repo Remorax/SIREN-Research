@@ -25,11 +25,11 @@ do
 		do
 			for NUM_LAYER in "${NUM_LAYERS[@]}";
 			do
-				for i in "120 0" "120 60" "120 90" "60 0"
+				for i in "750 150" "900 300"
 				do
 					set -- $i
 					echo $1 and $2
-					python3 LSTM_instances.py data_instances_v3.pkl "results_v3"$emb_dropout"_"$hidden_dropout"_"$output_dropout"_"$NUM_LAYER"_"$1"_"$2".txt" "Output_v3"$emb_dropout"_"$hidden_dropout"_"$output_dropout"_"$NUM_LAYER"_"$1"_"$2 "hyp_"$emb_dropout"_"$hidden_dropout"_"$output_dropout"_"$NUM_LAYER"_"$1"_"$2".pt" $emb_dropout $hidden_dropout $output_dropout $NUM_LAYER $1 $2
+					python3 LSTM_instances.py data_instances_v3.pkl "results_v3.1"$emb_dropout"_"$hidden_dropout"_"$output_dropout"_"$NUM_LAYER"_"$1"_"$2".txt" "Output_v3.1"$emb_dropout"_"$hidden_dropout"_"$output_dropout"_"$NUM_LAYER"_"$1"_"$2 "hyp_v3.1"$emb_dropout"_"$hidden_dropout"_"$output_dropout"_"$NUM_LAYER"_"$1"_"$2".pt" $emb_dropout $hidden_dropout $output_dropout $NUM_LAYER $1 $2
 				done	
 			done
 		done
