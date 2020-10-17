@@ -28,7 +28,7 @@ stats()
 
 USE_folder = "/home/vlead/USE"
 
-f = open("../junk/failed_words", "rb")
+f = open("../junk/failed_words_pizza", "rb")
 failed, _ = pickle.load(f)
 
 def compare(arg):
@@ -50,11 +50,11 @@ def extractUSEEmbeddings(words):
     return word_embeddings.numpy()
 use_embeds = []
 def run():
-    failed_embeds = extractUSEEmbeddings([elem.split("(")[0].strip() for elem in failed])
+    failed_embeds = extractUSEEmbeddings(failed)
     global use_embeds
     print ("Extracted failed embeddings")
     results = {i: ("", -1000) for i in failed}
-    for file in ["../junk/" + s for s in os.listdir("../junk/") if s.startswith("use_embeddings_")]:
+    for file in ["../junk/" + s for s in os.listdir("../junk/") if s.startswith("use_embeddings_") and s.endswith("_pizza")]:
         emb_file = open(file, "rb")
         use_embeds = pickle.load(emb_file)
         output = {}
@@ -66,7 +66,7 @@ def run():
         results = {i: results[i] if results[i][1] > output[i][1] else output[i] for i in results}
         print ("Parsing done for", file)
 
-    resolved_file = open("../junk/resolved_use_unbracketed.pkl", "wb")
+    resolved_file = open("../junk/resolved_use_pizza.pkl", "wb")
     pickle.dump(results, resolved_file)
 
     write("Time taken for execution: {}".format(time.time() - t))

@@ -28,7 +28,7 @@ def compare_sim(word_to_compare):
 
 def run():
     global embeds, words
-    f = open("../junk/failed_words", "rb") 
+    f = open("../junk/failed_words_pizza", "rb") 
     failed, words = pickle.load(f)
 
     counter = 0
@@ -41,18 +41,17 @@ def run():
         counter = float(i*100/n_parts)
         print (counter, "%done")
         if i>0 and float(i*100/n_parts)%5 < float((i-1)*100/n_parts)%5:
-           
-            if counter<95:
-                a+=1
-            else:
-                f = open("../junk/use_embeddings_" + str(a), "wb")
-                pickle.dump(embeds, f)
-                f.close()
-                a += 1
-                del embeds
-                embeds = []
-        if counter<90:
-            continue
+            # if counter<95:
+            #     a+=1
+            # else:
+            f = open("../junk/use_embeddings_" + str(a) + "_pizza", "wb")
+            pickle.dump(embeds, f)
+            f.close()
+            a += 1
+            del embeds
+            embeds = []
+        # if counter<90:
+        #     continue
         words_part = words[i*len_part:(i+1)*len_part]
         embeds.extend(list(zip(words_part, extractUSEEmbeddings(words_part))))
 
