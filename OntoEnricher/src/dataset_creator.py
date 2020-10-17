@@ -1,5 +1,4 @@
-from bsddb3 import btopen
-import bcolz, pickle, os, sys, shelve
+import bcolz, pickle, os, sys, pickledb
 import concurrent.futures
 import numpy as np
 from math import ceil
