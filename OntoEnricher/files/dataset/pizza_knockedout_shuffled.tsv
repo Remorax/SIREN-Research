@@ -1,0 +1,85 @@
+Pizza	Named Pizza	hyponym
+Interesting Pizza	Pizza	hypernym
+Pizza Topping	Seafood Topping	hyponym
+Vegetable Topping	Olive Topping	hyponym
+Named Pizza	Giardiniera	hyponym
+Petit Pois Topping	Vegetable Topping	hypernym
+Named Pizza	Rosa	hyponym
+Seafood Topping	Anchovies Topping	hyponym
+Pepper Topping	Green Pepper Topping	hyponym
+Capricciosa	Named Pizza	hypernym
+Seafood Topping	Prawns Topping	hyponym
+Sweet Pepper Topping	Pepper Topping	hypernym
+Sultana Topping	Fruit Topping	hypernym
+Rocket Topping	Vegetable Topping	hypernym
+Vegetable Topping	Pepper Topping	hyponym
+Sloppy Giuseppe	Named Pizza	hypernym
+Parmense	Named Pizza	hypernym
+Cajun	Named Pizza	hypernym
+Vegetable Topping	Pizza Topping	hypernym
+Meat Topping	Hot Spiced Beef Topping	hyponym
+Herb Spice Topping	Rosemary Topping	hyponym
+Chicken Topping	Meat Topping	hypernym
+Cheesy Vegetable Topping	Cheese Topping	hypernym
+Vegetable Topping	Caper Topping	hyponym
+Meat Topping	Ham Topping	hyponym
+Peperoni Sausage Topping	Meat Topping	hypernym
+Artichoke Topping	Vegetable Topping	hypernym
+Named Pizza	LaReine	hyponym
+Vegetable Topping	Leek Topping	hyponym
+Pizza	Cheesy Pizza	hyponym
+Goats Cheese Topping	Cheese Topping	hypernym
+Sundried Tomato Topping	Tomato Topping	hypernym
+Named Pizza	Pollo Ad Astra	hyponym
+Garlic Topping	Vegetable Topping	hypernym
+Pine Kernel Topping	Nut Topping	hypernym
+Herb Spice Topping	Cajun Spice Topping	hyponym
+Pizza	Non Vegetarian Pizza	hyponym
+Peperonata Topping	Pepper Topping	hypernym
+Nut Topping	Pizza Topping	hypernym
+Pizza Base	Deep Pan Base	hyponym
+Asparagus Topping	Vegetable Topping	hypernym
+Four Seasons	Named Pizza	hypernym
+Named Pizza	Soho	hyponym
+Fiorentina	Named Pizza	hypernym
+Named Pizza	Mushroom	hyponym
+Herb Spice Topping	Pizza Topping	hypernym
+Pizza	Spicy Pizza	hyponym
+Named Pizza	Caprina	hyponym
+Named Pizza	Frutti DiMare	hyponym
+Pepper Topping	Jalapeno Pepper Topping	hyponym
+Pizza Topping	Meat Topping	hyponym
+Siciliana	Named Pizza	hypernym
+Pizza Topping	Fruit Topping	hyponym
+Pizza	Thin And Crispy Pizza	hyponym
+Tomato Topping	Vegetable Topping	hypernym
+Cheese Topping	Pizza Topping	hypernym
+Mozzarella Topping	Cheese Topping	hypernym
+Named Pizza	Veneziana	hyponym
+Cheese Topping	Gorgonzola Topping	hyponym
+Meaty Pizza	Pizza	hypernym
+Vegetable Topping	Mushroom Topping	hyponym
+Named Pizza	Margherita	hyponym
+Red Onion Topping	Onion Topping	hypernym
+Named Pizza	Prince Carlo	hyponym
+Parma Ham Topping	Ham Topping	hypernym
+Tomato Topping	Sliced Tomato Topping	hyponym
+Vegetarian Pizza	Pizza	hypernym
+Cheese Topping	Four Cheeses Topping	hyponym
+Named Pizza	American	hyponym
+Cheesy Vegetable Topping	Vegetable Topping	hypernym
+Napoletana	Named Pizza	hypernym
+Pizza Base	Thin And Crispy Base	hyponym
+Spinach Topping	Vegetable Topping	hypernym
+Sauce Topping	Pizza Topping	hypernym
+Unclosed Pizza	Pizza	hypernym
+Vegetarian Topping	Pizza Topping	hypernym
+Onion Topping	Vegetable Topping	hypernym
+Tobasco Pepper Sauce Topping	Sauce Topping	hypernym
+Mixed Seafood Topping	Seafood Topping	hypernym
+Spicy Pizza Equivalent	Pizza	hypernym
+Quattro Formaggi	Named Pizza	hypernym
+AmericanHot	Named Pizza	hypernym
+Real Italian Pizza	Pizza	hypernym
+Spicy Topping	Pizza Topping	hypernym
+Green Pepper Topping	Hot Green Pepper Topping	hyponym
