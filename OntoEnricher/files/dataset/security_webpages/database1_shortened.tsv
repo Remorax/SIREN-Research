@@ -1,0 +1,45 @@
+security	Security concerns	none
+databases	Hackers	none
+databases	data	none
+Hackers	data	none
+phishing scams	cyber security threats	none
+phishing scams	user credentials	none
+user credentials	cyber security threats	none
+Malware	common cyber security threats	none
+data	Security	none
+database	data	none
+database	Security	none
+certain data	Access layer security	none
+Database security	databases	none
+Database Security Solutions	Security Level	none
+database security best practices	database security best practices database protection	none
+database security best practices vulnerabilities	database security best practices database protection	none
+database security best practices vulnerabilities	database security best practices	none
+databases	Physical database security	none
+Physical database security servers	Physical database security	none
+Physical database security servers	databases	none
+database security best practice	firewalls	none
+Firewalls	cyber security concerns	none
+intruders	cyber security concerns	none
+Firewalls	intruders	none
+internet	cyber security concerns	none
+intruders	internet	none
+Firewalls	internet	none
+database	Encryption	none
+effective database security practices	data	none
+database	effective database security practices	none
+database	data	none
+effective database security practices	Encryption	none
+data	Encryption	none
+IoT security	data privacy	none
+Database encryption	data privacy	none
+IoT security	Database encryption	none
+passwords	permissions	none
+passwords	permissions	none
+passwords	database security	none
+permissions	database security	none
+passwords	input credentials	none
+database layer security	encryption	none
+secure access	databases	none
+data	breaches	none
+database security	protection	none

@@ -1,0 +1,8 @@
+security	reliability	none
+reliability	privacy	none
+security	privacy	none
+Security Development Lifecycle	Trustworthy Computing	none
+Operational Security Assurance	Trustworthy Computing	none
+Security Development Lifecycle	Operational Security Assurance	none
+privacy issues	security	none
+computing	trust	none

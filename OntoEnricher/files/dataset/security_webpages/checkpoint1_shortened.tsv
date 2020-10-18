@@ -1,0 +1,27 @@
+personal firewall	port protection	hyponym
+multiple security features	port protection	hyponym
+port protection	content security	hypernym
+multiple security features	content security	hyponym
+personal firewall	content security	hyponym
+personal firewall	disk encryption	hyponym
+disk encryption	content security	hypernym
+multiple security features	disk encryption	hypernym
+disk encryption	port protection	hypernym
+multiple security features	personal firewall	none
+risk levels	trust	none
+security process	trust	none
+risk levels	security process	none
+SSL	privacy	none
+secure communications path	SSL	none
+security protections	advanced threat prevention	none
+firewall	security protections	none
+firewall	advanced threat prevention	none
+content security	security protections	none
+security protections	intrusion prevention	none
+intrusion prevention	advanced threat prevention	none
+firewall	content security	none
+content security	advanced threat prevention	none
+firewall	intrusion prevention	none
+content security	intrusion prevention	none
+Security Gateway	Internet	none
+encryption	authorization	none

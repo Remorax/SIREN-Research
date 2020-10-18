@@ -1,0 +1,681 @@
+companies	record	none
+largest and most damaging data breaches	wave	none
+’s	wave	none
+companies	look	none
+companies	largest and most damaging data breaches	none
+data breaches	wave	none
+data breaches	companies	none
+data breaches	look	none
+’s	companies	none
+data breaches	record	none
+wave	look	none
+’s	record	none
+wave	record	none
+companies	wave	none
+largest and most damaging data breaches	record	none
+’s	look	none
+’s	largest and most damaging data breaches	none
+data breaches	largest and most damaging data breaches	none
+data breaches	’s	none
+largest and most damaging data breaches	look	none
+look	record	none
+data breaches	resources	none
+data breaches	historical walk	none
+historical walk	breaches	none
+time	historical walk	none
+time	data breaches	none
+time	resources	none
+data breaches	breaches	none
+resources	historical walk	none
+resources	breaches	none
+time	breaches	none
+data breach	incident	none
+sensitive, protected, or confidential data	data breach	none
+sensitive, protected, or confidential data	incident	none
+data breach	TechTarget	none
+sensitive, protected, or confidential data	TechTarget	none
+TechTarget	incident	none
+PHI	intellectual property	none
+payment card information	PII	none
+intellectual property	payment card information	none
+identifiable information	intellectual property	none
+PHI	PII	none
+PCI	Data breaches	none
+PCI	personal health information	none
+trade secrets	intellectual property	none
+Data breaches	payment card information	none
+PHI	trade secrets	none
+trade secrets	PII	none
+PCI	identifiable information	none
+trade secrets	personal health information	none
+PHI	payment card information	none
+PHI	personal health information	none
+identifiable information	Data breaches	none
+Data breaches	PII	none
+trade secrets	payment card information	none
+personal health information	Data breaches	none
+personal health information	payment card information	none
+PCI	trade secrets	none
+PCI	PII	none
+PCI	PHI	none
+personal health information	intellectual property	none
+identifiable information	payment card information	none
+Data breaches	intellectual property	none
+PHI	Data breaches	none
+PCI	intellectual property	none
+personal health information	PII	none
+trade secrets	Data breaches	none
+intellectual property	PII	none
+identifiable information	personal health information	none
+identifiable information	trade secrets	none
+identifiable information	PII	none
+identifiable information	PHI	none
+PCI	payment card information	none
+concern	consumers	none
+consumers	companies	none
+concern	companies	none
+data breaches	companies	none
+concern	data breaches	none
+consumers	data breaches	none
+impact	data breaches	none
+impact	history	none
+kind	data breaches	none
+kind	history	none
+impact	kind	none
+history	data breaches	none
+cloud computing	widespread attention	none
+cloud computing	sizes	none
+businesses	digital data	none
+businesses	Origin	none
+workforce mobility	digital data	none
+cloud computing	digital data	none
+businesses	Data Breaches Data breaches	none
+workforce mobility	cloud computing	none
+widespread attention	Origin	none
+cloud computing	Origin	none
+sizes	Origin	none
+cloud computing	Data Breaches Data breaches	none
+sizes	Data Breaches Data breaches	none
+Data Breaches Data breaches	widespread attention	none
+businesses	widespread attention	none
+workforce mobility	sizes	none
+businesses	sizes	none
+workforce mobility	widespread attention	none
+Data Breaches Data breaches	digital data	none
+sizes	widespread attention	none
+businesses	cloud computing	none
+Data Breaches Data breaches	Origin	none
+Origin	digital data	none
+workforce mobility	Data Breaches Data breaches	none
+sizes	digital data	none
+workforce mobility	Origin	none
+workforce mobility	businesses	none
+widespread attention	digital data	none
+restricted networks	local machines	none
+sensitive business data	’s data	none
+company	restricted networks	none
+cloud servers	restricted networks	none
+access	’s data	none
+enterprise databases	restricted networks	none
+restricted networks	sensitive business data	none
+enterprise databases	’s data	none
+access	restricted networks	none
+cloud servers	’s data	none
+company	’s data	none
+access	local machines	none
+cloud servers	sensitive business data	none
+cloud servers	company	none
+company	local machines	none
+cloud servers	enterprise databases	none
+enterprise databases	local machines	none
+sensitive business data	local machines	none
+access	sensitive business data	none
+cloud servers	local machines	none
+restricted networks	’s data	none
+access	enterprise databases	none
+enterprise databases	sensitive business data	none
+access	company	none
+’s data	local machines	none
+company	sensitive business data	none
+access	cloud servers	none
+company	enterprise databases	none
+data	Data breaches	none
+data	companies	none
+Data breaches	companies	none
+data breaches	records	none
+records	stored private information	none
+fact	stored private information	none
+records	individuals	none
+companies	fact	none
+companies	individuals	none
+fact	records	none
+fact	individuals	none
+data breaches	stored private information	none
+companies	records	none
+individuals	stored private information	none
+companies	stored private information	none
+data breaches	companies	none
+data breaches	individuals	none
+data breaches	fact	none
+computing	authorization	none
+sensitive documents	computing	none
+individual’s medical file	sensitive documents	none
+something	authorization	none
+individual’s medical file	computing	none
+data breach	sensitive documents	none
+sensitive documents	authorization	none
+data breach	individual’s medical file	none
+individual’s medical file	something	none
+individual’s medical file	authorization	none
+data breach	computing	none
+sensitive documents	something	none
+something	computing	none
+data breach	something	none
+data breach	authorization	none
+1990s	disclosed data breaches	none
+frequency	1980s	none
+data breaches	frequency	none
+1990s	potential	none
+potential	early 2000s	none
+public awareness	frequency	none
+early 2000s	frequency	none
+early 2000s	disclosed data breaches	none
+data breaches	early 2000s	none
+public awareness	potential	none
+early 2000s	1980s	none
+potential	frequency	none
+potential	disclosed data breaches	none
+1990s	early 2000s	none
+potential	1980s	none
+1990s	public awareness	none
+disclosed data breaches	1980s	none
+1990s	data breaches	none
+data breaches	public awareness	none
+1990s	frequency	none
+data breaches	potential	none
+public awareness	early 2000s	none
+public awareness	disclosed data breaches	none
+data breaches	1980s	none
+1990s	1980s	none
+frequency	disclosed data breaches	none
+public awareness	1980s	none
+data breaches	disclosed data breaches	none
+certain types	regulations	none
+Laws	guidelines	none
+companies	guidelines	none
+organizations	guidelines	none
+HIPAA	regulations	none
+HIPAA	Laws	none
+HIPAA	companies	none
+sensitive consumer information	companies	none
+Laws	regulations	none
+companies	regulations	none
+Laws	organizations	none
+companies	organizations	none
+certain types	PCI Data Security Standard	none
+PCI Data Security Standard	regulations	none
+sensitive consumer information	PCI Data Security Standard	none
+HIPAA	organizations	none
+organizations	PCI Data Security Standard	none
+PCI Data Security Standard	guidelines	none
+certain types	guidelines	none
+organizations	regulations	none
+sensitive consumer information	guidelines	none
+HIPAA	guidelines	none
+certain types	Laws	none
+sensitive consumer information	certain types	none
+Laws	PCI Data Security Standard	none
+companies	PCI Data Security Standard	none
+certain types	organizations	none
+Laws	companies	none
+guidelines	regulations	none
+HIPAA	PCI Data Security Standard	none
+certain types	HIPAA	none
+sensitive consumer information	Laws	none
+sensitive consumer information	organizations	none
+sensitive consumer information	HIPAA	none
+sensitive consumer information	regulations	none
+certain types	companies	none
+industries	practices	none
+data breaches	practices	none
+required safeguards	practices	none
+practices	storage	none
+sensitive information	regulations	none
+industries	regulations	none
+required safeguards	storage	none
+practices	rules	none
+data breaches	regulations	none
+required safeguards	rules	none
+rules	storage	none
+data breaches	required safeguards	none
+industries	required safeguards	none
+framework	regulations	none
+rules	framework	none
+sensitive information	storage	none
+data breaches	framework	none
+industries	sensitive information	none
+industries	framework	none
+practices	framework	none
+data breaches	sensitive information	none
+required safeguards	framework	none
+industries	rules	none
+required safeguards	sensitive information	none
+practices	regulations	none
+data breaches	rules	none
+required safeguards	regulations	none
+practices	sensitive information	none
+data breaches	storage	none
+storage	regulations	none
+framework	storage	none
+industries	storage	none
+rules	regulations	none
+framework	sensitive information	none
+rules	sensitive information	none
+data breaches	industries	none
+time period	Most information	none
+data breaches	today	none
+time period	data breaches	none
+Most information	data breaches	none
+time period	today	none
+Most information	today	none
+technology	advancement	none
+proliferation	consumers	none
+enterprises	data	none
+consumers	technology	none
+electronic data	world	none
+technology	world	none
+proliferation	advancement	none
+consumers	data	none
+data	world	none
+consumers	world	none
+advancement	data	none
+electronic data	advancement	none
+consumers	advancement	none
+electronic data	technology	none
+electronic data	data	none
+proliferation	enterprises	none
+enterprises	world	none
+technology	data	none
+electronic data	enterprises	none
+technology	enterprises	none
+electronic data	consumers	none
+enterprises	advancement	none
+consumers	enterprises	none
+proliferation	technology	none
+advancement	world	none
+proliferation	data	none
+proliferation	world	none
+electronic data	proliferation	none
+hundreds	’s data breaches	none
+thousands	’s data breaches	none
+hundreds	thousands	none
+individual consumers	more individual records	none
+individual consumers	single attack	none
+millions	one company	none
+one company	more individual records	none
+more individual records	single attack	none
+individual consumers	millions	none
+individual consumers	one company	none
+millions	single attack	none
+one company	single attack	none
+millions	more individual records	none
+Common Types	Data Breaches	none
+hacking	large organizations	none
+negligence	data	none
+large organizations	negligence	none
+large organizations	data	none
+hacking	negligence	none
+hacking	data	none
+data loss	breach	none
+breach	corruption	none
+data loss	corruption	none
+several other types	data loss	none
+several other types	breach	none
+several other types	corruption	none
+breaches	look	none
+four additional types	breaches	none
+four additional types	look	none
+four additional types	’s	none
+look	’s	none
+breaches	’s	none
+ZDNet"},"type":"media","field_deltas":{"1":{"alt":"Screenshot	delta":"1","format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	none
+ZDNet","class":"media-element file-default media-wysiwyg-align	delta":"1","format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	none
+ZDNet","class":"media-element file-default media-wysiwyg-align	ZDNet"},"type":"media","field_deltas":{"1":{"alt":"Screenshot	none
+ZDNet","field_file_image_title_text[und][0][value]":"Screenshot	delta":"1","format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	none
+ZDNet	Image	none
+systems	malicious software	none
+systems	i.e., files	none
+vital data	name	none
+access	vital data	none
+malicious software	name	none
+Ransomware	vital data	none
+access	Ransomware	none
+malicious software	i.e., files	none
+i.e., files	name	none
+access	name	none
+i.e., files	vital data	none
+access	malicious software	none
+Ransomware	i.e., files	none
+access	i.e., files	none
+malicious software	Ransomware	none
+Ransomware	name	none
+systems	Ransomware	none
+systems	vital data	none
+malicious software	vital data	none
+access	systems	none
+systems	name	none
+attacks	businesses	none
+Files	form	none
+Files	Bitcoin	none
+form	Bitcoin	none
+systems	form	none
+systems	Bitcoin	none
+other cryptocurrencies	form	none
+other cryptocurrencies	Bitcoin	none
+systems	Files	none
+other cryptocurrencies	Files	none
+certain fee	form	none
+certain fee	Bitcoin	none
+other cryptocurrencies	systems	none
+other cryptocurrencies	certain fee	none
+certain fee	Files	none
+certain fee	systems	none
+OnlineCMag","class":"media-element file-default media-wysiwyg-align	OnlineCMag","field_file_image_title_text[und][0][value]":"Screenshot	none
+OnlineCMag","class":"media-element file-default media-wysiwyg-align	delta":"2","format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	none
+delta":"2","format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	OnlineCMag","field_file_image_title_text[und][0][value]":"Screenshot	none
+OnlineCMag","class":"media-element file	delta":"2","format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	none
+delta":"2","format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	OnlineCMag","field_file_image_title_text[und][0][value]":"Screenshot	none
+OnlineCMag","class":"media-element file	OnlineCMag","field_file_image_title_text[und][0][value]":"Screenshot	none
+OnlineCMag"}},"attributes":{"alt":"Screenshot	OnlineCMag","field_file_image_title_text[und][0][value]":"Screenshot	none
+delta":"2","format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	OnlineCMag"}},"attributes":{"alt":"Screenshot	none
+OnlineCMag","class":"media-element file	OnlineCMag"}},"attributes":{"alt":"Screenshot	none
+OnlineCMag	Image	none
+software	systems	none
+systems	computer files	none
+software	computer files	none
+software	Malware	none
+Malware	systems	none
+Malware	computer files	none
+malware	users	none
+very types	malicious software	none
+warning	malware	none
+very types	malware	none
+warning	software	none
+malicious software	attempt	none
+warning” message	malware	none
+malicious software	malware	none
+users	software	none
+attempt	users	none
+warning” message	attempt	none
+warning	users	none
+very types	users	none
+malicious software	users	none
+warning	warning” message	none
+attempt	malware	none
+malware	software	none
+warning” message	malicious software	none
+attempt	software	none
+warning	malicious software	none
+very types	warning” message	none
+very types	attempt	none
+warning” message	software	none
+warning	attempt	none
+malicious software	software	none
+very types	software	none
+warning” message	users	none
+warning	very types	none
+EDTS"},"type":"media","field_deltas":{"3":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	EDTS","title":"Screenshot	none
+EDTS","class":"media-element	EDTS","field_file_image_title_text[und][0][value]":"Screenshot	none
+EDTS","field_file_image_title_text[und][0][value]":"Screenshot	EDTS","title":"Screenshot	none
+file-	EDTS","field_file_image_title_text[und][0][value]":"Screenshot	none
+file-	EDTS","class":"media-element	none
+EDTS"},"type":"media","field_deltas":{"3":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	EDTS","field_file_image_title_text[und][0][value]":"Screenshot	none
+file-	EDTS"},"type":"media","field_deltas":{"3":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	none
+file-	EDTS","title":"Screenshot	none
+EDTS","class":"media-element	EDTS"},"type":"media","field_deltas":{"3":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	none
+EDTS","class":"media-element	EDTS","title":"Screenshot	none
+EDTS	Image	none
+personal details	order	none
+Phishing	order	none
+trusted, reputable entity	something	none
+someone	personal details	none
+trusted, reputable entity	sensitive data	none
+someone	trusted, reputable entity	none
+Phishing	something	none
+Phishing	sensitive data	none
+personal details	something	none
+sensitive data	order	none
+someone	something	none
+trusted, reputable entity	order	none
+trusted, reputable entity	personal details	none
+Phishing	personal details	none
+someone	sensitive data	none
+sensitive data	something	none
+Phishing	trusted, reputable entity	none
+someone	order	none
+personal details	sensitive data	none
+Phishing	someone	none
+order	something	none
+attacks	Internet	none
+pop-up	Common methods	none
+pop-up	phishing scams	none
+phishing scams	Common methods	none
+browser	Common methods	none
+browser	phishing scams	none
+pop-up	browser	none
+GregThatcher.com","class":"media-element file-	email	none
+person	email	none
+GregThatcher.com","field_file_image_title_text[und][0][value]":"Screenshot	phone	none
+phone	email	none
+GregThatcher.com","title":"Screenshot	reputable company	none
+GregThatcher.com","field_file_image_title_text[und][0][value]":"Screenshot	GregThatcher.com","class":"media-element file-	none
+GregThatcher.com","title":"Screenshot	GregThatcher.com"},"type":"media","field_deltas":{"4":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	none
+link	Service	none
+GregThatcher.com"}},"attributes":{"alt":"Screenshot	Service	none
+person	GregThatcher.com"}},"attributes":{"alt":"Screenshot	none
+GregThatcher.com","title":"Screenshot	link	none
+person	GregThatcher.com"},"type":"media","field_deltas":{"4":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	none
+GregThatcher.com","title":"Screenshot	GregThatcher.com","class":"media-element file-	none
+GregThatcher.com","class":"media-element file-	reputable company	none
+phone	GregThatcher.com","title":"Screenshot	none
+link	email	none
+reputable company	GregThatcher.com"},"type":"media","field_deltas":{"4":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	none
+person	link	none
+representative	Service	none
+phone	reputable company	none
+phone	representative	none
+person	Service	none
+GregThatcher.com","field_file_image_title_text[und][0][value]":"Screenshot	Service	none
+GregThatcher.com"}},"attributes":{"alt":"Screenshot	GregThatcher.com"},"type":"media","field_deltas":{"4":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	none
+link	reputable company	none
+GregThatcher.com"}},"attributes":{"alt":"Screenshot	reputable company	none
+link	GregThatcher.com"},"type":"media","field_deltas":{"4":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	none
+reputable company	email	none
+person	GregThatcher.com","class":"media-element file-	none
+GregThatcher.com"}},"attributes":{"alt":"Screenshot	link	none
+Service	GregThatcher.com"},"type":"media","field_deltas":{"4":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	none
+GregThatcher.com"},"type":"media","field_deltas":{"4":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	email	none
+Service	reputable company	none
+GregThatcher.com","title":"Screenshot	representative	none
+GregThatcher.com","field_file_image_title_text[und][0][value]":"Screenshot	GregThatcher.com"}},"attributes":{"alt":"Screenshot	none
+GregThatcher.com","title":"Screenshot	Service	none
+phone	person	none
+GregThatcher.com","title":"Screenshot	GregThatcher.com"}},"attributes":{"alt":"Screenshot	none
+GregThatcher.com","class":"media-element file-	representative	none
+representative	reputable company	none
+representative	GregThatcher.com"},"type":"media","field_deltas":{"4":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	none
+phone	GregThatcher.com","class":"media-element file-	none
+person	representative	none
+person	reputable company	none
+representative	link	none
+GregThatcher.com","field_file_image_title_text[und][0][value]":"Screenshot	email	none
+GregThatcher.com"}},"attributes":{"alt":"Screenshot	email	none
+GregThatcher.com","field_file_image_title_text[und][0][value]":"Screenshot	GregThatcher.com","title":"Screenshot	none
+GregThatcher.com"}},"attributes":{"alt":"Screenshot	GregThatcher.com","class":"media-element file-	none
+GregThatcher.com","title":"Screenshot	email	none
+GregThatcher.com","class":"media-element file-	Service	none
+GregThatcher.com","class":"media-element file-	GregThatcher.com"},"type":"media","field_deltas":{"4":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	none
+phone	GregThatcher.com"},"type":"media","field_deltas":{"4":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	none
+GregThatcher.com","field_file_image_title_text[und][0][value]":"Screenshot	person	none
+GregThatcher.com","field_file_image_title_text[und][0][value]":"Screenshot	link	none
+phone	Service	none
+GregThatcher.com","class":"media-element file-	link	none
+Service	email	none
+phone	GregThatcher.com"}},"attributes":{"alt":"Screenshot	none
+GregThatcher.com","title":"Screenshot	person	none
+GregThatcher.com","field_file_image_title_text[und][0][value]":"Screenshot	representative	none
+GregThatcher.com","field_file_image_title_text[und][0][value]":"Screenshot	reputable company	none
+phone	link	none
+representative	email	none
+GregThatcher.com","field_file_image_title_text[und][0][value]":"Screenshot	GregThatcher.com"},"type":"media","field_deltas":{"4":{"format":"default","alignment":"","field_file_image_alt_text[und][0][value]":"Screenshot	none
+GregThatcher.com"}},"attributes":{"alt":"Screenshot	representative	none
+default","data-delta":"4	GregThatcher.com	none
+default","data-delta":"4	Image	none
+GregThatcher.com	Image	none
+websites	webpages	none
+service	webpages	none
+access	service	none
+websites	access	none
+access	webpages	none
+websites	service	none
+service	large scale	none
+large portion	certain areas	none
+sites	large portion	none
+sites	large-scale attacks	none
+large portion	large-scale attacks	none
+large-scale attacks	certain areas	none
+sites	certain areas	none
+several hours	2016 attack	none
+2016 attack	record	none
+record	Eastern U.S. Internet access	none
+several hours	considerable portion	none
+several hours	Dyn	none
+considerable portion	2016 attack	none
+several hours	largest DDoS attacks	none
+2016 attack	Eastern U.S. Internet access	none
+largest DDoS attacks	record	none
+considerable portion	record	none
+considerable portion	Dyn	none
+largest DDoS attacks	Eastern U.S. Internet access	none
+considerable portion	Eastern U.S. Internet access	none
+Dyn	record	none
+Dyn	2016 attack	none
+several hours	Eastern U.S. Internet access	none
+considerable portion	largest DDoS attacks	none
+Dyn	largest DDoS attacks	none
+Dyn	Eastern U.S. Internet access	none
+2016 attack	largest DDoS attacks	none
+several hours	record	none
+February	GitHub	none
+largest and most recent DDoS attack	GitHub	none
+largest and most recent DDoS attack	February	none
+security breaches	Privacy Rights Clearinghouse	none
+consumers	Privacy Rights Clearinghouse	none
+data breaches	consumers	none
+data breaches	chronology	none
+Privacy Rights Clearinghouse	chronology	none
+consumers	security breaches	none
+consumers	chronology	none
+security breaches	chronology	none
+data breaches	Privacy Rights Clearinghouse	none
+data breaches	security breaches	none
+driver's license numbers	data breaches	none
+driver's license numbers	account numbers	none
+identity thieves	Social Security numbers	none
+driver's license numbers	Privacy Rights Clearinghouse	none
+Social Security numbers	account numbers	none
+identity thieves	information	none
+data breaches	Privacy Rights Clearinghouse	none
+identity thieves	data breaches	none
+identity thieves	Privacy Rights Clearinghouse	none
+Social Security numbers	breaches	none
+driver's license numbers	information	none
+information	data elements	none
+data elements	breaches	none
+Privacy Rights Clearinghouse	data elements	none
+information	account numbers	none
+data breaches	breaches	none
+information	Social Security numbers	none
+Social Security numbers	Privacy Rights Clearinghouse	none
+driver's license numbers	data elements	none
+identity thieves	breaches	none
+data breaches	data elements	none
+data breaches	information	none
+Privacy Rights Clearinghouse	breaches	none
+data elements	account numbers	none
+information	breaches	none
+identity thieves	driver's license numbers	none
+data breaches	Social Security numbers	none
+data breaches	account numbers	none
+breaches	account numbers	none
+identity thieves	data elements	none
+driver's license numbers	breaches	none
+identity thieves	account numbers	none
+driver's license numbers	Social Security numbers	none
+information	Privacy Rights Clearinghouse	none
+Privacy Rights Clearinghouse	account numbers	none
+Social Security numbers	data elements	none
+sensitive information	frequency	none
+order	variety	none
+variety	frequency	none
+data breaches	frequency	none
+frequency	type	none
+breaches	type	none
+data breaches	variety	none
+sensitive information	broad view	none
+breaches	sensitive information	none
+breaches	variety	none
+variety	broad view	none
+order	type	none
+data breaches	type	none
+frequency	broad view	none
+sensitive information	variety	none
+order	sensitive information	none
+breaches	broad view	none
+order	frequency	none
+breaches	data breaches	none
+data breaches	sensitive information	none
+broad view	type	none
+data breaches	order	none
+breaches	order	none
+breaches	frequency	none
+order	broad view	none
+variety	type	none
+sensitive information	type	none
+data breaches	broad view	none
+incidents	United States	none
+data breaches	other countries	none
+data breaches	United States	none
+incidents	other countries	none
+other countries	United States	none
+incidents	data breaches	none
+Most Historical Accounts Document Breaches	data breaches	none
+biggest data breaches	history	none
+cyber criminals	world	none
+year	single breach	none
+cyber criminals	fact	none
+data	world	none
+cyber criminals	greater opportunity	none
+year	fact	none
+greater opportunity	fact	none
+cyber criminals	single breach	none
+fact	single breach	none
+year	data	none
+massive volumes	single breach	none
+data	single breach	none
+single breach	world	none
+greater opportunity	single breach	none
+cyber criminals	data	none
+greater opportunity	year	none
+greater opportunity	massive volumes	none
+fact	data	none
+year	massive volumes	none
+fact	world	none
+massive volumes	data	none
+massive volumes	world	none
+cyber criminals	massive volumes	none
+year	world	none
+cyber criminals	year	none
+greater opportunity	data	none
+fact	massive volumes	none
+greater opportunity	world	none

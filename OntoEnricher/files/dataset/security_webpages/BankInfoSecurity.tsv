@@ -1,0 +1,526 @@
+Morgan Stanley	decommissioning	none
+Comptroller	Office	none
+Currency	exposure	none
+several data centers	investment bank's failure	none
+investment bank's failure	Comptroller	none
+Comptroller	risk	none
+investment bank's failure	risk	none
+decommissioning	Comptroller	none
+Currency	customer data	none
+Currency	Morgan Stanley	none
+customer data	exposure	none
+Morgan Stanley	Office	none
+decommissioning	risk	none
+decommissioning	Office	none
+several data centers	Office	none
+investment bank's failure	Office	none
+Currency	risk	none
+customer data	Morgan Stanley	none
+customer data	decommissioning	none
+exposure	Comptroller	none
+Currency	Comptroller	none
+exposure	risk	none
+risk	Office	none
+customer data	risk	none
+investment bank's failure	customer data	none
+customer data	Comptroller	none
+Morgan Stanley	exposure	none
+Currency	several data centers	none
+several data centers	exposure	none
+investment bank's failure	exposure	none
+several data centers	Morgan Stanley	none
+several data centers	customer data	none
+Currency	decommissioning	none
+Morgan Stanley	risk	none
+Morgan Stanley	Comptroller	none
+Currency	investment bank's failure	none
+Currency	Office	none
+exposure	Office	none
+several data centers	Comptroller	none
+investment bank's failure	Morgan Stanley	none
+several data centers	risk	none
+customer data	Office	none
+investment bank's failure	decommissioning	none
+decommissioning	exposure	none
+several data centers	decommissioning	none
+Morgan Stanley	personal data	none
+two data centers	personal data	none
+U.S. Treasury Department	two data centers	none
+third-party company	part	none
+OCC	part	none
+bank's wealth management business	two data centers	none
+U.S. Treasury Department	third-party company	none
+bank's wealth management business	Morgan Stanley	none
+third-party company	bank's wealth management business	none
+U.S. Treasury Department	Morgan Stanley	none
+personal data	part	none
+bank's wealth management business	OCC	none
+U.S. Treasury Department	OCC	none
+two data centers	part	none
+third-party company	personal data	none
+bank's wealth management business	part	none
+U.S. Treasury Department	part	none
+two data centers	OCC	none
+Morgan Stanley	part	none
+two data centers	Morgan Stanley	none
+U.S. Treasury Department	bank's wealth management business	none
+third-party company	two data centers	none
+third-party company	OCC	none
+bank's wealth management business	personal data	none
+Morgan Stanley	OCC	none
+U.S. Treasury Department	personal data	none
+third-party company	Morgan Stanley	none
+OCC	personal data	none
+appropriate inventory	bank hardware	none
+devices	risk	none
+subcontractors	connection	none
+devices	decommissioning	none
+third-party vendors	risks	none
+risks	subcontractors	none
+customer data	risk	none
+bank hardware	bank	none
+OCC report	devices	none
+OCC report	connection	none
+bank hardware	other things	none
+risks	bank hardware	none
+decommissioning	risks	none
+subcontractors	bank	none
+other things	subcontractors	none
+third-party vendors	customer data	none
+devices	connection	none
+other things	connection	none
+OCC report	bank	none
+third-party vendors	connection	none
+OCC report	subcontractors	none
+decommissioning	bank	none
+appropriate inventory	bank	none
+OCC report	decommissioning	none
+customer data	risks	none
+customer data	connection	none
+appropriate inventory	decommissioning	none
+bank hardware	risk	none
+customer data	subcontractors	none
+devices	other things	none
+third-party vendors	other things	none
+customer data	decommissioning	none
+OCC report	customer data	none
+appropriate inventory	subcontractors	none
+third-party vendors	bank	none
+OCC report	other things	none
+bank hardware	connection	none
+risk	subcontractors	none
+appropriate inventory	other things	none
+appropriate inventory	risks	none
+third-party vendors	risk	none
+risk	connection	none
+bank hardware	subcontractors	none
+risks	bank	none
+devices	bank	none
+decommissioning	bank hardware	none
+decommissioning	subcontractors	none
+third-party vendors	appropriate inventory	none
+customer data	bank hardware	none
+OCC report	risk	none
+third-party vendors	subcontractors	none
+appropriate inventory	connection	none
+third-party vendors	OCC report	none
+appropriate inventory	customer data	none
+risks	connection	none
+risks	other things	none
+devices	appropriate inventory	none
+OCC report	risks	none
+other things	bank	none
+appropriate inventory	risk	none
+third-party vendors	decommissioning	none
+decommissioning	risk	none
+third-party vendors	devices	none
+devices	bank hardware	none
+risk	other things	none
+customer data	other things	none
+devices	subcontractors	none
+risk	bank	none
+risks	risk	none
+OCC report	bank hardware	none
+customer data	bank	none
+OCC report	appropriate inventory	none
+devices	risks	none
+decommissioning	other things	none
+decommissioning	connection	none
+devices	customer data	none
+third-party vendors	bank hardware	none
+connection	bank	none
+computer servers	Morgan Stanley	none
+proper oversight	OCC	none
+local branch	Morgan Stanley	none
+proper oversight	Morgan Stanley	none
+local branch	computer servers	none
+local branch	OCC	none
+certain network devices	OCC	none
+proper oversight	certain network devices	none
+proper oversight	local branch	none
+Morgan Stanley	OCC	none
+computer servers	OCC	none
+computer servers	certain network devices	none
+proper oversight	computer servers	none
+certain network devices	Morgan Stanley	none
+local branch	certain network devices	none
+company	Morgan Stanley	none
+customer data	Morgan Stanley	none
+spokesperson	bank	none
+company	customer data	none
+company	spokesperson	none
+customer data	spokesperson	none
+Morgan Stanley	bank	none
+situation	spokesperson	none
+company	bank	none
+customer data	bank	none
+situation	Morgan Stanley	none
+Morgan Stanley	spokesperson	none
+situation	customer data	none
+situation	bank	none
+situation	company	none
+place	continuous fraud monitoring	none
+we clients' information	spokesperson	none
+enhanced security procedures	we	none
+place	controls	none
+place	we clients' information	none
+we clients' information	we	none
+enhanced security procedures	spokesperson	none
+continuous fraud monitoring	we	none
+we	controls	none
+continuous fraud monitoring	spokesperson	none
+place	spokesperson	none
+we	spokesperson	none
+continuous fraud monitoring	we clients' information	none
+continuous fraud monitoring	controls	none
+we clients' information	controls	none
+place	we	none
+place	enhanced security procedures	none
+continuous fraud monitoring	enhanced security procedures	none
+enhanced security procedures	we clients' information	none
+enhanced security procedures	controls	none
+spokesperson	controls	none
+attorneys	OCC fine	none
+lawsuit	OCC fine	none
+equipment	company	none
+lawsuit	attorneys	none
+bank	Morgan Stanley customers	none
+identifiable information	company	none
+identifiable information	attorneys	none
+OCC fine	Morgan Stanley customers	none
+identifiable information	Morgan Stanley customers	none
+equipment	OCC fine	none
+identifiable information	OCC fine	none
+company	lawsuit	none
+identifiable information	bank	none
+equipment	lawsuit	none
+attorneys	Morgan Stanley customers	none
+attorneys	bank	none
+lawsuit	Morgan Stanley customers	none
+lawsuit	bank	none
+equipment	attorneys	none
+company	attorneys	none
+identifiable information	lawsuit	none
+company	OCC fine	none
+bank	OCC fine	none
+company	Morgan Stanley customers	none
+equipment	bank	none
+company	bank	none
+equipment	Morgan Stanley customers	none
+identifiable information	equipment	none
+July	incidents	none
+data breach notification letters	incidents	none
+Morgan Stanley	incidents	none
+July	Morgan Stanley	none
+Morgan Stanley	data breach notification letters	none
+Morgan Stanley	other states' attorneys	none
+July	other states' attorneys	none
+other states' attorneys	incidents	none
+other states' attorneys	data breach notification letters	none
+July	data breach notification letters	none
+linked bank accounts	data	none
+birth	letter	none
+linked bank accounts	Morgan Stanley	none
+numbers	account names	none
+linked bank accounts	numbers	none
+Morgan Stanley	account names	none
+Morgan Stanley	data	none
+linked bank accounts	letter	none
+birth	account names	none
+letter	numbers	none
+letter	Morgan Stanley	none
+Morgan Stanley	numbers	none
+linked bank accounts	birth	none
+letter	data	none
+data	account names	none
+birth	numbers	none
+letter	account names	none
+birth	Morgan Stanley	none
+birth	data	none
+linked bank accounts	account names	none
+data	numbers	none
+victims	prepaid credit monitoring services	none
+It	prepaid credit monitoring services	none
+victims	two years	none
+two years	It	none
+two years	prepaid credit monitoring services	none
+victims	It	none
+they	lawsuit	none
+company's practices	about 100 Morgan Stanley customers	none
+company's practices	lawsuit	none
+complaints	lawsuit	none
+lawsuit	who	none
+complaints	who	none
+complaints	about 100 Morgan Stanley customers	none
+company's practices	who	none
+they	about 100 Morgan Stanley customers	none
+who	about 100 Morgan Stanley customers	none
+company's practices	complaints	none
+they	who	none
+company's practices	they	none
+they	complaints	none
+lawsuit	about 100 Morgan Stanley customers	none
+case	law firm	none
+case	Jackson	none
+Jackson	law firm	none
+who	OCC	none
+Kohrman	Krantz	none
+law firm	bank	none
+Kohrman	OCC	none
+Morgan Stanely	bank	none
+Data One reason	Mark Rasch	none
+Krantz	Mark Rasch	none
+Jackson	data	none
+attorney	OCC	none
+attorney	Kohrman	none
+Data One reason	OCC	none
+case	data	none
+data	Krantz	none
+Kohrman	Mark Rasch	none
+Kohrman	Jackson	none
+who	Mark Rasch	none
+case	Kohrman	none
+Data One reason	law firm	none
+who	Morgan Stanely	none
+attorney	bank	none
+Jackson	Krantz	none
+case	who	none
+Jackson	who	none
+who	Krantz	none
+OCC	Mark Rasch	none
+attorney	who	none
+attorney	Krantz	none
+Data One reason	Krantz	none
+data	bank	none
+case	OCC	none
+case	Krantz	none
+Jackson	bank	none
+Jackson	OCC	none
+Krantz	law firm	none
+Data One reason	who	none
+attorney	data	none
+data	law firm	none
+OCC	data	none
+who	bank	none
+Morgan Stanely	Mark Rasch	none
+Morgan Stanely	law firm	none
+case	bank	none
+Kohrman	data	none
+OCC	Morgan Stanely	none
+Data One reason	Jackson	none
+Mark Rasch	bank	none
+Krantz	bank	none
+Kohrman	law firm	none
+Data One reason	Morgan Stanely	none
+who	law firm	none
+data	Morgan Stanely	none
+case	Mark Rasch	none
+data	Mark Rasch	none
+Data One reason	data	none
+attorney	Data One reason	none
+Kohrman	bank	none
+attorney	case	none
+OCC	law firm	none
+attorney	law firm	none
+attorney	Jackson	none
+case	Data One reason	none
+Jackson	Morgan Stanely	none
+OCC	Krantz	none
+Jackson	Mark Rasch	none
+OCC	bank	none
+Data One reason	bank	none
+who	data	none
+Kohrman	who	none
+Kohrman	Data One reason	none
+Krantz	Morgan Stanely	none
+case	Morgan Stanely	none
+law firm	Mark Rasch	none
+attorney	Mark Rasch	none
+attorney	Morgan Stanely	none
+Kohrman	Morgan Stanely	none
+custodians	entities	none
+custodians	data	none
+entities	data	none
+custodians	value	none
+value	data	none
+entities	value	none
+bank vault	Rasch	none
+Information Security Media Group	Rasch	none
+bank vault	Information Security Media Group	none
+Rasch	complete checklist	none
+Rasch	decommissioned computers	none
+place	Morgan Stanley	none
+Morgan Stanley	decommissioned computers	none
+Morgan Stanley	complete checklist	none
+place	Rasch	none
+place	complete checklist	none
+decommissioned computers	complete checklist	none
+place	decommissioned computers	none
+Rasch	Morgan Stanley	none
+identifiable information	OCC	none
+Connecticut	it	none
+it	offices	none
+technology and data privacy attorney	similar incidents	none
+SmartEdgeLaw Group	large financial institutions	none
+boutique law firm	large financial institutions	none
+it	New York	none
+large financial institutions	third parties	none
+third parties	it	none
+Richard Santalesa	New York	none
+Richard Santalesa	OCC	none
+large financial institutions	technology and data privacy attorney	none
+large financial institutions	point	none
+technology and data privacy attorney	New York	none
+SmartEdgeLaw Group	it	none
+boutique law firm	it	none
+point	New York	none
+fine	Richard Santalesa	none
+Richard Santalesa	size	none
+Richard Santalesa	technology and data privacy attorney	none
+Richard Santalesa	point	none
+identifiable information	Richard Santalesa	none
+identifiable information	offices	none
+SmartEdgeLaw Group	fine	none
+boutique law firm	fine	none
+identifiable information	New York	none
+SmartEdgeLaw Group	size	none
+boutique law firm	size	none
+large financial institutions	Connecticut	none
+identifiable information	Connecticut	none
+similar incidents	OCC	none
+SmartEdgeLaw Group	identifiable information	none
+boutique law firm	identifiable information	none
+identifiable information	similar incidents	none
+large financial institutions	it	none
+similar incidents	it	none
+size	similar incidents	none
+fine	large financial institutions	none
+similar incidents	point	none
+OCC	it	none
+SmartEdgeLaw Group	boutique law firm	none
+third parties	technology and data privacy attorney	none
+SmartEdgeLaw Group	similar incidents	none
+boutique law firm	similar incidents	none
+third parties	point	none
+identifiable information	it	none
+large financial institutions	similar incidents	none
+similar incidents	Connecticut	none
+Richard Santalesa	it	none
+New York	offices	none
+SmartEdgeLaw Group	third parties	none
+boutique law firm	third parties	none
+SmartEdgeLaw Group	Richard Santalesa	none
+boutique law firm	Richard Santalesa	none
+SmartEdgeLaw Group	OCC	none
+SmartEdgeLaw Group	New York	none
+boutique law firm	OCC	none
+boutique law firm	New York	none
+OCC	Connecticut	none
+Richard Santalesa	third parties	none
+large financial institutions	New York	none
+similar incidents	offices	none
+large financial institutions	offices	none
+Richard Santalesa	similar incidents	none
+third parties	Connecticut	none
+OCC	New York	none
+OCC	offices	none
+technology and data privacy attorney	offices	none
+point	offices	none
+identifiable information	technology and data privacy attorney	none
+identifiable information	point	none
+size	large financial institutions	none
+identifiable information	third parties	none
+identifiable information	size	none
+fine	identifiable information	none
+fine	New York	none
+large financial institutions	OCC	none
+third parties	offices	none
+SmartEdgeLaw Group	technology and data privacy attorney	none
+SmartEdgeLaw Group	point	none
+boutique law firm	technology and data privacy attorney	none
+boutique law firm	point	none
+Connecticut	New York	none
+fine	OCC	none
+size	it	none
+size	OCC	none
+third parties	New York	none
+fine	similar incidents	none
+SmartEdgeLaw Group	offices	none
+boutique law firm	offices	none
+fine	third parties	none
+size	third parties	none
+identifiable information	large financial institutions	none
+size	technology and data privacy attorney	none
+size	point	none
+technology and data privacy attorney	it	none
+point	it	none
+technology and data privacy attorney	Connecticut	none
+Richard Santalesa	Connecticut	none
+third parties	similar incidents	none
+size	Connecticut	none
+fine	it	none
+SmartEdgeLaw Group	Connecticut	none
+boutique law firm	Connecticut	none
+technology and data privacy attorney	point	none
+third parties	OCC	none
+size	New York	none
+Richard Santalesa	offices	none
+size	offices	none
+technology and data privacy attorney	OCC	none
+OCC	point	none
+Richard Santalesa	large financial institutions	none
+Connecticut	offices	none
+fine	offices	none
+fine	technology and data privacy attorney	none
+fine	point	none
+similar incidents	New York	none
+fine	size	none
+fine	Connecticut	none
+Connecticut	point	none
+I	CISO	none
+financial ecosphere	latest action	none
+latest action	desks	none
+Santalesa	chief privacy officer	none
+Santalesa	desks	none
+CISO	Santalesa	none
+CISO	latest action	none
+chief privacy officer	desks	none
+I	financial ecosphere	none
+CISO	chief privacy officer	none
+I	desks	none
+Santalesa	financial ecosphere	none
+financial ecosphere	desks	none
+I	chief privacy officer	none
+I	Santalesa	none
+I	latest action	none
+Santalesa	latest action	none
+CISO	desks	none
+chief privacy officer	financial ecosphere	none
+CISO	financial ecosphere	none
+chief privacy officer	latest action	none
+C-seat	next department meeting	none
+I	data destruction/deletion review' agenda item	none
+C-seat	data destruction/deletion review' agenda item	none
+next department meeting	I	none
+C-seat	I	none
+next department meeting	data destruction/deletion review' agenda item	none

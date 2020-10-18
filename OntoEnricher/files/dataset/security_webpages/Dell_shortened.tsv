@@ -1,0 +1,16 @@
+enhanced security solutions	data	none
+enhanced security solutions	protection	none
+protection	data	none
+Encryption	data	none
+data loss	risk	none
+policy	authentication	none
+encryption keys	risk	none
+risk	authentication	none
+critical data	risk	none
+critical data	encryption keys	none
+encryption keys	authentication	none
+critical data	authentication	none
+policy	encryption keys	none
+policy	risk	none
+critical data	policy	none
+protected data	data	none

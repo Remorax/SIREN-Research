@@ -1,0 +1,1436 @@
+database security	What	none
+availability	range	none
+Database security	range	none
+tools	range	none
+availability	Database security	none
+availability	tools	none
+Database security	tools	none
+measures	Database security	none
+measures	availability	none
+measures	tools	none
+controls	tools	none
+controls	range	none
+measures	range	none
+integrity	database confidentiality	none
+integrity	availability	none
+integrity	Database security	none
+integrity	tools	none
+integrity	range	none
+integrity	controls	none
+availability	controls	none
+Database security	controls	none
+availability	database confidentiality	none
+measures	integrity	none
+measures	controls	none
+database confidentiality	Database security	none
+measures	database confidentiality	none
+database confidentiality	tools	none
+database confidentiality	controls	none
+database confidentiality	range	none
+confidentiality	element	none
+article	most data breaches	none
+element	article	none
+confidentiality	most data breaches	none
+element	most data breaches	none
+confidentiality	article	none
+Database security	following	none
+database	data	none
+database management system	DBMS	none
+physical database server	underlying hardware	none
+virtual database server	underlying hardware	none
+virtual database server	physical database server	none
+practices	complex and challenging endeavor	none
+practices	aspects	none
+information security technologies	database Database security	none
+computing and/or network infrastructure	database Database security	none
+information security technologies	complex and challenging endeavor	none
+information security technologies	aspects	none
+complex and challenging endeavor	aspects	none
+information security technologies	computing and/or network infrastructure	none
+computing and/or network infrastructure	complex and challenging endeavor	none
+computing and/or network infrastructure	aspects	none
+complex and challenging endeavor	database Database security	none
+practices	database Database security	none
+aspects	database Database security	none
+practices	information security technologies	none
+practices	computing and/or network infrastructure	none
+odds	It	none
+It	database usability	none
+odds	database usability	none
+threats	security threats	none
+it	database	none
+it	threats	none
+security threats	database	none
+threats	database	none
+it	security threats	none
+Anderson’s Rule	paradox	none
+failure	data	none
+database	failure	none
+data breach	definition	none
+definition	database	none
+data breach	database	none
+database	data	none
+failure	confidentiality	none
+data breach	confidentiality	none
+data breach	failure	none
+confidentiality	data	none
+data breach	data	none
+definition	failure	none
+definition	data	none
+database	confidentiality	none
+definition	confidentiality	none
+enterprise	consequences	none
+factors	number	none
+data breach	factors	none
+enterprise	number	none
+data breach	enterprise	none
+data breach	consequences	none
+enterprise	factors	none
+data breach	number	none
+consequences	number	none
+factors	consequences	none
+market	intellectual property—trade secrets	none
+proprietary practices	market	none
+competitive advantage	inventions	none
+competitive advantage	ability	none
+proprietary practices	intellectual property—trade secrets	none
+competitive advantage	intellectual property—trade secrets	none
+inventions	intellectual property—trade secrets	none
+inventions	ability	none
+proprietary practices	inventions	none
+market	ability	none
+intellectual property—trade secrets	ability	none
+proprietary practices	ability	none
+competitive advantage	proprietary practices	none
+competitive advantage	market	none
+market	inventions	none
+competitive advantage	intellectual property	none
+brand reputation	Damage	none
+products	company	none
+services	data	none
+services	business	none
+you	partners	none
+services	you	none
+products	partners	none
+Customers	partners	none
+products	services	none
+data	business	none
+company	data	none
+products	business	none
+data	partners	none
+products	you	none
+company	partners	none
+Customers	business	none
+services	Customers	none
+data	Customers	none
+services	company	none
+you	business	none
+business	partners	none
+you	Customers	none
+services	partners	none
+products	Customers	none
+company	business	none
+products	data	none
+company	Customers	none
+company	you	none
+you	data	none
+important” decision	adults	none
+important” decision	data protection	none
+important” decision	63% rate quality	none
+company	cyberattacks	none
+important” decision	cyberattacks	none
+adults	data protection	none
+adults	company	none
+important” decision	2018 IBM-sponsored Harris Poll survey	none
+adults	cyberattacks	none
+important” decision	company	none
+data protection	cyberattacks	none
+adults	2018 IBM-sponsored Harris Poll survey	none
+company	63% rate quality	none
+data protection	2018 IBM-sponsored Harris Poll survey	none
+cyberattacks	2018 IBM-sponsored Harris Poll survey	none
+data protection	company	none
+cyberattacks	63% rate quality	none
+data protection	63% rate quality	none
+company	2018 IBM-sponsored Harris Poll survey	none
+adults	63% rate quality	none
+2018 IBM-sponsored Harris Poll survey	63% rate quality	none
+lack	Business continuity	none
+business	breach	none
+Fines	penalties	none
+non-compliance	penalties	none
+non-compliance	Fines	none
+Sarbannes-Oxley Act	financial impact	none
+global regulations	SAO	none
+global regulations	financial impact	none
+SAO	Sarbannes-Oxley Act	none
+global regulations	Sarbannes-Oxley Act	none
+SAO	financial impact	none
+GDPR	Payment Card Industry Data Security Standard	none
+fines	worst cases	none
+HIPAA	several million dollars	none
+violation	Payment Card Industry Data Security Standard	none
+GDPR	regional data privacy regulations	none
+Europe’s General Data Protection Regulation	Payment Card Industry Data Security Standard	none
+Europe’s General Data Protection Regulation	several million dollars	none
+Europe’s General Data Protection Regulation	violation	none
+fines	GDPR	none
+PCI DSS	regional data privacy regulations	none
+fines	industry-specific data privacy regulations	none
+regional data privacy regulations	industry-specific data privacy regulations	none
+HIPAA	violation	none
+fines	violation	none
+Payment Card Industry Data Security Standard	industry-specific data privacy regulations	none
+HIPAA	industry-specific data privacy regulations	none
+Europe’s General Data Protection Regulation	worst cases	none
+HIPAA	GDPR	none
+Europe’s General Data Protection Regulation	GDPR	none
+fines	several million dollars	none
+PCI DSS	HIPAA	none
+HIPAA	worst cases	none
+HIPAA	Payment Card Industry Data Security Standard	none
+HIPAA	regional data privacy regulations	none
+PCI DSS	Payment Card Industry Data Security Standard	none
+PCI DSS	several million dollars	none
+GDPR	violation	none
+worst cases	industry-specific data privacy regulations	none
+GDPR	worst cases	none
+worst cases	Payment Card Industry Data Security Standard	none
+GDPR	industry-specific data privacy regulations	none
+PCI DSS	GDPR	none
+regional data privacy regulations	violation	none
+worst cases	violation	none
+regional data privacy regulations	worst cases	none
+violation	industry-specific data privacy regulations	none
+regional data privacy regulations	Payment Card Industry Data Security Standard	none
+regional data privacy regulations	several million dollars	none
+PCI DSS	industry-specific data privacy regulations	none
+several million dollars	worst cases	none
+PCI DSS	fines	none
+several million dollars	Payment Card Industry Data Security Standard	none
+PCI DSS	Europe’s General Data Protection Regulation	none
+PCI DSS	violation	none
+GDPR	several million dollars	none
+Europe’s General Data Protection Regulation	regional data privacy regulations	none
+several million dollars	violation	none
+several million dollars	industry-specific data privacy regulations	none
+PCI DSS	worst cases	none
+fines	HIPAA	none
+Europe’s General Data Protection Regulation	industry-specific data privacy regulations	none
+Europe’s General Data Protection Regulation	HIPAA	none
+fines	regional data privacy regulations	none
+Europe’s General Data Protection Regulation	fines	none
+fines	Payment Card Industry Data Security Standard	none
+breaches	customers	none
+Costs	breaches	none
+Costs	customers	none
+breach	cost	none
+affected systems	cost	none
+forensic and investigative activities	customer	none
+repair	triage	none
+breached organization	cost	none
+forensic and investigative activities	triage	none
+breached organization	repair	none
+breached organization	addition	none
+crisis management	triage	none
+crisis management	forensic and investigative activities	none
+affected systems	breach	none
+customer	cost	none
+forensic and investigative activities	addition	none
+crisis management	customer	none
+customer	addition	none
+repair	breach	none
+crisis management	affected systems	none
+affected systems	customer	none
+triage	cost	none
+addition	triage	none
+crisis management	breach	none
+breach	triage	none
+affected systems	triage	none
+repair	customer	none
+repair	addition	none
+repair	cost	none
+forensic and investigative activities	repair	none
+breached organization	triage	none
+forensic and investigative activities	cost	none
+crisis management	cost	none
+breached organization	customer	none
+customer	triage	none
+crisis management	repair	none
+affected systems	breached organization	none
+breached organization	breach	none
+addition	breach	none
+crisis management	addition	none
+affected systems	addition	none
+crisis management	breached organization	none
+affected systems	repair	none
+forensic and investigative activities	breach	none
+forensic and investigative activities	breached organization	none
+customer	breach	none
+addition	cost	none
+forensic and investigative activities	affected systems	none
+patterns	misuse	none
+Common threats	vulnerabilities	none
+challenges	patterns	none
+Many software misconfigurations	breaches	none
+Many software misconfigurations	carelessness	none
+Many software misconfigurations	vulnerabilities	none
+patterns	carelessness	none
+Common threats	challenges	none
+challenges	misuse	none
+misuse	carelessness	none
+vulnerabilities	carelessness	none
+challenges	Many software misconfigurations	none
+challenges	carelessness	none
+challenges	vulnerabilities	none
+challenges	breaches	none
+Common threats	patterns	none
+carelessness	breaches	none
+patterns	Many software misconfigurations	none
+patterns	vulnerabilities	none
+patterns	breaches	none
+vulnerabilities	misuse	none
+Common threats	Many software misconfigurations	none
+vulnerabilities	breaches	none
+Common threats	misuse	none
+Common threats	carelessness	none
+misuse	breaches	none
+Common threats	breaches	none
+Many software misconfigurations	misuse	none
+database security attacks	common types	none
+causes	common types	none
+database security attacks	causes	none
+privileged access	insider threat	none
+privileged access	three sources	none
+three sources	insider threat	none
+database	security threat	none
+database	insider threat	none
+security threat	insider threat	none
+three sources	security threat	none
+privileged access	security threat	none
+database	three sources	none
+privileged access	database	none
+who	malicious insider	none
+who	errors	none
+errors	database	none
+who	database	none
+who	negligent insider	none
+errors	negligent insider	none
+negligent insider	database	none
+infiltrator	itself	none
+scheme	infiltrator	none
+credentials	itself	none
+access	scheme	none
+outsider	infiltrator	none
+who	itself	none
+access	credentials	none
+credential database	itself	none
+access	outsider	none
+who	credentials	none
+access	phishing	none
+outsider	who	none
+phishing	credential database	none
+credentials	infiltrator	none
+phishing	who	none
+scheme	credentials	none
+access	who	none
+outsider	credentials	none
+access	infiltrator	none
+outsider	scheme	none
+phishing	credentials	none
+credential database	outsider	none
+phishing	scheme	none
+credential database	scheme	none
+phishing	itself	none
+phishing	outsider	none
+credential database	credentials	none
+access	itself	none
+who	scheme	none
+access	credential database	none
+credential database	who	none
+scheme	itself	none
+phishing	infiltrator	none
+outsider	itself	none
+who	infiltrator	none
+credential database	infiltrator	none
+database security breaches	common causes	none
+result	privileged user access credentials	none
+database security breaches	result	none
+result	many employees	none
+Insider threats	common causes	none
+result	common causes	none
+many employees	privileged user access credentials	none
+common causes	many employees	none
+Insider threats	many employees	none
+common causes	privileged user access credentials	none
+Insider threats	result	none
+Insider threats	privileged user access credentials	none
+database security breaches	many employees	none
+database security breaches	privileged user access credentials	none
+Insider threats	database security breaches	none
+half	Human error Accidents	none
+data breaches	other unwise or uninformed user behaviors	none
+49%	weak passwords	none
+weak passwords	Human error Accidents	none
+data breaches	weak passwords	none
+password sharing	Human error Accidents	none
+data breaches	password sharing	none
+cause	other unwise or uninformed user behaviors	none
+cause	49%	none
+password sharing	half	none
+cause	password sharing	none
+cause	Human error Accidents	none
+49%	Human error Accidents	none
+49%	password sharing	none
+data breaches	Human error Accidents	none
+49%	other unwise or uninformed user behaviors	none
+weak passwords	other unwise or uninformed user behaviors	none
+password sharing	other unwise or uninformed user behaviors	none
+data breaches	cause	none
+cause	weak passwords	none
+49%	half	none
+weak passwords	half	none
+data breaches	49%	none
+half	other unwise or uninformed user behaviors	none
+data breaches	half	none
+password sharing	weak passwords	none
+other unwise or uninformed user behaviors	Human error Accidents	none
+cause	half	none
+Exploitation	database software vulnerabilities	none
+kinds	software	none
+Hackers	database management software	none
+Hackers	vulnerabilities	none
+vulnerabilities	software	none
+database management software	kinds	none
+Hackers	software	none
+Hackers	kinds	none
+database management software	software	none
+database management software	vulnerabilities	none
+vulnerabilities	kinds	none
+major commercial database software vendors	patches	none
+vulnerabilities	exposure	none
+major commercial database software vendors	vulnerabilities	none
+patches	exposure	none
+major commercial database software vendors	exposure	none
+timely fashion	exposure	none
+open source database management platforms	vulnerabilities	none
+major commercial database software vendors	failure	none
+vulnerabilities	regular security patches	none
+patches	vulnerabilities	none
+failure	timely fashion	none
+major commercial database software vendors	open source database management platforms	none
+open source database management platforms	timely fashion	none
+open source database management platforms	failure	none
+failure	regular security patches	none
+timely fashion	regular security patches	none
+patches	timely fashion	none
+open source database management platforms	regular security patches	none
+patches	failure	none
+open source database management platforms	patches	none
+vulnerabilities	failure	none
+major commercial database software vendors	timely fashion	none
+vulnerabilities	timely fashion	none
+failure	exposure	none
+exposure	regular security patches	none
+patches	regular security patches	none
+open source database management platforms	exposure	none
+major commercial database software vendors	regular security patches	none
+database-specific threat	non-SQL attack strings	none
+insertion	non-SQL attack strings	none
+database queries	arbitrary SQL	none
+arbitrary SQL	web applications	none
+web applications	non-SQL attack strings	none
+database-specific threat	HTTP headers	none
+insertion	HTTP headers	none
+arbitrary SQL	database-specific threat	none
+arbitrary SQL	insertion	none
+non-SQL attack strings	HTTP headers	none
+arbitrary SQL	non-SQL attack strings	none
+database queries	HTTP headers	none
+database queries	insertion	none
+database queries	database-specific threat	none
+database-specific threat	web applications	none
+insertion	web applications	none
+database queries	non-SQL attack strings	none
+arbitrary SQL	HTTP headers	none
+web applications	HTTP headers	none
+database queries	web applications	none
+database-specific threat	insertion	none
+Organizations	secure web application coding practices	none
+attacks	regular vulnerability testing	none
+attacks	Organizations	none
+secure web application coding practices	regular vulnerability testing	none
+Organizations	regular vulnerability testing	none
+attacks	secure web application coding practices	none
+memory	more data	none
+more data	process	none
+memory	process	none
+memory	Buffer overflow exploitations Buffer overflow	none
+Buffer overflow exploitations Buffer overflow	more data	none
+process	fixed-length block	none
+Buffer overflow exploitations Buffer overflow	fixed-length block	none
+Buffer overflow exploitations Buffer overflow	process	none
+memory	fixed-length block	none
+more data	fixed-length block	none
+attacks	foundation	none
+foundation	adjacent memory addresses	none
+attacks	adjacent memory addresses	none
+excess data	adjacent memory addresses	none
+attacks	excess data	none
+Attackers	foundation	none
+Attackers	excess data	none
+Attackers	adjacent memory addresses	none
+excess data	foundation	none
+attacks	Attackers	none
+denial	server	none
+attacker	target server	none
+case	service (DoS) attack	none
+case	legitimate requests	none
+legitimate requests	server	none
+case	many cases	none
+target server	server	none
+case	denial	none
+actual users	target server	none
+actual users	legitimate requests	none
+many requests	denial	none
+actual users	server	none
+service (DoS) attack	legitimate requests	none
+case	many requests	none
+many cases	server	none
+many requests	target server	none
+attacker	legitimate requests	none
+denial	legitimate requests	none
+denial	target server	none
+attacker	server	none
+attacker	many cases	none
+many cases	target server	none
+many cases	legitimate requests	none
+many requests	attacker	none
+attacker	service (DoS) attack	none
+case	target server	none
+many requests	actual users	none
+many requests	legitimate requests	none
+target server	legitimate requests	none
+denial	actual users	none
+actual users	many cases	none
+target server	service (DoS) attack	none
+denial	attacker	none
+denial	service (DoS) attack	none
+actual users	service (DoS) attack	none
+service (DoS) attack	server	none
+many requests	service (DoS) attack	none
+denial	many cases	none
+actual users	attacker	none
+many requests	server	none
+case	actual users	none
+many cases	service (DoS) attack	none
+case	attacker	none
+many requests	many cases	none
+case	server	none
+service attack	distributed denial	none
+distributed denial	multiple servers	none
+service attack	multiple servers	none
+distributed denial	deluge	none
+multiple servers	deluge	none
+service attack	deluge	none
+more information	DDoS Attack	none
+more information	What	none
+DDoS Attack	What	none
+video	DDoS Attack	none
+video	more information	none
+video	What	none
+Malware	damage	none
+database	software	none
+Malware	software	none
+Malware	vulnerabilities	none
+database	damage	none
+database	vulnerabilities	none
+vulnerabilities	software	none
+vulnerabilities	damage	none
+Malware	database	none
+damage	software	none
+database’s network	endpoint device	none
+Malware	database’s network	none
+Malware	endpoint device	none
+backups	itself	none
+same stringent controls	itself	none
+attacks	Organizations	none
+database	Organizations	none
+Organizations	itself	none
+attacks	Attacks	none
+backups	backup data	none
+backup data	Attacks	none
+same stringent controls	Organizations	none
+database	itself	none
+attacks	backup data	none
+backups	Attacks	none
+Organizations	Attacks	none
+database	backup data	none
+same stringent controls	Attacks	none
+same stringent controls	backups	none
+itself	Attacks	none
+attacks	itself	none
+Organizations	backups	none
+database	same stringent controls	none
+backup data	itself	none
+attacks	backups	none
+attacks	same stringent controls	none
+Organizations	backup data	none
+database	backups	none
+database	Attacks	none
+attacks	database	none
+same stringent controls	backup data	none
+threats	following	none
+processing	Data	none
+processing	storage	none
+storage	Data	none
+near and distant future needs	practices	none
+data security tools	near and distant future needs	none
+data security tools	practices	none
+Network environments	management	none
+deployment	Network environments	none
+management	workloads	none
+choice	management	none
+security solutions	businesses	none
+Network environments	businesses	none
+choice	Network environments	none
+businesses	workloads	none
+choice	workloads	none
+security solutions	management	none
+security solutions	Network environments	none
+deployment	security solutions	none
+businesses	management	none
+deployment	workloads	none
+deployment	businesses	none
+security solutions	workloads	none
+Network environments	workloads	none
+security solutions	choice	none
+deployment	choice	none
+choice	businesses	none
+deployment	management	none
+stringent regulatory requirements	mandates	none
+mandates	complexity	none
+complexity	worldwide regulatory compliance landscape	none
+stringent regulatory requirements	complexity	none
+mandates	worldwide regulatory compliance landscape	none
+stringent regulatory requirements	worldwide regulatory compliance landscape	none
+Experts	many as 8 million unfilled cybersecurity positions	none
+portion	network infrastructure	none
+database	attack	none
+attack	databases	none
+portion	workstation	none
+workstation	security threat	none
+user’s device	threat	none
+portion	attack	none
+workstation	component	none
+attack	user’s device	none
+network infrastructure	attack	none
+attack	security threat	none
+workstation	databases	none
+workstation	threat	none
+network infrastructure	threat	none
+security threat	databases	none
+portion	user’s device	none
+network infrastructure	database	none
+database	user’s device	none
+user’s device	databases	none
+database	databases	none
+workstation	database	none
+attack	threat	none
+network infrastructure	security threat	none
+database	component	none
+component	databases	none
+portion	security threat	none
+portion	component	none
+workstation	attack	none
+component	user’s device	none
+network infrastructure	component	none
+database	security threat	none
+network infrastructure	databases	none
+component	security threat	none
+threat	databases	none
+user’s device	security threat	none
+portion	databases	none
+portion	threat	none
+security threat	threat	none
+database	threat	none
+workstation	user’s device	none
+network infrastructure	user’s device	none
+component	attack	none
+network infrastructure	workstation	none
+portion	database	none
+component	threat	none
+confines	database security	none
+database	confines	none
+database	database security	none
+following areas	team	none
+team	environment	none
+top priorities	following areas	none
+database security	following areas	none
+top priorities	database security	none
+following areas	environment	none
+database security	environment	none
+top priorities	environment	none
+database security	team	none
+top priorities	team	none
+database server	secure, climate-controlled environment	none
+Physical security	premise	none
+cloud data center	premise	none
+Physical security	cloud data center	none
+Physical security	database server	none
+Physical security	secure, climate-controlled environment	none
+database server	cloud data center	none
+database server	premise	none
+secure, climate-controlled environment	cloud data center	none
+secure, climate-controlled environment	premise	none
+care	cloud provider	none
+database server	cloud provider	none
+you	cloud data center	none
+you	care	none
+care	cloud data center	none
+database server	cloud data center	none
+cloud data center	cloud provider	none
+you	cloud provider	none
+database server	care	none
+database server	you	none
+database permissions	users	none
+access	minimum levels	none
+minimum levels	users	none
+minimum levels	practical minimum number	none
+access	practical minimum number	none
+access	database permissions	none
+database jobs	users	none
+database	users	none
+database	practical minimum number	none
+database permissions	practical minimum number	none
+database permissions	database jobs	none
+access	database jobs	none
+access	users	none
+minimum levels	database jobs	none
+access	database	none
+users	practical minimum number	none
+minimum levels	database permissions	none
+database	database jobs	none
+database	minimum levels	none
+database jobs	practical minimum number	none
+database	database permissions	none
+permissions	network access	none
+network access	minimum level	none
+permissions	minimum level	none
+data	End user account/device security	none
+who	database	none
+who	data	none
+data	database	none
+End user account/device security	database	none
+who	End user account/device security	none
+data activities	you	none
+Data monitoring solutions	data activities	none
+Data monitoring solutions	you	none
+hands	times	none
+hands	user devices	none
+hands	right user	none
+user devices	database	none
+user devices	times	none
+user devices	right user	none
+right user	database	none
+hands	database	none
+right user	times	none
+database	security controls	none
+right user	security controls	none
+database	times	none
+hands	security controls	none
+security controls	times	none
+user devices	security controls	none
+database	class	none
+credential data	transit	none
+credential data	data	none
+rest	database	none
+rest	credential data	none
+rest	transit	none
+database	credential data	none
+database	data	none
+database	transit	none
+rest	data	none
+class	credential data	none
+class	transit	none
+rest	class	none
+data	transit	none
+class	data	none
+encryption keys	accordance	none
+best-practice guidelines	accordance	none
+encryption keys	best-practice guidelines	none
+latest version	database management software	none
+latest version	patches	none
+database management software	patches	none
+database	attack	none
+database	best practice management	none
+channel	attack	none
+attack	ongoing security testing	none
+ongoing security testing	best practice management	none
+application or web server	ongoing security testing	none
+database	application or web server	none
+attack	best practice management	none
+database	channel	none
+channel	application or web server	none
+channel	ongoing security testing	none
+application or web server	attack	none
+application or web server	best practice management	none
+channel	best practice management	none
+database	ongoing security testing	none
+database	images	none
+copies	database	none
+same (or equally stringent) security controls	copies	none
+copies	itself	none
+backups	itself	none
+same (or equally stringent) security controls	backups	none
+copies	backups	none
+same (or equally stringent) security controls	images	none
+copies	images	none
+database	backups	none
+backups	images	none
+images	itself	none
+same (or equally stringent) security controls	itself	none
+database	itself	none
+same (or equally stringent) security controls	database	none
+logins	Record	none
+database server	logins	none
+Record	sensitive data	none
+Record	operations	none
+operating system	sensitive data	none
+operating system	operations	none
+operations	sensitive data	none
+operating system	Record	none
+logins	operations	none
+operating system	logins	none
+logins	sensitive data	none
+database server	operations	none
+database server	Record	none
+database server	sensitive data	none
+database server	operating system	none
+Controls	policies	none
+access	addition	none
+database	you	none
+layered security controls	database	none
+correct controls	database	none
+layered security controls	entire network environment	none
+correct controls	entire network environment	none
+access	policies	none
+database security	database	none
+database security	entire network environment	none
+database	addition	none
+layered security controls	you	none
+correct controls	you	none
+database security	itself	none
+addition	itself	none
+database	entire network environment	none
+you	policies	none
+database	itself	none
+layered security controls	correct controls	none
+layered security controls	access	none
+correct controls	access	none
+entire network environment	itself	none
+layered security controls	database security	none
+database security	you	none
+layered security controls	itself	none
+correct controls	itself	none
+database security	addition	none
+you	addition	none
+access	database	none
+access	entire network environment	none
+access	database security	none
+entire network environment	addition	none
+access	itself	none
+itself	policies	none
+layered security controls	addition	none
+correct controls	addition	none
+access	you	none
+addition	policies	none
+you	itself	none
+layered security controls	policies	none
+entire network environment	policies	none
+database	policies	none
+correct controls	database security	none
+correct controls	policies	none
+database security	policies	none
+entire network environment	you	none
+Administrative controls	installation	none
+change	configuration management	none
+change	database	none
+configuration management	database	none
+database	installation	none
+change	installation	none
+configuration management	installation	none
+change	Administrative controls	none
+Administrative controls	database	none
+configuration management	Administrative controls	none
+encryption	tokenization	none
+masking	tokenization	none
+masking	Preventative controls	none
+masking	encryption	none
+access	encryption	none
+access	Preventative controls	none
+masking	access	none
+access	tokenization	none
+encryption	Preventative controls	none
+tokenization	Preventative controls	none
+Detective	database activity monitoring	none
+data loss prevention tools	database activity monitoring	none
+data loss prevention tools	Detective	none
+solutions	anomalous or suspicious activities	none
+it	solutions	none
+it	anomalous or suspicious activities	none
+critical intellectual property	cybersecurity policies	none
+cloud security policies	critical intellectual property	none
+cloud security policies	overall business goals	none
+protection	critical intellectual property	none
+critical intellectual property	Database security policies	none
+overall business goals	critical intellectual property	none
+cloud security policies	protection	none
+overall business goals	protection	none
+overall business goals	Database security policies	none
+cybersecurity policies	Database security policies	none
+overall business goals	cybersecurity policies	none
+protection	Database security policies	none
+protection	cybersecurity policies	none
+cloud security policies	cybersecurity policies	none
+cloud security policies	Database security policies	none
+shared responsibility agreements	responsibility	none
+security controls	you	none
+security controls	responsibility	none
+you	responsibility	none
+shared responsibility agreements	auditing	none
+auditing	policies	none
+security controls	cloud provider	none
+you	cloud provider	none
+shared responsibility agreements	cloud provider	none
+responsibility	policies	none
+auditing	cloud provider	none
+organization	you	none
+organization	security controls	none
+you	policies	none
+security controls	policies	none
+security controls	auditing	none
+you	auditing	none
+responsibility	cloud provider	none
+security controls	shared responsibility agreements	none
+you	shared responsibility agreements	none
+policies	cloud provider	none
+organization	cloud provider	none
+organization	auditing	none
+auditing	responsibility	none
+organization	responsibility	none
+organization	shared responsibility agreements	none
+shared responsibility agreements	policies	none
+organization	policies	none
+Security controls	penetration testing and vulnerability assessment strategies	none
+education	security awareness training	none
+programs	penetration testing and vulnerability assessment strategies	none
+education	penetration testing and vulnerability assessment strategies	none
+education	Security controls	none
+programs	support	none
+education	programs	none
+penetration testing and vulnerability assessment strategies	formal security policies	none
+penetration testing and vulnerability assessment strategies	support	none
+Security controls	programs	none
+security awareness training	support	none
+formal security policies	security awareness training	none
+programs	security awareness training	none
+Security controls	security awareness training	none
+penetration testing and vulnerability assessment strategies	security awareness training	none
+education	formal security policies	none
+education	support	none
+formal security policies	support	none
+programs	formal security policies	none
+Security controls	support	none
+Security controls	formal security policies	none
+platforms	Data protection tools	none
+vendors	wide array	none
+data protection tools	wide array	none
+platforms	vendors	none
+data protection tools	vendors	none
+platforms	data protection tools	none
+platforms	wide array	none
+they	cloud	none
+tool	premise	none
+they	premise	none
+tool	databases	none
+recommendations	following capabilities	none
+they	databases	none
+vulnerabilities	following capabilities	none
+full-scale solution	tool	none
+full-scale solution	recommendations	none
+following capabilities	premise	none
+tool	vulnerabilities	none
+following capabilities	cloud	none
+they	vulnerabilities	none
+they	following capabilities	none
+tool	following capabilities	none
+recommendations	databases	none
+full-scale solution	following capabilities	none
+full-scale solution	vulnerabilities	none
+cloud	premise	none
+recommendations	cloud	none
+vulnerabilities	databases	none
+they	full-scale solution	none
+cloud	databases	none
+full-scale solution	databases	none
+vulnerabilities	premise	none
+following capabilities	databases	none
+vulnerabilities	cloud	none
+full-scale solution	premise	none
+tool	recommendations	none
+they	tool	none
+full-scale solution	cloud	none
+recommendations	premise	none
+vulnerabilities	recommendations	none
+they	recommendations	none
+premise	databases	none
+tool	cloud	none
+regulatory compliance mandates	Discovery capabilities	none
+solution	databases	none
+solution	data activities	none
+data activities	cloud	none
+data activities	container	none
+container	databases	none
+data activities	premise	none
+deployment	databases	none
+solution	container	none
+deployment	container	none
+solution	cloud	none
+deployment	data activities	none
+solution	premise	none
+solution	deployment	none
+cloud	premise	none
+cloud	databases	none
+container	premise	none
+container	cloud	none
+deployment	premise	none
+deployment	cloud	none
+premise	databases	none
+data activities	databases	none
+suspicious activities	real-time	none
+you	It	none
+It	suspicious activities	none
+threats	real-time	none
+you	suspicious activities	none
+It	threats	none
+It	real-time	none
+you	real-time	none
+you	threats	none
+suspicious activities	threats	none
+visibility	policies	none
+solution	rules	none
+comprehensive and unified user interface	separation	none
+separation	policies	none
+solution	You	none
+separation	duties	none
+solution	comprehensive and unified user interface	none
+status	policies	none
+separation	data	none
+solution	data	none
+data	policies	none
+status	duties	none
+data	duties	none
+status	data	none
+comprehensive and unified user interface	You	none
+rules	You	none
+comprehensive and unified user interface	rules	none
+policies	duties	none
+status	separation	none
+visibility	data	none
+You	duties	none
+visibility	comprehensive and unified user interface	none
+visibility	You	none
+comprehensive and unified user interface	status	none
+visibility	rules	none
+solution	policies	none
+separation	rules	none
+solution	duties	none
+separation	You	none
+visibility	separation	none
+status	rules	none
+data	rules	none
+status	You	none
+data	You	none
+visibility	solution	none
+comprehensive and unified user interface	duties	none
+policies	rules	none
+policies	You	none
+comprehensive and unified user interface	data	none
+comprehensive and unified user interface	policies	none
+rules	duties	none
+visibility	status	none
+solution	status	none
+solution	separation	none
+visibility	duties	none
+compliance requirements	you	none
+solution	reports	none
+you	solution	none
+you	reports	none
+compliance requirements	reports	none
+compliance requirements	solution	none
+compromise	defense	none
+compromise	case	none
+defense	final line	none
+case	final line	none
+final line	breach, encryption	none
+defense	breach, encryption	none
+case	breach, encryption	none
+compromise	final line	none
+compromise	breach, encryption	none
+defense	case	none
+tool	premise	none
+multicloud environments	hybrid	none
+data	premise	none
+multicloud environments	flexible encryption capabilities	none
+multicloud environments	tool	none
+tool	hybrid	none
+data	flexible encryption capabilities	none
+you	hybrid	none
+flexible encryption capabilities	premise	none
+you	premise	none
+tool	data	none
+tool	flexible encryption capabilities	none
+flexible encryption capabilities	hybrid	none
+multicloud environments	data	none
+tool	you	none
+hybrid	premise	none
+multicloud environments	you	none
+multicloud environments	premise	none
+data	hybrid	none
+you	flexible encryption capabilities	none
+you	data	none
+file	tool	none
+tool	volume	none
+file	industry	none
+tool	application encryption capabilities	none
+volume	application encryption capabilities	none
+industry	volume	none
+file	volume	none
+file	application encryption capabilities	none
+tool	industry	none
+industry	application encryption capabilities	none
+advanced security key management capabilities	compliance requirements	none
+tokenization	advanced security key management capabilities	none
+tokenization	compliance requirements	none
+compliance requirements	data masking	none
+tokenization	data masking	none
+advanced security key management capabilities	data masking	none
+risk analysis	Data security optimization	none
+you	risk analysis	none
+advanced analytics	optimization	none
+ease	you	none
+ease	optimization	none
+risk analysis	advanced analytics	none
+risk analysis	optimization	none
+you	optimization	none
+you	advanced analytics	none
+tool	advanced analytics	none
+you	data security information	none
+tool	optimization	none
+risk analysis	contextual insights	none
+data security information	advanced analytics	none
+ease	tool	none
+tool	data security information	none
+ease	risk analysis	none
+contextual insights	advanced analytics	none
+data security information	contextual insights	none
+ease	advanced analytics	none
+contextual insights	optimization	none
+tool	contextual insights	none
+tool	you	none
+tool	risk analysis	none
+data security information	risk analysis	none
+ease	contextual insights	none
+ease	data security information	none
+you	contextual insights	none
+data security information	optimization	none
+data exploration	capabilities	none
+one	comprehensive but user-friendly self-service dashboard	none
+auditing	data exploration	none
+auditing	security	none
+solution	databases	none
+status	data exploration	none
+large quantities	capabilities	none
+solution	large quantities	none
+auditing	capabilities	none
+security	databases	none
+status	capabilities	none
+status	large quantities	none
+one	databases	none
+large quantities	comprehensive but user-friendly self-service dashboard	none
+security	historical and recent data	none
+one	large quantities	none
+auditing	historical and recent data	none
+status	historical and recent data	none
+databases	capabilities	none
+status	auditing	none
+data exploration	historical and recent data	none
+solution	historical and recent data	none
+data exploration	large quantities	none
+data exploration	databases	none
+one	auditing	none
+solution	capabilities	none
+one	historical and recent data	none
+auditing	large quantities	none
+security	large quantities	none
+auditing	databases	none
+solution	security	none
+solution	data exploration	none
+status	databases	none
+security	capabilities	none
+large quantities	databases	none
+historical and recent data	comprehensive but user-friendly self-service dashboard	none
+status	security	none
+solution	auditing	none
+one	capabilities	none
+auditing	comprehensive but user-friendly self-service dashboard	none
+historical and recent data	databases	none
+security	comprehensive but user-friendly self-service dashboard	none
+historical and recent data	capabilities	none
+large quantities	historical and recent data	none
+one	security	none
+one	data exploration	none
+comprehensive but user-friendly self-service dashboard	capabilities	none
+one	status	none
+status	comprehensive but user-friendly self-service dashboard	none
+comprehensive but user-friendly self-service dashboard	databases	none
+data exploration	comprehensive but user-friendly self-service dashboard	none
+one	solution	none
+solution	status	none
+data exploration	security	none
+solution	comprehensive but user-friendly self-service dashboard	none
+Database security	IBM Cloud	none
+built-in identity and access management	intelligence	none
+intelligence	visibility	none
+built-in identity and access management	IBM-managed cloud databases	none
+built-in identity and access management	IBM Cloud Security	none
+built-in identity and access management	data protection capabilities	none
+IBM-managed cloud databases	IBM Cloud Security	none
+IBM-managed cloud databases	visibility	none
+built-in identity and access management	visibility	none
+built-in identity and access management	native security capabilities	none
+IBM-managed cloud databases	native security capabilities	none
+intelligence	IBM-managed cloud databases	none
+data protection capabilities	intelligence	none
+data protection capabilities	IBM-managed cloud databases	none
+data protection capabilities	IBM Cloud Security	none
+intelligence	native security capabilities	none
+data protection capabilities	visibility	none
+IBM Cloud Security	visibility	none
+data protection capabilities	native security capabilities	none
+native security capabilities	IBM Cloud Security	none
+intelligence	IBM Cloud Security	none
+native security capabilities	visibility	none
+secure environment	database	none
+secure environment	IBM-managed cloud database	none
+secure environment	administrative burden	none
+IBM-managed cloud database	you	none
+database	you	none
+IBM-managed cloud database	database	none
+IBM-managed cloud database	administrative burden	none
+database	administrative burden	none
+you	administrative burden	none
+secure environment	you	none
+encryption	file shares	none
+IBM	premise	none
+databases	IBM Security Guardium	none
+tokenization	IBM Security Guardium	none
+smarter data protection platform	data discovery	none
+data warehouses	IBM Security Guardium	none
+encryption	premise	none
+file shares	data discovery	none
+hybrid environments	databases	none
+monitoring	risk analysis capabilities	none
+hybrid environments	smarter data protection platform	none
+hybrid environments	premise	none
+big data	IBM Security Guardium	none
+encryption	databases	none
+encryption	smarter data protection platform	none
+risk analysis capabilities	hybrid environments	none
+security optimization	cloud	none
+data warehouses	tokenization	none
+monitoring	databases	none
+big data platforms	data discovery	none
+encryption	data discovery	none
+file shares	premise	none
+cloud	premise	none
+security optimization	big data	none
+encryption	IBM	none
+smarter data protection platform	databases	none
+monitoring	premise	none
+monitoring	cloud	none
+security optimization	data warehouses	none
+tokenization	databases	none
+security optimization	IBM	none
+security optimization	big data platforms	none
+monitoring	smarter data protection platform	none
+IBM	IBM Security Guardium	none
+tokenization	premise	none
+risk analysis capabilities	big data	none
+encryption	big data platforms	none
+tokenization	cloud	none
+data warehouses	premise	none
+IBM	file shares	none
+security optimization	tokenization	none
+file shares	databases	none
+big data	data discovery	none
+tokenization	smarter data protection platform	none
+hybrid environments	IBM Security Guardium	none
+security optimization	smarter data protection platform	none
+big data	premise	none
+risk analysis capabilities	IBM	none
+file shares	big data	none
+security optimization	premise	none
+IBM	data discovery	none
+encryption	tokenization	none
+data discovery	premise	none
+monitoring	big data	none
+hybrid environments	file shares	none
+file shares	cloud	none
+IBM	tokenization	none
+data warehouses	IBM	none
+risk analysis capabilities	tokenization	none
+risk analysis capabilities	databases	none
+data warehouses	hybrid environments	none
+big data platforms	databases	none
+monitoring	big data platforms	none
+file shares	smarter data protection platform	none
+security optimization	hybrid environments	none
+tokenization	big data	none
+risk analysis capabilities	premise	none
+smarter data protection platform	IBM Security Guardium	none
+big data platforms	IBM Security Guardium	none
+IBM	big data platforms	none
+monitoring	IBM	none
+data warehouses	encryption	none
+cloud	data discovery	none
+monitoring	tokenization	none
+encryption	cloud	none
+tokenization	big data platforms	none
+cloud	smarter data protection platform	none
+smarter data protection platform	big data	none
+security optimization	databases	none
+IBM	big data	none
+hybrid environments	data discovery	none
+hybrid environments	cloud	none
+risk analysis capabilities	big data platforms	none
+encryption	big data	none
+security optimization	IBM Security Guardium	none
+risk analysis capabilities	encryption	none
+hybrid environments	big data	none
+monitoring	hybrid environments	none
+data discovery	IBM Security Guardium	none
+monitoring	file shares	none
+file shares	big data platforms	none
+monitoring	security optimization	none
+cloud	databases	none
+hybrid environments	big data platforms	none
+monitoring	encryption	none
+risk analysis capabilities	smarter data protection platform	none
+data warehouses	databases	none
+security optimization	risk analysis capabilities	none
+data warehouses	file shares	none
+premise	databases	none
+risk analysis capabilities	data discovery	none
+hybrid environments	IBM	none
+tokenization	file shares	none
+IBM	cloud	none
+risk analysis capabilities	IBM Security Guardium	none
+encryption	IBM Security Guardium	none
+smarter data protection platform	premise	none
+big data platforms	premise	none
+security optimization	encryption	none
+hybrid environments	tokenization	none
+encryption	hybrid environments	none
+data warehouses	data discovery	none
+data warehouses	cloud	none
+risk analysis capabilities	file shares	none
+monitoring	data discovery	none
+risk analysis capabilities	data warehouses	none
+data warehouses	smarter data protection platform	none
+data discovery	databases	none
+IBM	databases	none
+big data	databases	none
+security optimization	data discovery	none
+data warehouses	big data	none
+smarter data protection platform	big data platforms	none
+file shares	IBM Security Guardium	none
+cloud	IBM Security Guardium	none
+cloud	big data platforms	none
+tokenization	data discovery	none
+monitoring	IBM Security Guardium	none
+premise	IBM Security Guardium	none
+monitoring	data warehouses	none
+security optimization	file shares	none
+IBM	smarter data protection platform	none
+data warehouses	big data platforms	none
+cloud	big data	none
+big data platforms	big data	none
+risk analysis capabilities	cloud	none
+IBM	addition	none
+Cloud	data	none
+Cloud	internal and external threats	none
+internal and external threats	data	none
+data	data discovery	none
+data activity monitoring	encryption	none
+Cloud	streamlined risk mitigation approach	none
+Data Security Services	addition	none
+encryption	addition	none
+classification	IBM	none
+internal and external threats	addition	none
+data activity monitoring	addition	none
+data activity monitoring	IBM	none
+key management capabilities	data discovery	none
+classification	addition	none
+data	streamlined risk mitigation approach	none
+addition	streamlined risk mitigation approach	none
+key management capabilities	Cloud	none
+Cloud	addition	none
+key management capabilities	internal and external threats	none
+IBM	internal and external threats	none
+key management capabilities	data	none
+data activity monitoring	streamlined risk mitigation approach	none
+Data Security Services	streamlined risk mitigation approach	none
+classification	key management capabilities	none
+Data Security Services	Cloud	none
+encryption	data	none
+data activity monitoring	key management capabilities	none
+encryption	Cloud	none
+Data Security Services	data	none
+IBM	data discovery	none
+data	addition	none
+Data Security Services	encryption	none
+classification	encryption	none
+addition	data discovery	none
+internal and external threats	streamlined risk mitigation approach	none
+encryption	data discovery	none
+key management capabilities	encryption	none
+encryption	IBM	none
+data activity monitoring	data discovery	none
+Data Security Services	data discovery	none
+Data Security Services	IBM	none
+classification	data discovery	none
+key management capabilities	addition	none
+Cloud	data discovery	none
+Data Security Services	key management capabilities	none
+IBM	data	none
+internal and external threats	data discovery	none
+Data Security Services	classification	none
+data activity monitoring	data	none
+key management capabilities	IBM	none
+encryption	streamlined risk mitigation approach	none
+classification	data	none
+IBM	Cloud	none
+IBM	streamlined risk mitigation approach	none
+data activity monitoring	Cloud	none
+classification	internal and external threats	none
+Data Security Services	internal and external threats	none
+data activity monitoring	internal and external threats	none
+data activity monitoring	classification	none
+classification	Cloud	none
+classification	streamlined risk mitigation approach	none
+data discovery	streamlined risk mitigation approach	none
+key management capabilities	streamlined risk mitigation approach	none
+data activity monitoring	Data Security Services	none
+encryption	internal and external threats	none

@@ -1,0 +1,513 @@
+Challenges	What	none
+Database Security	What	none
+Challenges	Database Security	none
+internet-based attacks	persistent challenges	none
+security	persistent challenges	none
+internet-based attacks	security	none
+internet-based attacks	Security concerns	none
+persistent challenges	Security concerns	none
+security	Security concerns	none
+databases	Hackers	none
+new ways	Hackers	none
+databases	data	none
+Hackers	data	none
+new ways	data	none
+new ways	databases	none
+attacks	Organizations	none
+Organizations	Organizations database security measures	none
+attacks	Organizations database security measures	none
+user credentials	permission	none
+phishing scams	cyber security threats	none
+phishing scams	user credentials	none
+user credentials	cyber security threats	none
+cyber security threats	permission	none
+phishing scams	permission	none
+Malware	common cyber security threats	none
+ransomware	Malware	none
+ransomware	common cyber security threats	none
+database security	critical challenge	none
+contractors	critical challenge	none
+database security	partners	none
+database access credentials	critical challenge	none
+database security	contractors	none
+employees	database access	none
+don’t abuse	employees	none
+critical challenge	database access	none
+database access credentials	database access	none
+database access	partners	none
+database access credentials	don’t abuse	none
+don’t abuse	partners	none
+database access credentials	partners	none
+contractors	database access	none
+database access credentials	contractors	none
+don’t abuse	contractors	none
+database security	employees	none
+employees	critical challenge	none
+employees	partners	none
+database access credentials	database security	none
+database security	database access	none
+don’t abuse	critical challenge	none
+don’t abuse	database access	none
+database access credentials	employees	none
+employees	contractors	none
+critical challenge	partners	none
+database security	don’t abuse	none
+contractors	partners	none
+exfiltration vulnerabilities	data	none
+data	users	none
+legitimate access	data	none
+legitimate access	users	none
+exfiltration vulnerabilities	own purposes	none
+own purposes	data	none
+legitimate access	own purposes	none
+own purposes	users	none
+exfiltration vulnerabilities	legitimate access	none
+exfiltration vulnerabilities	users	none
+Edward Snowden’s compromise	NSA	none
+best example	challenge	none
+challenge	NSA	none
+best example	Edward Snowden’s compromise	none
+Edward Snowden’s compromise	challenge	none
+best example	NSA	none
+work	database systems	none
+information	legitimate access	none
+users	database systems	none
+legitimate access	users	none
+work	users	none
+Organizations	users	none
+work	legitimate access	none
+work	information	none
+information	applications	none
+Organizations	database systems	none
+work	Organizations	none
+information	users	none
+information	database systems	none
+work	applications	none
+applications	legitimate access	none
+applications	database systems	none
+applications	Organizations	none
+information	Organizations	none
+applications	users	none
+legitimate access	database systems	none
+legitimate access	Organizations	none
+database security	greater potential	none
+Database Security	I	none
+access level	perimeter level	none
+database level	perimeter level	none
+three layers	database level	none
+database level	access level	none
+three layers	perimeter level	none
+database security	perimeter level	none
+three layers	access level	none
+database security	access level	none
+database security	three layers	none
+database security	database level	none
+data	Security	none
+data	itself	none
+database	data	none
+database level	data	none
+database level	Security	none
+database level	database	none
+database	Security	none
+Security	itself	none
+database level	itself	none
+database	itself	none
+certain data	Access layer security	none
+certain data	systems	none
+who	certain data	none
+who	systems	none
+who	Access layer security	none
+systems	Access layer security	none
+databases	perimeter level	none
+who	perimeter level	none
+Database security	perimeter level	none
+who	databases	none
+who	Database security	none
+Database security	databases	none
+unique security solutions	level	none
+Database Security Solutions	Security Level	none
+Access	Level 	   Access	none
+Perimeter Level 	   Firewalls	Virtual Private Networks	none
+security	best practices	none
+best practices	several different approaches	none
+organization	security	none
+organization	best practices	none
+security	several different approaches	none
+organization databases	several different approaches	none
+organization	organization databases	none
+organization databases	security	none
+organization databases	best practices	none
+organization	several different approaches	none
+database security best practices	database security best practices database protection	none
+organizations	database security best practices vulnerabilities	none
+organizations	database security best practices	none
+database security best practices vulnerabilities	database security best practices database protection	none
+organizations	database security best practices database protection	none
+database security best practices vulnerabilities	database security best practices	none
+circumstances	database security	none
+database security	variety	none
+approaches	variety	none
+circumstances	variety	none
+circumstances	approaches	none
+approaches	database security	none
+It	physical hardware	none
+data	It	none
+data	physical hardware	none
+cloud	Physical database security	none
+Physical database security servers	cloud	none
+rooms	cloud	none
+databases	Physical database security	none
+rooms	premise	none
+Physical database security servers	Physical database security	none
+cloud	databases	none
+rooms	Physical database security	none
+Physical database security servers	databases	none
+cloud	premise	none
+rooms	databases	none
+premise	databases	none
+rooms	Physical database security servers	none
+Physical database security servers	premise	none
+premise	Physical database security	none
+physical access	security teams	none
+It	security teams	none
+security teams	equipment	none
+physical access	equipment	none
+It	equipment	none
+physical access	It	none
+place	physical catastrophe	none
+disaster recovery measures	backups	none
+crucial aspect	disaster recovery measures	none
+case	crucial aspect	none
+case	place	none
+database security best practice	physical catastrophe	none
+place	crucial aspect	none
+database security best practice	backups	none
+database security best practice	disaster recovery measures	none
+case	database security best practice	none
+database security best practice	crucial aspect	none
+place	disaster recovery measures	none
+place	backups	none
+disaster recovery measures	physical catastrophe	none
+backups	physical catastrophe	none
+crucial aspect	physical catastrophe	none
+place	database security best practice	none
+case	backups	none
+case	disaster recovery measures	none
+crucial aspect	backups	none
+case	physical catastrophe	none
+organization	same server	none
+applications	It	none
+database	It	none
+organization	It	none
+organization	to host web servers	none
+applications	same server	none
+database	same server	none
+applications	database	none
+It	to host web servers	none
+applications	to host web servers	none
+database	to host web servers	none
+to host web servers	same server	none
+organization	database	none
+organization	applications	none
+It	same server	none
+firewalls	Web applications	none
+web applications	firewalls	none
+database security best practice	use	none
+database security best practice	web applications	none
+use	web applications	none
+database security best practice	perimeter layer	none
+use	perimeter layer	none
+database security best practice	firewalls	none
+use	firewalls	none
+web applications	perimeter layer	none
+firewalls	perimeter layer	none
+Firewalls	cyber security concerns	none
+intruders	cyber security concerns	none
+Firewalls	intruders	none
+organization’s IT network	crucial prerequisite	none
+internet	cyber security concerns	none
+intruders	organization’s IT network	none
+intruders	crucial prerequisite	none
+intruders	internet	none
+Firewalls	crucial prerequisite	none
+Firewalls	organization’s IT network	none
+Firewalls	internet	none
+crucial prerequisite	cyber security concerns	none
+organization’s IT network	internet	none
+crucial prerequisite	internet	none
+organization’s IT network	cyber security concerns	none
+application access management software	Web applications	none
+Web applications	databases	none
+application access management software	databases	none
+database security measure	web applications	none
+database security measure	control lists	none
+who	database security measure	none
+control lists	web applications	none
+who	control lists	none
+who	web applications	none
+same benefits	firewalls	none
+firewalls	individual web applications	none
+firewalls	traditional firewalls	none
+same benefits	traditional firewalls	none
+same benefits	individual web applications	none
+individual web applications	traditional firewalls	none
+database	Encryption	none
+effective database security practices	data	none
+database	effective database security practices	none
+database	data	none
+effective database security practices	Encryption	none
+data	Encryption	none
+organization	data	none
+IT systems	data	none
+organization	IT systems	none
+rest	organizations	none
+organizations	IT systems	none
+rest	IT systems	none
+rest	motion	none
+organizations	data	none
+motion	data	none
+organization	motion	none
+rest	data	none
+organizations	motion	none
+organization	organizations	none
+motion	IT systems	none
+organization	rest	none
+it	proper keys	none
+it	Encrypted data	none
+Encrypted data	proper keys	none
+it	encrypted data	none
+someone	it	none
+someone	encrypted data	none
+IoT security	data privacy	none
+Database encryption	data privacy	none
+IoT security	Database encryption	none
+passwords	permissions	none
+passwords	permissions	none
+passwords	database security	none
+permissions	database security	none
+IT teams	dedicated security employees	none
+dedicated security employees	task	none
+IT teams	task	none
+access control lists	database security best practice	none
+instances	access control lists	none
+instances	database security best practice	none
+many different steps	users	none
+time	many different steps	none
+dual or multiple factor authentication measures	input credentials	none
+passwords	dual or multiple factor authentication measures	none
+Organizations	finite amount	none
+Organizations	users	none
+time	dual or multiple factor authentication measures	none
+Organizations	many different steps	none
+passwords	input credentials	none
+many different steps	finite amount	none
+passwords	finite amount	none
+many different steps	input credentials	none
+input credentials	users	none
+input credentials	finite amount	none
+time	input credentials	none
+Organizations	input credentials	none
+many different steps	dual or multiple factor authentication measures	none
+passwords	Organizations	none
+time	users	none
+dual or multiple factor authentication measures	finite amount	none
+dual or multiple factor authentication measures	users	none
+users	finite amount	none
+passwords	time	none
+time	Organizations	none
+passwords	users	none
+passwords	many different steps	none
+time	finite amount	none
+Organizations	dual or multiple factor authentication measures	none
+access	practice	none
+constant updating	access	none
+constant updating	practice	none
+constant updating	permissions lists	none
+access	permissions lists	none
+permissions lists	practice	none
+results	It	none
+It	sensitive databases	none
+sensitive databases	database security	none
+It	database security	none
+unauthorized users	sensitive databases	none
+isolation techniques	sensitive databases	none
+unauthorized users	isolation techniques	none
+useful means	sensitive databases	none
+particular user’s network	Software defined perimeters	none
+useful means	particular user’s network	none
+particular user’s network	sensitive databases	none
+Software defined perimeters	sensitive databases	none
+useful means	Software defined perimeters	none
+approach	databases	none
+zero-day attacks	databases	none
+it	databases	none
+approach	it	none
+zero-day attacks	lateral movement attacks	none
+it	lateral movement attacks	none
+lateral movement attacks	databases	none
+zero-day attacks	it	none
+approach	zero-day attacks	none
+approach	lateral movement attacks	none
+access level	best ways	none
+Isolation strategies	best ways	none
+Isolation strategies	access level	none
+Isolation strategies	database security	none
+access level	database security	none
+best ways	database security	none
+approach	Competitive isolation solutions	none
+database layer security	encryption	none
+database layer security	Competitive isolation solutions	none
+approach	encryption	none
+Competitive isolation solutions	public keys	none
+database layer security	public keys	none
+Competitive isolation solutions	encryption	none
+encryption	public keys	none
+approach	public keys	none
+approach	database layer security	none
+Change management	advance	none
+procedures	Change management	none
+procedures	change	none
+change	Change management	none
+place	Change management	none
+change	place	none
+advance	databases	none
+procedures	advance	none
+change	advance	none
+procedures	databases	none
+change	databases	none
+place	advance	none
+place	databases	none
+Change management	databases	none
+procedures	place	none
+access	different users	none
+Examples	access	none
+access	various IT resources	none
+Examples	acquisitions	none
+access	acquisitions	none
+different users	various IT resources	none
+changes	various IT resources	none
+various IT resources	acquisitions	none
+different users	changes	none
+mergers	acquisitions	none
+access	mergers	none
+access	changes	none
+Examples	changes	none
+Examples	various IT resources	none
+different users	mergers	none
+Examples	mergers	none
+changes	acquisitions	none
+changes	mergers	none
+different users	acquisitions	none
+Examples	different users	none
+various IT resources	mergers	none
+It	what changes	none
+place	secure access	none
+applications	It	none
+applications	what changes	none
+secure access	It	none
+place	It	none
+applications	secure access	none
+It	databases	none
+applications	databases	none
+place	what changes	none
+what changes	databases	none
+place	databases	none
+secure access	what changes	none
+secure access	databases	none
+place	applications	none
+applications	addition	none
+applications	It	none
+database	It	none
+database	addition	none
+It	addition	none
+IT systems	addition	none
+It	IT systems	none
+applications	database	none
+database	IT systems	none
+applications	IT systems	none
+Database auditing	Database auditing applications	none
+databases	Database auditing applications	none
+log files	databases	none
+log files	Database auditing	none
+databases	Database auditing	none
+log files	Database auditing applications	none
+information	app	none
+who	repository	none
+app	what	none
+information	repository	none
+who	what	none
+app	who	none
+app	repository	none
+information	what	none
+information	who	none
+what	repository	none
+database administrators	data	none
+timely audits	database administrators	none
+unauthorized access	breaches	none
+breaches	overall impact	none
+data	breaches	none
+unauthorized access	database administrators	none
+timely audits	data	none
+timely audits	overall impact	none
+database administrators	breaches	none
+timely audits	breaches	none
+database administrators	overall impact	none
+data	overall impact	none
+unauthorized access	timely audits	none
+unauthorized access	data	none
+unauthorized access	overall impact	none
+data breaches	customers	none
+quicker organizations	data breaches	none
+damage	quicker organizations	none
+damage	data breaches	none
+damage	customers	none
+quicker organizations	customers	none
+database security	final step	none
+Database auditing	protection	none
+Database auditing	database security	none
+centralized oversight	final step	none
+final step	protection	none
+centralized oversight	protection	none
+centralized oversight	database security	none
+database security	protection	none
+centralized oversight	Database auditing	none
+Database auditing	final step	none
+important concerns	Modern Security Solutions Database security	none
+important concerns	data management landscape	none
+data management landscape	Modern Security Solutions Database security	none
+approaches	security	none
+approaches	growing threats	none
+growing threats	security	none
+Organizations	security	none
+Organizations	growing threats	none
+Organizations	approaches	none
+techniques	comprehensive solutions	none
+techniques	database security	none
+comprehensive solutions	database security	none
+users databases	Artificial Intelligence methods	none
+Sumo Logic	users	none
+Artificial Intelligence methods	users	none
+users databases	Sumo Logic	none
+overall protection	Sumo Logic	none
+overall protection	real-time insights	none
+applications	real-time insights	none
+users databases	real-time insights	none
+Artificial Intelligence methods	Sumo Logic	none
+Artificial Intelligence methods	overall protection	none
+real-time insights	users	none
+Sumo Logic	real-time insights	none
+Artificial Intelligence methods	real-time insights	none
+Artificial Intelligence methods	applications	none
+Sumo Logic	applications	none
+users databases	overall protection	none
+overall protection	users	none
+applications	users	none
+users databases	users	none
+users databases	applications	none
+overall protection	applications	none
+trouble-shooting and system monitoring	Sumo Logic	none
+Additional capabilities	Sumo Logic	none
+Additional capabilities	database security	none
+Sumo Logic	database security	none
+trouble-shooting and system monitoring	database security	none
+Additional capabilities	trouble-shooting and system monitoring	none
