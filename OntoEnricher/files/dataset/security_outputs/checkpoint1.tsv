@@ -1,0 +1,12 @@
+multiple security features	content security	none
+personal firewall	port protection	none
+security protections	content security	none
+advanced threat prevention	intrusion prevention	none
+intrusion prevention	firewall	none
+security protections	advanced threat prevention	none
+security protections	firewall	none
+Security Gateway	firewall	none
+Security Gateway	security protections	none
+Security Gateway	intrusion prevention	none
+security protections	intrusion prevention	none
+Security Gateway	content security	none

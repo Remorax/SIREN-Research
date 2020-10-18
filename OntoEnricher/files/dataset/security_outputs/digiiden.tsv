@@ -1,0 +1,18 @@
+Authentication	authentication	none
+Password Requirements	Passwords	none
+credential	password	none
+information	credential	none
+information	password	none
+passwords	biometrics	none
+digital authentication	biometrics	none
+digital authentication	authentication	none
+biometrics	authentication	none
+digital authentication knowledge	authentication	none
+digital authentication	digital authentication knowledge	none
+biometrics	authentication	none
+digital authentication	authentication	none
+digital authentication	biometrics	none
+cryptographic protocol	authentication	none
+authentication	authentication assurance	none
+data	value	none
+secure’ flag	secure channel	none

@@ -1,0 +1,17 @@
+man-in-the-middle attacks	attackers	none
+man-in-the-middle attacks	crypto	none
+credentials	data	none
+information	credentials	none
+PII	data	none
+information	PII	none
+personal data	data	none
+information	data	none
+personal data	sensitive personal information	none
+personal data	PII	none
+personal data	information	none
+credentials	PII	none
+sensitive personal information	PII	none
+passwords	data	none
+personal information	privacy laws	none
+personal information	data	none
+secure parameters	secure protocols	none

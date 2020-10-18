@@ -1,0 +1,9 @@
+internet	data	none
+personal data	work data	none
+personal data	personal information	none
+IT security risks	Physical security	none
+corporate data	work data	none
+corporate data	personal information	none
+personal data	corporate data	none
+threats	vulnerabilities	none
+IoT	internet	none
