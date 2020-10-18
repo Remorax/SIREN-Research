@@ -1,751 +1,751 @@
-Color Profiles Image	basic features	none
-modern operating system	OS	none
-modern operating system	Part	none
+Part	modern operating system	none
+Color Profiles Image	modern operating system	none
 Color Profiles Image	Part	none
-OS	basic features	none
-modern operating system	basic features	none
-modern operating system	Color Profiles Image	none
-OS	Part	none
 Part	basic features	none
-OS	Color Profiles Image	none
-feature	attackers	none
-attackers	accessible attack surface	none
+modern operating system	basic features	none
+Part	OS	none
+modern operating system	OS	none
+Color Profiles Image	OS	none
+Color Profiles Image	basic features	none
+OS	basic features	none
+feature	accessible attack surface	none
+feature	remote code execution	none
+accessible attack surface	remote code execution	none
+vulnerability	feature	none
 information disclosure	remote code execution	none
 information disclosure	feature	none
-feature	Image parsing	none
-information disclosure	attackers	none
-attackers	remote code execution	none
-attackers	Image parsing	none
-accessible attack surface	Image parsing	none
+vulnerability	remote code execution	none
+Image parsing	feature	none
+vulnerability	attackers	none
+accessible attack surface	attackers	none
+Image parsing	remote code execution	none
 Image parsing	vulnerability	none
-information disclosure	Image parsing	none
-feature	remote code execution	none
-remote code execution	vulnerability	none
-remote code execution	accessible attack surface	none
-attackers	vulnerability	none
-remote code execution	Image parsing	none
-feature	accessible attack surface	none
+Image parsing	attackers	none
+feature	attackers	none
+remote code execution	attackers	none
+Image parsing	accessible attack surface	none
 information disclosure	accessible attack surface	none
+information disclosure	Image parsing	none
 information disclosure	vulnerability	none
-accessible attack surface	vulnerability	none
-feature	vulnerability	none
-harness	Windows OS’ built-in image parsers	none
-vulnerabilities	fuzzing	none
-fuzzing	harness	none
-fuzzing	Windows OS’ built-in image parsers	none
-I	harness	none
-I	Windows OS’ built-in image parsers	none
-related file formats	Windows OS’ built-in image parsers	none
-related file formats	vulnerabilities	none
-multi-part blog series	harness	none
-multi-part blog series	Windows OS’ built-in image parsers	none
+vulnerability	accessible attack surface	none
+information disclosure	attackers	none
 corpus	harness	none
-corpus	Windows OS’ built-in image parsers	none
-corpus	related file formats	none
-multi-part blog series	I	none
-vulnerabilities	Windows OS’ built-in image parsers	none
-vulnerabilities	harness	none
-multi-part blog series	related file formats	none
-I	vulnerabilities	none
-corpus	I	none
-I	fuzzing	none
-multi-part blog series	corpus	none
-related file formats	harness	none
-related file formats	fuzzing	none
-multi-part blog series	vulnerabilities	none
+related file formats	Windows OS’ built-in image parsers	none
 I	related file formats	none
+fuzzing	related file formats	none
+I	corpus	none
+fuzzing	corpus	none
+corpus	Windows OS’ built-in image parsers	none
+related file formats	harness	none
+vulnerabilities	I	none
+vulnerabilities	fuzzing	none
 multi-part blog series	fuzzing	none
-corpus	vulnerabilities	none
-corpus	fuzzing	none
-part	series	none
-image format	I	none
-images	series	none
-image format	series	none
-images	I	none
-I	part	none
-color profiles	something	none
-itself	part	none
+vulnerabilities	multi-part blog series	none
+related file formats	corpus	none
+I	fuzzing	none
+vulnerabilities	corpus	none
+fuzzing	Windows OS’ built-in image parsers	none
+vulnerabilities	harness	none
+multi-part blog series	corpus	none
+multi-part blog series	related file formats	none
+harness	Windows OS’ built-in image parsers	none
+multi-part blog series	Windows OS’ built-in image parsers	none
+I	harness	none
+vulnerabilities	Windows OS’ built-in image parsers	none
+fuzzing	harness	none
+vulnerabilities	related file formats	none
+I	multi-part blog series	none
+multi-part blog series	harness	none
+I	Windows OS’ built-in image parsers	none
+part	image format	none
 color profiles	images	none
-image format	itself	none
-itself	series	none
-I	series	none
-image format	part	none
-images	something	none
-color profiles	part	none
-color profiles	itself	none
-color profiles	image format	none
-something	itself	none
-something	I	none
-something	image format	none
-something	series	none
-images	part	none
 something	part	none
-color profiles	series	none
-images	itself	none
-color profiles	I	none
-images	image format	none
-itself	I	none
+I	something	none
+series	part	none
+something	images	none
+I	series	none
+I	itself	none
+color profiles	itself	none
+image format	images	none
+series	image format	none
+something	image format	none
+series	color profiles	none
+series	images	none
+series	itself	none
+something	color profiles	none
+something	itself	none
+itself	image format	none
+something	series	none
+I	images	none
+color profiles	image format	none
+I	color profiles	none
+part	images	none
+color profiles	part	none
+itself	part	none
+itself	images	none
+I	part	none
+I	image format	none
 What	ICC Color Profile	none
-color space	more-than-adequate description	none
-data	set	none
-color space	set	none
-standards	more-than-adequate description	none
-color management	color input or output device	none
-ICC	color input or output device	none
+ICC color profiles	color space	none
+standards	color space	none
+International Color Consortium	color space	none
+color input or output device	color space	none
+more-than-adequate description	color management	none
+set	data	none
+set	ICC	none
+ICC profile	ICC	none
 more-than-adequate description	color input or output device	none
-color space	ICC color profiles	none
-data	ICC color profiles	none
-ICC color profiles	set	none
-data	color space	none
+ICC profile	color input or output device	none
+set	standards	none
+set	International Color Consortium	none
+set	color space	none
+more-than-adequate description	color space	none
+ICC profile	color space	none
+ICC color profiles	data	none
 ICC color profiles	ICC	none
-data	ICC	none
-color space	ICC	none
-International Color Consortium	ICC	none
-data	color input or output device	none
-International Color Consortium	Wikipedia	none
-ICC profile	Wikipedia	none
-data	International Color Consortium	none
+standards	data	none
+Wikipedia	International Color Consortium	none
+standards	ICC	none
+set	ICC profile	none
 Wikipedia	color input or output device	none
-data	color management	none
-color management	ICC profile	none
-color management	ICC	none
-more-than-adequate description	ICC profile	none
-International Color Consortium	ICC profile	none
-standards	set	none
-ICC	Wikipedia	none
-color management	Wikipedia	none
-standards	ICC color profiles	none
-more-than-adequate description	Wikipedia	none
-set	color input or output device	none
-color space	International Color Consortium	none
-ICC	ICC profile	none
+ICC	color space	none
+Wikipedia	data	none
+Wikipedia	ICC	none
+ICC color profiles	color input or output device	none
 standards	color input or output device	none
 ICC color profiles	International Color Consortium	none
-data	Wikipedia	none
-standards	color management	none
-color management	color space	none
-data	ICC profile	none
-color space	ICC profile	none
-set	ICC profile	none
-color management	International Color Consortium	none
-ICC color profiles	ICC profile	none
-color management	more-than-adequate description	none
-color space	Wikipedia	none
-set	Wikipedia	none
-ICC	more-than-adequate description	none
-ICC color profiles	Wikipedia	none
-standards	Wikipedia	none
-color management	set	none
-more-than-adequate description	set	none
-data	standards	none
-International Color Consortium	set	none
-standards	ICC profile	none
-data	more-than-adequate description	none
-International Color Consortium	more-than-adequate description	none
-standards	color space	none
-ICC profile	color input or output device	none
-color management	ICC color profiles	none
-standards	ICC	none
-International Color Consortium	color input or output device	none
-color space	color input or output device	none
-ICC	set	none
 standards	International Color Consortium	none
+color management	color input or output device	none
+more-than-adequate description	data	none
+more-than-adequate description	ICC	none
+Wikipedia	ICC color profiles	none
+Wikipedia	standards	none
+color management	International Color Consortium	none
+ICC color profiles	color management	none
+standards	color management	none
+color management	data	none
+color management	ICC	none
+ICC profile	data	none
+Wikipedia	color space	none
+more-than-adequate description	International Color Consortium	none
+Wikipedia	more-than-adequate description	none
+Wikipedia	ICC profile	none
+ICC profile	International Color Consortium	none
+ICC color profiles	set	none
+set	color input or output device	none
+ICC color profiles	ICC profile	none
 ICC color profiles	more-than-adequate description	none
-ICC color profiles	color input or output device	none
-PCS	Profiles	none
-device source	viewing requirement	none
-mapping	profile connection space	none
-Profiles	profile connection space	none
-particular device	mapping	none
+standards	more-than-adequate description	none
+standards	ICC profile	none
+color management	ICC profile	none
+data	color input or output device	none
+Wikipedia	set	none
+data	International Color Consortium	none
+data	color space	none
+set	color management	none
+ICC	International Color Consortium	none
+more-than-adequate description	ICC profile	none
+ICC	color input or output device	none
+data	ICC	none
+Wikipedia	color management	none
+International Color Consortium	color input or output device	none
+ICC color profiles	standards	none
+set	more-than-adequate description	none
+color management	color space	none
 PCS	viewing requirement	none
-color attributes	viewing requirement	none
-Profiles	particular device	none
+profile connection space	color space	none
 particular device	device source	none
-viewing requirement	profile connection space	none
-PCS	profile connection space	none
-device source	profile connection space	none
-mapping	viewing requirement	none
-color attributes	particular device	none
-PCS	particular device	none
-Profiles	viewing requirement	none
-color space	profile connection space	none
-color attributes	color space	none
-color attributes	profile connection space	none
-color attributes	PCS	none
-PCS	color space	none
-color space	particular device	none
-color space	viewing requirement	none
-particular device	viewing requirement	none
-PCS	device source	none
-color space	mapping	none
-PCS	mapping	none
-color attributes	mapping	none
-color space	device source	none
-color attributes	Profiles	none
 Profiles	device source	none
-color attributes	device source	none
-mapping	device source	none
-Profiles	mapping	none
-particular device	profile connection space	none
+profile connection space	device source	none
+mapping	color attributes	none
+PCS	color attributes	none
+profile connection space	particular device	none
 color space	Profiles	none
+mapping	color space	none
+viewing requirement	Profiles	none
+particular device	Profiles	none
+mapping	PCS	none
+mapping	viewing requirement	none
+profile connection space	Profiles	none
+mapping	particular device	none
+color space	device source	none
+mapping	device source	none
+color space	particular device	none
+color attributes	Profiles	none
+color space	viewing requirement	none
+viewing requirement	particular device	none
+viewing requirement	device source	none
+color attributes	color space	none
+PCS	Profiles	none
+PCS	profile connection space	none
+mapping	profile connection space	none
+color attributes	viewing requirement	none
+mapping	Profiles	none
+color attributes	particular device	none
+color attributes	device source	none
+PCS	particular device	none
+PCS	device source	none
+PCS	color space	none
+color attributes	profile connection space	none
+profile connection space	viewing requirement	none
 L*a*b	PCS	none
-PCS	CIELAB	none
 L*a*b	CIELAB	none
-series	parameters	none
-tables	parameters	none
-tables	interpolation	none
-tables	series	none
-tables	Mappings	none
-parameters	Mappings	none
-parameters	interpolation	none
-series	Mappings	none
-series	interpolation	none
-Mappings	interpolation	none
-series	transformations	none
-transformations	interpolation	none
-parameters	transformations	none
+PCS	CIELAB	none
+interpolation	tables	none
 transformations	Mappings	none
-tables	transformations	none
-images	software processes	none
-images	ICC color profile	none
-binary file	software processes	none
+series	tables	none
+series	interpolation	none
+interpolation	parameters	none
+series	parameters	none
+transformations	parameters	none
+transformations	series	none
+transformations	interpolation	none
+Mappings	tables	none
+transformations	tables	none
+tables	parameters	none
+Mappings	parameters	none
+Mappings	series	none
+Mappings	interpolation	none
+binary file	images	none
+ICC	images	none
+simpler terms	software processes	none
 binary file	ICC color profile	none
-software processes	ICC color profile	none
-ICC	simpler terms	none
-ICC color profile	simpler terms	none
-software processes	ICC	none
-binary file	ICC	none
-images	ICC	none
-ICC	ICC color profile	none
-images	simpler terms	none
 binary file	simpler terms	none
-images	binary file	none
-software processes	simpler terms	none
+ICC color profile	ICC	none
+ICC color profile	software processes	none
+ICC	software processes	none
+simpler terms	images	none
+ICC color profile	simpler terms	none
+ICC color profile	images	none
+binary file	ICC	none
+binary file	software processes	none
+ICC	simpler terms	none
+images	software processes	none
 ICC specification	100 pages	none
-math	different types	none
 file format	specifications	none
-better understanding	different types	none
-file format	color transformation	none
-color profiles	different types	none
-color transformation	different types	none
-color profiles	file format	none
-math	file format	none
-math	color transformation	none
-better understanding	file format	none
-math	specifications	none
-better understanding	specifications	none
-color profiles	specifications	none
-file format	different types	none
-better understanding	color transformation	none
 color profiles	color transformation	none
-color transformation	specifications	none
 different types	specifications	none
+better understanding	specifications	none
+file format	math	none
+file format	color transformation	none
+color profiles	specifications	none
+color transformation	math	none
 color profiles	better understanding	none
+different types	better understanding	none
 color profiles	math	none
-math	better understanding	none
-us	understanding	none
-fuzzing dictionaries	file format internals	none
+color profiles	different types	none
+color transformation	specifications	none
+file format	better understanding	none
+different types	file format	none
+different types	color transformation	none
+color profiles	file format	none
+math	specifications	none
+different types	math	none
+better understanding	color transformation	none
+better understanding	math	none
 information	good corpus	none
-fuzzing	good corpus	none
-information	fuzzing	none
-us	information	none
-fuzzing dictionaries	information	none
-file format internals	fuzzing	none
-us	good corpus	none
-us	file format internals	none
-understanding	fuzzing	none
-us	fuzzing	none
 file format internals	good corpus	none
+fuzzing	information	none
+file format internals	fuzzing dictionaries	none
+information	understanding	none
+us	good corpus	none
+fuzzing	fuzzing dictionaries	none
+file format internals	information	none
+us	fuzzing dictionaries	none
 fuzzing dictionaries	understanding	none
-understanding	file format internals	none
-fuzzing dictionaries	fuzzing	none
-fuzzing dictionaries	us	none
-understanding	information	none
-understanding	good corpus	none
-information	file format internals	none
+us	information	none
+fuzzing	file format internals	none
+us	understanding	none
+file format internals	understanding	none
 fuzzing dictionaries	good corpus	none
-Windows	Windows Windows	none
-Windows	History	none
-Color Management	Windows Windows	none
-Color Management	History	none
-Windows	Color Management	none
-Windows Windows	History	none
-Image Color Management (ICM) version	Color Management	none
-Color Management	version	none
-Image Color Management (ICM) version	History	none
-Windows	Image Color Management (ICM) version	none
-Windows Windows	version	none
-Image Color Management (ICM) version	Windows Windows	none
-History	version	none
-Image Color Management (ICM) version	version	none
+fuzzing	us	none
+fuzzing	understanding	none
+information	fuzzing dictionaries	none
+understanding	good corpus	none
+fuzzing	good corpus	none
+us	file format internals	none
+History	Windows Windows	none
 Windows	version	none
-WCS	Windows Color System	none
-major overhaul	Windows Vista	none
-major overhaul	WCS	none
-Windows Vista	Windows Color System	none
-major overhaul	Windows Color System	none
+History	Color Management	none
+Windows Windows	Windows	none
+Image Color Management (ICM) version	Windows	none
+History	Image Color Management (ICM) version	none
+Image Color Management (ICM) version	version	none
+Image Color Management (ICM) version	Windows Windows	none
+Color Management	Windows	none
+Color Management	version	none
+Windows Windows	version	none
+History	version	none
+Color Management	Windows Windows	none
+History	Windows	none
+Image Color Management (ICM) version	Color Management	none
 WCS	Windows Vista	none
-WCS color profiles	XML file format	none
-ICC color profiles	WCS color profiles	none
-WCS color profiles	XML	none
-XML	XML file format	none
-binary files	XML	none
-binary files	XML file format	none
-ICC color profiles	XML	none
-ICC color profiles	XML file format	none
+WCS	major overhaul	none
+major overhaul	Windows Color System	none
+Windows Vista	major overhaul	none
+WCS	Windows Color System	none
+Windows Vista	Windows Color System	none
 ICC color profiles	binary files	none
+ICC color profiles	XML	none
+XML	binary files	none
+XML	XML file format	none
+XML file format	WCS color profiles	none
+ICC color profiles	XML file format	none
 binary files	WCS color profiles	none
-I	blog post	none
-I	ICC color profiles	none
+XML	WCS color profiles	none
+ICC color profiles	WCS color profiles	none
+binary files	XML file format	none
 blog post	ICC color profiles	none
-Microsoft	supported Windows APIs	none
+blog post	I	none
+I	ICC color profiles	none
 Microsoft	list	none
-supported Windows APIs	list	none
-OpenColorProfile	we	none
-MSCMS.dll	OpenColorProfile	none
-named APIs	we	none
-OpenColorProfile	named APIs	none
-named APIs	it	none
-MSCMS.dll	we	none
-OpenColorProfile	it	none
-MSCMS.dll	it	none
+list	supported Windows APIs	none
+Microsoft	supported Windows APIs	none
+we	MSCMS.dll	none
+we	named APIs	none
+OpenColorProfile	MSCMS.dll	none
 MSCMS.dll	named APIs	none
-it	we	none
-Adobe’s CMM	CMM	none
-loading	Adobe’s CMM	none
+OpenColorProfile	it	none
+we	it	none
+OpenColorProfile	we	none
+it	named APIs	none
+OpenColorProfile	named APIs	none
+it	MSCMS.dll	none
 loading	Microsoft’s Color Management Module	none
-DLL	Adobe’s CMM	none
-loading	generic entry point	none
-DLL	generic entry point	none
-generic entry point	third-party CMMs	none
-loading	third-party CMMs	none
-DLL	CMM	none
-Microsoft’s Color Management Module	third-party CMMs	none
-generic entry point	Adobe’s CMM	none
-Adobe’s CMM	third-party CMMs	none
-Microsoft’s Color Management Module	DLL	none
-Microsoft’s Color Management Module	Adobe’s CMM	none
-Microsoft’s Color Management Module	generic entry point	none
-generic entry point	CMM	none
-loading	CMM	none
-DLL	third-party CMMs	none
+Adobe’s CMM	loading	none
 third-party CMMs	CMM	none
-Microsoft’s Color Management Module	CMM	none
-loading	DLL	none
-ICM32.dll	Microsoft’s CMM	none
-ICM32.dll	ICM	none
-ICM	system32 directory	none
-Microsoft’s CMM	ICM	none
-ICM32.dll	system32 directory	none
+generic entry point	CMM	none
+Adobe’s CMM	Microsoft’s Color Management Module	none
+DLL	Adobe’s CMM	none
+generic entry point	loading	none
+generic entry point	third-party CMMs	none
+Adobe’s CMM	CMM	none
+generic entry point	Microsoft’s Color Management Module	none
+loading	CMM	none
+DLL	CMM	none
+Adobe’s CMM	third-party CMMs	none
+third-party CMMs	Microsoft’s Color Management Module	none
+generic entry point	Adobe’s CMM	none
+loading	third-party CMMs	none
+DLL	loading	none
+generic entry point	DLL	none
+DLL	third-party CMMs	none
+DLL	Microsoft’s Color Management Module	none
+CMM	Microsoft’s Color Management Module	none
 Microsoft’s CMM	system32 directory	none
-same code	decades	none
-third-party	CMM	none
-Windows 95 era	CMM	none
-same code	ships	none
-security fixes	CMM	none
-ships	third-party	none
-security fixes	third-party	none
-Windows 95 era	third-party	none
-Windows 95 era	same code	none
-third-party	decades	none
-security fixes	same code	none
-Windows 95 era	security fixes	none
-same code	CMM	none
-security fixes	decades	none
-Windows 95 era	decades	none
-ships	decades	none
-decades	CMM	none
+ICM	ICM32.dll	none
+ICM32.dll	system32 directory	none
+ICM	system32 directory	none
+ICM32.dll	Microsoft’s CMM	none
+ICM	Microsoft’s CMM	none
+same code	security fixes	none
 same code	third-party	none
+decades	third-party	none
+decades	CMM	none
+decades	security fixes	none
+security fixes	third-party	none
+Windows 95 era	CMM	none
+Windows 95 era	security fixes	none
+Windows 95 era	third-party	none
+decades	Windows 95 era	none
+decades	ships	none
 security fixes	ships	none
+third-party	ships	none
+decades	same code	none
+CMM	ships	none
+same code	CMM	none
+CMM	security fixes	none
+Windows 95 era	same code	none
+CMM	third-party	none
+same code	ships	none
 Windows 95 era	ships	none
-ships	CMM	none
-old module	new vulnerability	none
+me	hope	none
+new vulnerability	hope	none
+hope	old module	none
+new vulnerability	old module	none
+me	old module	none
 me	new vulnerability	none
-old module	me	none
-old module	hope	none
-hope	new vulnerability	none
-hope	me	none
-external researchers	small module	none
-small module	fuzzing	none
-small module	review	none
-certain degree	hopes	none
-multiple rounds	hopes	none
-certain degree	fuzzing	none
-certain degree	internal product security teams	none
+review	certain degree	none
+hopes	internal product security teams	none
+multiple rounds	external researchers	none
+fuzzing	internal product security teams	none
+fuzzing	hopes	none
+hopes	external researchers	none
+multiple rounds	small module	none
+hopes	small module	none
 multiple rounds	internal product security teams	none
-external researchers	review	none
-small module	internal product security teams	none
-internal product security teams	hopes	none
-external researchers	fuzzing	none
-certain degree	review	none
-internal product security teams	fuzzing	none
-external researchers	internal product security teams	none
-certain degree	multiple rounds	none
-small module	multiple rounds	none
-small module	hopes	none
-multiple rounds	fuzzing	none
-external researchers	multiple rounds	none
-hopes	fuzzing	none
-external researchers	certain degree	none
-review	internal product security teams	none
-external researchers	hopes	none
-review	multiple rounds	none
+fuzzing	external researchers	none
+fuzzing	small module	none
+multiple rounds	certain degree	none
 review	hopes	none
+review	small module	none
+certain degree	small module	none
+review	external researchers	none
+multiple rounds	fuzzing	none
+internal product security teams	small module	none
+certain degree	external researchers	none
+internal product security teams	external researchers	none
+review	internal product security teams	none
+hopes	certain degree	none
+certain degree	internal product security teams	none
+multiple rounds	hopes	none
 review	fuzzing	none
-small module	certain degree	none
+review	multiple rounds	none
+fuzzing	certain degree	none
+external researchers	small module	none
 relative silence	ICM32	none
-relative silence	Project Zero and ZDI researchers	none
-relative silence	we	none
-Project Zero and ZDI researchers	recent vulnerabilities	none
-ICM32	we	none
-Project Zero and ZDI researchers	we	none
-recent vulnerabilities	multiple bugs	none
-relative silence	recent vulnerabilities	none
-recent vulnerabilities	we	none
-ICM32	multiple bugs	none
-Project Zero and ZDI researchers	multiple bugs	none
-ICM32	recent vulnerabilities	none
+recent vulnerabilities	ICM32	none
 we	multiple bugs	none
-ICM32	Project Zero and ZDI researchers	none
+multiple bugs	recent vulnerabilities	none
+relative silence	recent vulnerabilities	none
+relative silence	we	none
+we	recent vulnerabilities	none
+Project Zero and ZDI researchers	multiple bugs	none
 relative silence	multiple bugs	none
-Windows	ICM APIs	none
-Windows	API sequence	none
-API sequence	MSDN	none
-MSDN	we	none
+Project Zero and ZDI researchers	ICM32	none
+Project Zero and ZDI researchers	we	none
+Project Zero and ZDI researchers	relative silence	none
+Project Zero and ZDI researchers	recent vulnerabilities	none
+multiple bugs	ICM32	none
+we	ICM32	none
+we	Windows	none
 ICM APIs	we	none
-Windows	ICC related operations	none
-API sequence	we	none
-ICC related operations	MSDN	none
-API sequence	list	none
-Windows	MSDN	none
-Windows	list	none
-list	ICM APIs	none
-ICC related operations	we	none
-API sequence	ICM APIs	none
-Windows	we	none
-list	MSDN	none
-API sequence	ICC related operations	none
+ICM APIs	ICC related operations	none
 ICC related operations	list	none
-list	we	none
-MSDN	ICM APIs	none
-ICC related operations	ICM APIs	none
-hope	EXEs	none
-API sequence	ways	none
-hope	ways	none
-API sequence	EXEs	none
-color profile APIs	disassembly	none
-disassembly	EXEs	none
-disassembly	ways	none
-API sequence	color profile APIs	none
-API sequence	disassembly	none
-API sequence	hope	none
-color profile APIs	EXEs	none
-Windows DLLs	hope	none
-Windows DLLs	disassembly	none
-color profile APIs	Windows DLLs	none
-Windows DLLs	EXEs	none
-Windows DLLs	ways	none
-API sequence	Windows DLLs	none
-EXEs	ways	none
+API sequence	ICC related operations	none
+we	ICC related operations	none
+ICC related operations	MSDN	none
+MSDN	Windows	none
+ICC related operations	Windows	none
+ICM APIs	MSDN	none
+API sequence	list	none
+ICM APIs	Windows	none
+MSDN	list	none
+API sequence	we	none
+we	list	none
+Windows	list	none
+we	MSDN	none
+API sequence	ICM APIs	none
+API sequence	MSDN	none
+API sequence	Windows	none
+ICM APIs	list	none
+Windows DLLs	color profile APIs	none
 color profile APIs	ways	none
-color profile APIs	hope	none
+Windows DLLs	disassembly	none
+EXEs	color profile APIs	none
+EXEs	ways	none
+EXEs	hope	none
 disassembly	hope	none
-Little CMS	open source Color Management Systems	none
-LCMS	harness	none
-approach	open source Color Management Systems	none
-approach	Little CMS	none
-harness	open source Color Management Systems	none
-Little CMS	harness	none
-LCMS	open source Color Management Systems	none
+EXEs	API sequence	none
+Windows DLLs	EXEs	none
+ways	hope	none
+color profile APIs	hope	none
+API sequence	disassembly	none
+EXEs	disassembly	none
+API sequence	color profile APIs	none
+Windows DLLs	hope	none
+Windows DLLs	ways	none
+disassembly	ways	none
+color profile APIs	disassembly	none
+Windows DLLs	API sequence	none
+API sequence	ways	none
+API sequence	hope	none
 LCMS	approach	none
 LCMS	Little CMS	none
-approach	harness	none
-color transformations	APIs	none
-color profiles	color transformations	none
-color profiles	functionality	none
-small set	APIs	none
+harness	Little CMS	none
+open source Color Management Systems	approach	none
+approach	Little CMS	none
+open source Color Management Systems	Little CMS	none
+LCMS	open source Color Management Systems	none
+LCMS	harness	none
+harness	open source Color Management Systems	none
+harness	approach	none
+small set	color profiles	none
+APIs	functionality	none
 small set	color transformations	none
+APIs	small set	none
+functionality	small set	none
+color profiles	color transformations	none
+functionality	color profiles	none
+APIs	color profiles	none
+APIs	color transformations	none
 functionality	color transformations	none
-color profiles	small set	none
-color profiles	APIs	none
-functionality	APIs	none
-small set	functionality	none
-Dictionary Sites	Corpus	none
 multiple color profiles	Corpus	none
-multiple color profiles	Dictionary Sites	none
-multiple color profiles	internet	none
 Corpus	internet	none
 Dictionary Sites	internet	none
-images	other main source	none
-color profile	other main source	none
-images	color profile	none
-programming/tools color profile	to stand-alone files	none
-programming/tools color profile	programming/tools	none
-many image files	other main source	none
-images	programming/tools color profile	none
-programming/tools color profile	many image files	none
-programming/tools color profile	color profile	none
-many image files	to stand-alone files	none
-programming/tools	to stand-alone files	none
-images	many image files	none
-other main source	to stand-alone files	none
+multiple color profiles	Dictionary Sites	none
+Dictionary Sites	Corpus	none
+multiple color profiles	internet	none
 programming/tools	many image files	none
-many image files	color profile	none
-programming/tools	other main source	none
+color profile	programming/tools color profile	none
+to stand-alone files	color profile	none
+many image files	images	none
+to stand-alone files	other main source	none
+programming/tools color profile	many image files	none
+programming/tools color profile	images	none
+programming/tools	to stand-alone files	none
+to stand-alone files	programming/tools color profile	none
+to stand-alone files	many image files	none
+to stand-alone files	images	none
 programming/tools	color profile	none
-images	to stand-alone files	none
-color profile	to stand-alone files	none
+color profile	many image files	none
 programming/tools color profile	other main source	none
-images	programming/tools	none
-corpus	we	none
-specification	seven different color profiles	none
+color profile	images	none
+programming/tools	other main source	none
+other main source	images	none
+many image files	other main source	none
+programming/tools	programming/tools color profile	none
+color profile	other main source	none
+programming/tools	images	none
 specification	we	none
-seven different color profiles	one sample	none
+one sample	seven different color profiles	none
+specification	corpus	none
+one sample	corpus	none
+specification	seven different color profiles	none
+one sample	we	none
+we	corpus	none
 corpus	seven different color profiles	none
-corpus	one sample	none
-we	one sample	none
-corpus	specification	none
-specification	one sample	none
 we	seven different color profiles	none
-fuzzing	first set	none
+one sample	specification	none
 fuzzing	corpuses	none
-corpuses	code coverage information	none
-first set	corpuses	none
-fuzzing	code coverage information	none
-first set	code coverage information	none
+code coverage information	first set	none
+code coverage information	fuzzing	none
+code coverage information	corpuses	none
+fuzzing	first set	none
+corpuses	first set	none
 dictionary	specifications	none
-list	specifications	none
-fuzzer	values	none
+dictionary	list	none
+values	dictionary	none
+fuzzer	unique tag names	none
+values	additional code paths	none
+additional code paths	unique tag names	none
+specifications	unique tag names	none
+list	unique tag names	none
 additional code paths	specifications	none
+additional code paths	list	none
+dictionary	additional code paths	none
+values	list	none
+values	specifications	none
+specifications	list	none
+dictionary	unique tag names	none
 fuzzer	specifications	none
+values	fuzzer	none
 fuzzer	additional code paths	none
-list	values	none
-fuzzer	dictionary	none
 fuzzer	list	none
 values	unique tag names	none
-additional code paths	unique tag names	none
-unique tag names	specifications	none
-dictionary	unique tag names	none
-list	additional code paths	none
-list	unique tag names	none
-list	dictionary	none
-fuzzer	unique tag names	none
-values	specifications	none
-values	additional code paths	none
-values	dictionary	none
-dictionary	additional code paths	none
-One	dictionaries	none
+dictionary	fuzzer	none
+open source fuzzing attempts	One	none
+dictionaries	LCMS	none
+open source fuzzing attempts	dictionaries	none
 One	LCMS	none
 open source fuzzing attempts	LCMS	none
-LCMS	dictionaries	none
-open source fuzzing attempts	One	none
-open source fuzzing attempts	dictionaries	none
-16-core machine	harness	none
-first set	corpuses	none
-I	first set	none
-harness	first set	none
-I	corpuses	none
-16-core machine	I	none
-harness	corpuses	none
+One	dictionaries	none
 I	harness	none
-16-core machine	corpuses	none
-16-core machine	first set	none
+I	corpuses	none
+first set	16-core machine	none
+harness	first set	none
+I	first set	none
+corpuses	16-core machine	none
+corpuses	first set	none
+I	16-core machine	none
+harness	16-core machine	none
+corpuses	harness	none
+Code coverage information	fuzzer	none
+MSCMS.dll	Code coverage information	none
+MSCMS.dll	fuzzer	none
+Code coverage information	ICM32.dll	none
+fuzzer	ICM32.dll	none
 MSCMS.dll	ICM32.dll	none
 MSCMS.dll	feedback	none
+feedback	ICM32.dll	none
 fuzzer	feedback	none
-ICM32.dll	Code coverage information	none
-fuzzer	MSCMS.dll	none
-fuzzer	ICM32.dll	none
-fuzzer	Code coverage information	none
-ICM32.dll	feedback	none
-MSCMS.dll	Code coverage information	none
-feedback	Code coverage information	none
-days	Crashes	none
+Code coverage information	feedback	none
 couple	Crashes	none
+days	Crashes	none
 couple	days	none
-file	stream	none
+stream	code	none
+size	code	none
 file	ncl2’ tag/element	none
-code	stream	none
-file	size	none
-ncl2’ tag/element	stream	none
-ncl2’ tag/element	code	none
-size	stream	none
+stream	ncl2’ tag/element	none
+stream	file	none
 file	code	none
-code	size	none
-ncl2’ tag/element	size	none
-complete content	same call	none
+size	ncl2’ tag/element	none
+file	size	none
+stream	size	none
+ncl2’ tag/element	code	none
+complete content	buffer	none
 element	buffer	none
 element	complete content	none
 same call	buffer	none
+complete content	same call	none
 element	same call	none
-complete content	buffer	none
-/write	number	none
-number	buffer	none
-values	/write	none
-buffer size	buffer	none
+count	/write	none
+count	buffer	none
+values	buffer size	none
 values	number	none
-buffer size	values	none
-number	count	none
-values	buffer	none
 buffer size	number	none
+buffer size	/write	none
+number	buffer	none
+buffer size	buffer	none
+number	/write	none
+count	number	none
+count	buffer size	none
 values	count	none
 /write	buffer	none
-buffer size	/write	none
-buffer	count	none
-buffer size	count	none
-/write	count	none
-offset	buffer pointer	none
+values	buffer	none
+values	/write	none
 offset	verification	none
+offset	buffer pointer	none
+vulnerability	offset	none
+vulnerability	verification	none
 verification	buffer pointer	none
 vulnerability	buffer pointer	none
-vulnerability	verification	none
-vulnerability	offset	none
-error	3 byte	none
+3 byte	error	none
+fix	bug	none
 Microsoft	bug	none
-bug	fix	none
+fix	verification	none
 Microsoft	verification	none
-bug	verification	none
-verification	fix	none
+verification	bug	none
 Microsoft	fix	none
-content	allocation	none
-content	Additional Vulnerabilities	none
-previous vulnerability	allocation	none
-CMGetPartialProfileElement function	previous vulnerability	none
-Additional Vulnerabilities	one	none
-CMGetPartialProfileElement function	allocation	none
-one	allocation	none
-CMGetPartialProfileElement function	content	none
-CMGetPartialProfileElement function	size	none
-size	allocation	none
-content	size	none
-pattern	one	none
-content	pattern	none
-content	one	none
-CMGetPartialProfileElement function	pattern	none
-pattern	size	none
-size	previous vulnerability	none
-Additional Vulnerabilities	size	none
-CMGetPartialProfileElement function	Additional Vulnerabilities	none
-pattern	previous vulnerability	none
-Additional Vulnerabilities	allocation	none
-previous vulnerability	one	none
-pattern	allocation	none
+one	content	none
+one	previous vulnerability	none
+allocation	CMGetPartialProfileElement function	none
+allocation	previous vulnerability	none
 Additional Vulnerabilities	previous vulnerability	none
-Additional Vulnerabilities	pattern	none
+content	Additional Vulnerabilities	none
+one	pattern	none
+size	Additional Vulnerabilities	none
+one	Additional Vulnerabilities	none
+content	pattern	none
+size	pattern	none
+pattern	Additional Vulnerabilities	none
+allocation	Additional Vulnerabilities	none
+one	CMGetPartialProfileElement function	none
+allocation	pattern	none
 content	previous vulnerability	none
-size	one	none
-CMGetPartialProfileElement function	one	none
-offset	bugs	none
-bugs	size	none
-offset	size	none
-sort	integer overflow	none
-offset	pattern	none
-integer overflow	size	none
-unconstrained size	size	none
-sort	bugs	none
-unconstrained size	integer overflow	none
-bugs	pattern	none
+size	previous vulnerability	none
+CMGetPartialProfileElement function	Additional Vulnerabilities	none
+CMGetPartialProfileElement function	pattern	none
+pattern	previous vulnerability	none
+CMGetPartialProfileElement function	previous vulnerability	none
+content	size	none
+one	size	none
+one	allocation	none
+content	CMGetPartialProfileElement function	none
+content	allocation	none
+size	CMGetPartialProfileElement function	none
+size	allocation	none
 pattern	size	none
-unconstrained size	pattern	none
-integer overflow	pattern	none
-sort	unconstrained size	none
-unconstrained size	offset	none
-sort	size	none
 unconstrained size	bugs	none
+offset	size	none
+size	bugs	none
+offset	bugs	none
+unconstrained size	offset	none
+pattern	integer overflow	none
+unconstrained size	sort	none
+offset	sort	none
+offset	pattern	none
+unconstrained size	pattern	none
+sort	bugs	none
+unconstrained size	size	none
+sort	size	none
+pattern	sort	none
+size	integer overflow	none
+bugs	integer overflow	none
+sort	integer overflow	none
 offset	integer overflow	none
-integer overflow	bugs	none
-sort	pattern	none
-sort	offset	none
+unconstrained size	integer overflow	none
+pattern	bugs	none
 function	such instances	none
-I	function	none
 I	such instances	none
-I	unchecked offset access	none
+function	I	none
 three instances	unchecked offset access	none
-I	three instances	none
+I	unchecked offset access	none
+three instances	I	none
+GetNamedProfileInfo	functions	none
 exported and documented MSCMS functions	GetNamedProfileInfo	none
 exported and documented MSCMS functions	functions	none
-functions	GetNamedProfileInfo	none
-other two functions	allocBuffer	none
-minimum length check	size	none
-ncl2’ elements	bound read	none
-ncl2’ elements	CMConvIndexToNameProfile	none
-size	other two functions	none
-ncl2’ elements	size	none
-offsets	ncl2’ elements	none
 minimum length check	other two functions	none
-minimum length check	ncl2’ elements	none
-CMConvIndexToNameProfile	bug	none
-other two functions	bound read	none
-offsets	minimum length check	none
-CMConvIndexToNameProfile	bound read	none
-offsets	bug	none
-minimum length check	CMConvIndexToNameProfile	none
-offsets	bound read	none
-ncl2’ elements	other two functions	none
-size	CMConvIndexToNameProfile	none
-CMConvIndexToNameProfile	allocBuffer	none
-offsets	CMConvIndexToNameProfile	none
-other two functions	bug	none
-minimum length check	bug	none
-size	allocBuffer	none
-offsets	allocBuffer	none
-size	bug	none
-CMConvIndexToNameProfile	other two functions	none
-minimum length check	allocBuffer	none
-bug	allocBuffer	none
-offsets	other two functions	none
-ncl2’ elements	allocBuffer	none
-allocBuffer	bound read	none
-minimum length check	bound read	none
-bug	bound read	none
-ncl2’ elements	bug	none
+bug	offsets	none
 size	bound read	none
-offsets	size	none
-Windows binaries	fact	none
-three vulnerabilities	Windows binaries	none
+offsets	bound read	none
+size	ncl2’ elements	none
+offsets	ncl2’ elements	none
+minimum length check	offsets	none
+other two functions	bug	none
+size	CMConvIndexToNameProfile	none
+CMConvIndexToNameProfile	offsets	none
+size	allocBuffer	none
+CMConvIndexToNameProfile	allocBuffer	none
+other two functions	allocBuffer	none
+other two functions	CMConvIndexToNameProfile	none
+ncl2’ elements	allocBuffer	none
+other two functions	ncl2’ elements	none
+bug	size	none
+other two functions	bound read	none
+bug	ncl2’ elements	none
+minimum length check	allocBuffer	none
+bug	CMConvIndexToNameProfile	none
+bound read	allocBuffer	none
+CMConvIndexToNameProfile	bound read	none
+CMConvIndexToNameProfile	ncl2’ elements	none
+minimum length check	CMConvIndexToNameProfile	none
+minimum length check	size	none
+bug	bound read	none
+size	offsets	none
+ncl2’ elements	bound read	none
+minimum length check	ncl2’ elements	none
+minimum length check	bound read	none
+offsets	allocBuffer	none
+bug	allocBuffer	none
+other two functions	size	none
+other two functions	offsets	none
+minimum length check	bug	none
 none	functions	none
-three vulnerabilities	Microsoft	none
-Microsoft	fact	none
-three vulnerabilities	functions	none
 Microsoft	functions	none
-three vulnerabilities	none	none
-Microsoft	none	none
-none	Windows binaries	none
-functions	fact	none
-three vulnerabilities	fact	none
+none	three vulnerabilities	none
+Microsoft	three vulnerabilities	none
+fact	three vulnerabilities	none
+three vulnerabilities	Windows binaries	none
+fact	functions	none
 Microsoft	Windows binaries	none
-none	fact	none
+none	Windows binaries	none
+three vulnerabilities	functions	none
+Microsoft	none	none
+Microsoft	fact	none
+fact	Windows binaries	none
 functions	Windows binaries	none
+none	fact	none
+we	Windows	none
+APIs	Windows	none
 Windows	third-party software	none
-Windows	we	none
-we	APIs	none
-third-party software	APIs	none
+APIs	third-party software	none
+APIs	we	none
 we	third-party software	none
-Windows	APIs	none
-blog series	we	none
-color profiles	we	none
-harness	we	none
-color profiles	corpus	none
-blog series	corpus	none
-multiple vulnerabilities	corpus	none
-part	we	none
-part	harness	none
-multiple vulnerabilities	part	none
 corpus	harness	none
-blog series	part	none
-color profiles	part	none
+corpus	multiple vulnerabilities	none
+we	corpus	none
+blog series	we	none
+we	part	none
+color profiles	we	none
+harness	part	none
+we	harness	none
+we	multiple vulnerabilities	none
+multiple vulnerabilities	part	none
+harness	multiple vulnerabilities	none
+color profiles	corpus	none
 blog series	color profiles	none
-corpus	we	none
+color profiles	part	none
+corpus	part	none
+blog series	multiple vulnerabilities	none
 blog series	harness	none
 color profiles	harness	none
-multiple vulnerabilities	we	none
 color profiles	multiple vulnerabilities	none
-blog series	multiple vulnerabilities	none
-multiple vulnerabilities	harness	none
-corpus	part	none
-we	vulnerability class	none
-part	vulnerability class	none
-uninitialized memory	vulnerability class	none
-we	uninitialized memory	none
-uninitialized memory	part	none
+blog series	part	none
+blog series	corpus	none
+vulnerability class	uninitialized memory	none
 we	part	none
+part	uninitialized memory	none
+vulnerability class	part	none
+we	vulnerability class	none
+we	uninitialized memory	none

@@ -1,0 +1,742 @@
+actionable recommendations	vulnerabilities	none
+Keysight’s Threat Simulator	real-time threat intelligence	none
+actionable recommendations	real-time threat intelligence	none
+actionable recommendations	Keysight’s Threat Simulator	none
+real-time threat intelligence	vulnerabilities	none
+Keysight’s Threat Simulator	vulnerabilities	none
+enterprises	world	none
+innovation	world	none
+enterprises	Keysight Technologies	none
+KEYS	enterprises	none
+operational security effectiveness	SecOps platform	none
+Inc NYSE	SecOps platform	none
+KEYS	security operations	none
+Inc NYSE	security operations	none
+governments	Keysight Technologies	none
+security operations	service providers	none
+Breach Defense	service providers	none
+innovation	SecOps platform	none
+security operations	Breach Defense	none
+governments	leading technology company	none
+KEYS	service providers	none
+Keysight Technologies	service providers	none
+enterprises	governments	none
+Inc NYSE	Breach Defense	none
+enterprises	service providers	none
+enterprises	Inc NYSE	none
+operational security effectiveness	KEYS	none
+SecOps platform	service providers	none
+operational security effectiveness	service providers	none
+KEYS	Inc NYSE	none
+security operations	Keysight Technologies	none
+enterprises	SecOps platform	none
+operational security effectiveness	leading technology company	none
+security operations	world	none
+operational security effectiveness	Breach Defense	none
+Inc NYSE	world	none
+leading technology company	security operations	none
+KEYS	governments	none
+Inc NYSE	Keysight Technologies	none
+innovation	Keysight Technologies	none
+governments	service providers	none
+SecOps platform	security operations	none
+innovation	service providers	none
+innovation	leading technology company	none
+enterprises	leading technology company	none
+Keysight Technologies	world	none
+operational security effectiveness	governments	none
+service providers	world	none
+governments	world	none
+operational security effectiveness	Keysight Technologies	none
+leading technology company	service providers	none
+KEYS	innovation	none
+governments	SecOps platform	none
+operational security effectiveness	world	none
+SecOps platform	leading technology company	none
+KEYS	Breach Defense	none
+enterprises	innovation	none
+innovation	Breach Defense	none
+SecOps platform	world	none
+SecOps platform	Keysight Technologies	none
+leading technology company	world	none
+leading technology company	Keysight Technologies	none
+operational security effectiveness	enterprises	none
+operational security effectiveness	innovation	none
+innovation	Inc NYSE	none
+enterprises	security operations	none
+innovation	security operations	none
+governments	security operations	none
+enterprises	Breach Defense	none
+innovation	governments	none
+KEYS	Keysight Technologies	none
+KEYS	world	none
+Inc NYSE	leading technology company	none
+KEYS	SecOps platform	none
+Breach Defense	world	none
+Inc NYSE	governments	none
+operational security effectiveness	Inc NYSE	none
+SecOps platform	Breach Defense	none
+Breach Defense	Keysight Technologies	none
+Inc NYSE	service providers	none
+KEYS	leading technology company	none
+operational security effectiveness	security operations	none
+governments	Breach Defense	none
+leading technology company	Breach Defense	none
+exploits	integral element	none
+effectiveness	latest attacks	none
+exploits	Threat Simulator breach and attack simulation solution	none
+integral element	Threat Simulator breach and attack simulation solution	none
+live networks	exploits	none
+effectiveness	integral element	none
+effectiveness	exploits	none
+network and security operations teams	operational security	none
+new platform	Threat Simulator breach and attack simulation solution	none
+new platform	integral element	none
+new platform	network and security operations teams	none
+live networks	new platform	none
+operational security	Threat Simulator breach and attack simulation solution	none
+live networks	operational security	none
+effectiveness	Threat Simulator breach and attack simulation solution	none
+exploits	latest attacks	none
+exploits	operational security	none
+new platform	latest attacks	none
+integral element	operational security	none
+effectiveness	live networks	none
+operational security	latest attacks	none
+new platform	exploits	none
+effectiveness	network and security operations teams	none
+network and security operations teams	latest attacks	none
+network and security operations teams	integral element	none
+live networks	Threat Simulator breach and attack simulation solution	none
+exploits	network and security operations teams	none
+effectiveness	operational security	none
+live networks	network and security operations teams	none
+latest attacks	Threat Simulator breach and attack simulation solution	none
+new platform	operational security	none
+effectiveness	new platform	none
+integral element	latest attacks	none
+network and security operations teams	Threat Simulator breach and attack simulation solution	none
+live networks	integral element	none
+live networks	latest attacks	none
+flood	attack	none
+cyber threats	attack	none
+complex network environment	flood	none
+Security operations teams	Security operations teams organizations	none
+flood	Security operations teams	none
+complex network environment	attack	none
+complex network environment	cyber threats	none
+cyber threats	Security operations teams organizations	none
+complex network environment	Security operations teams	none
+attack	Security operations teams organizations	none
+complex network environment	Security operations teams organizations	none
+flood	Security operations teams organizations	none
+cyber threats	Security operations teams	none
+Security operations teams	attack	none
+cyber threats	flood	none
+recent Keysight Security Operations Effectiveness survey	breach	none
+Good security tools	survey respondents	none
+survey respondents security solution	Good security tools	none
+breach	50%	none
+survey respondents security solution	breach	none
+Good security tools	recent Keysight Security Operations Effectiveness survey	none
+recent Keysight Security Operations Effectiveness survey	50%	none
+Good security tools	50%	none
+survey respondents security solution	recent Keysight Security Operations Effectiveness survey	none
+survey respondents security solution	50%	none
+Good security tools	breach	none
+survey respondents	breach	none
+survey respondents	50%	none
+survey respondents	recent Keysight Security Operations Effectiveness survey	none
+survey respondents security solution	survey respondents	none
+Most organizations	Most organizations security	none
+Most organizations	security	none
+Most organizations	test-based evidence	none
+35%	Most organizations security	none
+respondents security products	security	none
+test-based evidence	Most organizations security	none
+respondents security products	respondents	none
+security	Most organizations security	none
+respondents security products	test-based evidence	none
+Most organizations	respondents security products	none
+Most organizations	35%	none
+35%	respondents security products	none
+respondents	Most organizations security	none
+Most organizations	respondents	none
+35%	respondents	none
+35%	test-based evidence	none
+security	respondents	none
+respondents security products	Most organizations security	none
+security	test-based evidence	none
+test-based evidence	respondents	none
+35%	security	none
+86%	respondents	none
+company's security posture	solution	none
+Most organizations	security testing	none
+company's security posture	86%	none
+vulnerabilities	86%	none
+Most organizations	solution	none
+solution	86%	none
+vulnerabilities	value	none
+value	respondents	none
+company's security posture	respondents	none
+value	security testing	none
+Most organizations	value	none
+solution	respondents	none
+vulnerabilities	solution	none
+Most organizations	86%	none
+value	solution	none
+vulnerabilities	Most organizations	none
+Most organizations	respondents	none
+company's security posture	value	none
+vulnerabilities	company's security posture	none
+vulnerabilities	security testing	none
+Most organizations	company's security posture	none
+respondents	security testing	none
+vulnerabilities	respondents	none
+value	86%	none
+company's security posture	security testing	none
+86%	security testing	none
+solution	security testing	none
+best security products	you	none
+Doug Close	senior vice president	none
+you	cybersecurity	none
+best security products	Doug Close	none
+best security products	IT solutions provider Sayers	none
+you	Doug Close	none
+you	IT solutions provider Sayers	none
+you	senior vice president	none
+cybersecurity	Doug Close	none
+cybersecurity	senior vice president	none
+Doug Close	IT solutions provider Sayers	none
+cybersecurity	IT solutions provider Sayers	none
+senior vice president	IT solutions provider Sayers	none
+best security products	senior vice president	none
+best security products	cybersecurity	none
+attacks	powerful advantage	none
+gaps	day	none
+attacks	gaps	none
+security gaps	day	none
+customers	day	none
+powerful advantage	security gaps	none
+attacks	customers	none
+powerful advantage	detailed recommendations	none
+attacks	security gaps	none
+powerful advantage	customers	none
+powerful advantage	day	none
+gaps	detailed recommendations	none
+gaps	powerful advantage	none
+attacks	day	none
+detailed recommendations	day	none
+detailed recommendations	customers	none
+gaps	customers	none
+detailed recommendations	security gaps	none
+gaps	security gaps	none
+customers	security gaps	none
+attacks	detailed recommendations	none
+security and risk management	research director	none
+one point	market research firm Enterprise Management Associates	none
+Paula Musich	time	none
+time	security capabilities	none
+security and risk management	organization's ongoing security posture	none
+one point	research director	none
+one point	security and risk management	none
+one point	Paula Musich	none
+Paula Musich	security capabilities	none
+organization's ongoing security posture	market research firm Enterprise Management Associates	none
+Paula Musich	limited visibility	none
+security and risk management	market research firm Enterprise Management Associates	none
+one point	security capabilities	none
+limited visibility	organization's ongoing security posture	none
+time	market research firm Enterprise Management Associates	none
+time	research director	none
+security capabilities	research director	none
+security and risk management	security capabilities	none
+security capabilities	organization's ongoing security posture	none
+limited visibility	time	none
+time	security and risk management	none
+limited visibility	market research firm Enterprise Management Associates	none
+time	organization's ongoing security posture	none
+Paula Musich	market research firm Enterprise Management Associates	none
+limited visibility	research director	none
+Paula Musich	research director	none
+market research firm Enterprise Management Associates	research director	none
+one point	limited visibility	none
+security capabilities	market research firm Enterprise Management Associates	none
+Paula Musich	security and risk management	none
+one point	organization's ongoing security posture	none
+limited visibility	security capabilities	none
+limited visibility	security and risk management	none
+Paula Musich	organization's ongoing security posture	none
+organization's ongoing security posture	research director	none
+one point	time	none
+issue	processes	none
+issue	people	none
+security	people	none
+processes	heart	none
+issue	security	none
+people	processes	none
+people	heart	none
+issue	heart	none
+security	processes	none
+security	heart	none
+good security hygiene	regular basis	none
+top	testing	none
+security operations teams	defenses	none
+top	regular basis	none
+good security hygiene	testing	none
+top	good security hygiene	none
+attack simulation	regular basis	none
+testing	changes	none
+testing	exploitable vulnerability	none
+top	attack simulation	none
+attack simulation	good security hygiene	none
+defenses	good security hygiene	none
+security operations teams	good security hygiene	none
+defenses	regular basis	none
+security operations teams	regular basis	none
+security operations teams	top	none
+top	changes	none
+top	exploitable vulnerability	none
+good security hygiene	changes	none
+good security hygiene	exploitable vulnerability	none
+security operations teams	attack simulation	none
+defenses	attack simulation	none
+changes	regular basis	none
+exploitable vulnerability	regular basis	none
+attack simulation	changes	none
+attack simulation	exploitable vulnerability	none
+testing	regular basis	none
+attack simulation	testing	none
+changes	exploitable vulnerability	none
+security operations teams	testing	none
+defenses	testing	none
+security operations teams	changes	none
+security operations teams	exploitable vulnerability	none
+defenses	changes	none
+defenses	exploitable vulnerability	none
+defenses	top	none
+Security Tools	Intended Keysight's Threat Simulator solution	none
+Threat Simulator	Security Tools	none
+Threat Simulator	Intended Keysight's Threat Simulator solution	none
+Confidence	Threat Simulator	none
+Confidence	Intended Keysight's Threat Simulator solution	none
+Confidence	Security Tools	none
+method	security tools	none
+method	enterprise security operations teams	none
+enterprise security operations teams	security tools effectiveness	none
+organization	security tools effectiveness	none
+security tools	security tools effectiveness	none
+organization	enterprise security operations teams	none
+enterprise security operations teams	security tools	none
+organization	security tools	none
+method	security tools effectiveness	none
+organization	method	none
+It	clear remediation steps	none
+malicious intent	clear remediation steps	none
+security configurations	someone	none
+end	related group	none
+change	continuous, automated security assessment	none
+result	patented recommendation engine	none
+It	end	none
+malicious intent	end	none
+end	security configurations	none
+IT	malicious intent	none
+IT	environment drift	none
+It	someone	none
+malicious intent	someone	none
+environment drift	change	none
+gaps	security configurations	none
+gaps	patented recommendation engine	none
+IT	end	none
+organizations	security configurations	none
+IT	continuous, automated security assessment	none
+environment drift	continuous, automated security assessment	none
+change	end	none
+security configurations	related group	none
+organizations	clear remediation steps	none
+result	security configurations	none
+gaps	change	none
+organizations	result	none
+environment drift	gaps	none
+environment drift	result	none
+It	security configurations	none
+malicious intent	security configurations	none
+IT	result	none
+result	related group	none
+patented recommendation engine	security configurations	none
+gaps	result	none
+result	someone	none
+IT	clear remediation steps	none
+clear remediation steps	result	none
+clear remediation steps	end	none
+clear remediation steps	patented recommendation engine	none
+gaps	end	none
+organizations	IT	none
+result	change	none
+clear remediation steps	change	none
+environment drift	end	none
+someone	related group	none
+organizations	continuous, automated security assessment	none
+IT	security configurations	none
+It	organizations	none
+organizations	end	none
+It	environment drift	none
+environment drift	security configurations	none
+change	patented recommendation engine	none
+It	gaps	none
+change	security configurations	none
+continuous, automated security assessment	security configurations	none
+patented recommendation engine	related group	none
+environment drift	malicious intent	none
+organizations	environment drift	none
+result	continuous, automated security assessment	none
+organizations	malicious intent	none
+end	continuous, automated security assessment	none
+It	IT	none
+end	patented recommendation engine	none
+gaps	clear remediation steps	none
+gaps	continuous, automated security assessment	none
+It	change	none
+malicious intent	change	none
+clear remediation steps	security configurations	none
+IT	patented recommendation engine	none
+environment drift	patented recommendation engine	none
+gaps	related group	none
+change	someone	none
+continuous, automated security assessment	related group	none
+It	result	none
+malicious intent	result	none
+It	malicious intent	none
+IT	someone	none
+patented recommendation engine	someone	none
+IT	related group	none
+end	someone	none
+organizations	gaps	none
+result	end	none
+IT	change	none
+It	patented recommendation engine	none
+malicious intent	patented recommendation engine	none
+It	continuous, automated security assessment	none
+environment drift	clear remediation steps	none
+malicious intent	continuous, automated security assessment	none
+patented recommendation engine	continuous, automated security assessment	none
+organizations	change	none
+IT	gaps	none
+It	related group	none
+malicious intent	related group	none
+organizations	related group	none
+gaps	malicious intent	none
+organizations	someone	none
+environment drift	someone	none
+environment drift	related group	none
+clear remediation steps	continuous, automated security assessment	none
+gaps	someone	none
+change	related group	none
+continuous, automated security assessment	someone	none
+clear remediation steps	related group	none
+clear remediation steps	someone	none
+organizations	patented recommendation engine	none
+security solutions	Keysight Network Applications	none
+continuous basis	vice president	none
+Keysight Network Applications	Today's network and security teams	none
+Keysight Network Applications	Today's network and security teams security solutions	none
+continuous basis	Keysight Network Applications	none
+security solutions	Security Group	none
+Today's network and security teams	Security Group	none
+security solutions	vice president	none
+continuous basis	Security Group	none
+continuous basis	Today's network and security teams security solutions	none
+Today's network and security teams security solutions	vice president	none
+continuous basis	Scott Register	none
+Ixia Solutions Group	Today's network and security teams	none
+continuous basis	Today's network and security teams	none
+Ixia Solutions Group	Scott Register	none
+Today's network and security teams	vice president	none
+Ixia Solutions Group	Today's network and security teams security solutions	none
+Scott Register	Today's network and security teams security solutions	none
+continuous basis	Ixia Solutions Group	none
+Ixia Solutions Group	Keysight Network Applications	none
+Security Group	Today's network and security teams security solutions	none
+Security Group	Scott Register	none
+Keysight Network Applications	Scott Register	none
+Ixia Solutions Group	Security Group	none
+Scott Register	vice president	none
+Ixia Solutions Group	vice president	none
+Today's network and security teams	Scott Register	none
+Today's network and security teams	Today's network and security teams security solutions	none
+Security Group	vice president	none
+security solutions	Ixia Solutions Group	none
+security solutions	Today's network and security teams	none
+security solutions	Scott Register	none
+security solutions	Today's network and security teams security solutions	none
+Keysight Network Applications	Security Group	none
+continuous basis	security solutions	none
+Keysight Network Applications	vice president	none
+misconfigurations	Security breaches	none
+lack	capable products	none
+Security breaches	lack	none
+Security breaches	capable products	none
+misconfigurations	security skills	none
+misconfigurations	capable products	none
+security skills	lack	none
+misconfigurations	lack	none
+security skills	capable products	none
+security skills	Security breaches	none
+easy task	live network	none
+coverage gaps	live network	none
+easy task	coverage gaps	none
+gaps	gaps security posture	none
+gaps	security operations teams	none
+gaps security posture	security operations teams	none
+actionable insight	Threat Simulator	none
+gaps	actionable insight	none
+gaps security posture	actionable insight	none
+security operations teams	Threat Simulator	none
+security operations teams	actionable insight	none
+gaps	Threat Simulator	none
+gaps security posture	Threat Simulator	none
+ThreatARMOR	Threat Simulator	none
+ThreatARMOR	addition	none
+threat intelligence gateway	Keysight's Breach Defense SecOps platform	none
+ThreatARMOR	Keysight's Breach Defense SecOps platform	none
+addition	Threat Simulator	none
+threat intelligence gateway	ThreatARMOR	none
+Keysight's Breach Defense SecOps platform	addition	none
+Keysight's Breach Defense SecOps platform	Threat Simulator	none
+threat intelligence gateway	Threat Simulator	none
+threat intelligence gateway	addition	none
+up to 80%	malicious traffic	none
+event management	security information	none
+SIEM alerts	security information	none
+ThreatARMOR	security information	none
+source	security information	none
+source	existing security infrastructure	none
+event management	up to 80%	none
+SIEM alerts	up to 80%	none
+number	existing security infrastructure	none
+ThreatARMOR	attack surface	none
+source	attack surface	none
+malicious traffic	security information	none
+ThreatARMOR	number	none
+attack surface	existing security infrastructure	none
+up to 80%	attack surface	none
+event management	malicious traffic	none
+SIEM alerts	malicious traffic	none
+malicious traffic	attack surface	none
+SIEM alerts	existing security infrastructure	none
+event management	existing security infrastructure	none
+up to 80%	number	none
+event management	SIEM alerts	none
+event management	source	none
+SIEM alerts	source	none
+malicious traffic	number	none
+event management	number	none
+SIEM alerts	number	none
+up to 80%	existing security infrastructure	none
+up to 80%	security information	none
+malicious traffic	source	none
+number	source	none
+ThreatARMOR	malicious traffic	none
+malicious traffic	existing security infrastructure	none
+SIEM alerts	ThreatARMOR	none
+event management	ThreatARMOR	none
+security information	existing security infrastructure	none
+up to 80%	ThreatARMOR	none
+number	attack surface	none
+ThreatARMOR	source	none
+attack surface	security information	none
+event management	attack surface	none
+SIEM alerts	attack surface	none
+ThreatARMOR	existing security infrastructure	none
+up to 80%	source	none
+number	security information	none
+domains	known bad IP addresses	none
+SIEM tools	network	none
+unassigned IP addresses	network	none
+ThreatARMOR	unused IP space	none
+unassigned IP addresses	SIEM tools	none
+ThreatARMOR	network	none
+unused IP space	internal devices	none
+unused IP space	geography	none
+geography	network	none
+domains	malicious IP addresses	none
+domains	geography	none
+unassigned IP addresses	internal devices	none
+line-rate speeds	unused IP space	none
+known botnet C&C servers	unused IP space	none
+known bad IP addresses	internal devices	none
+unassigned IP addresses	malicious IP addresses	none
+ThreatARMOR	malicious IP addresses	none
+network	internal devices	none
+geography	malicious IP addresses	none
+domains	unassigned IP addresses	none
+known bad IP addresses	SIEM tools	none
+unassigned IP addresses	line-rate speeds	none
+unassigned IP addresses	known botnet C&C servers	none
+ThreatARMOR	geography	none
+geography	internal devices	none
+line-rate speeds	malicious IP addresses	none
+known botnet C&C servers	malicious IP addresses	none
+traffic	unused IP space	none
+line-rate speeds	known botnet C&C servers	none
+ThreatARMOR	SIEM tools	none
+line-rate speeds	ThreatARMOR	none
+known botnet C&C servers	ThreatARMOR	none
+malicious IP addresses	internal devices	none
+SIEM tools	malicious IP addresses	none
+domains	SIEM tools	none
+line-rate speeds	geography	none
+known botnet C&C servers	geography	none
+network	malicious IP addresses	none
+line-rate speeds	traffic	none
+line-rate speeds	SIEM tools	none
+known botnet C&C servers	SIEM tools	none
+line-rate speeds	known bad IP addresses	none
+known botnet C&C servers	known bad IP addresses	none
+traffic	geography	none
+SIEM tools	internal devices	none
+traffic	malicious IP addresses	none
+known bad IP addresses	geography	none
+SIEM tools	geography	none
+SIEM tools	unused IP space	none
+domains	ThreatARMOR	none
+ThreatARMOR	known bad IP addresses	none
+domains	known botnet C&C servers	none
+domains	line-rate speeds	none
+known bad IP addresses	malicious IP addresses	none
+unassigned IP addresses	geography	none
+unassigned IP addresses	unused IP space	none
+ThreatARMOR	internal devices	none
+unused IP space	network	none
+domains	internal devices	none
+unassigned IP addresses	ThreatARMOR	none
+unassigned IP addresses	known bad IP addresses	none
+domains	unused IP space	none
+known bad IP addresses	traffic	none
+known bad IP addresses	network	none
+line-rate speeds	internal devices	none
+known botnet C&C servers	internal devices	none
+known bad IP addresses	unused IP space	none
+traffic	internal devices	none
+traffic	SIEM tools	none
+traffic	network	none
+ThreatARMOR	traffic	none
+line-rate speeds	network	none
+known botnet C&C servers	network	none
+domains	network	none
+domains	traffic	none
+unused IP space	malicious IP addresses	none
+unassigned IP addresses	traffic	none
+known botnet C&C servers	traffic	none
+governments	leading technology company	none
+KEYS	service providers	none
+leading technology company	world	none
+innovation	Keysight Technologies	none
+Keysight Technologies	service providers	none
+enterprises	world	none
+governments	service providers	none
+enterprises	governments	none
+innovation	service providers	none
+leading technology company	Keysight Technologies	none
+innovation	world	none
+enterprises	Keysight Technologies	none
+KEYS	enterprises	none
+enterprises	service providers	none
+innovation	Inc NYSE	none
+innovation	leading technology company	none
+enterprises	leading technology company	none
+enterprises	Inc NYSE	none
+Keysight Technologies	world	none
+innovation	governments	none
+service providers	world	none
+KEYS	Keysight Technologies	none
+governments	world	none
+leading technology company	service providers	none
+KEYS	innovation	none
+KEYS	Inc NYSE	none
+KEYS	world	none
+governments	Keysight Technologies	none
+Inc NYSE	leading technology company	none
+Inc NYSE	governments	none
+Inc NYSE	world	none
+enterprises	innovation	none
+Inc NYSE	service providers	none
+KEYS	leading technology company	none
+KEYS	governments	none
+Inc NYSE	Keysight Technologies	none
+Keysight's solutions	prototype validation	none
+design simulation	lower cost	none
+prototype validation	manufacturing test	none
+electronic products	cloud environments	none
+design simulation	prototype validation	none
+to optimization	prototype validation	none
+Keysight's solutions	electronic products	none
+offerings	manufacturing test	none
+networks	prototype validation	none
+to optimization	offerings	none
+Keysight's solutions	cloud environments	none
+networks	manufacturing test	none
+design simulation	electronic products	none
+networks	offerings	none
+design simulation	cloud environments	none
+Keysight's solutions	networks	none
+to optimization	Keysight's solutions	none
+Keysight's solutions	lower cost	none
+design simulation	networks	none
+Keysight's solutions	manufacturing test	none
+networks	electronic products	none
+Keysight's solutions	design simulation	none
+networks	cloud environments	none
+design simulation	manufacturing test	none
+prototype validation	lower cost	none
+offerings	lower cost	none
+networks	lower cost	none
+prototype validation	cloud environments	none
+to optimization	lower cost	none
+prototype validation	electronic products	none
+lower cost	manufacturing test	none
+to optimization	manufacturing test	none
+electronic products	offerings	none
+offerings	cloud environments	none
+electronic products	manufacturing test	none
+to optimization	networks	none
+Keysight's solutions	offerings	none
+to optimization	design simulation	none
+to optimization	electronic products	none
+electronic products	lower cost	none
+design simulation	offerings	none
+to optimization	cloud environments	none
+cloud environments	lower cost	none
+cloud environments	manufacturing test	none
+prototype validation	offerings	none
+energy	general electronics	none
+semiconductor	Customers	none
+aerospace	semiconductor	none
+general electronics	Customers	none
+energy	aerospace	none
+defense	Customers	none
+defense	semiconductor	none
+aerospace	Customers	none
+end markets	general electronics	none
+worldwide communications ecosystem	Customers	none
+end markets	semiconductor	none
+defense	general electronics	none
+aerospace	general electronics	none
+end markets	Customers	none
+energy	defense	none
+aerospace	end markets	none
+worldwide communications ecosystem	general electronics	none
+end markets	worldwide communications ecosystem	none
+energy	worldwide communications ecosystem	none
+end markets	defense	none
+worldwide communications ecosystem	defense	none
+aerospace	worldwide communications ecosystem	none
+energy	semiconductor	none
+energy	Customers	none
+aerospace	defense	none
+semiconductor	general electronics	none
+worldwide communications ecosystem	semiconductor	none
+energy	end markets	none
+fiscal year	Keysight	none
+Keysight	revenues	none
+fiscal year	revenues	none
