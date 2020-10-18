@@ -1,0 +1,2894 @@
+SANS Institute
+Information Security Reading Room
+
+Prescriptive Model for
+Software Supply Chain
+Assurance in Private Cloud
+Environments
+______________________________
+Robert Wood
+
+Copyright SANS Institute 2020. Author Retains Full Rights.
+This paper is from the SANS Institute Reading Room site. Reposting is not permitted without express
+written permission.
+
+ts
+gh
+Ri
+
+et
+
+ai
+
+ns
+
+Fu
+
+ll
+
+Prescriptive Model for Software Supply Chain Assurance in Private
+Cloud Environments
+
+ho
+
+ISSE 5901
+
+rR
+
+GIAC (GCCC) Gold Certification
+
+te
+
+,A
+
+ut
+
+Author: Robert Wood, woodrobe@gmail.com
+Advisor: David Fletcher
+
+Abstract
+
+SA
+
+NS
+
+In
+
+st
+
+itu
+
+Accepted: September 1, 2020
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+As companies embrace Continuous Integration/Continuous Deployment (CI/CD) environments,
+automated controls are critical for safeguarding the Software Development Life Cycle (SDLC).
+The ability to vet and whitelist container images before installation is vitally important to
+ensuring the security of corporate networks. Google Cloud offers the Container Registry in
+combination with Binary Authorization to understand the container footprint in the environment
+and provide a mechanism for enforcing policies. Grafeas and Kritis are open-source alternatives.
+This paper evaluates Grafeas and Kritis and provides specific recommendations for using these
+tools or equivalents in private cloud environments.
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+Fu
+
+ll
+
+1. Introduction
+
+Companies recognize that software is a crucial differentiator in our competitive world. As
+
+ns
+
+a result, they focus significant time and energy protecting the software development supply
+
+ai
+
+chain. Simply put, the software development supply chain is the sequence of actions designed to
+
+et
+
+bring new functionality to the market quickly.
+
+rR
+
+Continuous Integration/Continuous Deployment (CI/CD) models allow companies to
+
+ho
+
+build, test quickly, and deploy the vital software products on which their businesses depend.
+
+ut
+
+These companies deploy code many times each day, and ensuring the stability of these frequent
+
+,A
+
+deployments highlights the importance of thorough testing, trusted third-party code, and
+
+te
+
+automated deployment. Further, securing the software supply chain is a challenging endeavor as
+
+itu
+
+companies embrace microservices, open-source tools, and hybrid cloud environments (Elliot,
+
+st
+
+2017). With a wide array of metadata to track, identifying, and understanding the current
+
+In
+
+environment is no trivial task. Without this metadata, companies struggle to understand what is
+
+NS
+
+truly happening in their software supply chain.
+
+SA
+
+Software supply chain management allows companies to protect the critical software
+assets they create, ensuring that they use only trusted images, authorized components, and safe
+
+Th
+
+e
+
+third-party tools. Companies must know everything that has happened from "the time code is
+written (until it goes) to production" (Greenberg, 2019). With this knowledge, they can
+
+20
+
+proactively block suspect code and ensure the integrity of their products. Google leads the pack
+
+20
+
+with commercial tools that help manage the software supply chain. Container Registry houses
+
+©
+
+metadata and provides customers insight into what is happening in the CI/CD pipeline. Binary
+Authorization leverages the data in Container Registry, providing a checkpoint for images and
+components before allowing them into the Kubernetes cluster.
+Open-source tools provide an alternative for companies hosting internal cloud
+environments, which is essential for companies operating in industries like financial services.
+These companies may be hesitant to use public cloud resources due to concerns over data
+confidentiality. Grafeas and Kritis are open-source alternatives to Container Registry and Binary
+Authorization, respectively. Currently, these active open-source projects offer companies the
+ability to track metadata about their internally-hosted CI/CD pipelines and prevent the
+deployment of unauthorized and potentially damaging code within Google Cloud Platform
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+(GCP). However, while they are open-source, the usefulness of Kritis and Grafeas, both
+
+Fu
+
+ll
+
+optimized for GCP, is limited.
+
+A challenge for companies desiring the flexibility to move between public cloud providers
+
+ns
+
+and private cloud environments is determining how to implement metadata tracking and image
+
+et
+
+ai
+
+vetting tools in such a way that they achieve portability, scalability, and security. As a result, a
+
+rR
+
+prescriptive model for deploying these critical capabilities in private cloud environments is both
+
+ho
+
+warranted and needed.
+
+,A
+
+ut
+
+2. Background
+
+te
+
+2.1 Software Supply Chain and CI/CD
+
+st
+
+itu
+
+2.1.1 Software Supply Chain Defined
+
+In
+
+The software supply chain includes several critical gates for managing the deployment of
+
+NS
+
+software. Aysylu Greenberg discusses the following steps in her 2019 talk for InfoQ Brasil: write
+code, code check-in, build image, test & verification, QA, and deploy to production (Greenberg,
+
+SA
+
+2019). Like the food supply chain, problems in any step of the process can be catastrophic,
+
+Th
+
+e
+
+resulting in the release of corrupt or unreliable software.
+
+20
+
+2.1.2 CI/CD Defined
+
+20
+
+CI/CD provides a mechanism for controlling the software supply chain. Static and dynamic
+
+©
+
+code scanning, protecting secrets, and vulnerability scanning are some of the critical activities
+provided as part of the CI/CD pipeline. As a result, company support for CI/CD continues to
+increase. This support is evident as "conventional software development and delivery methods
+are rapidly becoming obsolete as deployment frequency increases." (Azeri, 2020). Because
+CI/CD focuses on the critical processes of software updates, including "build, deploy, test and
+release processes" (Humble, 2011), companies yield significant power in controlling software
+updates by using CI/CD processes.
+
+2.2 CIS Controls
+The Center for Internet Security (CIS) has long published its top 20 critical controls that
+organizations can follow to enhance security. Security practitioners subject these controls to
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+constant vetting. They continually evaluate and adjust these controls to address the changing
+
+Fu
+
+ll
+
+needs of the business.
+
+ns
+
+2.2.1 CIS Control 18, Application Software Security
+
+et
+
+ai
+
+CIS Control 18 addresses application software security. This control recommends that
+
+rR
+
+analysts "manage the security life cycle of all in-house developed and acquired software in order
+to prevent, detect, and correct security weaknesses" (CIS, 2020). CI/CD plays into this
+
+ho
+
+requirement as it gives practitioners a toolset for protecting the software build and release
+
+,A
+
+ut
+
+process.
+
+st
+
+itu
+
+te
+
+3. Container Metadata and Container Policy Enforcement
+Solutions
+
+In
+
+3.1 Commercial Options
+
+NS
+
+3.1.1 Container Registry – Google Cloud
+
+SA
+
+Companies must understand metadata about their environment to protect the software supply
+
+e
+
+chain. Details about vulnerability scans, image management, and access controls are critical to
+
+Th
+
+securing software assets. Further, this metadata contains the minutia often used by malicious
+
+20
+
+actors to breach corporate protections. Container Registry is Google's solution to these
+
+©
+
+20
+
+challenges. Built into GCP, Container Registry is now one of Google's core offerings.
+3.1.2 Binary Authorization – Google Cloud
+Companies need to control the images that make it into the software supply chain.
+Vulnerable or malicious images can cause disruption, or worse, data breaches. Binary
+Authorization is the commercial solution provided by Google in GCP. Natively integrated into
+the platform, Binary Authorization is easy to configure and minimally disruptive to the software
+supply chain process. The tool aims to be simple to both configure and use.
+Binary Authorization supports whitelisting of images, which allows system owners to
+identify approved images and proactively and tightly control the environment. Further, the
+module supports break-glass functionality, which allows for emergency deployments when
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+needed. This capability is necessary in cases where rigid controls prevent the deployment of
+
+Fu
+
+ll
+
+recovery resources needed to meet critical deadlines or address time-sensitive client demands.
+Further, cryptographic tracking of images helps to ensure that only approved images get into the
+
+ns
+
+environment.
+
+et
+
+ai
+
+Another critical feature of Binary Authorization is that it integrates with several third-party
+
+rR
+
+solutions. Google touts this feature and continues to enhance the offering. Its tight integration
+with GCP and GCP's Kubernetes components makes it seamless for Google' customers. Further,
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+its inclusion in the GCP graphical interface makes it an easily used feature for GCP users.
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+ll
+Fu
+ns
+ai
+et
+rR
+ho
+ut
+,A
+te
+itu
+st
+In
+NS
+SA
+e
+Th
+20
+20
+©
+Figure 1: Configuration options for Binary Authorization
+
+3.2 Open-Source Options for Container Metadata and Container Policy
+Enforcement
+3.2.1 Grafeas
+Google identifies the following requirements for securing software supply chains. Firstly,
+infrastructure is immutable to protect against advanced persistent threats. Secondly, controls,
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+including attestations, integrate with the software supply chain. Lastly, the system works with
+
+Fu
+
+ll
+
+developer tools and open-source software (Elliot, 2017).
+
+Grafeas is an open-source tool that captures and stores metadata about artifacts and related
+
+ns
+
+vulnerabilities (Martin, 2018). This metadata allows cluster owners to control the use of those
+
+et
+
+ai
+
+artifacts within the software supply chain. Grafeas has two primary constructs: notes and
+are instances of notes discovered through analysis.
+
+rR
+
+occurrences. Notes define pieces of information identified through analysis, while occurrences
+
+ho
+
+Additionally, projects are namespaces used to house metadata, and attestations are the part of
+
+ut
+
+Grafeas that enable cryptographic evidence collection. The use of cryptography provides
+
+,A
+
+transparency and supports regulated environments. While Grafeas is open-source, it currently
+
+te
+
+works best in the GCP environment. However, during this research, Grafeas proved easy to
+
+st
+
+itu
+
+deploy in a private Kubernetes environment.
+
+NS
+
+In
+
+3.2.2 Kritis
+
+Kritis is the open-source answer to Google's Binary Authorization. It uses Image Security
+
+SA
+
+Policies (ISP) to approve images for use in the software supply chain. Kritis also validates and
+
+e
+
+mutates webhooks to vet images introduced into GCP Kubernetes clusters. Like Binary
+
+Th
+
+Authorization, Kritis defines Attestation Authorities to provide evidence of an image's validity.
+
+20
+
+Further, it uses encryption to sign approved images and provide proof that images are safe for
+
+20
+
+use in the software supply chain.
+
+©
+
+Like Binary Authorization, Kritis supports whitelisting of images and break-glass
+
+functionality in case of emergency. Notably, Kritis currently works best in GCP environments.
+The researcher did not find any working code for quick deployment to non-GCP Kubernetes
+clusters. Consequently, cluster owners working in non-GCP environments may find it
+challenging to design an appropriate solution that meets audit and security requirements.
+3.2.3 Admission Controllers
+Because Kritis has such a tie to GCP, this research delves more deeply into admission
+controllers, which allow cluster owners to intercept, validate, and accept or reject requests to the
+cluster. Admission controllers run in two phases: mutating and validating (Isberner, 2019). They
+provide advanced security features such as security baseline enforcement across namespaces.
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+Most importantly, mutating and validating webhooks offer functionality similar to what is
+
+Fu
+
+ll
+
+available commercially.
+
+Admission controllers serve several vital functions. By proxy, they greatly enhance security,
+
+ns
+
+governance, and configuration management. By controlling image sources, limiting the ability to
+
+et
+
+ai
+
+run as root, and checking images against known vulnerabilities, admission controllers enhance
+
+rR
+
+security. By enforcing labels and encouraging the use of annotations, admission controllers
+promote good governance. Finally, by allowing for the validation of object configuration,
+
+ho
+
+enforcing resource limits, and checking for labels like "latest," admission controllers support
+
+Th
+
+e
+
+SA
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+configuration management.
+
+20
+
+Figure 2: Location of mutating and validating webhooks.
+
+©
+
+20
+
+Mutating webhooks are just one of thirty admission controllers that ship with Kubernetes.
+
+They provide cluster owners great flexibility and allow them to introduce custom logic when
+creating, updating, or deleting resources (Isberner, 2019). Mutating webhooks are unique
+because they can change the objects they are vetting, making them sturdy, but also risky. For
+example, developers may use a mutating webhook to add a sidecar container to a process in
+certain situations. This flexibility is useful, but the risk introduced is not acceptable to more
+conservative organizations.
+Unlike mutating webhooks, validating webhooks cannot change the object they are checking.
+Organizations that are audit-focused and prefer to only work with immutable objects may prefer
+this structure. Further, validating webhooks run after mutating webhooks, and therefore have
+visibility into the final version of objects passed to etcd.
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+Because admission controllers are not beholden to GCP like Kritis, they can be used to
+
+Fu
+
+ll
+
+provide an appropriate level of control for the environment. Notably, companies can make use of
+mutating and validating webhooks to build in the controls provided by a Kritis implementation
+
+ns
+
+using the tools already built into Kubernetes. That said, admission controllers, like Kritis, are still
+
+et
+
+ai
+
+relatively new. Any solution pursued requires some level of creativity and flexibility on the part
+
+ho
+
+rR
+
+of the cluster owner.
+
+ut
+
+4. Research Methodology
+
+,A
+
+The goal of this research is to evaluate commercial and open-source metadata and image
+
+te
+
+vetting tools and provide a recommendation for configuring and installing open-source solutions
+
+itu
+
+in a private cloud environment. The first part of this research involved a Google Cloud account
+
+st
+
+for configuring both Container Registry and Binary Authorization, and Grafeas and Kritis
+
+In
+
+services in a public cloud setting. With the knowledge gained in the public cloud environment,
+
+NS
+
+the researcher configured a standalone Kubernetes cluster to capture procedures and provide
+
+SA
+
+recommendations for running metadata tracking and image vetting tools in a private cloud
+environment.
+
+Th
+
+e
+
+The researcher vetted several Kubernetes options to use for private deployment. The first
+environment considered was Minikube, which deploys a standalone, single-node cluster. While
+
+20
+
+an excellent platform for testing, Minikube did not make sense because of its single-node
+
+©
+
+20
+
+structure. Because most Kubernetes production deployments contain both master and slave
+nodes, testing against an environment with only a master node seemed incomplete and not
+representative of a typical real-world deployment.
+Next, the researcher considered a three-box, three-node Kubernetes cluster using CentOS7
+servers with one master node and two worker nodes. The researcher successfully used this
+structure during a previous research effort. However, changes in Kubernetes in the last year and
+the inherent overhead of managing three servers were too much effort given the goals of this
+research. It was more important that the researcher be able to build and reset the environment
+easily to test a variety of code with minimal overhead. Appendix VII contains the procedures
+used to deploy this cluster.
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+Ultimately, Kind proved the most useful. Kind is a self-contained Kubernetes cluster that
+
+Fu
+
+ll
+
+allows for quick deployment of multiple-node clusters to a single server. Kind is particularly
+appealing as it supports multi-node clusters, works on Linux, Mac, and Windows, and has tight
+
+ns
+
+integration with Kubernetes. Notably, clusters can be torn down and rebuilt in just a few minutes.
+
+et
+
+ai
+
+To become familiar with Kind, the researcher set up a Kind cluster and deployed a simple
+
+rR
+
+WordPress site. The procedures used to stand up this WordPress instance came from the
+researcher's previous work and provided a benchmark by which to determine the relative
+
+ho
+
+difficulty of building and destroying clusters with Kind.
+
+ut
+
+For this machine, the researcher used a CentOS7 server with 100 GB of storage, 4 GB of
+
+,A
+
+RAM, and two processors. This environment allowed for quick deployment and teardown of
+
+te
+
+Kubernetes clusters for testing of GitHub code. Because the researcher evaluated several sets of
+
+In
+
+st
+
+itu
+
+code, this environment saved time in managing the cluster and associated servers.
+
+NS
+
+5. Analysis of Findings
+
+SA
+
+5.1 Container Registry – Analysis
+Container Registry in GCP seamlessly integrates with the other modules of the Google
+
+Th
+
+e
+
+platform. Setting up a Kubernetes cluster is easy, both from the graphical user interface (GUI)
+
+20
+
+and the command line. Once built, kubectl, a command-line tool built into Kubernetes, works
+
+20
+
+efficiently for managing clusters.
+
+©
+
+The GCP menus provide insight into useful metadata about images deployed to the cluster as
+
+well as details about identity and access management (IAM), volume configuration, and network
+configuration, as seen in Figure 3. The system is well-designed for use from either the GUI or
+command line.
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+ll
+Fu
+ns
+ai
+et
+rR
+ho
+ut
+,A
+te
+itu
+st
+In
+NS
+SA
+e
+Th
+20
+20
+©
+Figure 3: GCP menus
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+ll
+
+5.2 Binary Authorization – Analysis
+
+Fu
+
+Binary Authorization is simple to configure in GCP. Further, whitelisting is easily set up
+
+ns
+
+using the list of exempt image paths in the GUI. The researcher did several tests in the system
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+et
+
+ai
+
+and found the interface both simple and effective.
+
+Figure 4: Binary Authorization - exempt image path list
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+The researcher used a NGINX image for some of this testing. In this initial test, the
+
+Fu
+
+ll
+
+researcher executed a YAML file to deploy the NGINX image to the Kubernetes cluster with a
+Binary Authorization policy configured to disallow all images. As expected, GCP rejected the
+
+ns
+
+image with a message from the Binary Authorization system. The message stated that the image
+
+et
+
+ai
+
+policy webhook denied the request because it violated the admission rule. It confirms that Binary
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+Authorization checked the policy and enforced that policy as part of the process.
+
+SA
+
+NS
+
+Figure 5: Binary Authorization – command line denial message
+
+Grafeas - Analysis
+
+e
+
+5.3
+
+Th
+
+Grafeas proved challenging to deploy. The researcher reviewed several deployment
+
+20
+
+procedures during testing before successfully confirming a working set of procedures. Appendix
+
+20
+
+I shows the detailed instructions needed to install both Grafeas and Kritis in GCP. The researcher
+
+©
+
+used Helm to install Grafeas in GCP.
+Helm is a robust package manager designed specifically for Kubernetes. Helm uses the
+concept of charts to allow users to define, install, and upgrade Kubernetes applications. The
+researcher examined several Helm charts, trying to find a simple way to spin up Grafeas and
+Kritis. Another nice feature of Helm is that it can easily rollback deployments as necessary.
+Notably, available Helm scripts required modification due to a problematic name flag. While
+there were multiple Grafeas-related Helm scripts in GitHub, most did not work on the initial
+attempt. Because Grafeas is a recently released product, no consensus exists on best practices for
+deployment. The result was much experimentation and eventually a working set of procedures.
+Once deployed, Kubernetes ran a single Grafeas pod and functioned as expected.
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+The Grafeas Helm installation scripts were straightforward. With the slight modifications
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+et
+
+ai
+
+ns
+
+both environments, Grafeas ran as a single pod in the Kubernetes cluster.
+
+Fu
+
+ll
+
+mentioned above, the researcher successfully ran Grafeas in a non-GCP Kubernetes cluster. In
+
+NS
+
+In
+
+Figure 6: Grafeas pod running in GCP Kubernetes Cluster
+
+SA
+
+5.4 Kritis – Analysis
+
+e
+
+Setting up Kritis was a more challenging endeavor. As with Grafeas, there was not a single,
+
+Th
+
+working set of instructions for installation. Appendix I contains the detailed installation
+
+20
+
+instructions used to deploy Kritis in GCP. As with Grafeas, the running Kritis deployment
+
+20
+
+consists of one running pod, the validation hook. However, Kritis requires pre-install and post-
+
+©
+
+install pods, which causes the installation process to be longer and more complex.
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+Fu
+
+ll
+
+Figure 7: Kritis pod running in GCP Kubernetes Cluster
+
+Using Kritis, the cluster owner establishes an attestation authority. Using this authority, the
+
+ns
+
+owner creates attestation policies and specifies the trusted authority for signature verification.
+
+et
+
+ai
+
+This is important, as a trusted authority must sign images before they can gain admittance into
+
+rR
+
+the cluster.
+
+Once running, Kritis functioned as expected. Whitelisting and break-glass features mirrored
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+those of Binary Authorization.
+
+©
+
+20
+
+Figure 8: Kritis message for blocked image deployment
+Unlike Grafeas, the researcher was not able to run Kritis outside of GCP. Instead, the best
+solution for including image vetting in a private Kubernetes cluster was to implement webhooks
+directly in Kubernetes. In the process, the researcher reviewed several GitHub repositories with
+code related to both validating and mutating webhooks. Most code was either outdated, relied on
+decommissioned Kubernetes features, or simply did not work.
+However, the researcher did identify a set of working sample code by Yathi Naik and Malte
+Misberner (Naik and Misberner, 2019). The sample code included a working mutating webhook.
+The code consisted of several YAML files and scripts to handle the challenge of certificate
+generation for use with the webhooks.
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+The researcher took this initial code and built a working validating webhook for use in non-
+
+Fu
+
+ll
+
+GCP Kubernetes clusters to provide image vetting. By changing the following sequence of code
+to reference validating webhooks rather than mutating webhooks, the researcher was also able to
+
+ns
+
+spawn a validating webhook in the Kubernetes cluster.
+
+ai
+
+apiVersion: v1
+
+rR
+
+et
+
+kind: Service
+metadata:
+
+ho
+
+name: webhook-server
+
+ut
+
+namespace: webhook-demo
+
+,A
+
+spec:
+
+te
+
+selector:
+
+itu
+
+app: webhook-server
+ports:
+
+In
+
+st
+
+- port: 443
+
+targetPort: webhook-api
+
+NS
+
+---
+
+SA
+
+apiVersion: admissionregistration.k8s.io/v1beta1
+kind: ValidatingWebhookConfiguration
+
+Th
+
+e
+
+metadata:
+
+name: demo-webhook
+
+20
+
+webhooks:
+
+©
+
+20
+
+- name: webhook-server.webhook-demo.svc
+clientConfig:
+service:
+name: webhook-server
+namespace: webhook-demo
+path: "/validate"
+caBundle: ${CA_PEM_B64}
+rules:
+- operations: [ "CREATE" ]
+apiGroups: [""]
+apiVersions: ["v1"]
+
+Figure 9: Updated deployment YAML file (code updated to support validating webhooks)
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+Fu
+
+ll
+
+6. Synthesis, Results, and Implications
+
+Rapid deployment of code makes protecting the software supply chain critical for companies
+
+ns
+
+building tools for competitive advantage. Bad images, whether malicious or not, can cause
+
+ai
+
+reputational, legal, or regulatory problems.
+
+et
+
+In reviewing both commercial and open-source solutions available for metadata tracking and
+
+rR
+
+image vetting in Kubernetes, the researcher concluded that commercial offerings in GCP are
+
+ho
+
+ahead of open-source tools for the non-GCP environment. While Container Registry, Binary
+
+ut
+
+Authorization, Grafeas, and Kritis work natively in GCP, similar tools are not readily available
+
+,A
+
+for non-GCP Kubernetes clusters.
+
+te
+
+While the researcher initially looked to deploy Grafeas and Kritis in a private Kubernetes
+
+itu
+
+cluster, he ultimately decided to first focus on deploying Grafeas, which worked well in non-
+
+st
+
+GCP Kubernetes clusters. The researcher then spent most of his research time studying
+
+In
+
+validating and mutating webhooks, which are available in native Kubernetes clusters. Much of
+
+NS
+
+the research involved downloading code from GitHub and attempting to run it in a Kind
+
+SA
+
+Kubernetes cluster. The speed and flexibility by which Kind spins up and tears down Kubernetes
+clusters allowed the researcher to assess several sets of code, many built to address different
+
+Th
+
+e
+
+technical challenges. Dissecting and understanding the goals of that code helped the researcher
+better understand how both validating and mutating webhooks work. Further, the researcher
+
+©
+
+20
+
+20
+
+learned how to deploy them to achieve additional protection.
+
+7. Further Research
+The software supply chain continues to be a risk to organizations that depend on
+development for competitive advantage. Companies operating in areas that are not yet entirely
+comfortable with public cloud environments need open-source solutions that they can deploy and
+manage in private cloud environments. GCP, Azure, and AWS work well for many companies.
+However, companies operating in the financial sector, as part of government agencies, or in
+healthcare, are often unable to use these rich public cloud offerings.
+While Kritis is coming for non-GCP environments, companies hosting internal clouds or
+running on non-GCP platforms need tools now to ensure software supply chain integrity. As
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+such, the definition of validating and mutating webhook rules needs more research. Companies
+
+Fu
+
+ll
+
+today can use a GitHub repository that contains a variety of webhooks to provide these required
+checks.
+
+ns
+
+The researcher plans to take the working validating webhook above and experiment with it in
+
+et
+
+ai
+
+his corporate environment. Because he works in the financial space, validating webhooks are
+
+rR
+
+most appropriate. By building upon this proof-of-concept code, the researcher can help his
+
+ho
+
+organization achieve functional checks in the corporate Kubernetes environment.
+
+,A
+
+ut
+
+8. Conclusion
+
+te
+
+Companies must continue to protect the software development supply chain. Global
+
+itu
+
+markets and intense competition make a secure software development supply chain a
+
+st
+
+requirement. The challenge is not new, but the demand for solutions continues to grow.
+
+In
+
+The continued rise of CI/CD emphasizes the need for thorough testing, trusted third-party
+
+NS
+
+code, and automated deployment in software supply chains. Capturing the metadata needed to
+
+SA
+
+track and identify reliable sources of truth is no trivial task. Without this metadata, companies
+struggle to understand what is truly happening in their software supply chain.
+
+Th
+
+e
+
+Software supply chain management allows companies to protect the critical software
+assets they create. It ensures that they use only trusted images, authorized components, and
+
+20
+
+reputable third-party tools. Google's commercial tools that help in managing the software supply
+
+©
+
+20
+
+chain lead the market. Container Registry houses metadata and provides customers insight into
+what is happening in the CI/CD pipeline. Binary Authorization leverages the data in the
+Container Registry and provides a checkpoint for images and components before allowing them
+into production.
+Open-source tools provide alternatives for companies hosting internal cloud
+environments. Grafeas and Kritis are open-source alternatives to Container Registry and Binary
+Authorization, respectively. These active open-source projects continue to progress and offer
+companies the ability to track metadata about their CI/CD pipelines and prevent the deployment
+of unauthorized and potentially damaging code. However, Kritis is limited in that procedures for
+using the tool outside of GCP are not currently available. As such, security-minded companies
+hosting internal Kubernetes environments must use built-in tools like admissions controls.
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+A challenge for companies desiring the flexibility to move between public cloud providers
+
+Fu
+
+ll
+
+and private cloud environments is to determine how to implement Grafeas and Kritis, or similar
+tools, in such a way that they achieve the desired mobility and transparently simply. This paper
+
+ns
+
+aimed to provide a prescriptive model for deploying tools like Grafeas and Kritis in private cloud
+
+et
+
+ai
+
+environments. The hope is that companies can take these recommendations and build tailored
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+solutions that help them secure their software supply chains, regardless of location.
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+References
+
+ns
+
+Fu
+
+ll
+
+Agarwala, Satyam. (2018). Automating Enterprise Governance using the CI/CD Pipeline.
+Retrieved from https://www.youtube.com/watch?v=OGAWi9PlDrA
+
+ai
+
+Azeri, Izzy. (2020). What is CI/CD? Retrieved from https://www.mabl.com/blog/what-is-cicd
+
+rR
+
+et
+
+Binary Authorization. (2020) Retrieved from https://cloud.google.com/binary-authorization/
+
+ho
+
+Blanchard, Kenneth H. The One Minute Manager. [New York]: Morrow, an imprint of
+HarperCollinsPublisher, 2003.
+
+,A
+
+ut
+
+Center for Internet Security. (2020). Retrieved from https://www.cisecurity.org
+
+te
+
+Container Registry. (2020) Retrieved from https://cloud.google.com/container-registry/
+
+In
+
+st
+
+itu
+
+Elliot, Stephen. (2017). Introducing Grafeas: An open-source API to audit and govern your
+software supply chain. Retrieved from
+https://cloud.google.com/blog/products/gcp/introducing-grafeas-open-source-api-
+
+NS
+
+Google Kubernetes Engine Binary Authorization Demo. (2020) Retrieved from
+https://github.com/GoogleCloudPlatform/gke-binary-auth-demo
+
+e
+
+SA
+
+Greenberg, Aysylu. (2019). Software Supply Chain Management with Grafeas and Kritis.
+Retrieved from
+
+20
+
+Th
+
+Guo, Sandra. End-to-End Security and Compliance for Your Kubernetes Software Supply Chain
+(2019). Retrieved from https://www.youtube.com/watch?v=UkzfQvLpI0M
+
+©
+
+20
+
+Guo, Sandra, Iglesias. HYB301: Secure Software Supply Chains on Google Kubernetes Engines
+(2019). Retrieved from https://www.youtube.com/watch?v=Nej_823zfFo
+Hightower, Kelsey. (2020) Grafeas Tutorial. Retrieved from
+https://github.com/kelseyhightower/grafeas-tutorial
+Humble, Jez, Farley, David (2011). Continuous Delivery: Reliable Software Releases Through
+Build, Test, and Deployment Automation. [Kindle Version], Retrieved from
+Amazon.com
+Illouz, Daniel. (2020). The GitOps Manifesto [wip]. Retrieved from
+https://github.com/danillouz/gitops-manifesto
+
+Isberner, Malte. (2019). A Guide to Kubernetes Admission Controllers. Retrieved from
+https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/
+Kim, Gene, Kevin Behr, and George Spafford. The Phoenix Project: A Novel About It, DevOps,
+and Helping Your Business Win. Portland, OR: IT Revolution Press, 2013. Print.
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+ns
+
+Kritis Tutorial. (2020). Retrieved from
+https://github.com/grafeas/kritis/blob/master/docs/tutorial.md
+
+Fu
+
+ll
+
+Kind User Guide. (2020). Retrieved from https://kind.sigs.k8s.io/docs/user/quick-start/
+
+rR
+
+et
+
+ai
+
+Kritis with Standalone Grafeas (2020). Retrieved from
+https://github.com/grafeas/kritis/tree/master/docs/standalone
+
+ho
+
+Martin, Andrew. Secure Kubernetes Application Delivery. Retrieved from
+https://www.sans.org/webcasts/110903
+
+,A
+
+ut
+
+Naik, Yathi, Misberner, Malte. (2020) Kubernetes Admission Controller Webhook Demo,
+Retrieved from https://github.com/stackrox/admission-controller-webhook-demo
+
+itu
+
+te
+
+Pluralsight. (Collignon, Philippe). (2019) Packaging Applications with Helm for Kubernetes
+[Online Training]. Retrieved from https://app.pluralsight.com
+
+In
+
+st
+
+Pluralsight. (Nocentino, Anthony). (2019) Kubernetes Installation and Configuration
+Fundamentals [Online Training]. Retrieved from https://app.pluralsight.com
+
+SA
+
+NS
+
+Pluralsight. (Poulton, Nigel). (2018) Docker and Kubernetes: The Big Picture [Online Training].
+Retrieved from https://app.pluralsight.com
+
+20
+
+Th
+
+e
+
+Puehringer, Lukas, Dembowski, Wendy. End-to-End Security and Compliance for Your
+Kubernetes Software Supply, Completely Securing the Software Supply Chain using
+Grafeas + in-toto (2018). Retrieved from https://www.youtube.com/watch?v=05zNYQxEAM
+
+©
+
+20
+
+Pulton, N., Joglekar, P. (2019). The Kubernetes Book [Kindle version]. Retrieved from
+Amazon.com
+Udemy. (Aggarwal, Manuj & TetraNoodle Team). (2019). AWS, Docker Containers, Cloud
+Cluster with Mesosphere DC/OS [Online Training]. Retrieved from https://udemy.com
+Udemy. (Chauhan, Anshul). (2019). Kubernetes for DevOps: Docker, Docker Swarm,
+Kubernetes, HELM [Online Training]. Retrieved from https://udemy.com
+Udemy. (Mannambeth, Mumshad). (2019). Kubernetes Certified Application Developer (CKAD)
+with Tests [Online Training]. Retrieved from https://udemy.com
+Yildirim, G. Installing WordPress on Docker Swarm. Retrieved from
+https://www.gurayyildirim.com.tr/WordPress-MYSQL-with-isolated-networkdeployment-in-30-seconds-with-Docker-swarm-mode-1286.html
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+Fu
+
+ll
+
+Appendix I – Install both Grafeas and Kritis in GCP
+
+Grafeas: Check out your fork of the Kritis repository. Then, navigate to the standalone folder.
+
+ns
+
+cd ${GOPATH}/src/github.com/grafeas/kritis/docs/standalone
+
+rR
+
+et
+
+ai
+
+• Set up a GCP project where Kubernetes Engine API is enabled. You'll need to create a new
+project in GCP.
+
+,A
+
+ut
+
+ho
+
+PROJECT=<project ID assigned to you>
+gcloud config set project $PROJECT
+gcloud components update
+gcloud config set compute/zone us-central1-a
+gcloud container clusters create kritis-test --num-nodes=2
+gcloud container clusters get-credentials kritis-test
+
+itu
+
+te
+
+• Create and upload the Service Account Key:
+
+NS
+
+In
+
+st
+
+gcloud iam service-accounts create kritis-ca-admin \
+--display-name "Kritis Service Account"
+gcloud iam service-accounts keys create gac.json \
+--iam-account kritis-ca-admin@${PROJECT}.iam.gserviceaccount.com
+kubectl create secret generic gac-ca-admin --from-file=gac.json
+
+SA
+
+Install Grafeas to the cluster with the following script. The script also generates TLS certificates
+that the Grafeas server uses.
+
+Th
+
+e
+
+NOTE: update setup_grafeas.sh as follows
+
+20
+
+helm install command – remove "–name" and save the file.
+
+©
+
+20
+
+WARNING: Make sure to set Common Name to grafeas-server when prompted during the
+certificate creation.
+./setup_grafeas.sh
+
+Kritis:
+
+curl -LO https://storage.googleapis.com/resolve-tags/latest/resolve-tagslinux-amd64.tar.gz && \
+RESOLVE_TAGS_DIR=$HOME/.kube/plugins/resolve && \
+mkdir -p $RESOLVE_TAGS_DIR && tar -C $RESOLVE_TAGS_DIR -xzf resolve-tagslinux-amd64.tar.gz && \
+mv $RESOLVE_TAGS_DIR/resolve-tags-linux-amd64 $RESOLVE_TAGS_DIR/resolvetags && \
+sudo cp $RESOLVE_TAGS_DIR/resolve-tags /usr/local/bin/
+
+Install kritis to your cluster:
+helm install kritis https://storage.googleapis.com/kritischarts/repository/kritis-charts-0.2.2.tgz
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+et
+
+ai
+
+ns
+
+Fu
+
+ll
+
+Appendix II – Binary Authorization in GCP
+
+Figure 1: Binary Authorization Menus in GCP – Set to not allow any images
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+ll
+Fu
+ns
+ai
+et
+rR
+ho
+ut
+,A
+te
+itu
+st
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+In
+
+Figure 2: Pull down an image
+
+Figure 3: Image denied based on Binary Authorization configuration
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+ll
+Fu
+ns
+ai
+et
+rR
+ho
+ut
+,A
+te
+itu
+st
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+In
+
+Figure 4: Policy changes to "Allow All Images"
+
+Figure 5: Added specific image path to allow list
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+ll
+Fu
+ns
+ai
+et
+rR
+ho
+ut
+,A
+te
+itu
+st
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+In
+
+Figure 6: Pod successfully deployed
+
+Figure 7: Create attestor from glcoud command line
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+ll
+Fu
+ns
+ai
+et
+rR
+ho
+ut
+,A
+te
+itu
+st
+In
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+Figure 8: Create Note
+
+Figure 9: Create attestation note payload
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+ll
+Fu
+ns
+ai
+et
+rR
+ho
+ut
+,A
+te
+itu
+st
+In
+
+NS
+
+Figure 10: Note created
+
+SA
+
+Syntax to create a note attestor:
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+gcloud beta container binauthz attestations create --artifacturl="${IMAGE_PATH}@${IMAGE_DIGEST}" -attestor="projects/${PROJECT_ID}/attestors/${ATTESTOR}" --signaturefile=${GENERATED_SIGNATURE} --public-key-id="${PGP_FINGERPRINT}"
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+ns
+
+et
+
+ai
+
+1. Create a cluster using Kind
+a. sudo kind delete cluster
+b. sudo kind create cluster –config kind-config.yaml
+i. Syntax of kind-config.yaml
+
+Fu
+
+ll
+
+Appendix III – Kubernetes Cluster Installation – Kind
+
+itu
+
+st
+
+In
+
+SA
+
+NS
+
+ii.
+iii.
+iv.
+v.
+vi.
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+- role: control-plane
+- role: worker
+- role: worker
+1. Determines the number of nodes in the cluster
+2. Configurable
+Nodes
+Control plane
+CNI
+Storage Class
+Joins worker nodes
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+2. Install app using kubectl
+a. sudo kubectl apply -k ./
+i. Example here was a WordPress instance
+1. kubectl get services WordPress
+2. sudo kubectl port-forward services/wordpress 7676:80
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+ai
+
+ns
+
+wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.13.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+
+et
+
+1.
+2.
+3.
+
+Fu
+
+ll
+
+Appendix IV – Installing Grafeas and Kritis in a private
+Kubernetes cluster
+Install Go:
+
+•
+•
+•
+•
+
+rR
+
+Install Helm:
+
+te
+
+/home/woodrobe/go/src/github.com/grafeas/kritis/docs/standalone
+
+itu
+
+Grafeas: cd
+
+,A
+
+ut
+
+ho
+
+$ git clone https://github.com/helm/helm.git
+$ cd helm
+$ make
+Add helm to path
+o export PATH="/home/woodrobe/helm/helm/bin:$PATH"
+
+st
+
+• Create Secret using JSON file (see appendix 5 for JSON syntax):
+
+In
+
+kubectl create secret generic gac-ca-admin --from-file=gac.json
+
+NS
+
+Install Grafeas to the cluster with setup_grafeas.sh.
+
+SA
+
+NOTE: update setup_grafeas.sh as follows
+
+Th
+
+e
+
+helm install command – remove "–name" and save the file.
+
+20
+
+20
+
+WARNING: Make sure to set Common Name to grafeas-server when prompted during the
+certificate creation.
+
+©
+
+./setup_grafeas.sh
+
+Kritis:
+curl -LO https://storage.googleapis.com/resolve-tags/latest/resolve-tagslinux-amd64.tar.gz && \
+RESOLVE_TAGS_DIR=$HOME/.kube/plugins/resolve && \
+mkdir -p $RESOLVE_TAGS_DIR && tar -C $RESOLVE_TAGS_DIR -xzf resolve-tagslinux-amd64.tar.gz && \
+mv $RESOLVE_TAGS_DIR/resolve-tags-linux-amd64 $RESOLVE_TAGS_DIR/resolvetags && \
+sudo cp $RESOLVE_TAGS_DIR/resolve-tags /usr/local/bin/
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+Fu
+
+SA
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+et
+
+ai
+
+ns
+
+helm install kritis https://storage.googleapis.com/kritischarts/repository/kritis-charts-0.2.2.tgz
+
+ll
+
+Install kritis to your cluster:
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+Figure 1: grafeas and kritis running on a local Kubernetes cluster
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+Fu
+
+ll
+
+Appendix V – Contents of gac.json
+
+et
+
+ai
+
+ns
+
+This researcher uses this file, which comes from the Kritis deployment in GCP, to create
+keys needed in the private cloud Kubernetes cluster. The researcher was able to start the Kritis
+service in a private cloud. However, modification is needed as Kritis could not see the
+ValidatingWebHook that was created by Kritis using the certificates generated with this file.
+{
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+"type": "service_account",
+"project_id": "woodise5901a",
+"private_key_id": "3f50d3d2db4059c520c6d62f7bbba8bd72767a9a",
+"private_key": "-----BEGIN PRIVATE KEY----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCRt6Y4icAk4MGz\nw2q3lRo0n
+BjYOrq+EbNxnXQyhoO0ckFqWf4WW/VP7mCXAE6C9rqKimsteuQbSJEh\nJm5shwkqiyP5+j0q5+R5
+lWzy9ecV4Froa9J0pHIdImBasem7TK7kDZ2kNS9vEaau\nyxuWBOBNJSQ5BI6yfMQrbQ3nPxQo6K4
+D1QwOaelW7mfsmq+JkOdh6KNxNhe4/1Av\nfx7NPL4gscvg6160eqZG+nYOyADszGR18hUdQBDfYU
+H+UCZN+BEmV3ApjvOznm/O\nTYC4I2PwL1zOZHh7NT/3k45R4Q3hDehKRhp2YwprGybmnuvPKJp9S
+G21YRfYnA7q\nfdQr/L3jAgMBAAECggEACuXu1xyqU7fBlPXBFgDfSF8CVq2xyMRfJNivV5YK5KSE
+\n8vTPFZIEG1nLPI/nz1Cvq+vlTy35QHchb5bFvHUvANEOPER0bbCRPGyqDNPKWC8C\n7Y4e291us
+XIgPbg/sGPwUpsYFq9poEd0LW+AXSx5MBvehSsrlvrQ2ySZXRmxIswD\nT5Ju6lkdrmrHS3QHzIcY
+7y04q5EmV4/GCDKp7VPRSqYpyCs4dIm2ZQNvi5L1uRQP\nCDf66y8PoeXiZE59IfAi3rPRnwlBchc
+VRVDkKr9nDwZJe4Hu/W8/6702hK3IZi8J\nKv0/X1k0KIYp45TDki+u8Ui5oIRUwJS8Ehhi5ramAQ
+KBgQDCqZUoZFEknSYOKK6T\nPd5DKcyFrq25G2mB/GU41rbs7M0f0zb76BdQBRfgIXLX12XtV3NF4
+T4+PcQCY8ye\n/JpoBk03XeqGoeybzXwj6pFChTtlnrPtJBbh9heGa8XaeWXVBFwBhbkJfokLz8mJ
+\nRuo2YNa/a9ejKB7fJ2lvi5RSAQKBgQC/oevGetqkAKjLFwcS1tdO45G3tzVbQwpS\nwhFM1AnzO
+0k3YgcwOjDIav+EdLxgGtE91ewyHwwYaUjU1nPjouGTJSyzv/m+MEyd\no18w5bkaeaMqxeeD7kGu
+dwt20AYYo6vD4kQfBQ40VOGTnuhwxGXr7yBxgZtbNM/H\nVtZlxToH4wKBgQCM5ozlgL9PHkSmaQH
+76ANSYBX/CXILk3DqOpPV8WzUz46mI48g\nBV2ieR1QCUYEP5AynGL+yMvx52lSRYSd67+j3jPUCL
+GyI9CM8c6SfL4KBT/6DUa1\nNrMteaCLlsTOn6J67r3eCDnoSmPOXefF6sOq+qtWQSwDmA3IftGNg
+N2qAQKBgFrz\nvhThAF6wlWx2zHurjls59VJN2TwscHzg8RcW2HYiIFjx5NmF9NtatVWnljTC5abE
+\nnqsXQ0VeyxuBgVV8XDXbggD6T81t3R9AiBCMJ7OiIchOT9i1P2VPyRgmGY6eOArr\nnEtgueIqm
+znWRRoojPtS7oIQ8qxyP1+sHmwFFMrjAoGABUpTkhqk90o3FlUo42XW\n2vO0JaPYRxDxuy8aJ6Ue
+bl3eRMwYTlLbyi2mK6nyv+HCwajmEV6lT+1ezo3etcfc\nozf33VaTS6eHjzwSkmalLA1LtfferC8
+JBRbeDktbzjkxY+nTvDc/lukU6g9LC9wI\newXH9jXoH52qav0sRqiwHbI=\n-----END PRIVATE
+KEY-----\n",
+"client_email": "kritis-ca-admin@woodise5901a.iam.gserviceaccount.com",
+"client_id": "100392186007034736626",
+"auth_uri": "https://accounts.google.com/o/oauth2/auth",
+"token_uri": "https://oauth2.googleapis.com/token",
+"auth_provider_x509_cert_url":
+"https://www.googleapis.com/oauth2/v1/certs",
+"client_x509_cert_url":
+"https://www.googleapis.com/robot/v1/metadata/x509/kritis-caadmin%40woodise5901a.iam.gserviceaccount.com"
+}
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+Command to interact with images in a Kubernetes cluster
+
+Fu
+
+•
+
+ll
+
+Appendix VI – Summary of GitHub and related research
+
+et
+
+Attempt to use a validating webhook outside of Kritis – did not work
+
+rR
+
+•
+
+ai
+
+ns
+
+kubectl exec --stdin --tty wordpress-99787fff5-6z84s -- /bin/bash
+
+ho
+
+https://banzaicloud.com/blog/k8s-admission-webhooks/
+https://github.com/banzaicloud/admission-webhook-example
+
+te
+
+,A
+
+ut
+
+This site and GitHub repository walked through setting up a validating webhook in a
+Kubernetes cluster. The process finished without error, but the webhook did not
+function as advertised. The researcher reviewed the code did not find the issue.
+
+NS
+
+In
+
+st
+
+./deployment/webhook-create-signed-cert.sh
+kubectl get secret admission-webhook-example-certs
+kubectl create -f deployment/deployment.yaml
+kubectl create -f deployment/service.yaml
+cat ./deployment/validatingwebhook.yaml | ./deployment/webhook-patch-cabundle.sh > ./deployment/validatingwebhook-ca-bundle.yaml
+6. cat deployment/validatingwebhook-ca-bundle.yaml
+7. kubectl label namespace default admission-webhook-example=enabled
+8. kubectl g kubectl create -f deployment/validatingwebhook-ca-bundle.yamlet
+namespace default -o yaml
+9. kubectl create -f deployment/sleep.yaml (should have thrown an error)
+10. kubectl create -f deployment/sleep-with-labels.yam
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+1.
+2.
+3.
+4.
+5.
+
+itu
+
+Here are the steps that the researcher followed:
+
+•
+
+Kelsey Hightower Validating Webhooks - Failed
+https://github.com/kelseyhightower/denyenv-validating-admission-webhook
+This repository also contained sample code for a validating admission webhook. While
+the code did not work as expected, the site had some excellent information about
+validating webhooks.
+
+•
+
+Giant Swarm Example
+https://docs.giantswarm.io/guides/creating-your-own-admission-controller/
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+
+Silverlock Example:
+
+Fu
+
+•
+
+ll
+
+Ri
+
+Here is another set of code that seemed to make used of older Kubernetes functionality.
+
+ai
+
+ns
+
+https://blog.questionable.services/article/kubernetes-admission-control/
+
+*** Stackrox Example:
+
+ho
+
+•
+
+rR
+
+et
+
+Silverlock's example was promising, but the researcher was not able to get the code
+working as described.
+
+,A
+
+ut
+
+https://github.com/stackrox/admission-controller-webhook-demo
+
+st
+
+itu
+
+te
+
+The Stackrox example was a simple set of code for deploying a mutating webhook. The
+code worked as described and serves as a basis for the validating webhook shown in
+Appendix VII. The researcher plans to use this as a basis for future validation hooks in his
+private cloud environment.
+
+In
+
+Here are the steps taken to test the code in the researcher's test environment:
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+1. Deploy a clean Kind Kubernetes cluster
+2. Run deploy.sh (creates CA, cert and private key, and launches pod in a webhookserver namespace)
+a. Creates namespace called "webhook-demo"
+b. Creates TLS secrets
+c. Updates YAML with generated secrets
+d. Creates demo-webhook MutatingWebhookConfiguration from
+deployment/deployment.yaml.template
+TODO:
+1. Use this base to modify what rules are checking.
+2. Attempt to use code to introduce a ValidatingWebhookConfiguration
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+Fu
+
+ll
+
+Appendix VII – Distributed Kubernetes cluster installation
+Steps to set up the environment
+
+ai
+
+ns
+
+1. Install Kubernetes on Master and all Nodes
+
+et
+
+cat <<EOF > /etc/yum.repos.d/kubernetes.repo
+
+rR
+
+[kubernetes]
+
+ho
+
+name=Kubernetes
+
+ut
+
+baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+
+,A
+
+enabled=1
+
+itu
+
+te
+
+gpgcheck=1
+
+st
+
+repo_gpgcheck=1
+
+NS
+
+In
+
+gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg
+https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+
+SA
+
+EOF
+
+Th
+
+e
+
+# Set SELinux in permissive mode (effectively disabling it)
+
+20
+
+setenforce 0
+
+©
+
+20
+
+sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
+
+yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
+
+systemctl enable --now kubelet
+
+2. Turn off Swap and update /etc/fstab on Master and all Nodes
+swapoff -a
+vim /etc/fstab (Comment out last line
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Fu
+
+ll
+
+Ri
+
+3. Set hostname for each machine (Master and all Nodes)
+
+ns
+
+4. Ensure that Docker and Kubernetes are started upon boot (Master and all Nodes)
+
+ai
+
+systemctl enable docker.service
+
+rR
+
+et
+
+systemctl enable --now kubelet
+
+,A
+
+ut
+
+ho
+
+REBOOT
+
+itu
+
+te
+
+5. Download overlay network YAML files (Master only)
+
+NS
+
+In
+
+st
+
+wget https://docs.projectcalico.org/v3.3/gettingstarted/kubernetes/installation/hosted/kubernetes-datastore/caliconetworking/1.7/calico.yaml
+
+SA
+
+wget https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/rbackdd.yaml
+
+e
+
+6. Set up Pod Network (Master only)
+
+20
+
+Th
+
+service firewalld stop
+
+©
+
+20
+
+# Setup daemon.
+cat > /etc/docker/daemon.json <<EOF
+{
+"exec-opts": ["native.cgroupdriver=systemd"],
+"log-driver": "json-file",
+"log-opts": {
+"max-size": "100m"
+},
+"storage-driver": "overlay2",
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+"storage-opts": [
+
+Fu
+
+ll
+
+"overlay2.override_kernel_check=true"
+
+ns
+
+]
+
+ai
+
+}
+
+,A
+
+ut
+
+mkdir -p /etc/systemd/system/docker.service.d
+
+ho
+
+rR
+
+et
+
+EOF
+
+te
+
+# Restart Docker
+
+NS
+
+In
+
+st
+
+systemctl restart docker
+
+itu
+
+systemctl daemon-reload
+
+sudo kubeadm init --pod-network-cidr=192.168.0.0/16
+
+SA
+
+7. Run as Regular User
+
+Th
+
+e
+
+mkdir -p $HOME/.kube
+
+20
+
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+
+©
+
+20
+
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+8. Apply YAML files
+kubectl apply -f RBAC-kdd.yaml
+kubectl apply -f calico.yaml
+
+Verify with:
+kubectl get pods --all-namespaces
+kubectl get nodes
+sudo systemctl status kubelet.service
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+gh
+Ri
+
+ls /etc/kubernetes
+
+ns
+
+Fu
+
+ll
+
+ls /etc/kubernetes/manifests
+
+ai
+
+9. Useful checks
+
+rR
+
+et
+
+kubeadm token list
+
+ho
+
+#to create a new token
+kubeadm token create
+
+te
+
+,A
+
+ut
+
+#if you need to get the discovery token
+openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der
+2>/dev/null | openssl dgst -sha256
+
+itu
+
+EXAMPLE
+
+st
+
+kubeadm join 192.168.50.143:6443 --token vcycku.z1f2u2bel8l1zba5 \
+
+SA
+
+NS
+
+In
+
+--discovery-token-ca-cert-hash
+sha256:779e1742c77e2707001a12fe38ffd4abbd3df21e9166327596949d7f733da596
+
+Th
+
+e
+
+10. If get nodes show "Not Ready," rerun the following
+
+©
+
+20
+
+20
+
+kubectl apply -f calico.yaml
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+Last Updated: October 18th, 2020
+
+Upcoming SANS Training
+Click here to view a list of all SANS Courses
+SANS Sydney 2020
+
+Sydney, AU
+
+Nov 02, 2020 - Nov 14, 2020
+
+Live Event
+
+SANS Secure Thailand
+
+Bangkok, TH
+
+Nov 09, 2020 - Nov 14, 2020
+
+Live Event
+
+APAC ICS Summit & Training 2020
+
+Singapore, SG
+
+Nov 13, 2020 - Nov 28, 2020
+
+Live Event
+
+SANS Community CTF
+
+,
+
+Nov 19, 2020 - Nov 20, 2020
+
+Self Paced
+
+SANS Local: Oslo November 2020
+
+Oslo, NO
+
+Nov 23, 2020 - Nov 28, 2020
+
+Live Event
+
+SANS Wellington 2020
+
+Wellington, NZ
+
+Nov 30, 2020 - Dec 12, 2020
+
+Live Event
+
+SANS OnDemand
+
+OnlineUS
+
+Anytime
+
+Self Paced
+
+SANS SelfStudy
+
+Books & MP3s OnlyUS
+
+Anytime
+
+Self Paced
+
+

@@ -1,0 +1,92 @@
+https://www.keysight.com/in/en/assets/7019-0096/case-studies/Hyper-Box-Tackles-Attack-Traffic-with-Ixia-ThreatARMOR.pdf
+
+
+HYPER BOX TACKLES
+ATTACK TRAFFIC WITH
+IXIA THREATARMOR
+Hyper Box, a veteran of the Japanese Internet industry, had
+been suffering in recent years from a glut of cyberattacks. Since
+they were unable to utilize powerful security devices over the
+shared network provided by their service, they were forced to
+constantly check logs and manually respond to attacks on a
+daily basis. As a result, Hyper Box was interested in learning
+how Ixia ThreatARMOR delivers on its promise of filtering
+known bad IP addresses and minimizing SIEM alerts.
+Hyper Box’s strength is its robust support structure, concentrated
+at its data centers in Tokyo. Known in the industry for its low-cost,
+high-quality hosting services, Hyper Box is Japan’s first domestic
+enterprise to provide telephone assistance 24 hours a day, 365
+days a year. Know-how and years of technical experience allow
+Hyper Box to support a wide range of users.
+SHIFTING FROM MANUAL TO AUTOMATED
+RESPONSES TO MASSIVE ATTACK TRAFFIC
+Hyper Box had been suffering from the cyberattacks, like many of
+the domestic and international service providers. The onslaught of
+attack traffic into the network has increased every year. Finding
+ways to counter it was becoming increasingly challenging. Attack
+traffic would sometimes cause the server to crash entirely, making
+it necessary to take extra measures to protect user systems.
+
+Essential security infrastructures, such as firewalls or IDSs, were
+in place. However, unlike the networks of private enterprises,
+shared networks providing services to users are unable to
+adopt aggressive measures for counterattacks due to the risk of
+blocking user communication.
+As a result, Mr. Naoya Matsuura, who oversees network and
+security operations in the Engineering department at Hyper Box,
+resorted to taking manual countermeasures to the massive
+attack traffic.
+SECURITY OPERATIONS AUTOMATED AT
+LOW COST
+While investigating countermeasures, Hyper Box discovered an
+article introducing ThreatARMOR. The concept of automatically
+eliminating unnecessary traffic based on known threats was the
+same idea behind the manual countermeasures Mr. Matsuura had
+been implementing.
+At that time, ThreatARMOR was a new product. Mr. Matsuura
+contacted Ixia to observe a test run on actual user machines.
+Normally, a new product is not introduced until after proof of
+concept (PoC) tests, but Mr. Matsuura decided to introduce
+ThreatARMOR to the network during the demonstration.
+There were many reasons Mr. Matsuura opted to use
+ThreatARMOR, but a main one was its proprietary “ATI Rap
+Sheet,” which indicates why each instance of blocked traffic is
+flagged. That kind of information makes ThreatARMOR much
+more than just a simple black box.
+“I was thrilled with the level of sensitivity to the network
+operation. One reason is that ThreatARMOR employs a fail-open
+system, and even when trouble occurs, communication is never
+interrupted,” said Mr. Matsuura. “In contrast, most security devices
+adopt a fail-close system, which makes them inappropriate for use
+over a shared network,” he added. In his opinion, “ThreatARMOR
+is ideal for helping to strengthen the security of service
+providers’ networks.”
+
+NUMBER OF INTRUSIONS DETECTED BY IDS
+REDUCED TO ONE-FIFTH WITH FURTHER
+REDUCTIONS EXPECTED
+After seeing the demo, Hyper Box moved quickly and
+ThreatARMOR went into operation at the end of March. In the 
+
+early stages, performance and functions were tested once again
+in a TAP/remote mode and also monitored. However, after about a
+month, the system was switched to an inline/block mode.
+ThreatARMOR blocked 4% of all Hyper Box’s traffic. Considering
+the enormous amount of traffic flowing into Hyper Box’s shared
+networks, this percentage meant that a considerable number
+of attacks was successfully blocked. The number of intrusions
+detected by the IDSs decreased from 1 million cases to 200k
+cases. In addition, Mr. Matsuura saw a decrease in the amount of
+spam e-mails.
+Mr. Matsuura appreciated how easy it was to implement
+ThreatARMOR, and noted that the sophisticated management
+interface is especially user-friendly. He was particularly pleased
+with how the system status can be checked by merely looking
+at a dashboard. He said that he used to frantically watch the
+logs of firewalls and IDSs. Now, however, blocked attacks can be
+recognized at a glance, providing peace of mind.
+“Thanks to ThreatARMOR, we can devote our time to research
+and planning, in order to provide better services,” said Mr.
+Matsuura. In addition, he is looking forward to seeing how Ixia
+expands the range and applications of ThreatARMOR in
+the future.

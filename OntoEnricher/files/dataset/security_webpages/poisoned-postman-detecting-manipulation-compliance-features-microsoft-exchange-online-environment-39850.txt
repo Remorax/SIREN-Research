@@ -1,0 +1,2645 @@
+SANS Institute
+Information Security Reading Room
+
+The Poisoned Postman:
+Detecting Manipulation of
+Compliance Features in a
+Microsoft Exchange Online
+Environment
+______________________________
+Rebel Powell
+
+Copyright SANS Institute 2020. Author Retains Full Rights.
+This paper is from the SANS Institute Reading Room site. Reposting is not permitted without express
+written permission.
+
+ts
+gh
+Ri
+
+et
+
+ai
+
+ns
+
+Fu
+
+ll
+
+The Poisoned Postman: Detecting Manipulation of
+Compliance Features in a Microsoft Exchange
+Online Environment
+
+rR
+
+GIAC GCIH Gold Certification
+
+,A
+
+ut
+
+ho
+
+Author: Rebel Powell, rebelpowell@gmail.com
+Advisor: Lenny Zeltser
+
+Abstract
+
+In
+
+st
+
+itu
+
+te
+
+Accepted: August 23, 2020
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+Modern attack techniques frequently target valuable information stored on enterprise
+communications systems, including those hosted in cloud environments. Adversaries
+often look for ways to abuse tools and features in such systems to avoid introducing
+malicious software, which could alert defenders to their presence (Crowdstrike, 2020).
+While on-premise detection strategies have evolved to address this threat, cloud-based
+detection has not yet matched the adoption pace of cloud-based services (MITRE, 2020).
+This research examines how adversaries can perform feature attacks on organizations that
+use Microsoft Office 365's Exchange Online by exploring recent advanced persistent
+threat tactics in Exchange on-premise environments and applying variations of them to
+Exchange Online's Compliance and Discovery features. It also analyzes detection
+strategies and mitigations that businesses can apply to their systems to prevent such
+attacks.
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Fu
+
+ll
+
+1. Microsoft Exchange and Exchange Online – A
+Strategic Target
+
+Ri
+
+gh
+
+The Poisoned Postman 2
+
+ns
+
+Though business communication platforms continue to innovate with
+
+ai
+
+technologies like instant messaging and chat services, no method dominates the
+
+et
+
+professional communication spectrum more than email. In a four-year communications
+
+rR
+
+study from 2016-2020, the technology market research firm The RadiCati Group
+
+ho
+
+identified that 64% of businesses still use email as a primary form of communication, and
+
+ut
+
+the group projected a 4.3% growth in the trend in 2021 (The RadiCati Group Inc, 2020).
+
+,A
+
+Email services are used to communicate sensitive business data, including strategies,
+
+te
+
+private data, and intellectual property. Many small and medium-sized businesses have
+
+itu
+
+also moved this vital function to cloud-hosted environments like Microsoft's Exchange
+
+st
+
+Online to increase availability and reduce costs. In their 2019 Cloud Adoption report,
+
+In
+
+Cloud Access Service Broker BitGlass highlighted the exponential adoption of one
+
+NS
+
+particular environment - Microsoft's Office 365 Productivity Suite (including Exchange
+
+SA
+
+Online in the Enterprise Licensing Tier) which accounted for a 79% market share,
+overtaking Google's G-Suite after a three-year adoption battle (BitGlass, 2019).
+
+Th
+
+e
+
+Advanced Persistent Threat (APT) groups have long recognized the strategic
+
+value of obtaining covert access to these business email communication systems to
+
+20
+
+enable long-term objectives and have increased their capabilities and tactics to address
+
+©
+
+20
+
+the cloud-adoption trend of potential victims. These groups, differentiated from
+traditional attackers by their resources and specialized tooling (Leydon, 2020), value
+strategic operations such as the collection of communications instead of hit-and-run
+styled malware attacks targeting immediate monetary gain. One particularly aggressive
+growth trend observed in APT on-premise cyber collection operations is that of utilizing
+native functionality and system tools to achieve tactical objectives, reducing the attackers'
+footprint while increasing the difficulty of detection by victims. Dubbed living-off-theland (LOL) tactics, these attacks accounted for 40% of compromises observed in
+Crowdstrike's 2019 Global Threat Report, and at least 15% of the LOL attacks targeted
+email systems (Crowdstrike, 2019). This style of tactic has also been modified for cloud
+environments where instead of using native executable files on operating systems,
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 3
+
+ll
+
+attackers manipulate built-in features and application programming interfaces (APIs)
+
+Fu
+
+exposed by providers, reducing their footprint in a cloud-based intrusion. While feature
+
+ns
+
+abuse tactic reporting on cloud-specific incidents is often rare due to attribution fears by
+
+ai
+
+businesses (FBI iC3, 2016), two published on-premise APT incidents give example
+
+et
+
+insights into how capable and advanced Microsoft Exchange native exploitation threat
+
+rR
+
+tactics are.
+
+ho
+
+In 2019, ESET researchers exposed APT28's LIGHTNEURON backdoor which
+
+ut
+
+used rootkits and steganography to communicate over compromised Microsoft Exchange
+
+,A
+
+Mail Transfer Agents (MTAs) while it abused native-Exchange rule functionality to
+
+te
+
+exfiltrate, redirect, or alter victim emails based on specific criteria in on-premise and
+
+itu
+
+hybrid-cloud Microsoft Exchange environments (Faou, 2019). The backdoor itself may
+
+st
+
+not have been a native feature abuse capability, but the rules it applied to MTAs made it
+
+In
+
+particularly challenging to detect for victims who were often not auditing the native MTA
+
+NS
+
+element of their email systems and are a textbook example of living off the land. This
+
+SA
+
+same type of native email server functionality exploitation was also observed by
+FireEye's 2018 analysis of APT35, who created malicious email forwarding rules abusing
+
+e
+
+Exchange PowerShell functionality in attacks in both on-premise and cloud-hosted
+
+Th
+
+Microsoft environments in the financial sector (FireEye, 2018).
+
+20
+
+A significant risk consideration for small- and medium-businesses who adopt
+
+©
+
+20
+
+Microsoft Exchange Online environments for business communications relates to their
+email system's defensibility and audibility. While adversary attacks, tooling, and interest
+in Exchange environments are undeniable, very little public guidance or standards exist
+to detect or defeat adversaries in this space. MITRE's specific Microsoft Office 365
+ATT&CK matrix, for example, only includes one recognized technique (Email
+Collection) with three sub-techniques (local collection, remote collection, and email
+forwarding rules) and provides only generic log review suggestions to combat them
+(MITRE, 2020). This lack of defensive strategies is attributable to an absence of
+reporting by victims of adversary tactics but also by a lack of administrator visibility and
+knowledge of Microsoft Exchange Online environments. A LogicWorks 2020 Survey
+identified that 86% of respondents identified that cloud engineers' lack of vendor-specific
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 4
+
+ll
+
+cloud knowledge would significantly impact their cloud-hosted environment adoption
+
+Fu
+
+(LogicWorks, 2020). Business adopters and administrators can better protect crucial data
+
+ns
+
+that resides in and flows through their email systems and reduce the overall risk of
+
+ai
+
+compromise in a quantitatively demonstrable manner by becoming more aware of
+
+rR
+
+et
+
+adversary interests and intent to exploit them.
+
+ho
+
+2. Exchange Online in Action
+
+ut
+
+2.1. Office 365 License and Tool Considerations
+
+,A
+
+Microsoft's Enterprise Office 365 license tiering is available in three offerings – E1,
+
+te
+
+E3, and E5, with costs per-user and features available increasing as the offering's number
+
+itu
+
+does. This work considered an E3 and E5 tenet for threat modeling due to the advanced
+
+st
+
+Microsoft Compliance Center and associated tools only being available to those tier-
+
+In
+
+levels. It ultimately proceeded with the E5 tier as it was the only option that included
+
+NS
+
+Advanced Compliance features (including eDiscovery 2.0). Small- and medium-sized
+
+SA
+
+businesses should similarly identify their needs and choose a tier that meets their minimal
+compliance and regulatory requirements but should bear in mind that defensive tools and
+
+Th
+
+e
+
+advanced logging are usually only provided in higher license tiers.
+Included in the E5 tier are two critical features for adversaries to capitalize upon and
+
+©
+
+20
+
+20
+
+for defenders to configure and audit to prevent their success:
+•
+
+Litigation Hold
+
+•
+
+Advanced eDiscovery
+
+Both features are explored in detail in Section 2.3.2. Each features' native functionalities
+are to enable administrators to collect emails and data from mailboxes that may be
+involved in legal proceedings where evidence collection and preservation are crucial to
+investigation and discovery. As APT28 and APT35 have demonstrated, however, they are
+powerful tools that can also be co-opted to collect data on target victims or entire
+organizations. Both features and the myriad of other tools available to administrators in
+Exchange Online are available via a web GUI or a PowerShell add-on applet.
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 5
+
+ll
+
+2.2. SANS Swell Sodas Inc.
+
+Fu
+
+To fully explore defensive scenarios involving the manipulation of compliance
+
+ns
+
+features in an Exchange Online environment, and to qualitatively and quantitatively
+
+ai
+
+measure the results of countermeasures put in place, a representative (yet fictional)
+
+et
+
+medium-sized business was created and replicated in a fully functional Microsoft Office
+
+rR
+
+365 E5 Tenet to facilitate the remainder of this research. This entity, SANS Swell Sodas,
+
+ho
+
+Inc., represents the more than 79% of businesses that employ between 100-500 users and
+
+ut
+
+who are the heaviest users of the Microsoft Office 365 platform (Cole, 2016). Of that
+
+,A
+
+group of businesses, 61% list Microsoft Exchange Online as the primary application they
+
+te
+
+use on the Office 365 platform, second only to the file storage service OneDrive.
+
+itu
+
+Exchange Online mirrors this trend for the business and provides SANS Swell Sodas
+
+st
+
+their primary communication channel both internally and for contact with external
+
+In
+
+organizations, making it a crucial asset to secure in their cybersecurity plan.
+
+NS
+
+Like 70% of small- and medium-sized businesses, SANS Swell Sodas hosts their
+most sensitive data in their Microsoft Exchange Online tenet (Proofpoint, 2015). Much of
+
+SA
+
+this data storage is unintentional, often resulting from executives or employees emailing
+
+e
+
+each other attachments or documents containing proprietary or competitively valuable
+
+Th
+
+information and being unaware of the data being retained in the cloud indefinitely.
+
+20
+
+Further exposing the business to risk, while the email is encrypted in transit via TLS,
+
+20
+
+SANS Swell Sodas has opted not to utilize the data classification and loss prevention
+
+©
+
+capabilities of their Office 365 E5 tenet. This choice mirrors 88% of the small- and
+medium-size businesses industry who have the same configuration (Cole, 2016). This
+setup potentially exposes SANS Swell Sodas' most valuable piece of intellectual property
+– their prize-winning soda recipe, to an attacker whose goal is to capitalize on these
+weaknesses and exfiltrate the proprietary data for nefarious use.
+A final consideration for the SANS Swell Sodas Exchange Online ecosystem is the
+
+human element of risk involved. In addition to traditional user email threats like phishing
+and financial whaling, which must be defended, SANS Swell Sodas only employs five
+administrators to administer their Exchange Online tenet. These administrators have the
+cloud-specific knowledge gaps addressed in Section 1, but more importantly, they also
+represent the more than 64% of Office 365 administrators who have other businessRebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 6
+
+ll
+
+critical IT duties that do not include administering the email tenet full-time. This demand
+
+Fu
+
+is reflected in the administrators' schedule, which only allows them to log in to the tenet a
+
+ns
+
+few times a week to troubleshoot major issues or to collect logs when required by
+
+ai
+
+regulatory necessity.
+
+et
+
+With the SANS Swell Sodas Inc. Exchange Online environment and its
+
+rR
+
+vulnerabilities defined, the business is ready to analyze potential native feature abuse
+
+ho
+
+tactics in the environment and to identify qualitative and quantitative controls that can be
+
+ut
+
+enacted to reduce the effectiveness of those tactics. Two likely attack paths will be
+
+,A
+
+explored to facilitate this implementation, first in the environment using the default
+configuration of Exchange Online and then with compensating controls enacted. After
+
+itu
+
+te
+
+impact is measured from the controls, they will be aligned to a more extensive continuous
+monitoring program that is usable by a small- to medium-sized business while
+
+In
+
+st
+
+considering challenges such as the lack of dedicated administrator resources they have
+
+NS
+
+available.
+
+SA
+
+2.3. Attacking SANS Swell Sodas, Inc. – Default Artifacts
+With adversary intent, likely targeted attack paths, and a “victim” medium-sized
+
+Th
+
+e
+
+business environment all being developed, analysis of the attacks was conducted and
+measured for an organization in two differing security postures. The ultimate goal of this
+
+20
+
+study was to develop an effective and repeatable framework to detect and defeat an
+
+©
+
+20
+
+attacker in an Exchange Online Environment using feature abuse tactics.
+2.3.1. The Scenario
+Email traffic was generated to act as a collection target for the simulated attacker to
+create a realistic environment that would act as a baseline for the measurements of
+defensibility and detectability of an adversary operating in the Exchange Online
+environment manipulating Compliance features. Using the SANS Swell Soda Inc. E5
+tenet described above and the Microsoft Exchange REST API, 543 emails were sent
+between fifteen employees created in the Office 365 tenet. A significant majority of these
+messages (71%) contained simulated traditional employee-to-employee daily
+communications that would have limited value if collected by an adversary. These emails
+were randomly generated by utilizing a business word dictionary and a Python utility,
+Rebel Powell, rebelpowell@gmail.com
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 7
+
+ll
+
+Faker (Faraglia, 2020), which outputted random combinations of words from the
+
+Fu
+
+dictionary to form the body of the messages. The remaining 29% of manually-created
+
+ns
+
+emails contained detailed information that SANS Swell Sodas would want to keep out of
+
+ai
+
+competitor's hands to maintain their competitive advantage (financial data, PII, etc.), but
+
+et
+
+only three emails held their most valuable intellectual property – their soda's secret
+
+rR
+
+recipe.
+
+ho
+
+From the business detection perspective, Exchange Online's default logging settings
+
+ut
+
+were utilized with no additional configuration being applied, representing the adoption
+
+,A
+
+settings of those in the previously mentioned Skyhigh Networks report. While Microsoft
+notes that default logging actions are always being updated, changed, and rolled out to E5
+
+itu
+
+te
+
+tenets (Microsoft 2020), in general, default logging of mailboxes includes basic mail flow
+data, ownership changes of the mailbox, permanent deletion of messages, and delegation
+
+In
+
+st
+
+(using the “Send As” feature). An exact listing of audited default functionality during the
+commandlet:
+
+NS
+
+analysis period was retrieved with various versions of the following PowerShell
+
+SA
+
+Get-Mailbox <mailbox> | Format-List DefaultAuditSet
+
+e
+
+External access logs (those representing connection source IPs to the Office 365 tenet)
+
+Th
+
+were also left with the default configuration enabled.
+
+20
+
+To create a simulated administrator-level target for the attack, one account (Richard
+
+20
+
+Augustus) was created with the highest privilege level – Global Administrator. This role,
+
+©
+
+which has full administrative purview over Exchange Online and the SANS Swell Sodas
+Inc. Office 365 E5 tenet has many options and tools available that are not enabled for
+regular users. Most of these features and privileges exceed the needs of this research;
+however, two are particularly relevant – Compliance/Discovery Management and
+Organization Management. When combined, these roles present the Global Administrator
+the ability to view and download log-files, change or bypass audit logging requirements,
+and emplace Litigation and Advanced eDiscovery-type holds for all employees of SANS
+Swell Sodas.
+While Microsoft recommends tightly restricting control to these accounts and
+enforcing security best practices such as multi-factor authentication to access them,
+multiple 2019 Compromise Analysis Reports from the US Department of Homeland
+Rebel Powell, rebelpowell@gmail.com
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 8
+
+ll
+
+Security repeatedly underscore that these features are not commonly enabled in victim
+
+Fu
+
+organizations (DHS, 2019). DHS does not provide exact statistics on the prevalence of
+
+ns
+
+the configuration issues with third-party organizations aided in incident response as a
+
+ai
+
+privacy consideration, but they do note an “...increasing mix of configurations which
+
+et
+
+have lowered several organizations' cloud security postures.” (DHS, 2019).
+
+rR
+
+For the analysis scenario, an adversary was assumed to have compromised the
+
+ho
+
+Global Administrator account because of this type of misconfiguration. This compromise
+
+ut
+
+was assumed to come as the result of credential stuffing, where a compromise of a third-
+
+,A
+
+party service reveals a legitimate password, which is then reused by the Global
+Administrator for the Office 365 tenet. A 2019 SANS Spotlight, co-sponsored by
+
+itu
+
+te
+
+Microsoft, highlights this type of compromise as one of the most common in Office 365
+Instances (Bromiley, 2019). A crucial point to also highlight is that the compromiser in
+
+In
+
+st
+
+this analysis was an APT-styled adversary, rather than a casual attacker. This changed the
+
+NS
+
+goal of the attacker's perspective post-compromise to persistence and continued strategic
+access instead of a desire exfiltrate data quickly. This persistence is usually achieved in
+
+SA
+
+the span of months to years versus hit-and-run style attacks, which operate in times from
+
+e
+
+days to weeks (Crowdstrike, 2020) and focused the attacker's goal on using the
+
+Th
+
+Compliance Features to obtain strategic information.
+
+©
+
+20
+
+20
+
+2.3.2. Default Configuration Results – Limited Visibility and Traceability
+As emails were sent throughout the Exchange Online instance, manipulation of the
+
+two compliance features (Litigation Hold and Advanced eDiscovery) occurred via the
+compromised Global Administrator account from the adversary perspective. After each
+of the features was manipulated, a forensic collection on the tenet was taken via
+PowerShell or via the Exchange Online web GUI (whichever exposed the logs in the
+most user-friendly method) from the defender perspective to account for the SANS Swell
+Sodas Administrator's busy schedule and lack of complete knowledge of the Office 365
+E5 tenet.
+Feature 1: Litigation Hold
+As one of the original legal-discovery features introduced in Microsoft Exchange
+2007, Litigation Hold (sometimes expanded to include a similar feature known as InRebel Powell, rebelpowell@gmail.com
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 9
+
+ll
+
+Place Hold) represents one of the earliest Exchange-specific tools to address litigation
+
+Fu
+
+requirements. Throughout the feature's evolution, Microsoft has added increasing abilities
+
+ns
+
+to select and export entire inboxes, specific emails, or particular message traits to prevent
+
+ai
+
+them from being deleted by a user whose mail might be involved in a legal proceeding,
+
+et
+
+preserving evidence for the duration of an investigation. This feature is also one of the
+
+rR
+
+most commonly deployed legal retention strategies, with over 56% of businesses having
+
+ho
+
+used the tool in either an on-premise Exchange or hosted Exchange Online Environment
+
+ut
+
+(Fraizer and Zohlen, 2017). This long-term use of Litigation Hold can be attributed to the
+
+,A
+
+age of the feature and use by email administrators for many years and is still supported
+today in Office 365 tenets. As filtered emails or inboxes which have had Litigation Holds
+
+itu
+
+te
+
+applied are transported or deleted, Exchange creates an immutable version of the email
+for export to an external Outlook file format – a PST file. This file is then downloaded
+
+In
+
+st
+
+from the Exchange server to an external storage medium and preserved until the In-Place
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+hold has been deleted. A Microsoft diagram explains this logic in more detail in Figure 1.
+
+Figure 1. Litigation Hold Preservation/Storage Process (Microsoft, 2019)
+From an adversary perspective, Litigation Hold represents a reliable capability to
+search for and store strategic emails of interest for later export without maintaining an
+interactive command-and-control of a compromised Exchange server or environment,
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 10
+
+ll
+
+which is especially attractive for adversaries. With a one-time compromise and
+
+Fu
+
+emplacement of the hold, collection can occur for an infinite period, only requiring an
+
+ns
+
+adversary to return to collect the final product. This attack reduces the victim detection
+
+ai
+
+capability to viewing only audit logs if their tenet was configured to collect them.
+
+et
+
+Combined with the 90-day default log retention period highlighted in Section 1,
+
+rR
+
+compromised Litigation Hold makes detection by a victim with a limited security staff
+
+ho
+
+extremely challenging.
+
+ut
+
+In the first quarter of 2020, Microsoft announced the retirement of the Litigation
+
+,A
+
+Hold feature in Exchange Online in favor of the more Advanced eDiscovery suite of
+
+te
+
+compliance tools (Microsoft. 2020). However, this research highlights Litigation Hold as
+
+itu
+
+still an unusually highly usable abuse tactic because of its phase-out methodology. After
+
+st
+
+July 1, 2020, new Litigation Holds are no longer creatable via the web GUI or Exchange
+
+In
+
+PowerShell. After October 1, 2020, only deleting Litigation Holds from the Exchange
+
+NS
+
+PowerShell is possible. This time window of opportunity presents the adversary an ideal
+
+SA
+
+LOL scenario where they could enable a Litigation Hold before the July 1 date in a
+compromised tenet, have it become graphically undetectable by a GUI-focused victim
+
+e
+
+administrator, and only become discoverable after October via PowerShell analysis if the
+
+Th
+
+log retention was appropriately configured. This phase-out offers Litigation Hold as a
+
+20
+
+very likely exploitation opportunity by an adversary with a uniquely created blind-spot
+
+©
+
+20
+
+for victims who may be unaware of the tactic and deprecation timeline.
+Feature 1 Key Observations
+Key observations from the Litigation Hold forensic collection in the default
+configuration of Exchange Online call attention to the extreme difficulty of detecting an
+attacker compromise where this living off the land attack is utilized. To simulate the
+adversary living off the land with this feature, a Litigation Hold was created with the
+search query “recipe” and applied to all mailboxes on the SANS Swell Sodas tenet. This
+resulted in another employee (Jasmin Smith) being discovered as the only worker with an
+email containing the keyword and allowed a subsequent targeted Litigation Hold to be
+placed on her mailbox (see Figure 2). Visually, the only administrator indication of the
+hold was a single text entry in the Litigation and In-Place Hold sub-menu of the
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 11
+
+ll
+
+Exchange Online Control Panel (requiring eight clicks to discover). This artifact was also
+
+Fu
+
+able to be queried via the following PowerShell commandlet:
+
+ns
+
+Get-Mailbox <mailbox> | LitigationHold*
+
+ai
+
+In both cases, only a single line entry explaining the hold (which was filled in with an
+
+Figure 2: Targeted Litigation Hold via the GUI
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+et
+
+innocuous comment from the attacker) provided information about the hold.
+
+With the default logging configuration enabled, only six log artifacts related to the
+
+Litigation Hold tactic were discoverable via examination of two logs. These logs, which
+had analysis complicated by unintelligible GUIDs and SIDS generated by the Exchange
+Tenet itself, showed that the compromised administrator had accessed the victim's
+mailbox and created a Litigation Hold. Details regarding the filters used or result
+achieved were not noted in the logs examined with the default configuration enabled,
+meaning discovery without further interviewing the staff involved to note the discrepancy
+would prove perplexing. An example audit log is shown in Figure 3 for further review.
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+rR
+
+et
+
+ai
+
+ns
+
+Fu
+
+ll
+
+Ri
+
+gh
+
+The Poisoned Postman 12
+
+ut
+
+ho
+
+Figure 3: In-Place Litigation Hold Trace Log
+
+,A
+
+The tactic was also effective for the adversary's goal, quickly locating the one email
+
+te
+
+in the entire tenet meeting the search criteria. This email was transparently archived
+
+itu
+
+based on the Litigation Hold's disposition with no indication to the recipient. Exfiltration
+
+st
+
+of the resulting 56KB PST archive took less than two minutes. It resulted in only one
+
+In
+
+additional export log event being created in the Exchange Administrator Audit log,
+
+NS
+
+making the Litigation Hold tactic a high-impact and low-traceable one in SANS Swell
+
+SA
+
+Sodas' default configured E5 tenet.
+
+e
+
+Feature 2: Advanced eDiscovery
+
+Th
+
+The Advanced eDiscovery (sometimes known as strictly eDiscovery 2.0) is the
+
+20
+
+improved litigation and compliance solution, which will fully replace Litigation Hold in
+
+20
+
+Exchange Online tenets in 2020 (Microsoft, 2020). As a component of the overall
+
+©
+
+Microsoft Compliance ecosystem of tools, Advanced Discovery targets the entire
+corporate litigation workflow of tenet data rather than just the technical email artifacts.
+Improvements include better indexing features for searchability, document tagging,
+visible dashboards, and a case-centered view of investigation(s) in progress. An example
+use of this ligation workflow is shown in Figure 4.
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+et
+
+ai
+
+ns
+
+Fu
+
+ll
+
+Ri
+
+gh
+
+The Poisoned Postman 13
+
+In
+
+st
+
+Figure 4. Advanced eDiscovery Litigation Workflow (Microsoft, 2019)
+
+NS
+
+With these advanced feature introductions come an increased attack surface for
+
+SA
+
+potential adversaries looking to live off the land in Exchange Online. In their 2020
+Microsoft Office 365 License Optimization Report, SaaS Provider CoreView discovered
+
+Th
+
+e
+
+that of companies using E5 licensed tenets, 38% could reduce their license to the E1 tiers
+based on their lack of use of the E5 feature set. However, many of these companies
+
+20
+
+cannot do so because they adopt E5 tenets for specific features only available at that
+
+©
+
+20
+
+license level, such as the Microsoft Advanced Threat Protection (ATP) security program
+(Coreview, 2020). Companies in this adoption pattern lack knowledge or necessity to
+utilize extra features available to them. This “no-person's-land” of unused features is
+where attackers gain another likely Exchange Online native feature abuse tactic.
+By utilizing new indexing features available in Advanced eDiscovery against
+Exchange Online tenets, attackers can more tightly focus data selection for exfiltration
+from a compromised victim while maintaining a much smaller footprint in the
+organization. The adversary data collection net has also been expanded to include file
+metadata, email importance level, and even conversations from Skype for Business and
+Microsoft Teams (which are stored in Exchange Online). As a final challenge for
+detection during the exfiltration stage, cases from Advanced eDiscovery are exportable to
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 14
+
+ll
+
+the victim's Azure Cloud storage tenet or an adversary procured Azure storage blob
+
+Fu
+
+(Microsoft, 2020) for download, further obfuscating potential infrastructure involved
+
+ns
+
+without additional logging being enabled pre-compromise. More attack surfaces are also
+
+ai
+
+exposed for the small- or medium business' larger Office 365 tenet by Advanced
+
+et
+
+eDiscovery, but these scenarios exceed the scope of this research. The Future
+
+rR
+
+Implications section and Microsoft's own Advanced Security Reference best outline
+
+ho
+
+further threat modeling potential.
+
+ut
+
+Feature 2 Key Observations
+
+,A
+
+The Advanced eDiscovery abuse tactic proved equally effective against the
+
+te
+
+default Exchange Online logging configuration. After beginning the attack on a separate
+
+itu
+
+day to minimize cross-logging contamination from the Litigation Hold (Microsoft does
+
+st
+
+not allow clearing of the Exchange Online log entirely), a similar search was conducted
+
+In
+
+on SANS Swell Sodas' tenet. However, this tactic was enabled via a separate and more
+
+NS
+
+detailed GUI – the Microsoft Compliance Center, which is a separate component from
+
+SA
+
+the Exchange Online Control Panel. While the results were much more visible
+graphically to the victim in the Compliance Center (showing as a large “1” in the Number
+
+Th
+
+e
+
+of Cases), there were no visual indicators created in the Exchange Online Control Panel
+concerning the search, requiring the SANS Swell Sodas Administrators to be looking at a
+
+©
+
+20
+
+20
+
+different interface to detect the intrusion.
+When combined with the previously discussed lack of administrator knowledge
+
+presented by LogicWorks, SANS Swell Sodas faces a high likelihood that this tactic
+would go undetected. Specifically, detection of the Advanced eDiscovery presented key
+challenges, requiring both:
+•
+
+An administrator to have a specific need to check the Compliance Center
+during the attack.
+
+•
+
+Knowledge of Auditing/Compliance Logs and Compliance Center Logging
+Locations.
+
+Exfiltration from the Compliance Center was also more complicated when compared to
+the Litigation Hold from an adversary perspective, but because it utilized Microsoft
+native features via Azure storage blobs, it also became much more complicated to detect
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 15
+
+ll
+
+(requiring knowledge of Blob ID ownership to fully trace). With less than half the
+
+Fu
+
+artifacts of the Litigation Hold tactic and the additional difficulty in acquiring them, the
+
+ns
+
+Advanced eDiscovery tactic proved extremely efficient and difficult to detect or prevent
+
+ai
+
+with default configurations enabled.
+
+et
+
+Feature Manipulation Results – Default Configuration
+
+rR
+
+In summary, both the Litigation Hold and Advanced eDiscovery feature abuse tactics
+
+ho
+
+proved effective for the medium-sized business lacking dedicated Exchange Online
+
+ut
+
+resources to detect or prevent in an Exchange Online E5 tenet with a default
+
+,A
+
+configuration applied. The table below summarizes and scores critical elements from
+
+te
+
+each tactic. They include:
+
+The number of artifacts generated
+
+•
+
+The ease of accessing these artifacts
+
+•
+
+The likelihood that the artifact would lead to the successful detection of the
+
+NS
+
+tactic
+
+In
+
+st
+
+itu
+
+•
+
+SA
+
+Scores are scaled from one to five, with one being the easiest to access and five being the
+most difficult. For detection, one represents the easiest to detect, and five is the least
+
+Th
+
+e
+
+likely to be detected. A final observation for this phase is the score of the Advanced
+eDiscovery on Likelihood of Detection – this score is adjusted to address that if SANS
+
+20
+
+Swell Sodas were able to locate the Compliance logging, they would be highly likely to
+
+©
+
+20
+
+discover that the tactic was deployed.
+Tactic
+
+Artifacts Created
+
+Accessibility of Artifacts
+
+Likelihood of Detection
+
+Litigation Hold
+
+6
+
+3
+
+2
+
+Advanced eDiscovery
+
+3
+
+5
+
+3
+
+Figure 5: Detection Success Matrix in Default Configuration
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 16
+
+Fu
+
+ll
+
+3. Protecting the Secret Recipe – Improving Detection
+
+With the viability of two adversary potential attack paths demonstrated and the
+
+ns
+
+difficulty of administrator detection being made evident, the second phase of the
+
+ai
+
+analysis shifted focus to increasing the likelihood of detection and prevention by
+
+rR
+
+et
+
+increasing the victim administrator's knowledge of features available in E5 tenets.
+By aiding potential victims to use the same living off the land methodologies in
+
+ho
+
+Exchange Online from a defensive perspective, this phase determined two effective
+
+ut
+
+techniques that can be enacted to combat an attackers' ability to operate stealthily
+
+,A
+
+in their environment. Given the increasing availability of tools in the Office 365
+
+te
+
+ecosystem, advanced study of each tool's effectiveness would not be practical.
+
+itu
+
+However, the techniques chosen demonstrate low-difficulty to implement and high-
+
+st
+
+impact countermeasures that small and medium-sized businesses can deploy
+
+NS
+
+In
+
+quickly to increase visibility.
+
+SA
+
+3.1. Logging Architecture and Artifacts
+As adoption of Office 365 by organizations with strict compliance and reporting
+
+e
+
+requirements has increased, so too have Microsoft's auditing capabilities, especially those
+
+Th
+
+of privileged accounts. The bulk of this research will examine two particular logs for
+
+20
+
+artifacts: the Exchange Trace Logs and the Audit Log in the Security and Compliance
+
+20
+
+Center. Both logs include multiple indicators of an administrator or potential adversary
+
+©
+
+activity when examined by a business, especially when their Office 365 hosted tenet is
+configured with advanced logging capabilities enabled. This is a recommendation
+discussed in Section 4. A detailed overview of the logging infrastructure and its
+positioning within the Microsoft Office 365 and Exchange Online ecosystem is illustrated
+in Figure 6 below.
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+et
+
+ai
+
+ns
+
+Fu
+
+ll
+
+Ri
+
+gh
+
+The Poisoned Postman 17
+
+SA
+
+Figure 6. Audit Activities and Governance in Office 365 (Microsoft, 2019)
+
+Th
+
+e
+
+Email inboxes or individual messages manipulated by the Litigation Hold or
+eDiscovery features are selected from the mail stream based on rules designed by
+
+20
+
+administrators via the GUI or management PowerShell and are held in resulting
+
+©
+
+20
+
+mailboxes. These rules can be as simple as “select all emails to and from
+rrositas@sansswellsodas.com” or much more specific based on content such as “hold any
+email with an attachment file that is a docx file with a filename containing recipe.” This
+wide variety of filtering enables organizations to minimize over-selecting emails, which
+could have fiscal implications for increased storage requirements or liability implications
+for potential violations of reasonable privacy expectations. To aid in repudiation and
+chain-of-custody questions on what rules were enacted by which administrator, detailed
+audit trails are written to logs stored in Office 365 and accessed via the Management
+Activity API.
+Logging in Office 365 is critical to a business defending against adversaries
+attacking using native features. However, a critical knowledge requirement for
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 18
+
+ll
+
+administrators and adopters is that logs are sometimes limited or nonexistent based on
+
+Fu
+
+where features are accessed. An example of this can be seen in the eDiscovery Audit
+
+ns
+
+Log, which only includes tasks configured from the Compliance Center. If performed
+
+ai
+
+from the Exchange Online Portal, those same activities would NOT be logged in the
+
+et
+
+Audit Log (Microsoft, 2020). Additionally, logging is not enabled by default for most
+
+rR
+
+Office 365 features, and log retention is by default set to 90 days maximum. Microsoft
+
+ho
+
+has indicated plans to address this lack of logging threat but has not set a firm timeline
+
+ut
+
+for implementation.
+
+,A
+
+Mitigation 1: Advanced Logging and Unified Log Review
+
+te
+
+Logging is one of the most fundamental elements required to investigate an intrusion
+
+itu
+
+involving a potential adversary compromise. Properly configured logs enable an analysis
+
+st
+
+of campaign timelines, artifacts left by the attacker, successful exploitations of
+
+In
+
+misconfigurations, and provide insight into the ultimately targeted information. In
+
+NS
+
+Exchange Online and Microsoft Office 365, however, logging is configured by default to
+
+SA
+
+consider fiscal implications on storage space rather than from a defensive perspective
+(Microsoft, 2020). Though Microsoft continues to improve their logging default settings
+
+Th
+
+e
+
+for Office 365, depending on the year a tenet was purchased or migrated to, disparate
+settings may be encountered. An example of this can be seen in the Mailbox Auditing
+
+20
+
+examined in Section 3's artifact samples. Since January 2019, Mailbox Auditing has been
+
+©
+
+20
+
+enabled by default in new Microsoft Office 365 E5 tenets. However, tenets purchased
+before this date may have lower Mailbox Auditing verbosity enabled or even no Mailbox
+Auditing at all enabled.
+To combat potential verbosity issues with Mailbox Auditing logging or allowing
+non-standard logging configurations like those analyzed by DHS from being operated,
+businesses should enable logging to the best level of verbosity available while still
+respecting their cloud storage budget (DHS, 2019). While this quota will be different for
+each organization, Microsoft and DHS both recommend ensuring verbose Mailbox
+Auditing for all mailboxes in the organization is enabled. To apply this recommendation
+to the analysis of SANS Swell Sodas Inc., the following DHS recommended PowerShell
+commandlet was issued:
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+ll
+
+Ri
+
+gh
+
+The Poisoned Postman 19
+
+et
+
+ai
+
+ns
+
+Fu
+
+Get-Mailbox -ResultSize Unlimited | Set-Mailbox AuditEnabled $true -AuditOwner
+MailboxLogin,HardDelete,SoftDelete,Update,Move AuditDelegate SendOnBehalf,MoveToDeletedItems,Move AuditAdmin Copy,MessageBind
+
+rR
+
+Mitigation 1 Key Observations
+
+ho
+
+This command resulted in a more coherent and detailed audit log, which allowed
+
+ut
+
+Litigation Hold-type feature attacks to drastically increase the number of artifacts created
+
+,A
+
+on all mailboxes in the SANS Swell Soda tenet and increased the speed of log analysis by
+
+te
+
+investigators while only increasing storage utilization by 11%. A marked improvement in
+
+itu
+
+the analysis investigation occurred with the increased verbosity enabled. Details relating
+
+st
+
+to each time a Litigation Hold query was run against the organization were logged, and
+
+In
+
+each mailbox noted a “non-owner mailbox accessed” event in the new logs. With the
+
+NS
+
+same attacker queries from the first phase of the analysis, this created 45 events in two
+
+SA
+
+minutes, significantly improving the likelihood a victim administrator would recognize
+automated reconnaissance against their tenet in a log review. A full list of all audit logs
+
+Th
+
+e
+
+enabled via this command is available in the Appendix.
+A final pair of considerations for logging to combat adversary native feature attacks
+
+20
+
+in a small- to medium-sized business Exchange Online environment is both the retention
+
+©
+
+20
+
+time and log review policy enacted by the organization. As mentioned in Section 2,
+
+Microsoft's default setting for log retention is 90 days (Microsoft, 2020). This retention
+covers a basic level of logging (including Mailbox auditing) but also excludes relevant
+invents in an attacker compromise (such as access to the Azure tenant from Exchange
+Online used to select victim mailboxes to query with Compliance features). By creating a
+new retention policy that mirrors most organizations' on-site one-year requirement
+(Proofpoint, 2015), potential victims increase their opportunity of detection timeline and
+their ability to remove an emplaced adversary in their infrastructure by having the ability
+to review each action taken by the attacker after the initial compromise. Logs can now
+also be reviewed in the Unified Log application in the Microsoft Compliance and Trust
+Center (Figure 7). This log review process alleviated two difficulties highlighted in the
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 20
+
+ll
+
+Advanced eDiscovery tactic from Section 3 – a lack of log location knowledge and the
+
+Fu
+
+detail contained within the log. This Unified Audit Log shows a much more
+
+ns
+
+understandable chain of events from the attacker's reapplied tactics after the settings were
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+et
+
+ai
+
+enabled.
+
+©
+
+Figure 7: Unified Audit Log Review
+
+By enabling these advanced logging settings, SANS Swell Soda Inc.'s Microsoft Office
+365 gained critical visibility into adversary activity and simplified the time and difficulty
+involved in administrative log reviews.
+Mitigation 2: Policy Templates
+Another valuable tool in an Office 365 E5 tenant administrator's toolbox is
+Microsoft's included Data Loss Prevention (DLP) suite. While the capability's
+applicability to intellectual property is large enough to form its own separate analysis,
+one fundamental building block of DLP, the policy template, can be quickly implemented
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 21
+
+ll
+
+and used by administrators to gain visibility into key intellectual property as a logging
+
+Fu
+
+mechanism.
+
+ns
+
+Office 365 and Exchange Online include several pre-built content searches (called
+
+ai
+
+Policy Templates) to be utilized through the Compliance and Trust Center to track and
+
+et
+
+prevent unintended disclosures of sensitive information. By integrating these templates
+
+rR
+
+with native Office 365 transport functionality, Microsoft enables administrators to both
+
+ho
+
+track and analyze the movement of information covered by the content policy. At a tenet
+
+ut
+
+level, the policy decides if the movement should be allowed, should present a warning to
+
+,A
+
+the sending user, or should be prevented entirely. Over 90% of the included templates
+relate to the active defense of fiscal or international regulatory compliance (such as PCI
+
+itu
+
+te
+
+policy templates preventing emails containing over four potential credit card numbers
+from being emailed). Still, custom templates can be created within minutes to apply in an
+
+In
+
+st
+
+audit-only configuration to track sensitive content. The allowance of the custom policy's
+
+NS
+
+disposition to “alert” without actively interfering with the transfers (and potentially
+introducing false positive work stoppages) presents small- and medium-sized businesses
+
+SA
+
+a built-in potential early warning sensor of an intrusion as the attacker both searches for
+
+e
+
+and attempts to exfiltrate the data.
+
+Th
+
+To apply this countermeasure to the SANS Swell Soda Inc. analysis tenet, a basic
+
+20
+
+custom Policy Template was developed (Figure 8). The template's goal was to detect the
+
+20
+
+movement of data that contained keyword ingredients in the Secret Recipe (Caramel
+
+©
+
+Soda, Citric Acid, and SANS Soda Extract), and if these contents were discovered, to
+raise an event and send an email to the tenet administrator. The template was created and
+emplaced in three minutes and was deployed to the tenet and began acting in less than
+twenty minutes.
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+et
+
+ai
+
+ns
+
+Fu
+
+ll
+
+Ri
+
+gh
+
+The Poisoned Postman 22
+
+NS
+
+Figure 8: SANS Swell Soda DLP Policy Template for Secret Ingredients
+
+SA
+
+After the template was installed, search results from the Advanced eDiscovery case were
+
+e
+
+exported to the SANS Swell Soda's Azure Storage blob. While the export was still
+
+Th
+
+successful (the template's policy was only designed to alert), an email was also instantly
+
+20
+
+dispatched to the Global Administrator alerting to both the source and destination of the
+
+20
+
+exfiltration, the content being shipped, and the names of the file that was attached to the
+
+©
+
+email containing the template's keywords. Several logging artifacts were also entered into
+the Unified Log interface highlighted in the Advanced Logging section. When combined
+with the extended retention policy created, SANS Swell Sodas would have an almost
+complete attack timeline even if the live alert was missed.
+Mitigation 2 Key Observations
+The simplicity of installation and high-level organizational visibility gained by
+installing a Policy Template makes it a force multiplier, especially in small- to mediumsized businesses who may lack dedicated resources and knowledge on advanced Office
+365 compliance and auditing features. Additionally, with the ability to avoid false
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 23
+
+ll
+
+positives actually impacting the business's workflow, Policy Templates provide a rare
+
+Fu
+
+intrusion detection system in a cloud environment that is included as part of the E5 tenet.
+
+ns
+
+3.2. Attacking SANS Swell Sodas, Inc. – Improved Defenses
+
+ai
+
+The two living off the land defensive countermeasures analyzed in Section 3.1 were
+
+rR
+
+et
+
+applied in a combined manner to the SANS Swell Sodas E5 tenet before the initial set of
+tactics from Section 2 were re-executed. Tests were again conducted on a different day of
+
+ho
+
+the week to minimize log contamination from previous observations, and only the
+
+ut
+
+Unified Log was viewed to attempt to identify the presence of the attacker and the tactics
+
+,A
+
+in use. Figure 9 presents the same view of the artifacts from Section 3 with the potential
+
+itu
+
+Artifacts Created
+
+Accessibility of Artifacts
+
+Likelihood of Detection
+
+49
+
+2
+
+2
+
+15
+
+1
+
+1
+
+In
+
+st
+
+Tactic
+
+Litigation Hold
+
+te
+
+detection controls applied.
+
+SA
+
+NS
+
+Advanced eDiscovery
+
+e
+
+Figure 9: Detection Success Matrix in Enhanced Configuration
+
+Th
+
+The countermeasures implemented had a drastic impact on the Global
+
+20
+
+Administrator and business' ability to detect these attack tactics by producing clear and
+
+20
+
+concise logs that detailed exact actions taken by the adversary on their targets and greatly
+
+©
+
+increased the ability to either instantly respond to the tactics being utilized. These
+controls required little additional knowledge or time commitment by the implementing
+organization and additionally had no potential to cause business interruption as the
+controls were enacted.
+
+4. Conclusion and Future Implications
+By implementing two native countermeasures that increased visibility into
+administrator and employee actions in an Exchange Online hosted environment in
+Microsoft Office 365, both quantifiable and qualifiable impact was demonstrated in a
+small- to medium-sized business' ability to track an adversary using living off the land
+tactics in a compromised organization. These countermeasures came at no additional
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 24
+
+ll
+
+licensing cost to the implementing business as both were included in the current license
+
+Fu
+
+tier already being paid for, and both required little time investment from administrators
+
+ns
+
+who did not monitor the Exchange tenet at all times. These critical countermeasures
+
+ai
+
+were:
+
+Enabling Advanced Logging tenet-wide and reviewing Unified Logs
+
+•
+
+Creating basic Data Loss Templates to monitor data movement
+
+rR
+
+et
+
+•
+
+ho
+
+During the course of this research, multiple opportunities for improving the detection
+
+ut
+
+methodologies outlined here to allow them to be applied in a more active nature were
+
+,A
+
+observed. While this may not be feasible for limited-resourced businesses, the use of
+
+te
+
+Office 365 native Compliance Features to defend organizations against adversaries using
+
+itu
+
+living off the land cloud-tactics is a worthwhile investment of research efforts and
+
+st
+
+documentation work to enable defense of the larger community. Additionally, mapping
+
+In
+
+both offensive and defensive tactics to community standards such as MITRE's ATT&CK
+
+NS
+
+Framework and the CIS Critical Cloud Security Controls framework as part of an
+ongoing continuous monitoring program will even more efficiently allow defenders to
+
+SA
+
+prepare for this increasing attack opportunity.
+
+e
+
+Small- and medium-sized businesses continue to increase the potential for
+
+Th
+
+compromise of their most critical and sensitive communications systems by migrating
+
+20
+
+them to cloud instances. By applying the techniques outlined by this research and
+
+20
+
+continuing to stay informed on adversary tactics, they can shrink their attack surface and
+
+©
+
+become better postured to fend off modern threats operating in these environments.
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 25
+
+Fu
+
+ll
+
+5. References
+
+ns
+
+BitGlass Inc. (2019, November 5). 2019 BitGlass Cloud Adoption Report - A is for
+
+ai
+
+Adoption. A Is for Adoption. https://pages.bitglass.com/rs/418-ZAL-
+
+et
+
+815/images/Bitglass_AforAdoption.pdf
+
+rR
+
+Coles, C., 2016. Office 365 Adoption Rate, Stats, And Usage. [online] Available at:
+
+ut
+
+ho
+
+<https://www.skyhighnetworks.com/cloud-security-blog/7-charts-reveal-the-
+
+,A
+
+meteoric-rise-of-office-365/> [Accessed 21 May 2020].
+
+st
+
+itu
+
+CoreView. Available at:
+
+te
+
+Coreview, 2020. Office 365 License Optimization Report - Coreview. [online]
+
+In
+
+<https://www.coreview.com/resources/whitepaper/microsoft-office-365-license-
+
+NS
+
+optimization-report/> [Accessed 21 May 2020].
+
+SA
+
+Crowdstrike Inc. “2019 CrowdStrike Global Threat Report.” Crowdstrike.com, April 13.
+
+Th
+
+e
+
+2020, www.crowdstrike.com/resources/reports/2019-crowdstrike-global-threat-
+
+20
+
+report/.
+
+©
+
+20
+
+Department of Homeland Security (CISA), 2019. Microsoft Office 365 Security
+Observations. [online] Us-cert.cisa.gov. Available at: <https://uscert.cisa.gov/ncas/analysis-reports/AR19-133A> [Accessed 26 May 2020].
+Faou, M., 2019. [online] TURLA LIGHTNEURON One email away from remote code
+execution. Available at: <https://www.welivesecurity.com/wpcontent/uploads/2019/05/ESET-LightNeuron.pdf> [Accessed 19 May 2020].
+Faraglia, D. (2020). Faker (Version 4.11) [Computer software]. Retrieved April/May,
+2020, from https://github.com/joke2k/faker
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 26
+
+ll
+
+FBI iC3, 2016. 2016 Internet Crime Report. [online] Internet Crime Complaint Center.
+
+Fu
+
+Available at: <https://pdf.ic3.gov/2016_IC3Report.pdf> [Accessed 21 April
+
+ai
+
+ns
+
+2020].
+
+et
+
+Fraizer, J. and Zohlen, C., 2017. 5 Ways Legal And Compliance Teams Can Benefit
+
+rR
+
+From Office 365 Migration | Corporate Counsel. [online] Corporate Counsel.
+
+ut
+
+ho
+
+Available at: <https://www.law.com/corpcounsel/almID/1202792943627/5-
+
+te
+
+[Accessed 25 April 2020].
+
+,A
+
+Ways-Legal-and-Compliance-Teams-Can-Benefit-from-Office-365-Migration/>
+
+itu
+
+Halfin, D., 2020. Search For Ediscovery Activities In The Audit Log - Microsoft 365
+
+In
+
+st
+
+Compliance. [online] Microsoft Technet. Available at:
+
+NS
+
+<https://docs.microsoft.com/en-us/microsoft-365/compliance/search-for-
+
+SA
+
+ediscovery-activities-in-the-audit-log?view=o365-worldwide> [Accessed 5 May
+
+Th
+
+e
+
+2020].
+
+©
+
+20
+
+20
+
+Leydon, J. (2020, March 13). Interview – Corelight's Richard Bejtlich on cyber warfare
+and the origin of the term 'APT'. The Daily Swig . Retrieved May 5, 2020, from
+https://portswigger.net/daily-swig/interview-corelights-richard-bejtlich-on-cyberwarfare-and-the-origin-of-the-term-apt
+LogicWorks, 2020. 2020 Survey Report: Challenges In AWS Transformation. [online]
+2020 Survey Report. Available at: <https://go.logicworks.com/2020-cloudtransformation-challenges> [Accessed 19 May 2020].
+Mandiant, 2018. Mandiant MTRENDS 2018. [online] FireEye.com. Available at:
+<https://investors.fireeye.com/static-files/b7dcb16f-44a8-4cfb-927fefeed397dd52> [Accessed 19 May 2020].
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+The Poisoned Postman 27
+
+ll
+
+Microsoft Inc, 2019. Office 365 meets evolving eDiscovery challenges in a cloud-first
+
+Fu
+
+world. [online] Microsoft.com. Available at: <https://www.microsoft.com/en-
+
+ai
+
+ns
+
+us/itshowcase/office-365-meets-evolving-ediscovery-challenges-in-a-cloud-first-
+
+et
+
+world> [Accessed 5 May 2020].
+
+rR
+
+MITRE, 2020. Email Collection, Technique T1114 - Enterprise | MITRE ATT&CK®.
+
+ut
+
+ho
+
+[online] MITRE ATT&CK Office 365. Available at:
+
+,A
+
+<https://attack.mitre.org/techniques/T1114/> [Accessed 21 May 2020].
+
+te
+
+Proofpoint Inc, 2015. Proofpoint's Role In Office 365 Security. [online] Available at:
+
+itu
+
+<https://www.proofpoint.com/sites/default/files/PROOFPOINT%20FOR%20OFF
+
+In
+
+st
+
+ICE%20365-ROLE-IT-SECURITY.pdf> [Accessed 18 April 2020].
+
+NS
+
+The RadiCati Group, Inc., 2020. Email Statistics Report, 2020-2024. [online]
+
+SA
+
+Radicati.com. Available at: <https://www.radicati.com/wp/wp-
+
+Th
+
+e
+
+content/uploads/2020/01/Email_Statistics_Report,_20202024_Executive_Summary.pdf> [Accessed 13 April 2020].
+
+©
+
+20
+
+20
+
+SANS Institute and Microsoft Inc., 2019. Bye Bye Passwords: New Ways To
+Authenticate. [online] Query.prod.cms.rt.microsoft.com. Available at:
+<https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3y9UJ>
+[Accessed 21 April 2020].
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+ll
+Fu
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+et
+
+ai
+
+ns
+
+Appendix
+Logs Enabled by Full Auditing
+
+Ri
+
+gh
+
+The Poisoned Postman 28
+
+Rebel Powell, rebelpowell@gmail.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+Last Updated: October 18th, 2020
+
+Upcoming SANS Training
+Click here to view a list of all SANS Courses
+SANS Sydney 2020
+
+Sydney, AU
+
+Nov 02, 2020 - Nov 14, 2020
+
+Live Event
+
+SANS Secure Thailand
+
+Bangkok, TH
+
+Nov 09, 2020 - Nov 14, 2020
+
+Live Event
+
+APAC ICS Summit & Training 2020
+
+Singapore, SG
+
+Nov 13, 2020 - Nov 28, 2020
+
+Live Event
+
+SANS Community CTF
+
+,
+
+Nov 19, 2020 - Nov 20, 2020
+
+Self Paced
+
+SANS Local: Oslo November 2020
+
+Oslo, NO
+
+Nov 23, 2020 - Nov 28, 2020
+
+Live Event
+
+SANS Wellington 2020
+
+Wellington, NZ
+
+Nov 30, 2020 - Dec 12, 2020
+
+Live Event
+
+SANS OnDemand
+
+OnlineUS
+
+Anytime
+
+Self Paced
+
+SANS SelfStudy
+
+Books & MP3s OnlyUS
+
+Anytime
+
+Self Paced
+
+

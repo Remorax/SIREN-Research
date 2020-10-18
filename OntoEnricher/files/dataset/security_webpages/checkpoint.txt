@@ -1,0 +1,118 @@
+https://www.checkpoint.com/downloads/products/sandblast-network-solution-brief.pdf
+
+CAN YOU DEFEND AGAINST ZERO-DAY THREATS?
+Every day, 8,3001 new, previously undiscovered cyber attacks emerge, including
+zero-day malware, zero-day phishing and social engineering attacks. With no
+associated file signatures, anti-virus, firewalls and other core security solutions
+cannot identify them as malicious and block them from entering the network. In
+fact, even the best AV solutions detect only half of malware strains in the wild.
+With no existing indicators of compromise (IOCs), how do you protect against what
+you do not know?
+COMMON NETWORK SECURITY APPROACHES HAVE LIMITATIONS
+To protect against zero-day threats, organizations use several approaches.
+These include:
+• Conventional sandboxing solutions, which are susceptible to malware evasion
+techniques, and by default, are configured to let malware enter the network before
+analysis is complete.
+• Endpoint security, which has its advantages but cannot protect datacenters running
+dedicated servers and enterprise IoT, such as cameras, elevators and HVAC
+systems—for which the network perimeter often serves as the only line of defense.
+• A detection-first strategy that mainly relies on incident response, which is expensive,
+and often kicks in after the damage is already done.
+With such critical limitations, how can you protect your network from zero-day threats?
+CHECK POINT SANDBLAST NETWORK
+– NUMBER ONE IN ZERO-DAY PROTECTION
+Check Point SandBlast Network provides the world’s best2 zero-day protection,
+through a combination of evasion-resistant threat emulation, revolutionary AI engines
+and threat extraction that pre-emptively sanitizes email and web downloads.
+Empowering organizations to take a prevention-first strategy to cyberattacks,
+SandBlast Network defends against the most devastating attacks, including unknown
+ransomware, Trojans, phishing and social engineering.
+SandBlast Network deploys with your current infrastructure, offering fully automated
+policy configuration, without compromising business productivity and agility.
+
+BEST ZERO-DAY CATCH RATE
+To achieve the world’s best malware catch rate at record speed,
+SandBlast Network employs numerous innovative, proprietary
+technologies. These include pre-emptive user protections, a vast network
+of up-to-the-moment threat intelligence and revolutionary AI
+and non-AI engines.
+Pre-emptive User Protections
+To protect users across email and web, SandBlast network employs
+pre-emptive user protections, namely threat extraction and advanced
+email protections.
+• SandBlast Threat Extraction promptly delivers clean and
+reconstructed versions of potentially malicious files that are received by
+email or downloaded from the web. Maintaining uninterrupted business
+flow, while emulation continues in the background, SandBlast Threat
+Extraction eliminates unacceptable delays created by traditional
+sandboxes, offering a practical prevention-first strategy that blocks
+malicious content from reaching users at all. SandBlast Threat
+Extraction instantly cleans web downloads and email with the industry’s
+only fully integrated document and image sanitization solution.
+• Advanced Email Protections – With emails accounting for 94% of
+worldwide breaches3, defending against phishing, business email
+compromise (BEC), social engineering and other email-based threats
+has become imperative. SandBlast Network protects users against
+these threats, using Threat Extraction to eliminate risk from all
+incoming email, as well as vetting all aspects of email messages
+before they enter your users’ mailbox, including email attachments,
+email links, sender and recipient details and the text within. To this
+end, SandBlast Network evaluates over 300 parameters per email with
+multiple innovative technologies and rules-based engines, that include
+Natural Language Processing (NLP), Threat Emulation, AI-based
+phishing protection, AI-based fraud protection, URL reputation,
+emulating clicks on links and Click-Time Protection (also called URL
+rewriting) which analyzes and blocks malicious links in real time, as
+they are clicked.
+ThreatCloud – Dynamic Threat Intelligence Repository
+Comprising the largest repository of real-time, security intelligence—
+utilized in four billion security decisions daily—Check Point ThreatCloud
+examines suspicious files and emails with breakthrough AI engines to
+determine if they are malicious or benign.
+Powering SandBlast Network’s zero day protection, including antiphishing and safe browsing, ThreatCloud gleans cyber attack data from:
+• Hundreds of millions of protected assets worldwide across cloud,
+endpoints and networks
+• Over 100,000 security gateways
+• Top notch research by Check Point Research Labs
+• The industry’s best threat intelligence feeds
+
+AI-Generated Threat Emulation Verdicts
+Inspecting files and emails for which no threat intelligence exists, SandBlast Network performs deep CPU-level emulation
+that is resistant to the most evasive attacks, even by nation states. It also employs OS-level inspection to examine a
+broad range of file types, including executables and documents, and emulates threats across PC and Mac devices,
+ensuring the best zero-day protection for all enterprise users.
+SandBlast Network leverages the power of data science to detect the newest threats with exhaustive AI engines and rich
+rule-based engines that process millions of parameters collected from runtime behaviors—reaching a single conclusive
+AI-generated verdict. AI heuristics are continually optimized against the latest threats unleashed to the wild.
+INTUITIVE MANAGEMENT
+SandBlast Network offers single click setup4 of security policies thanks to out-of-the-box best practice profiles that eliminate
+the need to manually configure policies for each network segment, e.g. data center, guest network, perimeter, internal
+network etc. Network settings are optimized per business need to provide the most effective security while maintaining
+optimal network performance. By only deploying policies that are relevant to the specific network segment being protected,
+organizations save on bandwidth and processing power for a more cost-effective zero-day protection strategy.
+And thanks to auto-updated threat prevention engines, organizations always run with the latest features, best practice policies
+and technology, as these are automatically updated in the background, with no need to push policy updates manually.
+Supports Current SIEM and SOC Workflows
+SandBlast Network offers advanced network forensics and actionable intelligence that integrate with your SIEM and SOC
+infrastructure, enabling security teams to:
+• Quickly integrate logs and forensic reports into their SIEM platform
+• Enforce private threat intelligence in SandBlast Network
+• Accelerate investigation and time-to-remediation with advanced forensics
+• Gain visibility into zero-day phishing and malware targeting the network, including malware families, MITRE
+ATT&CK techniques used and much more
+• Build confidence in a prevention-first strategy through insights and transparency
+Compliance and Reporting
+Serving as the gold standard for efficient security management, Check Point’s R80 console provides enterprise and
+government-grade compliance and reporting, including:
+• Compliance – Easy-to-use best practices, mapped to a broad array of regulatory mandates, offer full visibility into your
+compliance stance with actionable configuration guidelines, and instant alerts that apprise of any policy changes in real time
+• Logging and Reporting – Generate audit-ready reports, view logs online, integrate them right into your log server or
+SIEM with our broad integration ecosystem, or export them as needed
+SMOOTH BUSINESS PRODUCTIVITY
+SandBlast Network is the only zero-day protection solution that does not compromise business productivity, enabling a
+true prevention-first strategy. Letting users maintain their current email and browsing workflows, SandBlast Threat
+Extraction cleans email attachments and web downloads in 1.5 seconds, while slashing administration overhead by
+up to 70%. .
+Thanks to blazing-speed, AI-generated Threat Emulation verdicts, Sandblast Network protects user activity across email,
+web and networks, for powerful zero-day protection against multiple attack vectors.

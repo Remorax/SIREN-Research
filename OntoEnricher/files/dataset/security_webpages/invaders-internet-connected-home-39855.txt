@@ -1,0 +1,3124 @@
+SANS Institute
+Information Security Reading Room
+
+Invaders of the internet
+connected home
+______________________________
+Jay Yaneza
+
+Copyright SANS Institute 2020. Author Retains Full Rights.
+This paper is from the SANS Institute Reading Room site. Reposting is not permitted without express
+written permission.
+
+ts
+gh
+
+ns
+
+GIAC (GCIH) Gold Certification
+
+Fu
+
+ll
+
+Ri
+
+Invaders of the internet connected home
+
+ho
+
+rR
+
+et
+
+ai
+
+Author: Jay Yaneza, jay_yaneza@trendmicro.com
+Advisor: Hamed Khiabani, Ph.D.
+Accepted: September 23rd, 2020
+
+,A
+
+ut
+
+Abstract
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+With this rising need of network connectivity to the average home, the role called the
+“administrator-of-things” exists in which there would be responsible individual/s worrying about
+some aspects of the home networked environment: uptime, updates, connectivity,
+troubleshooting … and security. In the not-so-distant-past, these aspects were just a worry of an
+enterprise systems/network administrator where the stakes were uptime and business continuity,
+and now these tasks have silently creeped in the household within the last few years. This paper
+would look into network-based threats that would attempt to break in and, in the process, explore
+the dangers that may befall the budding “administrator-of-things”.
+
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 2
+
+ll
+
+1. Introduction
+
+Fu
+
+A recent interconnected device survey assessed that the average household has 11 connected
+
+ns
+
+devices, and that twenty-eight percent of consumers would have a variety of smart home devices.
+
+ai
+
+This report also mentioned that home owners who had multiple smart home devices tend to
+
+et
+
+spend more on internet bandwidth (Build it and they will embrace it | Deloitte, 2019) as all of
+
+rR
+
+these smart home devices may contend for internet bandwidth. This steady trend in saturating the
+
+ho
+
+average home with internet connected things was an expected effect of the internet of things
+
+ut
+
+(IoT) or, right now, the internet of everything (IoE) – equivocally leading to the fact that every
+
+,A
+
+piece of device that can be connected to the internet will be connected to the internet.
+
+itu
+
+te
+
+With this, the average home unintentionally needs “administrator-of-things”, a mixed role of
+
+st
+
+a handyman and a multi-user IT Administrator, whose responsibility would be to worry about
+
+In
+
+some aspects of the home networked environment (TrendLabs Security Intelligence Blog, 2014).
+
+NS
+
+For example, a slight internet outage for an internet connected home would be immediately felt
+by various aspects of the household – ranging from the loss of control for temperature
+
+SA
+
+(thermostat), visibility (camera), lighting automation, and screens that rely on streaming content.
+
+e
+
+Aside from worrying about connectivity and uptime, this role would need to worry about
+
+Th
+
+keeping these devices updated – if not for newer features that may be offered by the vendor, then
+
+20
+
+probably to ensure that patches are applied to the device for increased security. Sounds familiar?
+
+20
+
+Indeed, all of these factors play very much in the day to day operations of a business that
+
+©
+
+requires internet connectivity to provide services.
+At the time of writing, there is also a wider acceptance of companies for working from home.
+With this, the boundaries of a secure working environment is blurred: how can an organization
+ensure that remote workers are not opening up doors for remote attacks when a home network is
+beyond the mandate and scope of the enterprise IT organization?
+It should be noted that this paper also includes an initial effort to profile threats to an internet
+connected home. With the initial research was conducted around July 2016, and would
+differentiate what observed activities 4 years after.
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 3
+
+ll
+
+1.1 TCP/IP based devices – hardwired or wireless
+
+Fu
+
+A research into classifications of devices within a Smart Home ("Classification of functions
+
+ns
+
+in smart home," 2012), there are generally four classifications of devices within a Smart Home:
+
+
+et
+
+ai
+
+Electro – this includes touch panels, control appliances, kitchen appliances, garage
+
+rR
+
+openers, or irrigation (sprinkler) systems. These aspects of a home that were usually
+
+ho
+
+utilized through manual operations that has been introduced to the internet-connected
+world.
+
+
+,A
+
+ut
+
+Audio/Video – includes home theatre, music, and games. Most commonly
+experienced through Smart TVs, smart speakers, gaming consoles and streaming
+
+
+
+te
+
+sticks.
+
+itu
+
+Security – this would generally include systems that provide safety, more commonly
+
+In
+
+st
+
+found in homes. Web-enabled IP cameras, baby monitors, motion detections and
+alarms are part of this group.
+
+
+NS
+
+Environment, energy and health – almost all devices that comfortable living
+
+SA
+
+conditions fall in this group: heating ventilation and air conditioning (HVAC)
+
+e
+
+systems, shutters, lighting, or even internet connected weighing scales and exercise
+
+Th
+
+trackers.
+
+20
+
+Aside from these devices that may be permanent fixtures within a Smart Home, let us not
+
+©
+
+20
+
+forget that there are other “productivity-related” devices that are also connected, which includes
+
+computers, laptops, tablets, printers and the like.
+
+1.2 Smart Home Hubs
+Having a few internet connected (a.k.a., “smart”) device would mostly work with various
+apps cluttered in your personal device (i.e., phone, tablet). However, as these devices grow in
+number, having a Smart Home (Automation) Hub. In general, a Smart Home Automation Hub
+“serves as the nerve center of your home automation system and ties all of your devices
+together” ("What is a smart home hub (And do you need one)?" 2014). Depending on the vendor
+of your Smart Home Hub, it can support multiple protocols including:
+
+
+Bluetooth
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Wi-Fi (mostly through web-based APIs)
+
+
+
+Z-Wave radio (908.4 MHz)
+
+
+
+ZigBee radio (2.4 GHz)
+
+ns
+
+Fu
+
+ll
+
+
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 4
+
+et
+
+ai
+
+There are also support for vendor-specific protocols such as Apple HomeKit, Lutron Clear
+
+rR
+
+Connect (lighting), and Kidde (smoke and CO alarm) wireless protocols. Most of them also
+
+ho
+
+integrate with “smart assistants” like Amazon Alexa and Google Assistant, and often integration
+
+ut
+
+with If This then That (IFTTT) web services.
+
+,A
+
+2. Normal outbound network traffic flow within the observed
+
+itu
+
+te
+
+home network
+
+st
+
+For most configurations, home networks are largely controlled by the home network’s
+
+In
+
+firewall/router devices and such devices are designed to 1) allow all outbound network access
+
+NS
+
+and 2) deny inbound connection connections. There are, however, certain conditions wherein a
+
+SA
+
+home network’s firewall/router device may be configured to allow incoming traffic:
+
+e
+
+a) Universal Plug and Play (UPnP) or Network Address Translation Port Mapping Protocol
+
+Th
+
+(NAT-PMP)
+
+20
+
+The term UPnP may be a little bit more popular than NAT-PMP as it is a ubiquitous term
+
+©
+
+20
+
+utilized by a lot of devices, while NAT-PMP is commonly found in Apple devices and
+programs. Both of these functionality though function the say way: if the home
+router/firewall device supports it, these devices/programs that utilize either UPnP or
+NAT-PMP can dynamically add port forwards and firewall entries. Most common of
+these devices would be a gaming console, and programs such as BitTorrent would utilize
+the same as well.
+
+b) Manually configured by the home owner
+In some configurations that UPnP doesn’t natively work on the home network, a home
+owner may configure the firewall functionality to allow certain ports inbound to a
+destination device. There are several configurations of this: either setting the device up in
+the DMZ location of a home network, 1-to-1 mapping for port forwarding or even port
+triggering features. Such terminologies may be straightforward for a firewall
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 5
+
+ll
+
+administrator for a business setting, but not so much for the regular home user. It may,
+
+Fu
+
+however, come into discussion if one of the members of the household would be playing
+
+ns
+
+online games that require “hosting” a game on a Microsoft Windows PC located within
+
+ai
+
+the home network. Another possible instance of configuring such inbound access would
+
+et
+
+be if the home owner would like to take advantage of certain functionalities of the home
+
+rR
+
+router, such as “offering a locally attached USB storage to be accessible anywhere”.
+
+ho
+
+The next few sections would discuss observations on a home network with mostly outbound
+
+ut
+
+connectivity, with only one section having a port-forwarding rule found in the second example
+
+,A
+
+for 2.5 Productivity for a particular Microsoft Windows game. Both UPnP and NAT-PMP is
+
+te
+
+disabled within the observed network environment, and the observation was performed for the
+
+st
+
+itu
+
+entire July 2020.
+
+In
+
+2.1 Electro
+
+Figure 1: Wi-Fi enabled Sprinkler traffic profile
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+rather simplistic:
+
+NS
+
+A Wi-Fi enabled sprinkler was observed during this time, and it turns out that the traffic is
+
+©
+
+The vendor also listed these ports on their support site, with the following information:
+
+
+TCP/31314 – Used for earlier generation of the device, and TCP/8883 was used for
+future models.
+
+
+
+TCP/80 – Used for firmware updates
+
+
+
+UDP/53 and UDP/123 - for Domain Name Server (DNS) lookup queries and time
+synchronization via Network Time Protocol (NTP)
+
+During the time of observation, the TCP/31314 traffic was consistently communicating with
+a well-known web hosting provider (Amazon AWS).
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 6
+
+ll
+
+2.2 Audio / Video
+
+Fu
+
+Analysis of traffic coming from two video devices (a popular streaming stick and a Smart
+
+ai
+
+All of the devices tested were physically located within the United States, so it’s expected
+
+et
+
+
+
+ns
+
+TV) share the following characteristics:
+
+Heavy utilization of ports TCP/80 and TCP/443 for both devices, which is the primary
+medium of delivering streaming content.
+
+ut
+
+There was also significant use of UDP/53 and UDP/123, for Domain Name Server (DNS)
+
+,A
+
+
+
+ho
+
+
+
+rR
+
+that the traffic mostly were reaching out to destinations that are within the United States.
+
+lookup queries and time synchronization via Network Time Protocol (NTP).
+
+te
+
+Intermittent and low utilization of UDP/55623, UDP/55625, UDP/58899, UDP/65432.
+
+itu
+
+
+
+Not surprisingly, these two devices that are used to consume streaming content do not
+
+In
+
+
+
+st
+
+Very little is known about this network access, but was observed in both devices.
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+communicate directly at all with devices within the same Wi-Fi network.
+
+Figure 2: Streaming stick (left), Smart TV (right)
+
+After these similarities, there are some port ranges that seem to be very specific to each
+device:
+
+
+Aside from the TCP traffic for both TCP/80 and TCP/443, UDP/80 and UDP/443 was
+also observed for the Smart TV.
+
+
+
+The Smart TV also had ICMP requests (2048/Echo Request and 771/Port Unreachable),
+which was not present in the streaming stick.
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+4 digit destination ports for both the streaming stick and the Smart TV:
+
+ll
+
+
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 7
+
+Fu
+
+o TCP/2350 – accordingly used specifically by the streaming stick, and is
+
+ns
+
+consistently communicating with a well-known web hosting provider (Amazon
+
+ai
+
+AWS).
+
+et
+
+o TCP/5228 – used by the tested Smart TV, and is consistently communicating with
+
+rR
+
+a well-known web hosting provider (Google Cloud)
+
+ho
+
+To make another comparison, traffic profile of a Smart Speaker was also observed with the
+
+Figure 3: Smart Speaker traffic profile
+
+Th
+
+e
+
+SA
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+following findings:
+
+The characteristics of this Smart Speaker is almost the same as the two video devices (a
+
+©
+
+20
+
+20
+
+popular streaming stick and a Smart TV):
+
+
+TCP traffic for both TCP/80 and TCP/443 was heavily utilized
+
+
+
+TCP/5228 is consistently communicating with a well-known web hosting provider
+(Google Cloud) hosted within the United States.
+
+
+
+There was also significant use of UDP/53 and UDP/123, for Domain Name Server (DNS)
+lookup queries and time synchronization via Network Time Protocol (NTP).
+
+
+
+The Smart Speaker also had ICMP requests (2048/Echo Request and 771/Port
+Unreachable), towards a well-known web hosting provider (Google Cloud) hosted within
+the United States.
+It should be noted that the devices did not use any local streaming traffic (e.g., DLNA),
+
+both devices were utilize personalized devices (i.e., phone and tablet) to stream content to the
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 8
+
+ll
+
+device, and the traffic characterized above does not include traffic analysis similar to multicast
+
+Fu
+
+DNS (mDNS) implemented by software packages like Apple Bonjour or Avahi.
+
+ns
+
+2.3 Security
+
+et
+
+ai
+
+Home security panels that aspects of the dwelling (e.g., doors, windows, gates, heat, smoke,
+
+rR
+
+freeze) during certain states (e.g., armed, disarmed, stay or away) usually communicate with
+sensors that could either be a combination of hardwired or wireless methods. These wireless
+
+ho
+
+methods aren’t necessarily Wi-Fi, and operate in a specific range of signals (e.g., 345 MHz, 900
+
+ut
+
+MHz), depending on the vendor of such device. Further, while Wi-Fi-only home security control
+
+,A
+
+panels exists, most of these home security panels would have a battery backup and communicate
+
+te
+
+through cellular radio modules. That being said, another device that was put into consideration
+
+itu
+
+was a home security control panel, through its “IP communicator” add-on device, which is
+
+st
+
+usually offered as an option for “backup communications” to the monitoring service’s Central
+
+Figure 4: Home Security IP communicator traffic profile
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+In
+
+Station in case network coverage of cellular services are poor.
+
+20
+
+Traffic analysis of such device reveals that its communication protocol was only for
+
+©
+
+UDP/1121 that was for the monitoring service’s Central Station. No other ports or hosts were
+observed.
+Next, a home security suite that provided video recording (including Wi-Fi-enabled
+doorbells) were observed during the same time period. While there were numerous ports
+observed, some of which not documented by the vendor, we will go through the top common
+ports observed:
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+et
+
+ai
+
+ns
+
+Fu
+
+ll
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 9
+
+st
+
+Figure 5: Wi-Fi enabled video/doorbell traffic profile (TCP ports)
+
+TCP/443 – HTTPS, the main communications protocol to the cloud-based service, which
+
+SA
+
+
+
+NS
+
+In
+
+The top TCP ports being in used were the following:
+
+enables this home security suite to provide its service.
+TCP/15064 – Session Initiated Protocol (SIP), a signaling protocol used real-time
+
+e
+
+
+
+Th
+
+sessions with a devices that provide voice, video or messaging.
+TCP/5201 – observed in actual use and several end-user reports, but no public
+
+©
+
+20
+
+20
+
+
+
+
+
+documentation (from the vendor) on its function. Confirmed that the communication goes
+to a well-known web hosting provider (Amazon AWS).
+TCP/9999 and TCP/9998 – device-specific ports that is used to maintain communication
+path to the mobile device (which has the home security device app).
+
+On the other hand, while UDP ports have very small amount of traffic, it does show that this
+home security suite utilizes UDP ports only for the mostly for the important services:
+
+
+UDP/123 – time synchronization via Network Time Protocol (NTP)
+
+
+
+UDP/53 – Domain Name Server (DNS) lookup queries
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+UDP/5001 – observed in actual use and several end-user reports, but no public
+
+ll
+
+
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 10
+
+Fu
+
+documentation (from the vendor) on its function. Confirmed that the communication goes
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+et
+
+ai
+
+ns
+
+to a well-known web hosting provider (Amazon AWS).
+
+SA
+
+Figure 6: Wi-Fi enabled video/doorbell traffic profile (UDP ports)
+
+The home security suite had ICMP requests (2048/Echo Request and 771/Port
+
+Th
+
+
+
+e
+
+Finally, there are other observations for this home security suite, as observed below:
+
+20
+
+Unreachable), towards a well-known web hosting provider (Amazon AWS) hosted within
+the United States.
+
+©
+
+20
+
+
+
+The other non-US based traffic, it was seen that it was mostly for UDP/123 time
+synchronization via Network Time Protocol (NTP)
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+et
+
+ai
+
+ns
+
+Fu
+
+ll
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 11
+
+st
+
+Figure 7: Wi-Fi enabled video/doorbell traffic profile (UDP ports)
+
+In
+
+2.4 Environment, energy and health
+
+NS
+
+Unfortunately, no Wi-Fi enabled device was put in observation during this time that can be
+
+SA
+
+included in this section. The employed devices were utilizing other wireless protocols (Z-Wave)
+
+Th
+
+e
+
+that would be covered in section 2.6 Smart Hub.
+
+2.5 Productivity
+
+20
+
+For the observed productivity devices, three devices has been put into observation: 1) a Wi-
+
+©
+
+20
+
+Fi enabled scanner/printer, 2) a Microsoft Windows 10 PC that was primarily used for personal
+use (e.g., gaming) and 3) a Microsoft Windows 10 PC that was used for remotely working from
+home
+First, the Wi-Fi enabled scanner/printer has a rather simplistic network traffic profile as seen
+
+below:
+
+Figure 8: Wi-Fi enabled printer/scanner traffic profile (TCP ports only)
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Traffic directed at TCP/443 was seen for fetching web-based (cloud) print services (e.g.,
+
+ll
+
+
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 12
+
+TCP/5222 was observed communicating to two well-known web hosting provider
+
+ns
+
+
+
+Fu
+
+Google Cloud Print).
+
+et
+
+ai
+
+(Google and Akamai).
+
+rR
+
+All other network traffic was local to the environment, namely traffic between TCP/9100 –
+
+ho
+
+TCP/9102, TCP/443, and TCP/631. It should also be noted that IGMP, SMB and NetBIOS
+
+ut
+
+traffic was observed when printing as well.
+
+,A
+
+Second, the Microsoft Windows 10 PC that was primarily used for personal use can readily
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+be observed through the number of non-standard ports that have been observed:
+
+Figure 9: Microsoft Windows 10 PC (for personal use) traffic profile, TCP ports only
+
+
+
+Traffic directed at TCP/443 was seen for normal internet browsing
+
+
+
+TCP/80 traffic was again seen for internet browsing
+
+
+
+TCP/5223 was observed for Apple Push Notification Service (APNS)
+
+
+
+TCP/6667 traffic, which is related to Internet Relay Chat (IRC)
+
+
+
+Other TCP ports (i.e., 25147, 27015-27030, 27036-27037) seen above are for game
+hosting.
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 13
+
+ll
+
+UDP ports observed for this Microsoft Windows 10 host shows a traffic profile that is very
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+et
+
+ai
+
+ns
+
+Fu
+
+much expected for a modern Windows 10 Operating System:
+
+
+
+SA
+
+Figure 10: Microsoft Windows 10 PC (for personal use) traffic profile, UDP ports only
+
+Traffic directed at UDP/443 was because of the browser used (Google Chrome), which
+
+Th
+
+e
+
+utilizes QUIC. This protocol (QUIC) is defined as “a new transport which reduces
+latency compared to that of TCP” ("QUIC, a multiplexed stream transport over UDP,"
+
+©
+
+20
+
+20
+
+n.d.), and is being implemented on an experimental basis on some web sites when
+
+
+
+utilizing a browser that supports it (e.g., Google Chrome).
+
+UDP/1900, which is associated to the Simple Service Discovery Protocol (SSDP), is
+related to the Universal Plug and Play (UPnP) service. Microsoft Windows 10 natively
+includes an SSDP Discovery service.
+
+
+
+UDP/5355 is similarly observed, which is related to Link-Local Multicast Name
+Resolution (LLMNR).
+
+
+
+UDP/5353 was observed as the host utilized multicast DNS (mDNS), as well as IGMP
+(not shown here). Microsoft Windows 10 supports mDNS/Zeroconf, as well as IGMP
+natively.
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+UDP/3478 and UDP/19302 is associated to webRTC and VoIP Session Traversal
+
+ll
+
+
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 14
+
+Fu
+
+Utilities for NAT (STUN) traffic, commonly used for various in-game (voice)
+
+ns
+
+communications.
+
+Other UDP ports (i.e., 27000-27031) seen above are for game hosting.
+
+
+
+Similar to other hosts, there is the existence of UDP/53 for Domain Name Server (DNS)
+
+et
+
+ai
+
+
+
+ho
+
+rR
+
+lookup queries and UDP/123 time synchronization via Network Time Protocol (NTP).
+Third, and last, for the Microsoft Windows 10 PC that was used for remotely working from
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+home, the traffic profile is a little bit varied, as seen below:
+
+Figure 11: Microsoft Windows 10 PC (for work from home use) traffic profile, TCP ports only
+
+
+
+Traffic directed at TCP/443 was a mix of normal internet browsing and the SSL VPN
+traffic to the VPN gateway of the corporate network.
+
+
+
+TCP/80 traffic was again a mix of normal internet browsing and internal resources within
+the corporate network.
+
+
+
+Noticeable in this network traffic profile that several ports that are normally found within
+the corporate network are observed: TCP/389 (LDAP), TCP/3389 (Microsoft RDP),
+TCP/22 (SSH), TCP/139 (NetBIOS) and TCP/445 (SMB).
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 15
+
+ll
+
+For the UDP ports, the characteristics mimic that of a Microsoft Windows 10 host that was
+
+NS
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+et
+
+ai
+
+ns
+
+Fu
+
+used for personal user, with just small irregularities observed:
+
+SA
+
+Figure 12: Microsoft Windows 10 PC (for work from home use) traffic profile, UDP ports only
+
+
+
+The highest traffic observed here is UDP/1900, which is associated to the Simple Service
+
+Th
+
+e
+
+Discovery Protocol (SSDP), is related to the Universal Plug and Play (UPnP) service. Microsoft
+Windows 10 natively includes an SSDP Discovery service.
+UDP/5355 is similarly observed, which is related to Link-Local Multicast Name Resolution
+
+20
+
+20
+
+
+
+©
+
+
+
+(LLMNR).
+After analysis, it was found out that the utilization of UDP/443 was because of the browser used
+(Google Chrome), which utilizes QUIC. This protocol (QUIC) is defined as “a new transport
+which reduces latency compared to that of TCP” ("QUIC, a multiplexed stream transport over
+UDP," n.d.), and is being implemented on an experimental basis on some web sites when utilizing
+a browser that supports it (e.g., Google Chrome).
+
+
+
+UDP/5353 was observed as the host utilized multicast DNS (mDNS), as well as IGMP (not
+shown here). Microsoft Windows 10 supports mDNS/Zeroconf, as well as IGMP natively.
+
+
+
+Again, we see the existence of ports that are normally found within the corporate network: both
+UDP/137 and UDP/138 for NetBIOS and UDP/389 for LDAP.
+
+
+
+Similar to other hosts, there is the existence of UDP/53 for Domain Name Server (DNS) lookup
+queries and UDP/123 time synchronization via Network Time Protocol (NTP).
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 16
+
+ll
+
+With this, the most traffic observed for productivity hosts were has the following similarities and
+
+Fu
+
+differences:
+
+Wi-Fi enabled Microsoft
+printer/scanner Windows 10, for
+personal use
+
+Microsoft Windows
+10, for work from
+home
+
+et
+
+(when printing)
+
+
+
+
+
+
+
+
+(when printing)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ut
+
+itu
+
+te
+
+,A
+
+
+
+
+
+
+
+
+ho
+
+
+
+In
+
+NS
+
+
+
+Th
+
+e
+
+SA
+
+
+
+rR
+
+
+
+st
+
+Web-related traffic (e.g.,
+TCP/443, TCP/80)
+Printer-related traffic (e.g.,
+TCP/910?, TCP/631)
+SMB/NetBIOS
+mDNS/IGMP
+DNS/NTP
+QUIC (UDP/443)
+SSDP (UDP/1900)
+LLMNR (UDP/5355)
+Enterprise-related traffic
+(LDAP, RDP, SSH)
+Other traffic (e.g., TCP/5223)
+IRC traffic (e.g., TCP/6667)
+webRTC / STUN (e.g.,
+UDP/3478, UDP/19302)
+Game Hosting
+
+ai
+
+ns
+
+Traffic Profile
+
+20
+
+2.6 Smart Home Hub
+
+©
+
+20
+
+The Smart Home Hub observed had rather a simple network traffic profile:
+
+Figure 13: Smart Home Hub traffic profile
+
+During the time of observation, the TCP/443 traffic was consistently communicating with a
+well-known web hosting provider (Amazon AWS).
+It should also be noted that, while the Smart Home Hub utilized in this paper was observed to
+communicate via HTTP (TCP/443) traffic, Z-Wave communication was observed as well, as
+seen below:
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+ut
+
+ho
+
+rR
+
+et
+
+ai
+
+ns
+
+Fu
+
+ll
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 17
+
+,A
+
+Figure 14: Smart Home Hub Z-Wave wireless mesh network
+
+itu
+
+te
+
+Z-Wave is based on a wireless mesh network topology and each device that is joined to a ZWave wireless network can either be battery operated or non-battery (continuous power) device.
+
+In
+
+st
+
+Usually, a non-battery operated Z-wave device acts as a signal repeater ("Z-wave smart home
+
+NS
+
+products are the #1 choice for smart homes," n.d.), and battery operated Z-wave devices disables
+the repeater functionality to preserve battery consumption. Each Z-Wave device (also called
+
+SA
+
+node) becomes linked together to form a low communication latency and interoperable network
+
+Th
+
+e
+
+within a smart home.
+
+Finally, there are several API-level integrations that were done on the Smart Home Hub in
+
+©
+
+20
+
+20
+
+this paper:
+
+
+Smart Home Hub to the Smart Speaker
+
+
+
+Smart Home Hub to Home Security service
+
+
+
+Smart Home Hub to the Wi-Fi enabled sprinkler
+
+
+
+Smart Home Hub to the Wi-Fi enabled video/doorbell
+
+
+
+Smart Speaker to the Smart TV
+
+
+
+Smart Speaker to the Home Security Service
+
+These integrations were not observed in the local traffic within the Smart Home, and is
+implicitly known that the integrations happened between the backend cloud services of each
+device.
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 18
+
+ll
+
+3. Observing an attack: initial methodology and findings
+
+Fu
+
+In July 2016, the author had performed an initial effort to profile internet-connected threats,
+
+ns
+
+choosing to analyze network-based threats by implementing honeypots. Honeypots are great
+
+ai
+
+since there are a lot of free and open-source options and gathers a great deal of data to analyze.
+
+et
+
+The voluminous amount of data may be a challenge to analyze, but the approach that was chosen
+
+rR
+
+was to separate mass-scanning activities of the internet and differentiate that with traffic that is
+
+ho
+
+dedicated to an internet home. As such, it was decided to setup honeypot nodes that are hosted in
+
+ut
+
+a virtual private server (VPS) and a dedicated one at home. A separate observation was done on
+
+,A
+
+the traffic directed at the VPS servers, comparing it with the traffic directed specifically at our
+
+te
+
+home network. Immediately, we did see some traffic that was specific to our monitored home
+
+itu
+
+network – and we decided to observe the traffic for the entire month of July 2016, and both the
+
+In
+
+st
+
+VPS server and the home are located within the United States.
+
+NS
+
+Also, note that we classify one probe as a unique combination of: source IP address, source
+port and destination port, thereby one probe equates to one attempt. For example, one IP address
+
+SA
+
+that probed, say, the existence of both HTTP and SMTP ports (port 80 and 25, respectively)
+
+e
+
+would be two entries in our list as one attempt would have a different source port and destination
+
+Th
+
+port. Here are the initial numbers:
+
+20
+
+20
+
+
+
+Out of the 33,197 probes to our VPS server, we counted only 686 probes to our home
+network of which only 337 probes (49.12%) were specific to our home network, while
+
+©
+
+the other 349 probes were shared between our home network and our VPS server. This
+tells us that around 50% of the time, our monitored home network received unique traffic
+that is not seen at our VPS server. These 337 probes that are specific to our home
+network would be the object of interest.
+
+
+There were only 209 unique IP addresses doing all 337 probes to our home network some hosts were scanning the home network multiple times and, at one point, across
+multiple protocols:
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 19
+
+ll
+
+o Out of the 209 unique IP addresses, we counted 42 hosts that had repeated probes
+
+Fu
+
+on the same destination port, but one host out of the 42 had probed our home
+
+ns
+
+network twice for different ports.
+
+The top two ports that was sought out were 1433 (Microsoft SQL Server) and 3389
+
+rR
+
+
+
+et
+
+ai
+
+o The rest of the 167 hosts just probed one specific port, and moved on.
+
+ut
+
+ho
+
+(Microsoft Remote Desktop), with 27.59% and 27.29% respectively.
+
+,A
+
+These initial results show that majority of the hosts that are external to our home network
+
+te
+
+were seeking something very specific, with just a handful of ports (and, thereby, services) being
+
+itu
+
+of their interest. For now, we have looked into the connection attempts and captured data of the
+
+st
+
+209 unique hosts to our home network. After that, we created potential malicious profiles based
+
+In
+
+on the attempts to introduce threats to our home network – particularly looking into the entry
+
+NS
+
+attempts, methods of entry and other suspicious activities. We came up with four possible
+
+e
+
+Hosts that are engaged with other suspicious activities
+Homes that are spreading known worms
+Homes exploiting other homes through network exploits
+
+20
+
+Th
+
+
+
+
+
+SA
+
+profiles:
+
+20
+
+4. Are nature of attacks the same 4 years after?
+
+©
+
+Similar observations were ran for July 2020, and here is a summary of the data:
+Year
+2016
+2020
+
+Protocol
+TCP
+TCP
+UDP
+
+Home
+686
+21,716
+2,373
+
+VPS
+33,197
+45,256
+2,712
+
+Overlap
+349
+10,990
+1,038
+
+Unique (Home)
+337 (49.12%)
+10,726 (49.39%)
+1,335 (56.25%)
+
+Unique (VPS)
+32,848 (98.94%)
+34,266 (75.71%)
+1,674 (61.72%)
+
+Here are some observations:
+
+
+Out of the 10,726 unique hosts that scanned TCP ports, 1,106 hosts had scanned more
+than 1 port and the other 9,620 hosts only scanned 1 port.
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Out of the 1,335 unique hosts that scanned UDP ports, 248 hosts had scanned more than
+
+ll
+
+
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 20
+
+Cross-referencing the hosts that had scanned TCP ports and UDP ports, there are 81
+
+ns
+
+
+
+Fu
+
+1 port and the other 1,087 hosts had scanned only 1 port.
+
+et
+
+ai
+
+unique hosts that had scanned both protocols.
+
+rR
+
+Looking at the top 5 unique ports that were scanned that were clearly only affecting the home
+
+ho
+
+location, we have the following:
+
+General Use
+Telnet Server
+Microsoft SQL Server
+Several services claim this port (e.g., SoftEther VPN)
+World Wide Web (HTTP) Server
+Secure Shell (SSH) Server
+
+NS
+
+General Use
+Simple Service Discovery Protocol (SSDP)
+Domain Name Server (DNS)
+Session Initiation Protocol (SIP)
+(unknown)
+(unknown)
+
+20
+
+Th
+
+e
+
+SA
+
+UDP
+1900
+53
+5060
+30366
+56681
+
+In
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+TCP
+23
+1433
+5555
+80
+22
+
+20
+
+With the main interest in being able to determine TCP ports, and to make sense of the
+
+©
+
+changes in the landscape, honeypots were again deployed to determine what are attacking these
+ports:
+
+
+TCP ports 23, 1433, 5555 and 22 are mostly being targeted with the MIRAI botnet
+("Mirai widens distribution with new Trojan," 2017), which was first seen around August
+of 2016 ("MMD-0056-2016 - Linux/Mirai, how an old ELF malcode is recycled.," 2016).
+There are various version and iterations of MIRAI, but is mainly targeting Linux Servers
+and IoT devices running Linux-based firmware called Busybox, which is common in
+DVRs, CCTVs and IP-based cameras. Not surprisingly, the TCP port 5555 is for the
+Android Debug Port (ADB) that was reportedly left open in some Android-based phones
+("Open ADB ports used to spread possible satori variant," 2018). This is also the same
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 21
+
+ll
+
+entry point for various MIRAI variants, such as Satori, Okiru, Masuta, and Tsunami/Fbot
+
+Fu
+
+to name a few. Several attempts were also attributed to a Perl-based backdoor ("Outlaw's
+
+ns
+
+Botnet spreads miner, Perl-based Backdoor," 2019), with the objective of cryptocurrency
+
+ai
+
+mining. Successful logins to either telnet (TCP 23) or ssh (TCP 22) also a sequence of
+
+et
+
+commands that would download additional payload that would effectively make the
+
+rR
+
+afflicted device as part of the botnet, often communicating with other devices to perform
+
+ho
+
+malicious activities. Devices that may be compromised from would be communicating
+
+On the other hand, TCP 80 attempts varied, such as :
+
+,A
+
+
+
+ut
+
+with other devices through TCP port 80, 8088, 7001, and higher ephemeral ports.
+
+te
+
+o Fingerprinting HTTP GET commands just looking for .env variable. There are
+
+itu
+
+various uses of the .env file (e.g., projects that involve Docker, Node.js, Python,
+etc.) but basically it describes working environment variables for a project.
+
+In
+
+st
+
+o Another HTTP get command that is very common is the attempt to access a
+
+NS
+
+subdirectory called /phpmyadmin/, a free and open source administration tool
+written in PHP.
+
+SA
+
+o Access to /hudson/ has been observed as well, which is usually related to the
+
+e
+
+Hudson continuous integration (CI) that usually runs within the Apache Tomcat
+
+Th
+
+or Glassfish application server.
+
+20
+
+o Access to the Solr admin URL (/solr/admin/info/system?wt=json) was performed
+
+©
+
+20
+
+as well, in attempt to determine if the Solr server was running. Solr is an opensource enterprise-search platform, which is part of the Apache Lucene project.
+o ThinkCMF framework vulnerability exploit attempts, with the associated
+ThinkPHP vulnerability scanning (related to CVE-2018-20062), also being
+abused by a MIRAI variant called Miori ("ThinkPHP remote code execution
+vulnerability used to deploy variety of malware (CVE-2018-20062)," 2019).
+o ZeroShell vulnerability exploit attempts, related to CVE-2009-0545, being abused
+by ECHOBOT, another MIRAI variant ("Mirai variant ECHOBOT resurfaces
+with 13 previously unexploited vulnerabilities," 2019).
+o Attempts to exploit Telerik UI for ASP.NET AJAX. There has been several CVEs
+related to this application, such as CVE-2017-9248, CVE-2017-11317, and CVE2017-11357, with sightings of active exploitation ("Canadian centre for cyber
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 22
+
+ll
+
+security," 2018), and the most recent one would be CVE-2019-18935 (Gross,
+
+Fu
+
+2019).
+
+ns
+
+o JSON WEB Services Invoker (/api/jsonws/invoke) exploit attempts, related to
+
+et
+
+7961 : Quick journey to PoC | Synacktiv," 2020).
+
+ai
+
+CVE-2020-7961, which is fairly recent ("How to exploit Liferay CVE-2020-
+
+rR
+
+o Exploit attempts against Grandstream and DrayTek devices, which was recently
+
+ho
+
+discovered as CVE-2020-8515, related to a botnet called “Hoaxcalls”
+
+ut
+
+("Grandstream and DrayTek devices exploited to power new Hoaxcalls DDoS
+
+,A
+
+Botnet," 2020).
+
+o Netlink GPON Router 1.0.11 - Remote Code Execution (Shellord, 2020), with
+
+itu
+
+te
+
+access to “boaform/admin/”. This is again being related to the aforementioned
+
+In
+
+1017," 2020)
+
+st
+
+botnet called “Hoaxcalls” ("New Mirai variant expands, exploits CVE-2020-
+
+NS
+
+Clearly, home based attacks has changed 4 years after, with the current threat landscape
+
+SA
+
+being awash with various IoT-based threats.
+
+Th
+
+e
+
+5. Why apply Network Micro-segmentation when working
+
+20
+
+from home?
+
+20
+
+Whether working from home is a norm that a company allows, or have just been recently
+
+©
+
+allowed due to certain conditions, one of the perceived benefits of working from home is that it
+can allow workers to minimize distractions and increase the time they spend focused on a
+project. However, the IT security risks for such arrangements are well known, such as:
+a) Physical security and the boundaries of work data vs personal data, where personal
+information may co-mingle with corporate data. This not only applies to data stored on a
+company owned and provisioned asset (e.g., laptop), but on USB disks or flash drives.
+b) Network security. In a corporate environment, network devices are often scanned for,
+patched updated to protect against vulnerabilities. Suspicious network usage (e.g.,
+unusual outbound network requests, network scanning) may also be recognized if traffic
+within a corporate environment should this be monitored. In a home network setting, a
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 23
+
+ll
+
+compromise of a home based router, or any IOT device, which may be stepping stone to
+
+Fu
+
+the corporate asset owned by the remote worker would not be visible, or even recognized,
+
+ns
+
+by an IT administrator.
+
+ai
+
+c) Host security. Similar to network security, regular patching may be part of the regular
+
+et
+
+monthly maintenance, with patches being pushed out through enterprise means of patch
+
+rR
+
+management. Alongside this, the deployment of host-based security software
+
+ho
+
+(antimalware software, host based intrusion prevention/detection systems, data loss
+
+ut
+
+prevention, etc.) would not extend to other personal devices within the home network.
+
+,A
+
+On the other hand, micro-segmentation is the concept of creating very granular segments
+
+te
+
+within an IT infrastructure, to which the objective is to effectively limit the size of the network’s
+
+itu
+
+attack surface by ensuring unrelated network segments are “walled-off”. It has been previously
+
+st
+
+established that network micro-segmentation does provide additional security (“Does Network
+
+In
+
+Micro-segmentation Provide Additional Security?” Jaworski, 2017), and that the basis of this
+
+NS
+
+security model is from the “Zero Trust Model” introduced by Forrester Research (Kindervag &
+
+SA
+
+Ferrara, 2013). So not to be confused by the two terms, it is important to bear in mind that microsegmentation is an implementation of the Zero Trust Model. Most importantly, Zero Trust Model
+
+Th
+
+e
+
+advocates that security professionals must eliminate the idea of a “trusted network”, otherwise
+
+20
+
+known as the internal network, and the “untrusted network”, which is usually the external
+
+©
+
+20
+
+network. There are three fundamental concepts in the Zero Trust Model:
+
+
+Concept No. 1: Ensure that all resources are accessed securely regardless of location
+
+
+
+Concept No. 2: Adopt a least privilege strategy and strictly enforce access control
+
+
+
+Concept No. 3: Inspect and log all traffic
+
+A working example of the Zero Trust Model includes the implementation of microsegmentation, wherein the end-result of this is trying to protect hosts that reside within the same
+security zone. The usual approach would be to segment an entire network according to the
+functional subnet, VLAN or broadcast domain, after which only the necessary resources are
+exposed between the separations (east-west traffic) and further complemented with the use of
+host-based solutions such as a host intrusion/prevention system (HID/PS) to extend the
+implementation up to the most atomic component of a corporate network. These approaches have
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 24
+
+ll
+
+been present in most enterprise networks through physical switches or routers and, in today’s
+
+Fu
+
+world of virtual switches and software define networks (SDNs), such implementation may be
+
+ns
+
+widely accepted within an enterprise network. The integration of host intrusion/prevention
+
+et
+
+ai
+
+system (HID/PS) within antimalware security suites has also been quite common.
+
+rR
+
+So how can this be implemented in a home network? Over the past few years, the author had
+tried multiple methods of implementing VLANs within a home network and, unless the home
+
+ho
+
+owner would introduce costly enterprise-grade hardware within a home network, found it overly
+
+ut
+
+complex for most end-users to implement using commodity hardware. However, two features
+
+,A
+
+stands out to be consistent in ensuring that a Wi-Fi connect host would be isolated within a home
+
+itu
+
+te
+
+network:
+
+Utilization of the Guest Network, and
+
+
+
+Access Point (AP) Isolation
+
+NS
+
+In
+
+st
+
+
+
+First, the Guest Network essentially shares bandwidth of a single internet connection within
+
+SA
+
+the home, and is commonly advertised to “limit of guest users connectivity to local resources”.
+
+e
+
+However, most implementations of this would also be inversely true as some implementations of
+
+Th
+
+the guest network also limit hosts on the home network from accessing those on the guest
+
+©
+
+20
+
+20
+
+network.
+
+Figure 15: Guest Network configuration settings for some home-based wireless devices in North America
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 25
+
+ll
+
+Second, Access Point (AP) Isolation is another option that home users can also implement,
+
+Fu
+
+and is usually hidden in under the advanced configuration of a wireless access point. The effect
+
+ns
+
+of this option would largely affect the home access point’s wireless radio wherein all wireless
+
+ai
+
+devices connecting to wireless network name (SSID) would be unable to communicate amongst
+
+st
+
+itu
+
+te
+
+,A
+
+ut
+
+ho
+
+rR
+
+et
+
+one another.
+
+In
+
+Figure 16: Access Point Isolation configuration settings for some home-based wireless sold within North America
+
+NS
+
+In testing both features, it was found out that Access Point (AP) Isolation works more
+
+SA
+
+consistently than Guest Network implementations across different home based wireless devices
+vendor’s interpretation and implementation of “Guest Network” still allows some
+
+Th
+
+e
+
+communication between hosts. With majority of hosts observed relatively very low to inexistent
+intra-host communication within a home network, there may be an opportunity to set these hosts
+
+20
+
+to communicate with a wireless AP that offers either of these two restrictions, with preference on
+
+©
+
+20
+
+the Access Point (AP) Isolation. This feature would work well in conjunction with host-based
+
+settings, such as network discoverability:
+
+Figure 17: Network discoverability option in Microsoft Windows 10
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 26
+
+ll
+
+Commonly, such prompts will let the end-user know that the recommendation is to allow the
+
+Fu
+
+endpoint to be discoverable on the home network. The common practice is to select “Yes” for
+
+ns
+
+home or work networks, and “No” if you are connecting to an unknown and untrusted location
+
+ai
+
+such as a coffee-shop or an internet cafe. However, there is practically no reason to keep the
+
+et
+
+corporate laptop accessing company resources to remain visible on a home network, so hiding
+
+rR
+
+the host’s visibility from the rest of the home network may be appropriate.
+
+ut
+
+ho
+
+6. Recommendations
+
+,A
+
+The management of home networks definitely looks like enterprise networks and the recent
+
+te
+
+wide acceptance of remote work, or working from home, makes it clear that threats that may
+
+itu
+
+affect the home would open the possibility of compromising the enterprise network. At this
+
+st
+
+point, here are a few challenges that we think the "administrator-of-things" has to heavily
+
+Make sure all your internal devices are up-to-date to cover known issues and
+
+NS
+
+
+
+In
+
+consider:
+
+SA
+
+vulnerabilities. In most cases, the prolonged use of old technology opens your family
+members to the possibility of being either the victim or the attacker, or maybe both.
+
+Th
+
+e
+
+Ensure that the device that you’re picking up has a stable history of providing patches for
+
+20
+
+their software and ensure that the device is still within maintenance of the vendor. Once a
+
+20
+
+device is out of date, heavily consider replacing it even though it still works. Patch
+management is critical in enterprise network, and a similar approach in keeping software
+
+©
+
+up-to-date applies, for all the devices, in your home network as well.
+
+
+Look into possible security options of your devices, and take advantage of them when
+possible. The main purpose of a cable modem is to connect your home to your cable
+company/ISP and bring wired/wireless connectivity options. It may take a while for ISPprovided home routers to have better security options, and so it may cost a little extra.
+There is very little (if any) offering in that device for any type of security - mostly a just
+basic firewall and access control, maybe parental options for time restraints and keyword
+filtering. In fact, most documentation would just mention maintaining your endpoint like
+keeping your patches and anti-virus up to date - and scant information about "security",
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 27
+
+ll
+
+mostly talking about the wireless security options. Not that these fundamentals are not
+
+Fu
+
+important, but it does not help the "administrator-of-things" who may need to secure
+
+et
+
+Think before opening ports at your home router / gateway, as you might accidently share
+
+rR
+
+
+
+ai
+
+one that offers visibility for all your home network devices
+
+ns
+
+multiple devices. Consider a home security software that encompasses all your devices,
+
+more than you’d want. Most home router configurations would offer a DMZ host
+
+ho
+
+configuration, where a single device on the network would be fully exposed to the
+
+Consider and implement network segmentation. A lot of your devices would like to hop
+
+te
+
+
+
+,A
+
+ut
+
+internet for special purposes like internet gaming.
+
+itu
+
+on to your network. If it is absolutely necessary for that device to connect through your
+
+st
+
+wireless network, it would be ideal if you can identify it, and separate it from the rest of
+
+In
+
+your important assets – like your corporate laptop/device. If not for the IOT devices, do it
+
+NS
+
+for your corporate-issued laptop or work device. Having separate (and isolated) network
+
+SA
+
+devices would go a long way of ensuring that vulnerabilities and threats affecting a
+compromised device would not cross over from the home network to the corporate-issued
+
+Th
+
+e
+
+laptop, and vice versa.
+Similar to the enterprise, make sure that you have enabled two factor authentication
+
+©
+
+20
+
+20
+
+
+
+(2FA) for your online accounts for the vendor-provided portals, especially those that
+would allow access to APIs, as they allow direct access to data that is being gathered,
+collected and uploaded.
+
+7. Conclusion
+Without a doubt, the role called the "administrator-of-things" is a necessity for today's smart
+home. Long gone are the simple days wherein an internet connection to the home is solely used
+for a student trying to submit homework, a professional completing some last minute research
+for a big business presentation the next day, a child playing online games or streaming internet
+content to watch videos or catch-up with social media. Today's internet connected home consists
+of a combination of devices that gives access, control and visibility on multiple aspects of a
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 28
+
+ll
+
+regular household, with the internet of everything (IoE) changing how we interact with the smart
+
+Fu
+
+home.
+
+ns
+
+An enterprise IT organization may have different staff to manage firewalls, network traffic,
+
+et
+
+ai
+
+patch management and troubleshooting but today's home would most likely be run by limited
+
+rR
+
+staff - the home owner. While such job function would be satisfying for hobbyists or technologyoriented individuals, the responsibility of configuration, management, maintaining connectivity,
+
+ho
+
+patching and troubleshooting of a smart home may be daunting for some home owners. Every
+
+ut
+
+day devices that would've been operated simply by a flip of a switch have added complexity of
+
+,A
+
+"getting online" as these devices now exist within a connected ecosystem of home network and,
+
+te
+
+in effect, the internet. However, if we were to summarize the top three priorities of the
+
+Secure configuration and management of these devices. The recommendation of regular
+
+In
+
+
+
+st
+
+itu
+
+"administrator-of-things", it would boil down to three functions:
+
+NS
+
+patching and updating of the device may be difficult to keep up for the most part, so the
+
+SA
+
+least that can be done would be changing the default passwords of these devices. Besides,
+the vendor may be slow to respond to a vulnerability, or choose not to update the device
+
+Th
+
+e
+
+at all.
+
+
+Implementing network segregation across all devices. Most of the traffic that is observed
+
+©
+
+20
+
+20
+
+for most home networks would generally be outbound to the internet, rarely is it seen that
+
+
+
+devices "talk" to each other. If at all, devices that regularly communicate for some
+administrative means should be grouped and made to communicate to each other only.
+For devices that synchronizes any information in the cloud, make sure to secure it. From
+small businesses to large enterprises, nothing is worse than a data breach. The same
+would apply to the smart home: a vendor-provided portal that is poorly secured may
+allow unauthorized users to acquire personal information, or even spy on you or your
+family members.
+A differential comparison between 2016 and 2020 showed that there is approximately
+
+49% unique traffic directed at an internet connected home, but the scale of it has been
+massive: a contrast of TCP attacks between 4 years (2016: 337 vs 2020: 10,726) had
+increased over 3,182.78%. The nature of the threats that are a cause of these attacks, the
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 29
+
+ll
+
+invaders of the internet connected home, have also shifted between opportunistic threats to
+
+Fu
+
+target the internet of things (IoT) that have gained popularity with home owners in the recent
+
+ns
+
+years.
+
+et
+
+ai
+
+Most of these threats directly compromise the home router, the main and most important
+
+rR
+
+device within a home network. A smart home, and other possible vulnerable devices hosted
+therein, may therefore be enslaved in a larger pool of infected devices. But as damaging as it
+
+ho
+
+may sound for the regular home owner, the effects on the remote worker should also be put
+
+ut
+
+into consideration. Going beyond malicious software, malicious threat actors may have their
+
+,A
+
+cross-hairs on the remote worker as an entry point to the larger organization. Thus,
+
+te
+
+companies who allow remote work should also put guidelines for their employees
+
+itu
+
+surrounding how to secure home networks if and when they allow remote work, extending
+
+st
+
+beyond simple recommendations of “using the device for office work, and go through the
+
+In
+
+corporate VPN”. While the corporate laptop or the work device may only be what the larger
+
+NS
+
+enterprise can control, that device is now a member of another network that has recently
+
+©
+
+20
+
+20
+
+Th
+
+e
+
+SA
+
+become complex. Fortunately, the “administrator-of-things” may help in this endeavor.
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 30
+
+Fu
+
+ll
+
+References
+
+ns
+
+Canadian centre for cyber security. (2018, August 15). Canadian Centre for Cyber Security.
+
+ai
+
+https://cyber.gc.ca/en/alerts/active-exploitation-telerik-ui-aspnet-ajax
+
+et
+
+Connectivity and Mobile Trends Survey | Build it and they will embrace it | Deloitte (2019)
+
+rR
+
+Retrieved from
+
+ho
+
+https://www2.deloitte.com/us/en/insights/industry/telecommunications/connectivity-
+
+ut
+
+mobile-trends-survey.html
+
+,A
+
+Classification of functions in smart home. (2012, April 1). ResearchGate.
+
+te
+
+https://www.researchgate.net/publication/275156028_Classification_of_Functions_in_S
+
+itu
+
+mart_Home
+
+st
+
+Does network micro-segmentation provide additional security? (2017, September 15).
+
+In
+
+Information Security Training | SANS Cyber Security Certifications & Research.
+
+NS
+
+https://www.sans.org/reading-room/whitepapers/networksecurity/network-microsegmentation-provide-additional-security-38030
+
+SA
+
+Grandstream and DrayTek devices exploited to power new Hoaxcalls DDoS Botnet. (2020, April
+
+e
+
+6). Unit42. https://unit42.paloaltonetworks.com/new-hoaxcalls-ddos-botnet/
+
+Th
+
+Gross, C. (2019, December 12). CVE-2019-18935: Remote code execution via insecure
+
+20
+
+Deserialization in Telerik UI. Bishop Fox Labs. https://labs.bishopfox.com/tech-
+
+20
+
+blog/cve-2019-18935-remote-code-execution-in-telerik-ui
+
+©
+
+How to exploit Liferay CVE-2020-7961 : Quick journey to PoC | Synacktiv. (2020, March 30).
+Pentest, Reverse, Développement l Synacktiv.
+https://www.synacktiv.com/en/publications/how-to-exploit-liferay-cve-2020-7961-quickjourney-to-poc.html
+
+Kindervag, J., & Ferrara, E. (2013, April 8). Developing a Framework to Improve Critical
+Infrastructure Cybersecurity. Retrieved April 30, 2017, from NIST:
+http://csrc.nist.gov/cyberframework/rfi_comments/040813_forrester_research.pdf
+Mirai widens distribution with new Trojan. (2017, February 13). Trend Micro.
+https://www.trendmicro.com/en_us/research/17/b/mirai-widens-distribution-new-trojanscans-ports.html
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+ts
+
+Ri
+
+gh
+
+Invaders of the internet connected home | 31
+
+ll
+
+Mirai variant ECHOBOT resurfaces with 13 previously unexploited vulnerabilities. (2019,
+
+Fu
+
+December 17). Unit42. https://unit42.paloaltonetworks.com/mirai-variant-echobot-
+
+ns
+
+resurfaces-with-13-previously-unexploited-vulnerabilities/
+
+ai
+
+MMD-0056-2016 - Linux/Mirai, how an old ELF malcode is recycled.. (2016, September 1).
+
+et
+
+Malware Must Die!. https://blog.malwaremustdie.org/2016/08/mmd-0056-2016-
+
+rR
+
+linuxmirai-just.html
+
+ho
+
+New Mirai variant expands, exploits CVE-2020-1017. (n.d.). Trend Micro.
+
+ut
+
+https://www.trendmicro.com/en_us/research/20/g/new-mirai-variant-expands-arsenal-
+
+,A
+
+exploits-cve-2020-10173.html
+
+te
+
+Open ADB ports used to spread possible satori variant. (2018, July 23). Trend Micro.
+
+itu
+
+https://www.trendmicro.com/en_us/research/18/g/open-adb-ports-being-exploited-to-
+
+st
+
+spread-possible-satori-variant-in-android-devices.html
+
+In
+
+Outlaw's Botnet spreads miner, Perl-based Backdoor. (2019, June 13). Trend Micro.
+
+NS
+
+https://www.trendmicro.com/en_us/research/19/f/outlaw-hacking-groups-botnetobserved-spreading-miner-perl-based-backdoor.html
+
+SA
+
+QUIC, a multiplexed stream transport over UDP. (n.d.). The Chromium Projects.
+
+e
+
+https://www.chromium.org/quic
+
+Th
+
+Shellord. (2020, March 18). Offensive security’s exploit database archive. Exploit Database.
+
+20
+
+https://www.exploit-db.com/exploits/48225
+
+©
+
+20
+
+ThinkPHP remote code execution vulnerability used to deploy variety of malware (CVE-201820062). (2019, February 26). Tenable®. https://www.tenable.com/blog/thinkphp-remotecode-execution-vulnerability-used-to-deploy-variety-of-malware-cve-2018-20062
+TrendLabs Security Intelligence Blog | The Administrator of Things (AoT) – A Side Effect of
+Smartification - TrendLabs Security Intelligence Blog. (2014, August). Retrieved from
+https://blog.trendmicro.com/trendlabs-security-intelligence/the-administrator-of-thingsaot-a-side-effect-of-smartification/
+What is a smart home hub (And do you need one)? (2014, September 17). PCMAG.
+https://www.pcmag.com/news/what-is-a-smart-home-hub-and-do-you-need-one
+Z-wave smart home products are the #1 choice for smart homes. (n.d.). Z-Wave. https://www.zwave.com/learn
+
+Jay Yaneza, jay_yaneza@trendmicro.com
+© 2020 The SANS Institute
+
+Author retains full rights.
+
+Last Updated: October 18th, 2020
+
+Upcoming SANS Training
+Click here to view a list of all SANS Courses
+SANS Sydney 2020
+
+Sydney, AU
+
+Nov 02, 2020 - Nov 14, 2020
+
+Live Event
+
+SANS Secure Thailand
+
+Bangkok, TH
+
+Nov 09, 2020 - Nov 14, 2020
+
+Live Event
+
+APAC ICS Summit & Training 2020
+
+Singapore, SG
+
+Nov 13, 2020 - Nov 28, 2020
+
+Live Event
+
+SANS Community CTF
+
+,
+
+Nov 19, 2020 - Nov 20, 2020
+
+Self Paced
+
+SANS Local: Oslo November 2020
+
+Oslo, NO
+
+Nov 23, 2020 - Nov 28, 2020
+
+Live Event
+
+SANS Wellington 2020
+
+Wellington, NZ
+
+Nov 30, 2020 - Dec 12, 2020
+
+Live Event
+
+SANS OnDemand
+
+OnlineUS
+
+Anytime
+
+Self Paced
+
+SANS SelfStudy
+
+Books & MP3s OnlyUS
+
+Anytime
+
+Self Paced
+
+
