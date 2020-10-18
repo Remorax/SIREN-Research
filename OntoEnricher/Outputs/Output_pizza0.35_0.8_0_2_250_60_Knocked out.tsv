@@ -1,0 +1,85 @@
+Pizza	Cheesy Pizza	hyponym	hyponym
+Pizza	Interesting Pizza	hyponym	hyponym
+Pizza	Meaty Pizza	hyponym	hyponym
+Pizza	Named Pizza	hyponym	hyponym
+Pizza	Non Vegetarian Pizza	hyponym	hyponym
+Pizza	Real Italian Pizza	hyponym	hyponym
+Pizza	Spicy Pizza	hyponym	hyponym
+Pizza	Spicy Pizza Equivalent	hyponym	hyponym
+Pizza	Thin And Crispy Pizza	hyponym	hyponym
+Pizza	Unclosed Pizza	hyponym	hyponym
+Pizza	Vegetarian Pizza	hyponym	hyponym
+Named Pizza	American	none	hyponym
+Named Pizza	AmericanHot	none	hyponym
+Named Pizza	Cajun	none	hyponym
+Named Pizza	Capricciosa	none	hyponym
+Named Pizza	Caprina	none	hyponym
+Named Pizza	Fiorentina	none	hyponym
+Named Pizza	Four Seasons	none	hyponym
+Named Pizza	Frutti DiMare	hyponym	hyponym
+Named Pizza	Giardiniera	none	hyponym
+Named Pizza	LaReine	none	hyponym
+Named Pizza	Margherita	hyponym	hyponym
+Named Pizza	Mushroom	none	hyponym
+Named Pizza	Napoletana	hypernym	hyponym
+Named Pizza	Parmense	none	hyponym
+Named Pizza	Pollo Ad Astra	none	hyponym
+Named Pizza	Prince Carlo	none	hyponym
+Named Pizza	Quattro Formaggi	hyponym	hyponym
+Named Pizza	Rosa	none	hyponym
+Named Pizza	Siciliana	none	hyponym
+Named Pizza	Sloppy Giuseppe	hyponym	hyponym
+Named Pizza	Soho	none	hyponym
+Named Pizza	Veneziana	none	hyponym
+Pizza Base	Deep Pan Base	none	hyponym
+Pizza Base	Thin And Crispy Base	none	hyponym
+Pizza Topping	Cheese Topping	hyponym	hyponym
+Pizza Topping	Fruit Topping	none	hyponym
+Pizza Topping	Herb Spice Topping	none	hyponym
+Pizza Topping	Meat Topping	none	hyponym
+Pizza Topping	Nut Topping	hyponym	hyponym
+Pizza Topping	Sauce Topping	none	hyponym
+Pizza Topping	Seafood Topping	hyponym	hyponym
+Pizza Topping	Spicy Topping	none	hyponym
+Pizza Topping	Vegetable Topping	none	hyponym
+Pizza Topping	Vegetarian Topping	hyponym	hyponym
+Cheese Topping	Cheesy Vegetable Topping	hyponym	hyponym
+Cheese Topping	Four Cheeses Topping	hyponym	hyponym
+Cheese Topping	Goats Cheese Topping	hyponym	hyponym
+Cheese Topping	Gorgonzola Topping	hyponym	hyponym
+Cheese Topping	Mozzarella Topping	hyponym	hyponym
+Fruit Topping	Sultana Topping	hyponym	hyponym
+Herb Spice Topping	Cajun Spice Topping	none	hyponym
+Herb Spice Topping	Rosemary Topping	none	hyponym
+Meat Topping	Chicken Topping	none	hyponym
+Meat Topping	Ham Topping	none	hyponym
+Meat Topping	Hot Spiced Beef Topping	hyponym	hyponym
+Meat Topping	Peperoni Sausage Topping	hyponym	hyponym
+Ham Topping	Parma Ham Topping	none	hyponym
+Nut Topping	Pine Kernel Topping	none	hyponym
+Sauce Topping	Tobasco Pepper Sauce Topping	hyponym	hyponym
+Seafood Topping	Anchovies Topping	none	hyponym
+Seafood Topping	Mixed Seafood Topping	hyponym	hyponym
+Seafood Topping	Prawns Topping	hyponym	hyponym
+Vegetable Topping	Artichoke Topping	none	hyponym
+Vegetable Topping	Asparagus Topping	none	hyponym
+Vegetable Topping	Caper Topping	none	hyponym
+Vegetable Topping	Cheesy Vegetable Topping	none	hyponym
+Vegetable Topping	Garlic Topping	none	hyponym
+Vegetable Topping	Leek Topping	none	hyponym
+Vegetable Topping	Mushroom Topping	none	hyponym
+Vegetable Topping	Olive Topping	none	hyponym
+Vegetable Topping	Onion Topping	none	hyponym
+Vegetable Topping	Pepper Topping	none	hyponym
+Vegetable Topping	Petit Pois Topping	hyponym	hyponym
+Vegetable Topping	Rocket Topping	none	hyponym
+Vegetable Topping	Spinach Topping	none	hyponym
+Vegetable Topping	Tomato Topping	none	hyponym
+Onion Topping	Red Onion Topping	hyponym	hyponym
+Green Pepper Topping	Hot Green Pepper Topping	none	hyponym
+Pepper Topping	Green Pepper Topping	none	hyponym
+Pepper Topping	Jalapeno Pepper Topping	hyponym	hyponym
+Pepper Topping	Peperonata Topping	hyponym	hyponym
+Pepper Topping	Sweet Pepper Topping	hyponym	hyponym
+Tomato Topping	Sliced Tomato Topping	hyponym	hyponym
+Tomato Topping	Sundried Tomato Topping	hyponym	hyponym
