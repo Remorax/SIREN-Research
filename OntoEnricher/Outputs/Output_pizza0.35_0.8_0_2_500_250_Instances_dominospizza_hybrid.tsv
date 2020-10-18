@@ -1,0 +1,104 @@
+kid	heart	none	none
+cheesy slice	best pizza	hyponym	none
+last slice	vegetarians	none	none
+pizza slice	vegetarians	hyponym	none
+pizza slice	last slice	hyponym	none
+chicken tikka-	crisp capsicum	hyponym	none
+chicken tikka-	grilled mushroom	hyponym	none
+chicken tikka-	onion	hyponym	none
+grilled mushroom	extra cheese	hyponym	none
+black olives	pizza	hyponym	none
+non-veg toppings	grilled mushroom	hyponym	none
+non-veg toppings	crisp capsicum	hyponym	none
+toppings - from paneer	pizza	hypernym	none
+non-veg toppings	extra cheese	hyponym	none
+chicken tikka-	peri-peri chicken	hyponym	none
+toppings - from paneer	onion	none	none
+non-veg toppings	peri-peri chicken	hyponym	none
+toppings - from paneer	jalapeno	none	none
+chicken tikka-	jalapeno	hyponym	none
+chicken tikka-	toppings - from paneer	hyponym	none
+toppings - from paneer	crisp capsicum	hyponym	none
+non-veg toppings	black olives	hyponym	none
+crisp capsicum	pizza	hyponym	none
+non-veg toppings	onion	none	none
+chicken tikka-	non-veg toppings	hyponym	none
+non-veg toppings	pizza	hyponym	none
+grilled mushroom	crisp capsicum	hyponym	none
+grilled mushroom	onion	none	none
+non-veg toppings	fresh tomato	hyponym	none
+crisp capsicum	peri-peri chicken	hyponym	none
+extra cheese	black olives	hyponym	none
+crisp capsicum	fresh tomato	hyponym	none
+grilled mushroom	peri-peri chicken	hyponym	none
+chicken sausage	pizza	hyponym	none
+crisp capsicum	black olives	none	none
+extra cheese	peri-peri chicken	hyponym	none
+grilled mushroom	black olives	none	none
+chicken sausage	extra cheese	hyponym	none
+extra cheese	crisp capsicum	hyponym	none
+chicken sausage	toppings - from paneer	hyponym	none
+toppings - from paneer	peri-peri chicken	hyponym	none
+extra cheese	onion	hyponym	none
+chicken tikka-	pizza	hypernym	none
+chicken sausage	fresh tomato	hyponym	none
+onion	peri-peri chicken	hyponym	none
+toppings - from paneer	black olives	none	none
+jalapeno	fresh tomato	hyponym	none
+onion	fresh tomato	none	none
+extra cheese	pizza	hypernym	none
+pizza	peri-peri chicken	hyponym	none
+onion	black olives	none	none
+chicken sausage	grilled mushroom	hyponym	none
+chicken tikka-	chicken sausage	hyponym	none
+grilled mushroom	jalapeno	none	none
+fresh tomato	black olives	none	none
+toppings - from paneer	fresh tomato	hyponym	none
+non-veg toppings	jalapeno	none	none
+crisp capsicum	onion	none	none
+toppings - from paneer	extra cheese	hyponym	none
+chicken tikka-	extra cheese	hyponym	none
+jalapeno	extra cheese	hyponym	none
+grilled mushroom	pizza	hypernym	none
+chicken sausage	peri-peri chicken	hyponym	none
+chicken sausage	black olives	none	none
+fresh tomato	peri-peri chicken	hyponym	none
+grilled mushroom	fresh tomato	hyponym	none
+chicken sausage	onion	none	none
+toppings - from paneer	grilled mushroom	hyponym	none
+onion	pizza	none	none
+jalapeno	black olives	none	none
+fresh tomato	pizza	hyponym	none
+jalapeno	peri-peri chicken	hyponym	none
+chicken sausage	jalapeno	hyponym	none
+jalapeno	crisp capsicum	hyponym	none
+chicken sausage	crisp capsicum	hyponym	none
+chicken sausage	non-veg toppings	hyponym	none
+chicken tikka-	fresh tomato	hyponym	none
+jalapeno	onion	none	none
+black olives	peri-peri chicken	hyponym	none
+non-veg toppings	toppings - from paneer	hyponym	none
+extra cheese	fresh tomato	hyponym	none
+chicken tikka-	black olives	hyponym	none
+jalapeno	pizza	hyponym	none
+New hand-tossed crust	wheat thin crust	hyponym	none
+fresh pan pizza	wheat thin crust	hyponym	none
+fresh pan pizza	New hand-tossed crust	hyponym	none
+fresh pan pizza	cheese	hypernym	none
+classic hand-tossed crust	wheat thin crust	hyponym	none
+New hand-tossed crust	cheese	hypernym	none
+New hand-tossed crust	classic hand-tossed crust	hyponym	none
+fresh pan pizza	classic hand-tossed crust	hyponym	none
+classic hand-tossed crust	cheese	none	none
+cheese	wheat thin crust	hyponym	none
+Domino	pizza	hyponym	none
+toppings	Pizza	hypernym	none
+custom pizzas	Pizza	hypernym	none
+crust styles	toppings	none	none
+custom pizzas	toppings	hyponym	none
+crust styles	Pizza	hypernym	none
+custom pizzas	crust styles	hyponym	none
+bread bowls	pasta	hyponym	none
+desserts	beverages	hyponym	none
+desserts	menu	hyponym	none
+beverages	menu	none	none
