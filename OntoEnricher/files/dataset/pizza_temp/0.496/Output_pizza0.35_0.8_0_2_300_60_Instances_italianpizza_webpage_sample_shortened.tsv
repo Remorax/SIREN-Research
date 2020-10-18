@@ -1,0 +1,49 @@
+anchovies	mushrooms	hyponym	none
+tomatoes	cheese	hyponym	none
+tomatoes	olives	hyponym	none
+anchovies	tomatoes	hyponym	none
+cheese	olives	hyponym	none
+anchovies	Pizza	hypernym	none
+Pizza	olives	hyponym	none
+pineapple	cheese	hyponym	none
+pineapple	olives	hyponym	none
+tomatoes	Pizza	hyponym	none
+cheese	mushrooms	hyponym	none
+olives	meat	hyponym	none
+tomatoes	mushrooms	hyponym	none
+pineapple	anchovies	hyponym	none
+anchovies	cheese	hyponym	none
+pineapple	Pizza	hypernym	none
+anchovies	olives	hyponym	none
+mushrooms	meat	hypernym	none
+pineapple	mushrooms	hyponym	none
+Pizza	mushrooms	hyponym	none
+mushrooms	olives	hyponym	none
+Pizza	meat	hypernym	none
+Pizza	cheese	hyponym	none
+pizza	pizzaiolo	hyponym	none
+word "pizza	twelve pizzas	hyponym	none
+Foods	pizza	hyponym	none
+bread	cheese	hyponym	none
+cheese	flatbread	hyponym	none
+garlic	cheese	hyponym	none
+garlic	flatbread	hyponym	none
+tomatoes	pizza	hyponym	none
+tomatoes	pizza bakeries	hyponym	none
+pizza	pizza bakeries	hyponym	none
+archetypal pizza	pizza Margherita	hyponym	none
+pizza	pizza Margherita	hyponym	none
+pizza maker	pizza	hypernym	none
+archetypal pizza	pizza	hypernym	none
+pizza maker	pizza Margherita	hyponym	none
+three different pizzas	mozzarella	hyponym	none
+three different pizzas	tomato	hyponym	none
+tomato	pizza	hyponym	none
+three different pizzas	pizza	hypernym	none
+tomato	mozzarella	hyponym	none
+pizza	mozzarella	hyponym	none
+dough	crust	hyponym	none
+uncooked pizza	pizzerias	hypernym	none
+Greek pizza	Chicago-style pizza	hyponym	none
+Greek pizza	pizza oven	hyponym	none
+Chicago-style pizza	pizza oven	hypernym	none

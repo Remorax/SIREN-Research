@@ -1,0 +1,69 @@
+a	b	pred	ground truth
+Pizza	Neapolitan	hyponym	hyponym
+anchovies	mushrooms	hyponym	none
+tomatoes	cheese	hyponym	none
+tomatoes	olives	hyponym	none
+anchovies	tomatoes	hyponym	none
+cheese	olives	hyponym	none
+anchovies	Pizza	hypernym	hypernym
+Pizza	olives	hyponym	hyponym
+tomatoes	Pizza	hyponym	hypernym
+cheese	mushrooms	hyponym	none
+tomatoes	mushrooms	hyponym	none
+Pizza	savory dish	hyponym	hypernym	
+pineapple	anchovies	hyponym	none
+anchovies	cheese	hyponym	none
+pineapple	Pizza	hypernym	hypernym
+anchovies	olives	hyponym	none
+mushrooms	meat	hypernym	none
+anchovies	onions	hyponym	none
+Pizza	mushrooms	hyponym	hyponym
+mushrooms	olives	hyponym	none
+Pizza	meat	hyponym	hyponym
+cheese	onions	hyponym	none
+Pizza	Italian	hyponym	hyponym
+Pizza	onions	hyponym	hyponym
+cheese	meat	hyponym	none
+olives	onions	hyponym	none
+Pizza	cheese	hyponym	hyponym
+pizza	pizzaiolo	hyponym	none
+pizza	restaurant	hypernym	hypernym
+fork	pizza	hypernym	none
+Italy	pizza	hypernym	hypernym
+word "pizza	twelve pizzas	hyponym	none
+Foods	pizza	hyponym	hyponym
+bread	cheese	hyponym	hyponym
+cheese	flatbread	hyponym	hyponym
+garlic	cheese	hyponym	none
+salt	cheese	hyponym	none
+tomatoes	pizza	hyponym	hypernym	
+pizza	pizza bakeries	hyponym	hypernym
+Neapolitan pizzaiolo	pizza	hypernym	none
+archetypal pizza	pizza Margherita	hyponym	hyponym
+pizza	pizza Margherita	hyponym	hyponym
+pizza maker	pizza	hypernym	hypernym
+pizza maker	archetypal pizza	hyponym	none
+Neapolitan pizzaiolo	pizza Margherita	hyponym	hyponym
+archetypal pizza	pizza	hypernym	hypernym
+pizza maker	pizza Margherita	hyponym	hyponym
+Neapolitan pizzaiolo	pizza maker	hypernym	hypernym
+tomato	pizza	hyponym	hypernym
+basil	tomato	hyponym	none
+three different pizzas	pizza	hypernym	hypernym
+tomato	mozzarella	hyponym	none
+basil	mozzarella	hyponym	none
+pizza	mozzarella	hyponym	hyponym
+pieces	portion-size slices	hyponym	hyponym
+dough	crust	hyponym	hyponym
+self-rising crusts	frozen pizzas	hypernym	none
+uncooked pizza	pizzerias	hypernym	none
+pizza	ovens	hyponym	none
+oven	fresh dough	hyponym	none
+oven	pizza	hypernym	none
+pizza	restaurants	hyponym	hypernym
+pizza	wood	hyponym	hyponym
+pizza	cornmeal	hyponym	hyponym
+Greek pizza	Chicago-style pizza	hyponym	none
+Greek pizza	pizza oven	hyponym	none
+Chicago-style pizza	pizza oven	hypernym	none
+hi tech pizza preparation tables	Pizzerias	hypernym	hypernym
