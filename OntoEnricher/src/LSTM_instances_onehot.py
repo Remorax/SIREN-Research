@@ -263,7 +263,12 @@ def test(nodes_test, paths_test, counts_test, targets_test, message):
     accuracy = accuracy_score(trueLabels, predictedLabels)
     recall = calculate_recall(trueLabels, predictedLabels)
     precision = calculate_precision(trueLabels, predictedLabels)
-    final_metrics = [accuracy, precision, recall, 2 * (precision * recall/(precision + recall))]
+    try:
+        final_metrics = [accuracy, precision, recall, 2 * (precision * recall/(precision + recall))]
+    except ZeroDivisionError:
+        final_metrics = [accuracy, precision, recall, 0]
+    except:
+        raise
     write("Final Results ({}): [{}]".format(message, ", ".join([str(el) for el in final_metrics])))
 
 model.eval()

@@ -23,10 +23,10 @@ f = open(dataset_file, "rb")
 (nodes_train, paths_train, counts_train, targets_train, 
  nodes_test, paths_test, counts_test, targets_test,
  nodes_knocked, paths_knocked, counts_knocked, targets_knocked,
- nodes_instances_original, nodes_instances_webpage, nodes_instances_hybrid,
- paths_instances_original, paths_instances_webpage, paths_instances_hybrid,
- counts_instances_original, counts_instances_webpage, counts_instances_hybrid,
- targets_instances_original, targets_instances_webpage, targets_instances_hybrid,
+ nodes_instances1, paths_instances_old1, paths_instances_new1, paths_instances1, 
+ counts_instances_old1, counts_instances_new1, counts_instances1, targets_instances1,
+ nodes_instances2, paths_instances_old2, paths_instances_new2, paths_instances2, 
+ counts_instances_old2, counts_instances_new2, counts_instances2, targets_instances2,
  emb_indexer, emb_indexer_inv, emb_vals, pos_indexer, dep_indexer, dir_indexer, rel_indexer) = pickle.load(f)
 
 rel_indexer_inv = {rel_indexer[key]: key for key in rel_indexer}
@@ -119,10 +119,8 @@ class RelationPredictor(nn.Module):
         paths_output_reshaped = paths_output.reshape(-1, max_paths, HIDDEN_DIM*NUM_LAYERS*self.n_directions)
         # paths_output has dim (batch_size, max_paths, HIDDEN_DIM, NUM_LAYERS*self.n_directions)
 
-        batch_size = counts.shape[0]
-        counts_avg = counts/torch.sum(counts, dim=-1).view(batch_size, 1)
-
-        paths_weighted = torch.bmm(paths_output_reshaped.permute(0,2,1), counts_avg.unsqueeze(-1)).squeeze(-1)
+        counts = F.one_hot(counts.argmax(1), num_classes=counts.shape[-1]).double()
+        paths_weighted = torch.bmm(paths_output_reshaped.permute(0,2,1), counts.unsqueeze(-1)).squeeze(-1)
         representation = torch.cat((nodes_embed, paths_weighted), dim=-1)
         if LAYER1_DIM == 0:
             probabilities = self.log_softmax(self.output_dropout(self.W(representation)))
@@ -156,7 +154,7 @@ def pad_edgecounts(edgecounts, max_paths):
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-num_epochs = 50
+num_epochs = 20
 batch_size = 32
 bidirectional = True
 
@@ -278,9 +276,12 @@ with torch.no_grad():
     test(nodes_test, paths_test, counts_test, targets_test, "Test")
     test(nodes_knocked, paths_knocked, counts_knocked, targets_knocked, "Knocked out")
 
-    test(nodes_instances_original, paths_instances_original, counts_instances_original, targets_instances_original, "Instances_original")
-    test(nodes_instances_webpage, paths_instances_webpage, counts_instances_webpage, targets_instances_webpage, "Instances_webpage")
-    test(nodes_instances_hybrid, paths_instances_hybrid, counts_instances_hybrid, targets_instances_hybrid, "Instances_hybrid")
+    test(nodes_instances1, paths_instances_old1, counts_instances_old1, targets_instances1, "Instances_italianpizza_original")
+    test(nodes_instances1, paths_instances_new1, counts_instances_new1, targets_instances1, "Instances_italianpizza_webpage")
+    test(nodes_instances1, paths_instances1, counts_instances1, targets_instances1, "Instances_italianpizza_hybrid")
 
+    test(nodes_instances2, paths_instances_old2, counts_instances_old2, targets_instances2, "Instances_dominospizza_original")
+    test(nodes_instances2, paths_instances_new2, counts_instances_new2, targets_instances2, "Instances_dominospizza_webpage")
+    test(nodes_instances2, paths_instances2, counts_instances2, targets_instances2, "Instances_dominospizza_hybrid")
 
 op_file.close()
