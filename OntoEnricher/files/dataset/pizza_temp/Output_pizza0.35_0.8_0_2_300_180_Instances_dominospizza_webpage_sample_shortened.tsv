@@ -1,0 +1,67 @@
+cheesy slice	best pizza	hypernym	none
+pizza slice	last slice	hyponym	none
+chicken tikka-	grilled mushroom	hyponym	none
+chicken tikka-	onion	hyponym	none
+grilled mushroom	extra cheese	hypernym	none
+non-veg toppings	grilled mushroom	hyponym	none
+non-veg toppings	extra cheese	hyponym	none
+chicken tikka-	peri-peri chicken	hyponym	none
+non-veg toppings	peri-peri chicken	hyponym	none
+chicken tikka-	jalapeno	hyponym	none
+non-veg toppings	onion	hypernym	none
+chicken tikka-	non-veg toppings	hyponym	none
+non-veg toppings	pizza	hypernym	none
+grilled mushroom	onion	hypernym	none
+non-veg toppings	fresh tomato	hyponym	none
+grilled mushroom	peri-peri chicken	hyponym	none
+chicken sausage	pizza	hypernym	none
+extra cheese	peri-peri chicken	hyponym	none
+chicken sausage	extra cheese	hyponym	none
+extra cheese	onion	hyponym	none
+chicken tikka-	pizza	hypernym	none
+chicken sausage	fresh tomato	hyponym	none
+onion	peri-peri chicken	hyponym	none
+jalapeno	fresh tomato	hyponym	none
+onion	fresh tomato	hyponym	none
+extra cheese	pizza	hypernym	none
+pizza	peri-peri chicken	hyponym	none
+chicken sausage	grilled mushroom	hyponym	none
+chicken tikka-	chicken sausage	hyponym	none
+grilled mushroom	jalapeno	hypernym	none
+non-veg toppings	jalapeno	hypernym	none
+chicken tikka-	extra cheese	hyponym	none
+jalapeno	extra cheese	hyponym	none
+grilled mushroom	pizza	hypernym	none
+chicken sausage	peri-peri chicken	hyponym	none
+fresh tomato	peri-peri chicken	hyponym	none
+grilled mushroom	fresh tomato	hyponym	none
+chicken sausage	onion	hyponym	none
+onion	pizza	hyponym	none
+fresh tomato	pizza	hyponym	none
+jalapeno	peri-peri chicken	hyponym	none
+chicken sausage	jalapeno	hyponym	none
+chicken sausage	non-veg toppings	hyponym	none
+chicken tikka-	fresh tomato	hyponym	none
+jalapeno	onion	hyponym	none
+extra cheese	fresh tomato	hyponym	none
+jalapeno	pizza	hyponym	none
+New hand-tossed crust	wheat thin crust	hyponym	none
+fresh pan pizza	wheat thin crust	hyponym	none
+fresh pan pizza	New hand-tossed crust	hyponym	none
+fresh pan pizza	cheese	hypernym	none
+classic hand-tossed crust	wheat thin crust	hyponym	none
+New hand-tossed crust	cheese	hypernym	none
+New hand-tossed crust	classic hand-tossed crust	hyponym	none
+fresh pan pizza	classic hand-tossed crust	hyponym	none
+classic hand-tossed crust	cheese	hypernym	none
+cheese	wheat thin crust	hyponym	none
+Domino	pizza	hyponym	none
+toppings	Pizza	hypernym	none
+custom pizzas	Pizza	hypernym	none
+crust styles	toppings	hyponym	none
+custom pizzas	toppings	hyponym	none
+crust styles	Pizza	hypernym	none
+custom pizzas	crust styles	hyponym	none
+desserts	beverages	hyponym	none
+desserts	menu	hyponym	none
+beverages	menu	hyponym	none
