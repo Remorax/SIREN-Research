@@ -1,0 +1,160 @@
+Pizza	Neapolitan	none
+anchovies	mushrooms	none
+tomatoes	cheese	none
+pineapple	Neapolitan	none
+anchovies	meat	none
+Neapolitan	Italian	none
+tomatoes	olives	none
+anchovies	tomatoes	none
+cheese	olives	none
+anchovies	Pizza	none
+anchovies	Italian	none
+Pizza	olives	none
+pineapple	onions	none
+pineapple	cheese	none
+Italian	onions	none
+Neapolitan	meat	none
+pineapple	olives	none
+cheese	Italian	none
+Neapolitan	mushrooms	none
+mushrooms	Italian	none
+tomatoes	Pizza	none
+pineapple	tomatoes	none
+anchovies	savory dish	none
+olives	savory dish	none
+tomatoes	meat	none
+cheese	mushrooms	none
+olives	Italian	none
+olives	meat	none
+tomatoes	mushrooms	none
+tomatoes	savory dish	none
+Neapolitan	onions	none
+tomatoes	Italian	none
+Neapolitan	olives	none
+Pizza	savory dish	none
+mushrooms	savory dish	none
+pineapple	anchovies	none
+savory dish	meat	none
+pineapple	savory dish	none
+Neapolitan	cheese	none
+Italian	savory dish	none
+anchovies	cheese	none
+pineapple	Pizza	none
+pineapple	Italian	none
+anchovies	olives	none
+cheese	savory dish	none
+mushrooms	meat	none
+anchovies	onions	none
+savory dish	onions	none
+pineapple	mushrooms	none
+anchovies	Neapolitan	none
+Pizza	mushrooms	none
+tomatoes	onions	none
+Neapolitan	savory dish	none
+Italian	meat	none
+mushrooms	olives	none
+onions	meat	none
+pineapple	meat	none
+tomatoes	Neapolitan	none
+Pizza	meat	none
+cheese	onions	none
+Pizza	Italian	none
+Pizza	onions	none
+cheese	meat	none
+olives	onions	none
+mushrooms	onions	none
+Pizza	cheese	none
+pizza	pizzaiolo	none
+knife	restaurant	none
+Italy	fork	none
+Italy	restaurant	none
+pizza	knife	none
+pizza	restaurant	none
+fork	restaurant	none
+Italy	knife	none
+fork	pizza	none
+Italy	pizza	none
+fork	knife	none
+word "pizza	twelve pizzas	none
+oven	toppings	none
+Italy	bite	none
+Foods	pizza	none
+cheese	cheese.[21][22	none
+bread	cheese.[21][22	none
+bread	cheese	none
+pita bread	cooked vegetables	none
+tables	bread	none
+Naples	Modern pizza	none
+Italy	Modern pizza	none
+Italy	Naples	none
+cheese	ingredients	none
+ingredients	lard	none
+cheese	lard	none
+ingredients	flatbread	none
+cheese	flatbread	none
+flatbread	lard	none
+garlic	cheese	none
+salt	cheese	none
+garlic	flatbread	none
+salt	ingredients	none
+garlic	lard	none
+salt	lard	none
+garlic	ingredients	none
+salt	flatbread	none
+garlic	salt	none
+tomatoes	pizza	none
+tomatoes	pizza bakeries	none
+pizza	pizza bakeries	none
+Neapolitan pizzaiolo	archetypal pizza	none
+Neapolitan pizzaiolo	pizza	none
+archetypal pizza	pizza Margherita	none
+pizza	pizza Margherita	none
+pizza maker	pizza	none
+pizza maker	archetypal pizza	none
+Neapolitan pizzaiolo	pizza Margherita	none
+archetypal pizza	pizza	none
+pizza maker	pizza Margherita	none
+Neapolitan pizzaiolo	pizza maker	none
+three different pizzas	mozzarella	none
+three different pizzas	tomato	none
+three different pizzas	basil	none
+basil	pizza	none
+tomato	pizza	none
+basil	tomato	none
+three different pizzas	pizza	none
+tomato	mozzarella	none
+basil	mozzarella	none
+pizza	mozzarella	none
+Pizza	portion-size slices	none
+Pizza	pieces	none
+pieces	portion-size slices	none
+dough	crust	none
+dough	sauce	none
+sauce	crust	none
+self-rising crusts	frozen pizzas	none
+uncooked pizza	pizzerias	none
+pizza	ovens	none
+fresh dough	sauce	none
+oven	fresh dough	none
+oven	sauce	none
+restaurants	wood	none
+oven	pizza	none
+oven	wood	none
+oven	restaurants	none
+pizza	restaurants	none
+pizza	wood	none
+pizza	aluminum	none
+oven	pizza	none
+oven	aluminum	none
+pizza	cornmeal	none
+wood-fired pizza oven	Dome-shaped pizza ovens	none
+Greek pizza	pan	none
+Greek pizza	Chicago-style pizza	none
+Chicago-style pizza	pan	none
+pan	pizza oven	none
+Greek pizza	pizza oven	none
+Chicago-style pizza	pizza oven	none
+table	ingredients	none
+table	dough	none
+ingredients	dough	none
+hi tech pizza preparation tables	Pizzerias	none

@@ -1,0 +1,113 @@
+kid	heart	none
+cheesy slice	best pizza	none
+last slice	vegetarians	none
+pizza slice	vegetarians	none
+pizza slice	last slice	none
+chicken tikka-	crisp capsicum	none
+chicken tikka-	grilled mushroom	none
+chicken tikka-	onion	none
+grilled mushroom	extra cheese	none
+black olives	pizza	none
+non-veg toppings	grilled mushroom	none
+non-veg toppings	crisp capsicum	none
+toppings - from paneer	pizza	none
+non-veg toppings	extra cheese	none
+chicken tikka-	peri-peri chicken	none
+toppings - from paneer	onion	none
+non-veg toppings	peri-peri chicken	none
+toppings - from paneer	jalapeno	none
+chicken tikka-	jalapeno	none
+chicken tikka-	toppings - from paneer	none
+toppings - from paneer	crisp capsicum	none
+non-veg toppings	black olives	none
+crisp capsicum	pizza	none
+non-veg toppings	onion	none
+chicken tikka-	non-veg toppings	none
+non-veg toppings	pizza	none
+grilled mushroom	crisp capsicum	none
+grilled mushroom	onion	none
+non-veg toppings	fresh tomato	none
+crisp capsicum	peri-peri chicken	none
+extra cheese	black olives	none
+crisp capsicum	fresh tomato	none
+grilled mushroom	peri-peri chicken	none
+chicken sausage	pizza	none
+crisp capsicum	black olives	none
+extra cheese	peri-peri chicken	none
+grilled mushroom	black olives	none
+chicken sausage	extra cheese	none
+extra cheese	crisp capsicum	none
+chicken sausage	toppings - from paneer	none
+toppings - from paneer	peri-peri chicken	none
+extra cheese	onion	none
+chicken tikka-	pizza	none
+chicken sausage	fresh tomato	none
+onion	peri-peri chicken	none
+toppings - from paneer	black olives	none
+jalapeno	fresh tomato	none
+onion	fresh tomato	none
+extra cheese	pizza	none
+pizza	peri-peri chicken	none
+onion	black olives	none
+chicken sausage	grilled mushroom	none
+chicken tikka-	chicken sausage	none
+grilled mushroom	jalapeno	none
+fresh tomato	black olives	none
+toppings - from paneer	fresh tomato	none
+non-veg toppings	jalapeno	none
+crisp capsicum	onion	none
+toppings - from paneer	extra cheese	none
+chicken tikka-	extra cheese	none
+jalapeno	extra cheese	none
+grilled mushroom	pizza	none
+chicken sausage	peri-peri chicken	none
+chicken sausage	black olives	none
+fresh tomato	peri-peri chicken	none
+grilled mushroom	fresh tomato	none
+chicken sausage	onion	none
+toppings - from paneer	grilled mushroom	none
+onion	pizza	none
+jalapeno	black olives	none
+fresh tomato	pizza	none
+jalapeno	peri-peri chicken	none
+chicken sausage	jalapeno	none
+jalapeno	crisp capsicum	none
+chicken sausage	crisp capsicum	none
+chicken sausage	non-veg toppings	none
+chicken tikka-	fresh tomato	none
+jalapeno	onion	none
+black olives	peri-peri chicken	none
+non-veg toppings	toppings - from paneer	none
+extra cheese	fresh tomato	none
+chicken tikka-	black olives	none
+jalapeno	pizza	none
+New hand-tossed crust	wheat thin crust	none
+fresh pan pizza	wheat thin crust	none
+fresh pan pizza	New hand-tossed crust	none
+fresh pan pizza	cheese	none
+classic hand-tossed crust	wheat thin crust	none
+New hand-tossed crust	cheese	none
+New hand-tossed crust	classic hand-tossed crust	none
+fresh pan pizza	classic hand-tossed crust	none
+classic hand-tossed crust	cheese	none
+cheese	wheat thin crust	none
+Domino	pizza	none
+toppings	Pizza	none
+custom pizzas	Pizza	none
+crust styles	toppings	none
+custom pizzas	toppings	none
+crust styles	Pizza	none
+custom pizzas	crust styles	none
+bread bowls	pasta	none
+desserts	beverages	none
+desserts	menu	none
+beverages	menu	none
+toppings	Pizza	none
+custom pizzas	Pizza	none
+crust styles	toppings	none
+custom pizzas	toppings	none
+crust styles	Pizza	none
+custom pizzas	crust styles	none
+desserts	beverages	none
+desserts	menu	none
+beverages	menu	none
