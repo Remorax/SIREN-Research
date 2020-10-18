@@ -1,0 +1,57 @@
+Pizza	Neapolitan	hyponym	none
+anchovies	mushrooms	hyponym	none
+tomatoes	cheese	hyponym	none
+anchovies	tomatoes	hyponym	none
+cheese	olives	hyponym	none
+anchovies	Pizza	hypernym	none
+Pizza	olives	hyponym	none
+tomatoes	Pizza	hyponym	none
+Pizza	savory dish	hyponym	none
+anchovies	cheese	hyponym	none
+pineapple	Pizza	hypernym	none
+anchovies	olives	hyponym	none
+anchovies	onions	hyponym	none
+Pizza	mushrooms	hyponym	none
+mushrooms	olives	hyponym	none
+Pizza	meat	hyponym	none
+Pizza	Italian	hyponym	none
+Pizza	onions	hyponym	none
+olives	onions	hyponym	none
+Pizza	cheese	hyponym	none
+pizza	restaurant	hypernym	none
+fork	pizza	hypernym	none
+Italy	pizza	hypernym	none
+word "pizza	twelve pizzas	hyponym	none
+Foods	pizza	hyponym	none
+bread	cheese	hyponym	none
+cheese	flatbread	hyponym	none
+garlic	cheese	hyponym	none
+salt	cheese	hyponym	none
+tomatoes	pizza	hyponym	none
+pizza	pizza bakeries	hyponym	none
+Neapolitan pizzaiolo	archetypal pizza	hyponym	none
+Neapolitan pizzaiolo	pizza	hypernym	none
+archetypal pizza	pizza Margherita	hyponym	none
+pizza	pizza Margherita	hyponym	none
+pizza maker	pizza	hypernym	none
+pizza maker	archetypal pizza	hyponym	none
+Neapolitan pizzaiolo	pizza Margherita	hyponym	none
+archetypal pizza	pizza	hypernym	none
+pizza maker	pizza Margherita	hyponym	none
+Neapolitan pizzaiolo	pizza maker	hypernym	none
+tomato	pizza	hyponym	none
+basil	tomato	hyponym	none
+three different pizzas	pizza	hypernym	none
+tomato	mozzarella	hyponym	none
+basil	mozzarella	hyponym	none
+pizza	mozzarella	hyponym	none
+dough	crust	hyponym	none
+self-rising crusts	frozen pizzas	hypernym	none
+uncooked pizza	pizzerias	hypernym	none
+oven	fresh dough	hyponym	none
+pizza	cornmeal	hyponym	none
+wood-fired pizza oven	Dome-shaped pizza ovens	hyponym	none
+Greek pizza	Chicago-style pizza	hyponym	none
+Greek pizza	pizza oven	hyponym	none
+Chicago-style pizza	pizza oven	hypernym	none
+hi tech pizza preparation tables	Pizzerias	hypernym	none

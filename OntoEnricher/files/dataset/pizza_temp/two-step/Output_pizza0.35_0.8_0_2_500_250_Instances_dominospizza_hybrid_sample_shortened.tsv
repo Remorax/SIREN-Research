@@ -1,0 +1,32 @@
+cheesy slice	best pizza	hyponym	none
+pizza slice	last slice	hyponym	none
+chicken tikka-	crisp capsicum	hyponym	none
+chicken tikka-	peri-peri chicken	hyponym	none
+chicken tikka-	toppings	hyponym	none
+non-veg toppings	pizza	hyponym	none
+crisp capsicum	fresh tomato	hyponym	none
+chicken sausage	pizza	hyponym	none
+extra cheese	pizza	hypernym	none
+pizza	peri-peri chicken	hyponym	none
+chicken tikka-	chicken sausage	hyponym	none
+toppings	extra cheese	hyponym	none
+jalapeno	extra cheese	hyponym	none
+grilled mushroom	pizza	hypernym	none
+chicken sausage	peri-peri chicken	hyponym	none
+fresh tomato	pizza	hyponym	none
+jalapeno	crisp capsicum	hyponym	none
+non-veg toppings	toppings	hyponym	none
+jalapeno	pizza	hyponym	none
+New hand-tossed crust	wheat thin crust	hyponym	none
+fresh pan pizza	wheat thin crust	hyponym	none
+fresh pan pizza	New hand-tossed crust	hyponym	none
+classic hand-tossed crust	wheat thin crust	hyponym	none
+New hand-tossed crust	classic hand-tossed crust	hyponym	none
+fresh pan pizza	classic hand-tossed crust	hyponym	none
+toppings	Pizza	hypernym	none
+custom pizzas	Pizza	hypernym	none
+custom pizzas	toppings	hyponym	none
+crust styles	Pizza	hypernym	none
+custom pizzas	crust styles	hyponym	none
+desserts	beverages	hyponym	none
+desserts	menu	hyponym	none

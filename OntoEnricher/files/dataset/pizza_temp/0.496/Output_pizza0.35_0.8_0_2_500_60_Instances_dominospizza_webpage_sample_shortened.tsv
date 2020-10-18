@@ -1,0 +1,11 @@
+cheesy slice	best pizza	hypernym	none
+chicken sausage	pizza	hyponym	none
+chicken sausage	extra cheese	hyponym	none
+extra cheese	pizza	hypernym	none
+fresh pan pizza	cheese	hypernym	none
+toppings	Pizza	hypernym	none
+custom pizzas	Pizza	hypernym	none
+crust styles	toppings	hyponym	none
+custom pizzas	toppings	hyponym	none
+crust styles	Pizza	hypernym	none
+custom pizzas	crust styles	hyponym	none
