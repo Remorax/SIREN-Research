@@ -1,0 +1,400 @@
+risks	risk	hypernym	none
+data	Protecting Data	hyponym	none
+value	data	hypernym	none
+concerns	security issues	hyponym	none
+security	integrity	hypernym	none
+security	data	hypernym	none
+Data	data	hyponym	none
+Authentication	secure manner	hyponym	none
+Security solutions	security	hypernym	none
+Physical Security	DCPhysical security	hyponym	none
+specialized security team	physical security	hypernym	none
+firewalls	network security	hyponym	none
+intrusion detection	intrusion prevention	hypernym	none
+Encryption	data	hypernym	none
+policy	risk	hypernym	none
+authentication	encryption keys	hyponym	none
+protected data	data	hypernym	none
+threats	attackers	hypernym	none
+Security Information	enterprise-wide security data	hyponym	none
+security teams	Security Information	hypernym	none
+security teams	disparate security data	hyponym	none
+critical risks	known threats	hypernym	none
+critical risks	unknown threats	hypernym	none
+sensitive data	data	hypernym	none
+unknown threats	known threats	hypernym	none
+vulnerability information	security intelligence	hypernym	none
+security intelligence	threat intelligence	hypernym	none
+threats	threat intelligence	hyponym	none
+privacy	security	hypernym	none
+reliability	security	hypernym	none
+authentication	authorization	hypernym	none
+authentication	identity	hypernym	none
+cyber threat information sharing	cyber threats	hypernym	none
+data SA	data	hypernym	none
+Hackers	Hackers code	hyponym	none
+Threat detection tools	potential threats	hypernym	none
+attackers	two vulnerabilities	hyponym	none
+authentication	identity	hypernym	none
+permissions	policy	hypernym	none
+phishing	cyberattacks	hypernym	none
+phishing	emails	hypernym	none
+risk	threats	hypernym	none
+zero-day phishing	malware	concept	none
+multiple security features	content security	hypernym	none
+personal firewall	port protection	hypernym	none
+security protections	content security	hyponym	none
+advanced threat prevention	intrusion prevention	hypernym	none
+intrusion prevention	firewall	hypernym	none
+security protections	advanced threat prevention	hyponym	none
+security protections	firewall	hypernym	none
+Security Gateway	firewall	hypernym	none
+Security Gateway	security protections	hypernym	none
+Security Gateway	intrusion prevention	hypernym	none
+security protections	intrusion prevention	hyponym	none
+Security Gateway	content security	hypernym	none
+vulnerability	attackers	hypernym	none
+Organization information	information security SA management system	hyponym	none
+information security	Information Security Policies	hyponym	none
+security groups	security port	hypernym	none
+security port Checks	security port	hypernym	none
+Database security	database confidentiality	hyponym	none
+database	data	hypernym	none
+information security technologies	database Database security	hyponym	none
+threats	security threats	hyponym	none
+data breach	confidentiality	hypernym	none
+data breach	database	hypernym	none
+data breach	data	hypernym	none
+data protection	cyberattacks	hyponym	none
+breaches	vulnerabilities	hypernym	none
+database security attacks	vulnerabilities	hypernym	none
+security threat	insider threat	hyponym	none
+phishing	credentials	hypernym	none
+credentials	credential database	hyponym	none
+software	vulnerabilities	hyponym	none
+Hackers	vulnerabilities	hypernym	none
+database	software	hypernym	none
+database	backup data	hyponym	none
+databases	database	hypernym	none
+security threat	threat	hypernym	none
+database	database security	hyponym	none
+credential data	database	hypernym	none
+credential data	data	hypernym	none
+database security	database	hypernym	none
+Database security policies	cybersecurity policies	hyponym	none
+security awareness training	Security controls	hypernym	none
+formal security policies	Security controls	hypernym	none
+databases	data activities	hyponym	none
+data exploration	databases	hypernym	none
+capabilities	security	hypernym	none
+native security capabilities	data protection capabilities	hypernym	none
+native security capabilities	IBM Cloud Security	hypernym	none
+data discovery	databases	hypernym	none
+data discovery	big data	hyponym	none
+databases	big data	hyponym	none
+security optimization	IBM Security Guardium	instance	none
+smarter data protection platform	security optimization	hypernym	none
+security optimization	encryption	hypernym	none
+data discovery	data	hypernym	none
+Data Security Services	data	hypernym	none
+encryption	data	hyponym	none
+Data Security Services	data discovery	hypernym	none
+security	Security concerns	hyponym	none
+databases	data	hyponym	none
+phishing scams	cyber security threats	hypernym	none
+common cyber security threats	Malware	hypernym	none
+Security	data	hypernym	none
+database	data	hypernym	none
+Database security	databases	hypernym	none
+Physical database security	databases	hypernym	none
+Physical database security servers	databases	hypernym	none
+Physical database security servers	Physical database security	hyponym	none
+Physical database security	database	hypernym	none
+intruders	Firewalls	hyponym	none
+Encryption	database	hypernym	none
+Encryption	data	hypernym	none
+data privacy	Database encryption	hyponym	none
+IoT security	Database encryption	hyponym	none
+permissions	passwords	hypernym	none
+database security	passwords	hypernym	none
+passwords	input credentials	hyponym	none
+encryption	database layer security	hyponym	none
+database security	protection	hypernym	none
+breaches	data breaches	hyponym	none
+sensitive, protected, or confidential data	data breach	hypernym	none
+PII	Data breaches	hyponym	none
+Data breaches	identifiable information	hyponym	none
+personal health information	PII	hypernym	none
+personal health information	identifiable information	hyponym	none
+PII	identifiable information	hyponym	none
+Data breaches	data	hypernym	none
+disclosed data breaches	data breaches	hypernym	none
+data breaches	sensitive information	hyponym	none
+technology	data	hypernym	none
+electronic data	data	hypernym	none
+electronic data	technology	hypernym	none
+Malware	software	hypernym	none
+software	Malware	hyponym	none
+warning	warning” message	hypernym	none
+malicious software	Malware	hypernym	none
+malicious software	software	hypernym	none
+security breaches	data breaches	hypernym	none
+data elements	data breaches	hyponym	none
+data elements	information	hypernym	none
+information	data breaches	hyponym	none
+breaches	sensitive information	hyponym	none
+database	data	hypernym	none
+that data	database	hypernym	none
+that data	data	hypernym	none
+content	data	hypernym	none
+input data	data	hypernym	none
+Authentication	authentication	hypernym	none
+Password Requirements	Passwords	hypernym	none
+credential	password	hypernym	none
+information	credential	hypernym	none
+information	password	hypernym	none
+passwords	biometrics	hyponym	none
+digital authentication	biometrics	hypernym	none
+digital authentication	authentication	hypernym	none
+biometrics	authentication	hypernym	none
+digital authentication knowledge	authentication	hypernym	none
+digital authentication	digital authentication knowledge	hyponym	none
+cryptographic protocol	authentication	hypernym	none
+authentication	authentication assurance	hyponym	none
+data	value	hypernym	none
+secure’ flag	secure channel	hypernym	none
+firewall	network protection	hyponym	none
+capabilities	detection	hypernym	none
+IoT	data	hypernym	none
+security engineering	security systems	hypernym	none
+security engineering	security rule development	hyponym	none
+attackers	easy vulnerability	hyponym	none
+vulnerability	Security wonks	hyponym	none
+authorization	authentication	hypernym	none
+backend	authentication	hyponym	none
+Security	backend	hyponym	none
+Security orthodoxy	Security	hypernym	none
+authentication	authorization	hypernym	none
+database	authentication	hyponym	none
+database	backend	hypernym	none
+security researchers	vulnerability security researchers	hyponym	none
+authentication	security	hypernym	none
+database	data	hypernym	none
+secure products	secure code reviews	hyponym	none
+vulnerability	attackers	hypernym	none
+software	detection	hypernym	none
+internet	data	hyponym	none
+personal data	work data	hypernym	none
+personal data	personal information	hypernym	none
+IT security risks	Physical security	hyponym	none
+corporate data	work data	hyponym	none
+corporate data	personal information	hyponym	none
+personal data	corporate data	none	none
+threats	vulnerabilities	hypernym	none
+IoT	internet	hypernym	none
+operational security effectiveness	security operations	hypernym	none
+operational security	network and security operations teams	hyponym	none
+Security operations teams organizations	Security operations teams	hypernym	none
+security	respondents security products	hyponym	none
+security testing	vulnerabilities	hypernym	none
+security capabilities	security and risk management	hyponym	none
+security tools effectiveness	security tools	hypernym	none
+security solutions	Security Group	hypernym	none
+Security breaches	security skills	hypernym	none
+operational security effectiveness	security operations	hypernym	none
+operational security	network and security operations teams	hyponym	none
+Security operations teams organizations	Security operations teams	hypernym	none
+security	respondents security products	hyponym	none
+security testing	vulnerabilities	hypernym	none
+security capabilities	security and risk management	hyponym	none
+security tools effectiveness	security tools	hypernym	none
+security solutions	Security Group	hypernym	none
+Security breaches	security skills	hypernym	none
+security community	security automation	hyponym	none
+security own infrastructure	security	hypernym	none
+security issues	Critical Risks	hypernym	none
+Critical Risks	Risks	hypernym	none
+attacker	vulnerabilities	hyponym	none
+OWASP	OWASP OWASP	hyponym	none
+knowledge	expertise	hypernym	none
+viruses	Internet	hypernym	none
+Data	Internet	hyponym	none
+Data	User Data	hyponym	none
+personal data	Privacy Policy	hyponym	none
+contact information	payment information	hypernym	none
+privacy	password	hypernym	none
+emails	password	hypernym	none
+little information	contact information	hypernym	none
+password	information	hypernym	none
+password	password security meter	hyponym	none
+passwords	encryption technologies	hyponym	none
+sensitive personal information	Privacy policy	hypernym	none
+security	password	hypernym	none
+concern	contents	hypernym	none
+encryption	security	hypernym	none
+encryption	adequate password	hyponym	none
+sensitive business data	private data	hypernym	none
+cloud-based intrusion	attackers	hypernym	none
+emails	data	hypernym	none
+data storage	data	hypernym	none
+data	documents	hypernym	none
+data storage	documents	hypernym	none
+financial data	PII	none	none
+prevention	detection	hypernym	none
+unintended disclosures	sensitive information	hypernym	none
+intrusion	attacker	hypernym	none
+Homeland Security	CISA	concept	none
+knowledge	integrity	hypernym	none
+Internet Security	security	hypernym	none
+security	Security practitioners	hyponym	none
+security baseline enforcement	advanced security features	hypernym	none
+Authorization	policy	hyponym	none
+passwords	Sensitive data	hyponym	none
+privacy laws	Protect Data	hypernym	none
+personal information	privacy laws	hyponym	none
+Sensitive data	Protect Data	hypernym	none
+personal information	Sensitive data	hyponym	none
+extra protection	Protect Data	hyponym	none
+passwords	information	hypernym	none
+public marketing information	public data	hyponym	none
+encryption	sensitive data	hyponym	none
+sensitive data management	sensitive data	hypernym	none
+sure sensitive data	sensitive data	hypernym	none
+crypto	Cryptography	hyponym	none
+information security	Cryptography	hypernym	none
+data leakage	sensitive data	hyponym	none
+passwords	encryption keys	hyponym	none
+secrets	unauthorized disclosure	hyponym	none
+passwords	authentication	hypernym	none
+security goals	security frameworks	hyponym	none
+Vulnerabilities	Secure frameworks	hyponym	none
+Secure frameworks	known vulnerabilities	hypernym	none
+security requirement	needed security functionality	hyponym	none
+Security requirements	specific security problem	hyponym	none
+Security requirements	vetted security functionality	hyponym	none
+security controls	standard security requirements	hyponym	none
+security	standard security requirements	hyponym	none
+security	security controls	hyponym	none
+Security requirements	security issues	hypernym	none
+more security functionality	security requirements	hypernym	none
+Security requirements	security functionality	hypernym	none
+Better security	vulnerabilities	hypernym	none
+IT security	technology	hypernym	none
+database	data	hypernym	none
+data storage	data	hypernym	none
+networking	data	hyponym	none
+data validation	data	hypernym	none
+data	data encryption	hyponym	none
+encryption	PII	hyponym	none
+encryption	data	hyponym	none
+PII	data	hypernym	none
+PII	identifiable information	hyponym	none
+databases	PII	instance	none
+databases	values	hypernym	none
+security settings	values	hypernym	none
+updates	security notes	hyponym	none
+security	attackers	hyponym	none
+IT security	technology	hypernym	none
+man-in-the-middle attacks	attackers	hypernym	none
+man-in-the-middle attacks	crypto	hypernym	none
+credentials	data	hypernym	none
+information	credentials	hypernym	none
+PII	data	hypernym	none
+information	PII	hyponym	none
+personal data	data	hypernym	none
+information	data	hyponym	none
+personal data	sensitive personal information	hyponym	none
+personal data	PII	hypernym	none
+personal data	information	hypernym	none
+credentials	PII	hyponym	none
+sensitive personal information	PII	hypernym	none
+passwords	data	hypernym	none
+personal information	privacy laws	hyponym	none
+personal information	data	hypernym	none
+secure parameters	secure protocols	hyponym	none
+Hostile data	hostile data	hypernym	none
+hostile data	data	hypernym	none
+security	solid security programs	hyponym	none
+Privacy	Security	hypernym	none
+Risk	investment	none	none
+Risk	Security	hypernym	none
+Security	investment	instance	none
+security	attention	hypernym	none
+security	security practitioners	hyponym	none
+privacy	security	hypernym	none
+risks	security	hypernym	none
+security team	security	hypernym	none
+security team company	security team	concept	none
+security team company	security	hypernym	none
+learning	security	hypernym	none
+security early product	security	hypernym	none
+security early market	security	hypernym	none
+security	values	hypernym	none
+confidentiality	Security	hypernym	none
+privacy	confidentiality	hypernym	none
+privacy	Security	hypernym	none
+security services company	security services company’s leaders	hyponym	none
+security services company	Security expectations	hyponym	none
+risk	security	hypernym	none
+security priorities	security	hypernym	none
+security resources	security	hypernym	none
+security	baking security	hyponym	none
+security	st security	hyponym	none
+Security	values	hyponym	none
+Security	technology	hypernym	none
+security	concern	hypernym	none
+privacy	concern	hypernym	none
+risk tolerance	risk	hypernym	none
+risks	current security risks	hyponym	none
+© 20 security	dedicated security	hyponym	none
+questions	concerns	hypernym	none
+security leader	Security Program |	hyponym	none
+security engineers	security resources	hypernym	none
+resources	security resources	hyponym	none
+strong security skill set	security	hypernym	none
+security	concerns	hypernym	none
+security consultant	technical security work	hypernym	none
+information	wireless data	hyponym	none
+security	technology	hypernym	none
+viruses	Antivirus	hypernym	none
+viruses	malware	hyponym	none
+Antivirus	malware	concept	none
+malicious software	antivirus software	hypernym	none
+security company	Antivirus companies	hyponym	none
+security teams	security security teams	hyponym	none
+alert	attention	hypernym	none
+security policies	additional security	hyponym	none
+Antimalware	Antivirus	concept	none
+content	information	hypernym	none
+malicious code	attacker	hypernym	none
+details	information	hypernym	none
+vulnerabilities	sensitive data	hyponym	none
+sensitive data	data	hypernym	none
+details security	details	hypernym	none
+Data encryption	plaintext	hypernym	none
+data breaches	data breach discovery	hyponym	none
+theft	identity theft	hyponym	none
+information reputation	information	hypernym	none
+data breach	information	hypernym	none
+data breach	identifiable information	hyponym	none
+software	programs	hypernym	none
+programs	software	hypernym	none
+protection systems	security alerts	hyponym	none
+warnings	alert systems	hypernym	none
+alerts	critical alerts	hyponym	none
+intrusion	attacker	hypernym	none
+security	attacker	hyponym	none
+security credentials	security	hypernym	none
+security bulletins	vulnerabilities	concept	none
+IoT	internet	hypernym	none
+untrusted data	data	hypernym	none
+data tampering	encryption	hypernym	none
+security	data	hypernym	none
+general security rule	security	hypernym	none
+XSS	untrusted data	hyponym	none
+attacker	attacker’s website	hyponym	none
+CSRF	XSS	hypernym	none
+phishing	cyberattacks	hypernym	none
+phishing	emails	hypernym	none
+risk	threats	hypernym	none
+zero-day phishing	malware	concept	none
