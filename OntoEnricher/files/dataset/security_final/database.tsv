@@ -1,0 +1,45 @@
+a	b	pred	label
+Database security	database confidentiality	hyponym	hyponym
+database	data	hypernym	hypernym
+information security technologies	database Database security	hyponym	hyponym
+threats	security threats	hyponym	hyponym
+data breach	confidentiality	hypernym	none
+data breach	database	hypernym	none
+data breach	data	hypernym	none
+data protection	cyberattacks	instance	none
+breaches	vulnerabilities	hypernym	hypernym
+database security attacks	vulnerabilities	hypernym	none
+security threat	insider threat	hyponym	hyponym
+phishing	credentials	hypernym	none
+credentials	credential database	hyponym	none
+software	vulnerabilities	hyponym	none
+Hackers	vulnerabilities	hypernym	hypernym
+database	software	hypernym	hypernym
+database	backup data	hyponym	hyponym
+security threat	threat	hypernym	hypernym
+database	database security	hyponym	none
+credential data	database	hypernym	none
+credential data	data	hypernym	hypernym
+database security	database	hypernym	none
+Database security policies	cybersecurity policies	hyponym	hypernym
+security awareness training	Security controls	hypernym	none
+formal security policies	Security controls	hypernym	hypernym
+databases	data activities	hyponym	none
+data exploration	databases	hypernym	none
+capabilities	security	hypernym	hypernym
+native security capabilities	data protection capabilities	hypernym	hyponym
+native security capabilities	IBM Cloud Security	hypernym	instance
+data discovery	databases	hypernym	none
+data discovery	big data	hyponym	none
+databases	big data	hyponym	hypernym
+security optimization	IBM Security Guardium	instance	instance
+smarter data protection platform	security optimization	hypernym	hypernym
+security optimization	encryption	hypernym	none
+data discovery	data	hypernym	none
+Data Security Services	data	hypernym	none
+encryption	data	hypernym	none
+Data Security Services	data discovery	hypernym	hyponym
+security	Security concerns	hyponym	hyponym
+databases	data	hypernym	hypernym
+phishing scams	cyber security threats	hypernym	hypernym
+common cyber security threats	Malware	hypernym	hyponym

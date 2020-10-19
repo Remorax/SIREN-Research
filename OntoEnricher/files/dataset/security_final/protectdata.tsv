@@ -1,0 +1,17 @@
+a	b	pred	label
+Secure frameworks	known vulnerabilities	hypernym	none
+security requirement	needed security functionality	hypernym	hyponym
+Security requirements	specific security problem	hyponym	none
+Security requirements	vetted security functionality	hyponym	hyponym
+security controls	standard security requirements	hyponym	hyponym
+security	standard security requirements	hyponym	hyponym
+security	security controls	hyponym	hyponym
+Security requirements	security issues	hypernym	none
+more security functionality	security requirements	hypernym	hypernym
+Security requirements	security functionality	hypernym	none
+Better security	vulnerabilities	hypernym	none
+IT security	technology	hypernym	hypernym
+database	data	hypernym	hypernym
+data storage	data	hypernym	hypernym
+networking	data	hypernym	none
+data validation	data	hypernym	hypernym

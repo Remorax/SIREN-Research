@@ -1,0 +1,6 @@
+a	b	pred	label
+passwords	encryption keys	hyponym	hyponym
+secrets	unauthorized disclosure	hyponym	none
+passwords	authentication	hypernym	hypernym
+security goals	security frameworks	hyponym	none
+Vulnerabilities	Secure frameworks	hyponym	none

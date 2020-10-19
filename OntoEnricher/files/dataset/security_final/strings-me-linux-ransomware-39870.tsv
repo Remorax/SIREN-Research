@@ -1,0 +1,12 @@
+a	b	pred	label
+intrusion	attacker	hypernym	hyponym
+security	attacker	hyponym	none
+security credentials	security	hypernym	hypernym
+security bulletins	vulnerabilities	hypernym	none
+IoT	internet	hypernym	hypernym
+untrusted data	data	hypernym	hypernym
+data tampering	encryption	hypernym	none
+security	data	hypernym	none
+general security rule	security	hypernym	hypernym
+XSS	untrusted data	hyponym	hyponym
+attacker	attacker’s website	hyponym	none

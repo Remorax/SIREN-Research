@@ -1,0 +1,18 @@
+a	b	pred	label
+digital authentication knowledge	authentication	hypernym	none
+digital authentication	digital authentication knowledge	hyponym	none
+cryptographic protocol	authentication	hypernym	hypernym
+authentication	authentication assurance	hyponym	none
+secure’ flag	secure channel	hypernym	none
+firewall	network protection	hyponym	hypernym
+capabilities	detection	hypernym	hyponym
+IoT	data	hypernym	hypernym
+security engineering	security systems	hypernym	hyponym
+security engineering	security rule development	hyponym	hyponym
+attackers	easy vulnerability	hyponym	none
+vulnerability	Security wonks	hyponym	none
+authorization	authentication	hypernym	hyponym
+backend	authentication	hyponym	none
+Security	backend	hyponym	none
+Security orthodoxy	Security	hypernym	none
+authentication	authorization	hypernym	hypernym

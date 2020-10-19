@@ -1,0 +1,5 @@
+a	b	pred	label
+phishing	cyberattacks	hypernym	hypernym
+phishing	emails	hypernym	hypernym
+risk	threats	hypernym	hyponym
+zero-day phishing	malware	concept	hyponym

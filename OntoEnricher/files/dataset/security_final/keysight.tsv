@@ -1,0 +1,10 @@
+a	b	pred	label
+Security breaches	security skills	hypernym	none
+security community	security automation	hyponym	none
+security own infrastructure	security	hypernym	hypernym
+security issues	Critical Risks	hypernym	hyponym
+Critical Risks	Risks	hypernym	hypernym
+attacker	vulnerabilities	hyponym	none
+OWASP	OWASP OWASP	hyponym	none
+knowledge	expertise	hypernym	hypernym
+viruses	Internet	hypernym	none

@@ -1,0 +1,17 @@
+a	b	pred	label
+software	detection	hypernym	none
+internet	data	hypernym	none
+personal data	work data	hypernym	none
+personal data	personal information	hypernym	hyponym
+IT security risks	Physical security	hyponym	none
+corporate data	work data	hyponym	hyponym
+corporate data	personal information	hyponym	none
+personal data	corporate data	hypernym	none
+threats	vulnerabilities	hypernym	none
+IoT	internet	hypernym	hypernym
+operational security effectiveness	security operations	hypernym	none
+operational security	network and security operations teams	hyponym	hyponym
+Security operations teams organizations	Security operations teams	hypernym	none
+security	respondents security products	hyponym	hyponym
+security testing	vulnerabilities	hypernym	none
+security capabilities	security and risk management	hyponym	hyponym

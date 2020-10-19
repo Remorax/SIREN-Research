@@ -1,0 +1,48 @@
+a	b	pred	label
+security services company	security services company’s leaders	hyponym	hyponym
+security services company	Security expectations	hyponym	none
+risk	security	hypernym	none
+security priorities	security	hypernym	hypernym
+security resources	security	hypernym	hypernym
+security	baking security	hyponym	none
+security	st security	hyponym	none
+Security	values	hyponym	none
+Security	technology	hypernym	hypernym
+security	concern	hypernym	hypernym
+privacy	concern	hypernym	hypernym
+risk tolerance	risk	hypernym	none
+risks	current security risks	hyponym	hyponym
+© 20 security	dedicated security	hyponym	none
+questions	concerns	hypernym	hypernym
+security leader	Security Program |	hyponym	none
+security engineers	security resources	hypernym	hypernym
+resources	security resources	hyponym	hyponym
+strong security skill set	security	hypernym	hypernym
+security	concerns	hypernym	hypernym
+security consultant	technical security work	hypernym	hypernym
+information	wireless data	hyponym	hyponym
+security	technology	hypernym	hypernym
+viruses	Antivirus	hypernym	none
+viruses	malware	hypernym	hypernym
+Antivirus	malware	concept	none
+malicious software	antivirus software	hypernym	none
+security company	Antivirus companies	hyponym	hyponym
+security teams	security security teams	hyponym	none
+alert	attention	hypernym	none
+security policies	additional security	hyponym	hypernym
+Antimalware	Antivirus	concept	hypernym
+malicious code	attacker	hypernym	none
+details	information	hypernym	hypernym
+vulnerabilities	sensitive data	hyponym	hyponym
+sensitive data	data	hypernym	hypernym
+details security	details	hypernym	hypernym
+Data encryption	plaintext	hypernym	none
+data breaches	data breach discovery	hyponym	none
+theft	identity theft	hyponym	hyponym
+information reputation	information	hypernym	none
+data breach	information	hypernym	none
+data breach	identifiable information	hyponym	none
+software	programs	hyponym	hyponym
+programs	software	hyponym	none
+protection systems	security alerts	hyponym	hyponym
+alerts	critical alerts	hyponym	hyponym

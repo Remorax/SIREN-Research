@@ -1,0 +1,4 @@
+a	b	pred	label
+encryption	PII	hyponym	none
+encryption	data	hypernym	none
+PII	data	concept	hypernym

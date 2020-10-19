@@ -1,0 +1,3 @@
+a	b	pred	label
+authentication	authorization	hypernym	hypernym
+authentication	identity	hypernym	hypernym
