@@ -1,16 +1,17 @@
-passwords	Sensitive data	none
-privacy laws	Protect Data	none
-personal information	privacy laws	none
-Sensitive data	Protect Data	none
-personal information	Sensitive data	none
-extra protection	Protect Data	none
-passwords	information	none
-public marketing information	public data	none
-encryption	sensitive data	none
-sensitive data management	sensitive data	none
-sure sensitive data	sensitive data	none
-crypto	Cryptography	none
-information security	Cryptography	none
-data leakage	sensitive data	none
-passwords	encryption keys	none
-secrets	unauthorized disclosure	none
+a	b	pred	label
+Secure frameworks	known vulnerabilities	hypernym	none
+security requirement	needed security functionality	hypernym	hyponym
+Security requirements	specific security problem	hyponym	none
+Security requirements	vetted security functionality	hyponym	hyponym
+security controls	standard security requirements	hyponym	hyponym
+security	standard security requirements	hyponym	hyponym
+security	security controls	hyponym	hyponym
+Security requirements	security issues	hypernym	none
+more security functionality	security requirements	hypernym	hypernym
+Security requirements	security functionality	hypernym	none
+Better security	vulnerabilities	hypernym	none
+IT security	technology	hypernym	hypernym
+database	data	hypernym	hypernym
+data storage	data	hypernym	hypernym
+networking	data	hypernym	none
+data validation	data	hypernym	hypernym

@@ -1,26 +1,25 @@
-breaches	data breaches	none
-sensitive, protected, or confidential data	data breach	none
-PII	Data breaches	none
-Data breaches	identifiable information	none
-personal health information	PII	none
-personal health information	identifiable information	none
-PII	identifiable information	none
-Data breaches	data	none
-disclosed data breaches	data breaches	none
-data breaches	sensitive information	none
-technology	data	none
-electronic data	data	none
-electronic data	technology	none
-Malware	software	none
-software	Malware	none
-warning	warning” message	none
-malicious software	Malware	none
-malicious software	software	none
-security breaches	data breaches	none
-data elements	data breaches	none
-breaches	data breaches	none
-data elements	information	none
-information	data breaches	none
-breaches	data breaches	none
-data breaches	sensitive information	none
-breaches	sensitive information	none
+a	b	pred	label
+PII	identifiable information	hyponym	hypernym
+Data breaches	data	hypernym	none
+disclosed data breaches	data breaches	hypernym	hypernym
+data breaches	sensitive information	hyponym	none
+technology	data	hypernym	none
+electronic data	data	hypernym	hypernym
+electronic data	technology	hypernym	hypernym
+Malware	software	hypernym	hypernym
+software	Malware	hyponym	hyponym
+warning	warning” message	hyponym	hyponym
+malicious software	Malware	hypernym	hyponym
+malicious software	software	hypernym	hypernym
+security breaches	data breaches	hyponym	hyponym
+data elements	data breaches	hyponym	none
+data elements	information	hypernym	hypernym
+information	data breaches	hyponym	none
+breaches	sensitive information	hyponym	none
+database	data	hypernym	hypernym
+that data	database	hypernym	none
+that data	data	hypernym	none
+input data	data	hypernym	hypernym
+Password Requirements	Passwords	hypernym	hypernym
+credential	password	hypernym	hyponym
+information	credential	hyponym	hyponym

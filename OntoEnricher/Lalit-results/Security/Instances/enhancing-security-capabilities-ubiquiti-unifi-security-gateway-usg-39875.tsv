@@ -1,5 +1,6 @@
-firewall	network protection	none
-capabilities	detection	none
-IoT	data	none
-security engineering	security systems	none
-security engineering	security rule development	none
+a	b	pred	label
+database	authentication	hyponym	none
+database	backend	hypernym	hypernym
+security researchers	vulnerability security researchers	hyponym	hyponym
+authentication	security	hypernym	hypernym
+database	data	hypernym	hypernym

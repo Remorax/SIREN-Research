@@ -1,5 +1,6 @@
-database	data	none
-that data	database	none
-that data	data	none
-content	data	none
-input data	data	none
+a	b	pred	label
+information	password	hypernym	hyponym
+passwords	biometrics	hyponym	hyponym
+digital authentication	biometrics	hypernym	hyponym
+digital authentication	authentication	hypernym	hypernym
+biometrics	authentication	hypernym	hypernym

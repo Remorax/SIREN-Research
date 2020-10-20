@@ -1,49 +1,48 @@
-security	solid security programs	none
-Privacy	Security	none
-Risk	investment	none
-Risk	Security	none
-Security	investment	none
-security	attention	none
-security	security practitioners	none
-privacy	security	none
-privacy	security	none
-risks	security	none
-security team	security	none
-security team company	security team	none
-security team company	security	none
-learning	security	none
-learning	security	none
-learning	security	none
-security early product	security	none
-security early market	security	none
-security	values	none
-confidentiality	Security	none
-privacy	confidentiality	none
-privacy	Security	none
-privacy	security	none
-security services company	security services company’s leaders	none
-security services company	Security expectations	none
-privacy	security	none
-risk	security	none
-security priorities	security	none
-security resources	security	none
-security	baking security	none
-security	st security	none
-Security	values	none
-Security	technology	none
-security	concern	none
-privacy	security	none
-privacy	concern	none
-risk tolerance	risk	none
-risks	current security risks	none
-© 20 security	dedicated security	none
-questions	concerns	none
-security leader	Security Program |	none
-security engineers	security resources	none
-resources	security resources	none
-strong security skill set	security	none
-security	concerns	none
-security consultant	technical security work	none
-information	wireless data	none
-privacy	security	none
-security	technology	none
+a	b	pred	label
+security services company	security services company’s leaders	hyponym	hyponym
+security services company	Security expectations	hyponym	none
+risk	security	hypernym	none
+security priorities	security	hypernym	hypernym
+security resources	security	hypernym	hypernym
+security	baking security	hyponym	none
+security	st security	hyponym	none
+Security	values	hyponym	none
+Security	technology	hypernym	hypernym
+security	concern	hypernym	hypernym
+privacy	concern	hypernym	hypernym
+risk tolerance	risk	hypernym	none
+risks	current security risks	hyponym	hyponym
+© 20 security	dedicated security	hyponym	none
+questions	concerns	hypernym	hypernym
+security leader	Security Program |	hyponym	none
+security engineers	security resources	hypernym	hypernym
+resources	security resources	hyponym	hyponym
+strong security skill set	security	hypernym	hypernym
+security	concerns	hypernym	hypernym
+security consultant	technical security work	hypernym	hypernym
+information	wireless data	hyponym	hyponym
+security	technology	hypernym	hypernym
+viruses	Antivirus	hypernym	none
+viruses	malware	hypernym	hypernym
+Antivirus	malware	concept	none
+malicious software	antivirus software	hypernym	none
+security company	Antivirus companies	hyponym	hyponym
+security teams	security security teams	hyponym	none
+alert	attention	hypernym	none
+security policies	additional security	hyponym	hypernym
+Antimalware	Antivirus	concept	hypernym
+malicious code	attacker	hypernym	none
+details	information	hypernym	hypernym
+vulnerabilities	sensitive data	hyponym	hyponym
+sensitive data	data	hypernym	hypernym
+details security	details	hypernym	hypernym
+Data encryption	plaintext	hypernym	none
+data breaches	data breach discovery	hyponym	none
+theft	identity theft	hyponym	hyponym
+information reputation	information	hypernym	none
+data breach	information	hypernym	none
+data breach	identifiable information	hyponym	none
+software	programs	hyponym	hyponym
+programs	software	hyponym	none
+protection systems	security alerts	hyponym	hyponym
+alerts	critical alerts	hyponym	hyponym

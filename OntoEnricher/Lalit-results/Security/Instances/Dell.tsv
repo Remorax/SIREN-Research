@@ -1,4 +1,5 @@
-Encryption	data	none
-policy	risk	none
-authentication	encryption keys	none
-protected data	data	none
+a	b	pred	label
+Encryption	data	hypernym	none
+policy	risk	hypernym	hypernym
+authentication	encryption keys	hyponym	hyponym
+protected data	data	hypernym	hypernym

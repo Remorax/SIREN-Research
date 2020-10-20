@@ -1,4 +1,4 @@
-concerns	security issues	none
-security	integrity	none
-security	data	none
-Data	data	none
+a	b	pred	label
+concerns	security issues	hyponym	hyponym
+security	integrity	hypernym	hypernym
+security	data	hypernym	none

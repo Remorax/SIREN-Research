@@ -1,2 +1,3 @@
-Hostile data	hostile data	none
-hostile data	data	none
+a	b	pred	label
+privacy	confidentiality	hypernym	hypernym
+privacy	Security	hypernym	hypernym
