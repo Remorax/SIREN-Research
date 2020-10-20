@@ -1,0 +1,12 @@
+a	b	pred	label
+threats	attackers	hypernym	hyponym
+Security Information	enterprise-wide security data	hyponym	hyponym
+security teams	Security Information	hypernym	none
+security teams	disparate security data	hyponym	none
+critical risks	known threats	hypernym	hypernym
+critical risks	unknown threats	hypernym	hypernym
+sensitive data	data	hypernym	hypernym
+unknown threats	known threats	hypernym	none
+vulnerability information	security intelligence	hypernym	hypernym
+security intelligence	threat intelligence	hyponym	hyponym
+threats	threat intelligence	hyponym	none

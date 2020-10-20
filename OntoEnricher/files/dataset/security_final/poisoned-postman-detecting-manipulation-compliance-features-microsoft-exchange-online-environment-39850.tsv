@@ -1,0 +1,12 @@
+a	b	pred	label
+Sensitive data	Protect Data	hypernym	none
+personal information	Sensitive data	hypernym	hypernym
+extra protection	Protect Data	hyponym	none
+passwords	information	hypernym	hypernym
+public marketing information	public data	hypernym	none
+encryption	sensitive data	hyponym	none
+sensitive data management	sensitive data	hypernym	none
+sure sensitive data	sensitive data	hypernym	none
+crypto	Cryptography	hypernym	none
+information security	Cryptography	hypernym	hyponym
+data leakage	sensitive data	hyponym	none

@@ -1,0 +1,10 @@
+a	b	pred	label
+Data	Internet	instance	hyponym
+Data	User Data	hyponym	hyponym
+personal data	Privacy Policy	hyponym	none
+contact information	payment information	hypernym	none
+privacy	password	hypernym	none
+emails	password	hypernym	none
+little information	contact information	hypernym	none
+password	information	hypernym	hypernym
+password	password security meter	hyponym	none

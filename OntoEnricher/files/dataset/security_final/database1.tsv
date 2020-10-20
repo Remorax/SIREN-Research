@@ -1,0 +1,24 @@
+a	b	pred	label
+Security	data	hyponym	none
+database	data	hypernym	hypernym
+Database security	databases	hypernym	none
+Physical database security	databases	hypernym	none
+Physical database security servers	databases	hypernym	none
+Physical database security servers	Physical database security	hyponym	hypernym
+Physical database security	database	hypernym	none
+intruders	Firewalls	hyponym	none
+Encryption	database	hypernym	none
+Encryption	data	hypernym	none
+data privacy	Database encryption	hyponym	hyponym
+IoT security	Database encryption	hyponym	none
+permissions	passwords	hypernym	none
+database security	passwords	hypernym	hyponym
+passwords	input credentials	hyponym	hypernym
+encryption	database layer security	hyponym	none
+database security	protection	hypernym	hypernym
+breaches	data breaches	hyponym	hyponym
+"sensitive, protected, or confidential data"	data breach	hypernym	none
+PII	Data breaches	hyponym	none
+Data breaches	identifiable information	hyponym	none
+personal health information	PII	hypernym	none
+personal health information	identifiable information	hypernym	hypernym

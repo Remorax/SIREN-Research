@@ -1,0 +1,7 @@
+a	b	pred	label
+passwords	encryption technologies	hyponym	hypernym
+sensitive personal information	Privacy policy	hypernym	none
+security	password	hypernym	none
+encryption	security	hypernym	hypernym
+encryption	adequate password	hyponym	hyponym
+sensitive business data	private data	hypernym	none

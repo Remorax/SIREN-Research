@@ -1,0 +1,12 @@
+a	b	pred	label
+information	credentials	hypernym	hyponym
+PII	data	concept	hypernym
+information	PII	hyponym	hyponym
+personal data	data	hypernym	hypernym
+information	data	hypernym	hypernym
+personal data	sensitive personal information	hyponym	hyponym
+personal data	PII	hypernym	hypernym
+personal data	information	hypernym	hypernym
+credentials	PII	instance	hypernym
+sensitive personal information	PII	hypernym	hypernym
+passwords	data	hypernym	hypernym

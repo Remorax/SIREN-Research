@@ -1,0 +1,4 @@
+a	b	pred	label
+personal information	privacy laws	hyponym	none
+personal information	data	hypernym	hypernym
+secure parameters	secure protocols	hypernym	none

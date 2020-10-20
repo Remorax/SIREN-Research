@@ -1,0 +1,4 @@
+Encryption	data	none
+policy	risk	none
+authentication	encryption keys	none
+protected data	data	none

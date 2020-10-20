@@ -1,0 +1,13 @@
+a	b	pred	label
+multiple security features	content security	hypernym	hyponym
+personal firewall	port protection	hypernym	hypernym
+security protections	content security	hyponym	hyponym
+advanced threat prevention	intrusion prevention	hypernym	hyponym
+intrusion prevention	firewall	hypernym	hyponym
+security protections	advanced threat prevention	hyponym	hyponym
+security protections	firewall	hypernym	hyponym
+Security Gateway	firewall	hypernym	hyponym
+Security Gateway	security protections	hypernym	hypernym
+Security Gateway	intrusion prevention	hypernym	hypernym
+security protections	intrusion prevention	hyponym	hyponym
+Security Gateway	content security	hypernym	hypernym

@@ -1,0 +1,5 @@
+a	b	pred	label
+Organization information	information security SA management system	hyponym	none
+information security	Information Security Policies	hyponym	hyponym
+security groups	security port	hypernym	none
+security port Checks	security port	hypernym	none

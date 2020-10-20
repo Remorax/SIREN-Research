@@ -1,0 +1,10 @@
+a	b	pred	label
+Security breaches	security skills	hypernym	none
+operational security effectiveness	security operations	hypernym	none
+operational security	network and security operations teams	hyponym	hyponym
+Security operations teams organizations	Security operations teams	hypernym	none
+security	respondents security products	hyponym	hyponym
+security testing	vulnerabilities	hypernym	none
+security capabilities	security and risk management	hyponym	hyponym
+security tools effectiveness	security tools	hypernym	none
+security solutions	Security Group	hypernym	hypernym

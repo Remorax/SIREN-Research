@@ -1,0 +1,4 @@
+a	b	pred	label
+Hackers	Hackers code	hyponym	none
+Threat detection tools	potential threats	hypernym	none
+attackers	two vulnerabilities	hyponym	none

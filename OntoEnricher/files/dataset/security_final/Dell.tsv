@@ -1,0 +1,5 @@
+a	b	pred	label
+Encryption	data	hypernym	none
+policy	risk	hypernym	hypernym
+authentication	encryption keys	hyponym	hyponym
+protected data	data	hypernym	hypernym

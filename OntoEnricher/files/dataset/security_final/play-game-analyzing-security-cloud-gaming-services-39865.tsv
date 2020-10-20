@@ -1,0 +1,17 @@
+a	b	pred	label
+cloud-based intrusion	attackers	hypernym	none
+emails	data	hypernym	hypernym
+data storage	data	hypernym	hypernym
+data	documents	hypernym	hyponym
+data storage	documents	hypernym	none
+prevention	detection	hypernym	none
+unintended disclosures	sensitive information	hypernym	none
+intrusion	attacker	hypernym	hyponym
+Homeland Security	CISA	concept	none
+Internet Security	security	hypernym	hypernym
+security	Security practitioners	hyponym	none
+security baseline enforcement	advanced security features	hypernym	none
+Authorization	policy	hypernym	hypernym
+passwords	Sensitive data	hyponym	hypernym
+privacy laws	Protect Data	hypernym	none
+personal information	privacy laws	hyponym	none

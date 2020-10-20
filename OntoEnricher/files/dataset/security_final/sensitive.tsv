@@ -1,0 +1,15 @@
+a	b	pred	label
+security	solid security programs	hyponym	hyponym
+Privacy	Security	hypernym	none
+Risk	Security	hypernym	none
+security	attention	hypernym	none
+security	security practitioners	hyponym	hyponym
+privacy	security	hypernym	hypernym
+risks	security	hypernym	none
+security team	security	hypernym	hypernym
+security team company	security team	hypernym	hypernym
+security team company	security	hypernym	hypernym
+learning	security	hypernym	none
+security early product	security	hypernym	none
+security early market	security	hypernym	none
+confidentiality	Security	hypernym	hypernym

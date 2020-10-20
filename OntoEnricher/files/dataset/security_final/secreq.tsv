@@ -1,0 +1,11 @@
+a	b	pred	label
+PII	identifiable information	hyponym	hyponym
+databases	PII	hyponym	none
+databases	values	hyponym	hyponym
+security settings	values	hypernym	hypernym
+updates	security notes	hyponym	none
+security	attackers	hyponym	none
+IT security	technology	hypernym	hypernym
+man-in-the-middle attacks	attackers	hypernym	none
+man-in-the-middle attacks	crypto	hypernym	none
+credentials	data	hypernym	hypernym

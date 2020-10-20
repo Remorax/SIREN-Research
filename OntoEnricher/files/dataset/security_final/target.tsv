@@ -1,0 +1,6 @@
+a	b	pred	label
+CSRF	XSS	hypernym	none
+phishing	cyberattacks	hypernym	hypernym
+phishing	emails	hypernym	hypernym
+risk	threats	hypernym	hyponym
+zero-day phishing	malware	concept	hyponym

@@ -1,0 +1,25 @@
+a	b	pred	label
+PII	identifiable information	hyponym	hypernym
+Data breaches	data	hypernym	none
+disclosed data breaches	data breaches	hypernym	hypernym
+data breaches	sensitive information	hyponym	none
+technology	data	hypernym	none
+electronic data	data	hypernym	hypernym
+electronic data	technology	hypernym	hypernym
+Malware	software	hypernym	hypernym
+software	Malware	hyponym	hyponym
+warning	warning” message	hyponym	hyponym
+malicious software	Malware	hypernym	hyponym
+malicious software	software	hypernym	hypernym
+security breaches	data breaches	hyponym	hyponym
+data elements	data breaches	hyponym	none
+data elements	information	hypernym	hypernym
+information	data breaches	hyponym	none
+breaches	sensitive information	hyponym	none
+database	data	hypernym	hypernym
+that data	database	hypernym	none
+that data	data	hypernym	none
+input data	data	hypernym	hypernym
+Password Requirements	Passwords	hypernym	hypernym
+credential	password	hypernym	hyponym
+information	credential	hyponym	hyponym

@@ -1,0 +1,6 @@
+a	b	pred	label
+Security solutions	security	hypernym	hypernym
+Physical Security	DCPhysical security	hyponym	hyponym
+specialized security team	physical security	hypernym	hypernym
+firewalls	network security	hyponym	hypernym
+intrusion detection	intrusion prevention	hypernym	hypernym
