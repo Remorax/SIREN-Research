@@ -419,6 +419,7 @@ module.exports = function (graphContainerSelector) {
             currentUserId =  document.getElementById("userId").innerHTML ; 
             currentUserId = JSON.parse(currentUserId) ; 
             executeModules(clickedProperty);
+            console.log("Hello im here");
             var flagForDisplayAccRej = 1 ;
             var accept = d3.select("#acceptClicked").node();
             var reject = d3.select("#rejectClicked").node();
