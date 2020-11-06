@@ -13,39 +13,31 @@ from tweepy import API
 from tweepy import Cursor
 from datetime import datetime, date, time, timedelta
 from collections import Counter 
+import tensorflow_hub as hub
 import string
-model = KeyedVectors.load_word2vec_format("~/word2vec_twitter_model.bin", binary=True, unicode_errors='ignore')
 import sys
+from scipy import spatial
 from collections import defaultdict
 from sqlalchemy import create_engine
 name = sys.argv[1]
+
+USE_link = "https://tfhub.dev/google/universal-sentence-encoder-large/5?tf-hub-format=compressed"
+model = hub.load(USE_link)
+
 print (name)
+
+def extractUSEEmbeddings(words):
+    word_embeddings = model(words)
+    return word_embeddings.numpy()
+
+def cos_sim(a,b):
+    # Returns cosine similarity of two vectors
+    return 1 - spatial.distance.cosine(a, b)
 
 def generateScore(text):
     unpunctuatedText = text.translate(str.maketrans('', '', string.punctuation))
-    words = unpunctuatedText.split(" ")
-    totalScore = 0
-    count = 0
-    for word in words:
-        try:
-            sim1 = model.similarity(word, "pizza")
-            sim2 = model.similarity(word, "garlicbread")
-            sim3 = model.similarity(word, "toppings")
-            # # # sim4 = model.similarity(word, "cryptography")
-            score = (sim1 + sim2 + sim3)/3
-            totalScore += score
-            count += 1
-            # totalScore = 200
-            # count = 300
-        except:
-            continue
-    try:     
-        totalScore = totalScore/count
-        return totalScore
-    except:
-        return 0
-    
-
+    tweet_emb, domain_emb = extractUSEEmbeddings([text, "Information Security"])
+    return cos_sim(tweet_emb, domain_emb)
 
 access_token = "1192925360851013632-a1OH6gVyKWcmvMzeGkeQWNJYGGmQN9"
 access_token_secret = "Kranny95fVLF5bn9pCrB4B2TXjM4oTnT9BX3vztxEPrDf"
