@@ -432,6 +432,6 @@ def get_decision(relation_id):
     return accepted(result.fetchall())
 
 def get_ontologies_on_server():
-    ontologies = ['.'.join(f.split('.')[:-1]) for f in listdir("./data/owl/") if isfile(join("./data/owl/", f))]
+    ontologies = ['.'.join(f.split('.')[:-1]) for f in listdir("./data/owl/") if isfile(join("./data/owl/", f)) and f.endswith(".owl")]
     print(ontologies)
     return ontologies

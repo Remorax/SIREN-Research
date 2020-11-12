@@ -38,8 +38,8 @@
             <div id="loading-info" class="hidden">
                 <div id="loading-progress" style="border-radius: 10px;">
                     <div class="hidden">Loading ontology...</div>
-                    <div id="layoutLoadingProgressBarContainer" style="padding-bottom: 0;	white-space: nowrap;	overflow: hidden;	text-overflow: ellipsis;">
-                        <h4 id="currentLoadingStep" style="margin: 0;font-style: italic; padding-bottom:0 ;	white-space: nowrap;	overflow: hidden;	text-overflow: ellipsis;">
+                    <div id="layoutLoadingProgressBarContainer" style="padding-bottom: 0;   white-space: nowrap;    overflow: hidden;   text-overflow: ellipsis;">
+                        <h4 id="currentLoadingStep" style="margin: 0;font-style: italic; padding-bottom:0 ; white-space: nowrap;    overflow: hidden;   text-overflow: ellipsis;">
                             Layout optimization</h4>
                         <div id="progressBarContext">
                             <div id="progressBarValue" class="busyProgressBar"></div>
@@ -472,11 +472,11 @@
                     </div>
                 </div>
                 <br/><br/>
-		    <div class="Approval"> 
-			    <form action = "/action/" method = "POST" class= "approvalForm">
-				    <input type="button" id="acceptClicked" value="Accept" style="display: none">
-				    <input type="button" id="rejectClicked" value="Reject" style="display: none" >
-			    </form>
+            <div class="Approval"> 
+                <form action = "/action/" method = "POST" class= "approvalForm">
+                    <input type="button" id="acceptClicked" value="Accept" style="display: none">
+                    <input type="button" id="rejectClicked" value="Reject" style="display: none" >
+                </form>
             </div>
             </section>
         </aside>
@@ -504,8 +504,8 @@
 
 
         </div>
-        {% if ontologyJsonString %}
-        <div class="hidden" id="ontologyJsonString" value='{{ontologyJsonString}}'>{{ontologyJsonString | tojson | safe }}</div>
+        {% if OntologyContentJson %}
+        <div class="hidden" id="OntologyContentSource" value='{{OntologyContentJson}}'>{{OntologyContentJson | tojson | safe }}</div>
         {% endif %}
         {% if hiddenJSONRel %}
         <div class="hidden" id="hiddenJSONRel" value='{{ hiddenJSONRel }}'>{{ hiddenJSONRel|tojson|safe }}</div>

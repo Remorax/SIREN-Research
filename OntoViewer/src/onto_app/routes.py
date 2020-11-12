@@ -264,7 +264,7 @@ def loadOntology(file) :
         flash('Oops record not found')
         return redirect(url_for('hello'))
     # new_relations = list(set(new_relations))
-    return render_template("index.html", ontologyJsonString=contents,userId=session['userid'], hiddenJSONRel =new_relations, hiddenJSONNode = new_nodes, emptyList = [])
+    return render_template("index.html", OntologyContentJson=contents,userId=session['userid'], hiddenJSONRel =new_relations, hiddenJSONNode = new_nodes, emptyList = [])
 
 
 # @app.route('/return-files/<path:filename>/', methods = ['GET', 'POST'])
