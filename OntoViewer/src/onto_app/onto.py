@@ -18,97 +18,110 @@ def is_blank(node):
     else:
         return False
 
-def run(inputfile, outputfile, url, results):
+def create_final_ontology(inputfile, outputfile, url, results):
     print (outputfile)
     thefile=open(outputfile,"w+")
     doc = xml.dom.minidom.parse(inputfile)
     print ("Results",results)
-    for (instance,relation,concept) in results:
-        # needed = doc.getElementsByTagName("owl:Class")
-        
-        # (instance, concept) = line.split()
-        # needed = doc.getElementsByTagName("owl:Class")
-        # newelementclass = doc.createElement("owl:Class")
-        # newelementclass.setAttribute("rdf:about", url + "#" + concept)
-        # newelementsubclass = doc.createElement("rdfs:subClassOf")
-        # newelementsubclass.setAttribute("rdf:resource",url + "#" + instance)
-        # newelementclasslabel = doc.createElement("rdfs:label")
-        # newelementclasslabel.setAttribute("xml:lang","en")
-        # text = doc.createTextNode(concept)
-        # newelementclasslabel.appendChild(text)
-        # newelementclass.appendChild(newelementsubclass)
-        # newelementclass.appendChild(newelementclasslabel)
-        # needed[0].parentNode.insertBefore(newelementclass, needed[0])
-        # 
-        
-        # if search.getAttribute("rdf:parseType"):
-        #     newelementclass = doc.createElement("rdf:Description")
-        #     newelementclass.setAttribute("rdf:about", url + "#" + concept)
-        #     search.appendChild(newelementclass)
+    for (term1,term2,relation) in results:
+        iri1 = ''.join(x for x in term1.lower().title() if not x.isspace())
+        iri2 = ''.join(x for x in term2.lower().title() if not x.isspace())
 
-            
-        #     newelementclass = doc.createElement("rdf:Description")
-        #     newelementclass.setAttribute("rdf:about", url + "#" + instance)
-        #     search.appendChild(newelementclass)
-        x = doc.getElementsByTagName(baseurl + "#" + relation)
-        if not x:
-            # newRelationshipClass = doc.createElement(url + "#" + relation)
-            newElementObject = doc.createElement("owl:ObjectProperty")
-            newElementObject.setAttribute("rdf:about", url + "#" + relation)
-            newTypeObject = doc.createElement("rdf:type")
-            newTypeObject.setAttribute("rdf:resource","http://www.w3.org/2002/07/owl#FunctionalProperty")
-            newElementObject.appendChild(newTypeObject)
-            # newRelationshipClass.appendChild(newElementObject)
-            doc.childNodes[0].appendChild(newElementObject)
-        else:
-            pass
         needed = doc.getElementsByTagName("owl:Class")
-        newElementClass = doc.createElement("owl:Class")
-        newElementClass.setAttribute("rdf:about", url + "#" + concept)
-        newElementSubClass = doc.createElement("rdfs:subClassOf")
-        newElementRestriction = doc.createElement("owl:Restriction")
-        newElementProperty = doc.createElement("owl:onProperty")
-        newElementProperty.setAttribute("rdf:resource", url + "#" + relation)
-        newElementsomeValuesFrom = doc.createElement("owl:someValuesFrom")
-        newElementsomeValuesFrom.setAttribute("rdf:resource", url + "#" + instance)
-        newelementclasslabel = doc.createElement("rdfs:label")
-        newelementclasslabel.setAttribute("xml:lang","en")
-        text = doc.createTextNode(concept)
-        newelementclasslabel.appendChild(text)
-        newElementRestriction.appendChild(newElementProperty)
-        newElementRestriction.appendChild(newElementsomeValuesFrom)
-        newElementSubClass.appendChild(newElementRestriction)
+
+        if relation.lower().strip() in ["hypernym", "hyponym"]:
+            if relation.lower().strip() == "hypernym":
+                class_iri = iri2
+                class_label = term2
+                subclass_iri = iri1
+                subclass_label = term1
+            else:
+                class_iri = iri1
+                class_label = term1
+                subclass_iri = iri2
+                subclass_label = term2
+
+            newElementClass = doc.createElement("owl:Class")
+            newElementClass.setAttribute("rdf:about", url + "#" + class_iri)
+            
+            newElementSubClass = doc.createElement("rdfs:subClassOf")
+            newElementSubClass.setAttribute("rdf:resource", url + "#" + subclass_iri)
+            
+            newelementclasslabel = doc.createElement("rdfs:label")
+            newelementclasslabel.setAttribute("xml:lang","en")
+            text = doc.createTextNode(class_label)
+            newelementclasslabel.appendChild(text)
+            
+        elif relation.lower().strip() in ["instance", "concept"]:
+            relation_iri = "isInstance"
+            if relation.lower().strip() == "instance":
+                instance_iri = iri2
+                instance_label = term2
+                concept_iri = iri1
+                concept_label = term1
+            else:
+                instance_iri = iri1
+                instance_label = term1
+                concept_iri = iri2
+                concept_label = term2
+
+            newElementClass = doc.createElement("owl:Class")
+            newElementClass.setAttribute("rdf:about", url + "#" + concept_iri)
+            
+            newElementSubClass = doc.createElement("rdfs:subClassOf")
+            
+            newElementRestriction = doc.createElement("owl:Restriction")
+            newElementProperty = doc.createElement("owl:onProperty")
+            newElementProperty.setAttribute("rdf:resource", url + "#" + relation_iri)
+            newElementsomeValuesFrom = doc.createElement("owl:someValuesFrom")
+            newElementsomeValuesFrom.setAttribute("rdf:resource", url + "#" + instance_iri)
+            newelementclasslabel = doc.createElement("rdfs:label")
+            newelementclasslabel.setAttribute("xml:lang","en")
+            text = doc.createTextNode(concept_label)
+            newelementclasslabel.appendChild(text)
+            newElementRestriction.appendChild(newElementProperty)
+            newElementRestriction.appendChild(newElementsomeValuesFrom)
+            newElementSubClass.appendChild(newElementRestriction)
+
+        else:
+            newElementClass = doc.createElement("owl:Class")
+            newElementClass.setAttribute("rdf:about", url + "#" + iri2)
+
+            newElementSubClass = doc.createElement("rdfs:subClassOf")
+            newElementRestriction = doc.createElement("owl:Restriction")
+            newElementProperty = doc.createElement("owl:onProperty")
+            newElementProperty.setAttribute("rdf:resource", url + "#" + relation)
+            newElementsomeValuesFrom = doc.createElement("owl:someValuesFrom")
+            newElementsomeValuesFrom.setAttribute("rdf:resource", url + "#" + iri1)
+            newelementclasslabel = doc.createElement("rdfs:label")
+            newelementclasslabel.setAttribute("xml:lang","en")
+            text = doc.createTextNode(term2)
+            newelementclasslabel.appendChild(text)
+            newElementRestriction.appendChild(newElementProperty)
+            newElementRestriction.appendChild(newElementsomeValuesFrom)
+            newElementSubClass.appendChild(newElementRestriction)
+            newElementSubClass = doc.createElement("rdfs:subClassOf")
+            newElementRestriction = doc.createElement("owl:Restriction")
+            newElementProperty = doc.createElement("owl:onProperty")
+            newElementProperty.setAttribute("rdf:resource", url + "#" + relation)
+            newElementsomeValuesFrom = doc.createElement("owl:someValuesFrom")
+            newElementsomeValuesFrom.setAttribute("rdf:resource", url + "#" + term1)
+
         newElementClass.appendChild(newElementSubClass)
         newElementClass.appendChild(newelementclasslabel)
+
         needed[0].parentNode.insertBefore(newElementClass, needed[0])
         search = doc.getElementsByTagName("owl:members")[0]
+
         if search.getAttribute("rdf:parseType"):
             newelementclass = doc.createElement("rdf:Description")
-            newelementclass.setAttribute("rdf:about", url + "#" + concept)
+            newelementclass.setAttribute("rdf:about", url + "#" + class_iri)
             search.appendChild(newelementclass)
 
-            
             newelementclass = doc.createElement("rdf:Description")
-            newelementclass.setAttribute("rdf:about", url + "#" + instance)
+            newelementclass.setAttribute("rdf:about", url + "#" + subclass_iri)
             search.appendChild(newelementclass)
-        # x = doc.getElementsByTagName()
-        # needed = doc.getElementsByTagName("owl:Class")
-        # newelementclass = doc.createElement("owl:Class")
-        # newelementclass.setAttribute("rdf:about", url + "#" + concept)
-        # # newelementsubclass = doc.createElement("rdfs:subClassof")
-        # # newelementsubclass = doc.createElement("rdfs:" + relation)
-        # newelementsubclass.setAttribute("rdf:resource",url + "#" + instance)
-        # newelementclasslabel = doc.createElement("rdfs:label")
-        # newelementclasslabel.setAttribute("xml:lang","en")
-        # text = doc.createTextNode(concept)
-        # newelementclasslabel.appendChild(text)
-        # newelementclass.appendChild(newelementsubclass)
-        # newelementclass.appendChild(newelementclasslabel)
-        # needed[0].parentNode.insertBefore(newelementclass, needed[0])
-        # search = doc.getElementsByTagName("owl:members")[0]
-    
-
-        
+ 
     doc.writexml(thefile)
     thefile.close()
     print("Done")
@@ -117,11 +130,12 @@ def createParsedRelations(file, fname):
     allParsedRelations = []
     for line in open(file, "r").readlines():
         if line.split():
-            (instance, relation, concept) = line.split()
-            newinstance = baseurl + "#" + concept 
-            newconcept = baseurl + "#" + instance
-            relation = baseurl+relation
-            allParsedRelations.append(" ".join([newinstance, relation, newconcept]))
+            (term1, term2, relation) = line.split()
+            iri1 = ''.join(x for x in term1.lower().title() if not x.isspace())
+            iri2 = ''.join(x for x in term2.lower().title() if not x.isspace())
+            concept1 = baseurl + "#" + iri1
+            concept2 = baseurl + "#" + iri2
+            allParsedRelations.append(" ".join([concept1, concept2, relation]))
     string = "\n".join(allParsedRelations)
     open("./data/new/" + str(fname) + '.txt', "w+").write(string)
     return
@@ -129,17 +143,21 @@ def createParsedRelations(file, fname):
 
 def add_onto_file(admin_id, name):
     # compile OWL to JSON using OWL2VOWL
+    global baseurl
+    if name=="pizza":
+        baseurl = "https://serc.iiit.ac.in/downloads/ontology/pizza.owl"
+    elif name=="security":
+        baseurl = "https://serc.iiit.ac.in/downloads/ontology/securityontology.owl"
     json_path = './data/json/' + str(name) + '.json'
     unparsed_relations_file = './data/input/' + str(name) + '.txt'
     filepath = './data/input/' + str(name) + '.owl'
     f = open(json_path, 'w')
-    allTriples = [el.strip(" ").split(" ") for el in open(unparsed_relations_file).read().split("\n") if el]
-    print(allTriples)
+    allTriples = [el.strip().split()[:3] for el in open(unparsed_relations_file).read().split("\n") if el]
+    print("Triples to be added: ", allTriples)
     createParsedRelations(unparsed_relations_file, name)
     new_relations_file = './data/new/' + str(name) + '.txt'
     outputfile = "./data/owl/" +str(name) + '.owl'
-    print ("Hi im here")
-    run(filepath,outputfile,baseurl, allTriples)
+    create_final_ontology(filepath,outputfile,baseurl, allTriples)
     try:
         subprocess.run(['java', '-jar', OWL2VOWL, '-file', outputfile, '-echo'], stdout=f)
     except:

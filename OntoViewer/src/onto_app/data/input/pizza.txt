@@ -1,3 +1,4 @@
-Pizza isHypernym PeriPeri
-IndianPizza isSameAs TandooriPizza
-IndianPizza hasTopping spices
+Pizza	Peri-Peri	hyponym
+Tandoori Pizza	Indian Pizza	hypernym
+Domino's Pizza	Pizza	concept
+Pizza	Marinara	isToppingOf
