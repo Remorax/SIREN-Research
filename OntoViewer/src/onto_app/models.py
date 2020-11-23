@@ -25,16 +25,8 @@ class class_relations(db.Model):
     property = db.Column(db.String(200))
     domain = db.Column(db.String(200), nullable=False)
     range = db.Column(db.String(200), nullable=False)
-    quantifier = db.Column(db.String(200))
     onto_id = db.Column(db.Integer, db.ForeignKey('ontologies.id'), nullable=False)
     decisions = db.relationship('class_decisions', cascade="all,delete", backref='class_relations')
-
-class class_decisions(db.Model):
-    __tablename__ = 'class_decisions'
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    relation_id = db.Column(db.Integer, db.ForeignKey('class_relations.id'), nullable=False)
-    approved = db.Column(db.Integer, nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
 class nodes(db.Model):
     __tablename__ = 'nodes'
@@ -43,10 +35,10 @@ class nodes(db.Model):
     name = db.Column(db.String(200), nullable=False)
     decisions = db.relationship('node_decisions', cascade="all,delete", backref='nodes')
 
-class node_decisions(db.Model):
-    __tablename__ = 'node_decisions'
+class class_decisions(db.Model):
+    __tablename__ = 'class_decisions'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    node_id = db.Column(db.Integer, db.ForeignKey('nodes.id'), nullable=False)
+    relation_id = db.Column(db.Integer, db.ForeignKey('class_relations.id'), nullable=False)
     approved = db.Column(db.Integer, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 

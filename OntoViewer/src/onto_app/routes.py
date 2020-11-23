@@ -30,7 +30,7 @@ DEBUG = True
 SECRET_KEY = 'AbYzXSaNdErS123@'
 app.debug = DEBUG
 app.secret_key = SECRET_KEY
-VERIFIER = "epsteindidntkillhimself"
+VERIFIER = "verifier_hash"
 # This variable specifies the name of a file that contains the OAuth 2.0
 # information for this application, including its client_id and client_secret.
 CLIENT_SECRETS_FILE = "client_secret_395200844618-bnei4qvc8203ieoic6hpkbrkdnvmdq49.apps.googleusercontent.com.json"
@@ -66,7 +66,7 @@ def login():
     # secret = auth.access_token_secret
     # oauth_response = oauth.parse_authorization_response("http://127.0.0.1:5000/authenticated")
     # verifier = oauth_response.get('oauth_verifier')
-    
+    print ("Inside login")
     return redirect(url)   
 
 """ Loads ontology to database """
@@ -109,6 +109,7 @@ def authenticated():
     # Specify the state when creating the flow in the callback so that it can
     # verified in the authorization server response.
     # state = session['state']
+    print ("Inside authenticated")
     verification = request.args["oauth_verifier"]
     auth = tweepy.OAuthHandler(client_key, client_secret)
     try:
@@ -230,7 +231,7 @@ def loadOntology(file) :
     fname = str(filename)
     fname = fname.split(".")[0]
     fname2 = fname + ".owl"
-    fname = fname + ".txt"
+    fname = fname + ".tsv"
 
     result = db.engine.execute("SELECT id FROM ontologies WHERE name = :name", {'name': file})
     onto_id = result.fetchone()['id']
