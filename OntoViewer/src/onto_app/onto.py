@@ -148,7 +148,7 @@ def get_new_relations(ontology_path, relations_file):
     
     final_relations, final_nodes = [], []
 
-    for line in open(relations_file, "r").readlines():
+    for line in open(relations_file, "r").read().split("\n"):
         if line.split("\t"):
             (term1, term2, relation) = line.split("\t")
             
@@ -171,11 +171,12 @@ def get_new_relations(ontology_path, relations_file):
             else:
                 final_relations.append((term1, term2, relation))
 
-        if term1 not in classes:
+        if term1.lower() not in classes:
             final_nodes.append(term1)
-        if term2 not in classes:
+        if term2.lower() not in classes:
             final_nodes.append(term2)
 
+    final_relations, final_nodes = list(set(final_relations)), list(set(final_nodes))
     parsed_relations, parsed_nodes = [], []
 
     for (term1, term2, relation) in final_relations:
