@@ -107,6 +107,7 @@ def add_onto_file(admin_id, name):
 
     outputfile = "./data/server-files/ontologies/" +str(name) + '.owl'
     create_final_ontology(ontology_path, outputfile, baseurl, new_relations)
+    print ("Enriched {} ontology created...".format(name))
     try:
         subprocess.run(['java', '-jar', OWL2VOWL, '-file', outputfile, '-echo'], stdout=f)
     except:
@@ -118,22 +119,18 @@ def add_onto_file(admin_id, name):
     result = db.engine.execute(insert_query, {'name': str(name), 'admin_id': admin_id})#'filepath': filepath, )
     new_ontology_id = result.lastrowid
     db.session.commit()
-    print ("Committed session")
     # add new relations to database
     
     add_relations_to_db(new_relations, new_ontology_id)
     add_nodes_to_db(new_nodes, new_ontology_id)
-
-    print ("Returning")
+    print ("Written new relations and nodes to db for {}".format(name))
     # add_subclasses_to_db(new_subclasses, new_ontology_id)
 
 def add_new_ontologies():
     ontologies = ['.'.join(f.split('.')[:-1]) for f in listdir("./data/input/ontologies/") if isfile(join("./data/input/ontologies/", f)) and f.endswith(".owl")]
     ontologies = [ont for ont in ontologies if ont]
-    print("Onto=", ontologies)
     result = db.engine.execute("""SELECT name FROM ontologies""")
     db_ontologies = [o['name'] for o in result.fetchall()]
-    print (db_ontologies)
     for onto in ontologies:
         if onto not in db_ontologies:
             print ("Adding {}".format(onto))
@@ -208,7 +205,6 @@ def add_relations_to_db(relations, onto_id):
     insert_query = """INSERT INTO
                     class_relations (domain, property, range, onto_id)
                     VALUES (:domain, :property, :range, :onto_id)"""
-    print("#relations = ", relations)
     for r in relations:
         args = {}
         args['domain'] = r[0]
@@ -357,6 +353,6 @@ def get_decision(relation_id):
     return accepted(result.fetchall())
 
 def get_ontologies_on_server():
-    ontologies = ['.'.join(f.split('.')[:-1]) for f in listdir("./data/owl/") if isfile(join("./data/owl/", f)) and f.endswith(".owl")]
-    print(ontologies)
+    ontologies = ['.'.join(f.split('.')[:-1]) for f in listdir("./data/input/ontologies/") if isfile(join("./data/input/ontologies/", f)) and f.endswith(".owl")]
+    print ("Ontologies fetched from server: {}".format(ontologies))
     return ontologies

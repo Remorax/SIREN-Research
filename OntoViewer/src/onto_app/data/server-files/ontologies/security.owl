@@ -1965,19 +1965,19 @@
 	
 
     
-	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/securityontology.owl#PhysicalSecurity">
-		<rdfs:subClassOf rdf:resource="https://serc.iiit.ac.in/downloads/ontology/securityontology.owl#SecurityTeams"/>
-		<rdfs:label xml:lang="en">Physical Security</rdfs:label>
-	</owl:Class>
-	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/securityontology.owl#SecurityTeams">
-		<rdfs:label xml:lang="en">Security Teams</rdfs:label>
-	</owl:Class>
 	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/securityontology.owl#Virus">
 		<rdfs:subClassOf rdf:resource="https://serc.iiit.ac.in/downloads/ontology/securityontology.owl#Trojan"/>
 		<rdfs:label xml:lang="en">Virus</rdfs:label>
 	</owl:Class>
 	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/securityontology.owl#Trojan">
 		<rdfs:label xml:lang="en">Trojan</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/securityontology.owl#PhysicalSecurity">
+		<rdfs:subClassOf rdf:resource="https://serc.iiit.ac.in/downloads/ontology/securityontology.owl#SecurityTeams"/>
+		<rdfs:label xml:lang="en">Physical Security</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/securityontology.owl#SecurityTeams">
+		<rdfs:label xml:lang="en">Security Teams</rdfs:label>
 	</owl:Class>
 	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/securityontology.owl#NetworkSecurity">
 		<rdfs:label xml:lang="en">Network Security</rdfs:label>

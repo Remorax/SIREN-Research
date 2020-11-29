@@ -361,10 +361,6 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
 	
 
     
-	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#Peri-Peri">
-		<rdfs:subClassOf rdf:resource="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#Pizza"/>
-		<rdfs:label xml:lang="en">Peri-Peri</rdfs:label>
-	</owl:Class>
 	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#Marinara">
 		<rdfs:subClassOf>
 			<owl:Restriction>
@@ -374,15 +370,19 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">Marinara</rdfs:label>
 	</owl:Class>
-	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#Domino'SPizza">
-		<rdfs:label xml:lang="en">Domino'S Pizza</rdfs:label>
-	</owl:Class>
 	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#TandooriPizza">
 		<rdfs:subClassOf rdf:resource="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#IndianPizza"/>
 		<rdfs:label xml:lang="en">Tandoori Pizza</rdfs:label>
 	</owl:Class>
 	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#IndianPizza">
 		<rdfs:label xml:lang="en">Indian Pizza</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#Peri-Peri">
+		<rdfs:subClassOf rdf:resource="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#Pizza"/>
+		<rdfs:label xml:lang="en">Peri-Peri</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#Domino'SPizza">
+		<rdfs:label xml:lang="en">Domino'S Pizza</rdfs:label>
 	</owl:Class>
 	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#American">
 		
@@ -7651,12 +7651,12 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
 			<rdf:Description rdf:about="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#Veneziana"/>
 			
         
+			<rdf:Description rdf:about="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#Domino'SPizza"/>
+			<rdf:Description rdf:about="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#Peri-Peri"/>
 			<rdf:Description rdf:about="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#IndianPizza"/>
 			<rdf:Description rdf:about="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#TandooriPizza"/>
-			<rdf:Description rdf:about="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#Domino'SPizza"/>
 			<rdf:Description rdf:about="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#Marinara"/>
 			<rdf:Description rdf:about="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#Pizza"/>
-			<rdf:Description rdf:about="https://serc.iiit.ac.in/downloads/ontology/pizza.owl#Peri-Peri"/>
 		</owl:members>
 		
     

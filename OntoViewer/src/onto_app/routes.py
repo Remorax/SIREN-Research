@@ -9,38 +9,15 @@ from werkzeug.utils import secure_filename
 import json
 from onto_app.onto import *
 import tweepy
-request_token_url = 'https://api.twitter.com/oauth/request_token'
-# app = Flask(__name__)
-# Load our config from an object, or module (config.py)
 
 # These config variables come from 'config.py'
 client_key = "9NDG7eIVsrouj4CS2M7LoNjM1"
 client_secret = 'y1z075l563BwcL8XtI7GzQzEnvo1jEEzmcmR1NFBxhYPFokYzu'
-# auth = tweepy.OAuthHandler("9NDG7eIVsrouj4CS2M7LoNjM1",
-#                            'y1z075l563BwcL8XtI7GzQzEnvo1jEEzmcmR1NFBxhYPFokYzu')
-# auth.set_access_token('1192925360851013632-9tVq9NfbXX1BM1q8pUxMqA3K6ZGIqD',
-#                       'CL9MFVQDYUNM3cVuNeg0HAcSFKA4YRER6YKaKKKxNlYeG')
-# oauth = OAuth1Session(client_key, client_secret=client_secret)
-# fetch_response = oauth.fetch_request_token(request_token_url)
-# resource_owner_key = fetch_response.get('oauth_token')
-# resource_owner_secret = fetch_response.get('oauth_token_secret')
-# base_authorization_url = 'https://api.twitter.com/oauth/authorize'
-# tweepy_api = tweepy.API(oauth)
-DEBUG = True
+
 SECRET_KEY = 'AbYzXSaNdErS123@'
-app.debug = DEBUG
 app.secret_key = SECRET_KEY
-VERIFIER = "verifier_hash"
-# This variable specifies the name of a file that contains the OAuth 2.0
-# information for this application, including its client_id and client_secret.
-CLIENT_SECRETS_FILE = "client_secret_395200844618-bnei4qvc8203ieoic6hpkbrkdnvmdq49.apps.googleusercontent.com.json"
-CLIENT_ID = "395200844618-bnei4qvc8203ieoic6hpkbrkdnvmdq49.apps.googleusercontent.com"
-tweepy_api = None
 # This OAuth 2.0 access scope allows for full read/write access to the
 # authenticated user's account and requires requests to use an SSL connection.
-SCOPES = ["https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile", "openid"]
-API_SERVICE_NAME = 'drive'
-API_VERSION = 'v2'
 db.init_app(app) 
 # prevent cached responses
 @app.after_request
@@ -60,49 +37,7 @@ def login():
     oauth = tweepy.OAuthHandler(client_key,client_secret)
     url = oauth.get_authorization_url()
     session['request_token'] = oauth.request_token
-    # verifier = requests.get('oauth_verifier')
-    
-    # key = auth.access_token
-    # secret = auth.access_token_secret
-    # oauth_response = oauth.parse_authorization_response("http://127.0.0.1:5000/authenticated")
-    # verifier = oauth_response.get('oauth_verifier')
-    print ("Inside login")
     return redirect(url)   
-
-""" Loads ontology to database """
-@app.route('/hello', methods=["GET", "POST"])
-def hello():
-    if request.method == 'GET' :
-        add_onto_file(1, "pizza")
-        return "Pizza ontology has been added to database"
-    if request.method == 'POST' :
-        """ Remanants of testing code, will be removed later when they will be no longer be used with certainity. """
-        """ Returning name and type of links. Does not update with objects. Bias for new yet to be set, will be done so when more of the backend for it is built. """
-        a = str(request.data).split(',')
-        Prop = a[0]
-        Type = a[1]
-        Decision  = a[2]
-        Domain = a[3]
-        Range = a[4]
-
-        print(Decision[12:-3])
-
-        i = 0
-        try:
-            while Prop[i] != '>':
-                i += 1
-        except:
-            print(i)
-
-        if Prop[-5 :-1] == '</a>' :
-            print(Prop[i+1:-5])
-        else  :
-            print(Prop[i+1:-8])
-
-        print(Type[8 : -1])
-        """ End of preliminary return of accept return. """
-
-    return render_template("index.html")
 
 @app.route('/authenticated')
 def authenticated():
@@ -155,10 +90,6 @@ def user():
 
     ontologies = get_ontologies_on_server()
 
-    try:
-        add_onto_file(1, "pizza")
-    except:
-        pass
     # return redirect(url_for('loadOntology', filename='pizza.json'))
     return render_template("ontologies.html", ontologies=ontologies, username=session['username'])
 
@@ -224,84 +155,31 @@ def loadOntology(file) :
     if 'credentials' not in session:
         return redirect('login')
 
-    filename = file + '.json'
-    uploads = os.path.join(current_app.root_path,"data/json")
-    uploads = uploads + "/" + str(filename)
-    print(uploads)
-    fname = str(filename)
-    fname = fname.split(".")[0]
-    fname2 = fname + ".owl"
-    fname = fname + ".tsv"
+    json_file = file + '.json'
+    uploads = os.path.join(current_app.root_path,"data/server-files/json")
+    uploads = uploads + "/" + str(json_file)
+    ontology_file = file + ".owl"
+    enriched_file = file + ".tsv"
 
     result = db.engine.execute("SELECT id FROM ontologies WHERE name = :name", {'name': file})
     onto_id = result.fetchone()['id']
     session['ontology'] = onto_id
-    """ Corresponding new relations for given ontology are stored in data/new. """
 
-    new_relations, new_classes,new_nodes = get_new_relations(os.path.join(current_app.root_path,"data/input")+ "/" + fname2,os.path.join(current_app.root_path,"data/input")+ "/" + fname)
+    result = db.engine.execute("""SELECT * FROM class_relations WHERE onto_id == :onto_id""",
+        {'onto_id': str(onto_id)})
+    new_relations = [(r['domain'], r['property'], r['range']) for r in result.fetchall()]
+    print("New relations extracted for {} ontology are {}".format(file, new_relations))
+    
+    result = db.engine.execute("""SELECT * FROM nodes WHERE onto_id == :onto_id""",
+        {'onto_id': str(onto_id)})
+    new_nodes = [n['name'] for n in result.fetchall()]
+    print("New nodes extracted for {} ontology are {}".format(file, new_nodes))
    
-    print("new_nodes",new_nodes)
-    result = db.engine.execute("""SELECT * FROM class_relations WHERE quantifier != :subclass""",
-        {'subclass': str(RDFS.subClassOf)})
-    # new_relations = [(r['domain'], r['property'], r['quantifier'], r['range']) for r in result.fetchall()]
-    print("new_relations",new_relations)
-    result = db.engine.execute("""SELECT * FROM nodes""")
-    # /new_nodes = [n['name'] for n in result.fetchall()]
-   
-    result = db.engine.execute("""SELECT * FROM class_relations WHERE quantifier = :subclass""",
-        {'subclass': str(RDFS.subClassOf)})
-    new_subclasses = [(r['domain'], r['range']) for r in result.fetchall()]
-    print ("new subclass", new_subclasses)
-    # nodes = []
-    # for i in range(len(new_nodes)):
-    #     for j in range(len(new_nodes[i])):
-    #         nodes.append(new_nodes[i][j])
-    # print("new_nodes",nodes)
-    try :
-        with open(uploads,"r") as json_data:
-            contents = json.load(json_data)
-            # print(contents)
-    except :
-        flash('Oops record not found')
-        return redirect(url_for('hello'))
+    with open(uploads,"r") as json_data:
+        contents = json.load(json_data)
     # new_relations = list(set(new_relations))
-    return render_template("index.html", OntologyContentJson=contents,userId=session['userid'], hiddenJSONRel =new_relations, hiddenJSONNode = new_nodes, emptyList = [])
-
-
-# @app.route('/return-files/<path:filename>/', methods = ['GET', 'POST'])
-# def return_files(filename):
-#     print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-#     try:
-#         print("######################################")
-#         uploads = os.path.join(current_app.root_path, "OntoData") # change with a app.config thing
-#         print(uploads)
-
-#         # f = open(uploads + '/' + filename + '1' , 'w')
-#         # f.write(a)
-#         # print(repr(a))
-#         # f.close()
-#         return send_from_directory(uploads, filename,as_attachment=True, attachment_filename=filename)
-#     except Exception as e:
-#         return str(e)
-
-#     # @app.route('/uploadfile/')
-#     # def upload_files(filename) :
-#     #     try :
-#     # @app.route('/uploadFile/', methods=['GET', 'POST'])
-#     # def upload_file():
-#     #     if request.method == 'POST':
-#     #         # check if the post request has the file part
-#     #         if 'file' not in request.files:
-#     #             flash('No file part')
-#     #             return redirect(request.url)
-#     #         file = request.files['file']
-#     #         # if user does not select file, browser also
-#     #         # submit an empty part without filename
-#     #         if file.filename == '':
-#     #             flash('No selected file')
-#     #             return redirect(request.url)
-#     #         if file:
-#     #             filename = secure_filename(file.filename)
-#     #             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-#     #             return redirect(url_for('uploaded_file',
-#     #                                     filename=filename))
+    return render_template("index.html", OntologyContentJson=contents, 
+        userId=session['userid'], 
+        hiddenJSONRel=new_relations, 
+        hiddenJSONNode=new_nodes, 
+        emptyList=[])
