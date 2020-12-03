@@ -107,38 +107,34 @@ def decision() :
     if request.method == 'POST' :
         """ Decisions stored """
         """ Index numbers used to extract specific content from already existing inner html. This will hold through across cases."""
-        data = str(request.data).split(',')
+        data = eval(str(request.data.decode("utf-8")))
         # if flag is 1, then relation, else node
         user_id = session['userid']
         onto_id = session['ontology']
-        
-        if data[0][-1] == "1" :
+        print (data)
+        if data["flag"]:
             #when a relationship is accepted/rejected
-            Prop = data[1][8:-1]
-            Type = data[5][8:-1]
-            Decision  = data[2][12:-1]
-            Domain = data[3][10:-1]
-            Range = data[4][9:-1]
+            Prop = data["name"]
+            Type = data["type"]
+            Decision  = data["decision"]
+            Domain = data["domain"]
+            Range = data["range"]
 
-            print("Prop : ", Prop)
-            print("Domain : ", Domain)
-            print("Range : ", Range)
-            print("Decision : ", Decision)
-            print("Type : ", Type)
+            print("Relation Name: ", Prop)
+            print("Domain: ", Domain)
+            print("Range: ", Range)
+            print("Decision: ", Decision)
+            print("Type: ", Type)
 
-            """ Call add_decision from onto.py to store decision """
-            if Prop == "Subclass of" :
-                add_relation_decision(user_id, None, Domain, Range, str(RDFS.subClassOf), onto_id, {'Accept': 1, 'Reject':0}[Decision] )
-            else :
-                add_relation_decision(user_id, Prop, Domain, Range, Type, onto_id, {'Accept': 1, 'Reject':0}[Decision])
+            add_relation_decision(user_id, Prop, Domain, Range, Type, onto_id, {'Accept': 1, 'Reject':0}[Decision])
 
-        elif data[0][-1] == "0" :
-            # When a node is accpeted or rejected.
-            name = data[1][8:-1]
-            Decision = data[2][12:-1]
+        else:
+            # When a node is accepted or rejected.
+            name = data["name"]
+            Decision = data["decision"]
 
-            # print("Name : ", Name)
-            # print("Decision :", Decision)
+            print("Class: ", name)
+            print("Decision:", Decision)
 
             """ Call add_decision on node from onto.py to store decision """
             add_node_decision(user_id, name, onto_id, {'Accept': 1, 'Reject':0}[Decision])

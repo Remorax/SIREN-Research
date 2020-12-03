@@ -42,6 +42,13 @@ class class_decisions(db.Model):
     approved = db.Column(db.Integer, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
+class node_decisions(db.Model):
+    __tablename__ = 'node_decisions'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    node_id = db.Column(db.Integer, db.ForeignKey('nodes.id'), nullable=False)
+    approved = db.Column(db.Integer, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+
 # db.drop_all()
 try:
     db.create_all()

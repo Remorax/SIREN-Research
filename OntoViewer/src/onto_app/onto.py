@@ -206,10 +206,28 @@ def add_relations_to_db(relations, onto_id):
                     class_relations (domain, property, range, onto_id)
                     VALUES (:domain, :property, :range, :onto_id)"""
     for r in relations:
+        relation, class_domain, class_range = r[2], r[1], r[0]
+        if r[2] in ["hypernym", "hyponym"]:
+            relation = "subclassOf"
+            if r[2] == "hypernym":
+                class_domain = r[0]
+                class_range = r[1]
+            else:
+                class_domain = r[1]
+                class_range = r[0]
+        elif r[2] in ["concept", "instance"]:
+            relation = "hasInstance"
+            if r[2] == "instance":
+                class_domain = r[0]
+                class_range = r[1]
+            else:
+                class_domain = r[1]
+                class_range = r[0]
+        
         args = {}
-        args['domain'] = r[0]
-        args['range'] = r[1]
-        args['property'] = r[2]
+        args['domain'] = class_domain
+        args['range'] = class_range
+        args['property'] = relation
         args['onto_id'] = onto_id
         result = db.engine.execute(insert_query, args)
     db.session.commit()
@@ -270,50 +288,50 @@ def add_relation_with_credibility_only(twitter_users):
 
 
 
-def add_relation_decision(user_id, property, domain, range, quantifier, onto_id, decision):
+def add_relation_decision(user_id, relation, class_domain, class_range, relation_type, onto_id, decision):
+    relation = ''.join(relation.split("#")[-1].split(" "))
     args = {
         'onto_id': onto_id,
-        # 'property': property,
-        'domain': domain,
-        'range': range
+        'property': relation,
+        'domain': class_domain,
+        'range': class_range
         # 'quantifier': quantifier
     }
+    
     print("user_id:", user_id)
-    print("user_id:", property)
-    print("domain:", domain)
-    print("range:", range)
-    print("quantifier:", quantifier)
+    print("relation:", relation)
+    print("domain:", class_domain)
+    print("range:", class_range)
     print("onto_id:", onto_id)
     print("decision:", decision)
 
-    if property:
-        args['property'] = property
-        relation_query = """SELECT id FROM class_relations
-                        WHERE onto_id = :onto_id
-                            AND property = :property
-                            AND domain = :domain
-                            AND range = :range"""
-    else:
-        relation_query = """SELECT id FROM class_relations
-                        WHERE onto_id = :onto_id
-                            AND domain = :domain
-                            AND range = :range"""
+    select_relation_query = """SELECT id FROM class_relations
+                            WHERE onto_id = :onto_id
+                            AND UPPER(property) = UPPER(:property)
+                            AND UPPER(domain) = UPPER(:domain)
+                            AND UPPER(range) = UPPER(:range)"""
 
-    result = db.engine.execute(relation_query, args)
-
+    result = db.engine.execute(select_relation_query, args)
 
     relation_id = result.fetchone()['id']
+    
+    result = db.engine.execute("""SELECT * FROM class_decisions 
+            WHERE user_id = :user_id AND relation_id = :relation_id""", {'user_id': user_id, 'relation_id': relation_id})
 
-    insert_query = """INSERT INTO class_decisions
+    if result.fetchone():
+        db.engine.execute("""UPDATE class_decisions SET approved = :decision
+        WHERE user_id = :user_id AND relation_id = :relation_id""", 
+        {'user_id': user_id, 'relation_id': relation_id, 'approved': decision})
+    else:
+        insert_query = """INSERT INTO class_decisions
                         (relation_id, user_id, approved)
                         VALUES (:relation_id, :user_id, :approved)"""
-    print (relation_id, user_id, decision)
-    with db.engine.connect() as connection:
-        result = connection.execute(insert_query, {
+        result = db.engine.execute(insert_query, {
             'relation_id': relation_id,
             'user_id': user_id,
             'approved': decision
         })
+
 
 def add_node_decision(user_id, name, onto_id, decision):
     relation_query = """SELECT id FROM nodes
