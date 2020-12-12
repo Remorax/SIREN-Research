@@ -7,7 +7,7 @@ from requests_oauthlib import OAuth1
 from flask import send_file, send_from_directory, redirect, url_for, flash, current_app, session
 from werkzeug.utils import secure_filename
 import json
-from onto_app.onto import *
+from onto_app.helper import *
 import tweepy
 
 # These config variables come from 'config.py'

@@ -1,10 +1,9 @@
-import sys
+import sys, math
 import subprocess
 from os import listdir
 from os.path import isfile, join
 import xml.dom.minidom
-from owlready2 import *
-from aggregate import generate_final_ontology,delete_nodes
+from ontology import *
 from gensim.models import KeyedVectors
 import tweepy
 from tweepy import OAuthHandler
@@ -24,7 +23,14 @@ name = sys.argv[1]
 USE_link = "https://tfhub.dev/google/universal-sentence-encoder-large/5?tf-hub-format=compressed"
 model = hub.load(USE_link)
 
-print (name)
+NUM_STATUSES = 20 # Total number of user tweets to retreive
+RELEVANT_PERCENTAGE = 0.25 # Percentage of most relevant tweets to average when calculating tweet credibility
+
+MAX_FRIENDS = 5 # Total number of friends to search
+RELEVANT_FRIENDS = 0.4 # Percentage of most relevant friends to average when calculating friend credibility
+
+TWEETS_RELEVANCE = 1 # Coefficient of tweet cred while calculating overall credibility
+FRIENDS_RELEVANCE = 0.5 # Coefficient of tweet cred while calculating overall credibility
 
 def extractUSEEmbeddings(words):
     word_embeddings = model(words)
@@ -34,10 +40,9 @@ def cos_sim(a,b):
     # Returns cosine similarity of two vectors
     return 1 - spatial.distance.cosine(a, b)
 
-def generateScore(text):
-    unpunctuatedText = text.translate(str.maketrans('', '', string.punctuation))
-    tweet_emb, domain_emb = extractUSEEmbeddings([text, "Information Security"])
-    return cos_sim(tweet_emb, domain_emb)
+def generateScore(text_array):
+    all_embs = extractUSEEmbeddings(text_array + ["Pizza"])
+    return [cos_sim(tweet_emb, all_embs[-1]) for tweet_emb in all_embs[:-1]]
 
 access_token = "1192925360851013632-a1OH6gVyKWcmvMzeGkeQWNJYGGmQN9"
 access_token_secret = "Kranny95fVLF5bn9pCrB4B2TXjM4oTnT9BX3vztxEPrDf"
@@ -49,152 +54,87 @@ auth.set_access_token(access_token, access_token_secret)
 auth_api = API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True, retry_count=3, retry_delay=60)
 
 account_list = []
-# if (len(sys.argv) > 1):
-#     account_list = sys.argv[1:]
-# else:
-#     print("Provide a list of usernames.")
-#     sys.exit(0)
-def add_relation_with_credibility_only(twitter_users):
-    # query = """SELECT * FROM class_decisions"""
-    # result = db.engine.execute(query)
+
+def inOntology(node):
+    input_ontology = "data/input/ontologies/" + name + ".owl"
+    ont = Ontology(input_ontology)
+    classes = [split_by_camel_case(elem).lower() for elem in ont.classes]
+    instances = list(set(flatten([tuple([split_by_camel_case(elem).lower() for elem in instance]) for instance in ont.instances])))
+    classes += instances
+    node = split_by_camel_case(node.split("#")[-1]).lower() 
+    return node in classes
+
+def add_relation_with_credibility_only(scores_dict):
     engine = create_engine('sqlite:///onto.db', echo = True)
-    # conn = sqlite3.connect('onto.db')
-    # c = conn.cursor()
     c = engine.connect()
     trans = c.begin()
-    print("XYZ_1")
-    query = """SELECT * FROM class_decisions INNER JOIN class_relations ON class_decisions.relation_id =class_relations.id """
+    
+    query = """SELECT * FROM class_decisions INNER JOIN class_relations ON class_decisions.relation_id = class_relations.id """
     result = c.execute(query)
-    relation_list = [(o['relation_id'],o['property'],o['domain'],o['range']) for o in result.fetchall()]
-    # relation_set = set(relation_list)
-    relation_dict = defaultdict(int)
-    relation_count = defaultdict(int)
-    query = """SELECT * FROM class_decisions INNER JOIN class_relations ON class_decisions.relation_id =class_relations.id """
-    result = c.execute(query)
-    print(relation_list)
-    # print(result.fetchall())
-    result = list(result.fetchall())
-    print(result)
-    for tup in relation_list:
-        print(tup)
-        for o in result:
-            print("TATA")
-            print(o['property'])
-            print(o['domain'])
-            print(o['range'])
-            print(tup[1])
-            print(tup[2])
-            print(tup[3])
+    
+    full_results = list(result.fetchall())
+    results_list = [(o['relation_id'],o['property'],o['domain'],o['range']) for o in full_results]
+    
+    relation_dict, nodes_dict = {}, {}
+
+    for tup in results_list:
+        for o in full_results:
             if(tup[1] == o['property'] and tup[2] == o['domain'] and tup[3] == o['range']):
-                print("Yo")
-                relation_dict[tup]+=(o['approved']*twitter_users[o['user_id']])
-                print(twitter_users[o['user_id']])
-                relation_count[tup]+=twitter_users[o['user_id']]
-            else:
-                pass
+                if tup in relation_dict:
+                    if not math.isinf(relation_dict[tup][o['approved']]):
+                        relation_dict[tup][o['approved']] += scores_dict[o['user_id']]
+                    else:
+                        relation_dict[tup][o['approved']] = scores_dict[o['user_id']]
+                else:
+                    if o['approved']:
+                        relation_dict[tup] = [0, scores_dict[o['user_id']]]
+                    else:
+                        relation_dict[tup] = [scores_dict[o['user_id']], -math.inf]
 
+    query = """SELECT * FROM node_decisions INNER JOIN nodes ON node_decisions.node_id = nodes.id """
+    result = c.execute(query)
+    
+    full_results = list(result.fetchall())
+    results_list = [(o['node_id'],o['name']) for o in full_results]
+    
 
-    query = """DELETE  FROM class_decisions """
-    result = c.execute(query)
-    print("XTZ")
-    print(relation_dict)
-    for tup,score in relation_dict.items():
-        print("PPP")
-        score = score/relation_count[tup]
-        relation_dict[tup] = score
-    for tup,score in relation_dict.items():
-        print("PPP")
-            # print(tup)
-        if score > 0.5:
-            print(tup)
-            args = {
-                        'relation_id': tup[0],
-                            # 'property': property,
-                        'approved': 1,
-                        'user_id': 12345678
-                        }
-            print(args)
-            insert_query = """INSERT INTO class_decisions
-                            (relation_id, user_id, approved)
-                            VALUES (:relation_id, :user_id, :approved)"""
-            c.execute(insert_query,args)
-        else:
-            print(tup)
-            args = {
-                        'relation_id': tup[0],
-                            # 'property': property,
-                        'approved': 0,
-                        'user_id': 12345678
-                        }
-            insert_query = """INSERT INTO class_decisions
-                            (relation_id, user_id, approved)
-                            VALUES (:relation_id, :user_id, :approved)"""
-            c.execute(insert_query,args)
-    print("XYZ_1")
-    query = """SELECT * FROM node_decisions INNER JOIN nodes ON node_decisions.node_id =nodes.id """
-    result = c.execute(query)
-    nodes_list = [(o['node_id'],o['name']) for o in result.fetchall()]
-    # relation_set = set(relation_list)
-    relation_dict = defaultdict(int)
-    relation_count = defaultdict(int)
-    query = """SELECT * FROM node_decisions INNER JOIN nodes ON node_decisions.node_id =nodes.id """
-    result = c.execute(query)
-    print(relation_list)
-    # print(result.fetchall())
-    result = list(result.fetchall())
-    print(result)
-    for tup in nodes_list:
-        print(tup)
-        for o in result:
-            print("TATA")
-            print(o['node_id'])
-            print(o['name'])
-            print(tup[0])
-            print(tup[1])
+    for tup in results_list:
+        for o in full_results:
             if(tup[0] == o['node_id'] and tup[1] == o['name']):
-                relation_dict[tup]+=(o['approved']*twitter_users[o['user_id']])
-                relation_count[tup]+=twitter_users[o['user_id']]
-            else:
-                pass
+                if tup[1] in nodes_dict:
+                    if not math.isinf(nodes_dict[tup[1]][o['approved']]):
+                        nodes_dict[tup[1]][o['approved']] += scores_dict[o['user_id']]
+                    else:
+                        nodes_dict[tup[1]][o['approved']] = scores_dict[o['user_id']]
+                else:
+                    if o['approved']:
+                        nodes_dict[tup[1]] = [0, scores_dict[o['user_id']]]
+                    else:
+                        nodes_dict[tup[1]] = [scores_dict[o['user_id']], -math.inf]
 
+    relation_decisions, nodes_decisions = defaultdict(int), defaultdict(int)
+    for tup in relation_dict:
+        relation_decisions[tup] = int(np.argmax(relation_dict[tup]))
+    for tup in nodes_dict:
+        nodes_decisions[tup] = int(np.argmax(nodes_dict[tup]))
 
-    query = """DELETE  FROM node_decisions """
-    result = c.execute(query)
-    print("XTZ")
-    print(relation_dict)
-    for tup,score in relation_dict.items():
-        print("PPP")
-        score = score/relation_count[tup]
-        relation_dict[tup] = score
-    for tup,score in relation_dict.items():
-        print("PPP")
-            # print(tup)
-        if score > 0.5:
-            print(tup)
-            args = {
-                        'node_id': tup[0],
-                            # 'property': property,
-                        'approved': 1,
-                        'user_id': 12345678
-                        }
-            print(args)
-            insert_query = """INSERT INTO node_decisions
-                            (node_id, user_id, approved)
-                            VALUES (:node_id, :user_id, :approved)"""
-            c.execute(insert_query,args)
-        else:
-            print(tup)
-            args = {
-                        'node_id': tup[0],
-                            # 'property': property,
-                        'approved': 0,
-                        'user_id': 12345678
-                        }
-            insert_query = """INSERT INTO node_decisions
-                            (node_id, user_id, approved)
-                            VALUES (:node_id, :user_id, :approved)"""
-            c.execute(insert_query,args)
-            
+    for tup in relation_decisions:
+        if relation_decisions[tup] and not ((nodes_decisions[tup[2]] or inOntology(tup[2])) and (nodes_decisions[tup[3]] or inOntology(tup[3]))):
+            print ("Rejecting {}".format(tup))
+            relation_decisions[tup] = 0
+
+    insert_query = """INSERT INTO final_class_decisions (relation_id, approved)
+                        VALUES (:relation_id, :approved)"""
+    for tup in relation_decisions:
+        args = {'relation_id': tup[0], 'approved': relation_decisions[tup]}
+        c.execute(insert_query,args)
+
+    insert_query = """INSERT INTO final_node_decisions (node_id, approved)
+                    VALUES (:node_id, :approved)"""
+    for tup in nodes_decisions:
+        args = {'node_id': tup[0], 'approved': nodes_decisions[tup]}
+        c.execute(insert_query,args)
+
     trans.commit()
 
 def limit_handled(cursor):
@@ -207,6 +147,64 @@ def limit_handled(cursor):
             print(count/2302*100)
             time.sleep(15 * 60)
 
+def create_final_ontology(name):
+    print ("Enriching {} with extracted relations".format(name))
+
+    global baseurl
+    if name == "pizza":
+        baseurl = "https://serc.iiit.ac.in/downloads/ontology/pizza.owl"
+    elif name == "security":
+        baseurl = "https://serc.iiit.ac.in/downloads/ontology/securityontology.owl"
+
+    input_ontology = "data/input/ontologies/" + name + ".owl"
+    ont = Ontology(input_ontology)
+    engine = create_engine('sqlite:///onto.db', echo = True)
+
+    c = engine.connect()
+    trans = c.begin()
+
+    result = c.execute('''SELECT domain, range, property FROM class_relations 
+        INNER JOIN final_class_decisions ON class_relations.id = final_class_decisions.relation_id
+        INNER JOIN ontologies ON class_relations.onto_id = ontologies.id
+        WHERE ontologies.name = :name AND final_class_decisions.approved = 1''', {'name': name})
+    new_relations = list(result.fetchall())
+
+    classes = [split_by_camel_case(elem).lower() for elem in ont.classes]
+    instance_pairs = [tuple([split_by_camel_case(elem).lower() for elem in instance]) for instance in ont.instances]
+
+    for (class_domain, class_range, relation) in new_relations:
+        class_domain, class_range = class_domain.split("#")[-1], class_range.split("#")[-1]
+        domain_iri, range_iri = str(class_domain), str(class_range)
+        domain_label, range_label = split_by_camel_case(class_domain), split_by_camel_case(class_range)
+        relation_iri = ''.join(x for x in relation.lower().title() if not x.isspace())
+
+        if relation == "subclassOf":
+            if domain_label.lower() in classes:
+                ont.add_subclass_to_existing_class(baseurl, domain_label, range_iri, range_label)
+            else:
+                ont.create_class_with_subclass(baseurl, domain_iri, range_iri, domain_label, range_label)
+
+        elif relation == "hasInstance":
+            if (domain_label.lower(), range_label.lower()) not in instance_pairs:
+                ont.create_instance(baseurl, domain_iri, range_iri, domain_label, range_label)
+
+        else:
+            print ("WARNING: Relation {} outside accepted categories: [hypernym, hyponym, concept, instance]".format(relation))
+            if domain_label.lower() in classes:
+                ont.add_property_to_existing_class(baseurl, domain_iri, relation_iri, domain_label, range_label)
+            else:
+                ont.create_class_with_property(baseurl, domain_iri, range_iri, relation_iri, domain_label, range_label)
+    output_ontology = "data/final/" + name + ".owl"
+    ont.write(output_ontology)
+
+def calculate_twitter_credibility(user):
+    tweets_data = auth_api.user_timeline(screen_name=user.screen_name, count=NUM_STATUSES, tweet_mode="extended")
+    tweets = [tweet.full_text for tweet in tweets_data]
+    tweet_scores = sorted(generateScore(tweets), reverse=True)
+    relevant_tweet_scores = tweet_scores[:int(RELEVANT_PERCENTAGE * NUM_STATUSES)]
+    tweets_cred = np.mean(relevant_tweet_scores)
+    return tweets_cred
+
 engine = create_engine('sqlite:///onto.db', echo = True)
     # conn = sqlite3.connect('onto.db')
     # c = conn.cursor()
@@ -217,54 +215,28 @@ result = c.engine.execute(query)
 for o in result.fetchall():
     account_list.append(o['username'])
 
-account_list = list(set(account_list))    
-if len(account_list) > 0:
-    lst = []
-    for target in account_list:
-        print("Getting data for " + target)
-        item = auth_api.get_user(target)
-        print("name: " + item.name)
-        print("screen_name: " + item.screen_name)
-        print("description: " + item.description)
-        print("statuses_count: " + str(item.statuses_count))
-        print("friends_count: " + str(item.friends_count))
-        print("followers_count: " + str(item.followers_count))
-        tweets_data = auth_api.user_timeline(screen_name=item.screen_name, count=200, tweet_mode="extended")
-        tweets = [tweet.full_text for tweet in tweets_data]
-        frndlist = []
-        # user = auth_api.get_user(item.screen_name)
-        # for usr in user.friends():
-            # frndlist.append(usr)
-        req_dict={}
-        pop_tweets = [] 
-        for follower in Cursor(auth_api.friends_ids,screen_name=item.screen_name).pages():
-            # if (follower.friends_count<300):
-            frndlist.append(follower)
-            # print(np.array(follower).shape)
-            # print(follower)
-            # for num,els in enumeratefollower[0]:
-            for i in range(10):
-                friend_user=auth_api.get_user(user_id=follower[i])
-                for tweet in Cursor(auth_api.search, q='from:@'+friend_user.screen_name,result_type='popular').items(15):
-                    pop_tweets.append(tweet.text)
-
-                req_dict[friend_user.id] = pop_tweets
-            # print(friend_user.screen_name)
-        # req_dict[item.id]=
-        # for user in Cursor(auth_api.friends, screen_name=item.screen_name).items():
-        #   frndlist.append(user.screen_name)
-
-        # print(len(frndlist[0]))
-        lst.append((item.id, '\n'.join(tweets),'\n'.join(pop_tweets)))
-    
-
+account_list = list(set(account_list))
 finalDict = defaultdict(int)
-for (userid, tweets, followers) in lst:
-    finalDict[userid] = generateScore(tweets) + 10 * generateScore(followers)
-print(finalDict)
+
+if len(account_list) > 0:
+    for target in account_list:
+        print("Calculating credibility for user {}".format(target))
+
+        user = auth_api.get_user(target)
+        tweets_cred = calculate_twitter_credibility(user)
+        print("Tweet credibility of user {} is {}".format(target, tweets_cred))
+
+        friend_creds = []
+        for friend_id in Cursor(auth_api.friends_ids,screen_name=user.screen_name).items(MAX_FRIENDS):
+            friend_user = auth_api.get_user(user_id=friend_id)
+            friend_cred = calculate_twitter_credibility(friend_user)
+            friend_creds.append(friend_cred)
+        friend_creds = sorted(friend_creds, reverse=True)[:int(RELEVANT_FRIENDS * MAX_FRIENDS)]
+        friends_cred = np.mean(friend_creds)
+        print("Friend credibility of user {} is {}".format(target, friends_cred))
+        
+        finalDict[user.id] = TWEETS_RELEVANCE * tweets_cred + FRIENDS_RELEVANCE * friends_cred
+
 add_relation_with_credibility_only(finalDict)
 
-
-generate_final_ontology(name)
-
-delete_nodes(name)
+create_final_ontology(name)

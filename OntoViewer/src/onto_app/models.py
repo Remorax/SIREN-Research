@@ -1,6 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 from onto_app import db
-from onto_app.onto import add_new_ontologies
+from onto_app.helper import add_new_ontologies
 
 class users(db.Model):
     __tabelname__ = 'users'
@@ -27,6 +27,7 @@ class class_relations(db.Model):
     range = db.Column(db.String(200), nullable=False)
     onto_id = db.Column(db.Integer, db.ForeignKey('ontologies.id'), nullable=False)
     decisions = db.relationship('class_decisions', cascade="all,delete", backref='class_relations')
+    final_class_decisions = db.relationship('final_class_decisions', cascade="all,delete", backref='class_relations')
 
 class nodes(db.Model):
     __tablename__ = 'nodes'
@@ -34,6 +35,7 @@ class nodes(db.Model):
     onto_id = db.Column(db.Integer, db.ForeignKey('ontologies.id'), nullable=False)
     name = db.Column(db.String(200), nullable=False)
     decisions = db.relationship('node_decisions', cascade="all,delete", backref='nodes')
+    final_node_decisions = db.relationship('final_node_decisions', cascade="all,delete", backref='nodes')
 
 class class_decisions(db.Model):
     __tablename__ = 'class_decisions'
@@ -48,6 +50,18 @@ class node_decisions(db.Model):
     node_id = db.Column(db.Integer, db.ForeignKey('nodes.id'), nullable=False)
     approved = db.Column(db.Integer, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+
+class final_class_decisions(db.Model):
+    __tablename__ = 'final_class_decisions'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    relation_id = db.Column(db.Integer, db.ForeignKey('class_relations.id'), nullable=False)
+    approved = db.Column(db.Integer, nullable=False)
+
+class final_node_decisions(db.Model):
+    __tablename__ = 'final_node_decisions'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    node_id = db.Column(db.Integer, db.ForeignKey('nodes.id'), nullable=False)
+    approved = db.Column(db.Integer, nullable=False)
 
 # db.drop_all()
 try:

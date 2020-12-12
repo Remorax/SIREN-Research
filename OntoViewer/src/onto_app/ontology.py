@@ -1,4 +1,3 @@
-import itertools
 from xml.dom import minidom
 from urllib.request import urlopen
 from re import finditer
@@ -9,13 +8,6 @@ def split_by_camel_case(identifier):
     # Split string by camel-case
     matches = finditer('.+?(?:(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])|$)', identifier)
     return " ".join([m.group(0) for m in matches])
-
-def scandown( elements, indent=0 ):
-    for el in elements:
-        print("   " * indent + "nodeName: " + str(el.nodeName) )
-        print("   " * indent + "nodeValue: " + str(el.nodeValue) )
-        print("   " * indent + "childNodes: " + str(el.childNodes) )
-        scandown(el.childNodes, indent + 1)
 
 # Define class to parse ontology
 class Ontology():
@@ -169,8 +161,6 @@ class Ontology():
         '''
         Creates new class with subclass and label
         '''
-        all_classes = self.root.getElementsByTagName("owl:Class")
-
         newElementClass = self.ontology_obj.createElement("owl:Class")
         newElementClass.setAttribute("rdf:about", url + "#" + class_iri)
 
@@ -188,6 +178,28 @@ class Ontology():
         self.create_new_class_for_range(url, subclass_iri, subclass_label)
 
         self.memberify_created_classes(url, [class_iri], newElementClass)
+
+    def create_instance(self, url, class_iri, instance_iri, class_label, instance_label):
+        '''
+        Creates instance of type class
+        '''
+        newInstance = self.ontology_obj.createElement("owl:NamedIndividual")
+        newInstance.setAttribute("rdf:about", url + "#" + instance_iri)
+
+        newInstanceType = self.ontology_obj.createElement("rdf:type")
+        newInstanceType.setAttribute("rdf:resource", url + "#" + class_iri)
+
+        newelementclasslabel = self.ontology_obj.createElement("rdfs:label")
+        newelementclasslabel.setAttribute("xml:lang","en")
+        text = self.ontology_obj.createTextNode(instance_label)
+        newelementclasslabel.appendChild(text)
+
+        newInstance.appendChild(newelementclasslabel)
+        newInstance.appendChild(newInstanceType)
+
+        self.create_new_class_for_range(url, class_iri, class_label)
+
+        self.memberify_created_classes(url, [instance_iri], newInstance, True)
 
     def add_property_to_existing_class(self, url, iri2, relation_iri, class_label, subclass_label):
         '''
@@ -239,13 +251,16 @@ class Ontology():
 
         self.create_new_class_for_range(url, iri2, subclass_label)
 
-    def memberify_created_classes(self, url, iris, new_class):
+    def memberify_created_classes(self, url, iris, new_class, is_instance=False):
         needed = self.ontology_obj.getElementsByTagName("owl:Class")
         needed[0].parentNode.insertBefore(new_class, needed[0])
         search = self.ontology_obj.getElementsByTagName("owl:members")
         if not search:
             return
-        search = search[0]
+        if not is_instance:
+            search = search[0]
+        else:
+            search = search[-1]
         if search.getAttribute("rdf:parseType"):
             for iri in iris:
                 # print (iri)

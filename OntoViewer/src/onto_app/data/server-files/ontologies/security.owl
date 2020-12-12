@@ -1965,6 +1965,9 @@
 	
 
     
+	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/securityontology.owl#NetworkSecurity">
+		<rdfs:label xml:lang="en">Network Security</rdfs:label>
+	</owl:Class>
 	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/securityontology.owl#Authentication">
 		<rdfs:subClassOf rdf:resource="https://serc.iiit.ac.in/downloads/ontology/securityontology.owl#Authorization"/>
 		<rdfs:label xml:lang="en">Authentication</rdfs:label>
@@ -1978,9 +1981,6 @@
 	</owl:Class>
 	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/securityontology.owl#SecurityTeams">
 		<rdfs:label xml:lang="en">Security Teams</rdfs:label>
-	</owl:Class>
-	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/securityontology.owl#NetworkSecurity">
-		<rdfs:label xml:lang="en">Network Security</rdfs:label>
 	</owl:Class>
 	<owl:Class rdf:about="https://serc.iiit.ac.in/downloads/ontology/securityontology.owl#Virus">
 		<rdfs:subClassOf rdf:resource="https://serc.iiit.ac.in/downloads/ontology/securityontology.owl#Trojan"/>

@@ -1,10 +1,8 @@
 import subprocess
 from os import listdir
 from os.path import isfile, join
-import xml.dom.minidom
 from ontology import *
 from onto_app import db
-from onto_app.aggregate import accepted
 from rdflib import Graph
 from rdflib.namespace import OWL, RDF, RDFS
 from collections import defaultdict
@@ -18,7 +16,7 @@ def is_blank(node):
     else:
         return False
 
-def create_final_ontology(input_ontology, output_ontology, url, new_relations):
+def create_validatable_ontology(input_ontology, output_ontology, url, new_relations):
     print ("Enriching {} with extracted relations".format(output_ontology))
 
     ont = Ontology(input_ontology)
@@ -106,7 +104,7 @@ def add_onto_file(admin_id, name):
     new_relations, new_nodes = get_new_relations(ontology_path, raw_extracted_relations)
 
     outputfile = "./data/server-files/ontologies/" +str(name) + '.owl'
-    create_final_ontology(ontology_path, outputfile, baseurl, new_relations)
+    create_validatable_ontology(ontology_path, outputfile, baseurl, new_relations)
     print ("Enriched {} ontology created...".format(name))
     try:
         subprocess.run(['java', '-jar', OWL2VOWL, '-file', outputfile, '-echo'], stdout=f)
@@ -364,11 +362,6 @@ def add_node_decision(user_id, name, onto_id, decision):
             'user_id': user_id,
             'approved': decision
         })
-
-def get_decision(relation_id):
-    query = """SELECT * FROM class_decisions WHERE relation_id = :relation_id"""
-    result = db.engine.execute(query, {'relation_id': relation_id})
-    return accepted(result.fetchall())
 
 def get_ontologies_on_server():
     ontologies = ['.'.join(f.split('.')[:-1]) for f in listdir("./data/input/ontologies/") if isfile(join("./data/input/ontologies/", f)) and f.endswith(".owl")]

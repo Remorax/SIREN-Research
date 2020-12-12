@@ -19,6 +19,6 @@ db = SQLAlchemy(app)
 db.app = app
 # db.init_app(app) 
 from onto_app import routes, models
-from onto_app.onto import *
+from onto_app.helper import *
 
 #add_onto_file(0, 'pizza', os.path.abspath(os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + '/data/owl/pizza.owl')), os.path.abspath(os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + '/data/json/pizza.json')))
