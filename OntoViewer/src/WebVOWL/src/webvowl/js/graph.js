@@ -734,7 +734,7 @@ module.exports = function (graphContainerSelector) {
     console.log("Is inside is new node.");
     var a = document.getElementById("hiddenJSONNode").innerHTML;
     a = JSON.parse(a);
-    console.log(a);
+    console.log(a, linkstatenode.iri());
     for (var i = 0; i < a.length; i++) {
       if (linkstatenode.iri() == a[i]) {
         return true;
@@ -859,14 +859,14 @@ module.exports = function (graphContainerSelector) {
       var reject = d3.select("#rejectClicked").node();
       accept.style.display = '';
       reject.style.display = '';
-      flagForDisplayAccRej = 1;
+      // flagForDisplayAccRej = 1;
 
-      // if(isNewNode(clickedNode)){
-      //     flagForDisplayAccRej = 1 ; 
-      // }
-      // else{
-      //     flagForDisplayAccRej = 0 ;
-      // }
+      if(isNewNode(clickedNode)){
+          flagForDisplayAccRej = 1 ; 
+      }
+      else{
+          flagForDisplayAccRej = 0 ;
+      }
       // for( i = 0 ; alreadyDecidedNodesIri[i] != null ; ++i){
       //     if (clickedNode.iri() == alreadyDecidedNodesIri[i][0] && currentUserId == alreadyDecidedNodesIri[i][1]) {
       //         flagForDisplayAccRej = 0 ;
@@ -1455,6 +1455,8 @@ module.exports = function (graphContainerSelector) {
     graph.updatePulseIds(nodeArrayForPulse);
     refreshGraphStyle();
     updateHaloStyles();
+    setColor() ; // Sets color for new relationships
+    setNodeColor();
   };
 
   graph.paused = function (p) {
@@ -1810,8 +1812,6 @@ module.exports = function (graphContainerSelector) {
       return link.label();
     });
     storeLinksOnNodes(classNodes, links);
-    console.log("epstein didnt kill himself");
-    console.log(linkstate);
     setForceLayoutData(classNodes, labelNodes, links);
     // for (var i = 0; i < classNodes.length; i++) {
     //     if (classNodes[i].setRectangularRepresentation)
@@ -2207,6 +2207,75 @@ module.exports = function (graphContainerSelector) {
       }
     }
   }
+  function camelize(str) {
+    if (!str)
+      return ""
+    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+        return index === 0 ? word.toLowerCase() : word.toUpperCase();
+      }).replace(/\s+/g, '');
+  }
+
+  // checks if the relationship selected is new
+    function isNew(linkstateprop){
+        var a = document.getElementById("hiddenJSONRel").innerHTML ; 
+        a = JSON.parse(a) ; 
+        for( var i = 0 ; i < a.length ; i++)
+        {
+            if(linkstateprop.domain().iri().split("#")[-1] == a[i][0].split("#")[-1] &&
+             camelize(linkstateprop.labelForCurrentLanguage()) == a[i][1] &&
+             linkstateprop.range().iri().split("#")[-1] == a[i][2].split("#")[-1]&&
+             a[i][0].split("#")[-1] && a[i][2].split("#")[-1])
+            {
+              console.log(linkstateprop.domain().iri().split("#")[-1], a[i][0].split("#")[-1]);
+              console.log(camelize(linkstateprop.labelForCurrentLanguage()), a[i][1]);
+              console.log(linkstateprop.range().iri().split("#")[-1], a[i][2].split("#")[-1]);
+                return true ;
+            }
+        }
+        return false ; 
+    }
+
+    // sets different color to new relationships
+    function setColor() {
+        // var a = ["http://rdfs.org/sioc/ns#Space","http://rdfs.org/sioc/ns#has_usergroup","http://rdfs.org/sioc/ns#Usergroup"] ; 
+        linkstateprop = graph.LinkState()["properties"] ; 
+        for( var i = 0, l = graph.LinkState()["properties"].length ; i < l ; i++){
+                if (isNew(linkstateprop[i])){
+                    var r = document.getElementById(linkstateprop[i].id());
+                    if (r) {
+                        r.getElementsByTagName("rect")[0].setAttribute("style", "fill: rgb(120, 200, 120) ; ");
+                    }
+                }
+            }
+    
+    }
+
+    // checks if node selected is new 
+    function isNewNode(linkstatenode){
+        var a = document.getElementById("hiddenJSONNode").innerHTML ; 
+        a = JSON.parse(a) ; 
+        for( var i = 0 ; i < a.length ; i++)
+        {
+            if(linkstatenode.iri() == a[i])
+            {
+                return true ;
+            }
+        }
+        return false ; 
+    }
+
+    // sets different color to new nodes
+    function setNodeColor(){
+        linkstatenode = graph.LinkState()["nodes"] ; 
+        for(var i = 0, l = graph.LinkState()["nodes"].length ; i < l ; ++i){
+            if (isNewNode(linkstatenode[i])){
+                var r = document.getElementById(linkstatenode[i].id())
+                if (r) {
+                    r.getElementsByTagName("circle")[0].setAttribute("style", "fill: rgb(0,255,0) ; ")
+                }
+            }
+        }
+    }
 
   function transform(p, cx, cy) {
     // one iteration step for the locate target animation

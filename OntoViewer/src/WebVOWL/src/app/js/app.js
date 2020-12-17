@@ -714,42 +714,33 @@ module.exports = function () {
   
   
   
+  function camelize(str) {
+    if (!str)
+      return ""
+    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+        return index === 0 ? word.toLowerCase() : word.toUpperCase();
+      }).replace(/\s+/g, '');
+  }
+
   // checks if the relationship selected is new
-  function isNew(linkstateprop) {
-    var a = document.getElementById("hiddenJSONRel").innerHTML;
-    a = JSON.parse(a);
-    console.log("Derababa");
-    // console.log(a);
-    for (var i = 0; i < a.length; i++) {
-      if(linkstateprop.domain().iri() == "https://serc.iiit.ac.in/downloads/ontology/test.owl#PeriPeri"){
-      console.log("Epstein Did Kill Himself");
-      console.log(linkstateprop.domain().iri());
-      console.log(linkstateprop.iri());
-      console.log(linkstateprop.range().iri());
-      console.log(linkstateprop.type());
-      console.log(a[i][0]);
-      console.log(a[i][1]);
-      console.log(a[i][2]);
+    function isNew(linkstateprop){
+        var a = document.getElementById("hiddenJSONRel").innerHTML ; 
+        a = JSON.parse(a) ; 
+        for( var i = 0 ; i < a.length ; i++)
+        {
+            if(linkstateprop.domain().iri().split("#")[-1] == a[i][0].split("#")[-1] &&
+             camelize(linkstateprop.labelForCurrentLanguage()) == a[i][1] &&
+             linkstateprop.range().iri().split("#")[-1] == a[i][2].split("#")[-1] &&
+             a[i][0].split("#")[-1] && a[i][2].split("#")[-1])
+            {
+              console.log(linkstateprop.domain().iri().split("#")[-1], a[i][0].split("#")[-1]);
+              console.log(camelize(linkstateprop.labelForCurrentLanguage()), a[i][1]);
+              console.log(linkstateprop.range().iri().split("#")[-1], a[i][2].split("#")[-1]);
+                return true ;
+            }
+        }
+        return false ; 
     }
-      if (linkstateprop.domain().iri() == a[i][0] && linkstateprop.iri() == a[i][1] && linkstateprop.range().iri() == a[i][2] ) {
-        return true;
-      }
-    }
-    return false;
-  }
-  
-  // checks if the subclass selected is new
-  function isNewSubClass(linkstateprop) {
-    var a = document.getElementById("hiddenJSONSubclass").innerHTML;
-    a = JSON.parse(a);
-    for (var i = 0; i < a.length; i++) {
-      if (linkstateprop.domain().iri() == a[i][0] && linkstateprop.range().iri() == a[i][1]) {
-        return true;
-      }
-    }
-  
-    return false;
-  }
   
   // sets different color to new nodes
   function setNodeColor() {
@@ -761,9 +752,9 @@ module.exports = function () {
     for (var i = 0, l = graph.LinkState()["nodes"].length; i < l; ++i) {
 
       if (isNewNode(linkstatenode[i])) {
-        var r = document.getElementById(linkstatenode[i].id())
+        var r = document.getElementById(linkstatenode[i].id());
         if (r) {
-          r.getElementsByTagName("circle")[0].setAttribute("style", "fill: rgb(0,255,0) ; ")
+          r.getElementsByTagName("circle")[0].setAttribute("style", "fill: rgb(0,255,0) ; ");
         }
       }
     }
@@ -785,54 +776,17 @@ module.exports = function () {
   
   // sets different color to new relationships
   function setColor() {
-    // var a = ["http://rdfs.org/sioc/ns#Space","http://rdfs.org/sioc/ns#has_usergroup","http://rdfs.org/sioc/ns#Usergroup"] ; 
-    
-    if(graph.LinkState()["properties"] == undefined){
-      console.log("Gandhi Didnt KIll HImself");
-    }
     linkstateprop = graph.LinkState()["properties"] ; 
-    if(linkstateprop !== undefined){
-      console.log("Indira Gandhi Didnt KIll HImself");
-    }
-
-    console.log(linkstateprop[40].domain().iri());
-    console.log(linkstateprop[40].iri());
-    console.log(linkstateprop[40].range().iri());
-    console.log(linkstateprop[40].type());
-    var a = document.getElementById("hiddenJSONRel").innerHTML;
-    a = JSON.parse(a);
-    console.log(a);
     for (var i = 0, l = linkstateprop.length; i < l; i++) {
-      // console.log(i);
-      if(linkstateprop[i].domain().iri() == "https://serc.iiit.ac.in/downloads/ontology/test.owl#PeriPeri"){
-        console.log("Epstein Did Kill Himself");
-        console.log(linkstateprop[i].domain().iri());
-        console.log(linkstateprop[i].iri());
-        console.log(linkstateprop[i].range().iri());
-        console.log(linkstateprop[i].type());
-      }
       if (isNew(linkstateprop[i])) {
-        console.log("Bach Gaya ")
-        var r = document.getElementById(linkstateprop[i].id())
+        var r = document.getElementById(linkstateprop[i].id());
         if (r) {
-          r.getElementsByTagName("rect")[0].setAttribute("style", "fill: rgb(120, 200, 120) ; ")
-        }
-      }
-      else if (isNewSubClass(linkstateprop[i])) {
-        var r = document.getElementById(linkstateprop[i].id())
-        if (r) {
-          r.getElementsByTagName("rect")[0].setAttribute("style", "fill: rgb(100,200,0) ; ")
+          r.getElementsByTagName("rect")[0].setAttribute("style", "fill: rgb(120, 200, 120) ; ");
         }
       }
     }
-  
   }
   
 
   return app;
-}
-  ;
-
-
-
-
+};

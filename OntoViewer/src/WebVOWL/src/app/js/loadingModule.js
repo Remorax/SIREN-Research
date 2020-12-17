@@ -227,7 +227,7 @@ module.exports = function ( graph ){
     d3.select("#progressBarValue").node().innerHTML = " ";
     switch ( loadingMethod ) {
       case 0:
-        var ontologyJsonText = document.getElementById("ontologyJsonString").innerHTML;
+        var ontologyJsonText = document.getElementById("OntologyContentSource").innerHTML;
         console.log(ontologyJsonText);
         graph.options().loadingModule().directInput(ontologyJsonText);
         // loadingModule.from_presetOntology(ontologyIdentifierFromURL);
