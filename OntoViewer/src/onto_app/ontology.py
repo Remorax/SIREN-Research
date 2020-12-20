@@ -29,6 +29,8 @@ class Ontology():
         self.construct_mapping_dict()
         
         self.subclasses = self.parse_subclasses()
+        self.object_properties = self.parse_object_properties()
+        self.data_properties = self.parse_data_properties()
         self.classes = self.parse_classes()        
         self.instances = self.parse_instances()
 
@@ -250,6 +252,36 @@ class Ontology():
         self.memberify_created_classes(url, [iri1, iri2], newElementClass)
 
         self.create_new_class_for_range(url, iri2, subclass_label)
+
+    def parse_data_properties(self):
+        '''
+        Parse all datatype properties, including functional and inverse functional datatype properties
+        '''
+        data_properties = [el for el in self.get_child_node(self.root, 'owl:DatatypeProperty')]
+        fn_data_properties = [el for el in self.get_child_node(self.root, 'owl:FunctionalProperty') if el]
+        fn_data_properties = [el for el in fn_data_properties if type(el)==minidom.Element and 
+            [el for el in self.get_child_node(el, "rdf:type") if 
+             self.has_attribute_value(el, "rdf:resource", "DatatypeProperty")]]
+        inv_fn_data_properties = [el for el in self.get_child_node(self.root, 'owl:InverseFunctionalProperty') if el]
+        inv_fn_data_properties = [el for el in inv_fn_data_properties if type(el)==minidom.Element and 
+            [el for el in self.get_child_node(el, "rdf:type") if 
+             self.has_attribute_value(el, "rdf:resource", "DatatypeProperty")]]
+        return data_properties + fn_data_properties + inv_fn_data_properties
+        
+    def parse_object_properties(self):
+        '''
+        Parse all object properties, including functional and inverse functional object properties
+        '''
+        obj_properties = [el for el in self.get_child_node(self.root, 'owl:ObjectProperty')]
+        fn_obj_properties = [el for el in self.get_child_node(self.root, 'owl:FunctionalProperty') if el]
+        fn_obj_properties = [el for el in fn_obj_properties if type(el)==minidom.Element and 
+            [el for el in self.get_child_node(el, "rdf:type") if 
+             self.has_attribute_value(el, "rdf:resource", "ObjectProperty")]]
+        inv_fn_obj_properties = [el for el in self.get_child_node(self.root, 'owl:InverseFunctionalProperty') if el]
+        inv_fn_obj_properties = [el for el in inv_fn_obj_properties if type(el)==minidom.Element and 
+            [el for el in self.get_child_node(el, "rdf:type") if 
+             self.has_attribute_value(el, "rdf:resource", "ObjectProperty")]]
+        return obj_properties + fn_obj_properties + inv_fn_obj_properties
 
     def memberify_created_classes(self, url, iris, new_class, is_instance=False):
         needed = self.ontology_obj.getElementsByTagName("owl:Class")

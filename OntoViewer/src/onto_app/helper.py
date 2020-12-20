@@ -3,6 +3,7 @@ from os import listdir
 from os.path import isfile, join
 from ontology import *
 from onto_app import db
+from pitfall_scanner import PitfallScanner
 from rdflib import Graph
 from rdflib.namespace import OWL, RDF, RDFS
 from collections import defaultdict
@@ -106,6 +107,8 @@ def add_onto_file(admin_id, name):
     outputfile = "./data/server-files/ontologies/" +str(name) + '.owl'
     create_validatable_ontology(ontology_path, outputfile, baseurl, new_relations)
     print ("Enriched {} ontology created...".format(name))
+
+    scanner = PitfallScanner(outputfile)
     try:
         subprocess.run(['java', '-jar', OWL2VOWL, '-file', outputfile, '-echo'], stdout=f)
     except:
