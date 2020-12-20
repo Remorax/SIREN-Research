@@ -23,12 +23,12 @@
             </div>
     </nav>
     <div class="text-center" style="margin-top:25px">
-        <div class="card-columns" style="margin:25px">
+        <div class="row row-cols-1 row-cols-md-2" style="margin:25px">
             {% for o in ontologies %}
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 20rem; margin: 25px;">
                 <div class="card-body">
                     <h5 class="card-title">{{ o }}</h5>
-                    <a href="{{ url_for('loadOntology', file=o) }}" class="card-link">View and Verify</a>
+                    <a href="{{ url_for('loadOntology', file=o) }}" class="card-link">Validate ontology</a>
                 </div>
             </div>
             {% endfor %}

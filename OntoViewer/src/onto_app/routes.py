@@ -1,7 +1,9 @@
 from flask import Flask, request, redirect, url_for, session, g, flash, \
-    render_template
+    render_template, jsonify
 from onto_app import app, db
+from pitfall_scanner import PitfallScanner
 import os
+from collections import Counter
 from requests_oauthlib import OAuth1Session
 from requests_oauthlib import OAuth1
 from flask import send_file, send_from_directory, redirect, url_for, flash, current_app, session
@@ -13,7 +15,7 @@ import tweepy
 # These config variables come from 'config.py'
 client_key = "9NDG7eIVsrouj4CS2M7LoNjM1"
 client_secret = 'y1z075l563BwcL8XtI7GzQzEnvo1jEEzmcmR1NFBxhYPFokYzu'
-
+pitfalls_dict, final_data = {}, []
 SECRET_KEY = 'AbYzXSaNdErS123@'
 app.secret_key = SECRET_KEY
 # This OAuth 2.0 access scope allows for full read/write access to the
@@ -37,7 +39,7 @@ def login():
     oauth = tweepy.OAuthHandler(client_key,client_secret)
     url = oauth.get_authorization_url()
     session['request_token'] = oauth.request_token
-    return redirect(url)   
+    return redirect(url)
 
 @app.route('/authenticated')
 def authenticated():
@@ -81,17 +83,91 @@ def credentials_to_dict(credentials):
           'name': credentials.screen_name,
           }
 
+@app.route("/pitfalls/<path:file>/", methods = ['GET'])
+def pitfalls(file):
+    if 'credentials' not in session:
+        return redirect('login')
+    if not pitfalls_dict or not pitfalls_dict.get(file, ""):
+        return redirect('user')
+    return render_template("pitfalls_summary.html", pitfalls=pitfalls_dict.get(file))
 
+@app.route("/upload_ontology", methods = ['POST'])
+def upload_ontology():
+    if 'credentials' not in session or session["username"] != "remorax98":
+        return redirect('login')
+    global pitfalls_dict, final_data
+    file = request.files["file"]
+    if not file.filename:
+        return jsonify([])
+    ontology = os.path.abspath(os.path.join("data/input/ontologies/", file.filename))
+    file.save(ontology)
+    scanner = PitfallScanner(ontology, "pitfalls/")
+    curr_pitfalls = scanner.scan()
+    counts = {"High": 0, "Medium": 0, "Low": 0}
+    counts.update(Counter([el[0] for el in curr_pitfalls]))
+    ontology_name = '.'.join(ontology.split('/')[-1].split('.')[:-1])
+    
+    final_data.append((ontology_name, list(counts.values())))
+    pitfalls_dict[ontology_name] = curr_pitfalls
+    
+    return render_template("admin_dashboard.html", ontologies=final_data, username=session['username'])
+
+@app.route("/delete_ontology", methods = ['POST'])
+def delete_ontology():
+    if 'credentials' not in session or session["username"] != "remorax98":
+        return redirect('login')
+
+    print (request, request.json)
+    ont_name = request.json['name']
+    del pitfalls_dict[ont_name]
+    print (pitfalls_dict.keys())
+
+    final_data.remove([elem for elem in final_data if elem[0]==ont_name][0])
+    try:
+        os.remove(os.path.abspath(os.path.join("data/input/ontologies/", ont_name + ".owl")))
+    except OSError:
+        pass
+    try:
+        os.remove(os.path.abspath(os.path.join("data/input/files/", ont_name + ".tsv")))
+    except OSError:
+        pass
+
+    return jsonify({"Message": "Deleted successfully!"})
 
 @app.route('/user')
 def user():
     if not 'credentials' in session:
         return redirect(url_for('home'))
-
+    
+    global pitfalls_dict, final_data
     ontologies = get_ontologies_on_server()
+    
+    if session["username"] != "remorax98":
+        ontologies = ['.'.join(f.split('/')[-1].split('.')[:-1]) for f in ontologies]
+        print ("Ontologies fetched from server: {}".format(ontologies))
+        return render_template("user_dashboard.html", ontologies=ontologies, username=session['username'])
 
-    # return redirect(url_for('loadOntology', filename='pizza.json'))
-    return render_template("ontologies.html", ontologies=ontologies, username=session['username'])
+    if not pitfalls_dict or not final_data:
+        for ontology in ontologies:
+            scanner = PitfallScanner(ontology, "pitfalls/")
+            curr_pitfalls = scanner.scan()
+            counts = {"High": 0, "Medium": 0, "Low": 0}
+            counts.update(Counter([el[0] for el in curr_pitfalls]))
+            ontology_name = '.'.join(ontology.split('/')[-1].split('.')[:-1])
+            final_data.append((ontology_name, list(counts.values())))
+            pitfalls_dict[ontology_name] = curr_pitfalls
+
+    return render_template("admin_dashboard.html", ontologies=final_data, username=session['username'])
+
+@app.route('/download')
+def download():
+    if not 'credentials' in session:
+        return redirect(url_for('home'))
+    
+    if session["username"] != "remorax98":
+        return redirect(url_for('user'))
+
+    return send_from_directory(directory=os.path.abspath("."), filename="onto.db")
 
 @app.route('/logout')
 def logout():

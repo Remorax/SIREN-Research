@@ -1,9 +1,9 @@
 import subprocess
 from os import listdir
-from os.path import isfile, join
+from os.path import isfile, join, abspath
+import glob
 from ontology import *
 from onto_app import db
-from pitfall_scanner import PitfallScanner
 from rdflib import Graph
 from rdflib.namespace import OWL, RDF, RDFS
 from collections import defaultdict
@@ -108,7 +108,6 @@ def add_onto_file(admin_id, name):
     create_validatable_ontology(ontology_path, outputfile, baseurl, new_relations)
     print ("Enriched {} ontology created...".format(name))
 
-    scanner = PitfallScanner(outputfile)
     try:
         subprocess.run(['java', '-jar', OWL2VOWL, '-file', outputfile, '-echo'], stdout=f)
     except:
@@ -367,6 +366,5 @@ def add_node_decision(user_id, name, onto_id, decision):
         })
 
 def get_ontologies_on_server():
-    ontologies = ['.'.join(f.split('.')[:-1]) for f in listdir("./data/input/ontologies/") if isfile(join("./data/input/ontologies/", f)) and f.endswith(".owl")]
-    print ("Ontologies fetched from server: {}".format(ontologies))
+    ontologies = [abspath(f) for f in glob.glob("./data/input/ontologies/*") if isfile(f) and f.endswith(".owl")]
     return ontologies
