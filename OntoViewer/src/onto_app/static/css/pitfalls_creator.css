@@ -1,0 +1,21 @@
+#header{
+	padding-bottom: 30px; 
+	text-align: center; 
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.container {
+	max-width: 100%;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-top: 10px;
+}
+
+.buttons-div {
+	padding-right: 10px;
+}
+
+#actions-header {
+	padding-right: 60px;	
+}

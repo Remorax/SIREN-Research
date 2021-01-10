@@ -76,15 +76,41 @@ class Ontology():
         label_element = label_element[0]
         return label_element.firstChild.nodeValue
 
+    def get_attribute(self, element, attribute):
+        '''
+        Returns attribute with a specific tag name given DOM element 
+        Args:
+            element: DOM element
+            attribute: Name of attribute tag
+        Returns:
+            DOM attribute
+        '''
+        if type(attribute) == list:
+            ret = [element.attributes.get(attrib, "") for attrib in attribute]
+            return [el for el in ret if el][0]
+        return element.attributes.get(attribute, "")
+
+    def get_elements(self, elements):
+        '''
+        Returns elements with a specific tag name from the parsed ontology
+        Args:
+            elements: List of element names to fetch
+        Returns:
+            List of DOM elements
+        '''
+        return flatten([self.root.getElementsByTagName(element) for element in elements])
+
     def get_child_node(self, element, tag):
         '''
         Returns child node with a specific tag name given DOM element 
         Args:
             element: DOM parent element
-            tag: Name of tag of child
+            tag: Name of tag of child/List of name tags
         Returns:
             DOM child element 
         '''
+        if type(tag) == list:
+            return [e for e in element._get_childNodes() if type(e)==minidom.Element and e._get_tagName() in tag]
         return [e for e in element._get_childNodes() if type(e)==minidom.Element and e._get_tagName() == tag]
 
     def parse_subclasses(self):

@@ -1,6 +1,6 @@
 from flask import Flask, request, redirect, url_for, session, g, flash, \
     render_template, jsonify
-from onto_app import app, db
+from __init__ import app, db
 from pitfall_scanner import PitfallScanner
 import os
 from collections import Counter
@@ -9,7 +9,7 @@ from requests_oauthlib import OAuth1
 from flask import send_file, send_from_directory, redirect, url_for, flash, current_app, session
 from werkzeug.utils import secure_filename
 import json
-from onto_app.helper import *
+from helper import *
 import tweepy
 
 # These config variables come from 'config.py'
@@ -37,6 +37,7 @@ def home():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     oauth = tweepy.OAuthHandler(client_key,client_secret)
+    # oauth = tweepy.OAuthHandler(client_key,client_secret)
     url = oauth.get_authorization_url()
     session['request_token'] = oauth.request_token
     return redirect(url)
@@ -75,8 +76,9 @@ def authenticated():
                             (:id, :username, :privilege)""", {'id': userid, 'username': user_name, 'privilege': 0})
     session['userid'] = userid
     session['username'] = user_name
-
-    return redirect(url_for('user'))
+    if session['username']!= "remorax98":
+        return redirect(url_for('user'))
+    return redirect(url_for("create_pitfalls"))
 
 def credentials_to_dict(credentials):
   return {'id': credentials.id,
@@ -134,7 +136,18 @@ def delete_ontology():
 
     return jsonify({"Message": "Deleted successfully!"})
 
-@app.route('/user')
+@app.route('/create_pitfalls')
+def create_pitfalls():
+    if not 'credentials' in session:
+        return redirect(url_for('home'))
+    
+    if session["username"] != "remorax98":
+        return redirect(url_for('user'))
+
+    return render_template("pitfalls_creator.html", username=session['username'])
+
+
+@app.route('/user', methods = ['POST'])
 def user():
     if not 'credentials' in session:
         return redirect(url_for('home'))
@@ -147,9 +160,18 @@ def user():
         print ("Ontologies fetched from server: {}".format(ontologies))
         return render_template("user_dashboard.html", ontologies=ontologies, username=session['username'])
 
+    data, i = "string", 0
+    all_pitfalls = []
+    while request.form.get("subject-select-" + str(i), ""):
+        Subject = request.form.get("subject-select-" + str(i))
+        Predicate = request.form.getlist("predicate-select-" + str(i))
+        Object = request.form.getlist("object-select-" + str(i))
+        Criticality = request.form.getlist("criticality-select-" + str(i))
+        all_pitfalls.append((Subject, Predicate, Object, Criticality))
+        i+=1
     if not pitfalls_dict or not final_data:
         for ontology in ontologies:
-            scanner = PitfallScanner(ontology, "pitfalls/")
+            scanner = PitfallScanner(ontology, "pitfalls/", all_pitfalls)
             curr_pitfalls = scanner.scan()
             counts = {"High": 0, "Medium": 0, "Low": 0}
             counts.update(Counter([el[0] for el in curr_pitfalls]))

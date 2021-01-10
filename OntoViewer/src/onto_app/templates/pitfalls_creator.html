@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/pitfalls_creator.css') }}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">Pitfall Creation Dashboard</a>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{ username }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('user') }}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+    
+    <div class="float-right my-3 mx-4">
+        <button type="button" class="btn btn-success" id="add-pitfall">
+            <i class="fa fa-plus" aria-hidden="true"></i> Add pitfall 
+        </button>
+    </div>
+    <br><br><br>
+    <form action="/user" method="post">
+        <div class="container" id="pitfalls-div">
+            <div class="row" id="header">
+                <div class="col">
+                    Subject
+                </div>
+                <div class="col">
+                    Predicate 1
+                </div>
+                <div class="col">
+                    Object 1
+                </div>
+                <div class="col">
+                    Criticality 1
+                </div>
+                <div class="buttons-div" id="actions-header">
+                    Actions
+                </div>
+            </div>
+            <div class="row" id="row-0">
+                <div class="col">
+                    <div class="form-group">
+                        <select class="form-control subject-select" name="subject-select-0" id="subject-select-0">
+                            <option>Classes</option>
+                            <option>Instances</option>
+                            <option>Properties</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <select class="form-control predicate-select" name="predicate-select-0" id="predicate-select-0-0">
+                            <option>Has attribute</option>
+                            <option>Has child</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group" id="object-div-0-0">
+                        <select class="form-control object-select" name="object-select-0" id="object-select-0-0">
+                            <option>ID</option>
+                            <option>Language</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group" id="criticality-div-0-0">
+                        <select class="form-control criticality-select" name="criticality-select-0" id="criticality-select-0-0">
+                            <option>Critical</option>
+                            <option>Intermediate</option>
+                            <option selected>Minor</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="buttons-div" id="buttons-div-0">
+                    <button type="button" class="add-cond btn btn-success" id="add-cond-0">
+                        <i class="fa fa-plus"></i>&nbsp; Add condition
+                    </button>
+                    &nbsp;
+                    <button type="button" class="delete btn btn-danger" id="delete-0">
+                        <i class="fa fa-trash"></i>&nbsp; Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary"> Submit </button>
+        </div>
+        
+    </form>
+    
+    
+    <script src="{{ url_for('static', filename='js/pitfalls_creator.js') }}"></script>    
+</body>
+</html>
